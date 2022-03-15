@@ -1,0 +1,156 @@
+{
+	"easycom": {
+			"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+		},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "",
+				"disableScroll": true,
+				"navigationStyle":"custom"
+			}
+		}
+	    ,{
+            "path" : "pages/welcome/welcome",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+				"navigationStyle":"custom",
+				"disableScroll": true,
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/profile/profile",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Profile",
+				"navigationBarBackgroundColor": "#B0C07A",
+                "enablePullDownRefresh": false,
+				"disableScroll": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/home/home",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Home",
+				"navigationStyle":"custom",
+                "enablePullDownRefresh": false,
+				"disableScroll": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/grocery/grocery",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Grocery",
+				"navigationStyle":"custom",
+				"navigationBarBackgroundColor": "#B0C07A",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/recipe/recipe",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Recipe",
+				"navigationStyle":"custom",
+				"navigationBarBackgroundColor": "#B0C07A",
+				"enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/setting/setting",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Setting",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/notification/notification",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/edit/edit",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Edit",
+                "enablePullDownRefresh": false
+            }
+            
+        },{
+            "path" : "pages/article/article",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Details",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/notification/notification",
+            "style" :                                                                                    
+            {	
+				"navigationBarTitleText": "Notification",
+				"navigationBarBackgroundColor": "#B0C07A",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#B0C07A",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+			"color": "#909399",
+			"selectedColor": "#303133",
+			"backgroundColor": "#FFFFFF",
+			"borderStyle": "black",
+			"list": [{
+					"pagePath": "pages/home/home",
+					"iconPath": "static/ic_home.png",
+					"selectedIconPath": "static/ic_home.png",
+					"text": "Home"
+				},
+				{
+					"pagePath": "pages/grocery/grocery",
+					"iconPath": "static/uview/example/js.png",
+					"selectedIconPath": "static/uview/example/js_select.png",
+					"text": "Grocery"
+				},
+				{
+					"pagePath": "pages/recipe/recipe",
+					"iconPath": "static/uview/example/template.png",
+					"selectedIconPath": "static/uview/example/template_select.png",
+					// "iconPath": "static/uview/example/recipe.png",
+					// "selectedIconPath": "static/uview/example/recipe.png",
+					"text": "Recipe"
+				},
+				{
+					"pagePath": "pages/profile/profile",
+					"iconPath": "static/uview/example/template.png",
+					"selectedIconPath": "static/uview/example/template_select.png",
+					// "iconPath": "static/uview/example/user.png",
+					// "selectedIconPath": "static/uview/example/user.png",
+					"text": "Profile"
+				}
+			]
+		}
+}

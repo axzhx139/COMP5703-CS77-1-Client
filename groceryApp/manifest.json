@@ -1,0 +1,151 @@
+{
+    "name" : "groceryApp",
+    "appid" : "__UNI__601CF61",
+    "description" : "",
+    "versionName" : "1.2.0",
+    "versionCode" : 110,
+    "transformPx" : false,
+    /* 5+App特有相关 */
+    "app-plus" : {
+        "usingComponents" : true,
+        "nvueStyleCompiler" : "uni-app",
+        "compilerVersion" : 3,
+        "splashscreen" : {
+            "alwaysShowBeforeRender" : true,
+            "waiting" : true,
+            "autoclose" : true,
+            "delay" : 0
+        },
+        /* 模块配置 */
+        "modules" : {
+            "Push" : {}
+        },
+        /* 应用发布信息 */
+        "distribute" : {
+            /* android打包配置 */
+            "android" : {
+                "permissions" : [
+                    "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
+                    "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CAMERA\"/>",
+                    "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+                    "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
+                ],
+                "schemes" : "",
+                "abiFilters" : [ "armeabi-v7a", "x86" ]
+            },
+            /* ios打包配置 */
+            "ios" : {
+                "urltypes" : "fb576889780194229"
+            },
+            /* SDK配置 */
+            "sdkConfigs" : {
+                "push" : {
+                    "unipush" : {}
+                },
+                "ad" : {}
+            },
+            "splashscreen" : {
+                "iosStyle" : "storyboard"
+            },
+            "icons" : {
+                "android" : {
+                    "hdpi" : "static/logo.png",
+                    "xhdpi" : "static/logo.png",
+                    "xxhdpi" : "static/logo.png",
+                    "xxxhdpi" : "static/logo.png"
+                },
+                "ios" : {
+                    "iphone" : {
+                        "app@2x" : "static/logo.png"
+                    }
+                }
+            }
+        },
+        "nativePlugins" : {
+            "sn-facebook" : {
+                "applicationId" : "576889780194229",
+                "applicationName" : "TrackMyGrocery_Uniapp",
+                "clientToken" : "2de06b48f41428651ee37a65fda2bb29",
+                "__plugin_info__" : {
+                    "name" : "Facebook登录、分享、统计 - [Trial version,only can used in custom base]",
+                    "description" : "提供facebook登录、分享、统计功能",
+                    "platforms" : "Android,iOS",
+                    "url" : "https://ext.dcloud.net.cn/plugin?id=3639",
+                    "android_package_name" : "",
+                    "ios_bundle_id" : "",
+                    "isCloud" : true,
+                    "bought" : 0,
+                    "pid" : "3639",
+                    "parameters" : {
+                        "applicationId" : {
+                            "des" : "Facebook应用编号",
+                            "key" : "FacebookAppID",
+                            "value" : ""
+                        },
+                        "applicationName" : {
+                            "des" : "Facebook应用名称",
+                            "key" : "FacebookDisplayName",
+                            "value" : ""
+                        },
+                        "clientToken" : {
+                            "des" : "FacebookClientToken",
+                            "key" : "FacebookClientToken",
+                            "value" : ""
+                        }
+                    }
+                }
+            },
+            "JY-GoogleSignin" : {
+                "__plugin_info__" : {
+                    "name" : "JY-GoogleSignin 谷歌登录 支持安卓iOS - [Trial version,only can used in custom base]",
+                    "description" : "谷歌登录，一键支持",
+                    "platforms" : "Android,iOS",
+                    "url" : "https://ext.dcloud.net.cn/plugin?id=2244",
+                    "android_package_name" : "",
+                    "ios_bundle_id" : "",
+                    "isCloud" : true,
+                    "bought" : 0,
+                    "pid" : "2244",
+                    "parameters" : {}
+                }
+            }
+        }
+    },
+    /* 快应用特有相关 */
+    "quickapp" : {},
+    /* 小程序特有相关 */
+    "mp-weixin" : {
+        "appid" : "",
+        "setting" : {
+            "urlCheck" : false
+        },
+        "usingComponents" : true
+    },
+    "mp-alipay" : {
+        "usingComponents" : true
+    },
+    "mp-baidu" : {
+        "usingComponents" : true
+    },
+    "mp-toutiao" : {
+        "usingComponents" : true
+    },
+    "uniStatistics" : {
+        "enable" : false
+    },
+    "vueVersion" : "2",
+    "quickapp-webview" : {
+        "icon" : "static/logo.png"
+    }
+}
