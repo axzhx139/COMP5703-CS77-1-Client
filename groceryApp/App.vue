@@ -50,4 +50,10 @@
 	/*每个页面公共css */
 	@import "uview-ui/index.scss";
 	@import "./font/ifont.css";  
+	
+</style>
+<style>
+	.uni-sample-toast {
+		width:80%;
+	}
 </style>
