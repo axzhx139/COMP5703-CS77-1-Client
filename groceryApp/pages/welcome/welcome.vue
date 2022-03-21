@@ -202,46 +202,54 @@
 		methods: {
 			// add up for facebook login section 4 start
 			sendcode: function(seconds,e) {
-				this.disabledbtn=true
-				this.verifyBtnText=seconds+'...'
 				console.log(this.email)
-				uni.request({
-					url:'http://101.35.91.117:7884/users/register/sendVerifyCode',
-					method:'POST',
-					data:{
-						'email':this.email,
-					},
-					success:function(res){
-						console.log(res)
-						if (res.data==0){
-							uni.showModal({
-							    title: 'Account exist',
-								showCancel: false,
-							    content: 'The email address already exist, please try again or log in by this email. ',
-							    success: function (res) {
-							        if (res.confirm) {
-							            console.log('confirm');
-							        } 
-							    }
-							});
-						}else{
-							uni.showToast({
-								icon: "none",
-								title: "Send verification code success",
-							});
+			　　var myReg=/^[a-zA-Z0-9_-]+@([a-zA-Z0-9]+\.)+(com|cn|net|org)$/
+				if(this.email=='' ||this.email==null || ! myReg.test(this.email)){
+					uni.showToast({
+						icon: "none",
+						title: "wrong email",
+					});
+				}else{
+					this.disabledbtn=true
+					this.verifyBtnText=seconds+'...'
+					uni.request({
+						url:'http://101.35.91.117:7884/users/register/sendVerifyCode',
+						method:'POST',
+						data:{
+							'email':this.email,
+						},
+						success:function(res){
+							console.log(res)
+							if (res.data==0){
+								uni.showModal({
+									title: 'Account exist',
+									showCancel: false,
+									content: 'The email address already exist, please try again or log in by this email. ',
+									success: function (res) {
+										if (res.confirm) {
+											console.log('confirm');
+										} 
+									}
+								});
+							}else{
+								uni.showToast({
+									icon: "none",
+									title: "Send verification code success",
+								});
+							}
 						}
-					}
-				})
-				this.liveCountTimes=setInterval(()=>{
-					if (seconds > 1){
-						seconds--;
-						this.verifyBtnText=seconds+'...'
-					}else{
-						clearInterval(this.liveCountTimes)
-						this.verifyBtnText='verify'
-						this.disabledbtn=false
-					}
-					},1000)
+					})
+					this.liveCountTimes=setInterval(()=>{
+						if (seconds > 1){
+							seconds--;
+							this.verifyBtnText=seconds+'...'
+						}else{
+							clearInterval(this.liveCountTimes)
+							this.verifyBtnText='verify'
+							this.disabledbtn=false
+						}
+						},1000)
+				}
 			},
 			facebook_login(){
 				// 登录
@@ -341,7 +349,7 @@
 						data:{
 							'name':this.username,
 							'email':this.email,
-							'vcode':this.vcode,
+							'verification_code':this.vcode,
 							'gender':2,
 							'pwd':this.pwd,
 							'uuid':0,
@@ -349,7 +357,12 @@
 						},
 						success:function(res){
 							console.log(res)
-							if (res.data==0){
+							if (res.data==-1){
+								uni.showToast({
+									icon: "none",
+									title: "先获取验证码",
+								});
+							}else if (res.data==-2){
 								uni.showModal({
 								    title: 'Account exist',
 									showCancel: false,
@@ -360,7 +373,7 @@
 								        } 
 								    }
 								});
-							}else if(res.data==-1){
+							}else if(res.data==-3){
 								uni.showModal({
 								    title: 'Verify failed',
 									showCancel: false,
@@ -370,6 +383,17 @@
 								            console.log('confirm');
 								        } 
 								    }
+								});
+							}else if(res.data==-4){
+								uni.showModal({
+									title: 'failed',
+									showCancel: false,
+									content: '注册失败',
+									success: function (res) {
+										if (res.confirm) {
+											console.log('confirm');
+										} 
+									}
 								});
 							}else{
 								
