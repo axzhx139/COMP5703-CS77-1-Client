@@ -229,7 +229,7 @@
 						this.disabledbtn=true
 						this.verifyBtnText=seconds+'...'
 						uni.request({
-							url:'http://101.35.91.117:7884/users/register/sendForgotPasswordCode',
+							url:'http://101.35.91.117:7884/users/register/sendChangeCode',
 							method:'POST',
 							data:{
 								'email':this.email,
