@@ -83,8 +83,8 @@
 										<!-- </view> -->
 									</u-col>
 									<u-col span="3">
-										<u-row>{{ item.name }}</u-row>
-										<u-row>{{ item.category }}</u-row>
+										<u-row style="margin: 0px 0px 10px 5px;">{{ item.name }}</u-row>
+										<u-row style="margin: 10px 0px 0px 5px;">{{ item.category }}</u-row>
 									</u-col>
 									<u-col span="3">
 										<view class="demo-layout bg-purple-light">
