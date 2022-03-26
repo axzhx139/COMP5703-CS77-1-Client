@@ -44,7 +44,7 @@
 						<u-row gutter="16" justify="space-between">
 							<u-col span="6">
 								<view class="demo-layout bg-purple">
-									<text>Item Name</text>
+									<text>Item</text>
 								</view>
 							</u-col>
 							<u-col span="6" style="text-align: right;">
@@ -56,25 +56,55 @@
 						</u-row>
 					</view>
 					<view style="margin-top: 5px;">
+						<!-- <inline>
+							
+							<uni-row class="demo-uni-row" :width="nvueWidth">
+								<uni-col :span="3">
+									<view class="demo-uni-col dark">1</view>
+								</uni-col>
+								<uni-col :span="3">
+									<view class="demo-uni-col light">2</view>
+								</uni-col>
+								<uni-col :span="3">
+									<view class="demo-uni-col dark">3</view>
+								</uni-col>
+								<uni-col :span="3">
+									<view class="demo-uni-col light">4</view>
+								</uni-col>
+							</uni-row>
+						</inline> -->
 						<block v-for="(item,index) in stockList">
 							<view style="margin-top: 10px;" @click="edit(item, index)">
 								
 								<u-row gutter="16">
 									<u-col span="3">
-										<view class="demo-layout bg-purple">
+										<!-- <view class="demo-layout bg-purple"> -->
 											<image :src="item.img" style="width: 65px;height: 65px;">
-										</view>
+										<!-- </view> -->
 									</u-col>
-									<u-col span="6">
+									<u-col span="3">
+										<u-row style="margin: 0px 0px 10px 5px;">{{ item.name }}</u-row>
+										<u-row style="margin: 10px 0px 0px 5px;">{{ item.category }}</u-row>
+									</u-col>
+									<u-col span="3">
 										<view class="demo-layout bg-purple-light">
-											<u-row gutter="18" justify="space-between">
-											<text>{{ item.name }}</text>
-											<view style="text-align: right;">
-												<image v-if="!item.potential" src="../../static/heart-line.png" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="saveList(item.itemId)"></image>
-												<image v-if="item.potential" src="../../static/heart-fill.png" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="deleteList(item.itemId)"></image>
-											</view>	
+											<!-- <u-row gutter="18" justify="space-between"> -->
+											<u-row style="justify-content: flex-end; margin-bottom: 5px">
+											<!-- <text>{{ item.name }}</text> -->
+											<!-- <view style="text-align: right;"> -->
+												<!-- <uni-icons type="cart" size="30" v-if="!item.potential" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="saveList(item.itemId)"></uni-icons> -->
+												<!-- <uni-icons type="cart-filled" size="30" v-if="!item.potential" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="deleteList(item.itemId)"></uni-icons> -->
+												<image v-if="!item.potential" src="../../static/cart.png" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="saveList(item.itemId)"></image>
+												<image v-if="item.potential" src="../../static/cart_fill.png" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="deleteList(item.itemId)"></image>
+												<!-- <img src="../../static/knife_fork.png" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click="changeAmount(index)"></img> -->
+												<!-- <u-button shape="circle" size="mini" style="background-color: #F3F1F1; " @click="changeAmount(index)">consume</u-button> -->
+														
+											<!-- </view>	 -->
 											</u-row>
-											<view>
+											<u-row style="justify-content: flex-end; margin-bottom: 5px">
+												<image src="../../static/knife_fork.png" style="height: 45rpx; width: 45rpx; float:right;  margin-right: 6%;" @click="changeAmount(index)"></image>
+											</u-row>
+											<!-- <view>
 												<u-row gutter="18" justify="space-between">
 													<u-col span="4" style="text-align: left;">														
 													</u-col>
@@ -85,17 +115,16 @@
 														</view>
 													</u-col>
 												</u-row>
-												
-												
-											</view>
+											</view> -->
 										</view>
 									</u-col>
 									<u-col span="3">
-										<view class="demo-layout bg-purple-dark">
-											<view class="demo-layout bg-purple">
+										<view class="demo-layout bg-purple-dark" style="text-align: right">
+											<!-- <view class="demo-layout bg-purple">
 												<text style="font-weight: 900;float:right;">{{item.expDate}}</text>
 											</view>
-											<text style="font-size:12px;">Remind before {{ item.time }} Days</text>
+											<text style="font-size:12px;">Remind before {{ item.time }} Days</text> -->
+											<text style="font-size:12px; text-align: right;">{{ item.expireDays }} Days</text>
 											<!-- <view>5 Days</view> -->
 										</view>
 									</u-col>
@@ -498,7 +527,7 @@
 				uni.request({
 					url:'http://101.35.91.117:7884/item/user/'+uni.getStorageSync('userId')
 				}).then(res => {
-					console.log(res[1].data)
+					console.log('res[1].data is: ',res[1].data)
 					this.getList()
 					this.updateItemList(res[1].data)
 				})
@@ -513,16 +542,29 @@
 					this.shopList = res[1].data
 				})
 			},
+			// 计算两个date相差多少天
+			dateMinus(dateStart, dateEnd) {
+				var sdate = new Date(dateStart); 
+				var now = new Date(dateEnd); 
+				var days = now.getTime() - sdate.getTime(); 
+				var day = Math.floor(days / (1000 * 60 * 60 * 24)); 
+					
+				return day;
+			},
 			updateItemList(itemList){
 				let stockList = []
                 let oldstockList = []
+				let todayDate = new Date(Date.now())
 				for (var i=0;i<itemList.length;i++){
                     var item = itemList[i]
 					var exp = new Date(item.expDate.substr(0,10))
+					console.log('exp is: ', exp)
+					console.log('与今天差的天数：', this.dateMinus(todayDate, exp))
+					var expireDays = this.dateMinus(todayDate, exp)
 					var remind = new Date(item.remindTime.substr(0,10))
 					// this.getImgById(item.itemId)
 					var temp = item.picture
-					console.log("img", item.picture)
+					// console.log("img", item.picture)
 					if(temp==null){
 						temp = "../../static/stock-icon.png"
 					}
@@ -540,7 +582,8 @@
                         "status": item.status,
 						"time":this.DateDiff(remind,exp),
 						"potential": item.potential,
-                        "uid": uni.getStorageSync('userId')
+                        "uid": uni.getStorageSync('userId'),
+						"expireDays": expireDays
 					}
 					
 					if (itemList[i].status === 'instock'){
