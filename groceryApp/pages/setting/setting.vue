@@ -37,12 +37,18 @@
 						<u-input placeholder="verify password" v-model="ivpwd" type="password"  class="end-input" height="10" input-align="center" :clearable="false"/>
 					</view>
 					
-					<view>
+					<view >
 						<u-button style="background-color: #F5C979; height: 75rpx; color: white; margin-right:10%;width: 240rpx; margin-top: 10%;" @click="change">Change password</u-button>
 					</view>	
-					
-					<view>
-						<u-button style="width: 320rpx;background-color: #443C34;color: white;margin-top: 30rpx;" @click="logout">
+					<view class="feedbackButton">
+						<u-button style="width: 310rpx;background-color: #443C34;color: white;margin-top: 30rpx;" @click="feedback()" >
+							<image src="../../static/logout.png" style="width: 20px;height: 20px;"></image>
+							<view style="width: 16rpx;"></view>
+							Feedback
+						</u-button>
+					</view>
+					<view class="logOutButton">	
+						<u-button style="width: 310rpx;background-color: #443C34;color: white;margin-top: 30rpx; margin-right: 20rpx;" @click="logout">
 							<image src="../../static/logout.png" style="width: 20px;height: 20px;"></image>
 							<view style="width: 16rpx;"></view>
 							Log out
@@ -185,6 +191,11 @@
 			        url: "/pages/welcome/welcome"
 			    })
 			},
+			feedback(){
+				uni.navigateTo({
+					url:"/pages/feedback/feedback"
+				})
+			}
 		}
 	}
 </script>
@@ -256,5 +267,10 @@ page{
 		margin-right: 4%;
 		color: #848484
 	}
-
+.feedbackButton{
+	float: left;
+}
+.logOutButton{
+	float: right;
+}
 </style>
