@@ -14,7 +14,11 @@
 					<view style="width: 100%;margin-top: 30px;">
 						<u-row gutter="" justify="space-around">
 									<u-col span="6">
+<<<<<<< HEAD
 										<view class="" style="text-align: center;text-decoration:underline">Forget password?</view>
+=======
+										<view class="" style="text-align: center;text-decoration:underline" @click="toForgot">Forget password?</view>
+>>>>>>> main
 									</u-col>
 									<u-col span="3">
 										<view class="" style="text-align: center;text-decoration:underline" @click="toSignUp">Sign up</view>
@@ -41,8 +45,13 @@
 						<u-button style="width:20%;float:left;margin-top: 0px;height:50px;background-color: #BDD7EF;border-color: #BDD7EF;" :hair-line="false" class="ctn-btn"  @click="sendcode(10)" v-bind:disabled="disabledbtn">{{verifyBtnText}}</u-button>
 					</div>
 					<u-input style="margin-top: 10px" placeholder="verification" v-model="vcode"  :border="border" class="fn-input" height="90" input-align="left"/>
+<<<<<<< HEAD
 					<u-input style="margin-top: 10px" placeholder="username" v-model="username"  :border="border" class="fn-input" height="90" input-align="left"/>
 					<u-input style="margin-top: 10px" placeholder="password" v-model="pwd"  type="password" :border="border" class="fn-input" height="90" input-align="left"/>
+=======
+					<!-- <u-input style="margin-top: 10px" placeholder="username" v-model="username"  :border="border" class="fn-input" height="90" input-align="left"/> -->
+					<u-input style="margin-top: 10px" placeholder="password" v-model="password"  type="password" :border="border" class="fn-input" height="90" input-align="left"/>
+>>>>>>> main
 					<u-button style="width:80%;margin-top: 20px;background-color: #F5C979;border-color: #F5C979;" :hair-line="false" class="ctn-btn" @click="SignupAction" >Sign up</u-button>
 					<text style="margin-top: 10px;text-decoration:underline" @click="toLogin">Log in</text>
 					<u-button style="margin-top: 10px;background-color: #5383EC;border-color: #5383EC;color: white;" :hair-line="false" class="ctn-btn" @click="google_start_login" >
@@ -55,6 +64,21 @@
 						<view style="width: 16px;"></view>
 						Continue with Facebook
 					</u-button>
+				</view>
+			</hqs-popup>
+			<hqs-popup title="" v-model="popForgot" :round="round" :showClose="false" :height="loginPopHeight + 'px'">
+			    <view class="t-bg">
+					<text style="margin-right: auto;margin-left: 30px;font-size: 25px;font-weight: 900" >Forgot Password</text>
+					<div id="app" style="margin-top: 20px;height:50px;width:80%">
+						<u-input style="width:75%;float:left;margin:0px 10px auto 0px;height:50px;" placeholder="example@example.com" v-model="email" :type="type" :border="border" class="fn-input" height="90" input-align="left"/>
+						<u-button style="width:20%;float:left;margin-top: 0px;height:50px;background-color: #BDD7EF;border-color: #BDD7EF;" :hair-line="false" class="ctn-btn"  @click="sendChangeCode(10)" v-bind:disabled="disabledbtn">{{verifyBtnText}}</u-button>
+					</div>
+					<u-input style="margin-top: 10px" placeholder="verification" v-model="vcode"  :border="border" class="fn-input" height="90" input-align="left"/>
+					<u-input style="margin-top: 10px" placeholder="password" v-model="password"  type="password" :border="border" class="fn-input" height="90" input-align="left"/>
+					<u-input style="margin-top: 10px" placeholder="confirm password" v-model="password2"  type="password" :border="border" class="fn-input" height="90" input-align="left"/>
+					<u-button style="width:80%;margin-top: 70px;background-color: #F5C979;border-color: #F5C979;" :hair-line="false" class="ctn-btn" @click="ChangePassword" >Change password</u-button>
+					<text style="margin-top: 10px;text-decoration:underline" @click="toLogin">Log in</text>
+					
 				</view>
 			</hqs-popup>
 			
@@ -151,13 +175,21 @@
 				show: false,
 				confirmPwd: false,
 				showPopup: false,
-				showLoginPopup: false,
 				showGoogleLoginPopup: false,
 				showFacebookLoginPopup: false,
+<<<<<<< HEAD
 				disabledbtn: false,
 				verifyBtnText:'verify',
 				username:'',
 				vcode:'',
+=======
+				popForgot:false,
+				disabledbtn: false,
+				verifyBtnText:'verify',
+				username:'',
+				vcode:'',
+				password2:'',
+>>>>>>> main
 			// add up for facebook login section 2 start
 				
 				title: 'Hello',
@@ -179,7 +211,11 @@
 			//console.log('app')
 			// #endif
 			
+<<<<<<< HEAD
 			this.loginPopHeight = 500
+=======
+			this.loginPopHeight = 450
+>>>>>>> main
 			console.log(this.loginPopHeight)
 			
 			// add up for facebook login section 3 start
@@ -201,6 +237,7 @@
 		},
 		methods: {
 			// add up for facebook login section 4 start
+<<<<<<< HEAD
 			sendcode: function(seconds,e) {
 				this.disabledbtn=true
 				this.verifyBtnText=seconds+'...'
@@ -243,6 +280,108 @@
 					}
 					},1000)
 			},
+=======
+			sendChangeCode:function(seconds,e){
+				console.log(this.email)
+				　　var myReg=/^[a-zA-Z0-9_-]+@([a-zA-Z0-9]+\.)+(com|cn|net|org)$/
+					if(this.email=='' ||this.email==null || ! myReg.test(this.email)){
+						uni.showToast({
+							icon: "none",
+							title: "wrong email",
+						});
+					}else{
+						this.disabledbtn=true
+						this.verifyBtnText=seconds+'...'
+						uni.request({
+							url:'http://101.35.91.117:7884/users/register/sendChangeCode',
+							method:'POST',
+							data:{
+								'email':this.email,
+							},
+							success:function(res){
+								console.log(res)
+								if (res.data==0){
+									uni.showModal({
+										title: 'Account do not exist',
+										showCancel: false,
+										content: 'The email address have not been register, please sign up',
+										success: function (res) {
+											if (res.confirm) {
+												console.log('confirm');
+											} 
+										}
+									});
+								}else{
+									uni.showToast({
+										icon: "none",
+										title: "Send verification code success",
+									});
+								}
+							}
+						})
+						this.liveCountTimes=setInterval(()=>{
+							if (seconds > 1){
+								seconds--;
+								this.verifyBtnText=seconds+'...'
+							}else{
+								clearInterval(this.liveCountTimes)
+								this.verifyBtnText='verify'
+								this.disabledbtn=false
+							}
+							},1000)
+					}
+			},
+			sendcode: function(seconds,e) {
+				console.log(this.email)
+			　　var myReg=/^[a-zA-Z0-9_-]+@([a-zA-Z0-9]+\.)+(com|cn|net|org)$/
+				if(this.email=='' ||this.email==null || ! myReg.test(this.email)){
+					uni.showToast({
+						icon: "none",
+						title: "wrong email",
+					});
+				}else{
+					this.disabledbtn=true
+					this.verifyBtnText=seconds+'...'
+					uni.request({
+						url:'http://101.35.91.117:7884/users/register/sendVerifyCode',
+						method:'POST',
+						data:{
+							'email':this.email,
+						},
+						success:function(res){
+							console.log(res)
+							if (res.data==0){
+								uni.showModal({
+									title: 'Account exist',
+									showCancel: false,
+									content: 'The email address already exist, please try again or log in by this email. ',
+									success: function (res) {
+										if (res.confirm) {
+											console.log('confirm');
+										} 
+									}
+								});
+							}else{
+								uni.showToast({
+									icon: "none",
+									title: "Send verification code success",
+								});
+							}
+						}
+					})
+					this.liveCountTimes=setInterval(()=>{
+						if (seconds > 1){
+							seconds--;
+							this.verifyBtnText=seconds+'...'
+						}else{
+							clearInterval(this.liveCountTimes)
+							this.verifyBtnText='verify'
+							this.disabledbtn=false
+						}
+						},1000)
+				}
+			},
+>>>>>>> main
 			facebook_login(){
 				// 登录
 				facebook.login((e) => {
@@ -325,6 +464,7 @@
 			SignupAction(){
 				
 				console.log(this.email)
+<<<<<<< HEAD
 				console.log(this.vcode)
 				console.log(this.username)
 				console.log(this.pwd)
@@ -332,6 +472,14 @@
 					uni.showToast({
 						icon: "none",
 						title: "information uncomplete",
+=======
+				console.log(this.vcode)
+				console.log(this.password)
+				if(this.password == null || this.password == ''){
+					uni.showToast({
+						icon: "none",
+						title: "please enter a password",
+>>>>>>> main
 					});
 				}
 				else{
@@ -339,17 +487,35 @@
 						url:'http://101.35.91.117:7884/users/register/normal',
 						method:'POST',
 						data:{
+<<<<<<< HEAD
 							'name':this.username,
 							'email':this.email,
 							'vcode':this.vcode,
 							'gender':2,
 							'pwd':this.pwd,
+=======
+							'name':this.email,
+							'email':this.email,
+							'verification_code':this.vcode,
+							'gender':2,
+							'pwd':this.password,
+>>>>>>> main
 							'uuid':0,
 							'token':'',
 						},
 						success:function(res){
+<<<<<<< HEAD
 							console.log(res)
 							if (res.data==0){
+=======
+							console.log(res)
+							if (res.data==-1){
+								uni.showToast({
+									icon: "none",
+									title: "先获取验证码",
+								});
+							}else if (res.data==-2){
+>>>>>>> main
 								uni.showModal({
 								    title: 'Account exist',
 									showCancel: false,
@@ -360,7 +526,11 @@
 								        } 
 								    }
 								});
+<<<<<<< HEAD
 							}else if(res.data==-1){
+=======
+							}else if(res.data==-3){
+>>>>>>> main
 								uni.showModal({
 								    title: 'Verify failed',
 									showCancel: false,
@@ -370,6 +540,20 @@
 								            console.log('confirm');
 								        } 
 								    }
+<<<<<<< HEAD
+=======
+								});
+							}else if(res.data==-4){
+								uni.showModal({
+									title: 'failed',
+									showCancel: false,
+									content: '注册失败',
+									success: function (res) {
+										if (res.confirm) {
+											console.log('confirm');
+										} 
+									}
+>>>>>>> main
 								});
 							}else{
 								
@@ -387,6 +571,88 @@
 					})
 				}
 			},
+			changePassword(){
+				
+				console.log(this.email)
+				console.log(this.vcode)
+				console.log(this.password)
+				console.log(this.password2)
+				if(this.password == null || this.password == ''||this.password2 == null || this.password2 == ''){
+					uni.showToast({
+						icon: "none",
+						title: "please enter a password and confirm",
+					});
+				}else if(this.password!=this.password2){
+					uni.showToast({
+						icon: "none",
+						title: "The confirm password is wrong",
+					});
+				}
+				else{
+					uni.request({
+						url:'http://101.35.91.117:7884/users/register/changePasswordbyVcode',
+						method:'POST',
+						data:{
+							'email':this.email,
+							'verification_code':this.vcode,
+							'pwd':this.password,
+						},
+						success:function(res){
+							console.log(res)
+							if (res.data==-1){
+								uni.showToast({
+									icon: "none",
+									title: "先获取验证码",
+								});
+							}else if (res.data==-2){
+								uni.showModal({
+								    title: 'Account not exist',
+									showCancel: false,
+								    content: 'The email address have not been register',
+								    success: function (res) {
+								        if (res.confirm) {
+								            console.log('confirm');
+								        } 
+								    }
+								});
+							}else if(res.data==-3){
+								uni.showModal({
+								    title: 'Verify failed',
+									showCancel: false,
+								    content: 'The verify code is wrong',
+								    success: function (res) {
+								        if (res.confirm) {
+								            console.log('confirm');
+								        } 
+								    }
+								});
+							}else if(res.data==-4){
+								uni.showModal({
+									title: 'failed',
+									showCancel: false,
+									content: 'Change password failed',
+									success: function (res) {
+										if (res.confirm) {
+											console.log('confirm');
+										} 
+									}
+								});
+							}else{
+								
+								// this.$store.commit("setUserLogin", res.data)
+								// console.log(res.data)
+								console.log("success")
+								//store uid
+								uni.showToast({
+									icon: "none",
+									title: "Change password success, please log in",
+								});
+								
+							}
+						}
+					})
+				}
+			},
 			toLogin(){
 				
 				this.popAction('showLoginPopup')
@@ -395,7 +661,9 @@
 				
 				this.popAction('showPopup')
 			},
-            
+            toForgot(){
+				this.popAction('popForgot')
+			},
 			loginAction(){
 				// uni.switchTab({                         --------------- xjg的服务器挂了就用它 ---------------
 				// 	url:"../profile/profile"
@@ -450,40 +718,45 @@
 			},
             
 			popAction(e){
+				this.password=''
+				this.password2=''
+				this.vcode=''
 				if (e === 'confirmPwd'){
 					this.showPopup = false
-					this.showLoginPopup = false
 					this.confirmPwd = true
 					this.showGoogleLoginPopup = false
 					this.showFacebookLoginPopup = false
-					
+					this.popForgot = false
 				}else if(e === 'showPopup'){
-					this.showLoginPopup = false
 					this.confirmPwd = false
 					this.showPopup = true
 					this.showGoogleLoginPopup = false
 					this.showFacebookLoginPopup = false
-					
+					this.popForgot = false
 				}else if(e === 'showLoginPopup'){
 					this.confirmPwd = false
 					this.showPopup = false
-					this.showLoginPopup = true
 					this.showGoogleLoginPopup = false
 					this.showFacebookLoginPopup = false
-					
+					this.popForgot = false
 				}else if(e === 'showGoogleLoginPopup'){
 					this.confirmPwd = false
 					this.showPopup = false
-					this.showLoginPopup = false
 					this.showGoogleLoginPopup = true
 					this.showFacebookLoginPopup = false
-					
+					this.popForgot = false
 				}else if(e === 'showFacebookLoginPopup'){
 					this.confirmPwd = false
 					this.showPopup = false
-					this.showLoginPopup = false
 					this.showGoogleLoginPopup = false
 					this.showFacebookLoginPopup = true
+					this.popForgot = false
+				}else if(e === 'popForgot'){
+					this.confirmPwd = false
+					this.showPopup = false
+					this.showGoogleLoginPopup = false
+					this.showFacebookLoginPopup = false
+					this.popForgot = true
 				}
 			}
 

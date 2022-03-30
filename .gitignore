@@ -4,6 +4,10 @@
 *.ap_
 *.aab
 .DS_Store
+<<<<<<< HEAD
+=======
+groceryApp/.DS_Store
+>>>>>>> main
 # Files for the ART/Dalvik VM
 *.dex
 
@@ -16,6 +20,8 @@ gen/
 out/
 #  Uncomment the following line in case you need and you don't have the release build type files in your app
 # release/
+/groceryApp/node_modules
+/node_modules
 
 # Gradle files
 .gradle/
