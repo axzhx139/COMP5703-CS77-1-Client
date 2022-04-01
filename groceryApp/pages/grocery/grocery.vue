@@ -681,11 +681,8 @@
 				
 			},
             
-<<<<<<< HEAD
+
             scanPhoto(){
-=======
-            scanPhoto(){
->>>>>>> main
 				
 				let that = this
                 uni.chooseImage({
@@ -698,7 +695,7 @@
                         console.log(String(res.tempFilePaths[0]));
 						uni.previewImage({
 							urls: res.tempFilePaths,
-<<<<<<< HEAD
+
 						});
 						
 						//跳过服务器
@@ -706,15 +703,6 @@
 						console.log("ocr 的返回结果：");
 						
 						that.iTime = "2022-08-20";
-=======
-						});
-						
-						//跳过服务器
-						console.log("上传了: " + String(res.tempFilePaths[0]) + "  --------")
-						console.log("ocr 的返回结果：");
-						
-						that.iTime = "2022-08-20";
->>>>>>> main
 						console.log(that.iTime);
 						/**uni.uploadFile({
 							url: 'http://101.35.91.117:7884/ocr', // ------------------- 每次测之前改一下 ------------------------
@@ -740,11 +728,8 @@
 								
 							}
 							
-<<<<<<< HEAD
+
 						});*/
-=======
-						});*/
->>>>>>> main
 						
                     }
                 });
