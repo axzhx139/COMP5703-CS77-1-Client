@@ -20,7 +20,7 @@
 	export default {
 		data() {
 			return {
-				
+				feedback:'',
 			}
 		},
 		methods: {
@@ -43,8 +43,12 @@
 									})
 								},	
 							});
+					
+							// uni.switchTab({
+							// 	url:"../setting/setting"
+							// })
 						
-						}
+					}
 		}
 	}
 </script>
