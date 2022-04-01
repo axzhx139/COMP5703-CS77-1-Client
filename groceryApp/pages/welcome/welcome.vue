@@ -297,6 +297,11 @@
 										} 
 									}
 								});
+							}else if(res.data==-2){
+								uni.showToast({
+									icon: "none",
+									title: "Email sending failed",
+								});
 							}else{
 								uni.showToast({
 									icon: "none",
@@ -412,7 +417,7 @@
 						url:'http://101.35.91.117:7884/users/register/normal',
 						method:'POST',
 						data:{
-							'name':this.email,
+							'name':this.email.split('@')[0],
 							'email':this.email,
 							'verification_code':this.vcode,
 							'gender':2,
