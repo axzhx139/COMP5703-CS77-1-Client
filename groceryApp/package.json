@@ -9,8 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "uview-ui": "^1.8.4",
-    "view-design": "^4.7.0"
+    "uview-ui": "^1.8.4"
   },
   "description": ""
 }

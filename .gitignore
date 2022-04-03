@@ -19,6 +19,8 @@ out/
 # release/
 /groceryApp/node_modules
 /node_modules
+/groceryApp/uni_modules
+/uni_modules
 
 # Gradle files
 .gradle/
