@@ -120,6 +120,15 @@
             }
             
         }
+        ,{
+            "path" : "pages/notification/notification",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
