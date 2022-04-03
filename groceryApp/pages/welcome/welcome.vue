@@ -67,7 +67,7 @@
 					<u-input style="margin-top: 10px" placeholder="verification" v-model="vcode"  :border="border" class="fn-input" height="90" input-align="left"/>
 					<u-input style="margin-top: 10px" placeholder="password" v-model="password"  type="password" :border="border" class="fn-input" height="90" input-align="left"/>
 					<u-input style="margin-top: 10px" placeholder="confirm password" v-model="password2"  type="password" :border="border" class="fn-input" height="90" input-align="left"/>
-					<u-button style="width:80%;margin-top: 70px;background-color: #F5C979;border-color: #F5C979;" :hair-line="false" class="ctn-btn" @click="ChangePassword" >Change password</u-button>
+					<u-button style="width:80%;margin-top: 70px;background-color: #F5C979;border-color: #F5C979;" :hair-line="false" class="ctn-btn" @click="changePassword" >Change password</u-button>
 					<text style="margin-top: 10px;text-decoration:underline" @click="toLogin">Log in</text>
 					
 				</view>
@@ -236,7 +236,12 @@
 							},
 							success:function(res){
 								console.log(res)
-								if (res.data==0){
+								if(res.data==1){
+									uni.showToast({
+										icon: "none",
+										title: "Send verification code success",
+									});
+								}else if (res.data==-1){
 									uni.showModal({
 										title: 'Account do not exist',
 										showCancel: false,
@@ -250,7 +255,7 @@
 								}else{
 									uni.showToast({
 										icon: "none",
-										title: "Send verification code success",
+										title: "Send verification code failed",
 									});
 								}
 							}
@@ -510,11 +515,6 @@
 						success:function(res){
 							console.log(res)
 							if (res.data==-1){
-								uni.showToast({
-									icon: "none",
-									title: "先获取验证码",
-								});
-							}else if (res.data==-2){
 								uni.showModal({
 								    title: 'Account not exist',
 									showCancel: false,
@@ -525,7 +525,7 @@
 								        } 
 								    }
 								});
-							}else if(res.data==-3){
+							}else if(res.data==-2){
 								uni.showModal({
 								    title: 'Verify failed',
 									showCancel: false,
@@ -536,7 +536,16 @@
 								        } 
 								    }
 								});
-							}else if(res.data==-4){
+							}else if(res.data==1){
+								console.log("success")
+								//store uid
+								uni.showToast({
+									icon: "none",
+									title: "Change password success, please log in",
+								});
+								
+							
+							}else{
 								uni.showModal({
 									title: 'failed',
 									showCancel: false,
@@ -546,16 +555,6 @@
 											console.log('confirm');
 										} 
 									}
-								});
-							}else{
-								
-								// this.$store.commit("setUserLogin", res.data)
-								// console.log(res.data)
-								console.log("success")
-								//store uid
-								uni.showToast({
-									icon: "none",
-									title: "Change password success, please log in",
 								});
 								
 							}
