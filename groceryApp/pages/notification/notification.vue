@@ -1,11 +1,13 @@
 <template>
-	<view>
+	<view id="notification-page">
 		<view id="title">
 			<text style="margin-left: 1%; font-size: 28px;color: #000000;font-weight: 900;">inbox</text>
 		</view>
-		<view>
+		<view id="main-body">
 			<uni-row v-for="(item, index) in inboxData" :key=index>
-				<uni-col v-if="item.unread">item.name</uni-col>
+				<uni-col v-if="item.unread">
+					Hi, your {{item.name}} will get expired on {{item.expireDays}} days
+				</uni-col>
 			</uni-row>
 		</view>
 
@@ -60,10 +62,22 @@
 	page {
 		background-color: #B0C07A;
 	}
-
+	#notification-page {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
 	#title {
 		display: flex;
 		justify-content: center;
 		text-align: center;
+	}
+	#main-body {
+		background-color: white;
+		width: 90%;
+		border-radius: 10px;
+		/* text-align: center; */
+		padding-left: 5px;
 	}
 </style>
