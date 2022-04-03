@@ -233,6 +233,34 @@
 			</hqs-popup>
 			<view class="content" v-if="issSelect">
 				<view class="stock-card">
+					<view>
+						<u-row gutter="16" justify="space-between">
+							<u-col span="6">
+								<view class="demo-layout bg-purple">
+									<text style="font-weight: 900;">Choose tags</text>
+								</view>
+							</u-col>
+							<u-col span="5" style="text-align: right;">
+								<view class="demo-layout bg-purple-light">
+									<view style="text-align: center;">
+										<xfl-select @change="selectItemTags"
+											:list="chooseTags"
+											:clearable="false"
+											:showItemNum="5" 
+											:listShow="false"
+											:isCanInput="false"  
+											:style_Container="'height: 30px; font-size: 15px;'"
+											:placeholder = "'Expire'"
+											:selectHideType="'hideAll'"
+											style="width: 100%; background-color: #FFFFFF;"
+										>
+										</xfl-select>
+									</view>
+									
+								</view>
+							</u-col>
+						</u-row>
+					</view>
 					<view style="margin-top: 5px;">
 						<block v-for="(item,index) in oldstockList">
 							<view style="margin-top: 10px;">
@@ -257,7 +285,7 @@
 									<u-col span="3">
 										<view class="demo-layout bg-purple-dark">
 											<view><text style="font-size: 14px;">{{ item.expDate }}</text></view>
-											<view v-if="item.status=='consume'"><text style="font-size: 12px;">consumed in {{ item.conDate }}</text></view>
+											<!-- <view v-if="item.status=='consume'"><text style="font-size: 12px;">consumed in {{ item.conDate }}</text></view> -->
 											<view v-if="item.status=='consume'" style="color: #FFA451;">{{item.status}}</view>
 											<view v-if="item.status=='expire'" style="color: #AA4A44;">{{item.status}}</view>
 										</view>
@@ -406,6 +434,7 @@
 				},
 				options: ['Fruit','Vegetable','Dairy','Animal product','Frozen','Canned Goods','Frozen Foods','Deli','Others'],
 				sortingMethod: ['Recent Added', 'A-z', 'Expire Soon'],
+				chooseTags: ['Expire', 'Consume', 'Clear'],
 			}
 		},
 		onLoad(){
@@ -896,7 +925,7 @@
 				// this function will sort the stocklist by the expire date of each item in ascending order
 				// E.g. Apple expires at 2021/Dec/12, Orange expires at 2021/Nov/11, Tofu expires at 2021/Dec/31
 				// the order after sort will be Orange -> Apple -> Tofu
-				this.stockList.sort(function(a, b){
+				this.oldstockList.sort(function(a, b){
 				  let dateA = a.expDate;
 				  let dateB = b.expDate;
 				  if (dateA < dateB){
@@ -923,6 +952,38 @@
 				  return 0;
 				});
 			},
+			
+			selectItemTags(tags){
+				if (tags.newVal === "Expire"){
+					this.getExpire();
+				} else if (tags.newVal === "consume") {
+					this.getConsume();
+				}
+			},		
+			
+			
+			
+			getExpire(){
+				this.oldstockList.filter(function(a){
+					let tagA = a.status;
+					if (tagA === 'expire') {
+						return true;
+					} else {
+						return false;
+					}
+				})
+			},
+			getConsume(){
+				this.oldstockList.filter(function(a){
+					let tagA = a.status;
+					if (tagA === 'consume') {
+						return true;
+					} else {
+						return false;
+					}
+				})
+			},
+			
 			getImgById(id){
 				uni.request({
 				url: "http://101.35.91.117:7884/item/picture/"+id,
@@ -983,7 +1044,9 @@
 				
 			}
 			
-		}
+		},
+		
+
 	}
 	
 </script>

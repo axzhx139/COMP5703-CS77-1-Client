@@ -53,6 +53,7 @@
 				"navigationBarBackgroundColor": "#B0C07A",
                 "enablePullDownRefresh": false
             }
+<<<<<<< Updated upstream
             
         },
 		{
@@ -66,6 +67,12 @@
 		}
         ,{
             "path" : "pages/recipe/recipe",
+=======
+            
+        }
+        ,{
+            "path" : "pages/recipe/recipe",
+>>>>>>> Stashed changes
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "Recipe",
@@ -118,6 +125,7 @@
 				"navigationBarBackgroundColor": "#B0C07A",
                 "enablePullDownRefresh": false
             }
+<<<<<<< Updated upstream
             
         }
         ,{
@@ -144,6 +152,25 @@
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#B0C07A",
 		"backgroundColor": "#F8F8F8"
+=======
+            
+        }
+        ,{
+            "path" : "pages/feedback/feedback",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Feedback",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#B0C07A",
+		"backgroundColor": "#F8F8F8"
+>>>>>>> Stashed changes
 	},
 	"tabBar": {
 			"color": "#909399",
