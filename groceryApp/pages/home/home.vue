@@ -40,20 +40,16 @@
 			<scroll-view :scroll-with-animation="true"  :scroll-x="true" style="white-space: nowrap;" >
 			  <template v-for="(item, index) in expiringFoodList">
 				  <view class="scroll_item" @click="toDetail(item.itemId)" :style="{'background-image': 'url('+item.img+')'}">
-					<view style="height: 20%;"></view>
-					<text style="color: #FFFFFF;margin-left: 14px;font-size: 16px;font-weight: 500;">{{ item.name }}</text>
-					
-					<view class="" style="margin-left: 14px;margin-top: 10px;color: #FFFFFF;">
-						<image src="../../static/bottle.png" style="width: 15px;height: 15px;">
-						<text style="display: inline-block;margin-left: 5px;">Remind at: {{ item.remindTime.split("T")[0] }}</text>
+					<view style="height: 100%;">
+							<img src="../../static/knife_fork.png" style="width: 20px;height: 20px;float:right"></img>
 					</view>
-					
-					<view class="" style="margin-left: 14px;margin-top: 10px;color: #FFFFFF;">
-						<image src="../../static/bottle.png" style="width: 15px;height: 15px;">
-						<text style="display: inline-block;margin-left: 5px;">Expire at: {{ item.expDate }}</text>
+					<text style="margin-left: 14px;font-size: 16px;font-weight: 500;">{{ item.name }}</text>
+					<view class="" style="margin-left: 14px;">
+						<img src="../../static/bottle.png" style="width: 15px;height: 15px;"></img>
+						<text style="display: inline-block;margin-left: 5px;">{{item.remindTime.split("T")[0].split('-')[2]+'/'+ item.remindTime.split("T")[0].split('-')[1] }}</text>
 					</view>
-					
 				  </view>
+				  
 			  </template>
 			</scroll-view>
 		</view>
@@ -190,8 +186,9 @@
 				console.log(e)
 			},
 			toDetail(e){
+				console.log(e)
 				uni.navigateTo({
-					url: '../article/article?id=' + e + '&backType=2'
+					url: '../grocery/detail?id=' + e + '&backType=2'
 				})
 			},
 			loadinfo(){
@@ -319,11 +316,11 @@
 	margin-left: 15px;
 }
 .scroll_item{
-  background: #545B66;
-  width:90%; 
-  height:116px; 
+  background: #f7edc8;
+  width:100px; 
+  height:100px; 
   margin: 5px 5px 5px 5px;
-  border-radius: 10rpx;
+  border-radius: 25rpx;
   display: inline-block;
   margin-left: 10px;
   background-size: 100%;
