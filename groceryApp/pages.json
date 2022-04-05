@@ -53,17 +53,8 @@
 				"navigationBarBackgroundColor": "#B0C07A",
                 "enablePullDownRefresh": false
             }
-            
-        },
-		{
-		    "path" : "pages/grocery/detail",
-		    "style" :                                                                                    
-		    {
-		        "navigationBarTitleText": "Product Details",
-		        "enablePullDownRefresh": false
-		    }
-		    
-		}
+    
+        }
         ,{
             "path" : "pages/recipe/recipe",
             "style" :                                                                                    
