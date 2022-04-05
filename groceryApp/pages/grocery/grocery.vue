@@ -1,6 +1,8 @@
 <template>
 	<view>
-		<hx-navbar ref="hxnb" :config="config" @clickBtn="onClickBtn">
+		<hx-navbar ref="hxnb" v-show="addItemToList" :config="config1" @clickBtn="onClickBtn">
+		</hx-navbar>
+		<hx-navbar ref="hxnb" v-show="needAddItem" :config="config2" @clickBtn="onClickBtn">
 		</hx-navbar>
 		<view v-if="addItemToList">
 			<view class="content" >
@@ -386,7 +388,7 @@
 				shopList:[],
 				oldstockList: [],
 				stockList:[],
-				config:{
+				config1:{
 					title: 'Grocery',
 					color: 'black',
 					backgroundColor: '#B0C07A',
@@ -401,6 +403,23 @@
 					leftButton: [{
 						key: 'add',
 						icon: '&#xe603;',
+						position: 'left'
+					}],
+				},
+				config2:{
+					title: 'Add product',
+					color: 'black',
+					back: false,
+					backgroundColor: '#B0C07A',
+					statusBarBackground:'#B0C07A',
+					rightButton:[{
+						key: 'scan',
+						icon: '&#xe62c;',
+						position: 'left'
+					}],
+					leftButton: [{
+						key: 'back',
+						icon: '&#xe679;',
 						position: 'left'
 					}],
 				},
@@ -734,6 +753,7 @@
             
 			onClickBtn(e){
 				if (e.key == 'add'){
+					console.log('111')
 					this.addItemToList = false
 					this.needAddItem = true
 					this.iName = '';
@@ -742,6 +762,10 @@
 					this.iCitime = '';
 					this.iDetails = '';
 					this.iItemid = '';
+					console.log('change')
+				}else if(e.key == 'back'){
+					this.addItemToList = true
+					this.needAddItem = false
 				}else{
                     this.scanPhoto()
                 }
