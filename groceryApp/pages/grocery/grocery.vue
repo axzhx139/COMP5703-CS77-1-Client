@@ -264,6 +264,20 @@
 						</u-row>
 					</view>
 					<view style="margin-top: 5px;">
+						<u-row gutter="16" justify="space-between">
+							<u-col span="6">
+								<view class="demo-layout bg-purple">
+									<text>Item</text>
+								</view>
+							</u-col>
+							<u-col span="6" style="text-align: right;">
+								<view class="demo-layout bg-purple-light">
+									<text>Expiring Date</text>
+								</view>
+							</u-col>
+						</u-row>
+					</view>
+					<view style="margin-top: 5px;">
 						<block v-for="(item,index) in oldstockList">
 							<view style="margin-top: 10px;">
 								<u-row gutter="16">
@@ -272,13 +286,25 @@
 											<image :src="item.img" style="width: 65px;height: 65px;">
 										</view>
 									</u-col>
-									<u-col span="6">
+									
+									<u-col span="3">
+										<u-row style="margin: 0px 0px 10px 5px;">{{ item.name }}</u-row>
+										<u-row style="margin: 10px 0px 0px 5px;">{{ item.category }}</u-row>
+									</u-col>
+									
+									<u-col span="3">
 										<view class="demo-layout bg-purple-light">
-											<text>{{ item.name }}</text>
+		<!-- 									<text>{{ item.name }}</text>
+								
+											<text>{{ item.category }}</text> -->
 											
+<!-- 											<u-col span="3">
+												<u-row style="margin: 0px 0px 10px 5px;">{{ item.name }}</u-row>
+												<u-row style="margin: 10px 0px 0px 5px;">{{ item.category }}</u-row>
+											</u-col> -->
 											<view>
-												<image v-if="!item.potential" src="../../static/heart-line.png" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="saveList(item.itemId)"></image>
-												<image v-if="item.potential" src="../../static/heart-fill.png" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="deleteList(item.itemId)"></image>
+												<!-- <image v-if="!item.potential" src="../../static/heart-line.png" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="saveList(item.itemId)"></image> -->
+												<!-- <image v-if="item.potential" src="../../static/heart-fill.png" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="deleteList(item.itemId)"></image> -->
 												<!-- <text style="font-weight: 900;">{{ item.packs }}packs</text> -->
 												
 											</view>
@@ -288,8 +314,8 @@
 										<view class="demo-layout bg-purple-dark">
 											<view><text style="font-size: 14px;">{{ item.expDate }}</text></view>
 											<!-- <view v-if="item.status=='consume'"><text style="font-size: 12px;">consumed in {{ item.conDate }}</text></view> -->
-											<view v-if="item.status=='consume'" style="color: #FFA451;">{{item.status}}</view>
-											<view v-if="item.status=='expire'" style="color: #AA4A44;">{{item.status}}</view>
+											<view v-if="item.status=='consume'" style="color: #FFA451;">Consumed</view>
+											<view v-if="item.status=='expire'" style="color: #AA4A44;">Expired</view>
 										</view>
 									</u-col>
 								</u-row>
@@ -431,7 +457,7 @@
 				},
 				options: ['Fruit','Vegetable','Dairy','Animal product','Frozen','Canned Goods','Frozen Foods','Deli','Others'],
 				sortingMethod: ['Recent Added', 'A-z', 'Expire Soon'],
-				chooseTags: ['Expire', 'Consume', 'Clear'],
+				chooseTags: ['Expired', 'Consumed'],
 			}
 		},
 		onLoad(){
