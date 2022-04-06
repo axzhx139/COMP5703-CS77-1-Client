@@ -48,7 +48,7 @@
 					<text style="margin-left: 14px;font-size: 16px;font-weight: 500;">{{ item.name }}</text>
 					<view class="" style="margin-left: 14px;">
 						<img src="../../static/remind.png" style="width: 15px;height: 15px;" v-if="isReminded(index)"></img>
-						<text style="display: inline-block;margin-left: 5px;">{{item.remindTime.split("T")[0].split('-')[2]+'/'+ item.remindTime.split("T")[0].split('-')[1] }}</text>
+						<text style="display: inline-block;margin-left: 5px;">{{item.expDate.split("T")[0].split('-')[2]+'/'+ item.expDate.split("T")[0].split('-')[1] }}</text>
 					</view>
 				  </view>
 				  
@@ -118,7 +118,7 @@
 		
 		<hqs-popup  title="" :from="popFrom" v-model="consumePop" :round="20" :showClose="false" height="300px">
 			<view class="t-bg">
-				<text style="font-size: 20px;font-weight: 900;">Have you consumed already？</text>
+				<text style="font-size: 20px;font-weight: 900;">Have you consumed already?</text>
 				<view class="sm-ipbox">
 					<!-- <text>-</text> -->
 					<!-- <view style="margin-top: 10px;font-size: 20px;margin-right: 15px;" @click=" packs-= 1">-</view>

@@ -43,6 +43,15 @@
 				"disableScroll": false
             }
             
+        },
+		{
+            "path" : "pages/grocery/detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Details",
+                "enablePullDownRefresh": false
+            }
+            
         }
         ,{
             "path" : "pages/grocery/grocery",
