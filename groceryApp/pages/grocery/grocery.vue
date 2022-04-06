@@ -300,34 +300,14 @@
 				</view>
 			</view>
 		</view>
-		<view v-if="needAddItem" class="content">
-			<view class="" style="width: 80%;margin-top: 15px;text-align: center;">
-				<u-row gutter="16" justify="space-between">
-					<u-col span="3" style="text-align: left;">
-						<view class="demo-layout bg-purple" >
-							<u-button shape="circle" size="mini" style="background-color:black;color: white;" @click="cancelAddCard">< Cancel</u-button>
-						</view>
-					</u-col>
-					<u-col span="3" style="text-align: right;">
-						<view class="demo-layout bg-purple-light">
-							<u-button shape="circle" size="mini" style="background-color: black;color: white;" @click="saveClient">Save</u-button>
-						</view>
-					</u-col>
-				</u-row>
-			</view>
-
-		</view>
 		<view class="add-card-item" v-if="needAddItem">
 			<view style="text-align: left;width: 100%;">
-				<text style="margin-left: 25px;font-size: 20px;">Name</text>
-				<view style="text-align: center;">
-					<u-input style="width: 80%;font-weight: 900;display: inline-block;background-color: #F3F1F1;border-radius: 10px;" placeholder="Name" v-model="iName" class="fn-input" height="90" input-align="center" :clearable="false"/>
-				</view>
+				<text style=" line-height: 45px;margin-left: 25px;font-size: 20px;float:left">Name</text>
+				<u-input style="float:left;margin-left: 55px;width: 50%;font-weight: 900;background-color: #F3F1F1;border-radius: 10px;" placeholder="Name" v-model="iName" class="fn-input" height="90" input-align="center" :clearable="false"/>
 			</view>
 			
-			<view style="text-align: left;width: 100%;margin-top: 15px;">
-				<text style="margin-left: 25px;font-size: 20px;">Category</text>
-				<view style="text-align: center;">
+			<view style="text-align: left;width: 100%;margin-top: 25px;">
+				<text style=" line-height: 50px;float:left;margin-left: 25px;font-size: 20px;">Category</text>
 					<xfl-select @change="getCategory"
 						:list="options"
 						:clearable="false"
@@ -337,37 +317,40 @@
 						:style_Container="'height: 50px; font-size: 16px;'"
 						:placeholder = "'Choose'"
 						:selectHideType="'hideAll'"
-						style="width: 80%;background-color: #F3F1F1;"
+						style="width: 50%;background-color: #F3F1F1;float:left;margin-left: 25px;"
 					>
 					</xfl-select>
-				</view>
 			</view>
 			
-			<view style="text-align: left;width: 100%;margin-top: 15px;">
-				<text style="margin-left: 25px;font-size: 20px;">Expire Date</text>
+			<view style="text-align: left;width: 100%;margin-top: 25px;">
+				<text style="float:left;margin-left: 25px;line-height: 45px;font-size: 20px;">Expire Date</text>
 				<view style="text-align: center;">
-					<u-input @click="openTime" style="width: 80%;font-weight: 900;display: inline-block;background-color: #F3F1F1;border-radius: 10px;" :clearable="true" placeholder="Time" v-model="iTime" class="fn-input" height="90" input-align="center"/>
+					<u-input @click="openTime" style="float:left;margin-left: 10px;width: 40%;font-weight: 900;display: inline-block;background-color: #F3F1F1;border-radius: 10px;" :clearable="true" placeholder="Time" v-model="iTime" class="fn-input" height="90" input-align="center"/>
 					<u-calendar v-model="cshow" @change="changeTime" max-date="9999"></u-calendar>
+					<img src="../../static/scan.png" style="margin:10px 10px 0 10px;float:left;width: 25px;height: 25px;" @click="onClickBtn"></img>
+					
 				</view>
 			</view>
 			
-			<view style="text-align: left;width: 100%;margin-top: 15px;">
-				<view  class="aline" style="text-align: center;">
+			<view style="text-align: left;width: 100%;margin-top: 25px;">
+				<view  class="aline" style="text-align: center;padding:0 25px 0 25px;">
 					<text style="font-size: 20px;">Remind me</text>
 					<u-input :clearable="false" style="margin-left: 5px; margin-right: 5px; margin-top: 10px; width: 10px; font-weight: 900;display: inline-block;background-color: #F3F1F1;border-radius: 10px;" placeholder="" v-model="iCitime" class="fn-input" height="90" input-align="center"/>
 					<text style="font-size: 20px;">days before</text>
 				</view>
 			</view>
 			
-			<view style="text-align: left;width: 100%;">
+			<!-- <view style="text-align: left;width: 100%;margin-top: 25px;">
 				<text style="margin-left: 25px;font-size: 20px;">Other details</text>
 				<view style="text-align: center;">
 					<u-input :clearable="false" style="width: 80%;font-weight: 900;display: inline-block;background-color: #F3F1F1;border-radius: 10px;" placeholder="details" v-model="iDetails" class="fn-input" height="90" input-align="center"/>
 				</view>
-			</view>
+			</view> -->
 			
-			<view style="margin-top: 20px;">
-				<u-button shape="circle" :hair-line="false" style="width: 150px;background-color: #F5C979;border-color: #F5C979;" @click="choosePhoto">Choose a photo</u-button>
+			<view style="margin-top: 30px;">
+				<u-button shape="circle" :hair-line="false" style="margin-left: 25px;float:left;width: 150px;background-color: #F5C979;border-color: #F5C979;" @click="choosePhoto">Choose a photo</u-button>
+				<u-button shape="circle" :hair-line="false" style="margin-right: 25px;float:right;width: 150px;background-color: #F5C979;border-color: #F5C979;" @click="save">save</u-button>
+			
 			</view>
 			
 		</view>
@@ -440,11 +423,6 @@
 					back: false,
 					backgroundColor: '#B0C07A',
 					statusBarBackground:'#B0C07A',
-					rightButton:[{
-						key: 'scan',
-						icon: '&#xe62c;',
-						position: 'left'
-					}],
 					leftButton: [{
 						key: 'back',
 						icon: '&#xe679;',
@@ -800,10 +778,6 @@
                 }
 			},
             
-			cancelAddCard(){
-				this.needAddItem = false
-				this.addItemToList = true
-			},
 			DateDiff(date1, date2) {
 				const date1utc = Date.UTC(date1.getFullYear(), date1.getMonth(), date1.getDate());
 				const date2utc = Date.UTC(date2.getFullYear(), date2.getMonth(), date2.getDate());
@@ -1083,7 +1057,6 @@
 		display: flex;
 		/* justify-content: center; */
 		align-items: center;
-		padding: 30px;
 	}
 	.content{
 		display: flex;
