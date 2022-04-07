@@ -312,10 +312,11 @@
 									</u-col>
 									<u-col span="3">
 										<view class="demo-layout bg-purple-dark">
-											<view><text style="font-size: 14px;">{{ item.expDate }}</text></view>
-											<!-- <view v-if="item.status=='consume'"><text style="font-size: 12px;">consumed in {{ item.conDate }}</text></view> -->
-											<view v-if="item.status=='consume'" style="color: #FFA451;">Consumed</view>
-											<view v-if="item.status=='expire'" style="color: #AA4A44;">Expired</view>
+											<!-- <view><text style="font-size: 14px;">{{ item.expDate }}</text></view> -->
+											 <view v-if="item.status=='consume'"><text style="font-size: 12px;">{{ item.conDate }}</text></view>
+											 <view v-if="item.status=='expire'"><text style="font-size: 12px;">{{ item.expDate }}</text></view>
+											 <view v-if="item.status=='consume'" style="color: #FFA451;">Consumed</view>
+											<view v-if="item.status=='expire'" style="color: #AA4A44;">Expired </view>
 										</view>
 									</u-col>
 								</u-row>
@@ -425,6 +426,7 @@
 				shopList:[],
 				oldstockList: [],
 				stockList:[],
+				
 				config1:{
 					title: 'Grocery',
 					color: 'black',
@@ -457,7 +459,7 @@
 				},
 				options: ['Fruit','Vegetable','Dairy','Animal product','Frozen','Canned Goods','Frozen Foods','Deli','Others'],
 				sortingMethod: ['Recent Added', 'A-z', 'Expire Soon'],
-				chooseTags: ['Expired', 'Consumed'],
+				chooseTags: ['Expired', 'Consumed', 'All'],
 			}
 		},
 		onLoad(){
@@ -977,36 +979,46 @@
 				});
 			},
 			
+			//history   -1:all, -2:expire, -3:consume
 			selectItemTags(tags){
-				if (tags.newVal === "Expire"){
-					this.getExpire();
-				} else if (tags.newVal === "consume") {
-					this.getConsume();
+				if (tags.newVal === "Expired"){
+
+					console.log('测试过期')
+					
+					uni.request({
+					url: 'http://101.35.91.117:7884/item/user/'+uni.getStorageSync('userId') + '/-2',
+					method: 'get',
+					}).then(res=>{
+						console.log('load',res[1].data)
+						this.oldstockList = res[1].data
+					})
+					
+					
+					
+				} else if (tags.newVal === "Consumed") {
+					
+					console.log('测试消耗')
+					uni.request({
+					url: 'http://101.35.91.117:7884/item/user/'+uni.getStorageSync('userId') + '/-3',
+					method: 'get',
+					}).then(res=>{
+						console.log('load',res[1].data)
+						this.oldstockList = res[1].data
+					})
+				} else if (tags.newVal === "All") {
+					
+					console.log('没有过滤器')
+					uni.request({
+					url: 'http://101.35.91.117:7884/item/user/'+uni.getStorageSync('userId') + '/-1',
+					method: 'get',
+					}).then(res=>{
+						console.log('load',res[1].data)
+						this.oldstockList = res[1].data
+					})
 				}
 			},		
 			
 			
-			
-			getExpire(){
-				this.oldstockList.filter(function(a){
-					let tagA = a.status;
-					if (tagA === 'expire') {
-						return true;
-					} else {
-						return false;
-					}
-				})
-			},
-			getConsume(){
-				this.oldstockList.filter(function(a){
-					let tagA = a.status;
-					if (tagA === 'consume') {
-						return true;
-					} else {
-						return false;
-					}
-				})
-			},
 			
 			getImgById(id){
 				uni.request({
