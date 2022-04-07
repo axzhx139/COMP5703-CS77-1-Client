@@ -9,7 +9,7 @@
 					<text>Notification</text>
 					<xfl-select :list="candidates"
 								:clearable="false"
-								:initValue="unreadFilter"
+								:initValue="candidates[0]"
 								:style_Container="'height: 20px;width: auto; text-align: left; padding: 5px; padding-right: 15px;'"
 								@change="changeUnread">
 
@@ -17,16 +17,45 @@
 				</view>
 				<view @click="markAllReaded">Mark all as Readed</view>
 			</view>
+			<view v-if="isUnread">
+				<uni-row v-for="(item, index) in inboxData" :key=index>
+					<uni-col v-if="item.unread" class="notificationCol">
+						<uni-icons type="chat" size="30"></uni-icons>
+						<!-- <view>
+							<text decode='true'>
+								Hi, your&ensp;&emsp;<b>{{item.name}}</b> added on
+								<strong class="boldTest">{{item.addDate}}</strong> will get expired on
+								<strong class="boldTest">{{item.expireDays}}</strong> days
+							</text>
+						</view> -->
+						<text decode='true'>
+							Hi, your {{item.name}} added on {{item.addDate}} will get expired on {{item.expireDays}} days
+						</text>
+						
+					</uni-col>
+					<u-divider half-width="60%"></u-divider>
+				</uni-row>
+			</view>
+			<view v-if="!isUnread">
+				<uni-row v-for="(item, index) in inboxData" :key=index>
+					<uni-col v-if="!item.unread" class="notificationCol">
+						<uni-icons type="chat" size="30"></uni-icons>
+						<!-- <view>
+							<text decode='true'>
+								Hi, your&ensp;&emsp;<b>{{item.name}}</b> added on
+								<strong class="boldTest">{{item.addDate}}</strong> will get expired on
+								<strong class="boldTest">{{item.expireDays}}</strong> days
+							</text>
+						</view> -->
+						<text decode='true'>
+							Hi, your {{item.name}} added on {{item.addDate}} will get expired on {{item.expireDays}} days
+						</text>
+						
+					</uni-col>
+					<u-divider half-width="60%"></u-divider>
+				</uni-row>
+			</view>
 			
-			<uni-row v-for="(item, index) in inboxData" :key=index>
-				<uni-col v-if="item.unread" class="notificationCol">
-					<uni-icons type="chat" size="30"></uni-icons>
-					
-					<text>Hi, your {{item.name}} will get expired on {{item.expireDays}} days</text>
-					
-				</uni-col>
-				<u-divider half-width="60%"></u-divider>
-			</uni-row>
 			
 		</view>
 
@@ -44,7 +73,7 @@
 				// inboxData: [],
 				inboxData: [
 					{
-						"name": "apple",
+						"name": " apple ",
 						"addDate": "2022/04/01",
 						"expireDays": 2,
 						"unread": true,
@@ -69,15 +98,20 @@
 					}
 				],
 				candidates: ["unread", "readed"],
-				unreadFilter: "unread",
-
+				isUnread: true,
+				clientHeight: "",
 
 			}
 		},
 		methods: {
-			changeUnread(unreadFilter) {
-				console.log(unreadFilter)
-				this.unreadFilter = unreadFilter.newVal
+			changeUnread(xflSelectResult) {
+				console.log(xflSelectResult)
+				if (xflSelectResult.newVal == this.candidates[0]) {
+					this.isUnread = true
+				} else if (xflSelectResult.newVal == this.candidates[1]) {
+					this.isUnread = false
+				}
+				
 			},
 			markAllReaded() {
 				for (let i=0; i<this.inboxData.length; i++) {
@@ -108,7 +142,7 @@
 		width: 90%;
 		border-radius: 10px;
 		/* text-align: center; */
-		padding: 5px;
+		padding: 10px;
 	}
 	#inboxTop {
 		display: flex;
