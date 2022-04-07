@@ -3,7 +3,7 @@
 		<view id="title">
 			<text style="margin-left: 1%; font-size: 28px;color: #000000;font-weight: 900;">inbox</text>
 		</view>
-		<view id="main-body">
+		<view id="main-body" :style="{height: scrollerHeight}">
 			<view id="inboxTop">
 				<view>
 					<text>Notification</text>
@@ -101,6 +101,13 @@
 				isUnread: true,
 				clientHeight: "",
 
+			}
+		},
+		computed: {
+			// 滚动区高度 
+			scrollerHeight: function() {
+				console.log(window.innerHeight)
+				return (window.innerHeight - 10) + 'px'; //自定义高度需求
 			}
 		},
 		methods: {
