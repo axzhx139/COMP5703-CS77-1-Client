@@ -107,7 +107,7 @@
 			// 滚动区高度 
 			scrollerHeight: function() {
 				console.log(window.innerHeight)
-				return (window.innerHeight - 10) + 'px'; //自定义高度需求
+				return (window.innerHeight - 160) + 'px'; //自定义高度需求
 			}
 		},
 		methods: {
