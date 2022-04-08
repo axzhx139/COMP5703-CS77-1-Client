@@ -252,7 +252,7 @@
 											:listShow="false"
 											:isCanInput="false"  
 											:style_Container="'height: 30px; font-size: 15px;'"
-											:placeholder = "'Expire'"
+											:placeholder = "'All'"
 											:selectHideType="'hideAll'"
 											style="width: 100%; background-color: #FFFFFF;"
 										>
@@ -263,7 +263,7 @@
 							</u-col>
 						</u-row>
 					</view>
-					<view style="margin-top: 5px;">
+<!-- 					<view style="margin-top: 5px;">
 						<u-row gutter="16" justify="space-between">
 							<u-col span="6">
 								<view class="demo-layout bg-purple">
@@ -276,7 +276,7 @@
 								</view>
 							</u-col>
 						</u-row>
-					</view>
+					</view> -->
 					<view style="margin-top: 5px;">
 						<block v-for="(item,index) in oldstockList">
 							<view style="margin-top: 10px;">
@@ -294,27 +294,25 @@
 									
 									<u-col span="3">
 										<view class="demo-layout bg-purple-light">
-		<!-- 									<text>{{ item.name }}</text>
-								
-											<text>{{ item.category }}</text> -->
-											
-<!-- 											<u-col span="3">
-												<u-row style="margin: 0px 0px 10px 5px;">{{ item.name }}</u-row>
-												<u-row style="margin: 10px 0px 0px 5px;">{{ item.category }}</u-row>
-											</u-col> -->
-											<view>
-												<!-- <image v-if="!item.potential" src="../../static/heart-line.png" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="saveList(item.itemId)"></image> -->
-												<!-- <image v-if="item.potential" src="../../static/heart-fill.png" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="deleteList(item.itemId)"></image> -->
-												<!-- <text style="font-weight: 900;">{{ item.packs }}packs</text> -->
-												
-											</view>
+											<!-- <u-row gutter="18" justify="space-between"> -->
+											<u-row style="justify-content: flex-end; margin-bottom: 5px">
+											<!-- <text>{{ item.name }}</text> -->
+											<!-- <view style="text-align: right;"> -->
+												<!-- <uni-icons type="cart" size="30" v-if="!item.potential" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="saveList(item.itemId)"></uni-icons> -->
+												<!-- <uni-icons type="cart-filled" size="30" v-if="!item.potential" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="deleteList(item.itemId)"></uni-icons> -->
+												<image v-if="!item.potential" src="../../static/cart.png" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="saveList(item.itemId)"></image>
+												<image v-if="item.potential" src="../../static/cart_fill.png" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="deleteList(item.itemId)"></image>
+					
+											</u-row>
+
 										</view>
 									</u-col>
+									
 									<u-col span="3">
 										<view class="demo-layout bg-purple-dark">
 											<!-- <view><text style="font-size: 14px;">{{ item.expDate }}</text></view> -->
-											 <view v-if="item.status=='consume'"><text style="font-size: 12px;">{{ item.conDate }}</text></view>
-											 <view v-if="item.status=='expire'"><text style="font-size: 12px;">{{ item.expDate }}</text></view>
+											 <view v-if="item.status=='consume'"><text style="font-size: 12px;">{{item.conDate.split("T")[0].split('-')[2]+'/'+ item.conDate.split("T")[0].split('-')[1] }}</text></view>
+											 <view v-if="item.status=='expire'"><text style="font-size: 12px;">{{item.expDate.split("T")[0].split('-')[2]+'/'+ item.expDate.split("T")[0].split('-')[1] }}</text></view>
 											 <view v-if="item.status=='consume'" style="color: #FFA451;">Consumed</view>
 											<view v-if="item.status=='expire'" style="color: #AA4A44;">Expired </view>
 										</view>
