@@ -13,6 +13,8 @@
 						<view style="width: 16rpx;"></view>
 						Send
 					</u-button>
+			
+			
 	</view>
 </template>
 
@@ -38,9 +40,11 @@
 								// }, 
 								success:function(res){
 									console.log(res)
-									uni.switchTab({
-										url:"../setting/setting"
+									uni.navigateTo({
+										url:'../setting/setting'
 									})
+									
+									
 								},	
 							});
 					
@@ -63,11 +67,11 @@ page{
 	/* flex-direction: column; */
 	text-align: center;
 }.info-card{
-	width: 90%;
-	height: 500rpx;
+	width: 85%;
+	height: 700rpx;
 	background-color: white;
-	margin-top: 250rpx;
-	margin-left: 40rpx;
+	margin-top: 100rpx;
+	margin-left: 60rpx;
 	border-radius: 10px;
 	display: flex;
 	justify-content: center;
