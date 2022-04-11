@@ -1,6 +1,8 @@
 <template>
 	<view>
-		<hx-navbar ref="hxnb" :config="config" @clickBtn="onClickBtn">
+		<hx-navbar ref="hxnb" v-show="addItemToList" :config="config1" @clickBtn="onClickBtn">
+		</hx-navbar>
+		<hx-navbar ref="hxnb" v-show="needAddItem" :config="config2" @clickBtn="onClickBtn">
 		</hx-navbar>
 		<view v-if="addItemToList">
 			<view class="content" >
@@ -233,6 +235,48 @@
 			</hqs-popup>
 			<view class="content" v-if="issSelect">
 				<view class="stock-card">
+					<view>
+						<u-row gutter="16" justify="space-between">
+							<u-col span="6">
+								<view class="demo-layout bg-purple">
+									<text style="font-weight: 900;">Choose tags</text>
+								</view>
+							</u-col>
+							<u-col span="5" style="text-align: right;">
+								<view class="demo-layout bg-purple-light">
+									<view style="text-align: center;">
+										<xfl-select @change="selectItemTags"
+											:list="chooseTags"
+											:clearable="false"
+											:showItemNum="5" 
+											:listShow="false"
+											:isCanInput="false"  
+											:style_Container="'height: 30px; font-size: 15px;'"
+											:placeholder = "'All'"
+											:selectHideType="'hideAll'"
+											style="width: 100%; background-color: #FFFFFF;"
+										>
+										</xfl-select>
+									</view>
+									
+								</view>
+							</u-col>
+						</u-row>
+					</view>
+<!-- 					<view style="margin-top: 5px;">
+						<u-row gutter="16" justify="space-between">
+							<u-col span="6">
+								<view class="demo-layout bg-purple">
+									<text>Item</text>
+								</view>
+							</u-col>
+							<u-col span="6" style="text-align: right;">
+								<view class="demo-layout bg-purple-light">
+									<text>Expiring Date</text>
+								</view>
+							</u-col>
+						</u-row>
+					</view> -->
 					<view style="margin-top: 5px;">
 						<block v-for="(item,index) in oldstockList">
 							<view style="margin-top: 10px;">
@@ -242,24 +286,35 @@
 											<image :src="item.img" style="width: 65px;height: 65px;">
 										</view>
 									</u-col>
-									<u-col span="6">
+									
+									<u-col span="3">
+										<u-row style="margin: 0px 0px 10px 5px;">{{ item.name }}</u-row>
+										<u-row style="margin: 10px 0px 0px 5px;">{{ item.category }}</u-row>
+									</u-col>
+									
+									<u-col span="3">
 										<view class="demo-layout bg-purple-light">
-											<text>{{ item.name }}</text>
-											
-											<view>
-												<image v-if="!item.potential" src="../../static/heart-line.png" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="saveList(item.itemId)"></image>
-												<image v-if="item.potential" src="../../static/heart-fill.png" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="deleteList(item.itemId)"></image>
-												<!-- <text style="font-weight: 900;">{{ item.packs }}packs</text> -->
-												
-											</view>
+											<!-- <u-row gutter="18" justify="space-between"> -->
+											<u-row style="justify-content: flex-end; margin-bottom: 5px">
+											<!-- <text>{{ item.name }}</text> -->
+											<!-- <view style="text-align: right;"> -->
+												<!-- <uni-icons type="cart" size="30" v-if="!item.potential" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="saveList(item.itemId)"></uni-icons> -->
+												<!-- <uni-icons type="cart-filled" size="30" v-if="!item.potential" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="deleteList(item.itemId)"></uni-icons> -->
+												<image v-if="!item.potential" src="../../static/cart.png" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="saveList(item.itemId)"></image>
+												<image v-if="item.potential" src="../../static/cart_fill.png" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="deleteList(item.itemId)"></image>
+					
+											</u-row>
+
 										</view>
 									</u-col>
+									
 									<u-col span="3">
 										<view class="demo-layout bg-purple-dark">
-											<view><text style="font-size: 14px;">{{ item.expDate }}</text></view>
-											<view v-if="item.status=='consume'"><text style="font-size: 12px;">consumed in {{ item.conDate }}</text></view>
-											<view v-if="item.status=='consume'" style="color: #FFA451;">{{item.status}}</view>
-											<view v-if="item.status=='expire'" style="color: #AA4A44;">{{item.status}}</view>
+											<!-- <view><text style="font-size: 14px;">{{ item.expDate }}</text></view> -->
+											 <view v-if="item.status=='consume'"><text style="font-size: 12px;">{{item.conDate.split("T")[0].split('-')[2]+'/'+ item.conDate.split("T")[0].split('-')[1] }}</text></view>
+											 <view v-if="item.status=='expire'"><text style="font-size: 12px;">{{item.expDate.split("T")[0].split('-')[2]+'/'+ item.expDate.split("T")[0].split('-')[1] }}</text></view>
+											 <view v-if="item.status=='consume'" style="color: #FFA451;">Consumed</view>
+											<view v-if="item.status=='expire'" style="color: #AA4A44;">Expired </view>
 										</view>
 									</u-col>
 								</u-row>
@@ -270,34 +325,14 @@
 				</view>
 			</view>
 		</view>
-		<view v-if="needAddItem" class="content">
-			<view class="" style="width: 80%;margin-top: 15px;text-align: center;">
-				<u-row gutter="16" justify="space-between">
-					<u-col span="3" style="text-align: left;">
-						<view class="demo-layout bg-purple" >
-							<u-button shape="circle" size="mini" style="background-color:black;color: white;" @click="cancelAddCard">< Cancel</u-button>
-						</view>
-					</u-col>
-					<u-col span="3" style="text-align: right;">
-						<view class="demo-layout bg-purple-light">
-							<u-button shape="circle" size="mini" style="background-color: black;color: white;" @click="saveClient">Save</u-button>
-						</view>
-					</u-col>
-				</u-row>
-			</view>
-
-		</view>
 		<view class="add-card-item" v-if="needAddItem">
 			<view style="text-align: left;width: 100%;">
-				<text style="margin-left: 25px;font-size: 20px;">Name</text>
-				<view style="text-align: center;">
-					<u-input style="width: 80%;font-weight: 900;display: inline-block;background-color: #F3F1F1;border-radius: 10px;" placeholder="Name" v-model="iName" class="fn-input" height="90" input-align="center" :clearable="false"/>
-				</view>
+				<text style=" line-height: 45px;margin-left: 25px;font-size: 20px;float:left">Name</text>
+				<u-input style="float:left;margin-left: 55px;width: 50%;font-weight: 900;background-color: #F3F1F1;border-radius: 10px;" placeholder="Name" v-model="iName" class="fn-input" height="90" input-align="center" :clearable="false"/>
 			</view>
 			
-			<view style="text-align: left;width: 100%;margin-top: 15px;">
-				<text style="margin-left: 25px;font-size: 20px;">Category</text>
-				<view style="text-align: center;">
+			<view style="text-align: left;width: 100%;margin-top: 25px;">
+				<text style=" line-height: 50px;float:left;margin-left: 25px;font-size: 20px;">Category</text>
 					<xfl-select @change="getCategory"
 						:list="options"
 						:clearable="false"
@@ -307,37 +342,40 @@
 						:style_Container="'height: 50px; font-size: 16px;'"
 						:placeholder = "'Choose'"
 						:selectHideType="'hideAll'"
-						style="width: 80%;background-color: #F3F1F1;"
+						style="width: 50%;background-color: #F3F1F1;float:left;margin-left: 25px;"
 					>
 					</xfl-select>
-				</view>
 			</view>
 			
-			<view style="text-align: left;width: 100%;margin-top: 15px;">
-				<text style="margin-left: 25px;font-size: 20px;">Expire Date</text>
+			<view style="text-align: left;width: 100%;margin-top: 25px;">
+				<text style="float:left;margin-left: 25px;line-height: 45px;font-size: 20px;">Expire Date</text>
 				<view style="text-align: center;">
-					<u-input @click="openTime" style="width: 80%;font-weight: 900;display: inline-block;background-color: #F3F1F1;border-radius: 10px;" :clearable="true" placeholder="Time" v-model="iTime" class="fn-input" height="90" input-align="center"/>
+					<u-input @click="openTime" style="float:left;margin-left: 10px;width: 40%;font-weight: 900;display: inline-block;background-color: #F3F1F1;border-radius: 10px;" :clearable="true" placeholder="Time" v-model="iTime" class="fn-input" height="90" input-align="center"/>
 					<u-calendar v-model="cshow" @change="changeTime" max-date="9999"></u-calendar>
+					<img src="../../static/scan.png" style="margin:10px 10px 0 10px;float:left;width: 25px;height: 25px;" @click="onClickBtn"></img>
+					
 				</view>
 			</view>
 			
-			<view style="text-align: left;width: 100%;margin-top: 15px;">
-				<view  class="aline" style="text-align: center;">
+			<view style="text-align: left;width: 100%;margin-top: 25px;">
+				<view  class="aline" style="text-align: center;padding:0 25px 0 25px;">
 					<text style="font-size: 20px;">Remind me</text>
 					<u-input :clearable="false" style="margin-left: 5px; margin-right: 5px; margin-top: 10px; width: 10px; font-weight: 900;display: inline-block;background-color: #F3F1F1;border-radius: 10px;" placeholder="" v-model="iCitime" class="fn-input" height="90" input-align="center"/>
 					<text style="font-size: 20px;">days before</text>
 				</view>
 			</view>
 			
-			<view style="text-align: left;width: 100%;">
+			<!-- <view style="text-align: left;width: 100%;margin-top: 25px;">
 				<text style="margin-left: 25px;font-size: 20px;">Other details</text>
 				<view style="text-align: center;">
 					<u-input :clearable="false" style="width: 80%;font-weight: 900;display: inline-block;background-color: #F3F1F1;border-radius: 10px;" placeholder="details" v-model="iDetails" class="fn-input" height="90" input-align="center"/>
 				</view>
-			</view>
+			</view> -->
 			
-			<view style="margin-top: 20px;">
-				<u-button shape="circle" :hair-line="false" style="width: 150px;background-color: #F5C979;border-color: #F5C979;" @click="choosePhoto">Choose a photo</u-button>
+			<view style="margin-top: 30px;">
+				<u-button shape="circle" :hair-line="false" style="margin-left: 25px;float:left;width: 150px;background-color: #F5C979;border-color: #F5C979;" @click="choosePhoto">Choose a photo</u-button>
+				<u-button shape="circle" :hair-line="false" style="margin-right: 25px;float:right;width: 150px;background-color: #F5C979;border-color: #F5C979;" @click="save">save</u-button>
+			
 			</view>
 			
 		</view>
@@ -386,7 +424,8 @@
 				shopList:[],
 				oldstockList: [],
 				stockList:[],
-				config:{
+				
+				config1:{
 					title: 'Grocery',
 					color: 'black',
 					backgroundColor: '#B0C07A',
@@ -404,8 +443,21 @@
 						position: 'left'
 					}],
 				},
+				config2:{
+					title: 'Add product',
+					color: 'black',
+					back: false,
+					backgroundColor: '#B0C07A',
+					statusBarBackground:'#B0C07A',
+					leftButton: [{
+						key: 'back',
+						icon: '&#xe679;',
+						position: 'left'
+					}],
+				},
 				options: ['Fruit','Vegetable','Dairy','Animal product','Frozen','Canned Goods','Frozen Foods','Deli','Others'],
 				sortingMethod: ['Recent Added', 'A-z', 'Expire Soon'],
+				chooseTags: ['Expired', 'Consumed', 'All'],
 			}
 		},
 		onLoad(){
@@ -737,6 +789,7 @@
             
 			onClickBtn(e){
 				if (e.key == 'add'){
+					console.log('111')
 					this.addItemToList = false
 					this.needAddItem = true
 					this.iName = '';
@@ -745,15 +798,15 @@
 					this.iCitime = '';
 					this.iDetails = '';
 					this.iItemid = '';
+					console.log('change')
+				}else if(e.key == 'back'){
+					this.addItemToList = true
+					this.needAddItem = false
 				}else{
                     this.scanPhoto()
                 }
 			},
             
-			cancelAddCard(){
-				this.needAddItem = false
-				this.addItemToList = true
-			},
 			DateDiff(date1, date2) {
 				const date1utc = Date.UTC(date1.getFullYear(), date1.getMonth(), date1.getDate());
 				const date2utc = Date.UTC(date2.getFullYear(), date2.getMonth(), date2.getDate());
@@ -899,7 +952,7 @@
 				// this function will sort the stocklist by the expire date of each item in ascending order
 				// E.g. Apple expires at 2021/Dec/12, Orange expires at 2021/Nov/11, Tofu expires at 2021/Dec/31
 				// the order after sort will be Orange -> Apple -> Tofu
-				this.stockList.sort(function(a, b){
+				this.oldstockList.sort(function(a, b){
 				  let dateA = a.expDate;
 				  let dateB = b.expDate;
 				  if (dateA < dateB){
@@ -926,6 +979,48 @@
 				  return 0;
 				});
 			},
+			
+			//history   -1:all, -2:expire, -3:consume
+			selectItemTags(tags){
+				if (tags.newVal === "Expired"){
+
+					console.log('测试过期')
+					
+					uni.request({
+					url: 'http://101.35.91.117:7884/item/user/'+uni.getStorageSync('userId') + '/-2',
+					method: 'get',
+					}).then(res=>{
+						console.log('load',res[1].data)
+						this.oldstockList = res[1].data
+					})
+					
+					
+					
+				} else if (tags.newVal === "Consumed") {
+					
+					console.log('测试消耗')
+					uni.request({
+					url: 'http://101.35.91.117:7884/item/user/'+uni.getStorageSync('userId') + '/-3',
+					method: 'get',
+					}).then(res=>{
+						console.log('load',res[1].data)
+						this.oldstockList = res[1].data
+					})
+				} else if (tags.newVal === "All") {
+					
+					console.log('没有过滤器')
+					uni.request({
+					url: 'http://101.35.91.117:7884/item/user/'+uni.getStorageSync('userId') + '/-1',
+					method: 'get',
+					}).then(res=>{
+						console.log('load',res[1].data)
+						this.oldstockList = res[1].data
+					})
+				}
+			},		
+			
+			
+			
 			getImgById(id){
 				uni.request({
 				url: "http://101.35.91.117:7884/item/picture/"+id,
@@ -986,7 +1081,9 @@
 				
 			}
 			
-		}
+		},
+		
+
 	}
 	
 </script>
@@ -999,7 +1096,6 @@
 		display: flex;
 		/* justify-content: center; */
 		align-items: center;
-		padding: 30px;
 	}
 	.content{
 		display: flex;

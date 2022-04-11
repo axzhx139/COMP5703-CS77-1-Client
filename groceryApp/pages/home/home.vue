@@ -39,21 +39,19 @@
 		<view class="">
 			<scroll-view :scroll-with-animation="true"  :scroll-x="true" style="white-space: nowrap;" >
 			  <template v-for="(item, index) in expiringFoodList">
-				  <view class="scroll_item" @click="toDetail(item.itemId)" :style="{'background-image': 'url('+item.img+')'}">
-					<view style="height: 20%;"></view>
-					<text style="color: #FFFFFF;margin-left: 14px;font-size: 16px;font-weight: 500;">{{ item.name }}</text>
-					
-					<view class="" style="margin-left: 14px;margin-top: 10px;color: #FFFFFF;">
-						<image src="../../static/bottle.png" style="width: 15px;height: 15px;">
-						<text style="display: inline-block;margin-left: 5px;">Remind at: {{ item.remindTime.split("T")[0] }}</text>
+				  
+				  <view class="scroll_item" :style="{'background-image': 'url('+item.img+')','filter': 'grayscale('+getFreshness(index)+'%)'}">
+					<img src="../../static/knife_fork.png" style="width: 20px;height: 20px;float:right" @click="consumeSelect(index)"></img>
+					<view style="height: 100%;"  @click="toDetail(item.itemId)">
+							
 					</view>
-					
-					<view class="" style="margin-left: 14px;margin-top: 10px;color: #FFFFFF;">
-						<image src="../../static/bottle.png" style="width: 15px;height: 15px;">
-						<text style="display: inline-block;margin-left: 5px;">Expire at: {{ item.expDate }}</text>
+					<text style="margin-left: 14px;font-size: 16px;font-weight: 500;">{{ item.name }}</text>
+					<view class="" style="margin-left: 14px;">
+						<img src="../../static/remind.png" style="width: 15px;height: 15px;" v-if="isReminded(index)"></img>
+						<text style="display: inline-block;margin-left: 5px;">{{item.expDate.split("T")[0].split('-')[2]+'/'+ item.expDate.split("T")[0].split('-')[1] }}</text>
 					</view>
-					
 				  </view>
+				  
 			  </template>
 			</scroll-view>
 		</view>
@@ -118,7 +116,21 @@
 		</view>
 		
 		
-		
+		<hqs-popup  title="" :from="popFrom" v-model="consumePop" :round="20" :showClose="false" height="300px">
+			<view class="t-bg">
+				<text style="font-size: 20px;font-weight: 900;">Have you consumed already?</text>
+				<view class="sm-ipbox">
+					<!-- <text>-</text> -->
+					<!-- <view style="margin-top: 10px;font-size: 20px;margin-right: 15px;" @click=" packs-= 1">-</view>
+					<u-input style="font-weight: 900;display: inline-block;background-color: #F3F1F1;border-radius: 10px;" placeholder="Amount" v-model="packs"  class="fn-input" height="90" input-align="center"/>
+					<view class="sum-item" @click=" packs+= 1">+</view> -->
+				</view>
+				<view style="margin-top: 30px;">
+					<u-button shape="circle" :hair-line="false" style="width: 130px;background-color: #F5C979;border-color: #F5C979;" @click="consume('yes')">Yes</u-button>
+					<u-button shape="circle" :hair-line="false" style="width: 130px;background-color: #F5C979;border-color: #F5C979;margin-top: 10px;" @click="consume('no')">No</u-button>
+				</view>
+			</view>
+		</hqs-popup>
 		<!-- #ifdef APP-PLUS -->
 		<u-tabbar :list="tabbar" :mid-button="false" height="55px"></u-tabbar>
 		<!-- #endif -->
@@ -175,6 +187,9 @@
 				],
 				expiringFoodList: [],
 				randomRecipesList: [],
+				consumePop:false,
+				needChangeItem: '',
+				popFrom: 'bottom',
 			}
 		},
 		onLoad(){
@@ -190,8 +205,78 @@
 				console.log(e)
 			},
 			toDetail(e){
+				console.log(e)
 				uni.navigateTo({
-					url: '../article/article?id=' + e + '&backType=2'
+					url: '../grocery/detail?id=' + e + '&backType=2'
+				})
+			},
+			consumeSelect(e){
+				console.log(e)
+				this.consumePop = true
+				this.needChangeItem = e
+			},
+			isReminded(e){
+				// console.log(new Date(this.expiringFoodList[e].remindTime))
+				
+				var now = new Date()
+				// console.log(now)
+				if(new Date(this.expiringFoodList[e].remindTime)>new Date()){
+					return false
+				}else{
+					return true
+				}
+			},
+			getFreshness(e){
+				// console.log(this.expiringFoodList[e].addDate)
+				// console.log(this.expiringFoodList[e].expDate)
+				const totalTime = new Date(this.expiringFoodList[e].expDate)-new Date(this.expiringFoodList[e].addDate)
+				const restTime = new Date(this.expiringFoodList[e].expDate)-new Date()
+				console.log(restTime/totalTime)
+				return (1-restTime/totalTime)*100
+			},
+			consume(e){
+				if (e === 'yes'){
+					var changedItem = this.expiringFoodList[this.needChangeItem]
+					// var lsConsumeTime = new Date().toLocaleDateString().split("/");
+					// //China Timezone needed
+					// // if(lsConsumeTime[2].length === 1){
+					// //     lsConsumeTime[2] = "0" + lsConsumeTime[2]
+					// // }
+					// //Australian Timezone needed
+					// if(lsConsumeTime[1].length === 1){
+					// 	lsConsumeTime[1] = "0" + lsConsumeTime[1]
+					// }
+					// var consumeTime = lsConsumeTime[2]+"-"+lsConsumeTime[0]+"-"+lsConsumeTime[1]
+					this.consumeItem(changedItem)
+					console.log(changedItem)
+					console.log(changedItem.itemId)
+			        
+				}
+				this.consumePop = false
+				
+			},
+			consumeItem(item){
+				let itemUpdated = {
+				  "addDate": item.addDate,
+				  "addMethod": item.addMethod,
+				  "category": item.category,
+				  "conDate": new Date(),
+				  "detail": item.detail,
+				  "expDate": item.expDate,
+				  "itemId": item.itemId,
+				  "name": item.name,
+				  "remindTime": item.remindTime,
+				  "status": "consume",
+				  "uid": uni.getStorageSync('userId')
+				}
+				
+				uni.request({
+					method:'POST',
+					url:'http://101.35.91.117:7884/item/update',
+					data:JSON.stringify(itemUpdated)
+				}).then(res => {
+					console.log(res)
+					this.getCol()
 				})
 			},
 			loadinfo(){
@@ -268,7 +353,13 @@
 				    return -1;
 				  } else if (dateA > dateB){
 				    return 1;
-				  }   
+				  }else{
+					  if( a.expDate<b.expDate){
+						  return -1
+					  }else{
+						  return 1
+					  }
+				  }
 				  return 0;
 				});
 
@@ -319,11 +410,16 @@
 	margin-left: 15px;
 }
 .scroll_item{
-  background: #545B66;
-  width:90%; 
-  height:116px; 
+  background: #f7edc8;
+  
+  
+
+    
+  filter:gray;
+  width:100px; 
+  height:100px; 
   margin: 5px 5px 5px 5px;
-  border-radius: 10rpx;
+  border-radius: 25rpx;
   display: inline-block;
   margin-left: 10px;
   background-size: 100%;
@@ -350,5 +446,11 @@
 	border-radius: 10px;
 	border:solid  1px #C8C7CC;
 	text-align: center;
+}
+.t-bg{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 </style>

@@ -43,6 +43,15 @@
 				"disableScroll": false
             }
             
+        },
+		{
+            "path" : "pages/grocery/detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Details",
+                "enablePullDownRefresh": false
+            }
+            
         }
         ,{
             "path" : "pages/grocery/grocery",
@@ -53,7 +62,7 @@
 				"navigationBarBackgroundColor": "#B0C07A",
                 "enablePullDownRefresh": false
             }
-            
+    
         }
         ,{
             "path" : "pages/recipe/recipe",
@@ -116,6 +125,15 @@
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "Feedback",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/testPage/testPage",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Test",
                 "enablePullDownRefresh": false
             }
             
