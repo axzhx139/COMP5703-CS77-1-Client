@@ -1,6 +1,6 @@
-import App from './App'
+import App from './App';
 import uView from "uview-ui";
-import store from './store' 
+import store from './store' ;
 
 // #ifndef VUE3
 import Vue from 'vue'

@@ -106,6 +106,7 @@
 			return {
 				tabbar: this.$store.state.tabbar,
 				avatar: "",
+				filepath:"",
 				stateObject:{
 					"India": { 
 						"Delhi": ["new Delhi", "North Delhi"],
@@ -153,6 +154,7 @@
 		onLoad(){
 			this.getAvatar()
 			this.loadInfo()
+			Location.reload;
 		},
 		onShow(){
 			this.getAvatar()
@@ -170,36 +172,43 @@
             },
 			getAvatar(){
 				let that =this
-				uni.request({
-				url: "http://101.35.91.117:7884/users/avatar/"+uni.getStorageSync('userId'),
-				method: 'get',
-				}).then(res=>{
-					console.log('res',res)
-					if(res[1].data!=''){
-						that.avatar = res[1].data
-					}else{
-						that.avatar = "../../static/girl.png"
-					}
-				})
+				// uni.request({
+				// url: "http://101.35.91.117:7884/users/avatar/"+uni.getStorageSync('userId'),
+				// method: 'get',
+				// }).then(res=>{
+				// 	console.log('res',res)
+				// 	if(res[1].data!=''){
+				// 		that.avatar = res[1].data
+				// 	}else{
+				// 		that.avatar = "../../static/girl.png"
+				// 	}
+				// })
+				that.avatar="http://101.35.91.117:7884/users/avatar/"+uni.getStorageSync('userId')
+				if(that.avatar==''){
+					that.avatar = "../../static/girl.png"
+				}
+				
 			},
 			photo(){
+				let that = this
 				uni.chooseImage({
 				    count: 1, 
 				    sizeType: ['original', 'compressed'], 
 				    sourceType: ['album', 'camera'], 
 				    success: function (res) {
 				        console.log(JSON.stringify(res.tempFilePaths));
-						// uni.previewImage({
-						//     urls: res.tempFilePaths,
-						// });
-						let that = this
+						that.filepath=res.tempFilePaths
+						uni.previewImage({
+						    urls: res.tempFilePaths,
+						});
+					
 						uni.uploadFile({
 							url: 'http://101.35.91.117:7884/users/avatar/update/'+uni.getStorageSync('userId'), 
-							filePath: res.tempFilePaths[0], 
-							name: 'file', 
-							header: {
-								'content-type': 'multipart/form-data' 
-							},
+							filePath: that.filepath[0], 
+							name:'picture', 
+							// header: {
+							// 	'content-type': 'multipart/form-data' 
+							// },
 							formData: {
 								id: uni.getStorageSync('userId')
 								// file: tempFilePath   
