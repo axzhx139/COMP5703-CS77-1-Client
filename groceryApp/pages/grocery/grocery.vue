@@ -81,7 +81,7 @@
 								<u-row gutter="16">
 									<u-col span="3">
 										<!-- <view class="demo-layout bg-purple"> -->
-											<image :src="item.img" style="width: 65px;height: 65px;">
+											<image :src="'http://101.35.91.117:7884/item/picture/'+item.itemId+'?'+Math.random()" style="width: 65px;height: 65px;">
 										<!-- </view> -->
 									</u-col>
 									<u-col span="3">
@@ -283,7 +283,7 @@
 								<u-row gutter="16">
 									<u-col span="3">
 										<view class="demo-layout bg-purple">
-											<image :src="item.img" style="width: 65px;height: 65px;">
+											<image :src="'http://101.35.91.117:7884/item/picture/'+item.itemId+'?'+Math.random()" style="width: 65px;height: 65px;">
 										</view>
 									</u-col>
 									
@@ -377,7 +377,7 @@
 				<u-button shape="circle" :hair-line="false" style="margin-right: 25px;float:right;width: 150px;background-color: #F5C979;border-color: #F5C979;" @click="save">save</u-button>
 			
 			</view>
-			
+			<view class="head-img"><u-image  :src='get_src()' width="300" height="300" style='margin:10px auto;'></u-image></view>
 		</view>
 		<!-- #ifdef APP-PLUS -->
 		<u-tabbar :list="tabbar" :mid-button="false" height="55px"></u-tabbar>
@@ -424,7 +424,7 @@
 				shopList:[],
 				oldstockList: [],
 				stockList:[],
-				
+				add_src:'',
 				config1:{
 					title: 'Grocery',
 					color: 'black',
@@ -461,7 +461,7 @@
 			}
 		},
 		onLoad(){
-			console.log(uni.getStorageSync('userId'))
+			// console.log(uni.getStorageSync('userId'))
 			this.getCol()
 			// setInterval(() => {
 			// 	this.getCol()
@@ -472,7 +472,9 @@
 			this.getCol()
 		},
 		methods: {
-			
+			get_src(){
+				return this.add_src
+			},
 			change(data){
 				console.log(data.index);
 				console.log(data.value);
@@ -481,7 +483,8 @@
                 this.iCategory = category.newVal;
             },
             
-			saveClient(){
+			save(){
+				
 				var date = new Date();
 				
 				var nowMonth = date.getMonth() + 1;
@@ -503,21 +506,22 @@
                 var expDate = new Date(this.iTime);
 				var remindTime = (expDate.getDate() - this.iCitime);
 				var lsRemindTime = new Date(expDate.setDate(remindTime)).toLocaleDateString().split("/");
-				console.log(remindTime);
-				console.log(lsRemindTime);
+				// console.log(remindTime);
+				// console.log(lsRemindTime);
 
                 //China Timezone needed
                 // if(lsRemindTime[2].length === 1){
                 //     lsRemindTime[2] = "0" + lsRemindTime[2]
                 // }
                 //Australian Timezone needed
-				console.log(new Date())
+				// console.log(new Date())
                 if(lsRemindTime[1].length === 1){
                     lsRemindTime[1] = "0" + lsRemindTime[1]
                 }
-                var remindTime = lsRemindTime[2]+"-"+lsRemindTime[0]+"-"+lsRemindTime[1]
-				console.log(remindTime);
-				console.log(lsRemindTime);
+                var remindTime = lsRemindTime[0]+"-"+lsRemindTime[1]+"-"+lsRemindTime[2]
+				// console.log(remindTime);
+				// console.log(lsRemindTime);
+				
                 this.tab(this.iTime,date);
 				let item = {
 				  "addDate": new Date(),
@@ -526,30 +530,29 @@
 				  "conDate": 0,
 				  "detail": this.iDetails,
 				  "expDate": this.iTime,
-				  "itemId": 0,
+				  // "itemId": 0,
 				  "name": this.iName,
 				  "remindTime": remindTime,
 				  "status": this.status,
 				  "otherDetail": this.iDetails,
-				  "uid": uni.getStorageSync('userId')
+				  "uid": uni.getStorageSync('userId'),
+				  "isConsumed":0
 				}
+				console.log(JSON.stringify(item));
 				let that=this
 				uni.request({
 					method:'POST',
 					url:'http://101.35.91.117:7884/item/insert',
 					data:JSON.stringify(item)
 				}).then(res => {
-					console.log(that.filepath)
+					console.log(that.filepath[0])
 					console.log(res[1].data)
 					uni.uploadFile({
 						url: 'http://101.35.91.117:7884/item/update/picture', 
 						filePath: that.filepath[0], 
 						name: 'picture', 
-						header: {
-							'content-type': 'multipart/form-data' 
-						},
 						formData: {
-							id: res[1].data
+							item_id: res[1].data
 							// file: tempFilePath   
 						},
 						success: (uploadFileRes) => {
@@ -590,7 +593,7 @@
 				url: "http://101.35.91.117:7884/potential/"+uni.getStorageSync('userId'),
 				method: 'get',
 				}).then(res=>{
-					console.log('load',res[1].data)
+					// console.log('load',res[1].data)
 					this.shopList = res[1].data
 				})
 			},
@@ -610,8 +613,8 @@
 				for (var i=0;i<itemList.length;i++){
                     var item = itemList[i]
 					var exp = new Date(item.expDate.substr(0,10))
-					console.log('exp is: ', exp)
-					console.log('与今天差的天数：', this.dateMinus(todayDate, exp))
+					// console.log('exp is: ', exp)
+					// console.log('与今天差的天数：', this.dateMinus(todayDate, exp))
 					var expireDays = this.dateMinus(todayDate, exp)
 					var remind = new Date(item.remindTime.substr(0,10))
 					// this.getImgById(item.itemId)
@@ -645,11 +648,11 @@
 					}
 					
 				}
-				console.log(stockList)
-				console.log(this.oldstockList)
+				// console.log(stockList)
+				// console.log(this.oldstockList)
 				this.stockList = stockList
                 this.oldstockList = oldstockList
-				console.log(this.stockList)
+				// console.log(this.stockList)
 			},
 			
 			consumeItem(item){
@@ -701,6 +704,8 @@
 				this.packs = parseInt(this.stockList[e].packs)
 				this.chNum = true
 				this.needChangeItem = e
+				
+				
 			},
 			consume(e){
 				var changedItem = this.stockList[this.needChangeItem]
@@ -730,6 +735,7 @@
 					})
 				}
 				this.chNum = false
+				this.itemEditor=false
 				
 			},
             
@@ -786,7 +792,7 @@
             
 			onClickBtn(e){
 				if (e.key == 'add'){
-					console.log('111')
+					// console.log('111')
 					this.addItemToList = false
 					this.needAddItem = true
 					this.iName = '';
@@ -795,7 +801,7 @@
 					this.iCitime = '';
 					this.iDetails = '';
 					this.iItemid = '';
-					console.log('change')
+					// console.log('change')
 				}else if(e.key == 'back'){
 					this.addItemToList = true
 					this.needAddItem = false
@@ -819,21 +825,23 @@
 				    success: function (res) {
 				        console.log(JSON.stringify(res.tempFilePaths));
 						that.filepath = res.tempFilePaths
-						uni.previewImage({
-							urls: res.tempFilePaths,
-						});
+						that.add_src=res.tempFilePaths[0]
+						// console.log(that.add_src)
+						// uni.previewImage({
+						// 	urls: res.tempFilePaths,
+						// });
 				    }
 				});
 			},
 			tab(date1,date2){
-                console.log(date1, date2)
+                // console.log(date1, date2)
 				// exp 1, today2
 				var oDate1 = new Date(date1);
-                console.log(oDate1)
+                // console.log(oDate1)
 				var oDate2 = new Date(date2);
-                console.log(oDate2)
+                // console.log(oDate2)
 				if(oDate1.getTime() >= oDate2.getTime()){
-					console.log('instock');
+					// console.log('instock');
 					this.status='instock';
 				} else if(oDate1.getTime() < oDate2.getTime()){
 					console.log('expire');
@@ -842,9 +850,9 @@
 			},
 			edit(item, index){
 				this.itemEditor = true;
-				Object.keys(item).forEach(key => {
-					console.log(key, item[key]);
-				});
+				// Object.keys(item).forEach(key => {
+				// 	console.log(key, item[key]);
+				// });
 				this.iName = item.name;
 				this.iCategory = item.category;
 				this.iTime = item.expDate;
@@ -875,20 +883,21 @@
 				    var expDate = new Date(this.iTime);
 				    var remindTime = (expDate.getDate() - this.iCitime); 
 					var lsRemindTime = new Date(expDate.setDate(remindTime)).toLocaleDateString().split("/");
-				    console.log(remindTime);
-				    console.log(lsRemindTime);
+				    // console.log(remindTime);
+				    // console.log(lsRemindTime);
 					//China Timezone needed
 				    // if(lsRemindTime[2].length === 1){
 				    //     lsRemindTime[2] = "0" + lsRemindTime[2]
 				    // }
 				    //Australian Timezone needed
-					console.log(new Date())
+					// console.log(new Date())
 				    if(lsRemindTime[1].length === 1){
 				        lsRemindTime[1] = "0" + lsRemindTime[1]
 				    }
-				    var remindTime = lsRemindTime[2]+"-"+lsRemindTime[0]+"-"+lsRemindTime[1]
-					console.log(remindTime);
-					console.log(lsRemindTime);
+				    var remindTime = lsRemindTime[0]+"-"+lsRemindTime[1]+"-"+lsRemindTime[2]
+					// console.log(remindTime);
+					// console.log(lsRemindTime);
+					
 					this.tab(this.iTime,date);
 					let item = {
 					  "addDate": new Date(),
@@ -902,8 +911,9 @@
 					  "remindTime": remindTime,
 					  "status": this.status,
 					  "otherDetail": this.iDetails,
-					  "uid": uni.getStorageSync('userId')
+					  "uId": uni.getStorageSync('userId')
 					}
+					console.log(JSON.stringify(item))
 					uni.request({
 						method:'POST',
 						url:'http://101.35.91.117:7884/item/update',
@@ -1054,20 +1064,22 @@
 				    sizeType: ['original', 'compressed'], 
 				    sourceType: ['album','camera'], 
 				    success: function (res) {
-						console.log(that.iItemid)
+						// console.log(that.iItemid)
+						// console.log(res.tempFilePaths[0])
 						uni.uploadFile({
 							url: 'http://101.35.91.117:7884/item/update/picture', 
 							filePath: res.tempFilePaths[0], 
 							name: 'picture', 
-							header: {
-								'content-type': 'multipart/form-data' 
-							},
 							formData: {
-								id: that.iItemid
+								item_id: that.iItemid
 								// file: tempFilePath   
 							},
 							success: (uploadFileRes) => {
-								console.log(uploadFileRes);
+								// console.log(uploadFileRes);
+								// location.reload()
+								setTimeout(() => {
+									that.getCol()
+								},1000)
 							},
 							fail: (err) => {
 								console.log(err)
@@ -1075,6 +1087,8 @@
 						});
 				    }
 				});
+				
+				this.itemEditor=false
 				
 			}
 			

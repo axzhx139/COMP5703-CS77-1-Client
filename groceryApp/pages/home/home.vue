@@ -40,7 +40,7 @@
 			<scroll-view :scroll-with-animation="true"  :scroll-x="true" style="white-space: nowrap;" >
 			  <template v-for="(item, index) in expiringFoodList">
 				  
-				  <view class="scroll_item" :style="{'background-image': 'url('+item.img+')','filter': 'grayscale('+getFreshness(index)+'%)'}">
+				  <view class="scroll_item" :style="{'background-image': 'url('+'http://101.35.91.117:7884/item/picture/'+item.itemId+'?'+Math.random()+')','filter': 'grayscale('+getFreshness(index)+'%)'}">
 					<img src="../../static/knife_fork.png" style="width: 20px;height: 20px;float:right" @click="consumeSelect(index)"></img>
 					<view style="height: 100%;"  @click="toDetail(item.itemId)">
 							
