@@ -6,7 +6,7 @@
 				<view class="divider"/>
 				<view class="demo-layout bg-purple-dark">
 					<image :src="avatar" class="head-img">
-					<u-button style="background-color: #F5C979;color: white;height: 60rpx; width: 250rpx; margin-top: 10%;margin-right: 10%; float: right;" @click="photo" >Channge Photo</u-button>
+					<u-button style="background-color: #F5C979;color: white;height: 60rpx; width: 250rpx; margin-top: 10%;margin-right: 10%; float: right;" @click="photo" >Change Photo</u-button>
 				</view>
 			</view>
 			
@@ -183,7 +183,8 @@
 				// 		that.avatar = "../../static/girl.png"
 				// 	}
 				// })
-				that.avatar="http://101.35.91.117:7884/users/avatar/"+uni.getStorageSync('userId')
+				console.log('111')
+				that.avatar="http://101.35.91.117:7884/users/avatar/"+uni.getStorageSync('userId')+'?'+Math.random()
 				if(that.avatar==''){
 					that.avatar = "../../static/girl.png"
 				}
@@ -198,10 +199,10 @@
 				    success: function (res) {
 				        console.log(JSON.stringify(res.tempFilePaths));
 						that.filepath=res.tempFilePaths
-						uni.previewImage({
-						    urls: res.tempFilePaths,
-						});
-					
+						// uni.previewImage({
+						//     urls: res.tempFilePaths,
+						// });
+						that.avatar = res.tempFilePaths[0]
 						uni.uploadFile({
 							url: 'http://101.35.91.117:7884/users/avatar/update/'+uni.getStorageSync('userId'), 
 							filePath: that.filepath[0], 
@@ -215,9 +216,9 @@
 							},
 							success: (uploadFileRes) => {
 								console.log(uploadFileRes);
-								uni.redirectTo({
-								    url: "../edit/edit"
-								});
+								// uni.redirectTo({
+								//     url: "../edit/edit"
+								// });
 							},
 							fail: (err) => {
 								console.log(err)

@@ -220,7 +220,7 @@
 				// 		this.avatar = "../../static/girl.png"
 				// 	}
 				// })
-				this.avatar="http://101.35.91.117:7884/users/avatar/"+uni.getStorageSync('userId')
+				this.avatar="http://101.35.91.117:7884/users/avatar/"+uni.getStorageSync('userId')+'?'+Math.random()
 				if(this.avatar==''){
 					this.avatar = "../../static/girl.png"
 				}

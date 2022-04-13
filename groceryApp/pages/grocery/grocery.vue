@@ -425,6 +425,7 @@
 				oldstockList: [],
 				stockList:[],
 				add_src:'',
+				editItem:null,
 				config1:{
 					title: 'Grocery',
 					color: 'black',
@@ -855,10 +856,12 @@
 				// });
 				this.iName = item.name;
 				this.iCategory = item.category;
-				this.iTime = item.expDate;
+				// this.iTime = item.expDate;
+				this.iTimeInAussieFormat = item.expDate
 				this.iCitime = item.time;
 				this.iDetails = item.detail;
 				this.iItemid = item.itemId;
+				this.editItem = item
 			},
 			editClient(){
 
@@ -880,7 +883,7 @@
 					// var nowDate = date.getFullYear() + seperator + nowMonth + seperator + strDate;
 				    
 				    // convert remind time to correct form
-				    var expDate = new Date(this.iTime);
+				    var expDate = new Date(this.iTimeInAussieFormat);
 				    var remindTime = (expDate.getDate() - this.iCitime); 
 					var lsRemindTime = new Date(expDate.setDate(remindTime)).toLocaleDateString().split("/");
 				    // console.log(remindTime);
@@ -900,16 +903,16 @@
 					
 					this.tab(this.iTime,date);
 					let item = {
-					  "addDate": new Date(),
-					  "addMethod": "manual",
+					  "addDate": this.editItem.addDate,
+					  "addMethod": this.editItem.addMethod,
 					  "category": this.iCategory,
-					  "conDate": 0,
+					  "conDate": this.editItem.conDate,
 					  "detail": this.iDetails,
-					  "expDate": this.iTime,
+					  "expDate": this.iTimeInAussieFormat,
 					  "itemId": this.iItemid,
 					  "name": this.iName,
 					  "remindTime": remindTime,
-					  "status": this.status,
+					  "status": this.editItem.status,
 					  "otherDetail": this.iDetails,
 					  "uId": uni.getStorageSync('userId')
 					}

@@ -4,7 +4,7 @@
 			<view class="main-body">
 				<view class = "section">
 					<view class="main-item-img" style="width: 100%;text-align: center;" >
-						<u-image border-radius="5px" height="116px" width="95%" :src="product.picture" :fade="true" duration="450"></u-image>
+						<u-image border-radius="5px" height="116px" width="95%" :src="'http://101.35.91.117:7884/item/picture/'+product.itemId+'?'+Math.random()" :fade="true" duration="450"></u-image>
 					</view>
 					<view class="divider"/>
 	

@@ -233,7 +233,7 @@
 				// console.log(this.expiringFoodList[e].expDate)
 				const totalTime = new Date(this.expiringFoodList[e].expDate)-new Date(this.expiringFoodList[e].addDate)
 				const restTime = new Date(this.expiringFoodList[e].expDate)-new Date()
-				console.log(restTime/totalTime)
+				// console.log(restTime/totalTime)
 				return (1-restTime/totalTime)*100
 			},
 			consume(e){
@@ -252,6 +252,12 @@
 					this.consumeItem(changedItem)
 					console.log(changedItem)
 					console.log(changedItem.itemId)
+					uni.request({
+						url: 'http://101.35.91.117:7884/item/update/status/'+"consume"+"/id/"+changedItem.itemId,
+					}).then(res => {
+						this.getCol()
+						console.log(res[1])
+					})
 			        
 				}
 				this.consumePop = false
@@ -271,14 +277,14 @@
 				  "status": "consume",
 				  "uid": uni.getStorageSync('userId')
 				}
-				
+				console.log(JSON.stringify(itemUpdated))
 				uni.request({
 					method:'POST',
 					url:'http://101.35.91.117:7884/item/update',
 					data:JSON.stringify(itemUpdated)
 				}).then(res => {
 					console.log(res)
-					this.getCol()
+					// this.getCol()
 				})
 			},
 			loadinfo(){
@@ -302,7 +308,7 @@
 				url: "http://101.35.91.117:7884/users/profile/"+uni.getStorageSync('userId'),
 				method: 'get',
 				}).then(res=>{
-					console.log('load',res[1].data)
+					// console.log('load',res[1].data)
 					this.user=res[1].data
 					console.log('load',this.user.name)
 					if(this.user.name==''|this.user.name==null){
@@ -349,7 +355,7 @@
 					}
 					if (foodList[i].status === 'instock'){
 						expiringFoodList.push(itemInfo);
-						console.log(item.remindTime);
+						// console.log(item.remindTime);
 					}					
 				}
 				expiringFoodList.sort(function(a, b){
@@ -369,9 +375,9 @@
 				  return 0;
 				});
 
-				console.log(expiringFoodList)
+				// console.log(expiringFoodList)
 				this.expiringFoodList = expiringFoodList
-				console.log(this.expiringFoodList)
+				// console.log(this.expiringFoodList)
 			},
 			getRandomRecipes(){
 				uni.request({
