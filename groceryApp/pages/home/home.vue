@@ -155,15 +155,15 @@
 					back: false,
 					backTxt: 'xxxxxx',
 					statusBarBackground:'#FFFFFF',
-					rightButton:[{
-						key: 'scan',
-						icon: '&#xe62c;',
-						position: 'left'
-					}],
+					// rightButton:[{
+					// 	key: 'scan',
+					// 	icon: '&#xe62c;',
+					// 	position: 'left'
+					// }],
 					leftButton: [{
 						key: 'text',
-						icon: '&#xe62b;',
-						txt: 'Track My Grocery',
+						icon: '&#xe680;',
+						txt: '\xa0\xa0\xa0Track My Grocery',
 						position: 'left'
 					}],
 				},
