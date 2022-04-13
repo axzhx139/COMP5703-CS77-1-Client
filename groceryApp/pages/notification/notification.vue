@@ -25,11 +25,11 @@
 							<text decode='true'>
 								Hi, your&ensp;&emsp;<b>{{item.name}}</b> added on
 								<strong class="boldTest">{{item.addDate}}</strong> will get expired on
-								<strong class="boldTest">{{item.expireDays}}</strong> days
+								<strong class="boldTest">{{item.remindDays}}</strong> days
 							</text>
 						</view> -->
 						<text decode='true'>
-							Hi, your {{item.name}} added on {{item.addDate}} will get expired on {{item.expireDays}} days
+							Hi, your {{item.name}} added on {{item.addDate}} will get expired on {{item.remindDays}} days
 						</text>
 						
 					</uni-col>
@@ -44,11 +44,11 @@
 							<text decode='true'>
 								Hi, your&ensp;&emsp;<b>{{item.name}}</b> added on
 								<strong class="boldTest">{{item.addDate}}</strong> will get expired on
-								<strong class="boldTest">{{item.expireDays}}</strong> days
+								<strong class="boldTest">{{item.remindDays}}</strong> days
 							</text>
 						</view> -->
 						<text decode='true'>
-							Hi, your {{item.name}} added on {{item.addDate}} will get expired on {{item.expireDays}} days
+							Hi, your {{item.name}} added on {{item.addDate}} will get expired on {{item.remindDays}} days
 						</text>
 						
 					</uni-col>
@@ -75,25 +75,25 @@
 					{
 						"name": " apple ",
 						"addDate": "2022/04/01",
-						"expireDays": 2,
+						"remindDays": 2,
 						"unread": true,
 					},
 					{
 						"name": "banana",
 						"addDate": "2022/04/02",
-						"expireDays": 2,
+						"remindDays": 2,
 						"unread": true,
 					},
 					{
 						"name": "beef",
 						"addDate": "2022/04/03",
-						"expireDays": 1,
+						"remindDays": 1,
 						"unread": true,
 					},
 					{
 						"name": "lamb",
 						"addDate": "2022/04/03",
-						"expireDays": 1,
+						"remindDays": 1,
 						"unread": false,
 					}
 				],
@@ -102,6 +102,10 @@
 				clientHeight: "",
 
 			}
+		},
+		created() {
+			console.log("user id is ", uni.getStorageSync('userId'))
+			this.getList()
 		},
 		computed: {
 			// 滚动区高度 
@@ -124,7 +128,18 @@
 				for (let i=0; i<this.inboxData.length; i++) {
 					this.inboxData[i].unread = false
 				}
-			}
+			},
+			getList(){
+				uni.request({
+				url: "http://101.35.91.117:7884/notification/get/"+uni.getStorageSync('userId'),
+				method: 'get',
+				}).then(res=>{
+					console.log(res)
+					console.log('load',res[1].data)
+					// this.shopList = res[1].data
+					this.inboxData = res[1].data.itemNotificationList
+				})
+			},
 		}
 	}
 </script>
