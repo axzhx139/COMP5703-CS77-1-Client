@@ -18,7 +18,7 @@
 				<view @click="markAllReaded">Mark all as Readed</view>
 			</view>
 			<scroll-view scroll-y="true" class="scroll-y" v-if="isUnread" :style="{height: scrollerYHeight}">
-				<uni-row v-for="(item, index) in inboxData" :key=index>
+				<uni-row v-for="(item, index) in notificationData" :key=index>
 					<uni-col v-if="item.unread" class="notificationCol">
 						<uni-icons type="chat" size="30"></uni-icons>
 						<!-- <view>
@@ -37,7 +37,7 @@
 				</uni-row>
 			</scroll-view>
 			<scroll-view scroll-y="true" class="scroll-y" v-if="!isUnread" :style="{height: scrollerYHeight}">
-				<uni-row v-for="(item, index) in inboxData" :key=index>
+				<uni-row v-for="(item, index) in notificationData" :key=index>
 					<uni-col v-if="!item.unread" class="notificationCol">
 						<uni-icons type="chat" size="30"></uni-icons>
 						<!-- <view>
@@ -70,8 +70,8 @@
 			return {
 				store: this.$store,
 				tabbar: this.$store.state.tabbar,
-				// inboxData: [],
-				inboxData: [
+				// notificationData: [],
+				notificationData: [
 					{
 						"name": " apple ",
 						"addDate": "2022/04/01",
@@ -107,6 +107,13 @@
 			console.log("user id is ", uni.getStorageSync('userId'))
 			this.getList()
 		},
+		onLoad(option) {
+			// console.log("user id is ", uni.getStorageSync('userId'))
+			// this.getList()
+			console.log(option)
+			this.notificationData = JSON.parse(decodeURIComponent(option.item));
+			console.log('上一个页面传递过来的参数对象', item );
+		},
 		computed: {
 			// 滚动区高度 
 			scrollerHeight: function() {
@@ -129,8 +136,8 @@
 				
 			},
 			markAllReaded() {
-				for (let i=0; i<this.inboxData.length; i++) {
-					this.inboxData[i].unread = false
+				for (let i=0; i<this.notificationData.length; i++) {
+					this.notificationData[i].unread = false
 				}
 			},
 			getList(){
@@ -141,7 +148,7 @@
 					console.log(res)
 					console.log('load',res[1].data)
 					// this.shopList = res[1].data
-					this.inboxData = res[1].data.itemNotificationList
+					this.notificationData = res[1].data.itemNotificationList
 				})
 			},
 		}
