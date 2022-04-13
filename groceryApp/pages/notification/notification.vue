@@ -17,7 +17,7 @@
 				</view>
 				<view @click="markAllReaded">Mark all as Readed</view>
 			</view>
-			<view v-if="isUnread">
+			<scroll-view scroll-y="true" class="scroll-y" v-if="isUnread" :style="{height: scrollerYHeight}">
 				<uni-row v-for="(item, index) in inboxData" :key=index>
 					<uni-col v-if="item.unread" class="notificationCol">
 						<uni-icons type="chat" size="30"></uni-icons>
@@ -35,8 +35,8 @@
 					</uni-col>
 					<u-divider half-width="60%"></u-divider>
 				</uni-row>
-			</view>
-			<view v-if="!isUnread">
+			</scroll-view>
+			<scroll-view scroll-y="true" class="scroll-y" v-if="!isUnread" :style="{height: scrollerYHeight}">
 				<uni-row v-for="(item, index) in inboxData" :key=index>
 					<uni-col v-if="!item.unread" class="notificationCol">
 						<uni-icons type="chat" size="30"></uni-icons>
@@ -54,7 +54,7 @@
 					</uni-col>
 					<u-divider half-width="60%"></u-divider>
 				</uni-row>
-			</view>
+			</scroll-view>
 			
 			
 		</view>
@@ -112,7 +112,11 @@
 			scrollerHeight: function() {
 				console.log(window.innerHeight)
 				return (window.innerHeight - 160) + 'px'; //自定义高度需求
-			}
+			},
+			scrollerYHeight: function() {
+				console.log(window.innerHeight)
+				return (window.innerHeight - 200) + 'px'; //自定义高度需求
+			},
 		},
 		methods: {
 			changeUnread(xflSelectResult) {
