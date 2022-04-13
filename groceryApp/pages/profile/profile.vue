@@ -138,11 +138,12 @@
 		onLoad() {
 			// let deviceInfo = uni.getSystemInfoSync();
 			// this.deviceHeight = deviceInfo.windowHeight;
-			Location.reload;
-		},
-		onShow(){
+			// Location.reload;
 			this.loadInfo();
 		},
+		// onShow(){
+		// 	this.loadInfo();
+		// },
 		methods: {
 			getList(){
 				uni.request({
