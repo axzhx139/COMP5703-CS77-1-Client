@@ -103,10 +103,10 @@
 
 			}
 		},
-		created() {
-			console.log("user id is ", uni.getStorageSync('userId'))
-			this.getList()
-		},
+		// created() {
+		// 	console.log("user id is ", uni.getStorageSync('userId'))
+		// 	this.getList()
+		// },
 		onLoad(option) {
 			// console.log("user id is ", uni.getStorageSync('userId'))
 			// this.getList()
