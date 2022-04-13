@@ -111,8 +111,8 @@
 			// console.log("user id is ", uni.getStorageSync('userId'))
 			// this.getList()
 			console.log(option)
-			this.notificationData = JSON.parse(decodeURIComponent(option.item));
-			console.log('上一个页面传递过来的参数对象', item );
+			this.notificationData = JSON.parse(decodeURIComponent(option.notificationDataString));
+			console.log('上一个页面传递过来的参数对象', this.notificationData );
 		},
 		computed: {
 			// 滚动区高度 

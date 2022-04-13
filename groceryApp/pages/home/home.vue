@@ -206,9 +206,9 @@
 		methods: {
 			onClickBtn(e){
 				if (e.key == 'notification'){
-					let item = encodeURIComponent(JSON.stringify(this.notificationData))
+					let notificationDataString = encodeURIComponent(JSON.stringify(this.notificationData))
 					uni.navigateTo({
-					url: '../notification/notification?item=' + item
+					url: '../notification/notification?notificationDataString=' + notificationDataString
 				})
 				}
 			},
