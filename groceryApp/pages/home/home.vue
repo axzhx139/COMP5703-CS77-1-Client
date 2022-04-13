@@ -155,11 +155,11 @@
 					back: false,
 					backTxt: 'xxxxxx',
 					statusBarBackground:'#FFFFFF',
-					// rightButton:[{
-					// 	key: 'scan',
-					// 	icon: '&#xe62c;',
-					// 	position: 'left'
-					// }],
+					rightButton:[{
+						key: 'notification',
+						icon: '&#xE61E;',
+						position: 'right'
+					}],
 					leftButton: [{
 						key: 'text',
 						icon: '&#xe680;',
@@ -190,6 +190,7 @@
 				consumePop:false,
 				needChangeItem: '',
 				popFrom: 'bottom',
+				notificationData: '',
 			}
 		},
 		onLoad(){
@@ -200,10 +201,16 @@
 		onShow(){
 			this.loadinfo()
 			this.getCol()
+			this.getNotificationData()
 		},
 		methods: {
 			onClickBtn(e){
-				console.log(e)
+				if (e.key == 'notification'){
+					let item = encodeURIComponent(JSON.stringify(this.notificationData))
+					uni.navigateTo({
+					url: '../notification/notification?item=' + item
+				})
+				}
 			},
 			toDetail(e){
 				console.log(e)
@@ -409,7 +416,18 @@
 				}
 				this.randomRecipesList=List;
 				console.log(this.randomRecipesList);
-			}
+			},
+			getNotificationData(){
+				uni.request({
+				url: "http://101.35.91.117:7884/notification/get/"+uni.getStorageSync('userId'),
+				method: 'get',
+				}).then(res=>{
+					console.log(res)
+					console.log('load',res[1].data)
+					// this.shopList = res[1].data
+					this.notificationData = res[1].data.itemNotificationList
+				})
+			},
 		}
 	}
 </script>
