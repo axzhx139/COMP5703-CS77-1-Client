@@ -44,7 +44,7 @@
 						<text decode='true'>
 							Hi, your {{item.name}} added on {{item.addDate}} will get expired on {{item.remindDays}} days
 						</text>
-						<uni-icons type="chat" size="30" @click="markAsReaded(index)"></uni-icons>
+						<uni-icons type="checkmarkempty" size="30" @click="markAsReaded(index)"></uni-icons>
 						
 					</uni-col>
 					<u-divider half-width="60%"></u-divider>
