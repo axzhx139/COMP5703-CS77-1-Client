@@ -182,31 +182,31 @@ import uniIcons from '../../components/uni-icons/uni-icons.vue';
 					console.log("item not exist in database!")
 				}
 			},
-			markAllAsReaded() {
-				var toReadedItemId = this.notificationData[index].itemId
+			async markAllAsReaded() {
 				let itemIdList = []
 				for (let i=0; i<this.notificationData.length; i++) {
 					itemIdList.push(this.notificationData[i].itemId)
 				}
 				console.log(index)
 				console.log("itemIdList is: ", itemIdList)
-				uni.request({
+				var res = await uni.request({
 					method:'POST',
 					url:'http://101.35.91.117:7884/notification/postList',
 					data:JSON.stringify({"itemIdList": itemIdList})
-				}).then(res => {
-					console.log("res is :", res)
-					if (res.data == 1) {
-						for (let i=0; i<this.notificationData.length; i++) {
-							this.notificationData[i].unread = false
-						}
-					} else if (res.data == -1) {
-						console.log("already checked!")
-					} else if (res.data == 0) {
-						console.log("item not exist in database!")
-					}
-					// this.getCol()
 				})
+				var data = res[1].data
+				
+				console.log("res is :", res)
+				if (data == 1) {
+					for (let i=0; i<this.notificationData.length; i++) {
+						this.notificationData[i].unread = false
+					}
+				} else if (data == -1) {
+					console.log("already checked!")
+				} else if (data == 0) {
+					console.log("item not exist in database!")
+				}
+				// this.getCol()
 			},
 		}
 	}
