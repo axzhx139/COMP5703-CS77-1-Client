@@ -15,7 +15,7 @@
 
 					</xfl-select>
 				</view>
-				<view @click="markAllReaded">Mark all as Readed</view>
+				<view @click="markAllAsReaded">Mark all as Readed</view>
 			</view>
 			<view id="inboxTop" v-if="!isUnread" >
 				<view>
@@ -28,7 +28,6 @@
 
 					</xfl-select>
 				</view>
-				<!-- <view @click="markAllReaded">Mark all as Readed</view> -->
 			</view>
 			<scroll-view scroll-y="true" class="scroll-y" v-if="isUnread" :style="{height: scrollerYHeight}">
 				<uni-row v-for="(item, index) in notificationData" :key=index>
@@ -198,9 +197,10 @@ import uniIcons from '../../components/uni-icons/uni-icons.vue';
 			async markAllAsReaded() {
 				let itemIdList = []
 				for (let i=0; i<this.notificationData.length; i++) {
-					itemIdList.push(this.notificationData[i].itemId)
+					if (this.notificationData[i].unread) {
+						itemIdList.push(this.notificationData[i].itemId)
+					}
 				}
-				console.log(index)
 				console.log("itemIdList is: ", itemIdList)
 				var res = await uni.request({
 					method:'POST',
@@ -210,7 +210,7 @@ import uniIcons from '../../components/uni-icons/uni-icons.vue';
 				var data = res[1].data
 				
 				console.log("res is :", res)
-				if (data == 1) {
+				if (res[1].statusCode == 200) {
 					for (let i=0; i<this.notificationData.length; i++) {
 						this.notificationData[i].unread = false
 					}
