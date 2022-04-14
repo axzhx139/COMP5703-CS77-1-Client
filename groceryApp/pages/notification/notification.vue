@@ -4,7 +4,7 @@
 			<text style="margin-left: 1%; font-size: 28px;color: #000000;font-weight: 900;">inbox</text>
 		</view>
 		<view id="main-body" :style="{height: scrollerHeight}">
-			<view id="inboxTop">
+			<view id="inboxTop" v-if="isUnread" >
 				<view>
 					<text>Notification</text>
 					<xfl-select :list="candidates"
@@ -16,6 +16,19 @@
 					</xfl-select>
 				</view>
 				<view @click="markAllReaded">Mark all as Readed</view>
+			</view>
+			<view id="inboxTop" v-if="!isUnread" >
+				<view>
+					<text>Notification</text>
+					<xfl-select :list="candidates"
+								:clearable="false"
+								:initValue="candidates[0]"
+								:style_Container="'height: 20px;width: auto; text-align: left; padding: 5px; padding-right: 15px;'"
+								@change="changeUnread">
+
+					</xfl-select>
+				</view>
+				<!-- <view @click="markAllReaded">Mark all as Readed</view> -->
 			</view>
 			<scroll-view scroll-y="true" class="scroll-y" v-if="isUnread" :style="{height: scrollerYHeight}">
 				<uni-row v-for="(item, index) in notificationData" :key=index>
