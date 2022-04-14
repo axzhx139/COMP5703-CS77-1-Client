@@ -19,7 +19,7 @@
 			</view>
 			<scroll-view scroll-y="true" class="scroll-y" v-if="isUnread" :style="{height: scrollerYHeight}">
 				<uni-row v-for="(item, index) in notificationData" :key=index>
-					<uni-col v-if="item.unread" class="notificationCol">
+					<uni-col v-if="item.unread" class="notificationCol" @click="markAsReaded(index)">
 						<uni-icons type="chat" size="30"></uni-icons>
 						<!-- <view>
 							<text decode='true'>
@@ -31,6 +31,7 @@
 						<text decode='true'>
 							Hi, your {{item.name}} added on {{item.addDate}} will get expired on {{item.remindDays}} days
 						</text>
+						<uni-icons type="chat" size="30" @click="markAsReaded(index)"></uni-icons>
 						
 					</uni-col>
 					<u-divider half-width="60%"></u-divider>
@@ -65,7 +66,9 @@
 </template>
 
 <script>
+import uniIcons from '../../components/uni-icons/uni-icons.vue';
 	export default {
+  components: { uniIcons },
 		data() {
 			return {
 				store: this.$store,
@@ -74,24 +77,28 @@
 				notificationData: [
 					{
 						"name": " apple ",
+						"itemId": 2,
 						"addDate": "2022/04/01",
 						"remindDays": 2,
 						"unread": true,
 					},
 					{
 						"name": "banana",
+						"itemId": 2,
 						"addDate": "2022/04/02",
 						"remindDays": 2,
 						"unread": true,
 					},
 					{
 						"name": "beef",
+						"itemId": 2,
 						"addDate": "2022/04/03",
 						"remindDays": 1,
 						"unread": true,
 					},
 					{
 						"name": "lamb",
+						"itemId": 2,
 						"addDate": "2022/04/03",
 						"remindDays": 1,
 						"unread": false,
@@ -112,7 +119,7 @@
 			// this.getList()
 			// console.log(option)
 			this.notificationData = JSON.parse(decodeURIComponent(option.notificationDataString));
-			// console.log('上一个页面传递过来的参数对象', this.notificationData );
+			console.log('上一个页面传递过来的参数对象', this.notificationData );
 		},
 		computed: {
 			// 滚动区高度 
@@ -140,7 +147,7 @@
 					this.notificationData[i].unread = false
 				}
 			},
-			getList(){
+			getList() {
 				uni.request({
 				url: "http://101.35.91.117:7884/notification/get/"+uni.getStorageSync('userId'),
 				method: 'get',
@@ -149,6 +156,56 @@
 					console.log('load',res[1].data)
 					// this.shopList = res[1].data
 					this.notificationData = res[1].data.itemNotificationList
+				})
+			},
+			async markAsReaded(index) {
+				var toReadedItemId = this.notificationData[index].itemId
+				console.log(index)
+				console.log("item id is: ", toReadedItemId)
+				// this.notificationData[index].unread = false
+				var res = await uni.request({
+					method:'POST',
+					url:'http://101.35.91.117:7884/notification/post/' + toReadedItemId,
+					// data: 2
+				})
+				// 获取后端返回的数据
+				// -1:already readed, 0: itemId not exist, 1: success
+				var data = res[1].data
+				console.log("res[1] is :", res[1])
+				console.log("res[1].data is :", res[1].data)
+				if (data == 1) {
+					this.notificationData[index].unread = false
+					// this.$set(this.notificationData[index], unread, false)
+				} else if (data == -1) {
+					console.log("already checked!")
+				} else if (data == 0) {
+					console.log("item not exist in database!")
+				}
+			},
+			markAllAsReaded() {
+				var toReadedItemId = this.notificationData[index].itemId
+				let itemIdList = []
+				for (let i=0; i<this.notificationData.length; i++) {
+					itemIdList.push(this.notificationData[i].itemId)
+				}
+				console.log(index)
+				console.log("itemIdList is: ", itemIdList)
+				uni.request({
+					method:'POST',
+					url:'http://101.35.91.117:7884/notification/postList',
+					data:JSON.stringify({"itemIdList": itemIdList})
+				}).then(res => {
+					console.log("res is :", res)
+					if (res.data == 1) {
+						for (let i=0; i<this.notificationData.length; i++) {
+							this.notificationData[i].unread = false
+						}
+					} else if (res.data == -1) {
+						console.log("already checked!")
+					} else if (res.data == 0) {
+						console.log("item not exist in database!")
+					}
+					// this.getCol()
 				})
 			},
 		}
