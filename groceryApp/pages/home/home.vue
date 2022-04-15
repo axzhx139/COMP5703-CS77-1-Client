@@ -194,9 +194,11 @@
 			}
 		},
 		onLoad(){
-			let clientInfo = plus.push.getClientInfo();
-			console.log('clientid ', clientInfo.clientid);
+			// let clientInfo = plus.push.getClientInfo();
+			// console.log('clientid ', clientInfo.clientid);
 			Location.reload;
+			this.$refs.popup.open('center')
+			console.log("pop！！")
 		},
 		onShow(){
 			this.loadinfo()
@@ -417,16 +419,59 @@
 				this.randomRecipesList=List;
 				console.log(this.randomRecipesList);
 			},
-			getNotificationData(){
+			getNotificationData() {
 				uni.request({
 				url: "http://101.35.91.117:7884/notification/get/"+uni.getStorageSync('userId'),
 				method: 'get',
 				}).then(res=>{
 					console.log(res)
-					console.log('load',res[1].data)
+					console.log('res[1].data', res[1].data)
 					// this.shopList = res[1].data
-					this.notificationData = res[1].data.itemNotificationList
+					var resData = res[1].data
+					this.notificationData = resData.itemNotificationList
+					if (resData.unreadNum > 0) {
+						// uni.showToast({
+						// 	title: "You have " + resData.unreadNum + " messages unread!",
+						// 	icon: 'success',
+						// 	duration: 2000,
+						// });
+						try {
+							var notificationCount = uni.getStorageSync("NotificationCount")
+						} catch (error) {
+							console.log("error is :", error)
+							var notificationCount = 1
+							uni.setStorageSync("NotificationCount", notificationCount)
+							// uni.setStorage({key: "NotificationCount",
+							// 				data: notificationCount})
+						}
+						console.log(notificationCount == "")
+						if (notificationCount == "") {
+							var notificationCount = 1
+							uni.setStorageSync("NotificationCount", notificationCount)
+						} else {
+							uni.setStorageSync("NotificationCount", notificationCount + 1)
+						}
+						console.log("notificationCount is: ", notificationCount)
+						if (notificationCount == 1) {
+							uni.showModal({
+								title: "Notification",
+								content: "You have " + resData.unreadNum + " messages unread!",
+								showCancel: false,
+								success: function (res) {
+									if (res.confirm) {
+										console.log('用户点击确定');
+									} else if (res.cancel) {
+										console.log('用户点击取消');
+									}
+								}
+							})
+						}
+						
+					}
 				})
+			},
+			popNotification() {
+				
 			},
 		}
 	}
