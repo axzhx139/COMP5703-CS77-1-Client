@@ -5,9 +5,11 @@
 		
 		<view class="main-content">
 			<view class="main-body" :style="{'height': deviceHeight + 'px'}">
+			<!-- <view class="main-body"> -->
+				<u-search placeholder="Search Ingredient" :show-action="true" actionText="search" height="80" v-model="searchIngre" @custom="searchRecipe()"></u-search>
 				<block v-for="(item, index) in itemList">
 					<view class="" v-if="index == 0" @click="toDetail(item.itemId)">
-						<view style="text-align: left;margin-left: 25px;margin-top: 25px;font-weight: 600;font-size: 25px;">
+						<view style="text-align: left;margin-left: 25px;margin-top: -5px;font-weight: 600;font-size: 25px;">
 							<text >{{item.title}}</text>
 						</view>
 						<view class="main-item" >
@@ -84,6 +86,9 @@
 				deviceHeight: 0,
 				itemList: [
 				],
+				searchList: [	
+				],
+				searchIngre:'',
 			}
 		},
 		onLoad() {
@@ -98,6 +103,18 @@
 			onClickBtn(){
 				
 			},
+			searchRecipe(searchIngre){
+				// console.log(this.searchIngre);
+				uni.request({
+				url: "http://101.35.91.117:7884/recipe/"+uni.getStorageSync('userId'),
+				method: 'get',
+				}).then(res=>{
+					this.loadRecipe2(res[1].data)
+					this.$store.commit("setRecipe",res[1].data)
+				})
+
+			},
+			
 			getAllRecipe(){
 				uni.request({
 				url: "http://101.35.91.117:7884/recipe/"+uni.getStorageSync('userId'),
@@ -112,8 +129,10 @@
 					url: '/pages/article/article?id='+e
 				})
 			},
+
 			loadRecipe(itemList){
 				let List = []
+				// let ingre = this.searchIngre
 				for (var i=0;i<itemList.length;i++){
 				    var item = itemList[i]
 					var used = ""
@@ -124,15 +143,47 @@
 					console.log(used);
 					var recipeInfo = {
 					    "itemId": item.id,
-					    "title": "Fridge Cleaning",
+					    // "title": "Fridge Cleaning",
 						'img': item.image,
 						'name': item.title,
 						'type': used,
 						'likes': item.likes,
 					}
+				
+						
 					List.push(recipeInfo);
+					
+					
 				}
 				this.itemList=List;
+			},
+			loadRecipe2(searchList){
+				let List = []
+				var ingre = this.searchIngre
+				for (var i=0;i<searchList.length;i++){
+				    var item = searchList[i]
+					var used = ""
+					for( var j=0;j<item.usedIngredients.length;j++){
+						used+=item.usedIngredients[j].name
+						used+=" "
+					}
+					console.log(used);
+					var recipeInfo = {
+					    "itemId": item.id,
+					    // "title": "Fridge Cleaning",
+						'img': item.image,
+						'name': item.title,
+						'type': used,
+						'likes': item.likes,
+					}
+					
+					if (used.includes(ingre)) {
+						console.log("111" + ingre)
+						List.push(recipeInfo);
+					}
+					
+				}
+				this.searchList=List;
 			},
 			limitWords(txt){
 			    var str = txt;
