@@ -6,7 +6,7 @@
 		<view class="main-content">
 			<view class="main-body" :style="{'height': deviceHeight + 'px'}">
 			<!-- <view class="main-body"> -->
-				<u-search placeholder="Search Ingredient" :show-action="true" actionText="search" height="80" v-model="searchIngre" @custom="searchRecipe()"></u-search>
+				<u-search placeholder="Search Ingredient" :show-action="true" actionText="search" margin="30rpx 50rpx" height="50" :animation="true" v-model="searchIngre" @custom="searchRecipe()"></u-search>
 				<block v-for="(item, index) in itemList">
 					<view class="" v-if="index == 0" @click="toDetail(item.itemId)">
 						<view style="text-align: left;margin-left: 25px;margin-top: -5px;font-weight: 600;font-size: 25px;">
@@ -14,7 +14,7 @@
 						</view>
 						<view class="main-item" >
 							<view class="main-item-img" style="width: 100%;text-align: center;" >
-								<u-image class="actual-img" border-radius="5px" height="116px" width="95%" :src="item.img" :fade="true" duration="450"></u-image>
+								<u-image class="actual-img" border-radius="5px" height="116px" width="90%" :src="item.img" :fade="true" duration="450"></u-image>
 							</view>
 							<view class="main-item-hover">
 								<view style="height: 47%;"></view>
@@ -51,10 +51,7 @@
 								</view>
 							</view>
 						</view>
-					</view>
-					
-					
-					
+					</view>			
 				</block>
 			</view>
 		</view>
@@ -97,7 +94,12 @@
 			// this.getAllRecipe();
 		},
 		onShow(){
-			this.getAllRecipe();
+			if (this.searchIngre ==='') {
+				this.getAllRecipe();
+			} else {
+				this.searchRecipe(this.searchIngre);
+			}
+			
 		},
 		methods: {
 			onClickBtn(){
@@ -178,12 +180,14 @@
 					}
 					
 					if (used.includes(ingre)) {
-						console.log("111" + ingre)
+						console.log("111" + used)
 						List.push(recipeInfo);
 					}
 					
 				}
-				this.searchList=List;
+			
+				this.itemList=List;
+				console.log(this.itemList.length);
 			},
 			limitWords(txt){
 			    var str = txt;
@@ -217,10 +221,16 @@
 		text-align: center;
 	}
 	.main-body{
-		background-color: white;
+		background-color: #f7edc8;
 		width: 90%;
 		border-radius: 10px;
 		text-align: center;
+		
+/* 		padding-top: 4rpx;
+		column-count: 2;
+		column-gap: 18rpx;
+		margin-left: 40rpx;
+		margin-right: 40rpx; */
 	}
 	.main-item{
 		position:relative;
@@ -233,6 +243,7 @@
 		display: flex;
 		justify-content: center;
 		text-align: center;
+		/* column-count: 2; */
 		margin-top: 10px;
 		position: absolute;
 		opacity:0.6;
