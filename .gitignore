@@ -21,6 +21,7 @@ out/
 /node_modules
 /groceryApp/uni_modules
 /uni_modules
+/groceryApp/unpackage/dist
 
 # Gradle files
 .gradle/
