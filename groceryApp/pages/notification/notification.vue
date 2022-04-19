@@ -37,11 +37,11 @@
 							<text decode='true'>
 								Hi, your&ensp;&emsp;<b>{{item.name}}</b> added on
 								<strong class="boldTest">{{item.addDate}}</strong> will get expired on
-								<strong class="boldTest">{{item.remindDays}}</strong> days
+								<strong class="boldTest">{{item.expireDays}}</strong> days
 							</text>
 						</view> -->
 						<text decode='true'>
-							Hi, your {{item.name}} added on {{item.addDate}} will get expired on {{item.remindDays}} days
+							Hi, your {{item.name}} added on {{item.addDate}} will get expired on {{item.expireDays}} days
 						</text>
 						<uni-icons type="checkmarkempty" size="30" @click="markAsReaded(index)"></uni-icons>
 						
@@ -57,11 +57,11 @@
 							<text decode='true'>
 								Hi, your&ensp;&emsp;<b>{{item.name}}</b> added on
 								<strong class="boldTest">{{item.addDate}}</strong> will get expired on
-								<strong class="boldTest">{{item.remindDays}}</strong> days
+								<strong class="boldTest">{{item.expireDays}}</strong> days
 							</text>
 						</view> -->
 						<text decode='true'>
-							Hi, your {{item.name}} added on {{item.addDate}} will get expired on {{item.remindDays}} days
+							Hi, your {{item.name}} added on {{item.addDate}} will get expired on {{item.expireDays}} days
 						</text>
 						
 					</uni-col>
@@ -91,28 +91,28 @@ import uniIcons from '../../components/uni-icons/uni-icons.vue';
 						"name": " apple ",
 						"itemId": 2,
 						"addDate": "2022/04/01",
-						"remindDays": 2,
+						"expireDays": 2,
 						"unread": true,
 					},
 					{
 						"name": "banana",
 						"itemId": 2,
 						"addDate": "2022/04/02",
-						"remindDays": 2,
+						"expireDays": 2,
 						"unread": true,
 					},
 					{
 						"name": "beef",
 						"itemId": 2,
 						"addDate": "2022/04/03",
-						"remindDays": 1,
+						"expireDays": 1,
 						"unread": true,
 					},
 					{
 						"name": "lamb",
 						"itemId": 2,
 						"addDate": "2022/04/03",
-						"remindDays": 1,
+						"expireDays": 1,
 						"unread": false,
 					}
 				],
