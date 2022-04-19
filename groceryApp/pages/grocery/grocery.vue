@@ -792,6 +792,7 @@
             },
             
 			onClickBtn(e){
+				console.log("e.key is: ", e.key)
 				if (e.key == 'add'){
 					// console.log('111')
 					this.addItemToList = false
