@@ -454,7 +454,7 @@
 			addToStock(item){
 				uni.setStorage({
 					key: 'addToStock',
-					data: {'iName':item.name,'iId':item.itemId},
+					data: {'iName':item.name,'iId':item.itemId,'iPicture':item.picture},
 					success: function () {
 						uni.switchTab({
 							url:'../grocery/grocery'

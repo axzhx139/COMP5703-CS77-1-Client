@@ -480,8 +480,13 @@
 				key:'addToStock',
 				success: function(res){
 					if(res.data){
-						that.add_src='http://101.35.91.117:7884/item/picture/'+res.data.iId;
-						that.filepath=[that.add_src];
+						if(res.data.iPicture && res.data.iPicture !=''){
+							that.add_src='http://101.35.91.117:7884/item/picture/'+res.data.iId;
+							that.filepath=[that.add_src];
+						}else{
+							that.filepath='';
+							that.add_src='';
+						}
 						that.iName = res.data.iName;
 						that.addItemToList = false;
 						that.needAddItem = true;
@@ -494,11 +499,30 @@
 					}
 				}
 			})
+			uni.getStorage({
+				key:'goToHistoty',
+				success: function(res){
+					console.log(res.data)
+					if(res.data=='consumed' || res.data=='expired'){
+						that.iisSelect = false
+						that.issSelect = true
+					}else{
+						that.iisSelect = true
+						that.issSelect = false
+					}
+					uni.setStorageSync('goToHistoty', '');
+				}
+			})
 			this.getCol()
 		},
 		methods: {
 			get_src(){
-				return this.add_src
+				if(this.add_src && this.add_src!=''){
+					return this.add_src
+				}else{
+					return "../../static/noPhoto.png"
+				}
+				
 			},
 			getDeviceHeight(){
 				let deviceInfo = uni.getSystemInfoSync();
@@ -841,6 +865,8 @@
 				}else if(e.key == 'back'){
 					this.addItemToList = true
 					this.needAddItem = false
+					this.filepath='';
+					this.add_src='';
 				}else{
                     this.scanPhoto()
                 }

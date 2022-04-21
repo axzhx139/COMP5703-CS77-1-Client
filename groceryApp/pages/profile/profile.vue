@@ -48,16 +48,16 @@
 						<u-divider half-width="60%"></u-divider>
 					</view>
 					<view style="margin-top: 20rpx;">
-						<u-grid :col="3" :border="false">
-							<u-grid-item>
-								<view class="grid-text ftn">{{userInfo.totalItemCount}}</view>
-								<view class="grid-text">Added</view>
+						<u-grid :col="3" :border="false" >
+							<u-grid-item @click="clickGrid('instock')">
+								<view class="grid-text ftn">{{userInfo.instockItemCount}}</view>
+								<view class="grid-text">Instock</view>
 							</u-grid-item>
-							<u-grid-item>
+							<u-grid-item @click="clickGrid('consumed')">
 								<view class="grid-text ftn">{{userInfo.consumedItemCount}}</view>
 								<view class="grid-text">Consumed</view>
 							</u-grid-item>
-							<u-grid-item>
+							<u-grid-item @click="clickGrid('expired')">
 								<view class="grid-text ftn">{{userInfo.expiredItemCount}}</view>
 								<view class="grid-text">Expired</view>
 							</u-grid-item>
@@ -128,6 +128,24 @@
 					console.log('load',res[1].data)
 					this.shopList = res[1].data
 				})
+			},
+			clickGrid(e){
+				console.log(e)
+				if(e=='instock'){
+					uni.switchTab({
+						url:'../grocery/grocery'
+					})
+				}else{
+					uni.setStorage({
+						key: 'goToHistoty',
+						data: e,
+						success: function () {
+							uni.switchTab({
+								url:'../grocery/grocery'
+							})
+						}
+					});
+				}
 			},
 			refresh(){
 				uni.showLoading({title: 'refreshing',mask:true});
