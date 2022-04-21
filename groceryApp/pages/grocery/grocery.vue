@@ -105,7 +105,7 @@
 												<!-- </view>	 -->
 												</u-row>
 												<u-row style="justify-content: flex-end; margin-bottom: 5px">
-													<image src="../../static/knife_fork.png" style="height: 45rpx; width: 45rpx; float:right;  margin-right: 6%;" @click="changeAmount(index)"></image>
+													<image src="../../static/knife_fork.png" style="height: 45rpx; width: 45rpx; float:right;  margin-right: 6%;" @click.stop="changeAmount(index)"></image>
 												</u-row>
 												<!-- <view>
 													<u-row gutter="18" justify="space-between">
@@ -143,7 +143,7 @@
 <!--  -->
 <!--  -->
 <!--  -->
-			<hqs-popup title="" :from="popFrom" v-model="itemEditor" :round="round" :showClose="false" height="600px">
+			<hqs-popup style="z-index: 999;"title="" :from="popFrom" v-model="itemEditor" :round="round" :showClose="false" height="600px">
 				<view class="t-bg">
 
 					<view style="text-align: left;width: 100%;">
