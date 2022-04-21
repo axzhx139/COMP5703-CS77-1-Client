@@ -37,7 +37,7 @@
 			</u-row>	
 		</view>
 		<view class="">
-			<scroll-view :scroll-with-animation="true"  :scroll-x="true" style="white-space: nowrap;" >
+			<scroll-view  :scroll-x="true" style="white-space: nowrap;" >
 			  <template v-for="(item, index) in expiringFoodList">
 				  
 				  <view class="scroll_item" :style="{'background-image': 'url('+'http://101.35.91.117:7884/item/picture/'+item.itemId+')','filter': 'grayscale('+getFreshness(index)+'%)'}">
@@ -73,34 +73,33 @@
 						</u-col>
 					</u-row>	
 				</view>
-				<block v-for="(item,index) in shopList">
-					<view style="margin-top: 10px;" >
-						
-						<u-row gutter="16">
-							<u-col span="2">
-									<image :src="'http://101.35.91.117:7884/item/picture/'+item.itemId+'?'+Math.random()" style="width: 35px;height: 35px;">
-							</u-col>
-							<u-col span="7">
-								<u-row style="margin: 0px 0px 10px 5px;">{{ item.name }}</u-row>
-							</u-col>
-							<u-col span="3">
-									<!-- <u-row gutter="18" justify="space-between"> -->
-									<u-row style="justify-content: flex-end; margin-bottom: 5px">
-									<!-- <text>{{ item.name }}</text> -->
-									<!-- <view style="text-align: right;"> -->
-										<!-- <uni-icons type="cart" size="30" v-if="!item.potential" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="saveList(item.itemId)"></uni-icons> -->
-										<!-- <uni-icons type="cart-filled" size="30" v-if="!item.potential" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="deleteList(item.itemId)"></uni-icons> -->
-										<image src="../../static/add2.png" style="height:40rpx; width: 40rpx; float:right;  margin-right: 10px" @click="addToStock(item)"></image>
-										<!-- <img src="../../static/knife_fork.png" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click="changeAmount(index)"></img> -->
-										<!-- <u-button shape="circle" size="mini" style="background-color: #F3F1F1; " @click="changeAmount(index)">consume</u-button> -->
-										<image src="../../static/delete.png" style="height: 45rpx; width: 45rpx; float:right;  " @click="changeAmount(index)"></image>
-									<!-- </view>	 -->
-									</u-row>
-							</u-col>
-						</u-row>
+				<scroll-view :scroll-y="true" :style="{'height':deviceHeight-460+'px'}"  >
+					<view style="margin-top:20px;">
+						<text v-if="shopList.length==0" style="font-size: 16px;font-weight: 500;">( Nothing in shopping list )</text>
 					</view>
-					<u-divider half-width="60%"></u-divider>
-				</block>
+					
+					<block v-for="(item,index) in shopList" class="scroll_item">
+						<view style="margin-top: 10px;" >
+							
+							<u-row gutter="16">
+								<u-col span="2">
+										<image :src="'http://101.35.91.117:7884/item/picture/'+item.itemId+'?'+Math.random()" style="width: 35px;height: 35px;">
+								</u-col>
+								<u-col span="7">
+									<u-row style="margin: 0px 0px 10px 5px;">{{ item.name }}</u-row>
+								</u-col>
+								<u-col span="3">
+										<u-row style="justify-content: flex-end; margin-bottom: 5px">
+											<image src="../../static/add2.png" style="height:40rpx; width: 40rpx; float:right;  margin-right: 10px" @click="addToStock(item)"></image>
+											<image src="../../static/delete.png" style="height: 45rpx; width: 45rpx; float:right;  " @click="deletePotential(item.pid)"></image>
+										<!-- </view>	 -->
+										</u-row>
+								</u-col>
+							</u-row>
+						</view>
+						<u-divider half-width="60%"></u-divider>
+					</block>
+				</scroll-view>
 			</view>
 		</view>
 		
@@ -181,22 +180,24 @@
 				popFrom: 'bottom',
 				notificationData: '',
 				shopList:[],
+				deviceHeight:0,
 			}
 		},
 		onLoad(){
 			// let clientInfo = plus.push.getClientInfo();
 			// console.log('clientid ', clientInfo.clientid);
-			this.loadinfo()
-			this.getCol()
-			this.getShoppingList()
-			this.getNotificationData()
+			let deviceInfo = uni.getSystemInfoSync();
+			this.deviceHeight = deviceInfo.windowHeight;
 			Location.reload;
 			// this.$refs.popup.open('center')
 		},
 		onShow(){
 			// this.loadinfo()
 			// this.getCol()
-			
+			this.loadinfo()
+			this.getCol()
+			this.getShoppingList()
+			this.getNotificationData()
 			// this.getShoppingList()
 		},
 		methods: {
@@ -459,15 +460,37 @@
 			refresh(){
 				let that = this
 				// uni.showLoading({title: 'refreshing',mask:true});
+				uni.showModal({
+				    title: 'Notice',
+				    content: 'Are you sure to clear the shopping list?',
+				    success: function (res) {
+				        if (res.confirm) {
+				            uni.request({
+				            url: "http://101.35.91.117:7884/potential/deleteAll/"+uni.getStorageSync('userId'),
+				            method: 'get',
+				            }).then(res=>{
+				            	console.log('load',res[1].data)
+				            	// setTimeout(function () {uni.hideLoading();}, 500);
+				            	that.getShoppingList();
+				            })
+				        } else if (res.cancel) {
+							
+				        }
+				    }
+				});
+				
+			},
+			deletePotential(pid){
+				let that = this
+				// uni.showLoading({title: 'refreshing',mask:true});
 				uni.request({
-				url: "http://101.35.91.117:7884/potential/update/"+uni.getStorageSync('userId'),
+				url: "http://101.35.91.117:7884/potential/delete/"+pid,
 				method: 'get',
 				}).then(res=>{
-					console.log('load',res[1].data)
 					// setTimeout(function () {uni.hideLoading();}, 500);
 					that.getShoppingList();
 				})
-			},
+			}
 		}
 	}
 </script>
@@ -514,10 +537,10 @@
 	display: flex;
 	width: 100%;
 	justify-content: center;
+	
 }
 .like-card{
 	width: 90%;
-	height: 320px;
 	background-color: #f3f3f3;
 	margin-top: 20px;
 	border-radius: 10px;
