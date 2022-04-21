@@ -4,54 +4,56 @@
 		</hx-navbar>
 		
 		<view class="main-content">
-			<view class="main-body" :style="{'height': deviceHeight + 'px'}">
+			<view class="main-body" :style="{'height': deviceHeight-60 + 'px'}">
 				<u-search placeholder="Search Ingredient" :show-action="true" actionText="search" margin="30rpx 50rpx" height="50" :animation="true" v-model="searchIngre" @custom="searchRecipe()"></u-search>
-				<block v-for="(item, index) in itemList">
-					<view class="" v-if="index == 0" @click="toDetail(item.itemId)">
-						<view style="text-align: left;margin-left: 25px;margin-top: -5px;font-weight: 600;font-size: 25px;">
-							<text >{{item.title}}</text>
-						</view>
-						<view class="main-item" >
-							<view class="main-item-img" style="width: 100%;text-align: center;" >
-								<u-image class="actual-img" border-radius="5px" height="116px" width="90%" :src="item.img" :fade="true" duration="450"></u-image>
+				<scroll-view :scroll-y="true"  :style="{'height': deviceHeight-150 + 'px'}">
+					<block v-for="(item, index) in itemList">
+						<view class="" v-if="index == 0" @click="toDetail(item.itemId)">
+							<view style="text-align: left;margin-left: 25px;margin-top: -5px;font-weight: 600;font-size: 25px;">
+								<text >{{item.title}}</text>
 							</view>
-							<view class="main-item-hover">
-								<view style="height: 47%;"></view>
-								<text style="color: #000000;margin-left: 14px;font-size: 16px;font-weight: 500;">{{ limitWords(item.name) }}</text>
-								<view class="" style="margin-left: 14px;margin-top: 10px;color: #000000;">
-									<image src="../../static/bottle.png" style="width: 15px;height: 15px;">
-									<text style="display: inline-block;margin-left: 5px;">{{ limited(item.type) }}</text>
-									<image src="../../static/medal.png" style="width: 15px;height: 15px;margin-left: 30rpx;">
-									<text style="display: inline-block;margin-left: 10px;">{{ Math.floor((Math.random() * 5000) + 100) }} Likes</text>
+							<view class="main-item" >
+								<view class="main-item-img" style="width: 100%;text-align: center;" >
+									<u-image class="actual-img" border-radius="5px" height="116px" width="90%" :src="item.img" :fade="true" duration="450"></u-image>
+								</view>
+								<view class="main-item-hover">
+									<view style="height: 47%;"></view>
+									<text style="color: #000000;margin-left: 14px;font-size: 16px;font-weight: 500;">{{ limitWords(item.name) }}</text>
+									<view class="" style="margin-left: 14px;margin-top: 10px;color: #000000;">
+										<image src="../../static/bottle.png" style="width: 15px;height: 15px;">
+										<text style="display: inline-block;margin-left: 5px;">{{ limited(item.type) }}</text>
+										<image src="../../static/medal.png" style="width: 15px;height: 15px;margin-left: 30rpx;">
+										<text style="display: inline-block;margin-left: 10px;">{{ Math.floor((Math.random() * 5000) + 100) }} Likes</text>
+									</view>
 								</view>
 							</view>
 						</view>
-					</view>
-					
-					
-					
-					
-					<view class=""  v-if="index != 0" style="margin-top: 150px;" @click="toDetail(item.itemId)">
-						<view style="text-align: left;margin-left: 25px;margin-top: 25px;font-weight: 600;font-size: 25px;">
-							<text >{{item.title}}</text>
-						</view>
-						<view class="main-item" >
-							<view class="main-item-img" style="width: 100%;text-align: center;" >
-								<u-image class="actual-img" border-radius="5px" height="116px" width="95%" :src="item.img" :fade="true" duration="450"></u-image>
+						
+						
+						
+						
+						<view class=""  v-if="index != 0" style="margin-top: 150px;" @click="toDetail(item.itemId)">
+							<view style="text-align: left;margin-left: 25px;margin-top: 25px;font-weight: 600;font-size: 25px;">
+								<text >{{item.title}}</text>
 							</view>
-							<view class="main-item-hover">
-								<view style="height: 47%;"></view>
-								<text style="color: #000000;margin-left: 14px;font-size: 16px;font-weight: 500;">{{ limitWords(item.name )}}</text>
-								<view class="" style="margin-left: 14px;margin-top: 10px;color: #000000;">
-									<image src="../../static/bottle.png" style="width: 15px;height: 15px;">
-									<text style="display: inline-block;margin-left: 5px;">{{ limited(item.type) }}</text>
-									<image src="../../static/medal.png" style="width: 15px;height: 15px;margin-left: 30rpx;">
-									<text style="display: inline-block;margin-left: 10px;">{{ Math.floor((Math.random() * 5000) + 100)}} Likes</text>
+							<view class="main-item" >
+								<view class="main-item-img" style="width: 100%;text-align: center;" >
+									<u-image class="actual-img" border-radius="5px" height="116px" width="95%" :src="item.img" :fade="true" duration="450"></u-image>
+								</view>
+								<view class="main-item-hover">
+									<view style="height: 47%;"></view>
+									<text style="color: #000000;margin-left: 14px;font-size: 16px;font-weight: 500;">{{ limitWords(item.name )}}</text>
+									<view class="" style="margin-left: 14px;margin-top: 10px;color: #000000;">
+										<image src="../../static/bottle.png" style="width: 15px;height: 15px;">
+										<text style="display: inline-block;margin-left: 5px;">{{ limited(item.type) }}</text>
+										<image src="../../static/medal.png" style="width: 15px;height: 15px;margin-left: 30rpx;">
+										<text style="display: inline-block;margin-left: 10px;">{{ Math.floor((Math.random() * 5000) + 100)}} Likes</text>
+									</view>
 								</view>
 							</view>
-						</view>
-					</view>			
-				</block>
+						</view>			
+					</block>
+				</scroll-view>
 			</view>
 		</view>
 		
