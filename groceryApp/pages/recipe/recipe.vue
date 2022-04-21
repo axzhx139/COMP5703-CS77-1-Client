@@ -5,7 +5,6 @@
 		
 		<view class="main-content">
 			<view class="main-body" :style="{'height': deviceHeight + 'px'}">
-			<!-- <view class="main-body"> -->
 				<u-search placeholder="Search Ingredient" :show-action="true" actionText="search" margin="30rpx 50rpx" height="50" :animation="true" v-model="searchIngre" @custom="searchRecipe()"></u-search>
 				<block v-for="(item, index) in itemList">
 					<view class="" v-if="index == 0" @click="toDetail(item.itemId)">
@@ -219,18 +218,14 @@
 		display: flex;
 		justify-content: center;
 		text-align: center;
+		margin-bottom: 6;
 	}
 	.main-body{
 		background-color: #f7edc8;
 		width: 90%;
 		border-radius: 10px;
-		text-align: center;
-		
-/* 		padding-top: 4rpx;
-		column-count: 2;
-		column-gap: 18rpx;
-		margin-left: 40rpx;
-		margin-right: 40rpx; */
+		text-align: center;		
+		margin-bottom: 10;
 	}
 	.main-item{
 		position:relative;
@@ -255,7 +250,7 @@
 
 		position:absolute;
 		/* background-color: #4CD964; */
-		z-index: 999999;
+		z-index: 1;
 		width: 95%;
 		height: 116px;
 		margin-top: 10px;
