@@ -548,21 +548,24 @@
 				}).then(res => {
 					console.log(that.filepath[0])
 					console.log(res[1].data)
-					uni.uploadFile({
-						url: 'http://101.35.91.117:7884/item/update/picture', 
-						filePath: that.filepath[0], 
-						name: 'picture', 
-						formData: {
-							item_id: res[1].data
-							// file: tempFilePath   
-						},
-						success: (uploadFileRes) => {
-							console.log(uploadFileRes);
-						},
-						fail: (err) => {
-							console.log(err)
-						}
-					});
+					if(that.filepath[0]){
+						uni.uploadFile({
+							url: 'http://101.35.91.117:7884/item/update/picture', 
+							filePath: that.filepath[0], 
+							name: 'picture', 
+							formData: {
+								item_id: res[1].data
+								// file: tempFilePath   
+							},
+							success: (uploadFileRes) => {
+								console.log(uploadFileRes);
+							},
+							fail: (err) => {
+								console.log(err)
+							}
+						});
+					}
+					
 					
 				})
 				this.needAddItem = false
