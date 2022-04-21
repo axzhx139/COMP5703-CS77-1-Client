@@ -4,9 +4,9 @@
 		</hx-navbar>
 		
 		<view class="main-content">
-			<view class="main-body" :style="{'height': deviceHeight-60 + 'px'}">
+			<view class="main-body" :style="{'height': getDeviceHeight()-110 + 'px'}">
 				<u-search placeholder="Search Ingredient" :show-action="true" actionText="search" margin="30rpx 50rpx" height="50" :animation="true" v-model="searchIngre" @custom="searchRecipe()"></u-search>
-				<scroll-view :scroll-y="true"  :style="{'height': deviceHeight-150 + 'px'}">
+				<scroll-view :scroll-y="true"  :style="{'height': getDeviceHeight()-190 + 'px'}">
 					<block v-for="(item, index) in itemList">
 						<view class="" v-if="index == 0" @click="toDetail(item.itemId)">
 							<view style="text-align: left;margin-left: 25px;margin-top: -5px;font-weight: 600;font-size: 25px;">
@@ -105,6 +105,11 @@
 		methods: {
 			onClickBtn(){
 				
+			},
+			getDeviceHeight(){
+				let deviceInfo = uni.getSystemInfoSync();
+				this.deviceHeight = deviceInfo.windowHeight;
+				return this.deviceHeight
 			},
 			searchRecipe(searchIngre){
 				// console.log(this.searchIngre);

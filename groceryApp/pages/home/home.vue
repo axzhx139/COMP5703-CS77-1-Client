@@ -73,7 +73,7 @@
 						</u-col>
 					</u-row>	
 				</view>
-				<scroll-view :scroll-y="true" :style="{'height':deviceHeight-460+'px'}"  >
+				<scroll-view :scroll-y="true" :style="{'height':getScrollHeight()+'px'}"  >
 					<view style="margin-top:20px;">
 						<text v-if="shopList.length==0" style="font-size: 16px;font-weight: 500;">( Nothing in shopping list )</text>
 					</view>
@@ -201,6 +201,11 @@
 			// this.getShoppingList()
 		},
 		methods: {
+			getScrollHeight(){
+				let deviceInfo = uni.getSystemInfoSync();
+				this.deviceHeight = deviceInfo.windowHeight;
+				return this.deviceHeight-500
+			},
 			onClickBtn(e){
 				if (e.key == 'notification'){
 					let notificationDataString = encodeURIComponent(JSON.stringify(this.notificationData))

@@ -75,7 +75,7 @@
 								</uni-col>
 							</uni-row>
 						</inline> -->
-						<scroll-view :scroll-y="true" :style="{'height':deviceHeight-190+'px'}"  >
+						<scroll-view :scroll-y="true" :style="{'height':getDeviceHeight()-240+'px'}"  >
 							<block v-for="(item,index) in stockList">
 								<view style="margin-top: 10px;" @click="edit(item, index)">
 									
@@ -279,7 +279,7 @@
 							</u-col>
 						</u-row>
 					</view> -->
-					<scroll-view :scroll-y="true" :style="{'height':deviceHeight-160+'px'}"  >
+					<scroll-view :scroll-y="true" :style="{'height':getDeviceHeight()-210+'px'}"  >
 						<view style="margin-top: 5px;">
 							<block v-for="(item,index) in oldstockList">
 								<view style="margin-top: 10px;">
@@ -469,8 +469,6 @@
 		onLoad(){
 			// console.log(uni.getStorageSync('userId'))
 			this.getCol()
-			let deviceInfo = uni.getSystemInfoSync();
-			this.deviceHeight = deviceInfo.windowHeight;
 			// setInterval(() => {
 			// 	this.getCol()
 			// },1000)
@@ -501,6 +499,11 @@
 		methods: {
 			get_src(){
 				return this.add_src
+			},
+			getDeviceHeight(){
+				let deviceInfo = uni.getSystemInfoSync();
+				this.deviceHeight = deviceInfo.windowHeight;
+				return this.deviceHeight
 			},
 			change(data){
 				console.log(data.index);
