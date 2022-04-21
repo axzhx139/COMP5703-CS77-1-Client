@@ -99,5 +99,10 @@
     "vueVersion" : "2",
     "quickapp-webview" : {
         "icon" : "static/logo.png"
+    },
+    "h5" : {
+        "router" : {
+            "base" : "./"
+        }
     }
 }

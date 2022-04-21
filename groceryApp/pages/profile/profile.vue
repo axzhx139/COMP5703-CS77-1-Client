@@ -138,11 +138,12 @@
 		onLoad() {
 			// let deviceInfo = uni.getSystemInfoSync();
 			// this.deviceHeight = deviceInfo.windowHeight;
-			
-		},
-		onShow(){
+			// Location.reload;
 			this.loadInfo();
 		},
+		// onShow(){
+		// 	this.loadInfo();
+		// },
 		methods: {
 			getList(){
 				uni.request({
@@ -209,17 +210,21 @@
 				})
 			},
 			loadInfo(){
-				uni.request({
-				url: "http://101.35.91.117:7884/users/avatar/"+uni.getStorageSync('userId'),
-				method: 'get',
-				}).then(res=>{
-					console.log('res',res)
-					if(res[1].data!=''){
-						this.avatar = res[1].data
-					}else{
-						this.avatar = "../../static/girl.png"
-					}
-				})
+				// uni.request({
+				// url: "http://101.35.91.117:7884/users/avatar/"+uni.getStorageSync('userId'),
+				// method: 'get',
+				// }).then(res=>{
+				// 	console.log('res',res)
+				// 	if(res[1].data!=''){
+				// 		this.avatar = res[1].data
+				// 	}else{
+				// 		this.avatar = "../../static/girl.png"
+				// 	}
+				// })
+				this.avatar="http://101.35.91.117:7884/users/avatar/"+uni.getStorageSync('userId')+'?'+Math.random()
+				if(this.avatar==''){
+					this.avatar = "../../static/girl.png"
+				}
 				uni.request({
 				url: "http://101.35.91.117:7884/users/profile/"+uni.getStorageSync('userId'),
 				method: 'get',

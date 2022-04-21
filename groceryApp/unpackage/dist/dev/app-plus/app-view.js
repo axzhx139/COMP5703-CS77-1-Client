@@ -6400,7 +6400,7 @@ var render = function() {
                       attrs: { _i: "20-" + $30 }
                     },
                     [
-                      _c("img", {
+                      _c("v-uni-image", {
                         staticStyle: {
                           width: "20px",
                           height: "20px",
@@ -6445,7 +6445,7 @@ var render = function() {
                         },
                         [
                           _vm._$g("25-" + $30, "i")
-                            ? _c("img", {
+                            ? _c("v-uni-image", {
                                 staticStyle: { width: "15px", height: "15px" },
                                 attrs: {
                                   src: _vm._$g("25-" + $30, "a-src"),
@@ -7406,7 +7406,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/runtime/api.js */ 13);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "@charset \"UTF-8\";\n/**\n * 这里是uni-app内置的常用样式变量\n *\n * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量\n * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App\n *\n */\n/**\n * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能\n *\n * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件\n */\n/* 颜色变量 */\n/* 行为相关颜色 */\n/* 文字基本颜色 */\n/* 背景颜色 */\n/* 边框颜色 */\n/* 尺寸变量 */\n/* 文字尺寸 */\n/* 图片尺寸 */\n/* Border Radius */\n/* 水平间距 */\n/* 垂直间距 */\n/* 透明度 */\n/* 文章场景相关 */\n@font-face {\n  font-family: 'hxicon';\n  /* project id 2009392 */\n  src: url(data:font/truetype;charset=utf-8;base64,AAEAAAAKAIAAAwAgT1MvMj7lWwsAAAEoAAAAYGNtYXDNHM2nAAABnAAAAVpnbHlmbZR2CgAAAwQAAAKyaGVhZB4HXk0AAACsAAAANmhoZWEG3wJOAAAA5AAAACRobXR4DxAAMgAAAYgAAAAUbG9jYQHXAqwAAAL4AAAADG1heHABFQBfAAABCAAAACBuYW1lQ1RmWAAABbgAAAMScG9zdDqc8NMAAAjMAAAASwABAAAAAQAASMPV5l8PPPUACwQAAAAAAN12BkwAAAAA3nIUBAAA/9wDAAMkAAAACAACAAAAAAAAAAEAAAOA/4AAXAQAAAD+yAMAAAEAAAAAAAAAAAAAAAAAAAAFAAEAAAAFAFMABgAAAAAAAgAAAAoACgAAAP8AAAAAAAAABAPEAZAABQAAAokCzAAAAI8CiQLMAAAB6wAyAQgAAAIABQMAAAAAAAAAAAAAEAAAAAAAAAAAAAAAUGZFZADA5gPmeQOA/4AAAAPcAIAAAAABAAAAAAIAAs0AAAAAAAADEAAyBAAAAAQAAAAEAAAAAAAAAAAAAAMAAAADAAAAHAABAAAAAABUAAMAAQAAABwABAA4AAAACgAIAAIAAuYD5h7mLOZ5//8AAOYD5h7mLOZ5//8Z/xnjGdcZiwABAAAAAAAAAAAAAAAAAQYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEIAmAERAT8BWQAFADIAAALeAnUAGwAfACMAJwArAAATITIXFh0BIzU0JyYjIREUFxYzITUzFSEiJyY1EzMRIzczFSM3MxEjNzMVIzIBuUc7OiUwLzj+bS8vOAGUJf5HRzo7kUtLcm1tl0tLfZWVAnU6OkioqDgwL/5sOC8vQWc7OkcBMf6qyUvY/qpLSwADAAD/3AK6AyQADAAZADgAAAEyFzY1NCYiBhcGFzYTIwYVFB4BMj4BNTQnNyInJjUDNCYnJiIHDgEVAxQHBiIGFRQWMyEyNjU0JgFdDxADFBwUAQEDEA9zAR81QDUfAbEcDQwEQDU3fjc1QAQMDTgdIRgCSBghHQL4AgYGDhQUDgYGAv1rCgkfNh8fNh8JCmwVFCQBAjhiHB4eHGI4/v4kFBUZGBUdHRUYGQAABgAAABUCtALrAAsADAAuAC8AUQBSAABBIxUjFTMVMzUzNSM1AQ4CIyEiLgEnET4CMyEHIyIOARURFB4BMyEyPgE1ETcnBT4CMyEyHgEXEQ4CIyE3MzI+ATURNC4BIyEiDgEVEQcXAYlepaVepqYBKgIrRyr+iipHLAEBLEcqATtE9xsvGxsvGwF2Gy8bOhf9ZAIrRyoBdipHLAICLEcq/sVE9xsvGxsvG/6KGy8bOhcCVaZepaVepv5XKUUpKUUpAagpRig6Gy8b/mgbLxsbLxsBHjhaEClFKSlFKf5YKUUpOhsvGwGYGy8bGy8b/uM5WgAFAAAAAAMAAwAABQALABEAFwAbAAATFSM1MxUDMxUjNTMBIzUzFSMRNTMVIzUBIRUhVVXVgIDVVQJWgNVVVdX91QMA/QACq4DVVf2qVdUB1lXV/iqA1VUBVlYAAAEAAAAAATgCPAALAAABMhcDFhcUByYnNQABGAUb/ES4ID/ZARICPCD/AD+9BRs64gQBHAAAAAAACwCKAAMAAQQJAAAAJgAAAAMAAQQJAAEAEAA0AAMAAQQJAAIADgAmAAMAAQQJAAMALAA0AAMAAQQJAAQAEAA0AAMAAQQJAAUAdABgAAMAAQQJAAYAEAA0AAMAAQQJAAoAVgDUAAMAAQQJAAsAJgEqAAMAAQQJAA0A1gFQAAMAAQQJAA4AYgImAEMAcgBlAGEAdABlAGQAIABiAHkAIABpAGMAbwBuAGYAbwBuAHQAUgBlAGcAdQBsAGEAcgBpAGMAbwBuAGYAbwBuAHQAOgBWAGUAcgBzAGkAbwBuACAAMQAuADAAMAAwAFYAZQByAHMAaQBvAG4AIAAxAC4AMAAwADAAOwBBAHAAcgBpAGwAIAA1ACwAIAAyADAAMgAyADsARgBvAG4AdABDAHIAZQBhAHQAbwByACAAMQA0AC4AMAAuADAALgAyADgAMQA0ACAAMwAyAC0AYgBpAHQARwBlAG4AZQByAGEAdABlAGQAIABiAHkAIABzAHYAZwAyAHQAdABmACAAZgByAG8AbQAgAEYAbwBuAHQAZQBsAGwAbwAgAHAAcgBvAGoAZQBjAHQALgBoAHQAdABwADoALwAvAGYAbwBuAHQAZQBsAGwAbwAuAGMAbwBtAFQAaABpAHMAIABmAG8AbgB0ACAAaQBzACAAbQBhAGQAZQAgAHcAaQB0AGgAIAB0AGgAZQAgAHQAcgBpAGEAbAAgAHYAZQByAHMAaQBvAG4AIABvAGYAIABGAG8AbgB0AEMAcgBlAGEAdABvAHIALgAgAFkAbwB1ACAAbQBhAHkAIABuAG8AdAAgAHUAcwBlACAAdABoAGkAcwAgAGYAbwBuAHQAIABmAG8AcgAgAGMAbwBtAG0AZQByAGMAaQBhAGwAIABwAHUAcgBwAG8AcwBlAHMALgBoAHQAdABwAHMAOgAvAC8AdwB3AHcALgBoAGkAZwBoAC0AbABvAGcAaQBjAC4AYwBvAG0ALwBmAG8AbgB0AC0AbABpAGMAZQBuAHMAZQAtAGEAZwByAGUAZQBtAGUAbgB0AAAAAgAAAAAAAAAKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFAAABAgEDAQQBBQd0b25nemhpB3RpYW5qaWEJc2FveWlzYW94BGJhY2sA) format(\"truetype\");\n}\n.hxicon[data-v-ec8f5f84] {\n  font-family: hxicon;\n  text-decoration: none;\n}\n.hd[data-v-ec8f5f84] {\n  overflow: hidden;\n}\n[class*=\"hx-navbar__\"][data-v-ec8f5f84] {\n  display: flex;\n}\n.hx-navbar[data-v-ec8f5f84] {\n  position: relative;\n  padding-top: 0;\n  overflow: hidden;\n  flex: 1;\n}\n.hx-navbar__stretch[data-v-ec8f5f84] {\n  align-items: stretch;\n}\n.hx-navbar__status[data-v-ec8f5f84] {\n  position: relative;\n  z-index: 3;\n}\n.hx-navbar__icon[data-v-ec8f5f84] {\n  position: relative;\n  top: 1px;\n}\n.hx-navbar__icontran[data-v-ec8f5f84] {\n  border-radius: 100% !important;\n  background-color: rgba(0, 0, 0, 0.5) !important;\n  width: 30px !important;\n  height: 30px !important;\n  line-height: 30px !important;\n  text-align: center !important;\n  color: #ffffff !important;\n  transition: color,background 0.2s !important;\n}\n.hx-navbar__btntran[data-v-ec8f5f84] {\n  padding: 0 !important;\n  margin-left: 6px !important;\n  border-radius: 100% !important;\n  background-color: rgba(0, 0, 0, 0.5) !important;\n  width: 30px !important;\n  height: 30px !important;\n  line-height: 30px !important;\n  text-align: center !important;\n  color: #ffffff !important;\n  transition: color,background 0.2s !important;\n}\n.hx-navbar__content[data-v-ec8f5f84] {\n  position: relative;\n  flex: 1;\n  z-index: 1;\n  width: 100%;\n  flex-direction: column;\n}\n.hx-navbar__content__imgctn[data-v-ec8f5f84] {\n  position: absolute;\n  left: 0;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  z-index: 2;\n}\n.hx-navbar__content__main[data-v-ec8f5f84] {\n  position: relative;\n  z-index: 3;\n  flex: 1;\n  flex-direction: row;\n  align-items: center;\n  padding: 0;\n}\n.hx-navbar__content__main_back[data-v-ec8f5f84] {\n  flex-direction: row;\n  align-items: center;\n  height: 100%;\n  padding: 0 13px;\n  margin: 0;\n  position: relative;\n  z-index: 2;\n  line-height: 44px;\n}\n.hx-navbar__content__main_search[data-v-ec8f5f84] {\n  position: relative;\n  flex-direction: row;\n  align-items: center;\n  flex: 1;\n  height: 100%;\n}\n.hx-navbar__content__main_search_hxicon[data-v-ec8f5f84] {\n  position: absolute;\n  left: 24px;\n  font-size: 18px;\n  color: #dbdbdb;\n}\n.hx-navbar__content__main_search_input[data-v-ec8f5f84] {\n  height: 30px;\n  flex: 1;\n  border-radius: 40px;\n  background-color: rgba(32, 32, 32, 0.35);\n  padding: 0 16px 0 36px;\n}\n.hx-navbar__content__main_right[data-v-ec8f5f84] {\n  position: relative;\n  z-index: 2;\n  flex-direction: row;\n  align-items: center;\n  height: 100%;\n  padding: 0 13px 0 9px;\n  margin: 0;\n}\n.hx-navbar__content__main_right_txt[data-v-ec8f5f84] {\n  max-width: 60px;\n  lines: 1;\n  text-overflow: ellipsis;\n}\n.hx-navbar__content__main_right_btn[data-v-ec8f5f84] {\n  justify-content: center;\n  align-items: center;\n  flex-direction: row;\n  align-items: center;\n  height: 100%;\n  padding: 0 5px;\n}\n.hx-navbar__content__main_right_icon[data-v-ec8f5f84] {\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n}\n.hx-navbar__content__main_center[data-v-ec8f5f84] {\n  flex-direction: row;\n  flex: 1;\n  align-items: stretch;\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  z-index: 0;\n  justify-content: center;\n}\n.hx-navbar__content__main_center_txt[data-v-ec8f5f84] {\n  flex-direction: row;\n  flex: 46;\n  display: block;\n  white-space: nowrap;\n  overflow: hidden;\n  height: 44px;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n  text-overflow: ellipsis;\n  line-height: 44px;\n}\n.hx-navbar__content__main_center_flex[data-v-ec8f5f84] {\n  flex: 32;\n}\n.hx-navbar__content__main_left[data-v-ec8f5f84] {\n  position: relative;\n  z-index: 1;\n  flex-direction: row;\n  align-items: center;\n  height: 100%;\n  padding: 0 9px 0 13px;\n  margin: 0;\n}\n.hx-navbar__content__main_left_txt[data-v-ec8f5f84] {\n  width: 60px;\n  lines: 1;\n  text-overflow: ellipsis;\n}\n.hx-navbar__content__main_left_btn[data-v-ec8f5f84] {\n  flex-direction: row;\n  align-items: center;\n  height: 100%;\n  padding: 0 5px;\n}\n.hx-navbar__fixed[data-v-ec8f5f84] {\n  position: fixed;\n  top: 0;\n  z-index: 99;\n}\n.hx-navbar__shadow[data-v-ec8f5f84] {\n  box-shadow: 0 2upx 12upx #ccc;\n}\n.hx-navbar__border[data-v-ec8f5f84]:after {\n  position: absolute;\n  z-index: 3;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  height: 1px;\n  -webkit-transform: scaleY(0.5);\n          transform: scaleY(0.5);\n  background-color: #efefef;\n}\n.hx-navbar__icon[data-v-ec8f5f84] {\n  top: 0 !important;\n  font-size: 20px;\n}\n.hx_font_size[data-v-ec8f5f84] {\n  font-size: 18px;\n}\n.hx_text_overflow[data-v-ec8f5f84] {\n  display: block;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  text-align: center;\n}\n", ""]);
+exports.push([module.i, "@charset \"UTF-8\";\n/**\n * 这里是uni-app内置的常用样式变量\n *\n * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量\n * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App\n *\n */\n/**\n * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能\n *\n * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件\n */\n/* 颜色变量 */\n/* 行为相关颜色 */\n/* 文字基本颜色 */\n/* 背景颜色 */\n/* 边框颜色 */\n/* 尺寸变量 */\n/* 文字尺寸 */\n/* 图片尺寸 */\n/* Border Radius */\n/* 水平间距 */\n/* 垂直间距 */\n/* 透明度 */\n/* 文章场景相关 */\n@font-face {\n  font-family: 'hxicon';\n  /* project id 2009392 */\n  src: url(data:font/truetype;charset=utf-8;base64,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AGAAAwABBAkABgAQADQAAwABBAkACgBWANYAAwABBAkACwAmASwAAwABBAkADQDWAVIAAwABBAkADgBiAigAQwByAGUAYQB0AGUAZAAgAGIAeQAgAGkAYwBvAG4AZgBvAG4AdABSAGUAZwB1AGwAYQByAGkAYwBvAG4AZgBvAG4AdAA6AFYAZQByAHMAaQBvAG4AIAAxAC4AMAAwADAAVgBlAHIAcwBpAG8AbgAgADEALgAwADAAMAA7AEEAcAByAGkAbAAgADEAMwAsACAAMgAwADIAMgA7AEYAbwBuAHQAQwByAGUAYQB0AG8AcgAgADEANAAuADAALgAwAC4AMgA4ADEANAAgADMAMgAtAGIAaQB0AEcAZQBuAGUAcgBhAHQAZQBkACAAYgB5ACAAcwB2AGcAMgB0AHQAZgAgAGYAcgBvAG0AIABGAG8AbgB0AGUAbABsAG8AIABwAHIAbwBqAGUAYwB0AC4AaAB0AHQAcAA6AC8ALwBmAG8AbgB0AGUAbABsAG8ALgBjAG8AbQBUAGgAaQBzACAAZgBvAG4AdAAgAGkAcwAgAG0AYQBkAGUAIAB3AGkAdABoACAAdABoAGUAIAB0AHIAaQBhAGwAIAB2AGUAcgBzAGkAbwBuACAAbwBmACAARgBvAG4AdABDAHIAZQBhAHQAbwByAC4AIABZAG8AdQAgAG0AYQB5ACAAbgBvAHQAIAB1AHMAZQAgAHQAaABpAHMAIABmAG8AbgB0ACAAZgBvAHIAIABjAG8AbQBtAGUAcgBjAGkAYQBsACAAcAB1AHIAcABvAHMAZQBzAC4AaAB0AHQAcABzADoALwAvAHcAdwB3AC4AaABpAGcAaAAtAGwAbwBnAGkAYwAuAGMAbwBtAC8AZgBvAG4AdAAtAGwAaQBjAGUAbgBzAGUALQBhAGcAcgBlAGUAbQBlAG4AdAACAAAAAAAAAAoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAAAECAQMBBAEFAQYHdG9uZ3poaQd0aWFuamlhCXNhb3lpc2FveARiYWNrBGljb24AAA==) format(\"truetype\");\n}\n.hxicon[data-v-ec8f5f84] {\n  font-family: hxicon;\n  text-decoration: none;\n}\n.hd[data-v-ec8f5f84] {\n  overflow: hidden;\n}\n[class*=\"hx-navbar__\"][data-v-ec8f5f84] {\n  display: flex;\n}\n.hx-navbar[data-v-ec8f5f84] {\n  position: relative;\n  padding-top: 0;\n  overflow: hidden;\n  flex: 1;\n}\n.hx-navbar__stretch[data-v-ec8f5f84] {\n  align-items: stretch;\n}\n.hx-navbar__status[data-v-ec8f5f84] {\n  position: relative;\n  z-index: 3;\n}\n.hx-navbar__icon[data-v-ec8f5f84] {\n  position: relative;\n  top: 1px;\n}\n.hx-navbar__icontran[data-v-ec8f5f84] {\n  border-radius: 100% !important;\n  background-color: rgba(0, 0, 0, 0.5) !important;\n  width: 30px !important;\n  height: 30px !important;\n  line-height: 30px !important;\n  text-align: center !important;\n  color: #ffffff !important;\n  transition: color,background 0.2s !important;\n}\n.hx-navbar__btntran[data-v-ec8f5f84] {\n  padding: 0 !important;\n  margin-left: 6px !important;\n  border-radius: 100% !important;\n  background-color: rgba(0, 0, 0, 0.5) !important;\n  width: 30px !important;\n  height: 30px !important;\n  line-height: 30px !important;\n  text-align: center !important;\n  color: #ffffff !important;\n  transition: color,background 0.2s !important;\n}\n.hx-navbar__content[data-v-ec8f5f84] {\n  position: relative;\n  flex: 1;\n  z-index: 1;\n  width: 100%;\n  flex-direction: column;\n}\n.hx-navbar__content__imgctn[data-v-ec8f5f84] {\n  position: absolute;\n  left: 0;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  z-index: 2;\n}\n.hx-navbar__content__main[data-v-ec8f5f84] {\n  position: relative;\n  z-index: 3;\n  flex: 1;\n  flex-direction: row;\n  align-items: center;\n  padding: 0;\n}\n.hx-navbar__content__main_back[data-v-ec8f5f84] {\n  flex-direction: row;\n  align-items: center;\n  height: 100%;\n  padding: 0 13px;\n  margin: 0;\n  position: relative;\n  z-index: 2;\n  line-height: 44px;\n}\n.hx-navbar__content__main_search[data-v-ec8f5f84] {\n  position: relative;\n  flex-direction: row;\n  align-items: center;\n  flex: 1;\n  height: 100%;\n}\n.hx-navbar__content__main_search_hxicon[data-v-ec8f5f84] {\n  position: absolute;\n  left: 24px;\n  font-size: 18px;\n  color: #dbdbdb;\n}\n.hx-navbar__content__main_search_input[data-v-ec8f5f84] {\n  height: 30px;\n  flex: 1;\n  border-radius: 40px;\n  background-color: rgba(32, 32, 32, 0.35);\n  padding: 0 16px 0 36px;\n}\n.hx-navbar__content__main_right[data-v-ec8f5f84] {\n  position: relative;\n  z-index: 2;\n  flex-direction: row;\n  align-items: center;\n  height: 100%;\n  padding: 0 13px 0 9px;\n  margin: 0;\n}\n.hx-navbar__content__main_right_txt[data-v-ec8f5f84] {\n  max-width: 60px;\n  lines: 1;\n  text-overflow: ellipsis;\n}\n.hx-navbar__content__main_right_btn[data-v-ec8f5f84] {\n  justify-content: center;\n  align-items: center;\n  flex-direction: row;\n  align-items: center;\n  height: 100%;\n  padding: 0 5px;\n}\n.hx-navbar__content__main_right_icon[data-v-ec8f5f84] {\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n}\n.hx-navbar__content__main_center[data-v-ec8f5f84] {\n  flex-direction: row;\n  flex: 1;\n  align-items: stretch;\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  z-index: 0;\n  justify-content: center;\n}\n.hx-navbar__content__main_center_txt[data-v-ec8f5f84] {\n  flex-direction: row;\n  flex: 46;\n  display: block;\n  white-space: nowrap;\n  overflow: hidden;\n  height: 44px;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n  text-overflow: ellipsis;\n  line-height: 44px;\n}\n.hx-navbar__content__main_center_flex[data-v-ec8f5f84] {\n  flex: 32;\n}\n.hx-navbar__content__main_left[data-v-ec8f5f84] {\n  position: relative;\n  z-index: 1;\n  flex-direction: row;\n  align-items: center;\n  height: 100%;\n  padding: 0 9px 0 13px;\n  margin: 0;\n}\n.hx-navbar__content__main_left_txt[data-v-ec8f5f84] {\n  width: 60px;\n  lines: 1;\n  text-overflow: ellipsis;\n}\n.hx-navbar__content__main_left_btn[data-v-ec8f5f84] {\n  flex-direction: row;\n  align-items: center;\n  height: 100%;\n  padding: 0 5px;\n}\n.hx-navbar__fixed[data-v-ec8f5f84] {\n  position: fixed;\n  top: 0;\n  z-index: 99;\n}\n.hx-navbar__shadow[data-v-ec8f5f84] {\n  box-shadow: 0 2upx 12upx #ccc;\n}\n.hx-navbar__border[data-v-ec8f5f84]:after {\n  position: absolute;\n  z-index: 3;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  height: 1px;\n  -webkit-transform: scaleY(0.5);\n          transform: scaleY(0.5);\n  background-color: #efefef;\n}\n.hx-navbar__icon[data-v-ec8f5f84] {\n  top: 0 !important;\n  font-size: 20px;\n}\n.hx_font_size[data-v-ec8f5f84] {\n  font-size: 18px;\n}\n.hx_text_overflow[data-v-ec8f5f84] {\n  display: block;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  text-align: center;\n}\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -7909,6 +7909,7 @@ try {
     uInput: __webpack_require__(/*! uview-ui/components/u-input/u-input.vue */ 25).default,
     uCalendar: __webpack_require__(/*! uview-ui/components/u-calendar/u-calendar.vue */ 177).default,
     uButton: __webpack_require__(/*! uview-ui/components/u-button/u-button.vue */ 5).default,
+    uImage: __webpack_require__(/*! uview-ui/components/u-image/u-image.vue */ 89).default,
     uTabbar: __webpack_require__(/*! uview-ui/components/u-tabbar/u-tabbar.vue */ 121).default
   }
 } catch (e) {
@@ -9414,20 +9415,22 @@ var render = function() {
                     },
                     [_vm._v("Category")]
                   ),
-                  _c("xfl-select", {
-                    staticStyle: {
-                      width: "50%",
-                      "background-color": "#F3F1F1",
-                      float: "left",
-                      "margin-left": "25px"
-                    },
-                    attrs: { _i: 127 },
-                    on: {
-                      change: function($event) {
-                        return _vm.$handleViewEvent($event)
-                      }
-                    }
-                  })
+                  _vm._$g(127, "i")
+                    ? _c("xfl-select", {
+                        staticStyle: {
+                          width: "50%",
+                          "background-color": "#F3F1F1",
+                          float: "left",
+                          "margin-left": "25px"
+                        },
+                        attrs: { _i: 127 },
+                        on: {
+                          change: function($event) {
+                            return _vm.$handleViewEvent($event)
+                          }
+                        }
+                      })
+                    : _vm._e()
                 ],
                 1
               ),
@@ -9498,7 +9501,7 @@ var render = function() {
                           expression: "cshow"
                         }
                       }),
-                      _c("img", {
+                      _c("v-uni-image", {
                         staticStyle: {
                           margin: "10px 10px 0 10px",
                           float: "left",
@@ -9625,12 +9628,23 @@ var render = function() {
                   )
                 ],
                 1
+              ),
+              _c(
+                "v-uni-view",
+                { staticClass: _vm._$g(142, "sc"), attrs: { _i: 142 } },
+                [
+                  _c("u-image", {
+                    staticStyle: { margin: "10px auto" },
+                    attrs: { _i: 143 }
+                  })
+                ],
+                1
               )
             ],
             1
           )
         : _vm._e(),
-      _c("u-tabbar", { attrs: { _i: 142 } })
+      _c("u-tabbar", { attrs: { _i: 144 } })
     ],
     1
   )
@@ -10955,9 +10969,20 @@ __webpack_require__.r(__webpack_exports__);
   !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/view/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/using-components.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/view/style.js!/Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/pages/grocery/grocery.vue?vue&type=script&lang=js&mpType=page ***!
   \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/view/script.js):\nSyntaxError: Unexpected token, expected \",\" (736:7)\n    at Object._raise (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:746:17)\n    at Object.raiseWithData (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:739:17)\n    at Object.raise (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:733:17)\n    at Object.unexpected (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:8807:16)\n    at Object.expect (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:8793:28)\n    at Object.parseObj (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:10439:14)\n    at Object.parseExprAtom (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:10055:28)\n    at Object.parseExprSubscripts (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:9656:23)\n    at Object.parseMaybeUnary (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:9636:21)\n    at Object.parseMaybeUnary (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:6877:20)\n    at Object.parseExprOps (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:9506:23)\n    at Object.parseMaybeConditional (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:9479:23)\n    at Object.parseMaybeAssign (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:9434:21)\n    at Object.parseMaybeAssign (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:6822:20)\n    at Object.parseObjectProperty (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:10586:101)\n    at Object.parseObjPropValue (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:10611:101)");
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
+var _hxNavbar = _interopRequireDefault(__webpack_require__(/*! @/components/hx-navbar/hx-navbar */ 145));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
+{
+
+  data: function data() {
+    return {
+      wxsProps: {} };
+
+  },
+  components: {
+    'hxNavbar': _hxNavbar.default } };exports.default = _default;
 
 /***/ }),
 /* 203 */
@@ -12233,8 +12258,12 @@ var render = function() {
           ),
           _vm._$g(9, "i")
             ? _c(
-                "v-uni-view",
-                { attrs: { _i: 9 } },
+                "v-uni-scroll-view",
+                {
+                  staticClass: _vm._$g(9, "sc"),
+                  style: _vm._$g(9, "s"),
+                  attrs: { "scroll-y": "true", _i: 9 }
+                },
                 _vm._l(_vm._$g(10, "f"), function(item, index, $20, $30) {
                   return _c(
                     "uni-row",
@@ -12278,8 +12307,12 @@ var render = function() {
             : _vm._e(),
           _vm._$g(15, "i")
             ? _c(
-                "v-uni-view",
-                { attrs: { _i: 15 } },
+                "v-uni-scroll-view",
+                {
+                  staticClass: _vm._$g(15, "sc"),
+                  style: _vm._$g(15, "s"),
+                  attrs: { "scroll-y": "true", _i: 15 }
+                },
                 _vm._l(_vm._$g(16, "f"), function(item, index, $21, $31) {
                   return _c(
                     "uni-row",
@@ -13133,7 +13166,7 @@ var render = function() {
                         }
                       }
                     },
-                    [_vm._v("Channge Photo")]
+                    [_vm._v("Change Photo")]
                   )
                 ],
                 1

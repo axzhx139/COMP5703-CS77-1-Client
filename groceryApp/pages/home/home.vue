@@ -40,14 +40,14 @@
 			<scroll-view :scroll-with-animation="true"  :scroll-x="true" style="white-space: nowrap;" >
 			  <template v-for="(item, index) in expiringFoodList">
 				  
-				  <view class="scroll_item" :style="{'background-image': 'url('+item.img+')','filter': 'grayscale('+getFreshness(index)+'%)'}">
-					<img src="../../static/knife_fork.png" style="width: 20px;height: 20px;float:right" @click="consumeSelect(index)"></img>
+				<view class="scroll_item" :style="{'background-image': 'url('+'http://101.35.91.117:7884/item/picture/'+item.itemId+'?'+Math.random()+')','filter': 'grayscale('+getFreshness(index)+'%)'}">
+					<image src="../../static/knife_fork.png" style="width: 20px;height: 20px;float:right" @click="consumeSelect(index)" />
 					<view style="height: 100%;"  @click="toDetail(item.itemId)">
 							
-					</view>
+				</view>
 					<text style="margin-left: 14px;font-size: 16px;font-weight: 500;">{{ item.name }}</text>
 					<view class="" style="margin-left: 14px;">
-						<img src="../../static/remind.png" style="width: 15px;height: 15px;" v-if="isReminded(index)"></img>
+						<image src="../../static/remind.png" style="width: 15px;height: 15px;" v-if="isReminded(index)" />
 						<text style="display: inline-block;margin-left: 5px;">{{item.expDate.split("T")[0].split('-')[2]+'/'+ item.expDate.split("T")[0].split('-')[1] }}</text>
 					</view>
 				  </view>
@@ -156,14 +156,14 @@
 					backTxt: 'xxxxxx',
 					statusBarBackground:'#FFFFFF',
 					rightButton:[{
-						key: 'scan',
-						icon: '&#xe62c;',
-						position: 'left'
+						key: 'notification',
+						icon: '&#xE61E;',
+						position: 'right'
 					}],
 					leftButton: [{
 						key: 'text',
-						icon: '&#xe62b;',
-						txt: 'Track My Grocery',
+						icon: '&#xe680;',
+						txt: '\xa0\xa0\xa0Track My Grocery',
 						position: 'left'
 					}],
 				},
@@ -190,19 +190,27 @@
 				consumePop:false,
 				needChangeItem: '',
 				popFrom: 'bottom',
+				notificationData: '',
 			}
 		},
 		onLoad(){
 			let clientInfo = plus.push.getClientInfo();
 			console.log('clientid ', clientInfo.clientid);
+			Location.reload;
 		},
 		onShow(){
 			this.loadinfo()
 			this.getCol()
+			this.getNotificationData()
 		},
 		methods: {
 			onClickBtn(e){
-				console.log(e)
+				if (e.key == 'notification'){
+					let notificationDataString = encodeURIComponent(JSON.stringify(this.notificationData))
+					uni.navigateTo({
+					url: '../notification/notification?notificationDataString=' + notificationDataString
+				})
+				}
 			},
 			toDetail(e){
 				console.log(e)
@@ -214,6 +222,7 @@
 				console.log(e)
 				this.consumePop = true
 				this.needChangeItem = e
+				
 			},
 			isReminded(e){
 				// console.log(new Date(this.expiringFoodList[e].remindTime))
@@ -231,7 +240,7 @@
 				// console.log(this.expiringFoodList[e].expDate)
 				const totalTime = new Date(this.expiringFoodList[e].expDate)-new Date(this.expiringFoodList[e].addDate)
 				const restTime = new Date(this.expiringFoodList[e].expDate)-new Date()
-				console.log(restTime/totalTime)
+				// console.log(restTime/totalTime)
 				return (1-restTime/totalTime)*100
 			},
 			consume(e){
@@ -250,6 +259,12 @@
 					this.consumeItem(changedItem)
 					console.log(changedItem)
 					console.log(changedItem.itemId)
+					uni.request({
+						url: 'http://101.35.91.117:7884/item/update/status/'+"consume"+"/id/"+changedItem.itemId,
+					}).then(res => {
+						this.getCol()
+						console.log(res[1])
+					})
 			        
 				}
 				this.consumePop = false
@@ -269,34 +284,38 @@
 				  "status": "consume",
 				  "uid": uni.getStorageSync('userId')
 				}
-				
+				console.log(JSON.stringify(itemUpdated))
 				uni.request({
 					method:'POST',
 					url:'http://101.35.91.117:7884/item/update',
 					data:JSON.stringify(itemUpdated)
 				}).then(res => {
 					console.log(res)
-					this.getCol()
+					// this.getCol()
 				})
 			},
 			loadinfo(){
-				uni.request({
-				url: "http://101.35.91.117:7884/users/avatar/"+uni.getStorageSync('userId'),
-				method: 'get',
-				}).then(res=>{
-					console.log('res',res)
-					if(res[1].data!=''){
-						this.avatar = res[1].data
-					}else{
-						this.avatar = "../../static/girl.png"
-					}
-				})
+				// uni.request({
+				// url: "http://101.35.91.117:7884/users/avatar/"+uni.getStorageSync('userId'),
+				// method: 'get',
+				// }).then(res=>{
+				// 	console.log('res',res)
+				// 	if(res[1].data!=''){
+				// 		this.avatar = res[1].data
+				// 	}else{
+				// 		this.avatar = "../../static/girl.png"
+				// 	}
+				// })
 				
+				this.avatar="http://101.35.91.117:7884/users/avatar/"+uni.getStorageSync('userId');
+				if(this.avatar==''){
+					this.avatar = "../../static/girl.png"
+				};
 				uni.request({
 				url: "http://101.35.91.117:7884/users/profile/"+uni.getStorageSync('userId'),
 				method: 'get',
 				}).then(res=>{
-					console.log('load',res[1].data)
+					// console.log('load',res[1].data)
 					this.user=res[1].data
 					console.log('load',this.user.name)
 					if(this.user.name==''|this.user.name==null){
@@ -343,7 +362,7 @@
 					}
 					if (foodList[i].status === 'instock'){
 						expiringFoodList.push(itemInfo);
-						console.log(item.remindTime);
+						// console.log(item.remindTime);
 					}					
 				}
 				expiringFoodList.sort(function(a, b){
@@ -363,9 +382,9 @@
 				  return 0;
 				});
 
-				console.log(expiringFoodList)
+				// console.log(expiringFoodList)
 				this.expiringFoodList = expiringFoodList
-				console.log(this.expiringFoodList)
+				// console.log(this.expiringFoodList)
 			},
 			getRandomRecipes(){
 				uni.request({
@@ -397,7 +416,18 @@
 				}
 				this.randomRecipesList=List;
 				console.log(this.randomRecipesList);
-			}
+			},
+			getNotificationData(){
+				uni.request({
+				url: "http://101.35.91.117:7884/notification/get/"+uni.getStorageSync('userId'),
+				method: 'get',
+				}).then(res=>{
+					console.log(res)
+					console.log('load',res[1].data)
+					// this.shopList = res[1].data
+					this.notificationData = res[1].data.itemNotificationList
+				})
+			},
 		}
 	}
 </script>

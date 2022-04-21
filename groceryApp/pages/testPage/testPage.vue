@@ -20,8 +20,9 @@
 		data() {
 			return {
 				show:true,
-				// src:'http://101.35.91.117:7884/item/picture/1',
-				item_id:1
+				src:'http://101.35.91.117:7884/item/picture/1',
+				item_id:1,
+				filepath:"",
 			}
 		},
 		methods: {
