@@ -470,6 +470,25 @@
 			
 		},
 		onShow(){
+			let that =this
+			uni.getStorage({
+				key:'addToStock',
+				success: function(res){
+					if(res.data){
+						that.add_src='http://101.35.91.117:7884/item/picture/'+res.data.iId;
+						that.filepath=[that.add_src];
+						that.iName = res.data.iName;
+						that.addItemToList = false;
+						that.needAddItem = true;
+						that.iCategory = '';
+						that.iTime = '';
+						that.iCitime = '';
+						that.iDetails = '';
+						that.iItemid = '';
+						uni.setStorageSync('addToStock', null);
+					}
+				}
+			})
 			this.getCol()
 		},
 		methods: {
@@ -1045,23 +1064,23 @@
 			},
 			
 			saveList(id){
-				uni.showLoading({title: 'updating',mask:true});
+				// uni.showLoading({title: 'updating',mask:true});
 				uni.request({
 				url: "http://101.35.91.117:7884/potential/add/"+id+"/"+uni.getStorageSync('userId'),
 				method: 'get',
 				}).then(res=>{
 					this.getCol()
-					setTimeout(function () {uni.hideLoading();}, 1000);
+					// setTimeout(function () {uni.hideLoading();}, 1000);
 				})
 			},
 			deleteList(id){
-				uni.showLoading({title: 'updating',mask:true});
+				// uni.showLoading({title: 'updating',mask:true});
 				uni.request({
 				url: "http://101.35.91.117:7884/potential/remove/"+id+"/"+uni.getStorageSync('userId'),
 				method: 'get',
 				}).then(res=>{
 					this.getCol()
-					setTimeout(function () {uni.hideLoading();}, 1000);
+					// setTimeout(function () {uni.hideLoading();}, 1000);
 				})
 			},		
 			changePhoto(){
