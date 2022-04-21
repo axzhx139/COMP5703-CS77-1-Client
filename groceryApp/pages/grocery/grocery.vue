@@ -825,6 +825,8 @@
 					this.iCitime = '';
 					this.iDetails = '';
 					this.iItemid = '';
+					this.filepath='';
+					this.add_src='';
 					// console.log('change')
 				}else if(e.key == 'back'){
 					this.addItemToList = true
