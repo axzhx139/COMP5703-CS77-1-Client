@@ -75,65 +75,67 @@
 								</uni-col>
 							</uni-row>
 						</inline> -->
-						<block v-for="(item,index) in stockList">
-							<view style="margin-top: 10px;" @click="edit(item, index)">
-								
-								<u-row gutter="16">
-									<u-col span="3">
-										<!-- <view class="demo-layout bg-purple"> -->
-											<image :src="'http://101.35.91.117:7884/item/picture/'+item.itemId+'?'+Math.random()" style="width: 65px;height: 65px;">
-										<!-- </view> -->
-									</u-col>
-									<u-col span="3">
-										<u-row style="margin: 0px 0px 10px 5px;">{{ item.name }}</u-row>
-										<u-row style="margin: 10px 0px 0px 5px;">{{ item.category }}</u-row>
-									</u-col>
-									<u-col span="3">
-										<view class="demo-layout bg-purple-light">
-											<!-- <u-row gutter="18" justify="space-between"> -->
-											<u-row style="justify-content: flex-end; margin-bottom: 5px">
-											<!-- <text>{{ item.name }}</text> -->
-											<!-- <view style="text-align: right;"> -->
-												<!-- <uni-icons type="cart" size="30" v-if="!item.potential" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="saveList(item.itemId)"></uni-icons> -->
-												<!-- <uni-icons type="cart-filled" size="30" v-if="!item.potential" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="deleteList(item.itemId)"></uni-icons> -->
-												<image v-if="!item.potential" src="../../static/cart.png" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="saveList(item.itemId)"></image>
-												<image v-if="item.potential" src="../../static/cart_fill.png" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="deleteList(item.itemId)"></image>
-												<!-- <img src="../../static/knife_fork.png" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click="changeAmount(index)"></img> -->
-												<!-- <u-button shape="circle" size="mini" style="background-color: #F3F1F1; " @click="changeAmount(index)">consume</u-button> -->
-														
-											<!-- </view>	 -->
-											</u-row>
-											<u-row style="justify-content: flex-end; margin-bottom: 5px">
-												<image src="../../static/knife_fork.png" style="height: 45rpx; width: 45rpx; float:right;  margin-right: 6%;" @click="changeAmount(index)"></image>
-											</u-row>
-											<!-- <view>
-												<u-row gutter="18" justify="space-between">
-													<u-col span="4" style="text-align: left;">														
-													</u-col>
-													<u-col span="6" style="text-align: right;">	
-																	
-														<view class="demo-layout bg-purple-light" >														
-															<u-button shape="circle" size="mini" style="background-color: #F3F1F1; " @click="changeAmount(index)">consume</u-button>
-														</view>
-													</u-col>
+						<scroll-view :scroll-y="true" :style="{'height':deviceHeight-190+'px'}"  >
+							<block v-for="(item,index) in stockList">
+								<view style="margin-top: 10px;" @click="edit(item, index)">
+									
+									<u-row gutter="16">
+										<u-col span="3">
+											<!-- <view class="demo-layout bg-purple"> -->
+												<image :src="'http://101.35.91.117:7884/item/picture/'+item.itemId+'?'+Math.random()" style="width: 65px;height: 65px;">
+											<!-- </view> -->
+										</u-col>
+										<u-col span="3">
+											<u-row style="margin: 0px 0px 10px 5px;">{{ item.name }}</u-row>
+											<u-row style="margin: 10px 0px 0px 5px;">{{ item.category }}</u-row>
+										</u-col>
+										<u-col span="3">
+											<view class="demo-layout bg-purple-light">
+												<!-- <u-row gutter="18" justify="space-between"> -->
+												<u-row style="justify-content: flex-end; margin-bottom: 5px">
+												<!-- <text>{{ item.name }}</text> -->
+												<!-- <view style="text-align: right;"> -->
+													<!-- <uni-icons type="cart" size="30" v-if="!item.potential" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="saveList(item.itemId)"></uni-icons> -->
+													<!-- <uni-icons type="cart-filled" size="30" v-if="!item.potential" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="deleteList(item.itemId)"></uni-icons> -->
+													<image v-if="!item.potential" src="../../static/cart.png" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="saveList(item.itemId)"></image>
+													<image v-if="item.potential" src="../../static/cart_fill.png" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="deleteList(item.itemId)"></image>
+													<!-- <img src="../../static/knife_fork.png" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click="changeAmount(index)"></img> -->
+													<!-- <u-button shape="circle" size="mini" style="background-color: #F3F1F1; " @click="changeAmount(index)">consume</u-button> -->
+															
+												<!-- </view>	 -->
 												</u-row>
-											</view> -->
-										</view>
-									</u-col>
-									<u-col span="3">
-										<view class="demo-layout bg-purple-dark" style="text-align: right">
-											<!-- <view class="demo-layout bg-purple">
-												<text style="font-weight: 900;float:right;">{{item.expDate}}</text>
+												<u-row style="justify-content: flex-end; margin-bottom: 5px">
+													<image src="../../static/knife_fork.png" style="height: 45rpx; width: 45rpx; float:right;  margin-right: 6%;" @click="changeAmount(index)"></image>
+												</u-row>
+												<!-- <view>
+													<u-row gutter="18" justify="space-between">
+														<u-col span="4" style="text-align: left;">														
+														</u-col>
+														<u-col span="6" style="text-align: right;">	
+																		
+															<view class="demo-layout bg-purple-light" >														
+																<u-button shape="circle" size="mini" style="background-color: #F3F1F1; " @click="changeAmount(index)">consume</u-button>
+															</view>
+														</u-col>
+													</u-row>
+												</view> -->
 											</view>
-											<text style="font-size:12px;">Remind before {{ item.time }} Days</text> -->
-											<text style="font-size:12px; text-align: right;">{{ item.expireDays }} Days</text>
-											<!-- <view>5 Days</view> -->
-										</view>
-									</u-col>
-								</u-row>
-							</view>
-							<u-divider half-width="60%"></u-divider>
-						</block>
+										</u-col>
+										<u-col span="3">
+											<view class="demo-layout bg-purple-dark" style="text-align: right">
+												<!-- <view class="demo-layout bg-purple">
+													<text style="font-weight: 900;float:right;">{{item.expDate}}</text>
+												</view>
+												<text style="font-size:12px;">Remind before {{ item.time }} Days</text> -->
+												<text style="font-size:12px; text-align: right;">{{ item.expireDays }} Days</text>
+												<!-- <view>5 Days</view> -->
+											</view>
+										</u-col>
+									</u-row>
+								</view>
+								<u-divider half-width="60%"></u-divider>
+							</block>
+						</scroll-view>
 					</view>
 				</view>
 			</view>
@@ -277,51 +279,53 @@
 							</u-col>
 						</u-row>
 					</view> -->
-					<view style="margin-top: 5px;">
-						<block v-for="(item,index) in oldstockList">
-							<view style="margin-top: 10px;">
-								<u-row gutter="16">
-									<u-col span="3">
-										<view class="demo-layout bg-purple">
-											<image :src="'http://101.35.91.117:7884/item/picture/'+item.itemId+'?'+Math.random()" style="width: 65px;height: 65px;">
-										</view>
-									</u-col>
-									
-									<u-col span="3">
-										<u-row style="margin: 0px 0px 10px 5px;">{{ item.name }}</u-row>
-										<u-row style="margin: 10px 0px 0px 5px;">{{ item.category }}</u-row>
-									</u-col>
-									
-									<u-col span="3">
-										<view class="demo-layout bg-purple-light">
-											<!-- <u-row gutter="18" justify="space-between"> -->
-											<u-row style="justify-content: flex-end; margin-bottom: 5px">
-											<!-- <text>{{ item.name }}</text> -->
-											<!-- <view style="text-align: right;"> -->
-												<!-- <uni-icons type="cart" size="30" v-if="!item.potential" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="saveList(item.itemId)"></uni-icons> -->
-												<!-- <uni-icons type="cart-filled" size="30" v-if="!item.potential" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="deleteList(item.itemId)"></uni-icons> -->
-												<image v-if="!item.potential" src="../../static/cart.png" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="saveList(item.itemId)"></image>
-												<image v-if="item.potential" src="../../static/cart_fill.png" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="deleteList(item.itemId)"></image>
-					
-											</u-row>
+					<scroll-view :scroll-y="true" :style="{'height':deviceHeight-160+'px'}"  >
+						<view style="margin-top: 5px;">
+							<block v-for="(item,index) in oldstockList">
+								<view style="margin-top: 10px;">
+									<u-row gutter="16">
+										<u-col span="3">
+											<view class="demo-layout bg-purple">
+												<image :src="'http://101.35.91.117:7884/item/picture/'+item.itemId+'?'+Math.random()" style="width: 65px;height: 65px;">
+											</view>
+										</u-col>
+										
+										<u-col span="3">
+											<u-row style="margin: 0px 0px 10px 5px;">{{ item.name }}</u-row>
+											<u-row style="margin: 10px 0px 0px 5px;">{{ item.category }}</u-row>
+										</u-col>
+										
+										<u-col span="3">
+											<view class="demo-layout bg-purple-light">
+												<!-- <u-row gutter="18" justify="space-between"> -->
+												<u-row style="justify-content: flex-end; margin-bottom: 5px">
+												<!-- <text>{{ item.name }}</text> -->
+												<!-- <view style="text-align: right;"> -->
+													<!-- <uni-icons type="cart" size="30" v-if="!item.potential" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="saveList(item.itemId)"></uni-icons> -->
+													<!-- <uni-icons type="cart-filled" size="30" v-if="!item.potential" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="deleteList(item.itemId)"></uni-icons> -->
+													<image v-if="!item.potential" src="../../static/cart.png" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="saveList(item.itemId)"></image>
+													<image v-if="item.potential" src="../../static/cart_fill.png" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="deleteList(item.itemId)"></image>
+						
+												</u-row>
 
-										</view>
-									</u-col>
-									
-									<u-col span="3">
-										<view class="demo-layout bg-purple-dark">
-											<!-- <view><text style="font-size: 14px;">{{ item.expDate }}</text></view> -->
-											 <view v-if="item.status=='consume'"><text style="font-size: 12px;">{{item.conDate.split("T")[0].split('-')[2]+'/'+ item.conDate.split("T")[0].split('-')[1] }}</text></view>
-											 <view v-if="item.status=='expire'"><text style="font-size: 12px;">{{item.expDate.split("T")[0].split('-')[2]+'/'+ item.expDate.split("T")[0].split('-')[1] }}</text></view>
-											 <view v-if="item.status=='consume'" style="color: #FFA451;">Consumed</view>
-											<view v-if="item.status=='expire'" style="color: #AA4A44;">Expired </view>
-										</view>
-									</u-col>
-								</u-row>
-							</view>
-							<u-divider half-width="60%"></u-divider>
-						</block>
-					</view>
+											</view>
+										</u-col>
+										
+										<u-col span="3">
+											<view class="demo-layout bg-purple-dark">
+												<!-- <view><text style="font-size: 14px;">{{ item.expDate }}</text></view> -->
+												 <view v-if="item.status=='consume'"><text style="font-size: 12px;">{{item.conDate.split("T")[0].split('-')[2]+'/'+ item.conDate.split("T")[0].split('-')[1] }}</text></view>
+												 <view v-if="item.status=='expire'"><text style="font-size: 12px;">{{item.expDate.split("T")[0].split('-')[2]+'/'+ item.expDate.split("T")[0].split('-')[1] }}</text></view>
+												 <view v-if="item.status=='consume'" style="color: #FFA451;">Consumed</view>
+												<view v-if="item.status=='expire'" style="color: #AA4A44;">Expired </view>
+											</view>
+										</u-col>
+									</u-row>
+								</view>
+								<u-divider half-width="60%"></u-divider>
+							</block>
+						</view>
+					</scroll-view>
 				</view>
 			</view>
 		</view>
@@ -459,11 +463,14 @@
 				options: ['Fruit','Vegetable','Dairy','Animal product','Frozen','Canned Goods','Frozen Foods','Deli','Others'],
 				sortingMethod: ['Recent Added', 'A-z', 'Expire Soon'],
 				chooseTags: ['Expired', 'Consumed', 'All'],
+				deviceHeight:0,
 			}
 		},
 		onLoad(){
 			// console.log(uni.getStorageSync('userId'))
 			this.getCol()
+			let deviceInfo = uni.getSystemInfoSync();
+			this.deviceHeight = deviceInfo.windowHeight;
 			// setInterval(() => {
 			// 	this.getCol()
 			// },1000)
