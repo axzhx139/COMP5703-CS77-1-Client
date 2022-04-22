@@ -159,7 +159,7 @@
 							<xfl-select @change="getCategory"
 								:list="options"
 								:clearable="false"
-								:showItemNum="5" 
+								:showItemNum="10" 
 								:listShow="false"
 								:isCanInput="false"  
 								:style_Container="'height: 50px; font-size: 16px;'"
@@ -216,9 +216,6 @@
 				</view>
 			</hqs-popup>
 			
-<!-- 	
-<!--  -->	
-<!--  -->	
 			
 			<hqs-popup  title="" :from="popFrom" v-model="chNum" :round="round" :showClose="false" height="300px">
 				<view class="t-bg">
@@ -337,17 +334,20 @@
 			
 			<view style="text-align: left;width: 100%;margin-top: 25px;">
 				<text style=" line-height: 50px;float:left;margin-left: 25px;font-size: 20px;">Category</text>
-					<xfl-select @change="getCategory"
+					<xfl-select
+						:placeholder = "'Choose'"
+						v-if="refreshiCategory"
+						@change="getCategory"
 						:list="options"
-						:clearable="false"
-						:showItemNum="5" 
+						:clearable="true"
+						:showItemNum="10" 
 						:listShow="false"
 						:isCanInput="false"  
+						:initValue="iCategory"
 						:style_Container="'height: 50px; font-size: 16px;'"
-						:placeholder = "'Choose'"
 						:selectHideType="'hideAll'"
 						style="width: 50%;background-color: #F3F1F1;float:left;margin-left: 25px;"
-					>
+						>
 					</xfl-select>
 			</view>
 			
@@ -356,7 +356,7 @@
 				<view style="text-align: center;">
 					<u-input @click="openTime" style="float:left;margin-left: 10px;width: 40%;font-weight: 900;display: inline-block;background-color: #F3F1F1;border-radius: 10px;" :clearable="true" placeholder="Time" v-model="iTime" class="fn-input" height="90" input-align="center"/>
 					<u-calendar v-model="cshow" @change="changeTime" max-date="9999"></u-calendar>
-					<img src="../../static/scan.png" style="margin:10px 10px 0 10px;float:left;width: 25px;height: 25px;" @click="onClickBtn"></img>
+					<image src="../../static/scan.png" style="margin:10px 10px 0 10px;float:left;width: 25px;height: 25px;" @click="onClickBtn"></image>
 					
 				</view>
 			</view>
@@ -425,6 +425,8 @@
 				iItemid: '',
 				status:'instock',
                 iCategory: '',
+				value: '',
+				refreshiCategory: true,
 				shopList:[],
 				oldstockList: [],
 				stockList:[],
@@ -472,7 +474,6 @@
 			// setInterval(() => {
 			// 	this.getCol()
 			// },1000)
-			
 		},
 		onShow(){
 			let that =this
@@ -559,7 +560,7 @@
                 // convert remind time to correct form
                 var expDate = new Date(this.iTime);
 				var remindTime = (expDate.getDate() - this.iCitime);
-				var lsRemindTime = new Date(expDate.setDate(remindTime)).toLocaleDateString().split("/");
+				var lsRemindTime = new Date(expDate.setDate(remindTime)).toISOString().split("T")[0];
 				// console.log(remindTime);
 				// console.log(lsRemindTime);
 
@@ -569,10 +570,10 @@
                 // }
                 //Australian Timezone needed
 				// console.log(new Date())
-                if(lsRemindTime[1].length === 1){
-                    lsRemindTime[1] = "0" + lsRemindTime[1]
-                }
-                var remindTime = lsRemindTime[0]+"-"+lsRemindTime[1]+"-"+lsRemindTime[2]
+                // if(lsRemindTime[1].length === 1){
+                //     lsRemindTime[1] = "0" + lsRemindTime[1]
+                // }
+                // var remindTime = lsRemindTime[0]+"-"+lsRemindTime[1]+"-"+lsRemindTime[2]
 				// console.log(remindTime);
 				// console.log(lsRemindTime);
 				
@@ -795,18 +796,53 @@
 				this.itemEditor=false
 				
 			},
-            
-            scanPhoto(){
-				
+            scanCode(){
+				// let that = this
+				uni.scanCode({
+					success: (res) => {
+						console.log('type：' + res.scanType);
+						console.log('codeID：' + res.result);
+						this.icode = res.result;
+						uni.request({
+							url: "https://world.openfoodfacts.org/api/v2/product/" + this.icode,		
+						}).then(ires=>{
+							var name = ires[1].data.product.product_name
+							console.log(name)
+							var categories = ires[1].data.product.categories.split(',')
+							console.log(categories[1])
+							this.iName = name
+							this.iCategory = categories[1]
+							this.refreshiCategory = false
+							this.$nextTick(function(){
+								this.refreshiCategory = true
+							})
+							// this.$forceUpdate()
+						});
+					}
+				});		
+			},
+			// searchProduct(){
+			// 	if(this.iCategory === ''){
+			// 		this.list = this.options  
+			// 	}else{
+			// 		this.showList = []
+			// 		this.showList = this.options.filter((item)=>{
+			// 			return item.label.indexOf(this.iCategory)>=0
+			// 		})
+			// 	} 
+			// 	console.log(this.showList)
+			// 	this.showSelect = true
+			// },   
+            scanDate(){
 				let that = this
-                uni.chooseImage({
-                    count: 1, 
-                    sizeType: ['original', 'compressed'], 
+				uni.chooseImage({
+					count: 1, 
+					sizeType: ['original', 'compressed'], 
 
-                    sourceType: ['camera', 'album'], 
+					sourceType: ['camera', 'album'], 
 
-                    success:  (res) => {
-                        console.log(String(res.tempFilePaths[0]));
+					success:  (res) => {
+						console.log(String(res.tempFilePaths[0]));
 						uni.previewImage({
 							urls: res.tempFilePaths,
 						});
@@ -815,37 +851,40 @@
 						console.log("上传了: " + String(res.tempFilePaths[0]) + "  --------")
 						console.log("ocr 的返回结果：");
 						
-						that.iTime = "2022-08-20";
-						console.log(that.iTime);
-						/**uni.uploadFile({
-							url: 'http://101.35.91.117:7884/ocr', // ------------------- 每次测之前改一下 ------------------------
-							method : 'POST',
-							// filePath : res.tempFilePaths[0],
-							filePath : String(res.tempFilePaths[0]),
-							name : 'media',
-							header: {
-								'content-type': 'multipart/form-data' 
-							},
+						that.iTime = "2022-11-22";
+						// console.log(that.iTime);
+						// uni.uploadFile({
+							// url: 'http://localhost:8080/ocr', // ------------------- 每次测之前改一下 ------------------------
+							// method : 'POST',
+							// // filePath : res.tempFilePaths[0],
+							// filePath : String(res.tempFilePaths[0]),
+							// name : 'media',
+							// header: {
+							// 	'content-type': 'multipart/form-data' 
+							// },
 							
-							success: (uploadFileRes) => {
-								console.log("上传了: " + String(res.tempFilePaths[0]) + "  --------")
-								console.log("ocr 的返回结果：");
-								console.log(uploadFileRes.data);
+							// success: (res) => {
+							// 	console.log(res.statusCode)
+							// 	console.log("上传了: " + String(res.tempFilePaths[0]) + "  --------")
+							// 	console.log("ocr 的返回结果：");
+							// 	console.log(res.data);
 
-								that.iTime = uploadFileRes.data;
-								console.log(that.iTime);
-							},
-							fail: (uploadFileRes) => {
-								console.log("爷失败了");
-								console.log(uploadFileRes+"\n==============");
+							// 	that.iTime = uploadFileRes;
+							// 	console.log(that.iTime);
+							// },
+							// fail: (uploadFileRes) => {
+							// 	console.log(uploadFileRes.statusCode)
 								
-							}
+							// 	console.log("爷失败了");
+							// 	console.log(uploadFileRes+"\n==============");
+								
+							// }
 							
-						});*/
+						// });
 						
-                    }
-                });
-            },
+					}
+				});
+			},
             
 			onClickBtn(e){
 				console.log("e.key is: ", e.key)
@@ -867,9 +906,14 @@
 					this.needAddItem = false
 					this.filepath='';
 					this.add_src='';
-				}else{
-                    this.scanPhoto()
-                }
+				}else if(e.key == 'scan'){
+                    this.scanCode();
+					this.needAddItem = true
+					this.addItemToList = false
+					
+                }else{
+					this.scanDate();
+				}
 			},
             
 			DateDiff(date1, date2) {
@@ -1089,9 +1133,6 @@
 					})
 				}
 			},		
-			
-			
-			
 			getImgById(id){
 				uni.request({
 				url: "http://101.35.91.117:7884/item/picture/"+id,
@@ -1151,16 +1192,10 @@
 						});
 				    }
 				});
-				
-				this.itemEditor=false
-				
+				this.itemEditor=false	
 			}
-			
 		},
-		
-
 	}
-	
 </script>
 
 <style>
