@@ -5,55 +5,98 @@
 		
 		<view class="main-content">
 			<view class="main-body" :style="{'height': getDeviceHeight()-110 + 'px'}">
+			<!-- <view class="main-body"> -->
 				<u-search placeholder="Search Ingredient" :show-action="true" actionText="search" margin="30rpx 50rpx" height="50" :animation="true" v-model="searchIngre" @custom="searchRecipe()"></u-search>
 				<scroll-view :scroll-y="true"  :style="{'height': getDeviceHeight()-190 + 'px'}">
-					<block v-for="(item, index) in itemList">
-						<view class="" v-if="index == 0" @click="toDetail(item.itemId)">
-							<view style="text-align: left;margin-left: 25px;margin-top: -5px;font-weight: 600;font-size: 25px;">
-								<text >{{item.title}}</text>
+					<view class="" style="padding: 0 15px 0 15px;margin-top: 30px;" v-for="(recipe, index) in itemList">
+						
+								<u-row v-if="index%2==0" gutter="0" justify="space-between">
+					
+									<u-col span="6">
+										<view class="demo-layout bg-purple-light card" @click="toDetail(recipe.itemId)">
+											<view class="card-box">
+												<u-image border-radius="6px" height="138px" width="100%" :src="recipe.img" :fade="true" duration="450"></u-image>
+												<text style="margin-left: 20rpx;font-size: 12px;font-weight: 500;">{{ recipe.name }}</text>
+												
+												<view style="text-align: left;margin-top: 10px;">
+													<image src="../../static/b-medal.png" style="width: 15px;height: 15px;margin-left: 10rpx;">
+													<text style="display: inline-block;margin-left: 10px;font-size: 10px;">{{ limitWords(recipe.type)}}</text>
+													
+												</view>
+					<!-- 							<view style="margin-top: 10px;text-align: left;margin-left: 30rpx;">
+													<text style="font-size: 12px;color: #4CD964;font-weight: 500;">Beef, Mushroom</text>
+												</view> -->
+											</view>
+										</view>
+									</u-col>
+									
+									<u-col span="6" v-if="recipe2=itemList[index+1]">
+										<view class="demo-layout bg-purple-light card" @click="toDetail(itemList[index+1].itemId)">
+											<view class="card-box">
+												<u-image border-radius="6px" height="138px" width="100%" :src="recipe2.img" :fade="true" duration="450"></u-image>
+												<text style="margin-left: 20rpx;font-size: 12px;font-weight: 500;">{{ recipe2.name }}</text>
+												
+												<view style="text-align: left;margin-top: 10px;">
+													<image src="../../static/b-medal.png" style="width: 15px;height: 15px;margin-left: 10rpx;">
+													<text style="display: inline-block;margin-left: 10px;font-size: 10px;">{{ limitWords(recipe2.type)}}</text>
+													
+												</view>
+					<!-- 							<view style="margin-top: 10px;text-align: left;margin-left: 30rpx;">
+													<text style="font-size: 12px;color: #4CD964;font-weight: 500;">Beef, Mushroom</text>
+												</view> -->
+											</view>
+										</view>
+									</u-col>
+								</u-row>	
 							</view>
-							<view class="main-item" >
-								<view class="main-item-img" style="width: 100%;text-align: center;" >
-									<u-image class="actual-img" border-radius="5px" height="116px" width="90%" :src="item.img" :fade="true" duration="450"></u-image>
-								</view>
-								<view class="main-item-hover">
-									<view style="height: 47%;"></view>
-									<text style="color: #000000;margin-left: 14px;font-size: 16px;font-weight: 500;">{{ limitWords(item.name) }}</text>
-									<view class="" style="margin-left: 14px;margin-top: 10px;color: #000000;">
-										<image src="../../static/bottle.png" style="width: 15px;height: 15px;">
-										<text style="display: inline-block;margin-left: 5px;">{{ limited(item.type) }}</text>
-										<image src="../../static/medal.png" style="width: 15px;height: 15px;margin-left: 30rpx;">
-										<text style="display: inline-block;margin-left: 10px;">{{ Math.floor((Math.random() * 5000) + 100) }} Likes</text>
-									</view>
+						</scroll-view>
+			<!-- 			
+				<block v-for="(item, index) in itemList">
+					<view class="" v-if="index == 0" @click="toDetail(item.itemId)">
+						<view style="text-align: left;margin-left: 25px;margin-top: -5px;font-weight: 600;font-size: 25px;">
+							<text >{{item.title}}</text>
+						</view>
+						<view class="main-item" >
+							<view class="main-item-img" style="width: 100%;text-align: center;" >
+								<u-image class="actual-img" border-radius="5px" height="116px" width="90%" :src="item.img" :fade="true" duration="450"></u-image>
+							</view>
+							<view class="main-item-hover">
+								<view style="height: 47%;"></view>
+								<text style="color: #000000;margin-left: 14px;font-size: 16px;font-weight: 500;">{{ item.name}}</text>
+								<view class="" style="margin-left: 14px;margin-top: 10px;color: #000000;">
+									<image src="../../static/bottle.png" style="width: 15px;height: 15px;">
+									<text style="display: inline-block;margin-left: 5px;">{{ limited(item.type) }}</text>
+									<image src="../../static/medal.png" style="width: 15px;height: 15px;margin-left: 30rpx;">
+									<text style="display: inline-block;margin-left: 10px;">{{ Math.floor((Math.random() * 5000) + 100) }} Likes</text>
 								</view>
 							</view>
 						</view>
-						
-						
-						
-						
-						<view class=""  v-if="index != 0" style="margin-top: 150px;" @click="toDetail(item.itemId)">
-							<view style="text-align: left;margin-left: 25px;margin-top: 25px;font-weight: 600;font-size: 25px;">
-								<text >{{item.title}}</text>
+					</view>
+					
+					
+					
+					
+					<view class=""  v-if="index != 0" style="margin-top: 150px;" @click="toDetail(item.itemId)">
+						<view style="text-align: left;margin-left: 25px;margin-top: 25px;font-weight: 600;font-size: 25px;">
+							<text >{{item.title}}</text>
+						</view>
+						<view class="main-item" >
+							<view class="main-item-img" style="width: 100%;text-align: center;" >
+								<u-image class="actual-img" border-radius="5px" height="116px" width="95%" :src="item.img" :fade="true" duration="450"></u-image>
 							</view>
-							<view class="main-item" >
-								<view class="main-item-img" style="width: 100%;text-align: center;" >
-									<u-image class="actual-img" border-radius="5px" height="116px" width="95%" :src="item.img" :fade="true" duration="450"></u-image>
-								</view>
-								<view class="main-item-hover">
-									<view style="height: 47%;"></view>
-									<text style="color: #000000;margin-left: 14px;font-size: 16px;font-weight: 500;">{{ limitWords(item.name )}}</text>
-									<view class="" style="margin-left: 14px;margin-top: 10px;color: #000000;">
-										<image src="../../static/bottle.png" style="width: 15px;height: 15px;">
-										<text style="display: inline-block;margin-left: 5px;">{{ limited(item.type) }}</text>
-										<image src="../../static/medal.png" style="width: 15px;height: 15px;margin-left: 30rpx;">
-										<text style="display: inline-block;margin-left: 10px;">{{ Math.floor((Math.random() * 5000) + 100)}} Likes</text>
-									</view>
+							<view class="main-item-hover">
+								<view style="height: 47%;"></view>
+								<text style="color: #000000;margin-left: 14px;font-size: 16px;font-weight: 500;">{{ limitWords(item.name )}}</text>
+								<view class="" style="margin-left: 14px;margin-top: 10px;color: #000000;">
+									<image src="../../static/bottle.png" style="width: 15px;height: 15px;">
+									<text style="display: inline-block;margin-left: 5px;">{{ limited(item.type) }}</text>
+									<image src="../../static/medal.png" style="width: 15px;height: 15px;margin-left: 30rpx;">
+									<text style="display: inline-block;margin-left: 10px;">{{ Math.floor((Math.random() * 5000) + 100)}} Likes</text>
 								</view>
 							</view>
-						</view>			
-					</block>
-				</scroll-view>
+						</view>
+					</view>			
+				</block> -->
 			</view>
 		</view>
 		
@@ -198,8 +241,8 @@
 			limitWords(txt){
 			    var str = txt;
 				var reg = /<[^<>]+>/g;
-				if (str.length >= 40){
-					str = str.substr(0,40) + '...';
+				if (str.length >= 20){
+					str = str.substr(0,15) + '...';
 					str = str.replace(reg, '');
 				}
 			    return str;
@@ -225,14 +268,18 @@
 		display: flex;
 		justify-content: center;
 		text-align: center;
-		margin-bottom: 6;
 	}
 	.main-body{
 		background-color: #f7edc8;
 		width: 90%;
 		border-radius: 10px;
-		text-align: center;		
-		margin-bottom: 10;
+		text-align: center;
+		
+/* 		padding-top: 4rpx;
+		column-count: 2;
+		column-gap: 18rpx;
+		margin-left: 40rpx;
+		margin-right: 40rpx; */
 	}
 	.main-item{
 		position:relative;
@@ -257,11 +304,23 @@
 
 		position:absolute;
 		/* background-color: #4CD964; */
-		z-index: 1;
+		z-index: 999999;
 		width: 95%;
 		height: 116px;
 		margin-top: 10px;
 		text-align: left;
 	}
-
+.card{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.card-box{
+	background-color: white;
+	width: 95%;
+	height: 218px;
+	border-radius: 10px;
+	border:solid  1px #C8C7CC;
+	text-align: left;
+}
 </style>
