@@ -6,7 +6,7 @@
 		<view class="main-content">
 			<view class="main-body" :style="{'height': getDeviceHeight()-110 + 'px'}">
 			<!-- <view class="main-body"> -->
-				<u-search placeholder="Search Ingredient" :show-action="true" actionText="search" margin="30rpx 50rpx" height="50" :animation="true" v-model="searchIngre" @custom="searchRecipe()"></u-search>
+				<u-search placeholder="Search Ingredient" :show-action="true" actionText="search" margin="30rpx 50rpx" height="50"  v-model="searchIngre" @custom="searchRecipe()"></u-search>
 				<scroll-view :scroll-y="true"  :style="{'height': getDeviceHeight()-190 + 'px'}">
 					<view class="" style="padding: 0 15px 0 15px;margin-top: 30px;" v-for="(recipe, index) in itemList">
 						
@@ -214,6 +214,7 @@
 				for (var i=0;i<searchList.length;i++){
 				    var item = searchList[i]
 					var used = ""
+					
 					for( var j=0;j<item.usedIngredients.length;j++){
 						used+=item.usedIngredients[j].name
 						used+=" "
@@ -228,14 +229,23 @@
 						'likes': item.likes,
 					}
 					
-					if (used.includes(ingre)) {
-						console.log("111" + used)
+					if (used.includes(ingre) || item.title.toLowerCase().includes(ingre.toLowerCase())) {
+						console.log("111" + item.title)
 						List.push(recipeInfo);
-					}
+						
+					} 
 					
 				}
 			
 				this.itemList=List;
+				if (this.itemList.length === 0) {
+					uni.showToast({
+						title: 'There is no ' + ingre + ' in the stock',
+						icon: 'none',
+					})
+					this.getAllRecipe();
+					
+				}
 				console.log(this.itemList.length);
 			},
 			limitWords(txt){
