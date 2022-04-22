@@ -36,6 +36,7 @@ if (uni.restoreGlobal) {
 __definePage('pages/index/index', function () {return Vue.extend(__webpack_require__(/*! pages/index/index.vue?mpType=page */ 2).default);});
 __definePage('pages/welcome/welcome', function () {return Vue.extend(__webpack_require__(/*! pages/welcome/welcome.vue?mpType=page */ 16).default);});
 __definePage('pages/profile/profile', function () {return Vue.extend(__webpack_require__(/*! pages/profile/profile.vue?mpType=page */ 59).default);});
+__definePage('pages/profile/ranking', function () {return Vue.extend(__webpack_require__(/*! pages/profile/ranking.vue?mpType=page */ 6).default);});
 __definePage('pages/home/home', function () {return Vue.extend(__webpack_require__(/*! pages/home/home.vue?mpType=page */ 102).default);});
 __definePage('pages/grocery/detail', function () {return Vue.extend(__webpack_require__(/*! pages/grocery/detail.vue?mpType=page */ 115).default);});
 __definePage('pages/grocery/grocery', function () {return Vue.extend(__webpack_require__(/*! pages/grocery/grocery.vue?mpType=page */ 120).default);});
@@ -195,64 +196,47 @@ render._withStripped = true
   !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-button/u-button.vue ***!
   \****************************************************************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _u_button_vue_vue_type_template_id_3bf2dba7_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./u-button.vue?vue&type=template&id=3bf2dba7&scoped=true& */ 6);
-/* harmony import */ var _u_button_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./u-button.vue?vue&type=script&lang=js& */ 8);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _u_button_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _u_button_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js */ 10);
-
-var renderjs
-
-
-
-
-/* normalize component */
-
-var component = Object(_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _u_button_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _u_button_vue_vue_type_template_id_3bf2dba7_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _u_button_vue_vue_type_template_id_3bf2dba7_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  "3bf2dba7",
-  null,
-  false,
-  _u_button_vue_vue_type_template_id_3bf2dba7_scoped_true___WEBPACK_IMPORTED_MODULE_0__["components"],
-  renderjs
-)
-
-component.options.__file = "node_modules/uview-ui/components/u-button/u-button.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+throw new Error("Module build failed (from ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/index.js):\nError: ENOENT: no such file or directory, open '/Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-button/u-button.vue'");
 
 /***/ }),
 /* 6 */
-/*!***********************************************************************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-button/u-button.vue?vue&type=template&id=3bf2dba7&scoped=true& ***!
-  \***********************************************************************************************************************************************************************************/
+/*!***********************************************************************************************************************!*\
+  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/pages/profile/ranking.vue?mpType=page ***!
+  \***********************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _ranking_vue_vue_type_template_id_4f8a8537_mpType_page__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ranking.vue?vue&type=template&id=4f8a8537&mpType=page */ 7);\n/* harmony import */ var _ranking_vue_vue_type_script_lang_js_mpType_page__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ranking.vue?vue&type=script&lang=js&mpType=page */ 9);\n/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _ranking_vue_vue_type_script_lang_js_mpType_page__WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _ranking_vue_vue_type_script_lang_js_mpType_page__WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));\n/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js */ 10);\n\nvar renderjs\n\n\n\n\n/* normalize component */\n\nvar component = Object(_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(\n  _ranking_vue_vue_type_script_lang_js_mpType_page__WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n  _ranking_vue_vue_type_template_id_4f8a8537_mpType_page__WEBPACK_IMPORTED_MODULE_0__[\"render\"],\n  _ranking_vue_vue_type_template_id_4f8a8537_mpType_page__WEBPACK_IMPORTED_MODULE_0__[\"staticRenderFns\"],\n  false,\n  null,\n  null,\n  null,\n  false,\n  _ranking_vue_vue_type_template_id_4f8a8537_mpType_page__WEBPACK_IMPORTED_MODULE_0__[\"components\"],\n  renderjs\n)\n\ncomponent.options.__file = \"pages/profile/ranking.vue\"\n/* harmony default export */ __webpack_exports__[\"default\"] = (component.exports);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbbnVsbF0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBK0g7QUFDL0g7QUFDc0U7QUFDTDs7O0FBR2pFO0FBQ3lOO0FBQ3pOLGdCQUFnQixpTkFBVTtBQUMxQixFQUFFLHdGQUFNO0FBQ1IsRUFBRSw2RkFBTTtBQUNSLEVBQUUsc0dBQWU7QUFDakI7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLEVBQUUsaUdBQVU7QUFDWjtBQUNBOztBQUVBO0FBQ2UsZ0YiLCJmaWxlIjoiNi5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IHJlbmRlciwgc3RhdGljUmVuZGVyRm5zLCByZWN5Y2xhYmxlUmVuZGVyLCBjb21wb25lbnRzIH0gZnJvbSBcIi4vcmFua2luZy52dWU/dnVlJnR5cGU9dGVtcGxhdGUmaWQ9NGY4YTg1MzcmbXBUeXBlPXBhZ2VcIlxudmFyIHJlbmRlcmpzXG5pbXBvcnQgc2NyaXB0IGZyb20gXCIuL3JhbmtpbmcudnVlP3Z1ZSZ0eXBlPXNjcmlwdCZsYW5nPWpzJm1wVHlwZT1wYWdlXCJcbmV4cG9ydCAqIGZyb20gXCIuL3JhbmtpbmcudnVlP3Z1ZSZ0eXBlPXNjcmlwdCZsYW5nPWpzJm1wVHlwZT1wYWdlXCJcblxuXG4vKiBub3JtYWxpemUgY29tcG9uZW50ICovXG5pbXBvcnQgbm9ybWFsaXplciBmcm9tIFwiIS4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uL0FwcGxpY2F0aW9ucy9IQnVpbGRlclguYXBwL0NvbnRlbnRzL0hCdWlsZGVyWC9wbHVnaW5zL3VuaWFwcC1jbGkvbm9kZV9tb2R1bGVzL0BkY2xvdWRpby92dWUtY2xpLXBsdWdpbi11bmkvcGFja2FnZXMvdnVlLWxvYWRlci9saWIvcnVudGltZS9jb21wb25lbnROb3JtYWxpemVyLmpzXCJcbnZhciBjb21wb25lbnQgPSBub3JtYWxpemVyKFxuICBzY3JpcHQsXG4gIHJlbmRlcixcbiAgc3RhdGljUmVuZGVyRm5zLFxuICBmYWxzZSxcbiAgbnVsbCxcbiAgbnVsbCxcbiAgbnVsbCxcbiAgZmFsc2UsXG4gIGNvbXBvbmVudHMsXG4gIHJlbmRlcmpzXG4pXG5cbmNvbXBvbmVudC5vcHRpb25zLl9fZmlsZSA9IFwicGFnZXMvcHJvZmlsZS9yYW5raW5nLnZ1ZVwiXG5leHBvcnQgZGVmYXVsdCBjb21wb25lbnQuZXhwb3J0cyJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///6\n");
+
+/***/ }),
+/* 7 */
+/*!*****************************************************************************************************************************************************!*\
+  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/pages/profile/ranking.vue?vue&type=template&id=4f8a8537&mpType=page ***!
+  \*****************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_button_vue_vue_type_template_id_3bf2dba7_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--10-0!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/filter-modules-template.js!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./u-button.vue?vue&type=template&id=3bf2dba7&scoped=true& */ 7);
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_button_vue_vue_type_template_id_3bf2dba7_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_ranking_vue_vue_type_template_id_4f8a8537_mpType_page__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--10-0!../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/filter-modules-template.js!../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./ranking.vue?vue&type=template&id=4f8a8537&mpType=page */ 8);
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_ranking_vue_vue_type_template_id_4f8a8537_mpType_page__WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_button_vue_vue_type_template_id_3bf2dba7_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_ranking_vue_vue_type_template_id_4f8a8537_mpType_page__WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_button_vue_vue_type_template_id_3bf2dba7_scoped_true___WEBPACK_IMPORTED_MODULE_0__["recyclableRender"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_ranking_vue_vue_type_template_id_4f8a8537_mpType_page__WEBPACK_IMPORTED_MODULE_0__["recyclableRender"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "components", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_button_vue_vue_type_template_id_3bf2dba7_scoped_true___WEBPACK_IMPORTED_MODULE_0__["components"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "components", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_ranking_vue_vue_type_template_id_4f8a8537_mpType_page__WEBPACK_IMPORTED_MODULE_0__["components"]; });
 
 
 
 /***/ }),
-/* 7 */
-/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--10-0!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/filter-modules-template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!/Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-button/u-button.vue?vue&type=template&id=3bf2dba7&scoped=true& ***!
-  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/* 8 */
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--10-0!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/filter-modules-template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!/Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/pages/profile/ranking.vue?vue&type=template&id=4f8a8537&mpType=page ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -263,102 +247,232 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components
+try {
+  components = {
+    uTabbar: __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module 'uview-ui/components/u-tabbar/u-tabbar.vue'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())).default
+  }
+} catch (e) {
+  if (
+    e.message.indexOf("Cannot find module") !== -1 &&
+    e.message.indexOf(".vue") !== -1
+  ) {
+    console.error(e.message)
+    console.error("1. 排查组件名称拼写是否正确")
+    console.error(
+      "2. 排查组件是否符合 easycom 规范，文档：https://uniapp.dcloud.net.cn/collocation/pages?id=easycom"
+    )
+    console.error(
+      "3. 若组件不符合 easycom 规范，需手动引入，并在 components 中注册该组件"
+    )
+  } else {
+    throw e
+  }
+}
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "button",
-    {
-      staticClass: _vm._$s(0, "sc", "u-btn u-line-1 u-fix-ios-appearance"),
-      class: _vm._$s(0, "c", [
-        "u-size-" + _vm.size,
-        _vm.plain ? "u-btn--" + _vm.type + "--plain" : "",
-        _vm.loading ? "u-loading" : "",
-        _vm.shape == "circle" ? "u-round-circle" : "",
-        _vm.hairLine ? _vm.showHairLineBorder : "u-btn--bold-border",
-        "u-btn--" + _vm.type,
-        _vm.disabled ? "u-btn--" + _vm.type + "--disabled" : ""
-      ]),
-      style: _vm._$s(0, "s", [
-        _vm.customStyle,
-        {
-          overflow: _vm.ripple ? "hidden" : "visible"
-        }
-      ]),
-      attrs: {
-        id: "u-wave-btn",
-        "hover-start-time": _vm._$s(
-          0,
-          "a-hover-start-time",
-          Number(_vm.hoverStartTime)
-        ),
-        "hover-stay-time": _vm._$s(
-          0,
-          "a-hover-stay-time",
-          Number(_vm.hoverStayTime)
-        ),
-        disabled: _vm._$s(0, "a-disabled", _vm.disabled),
-        "form-type": _vm._$s(0, "a-form-type", _vm.formType),
-        "open-type": _vm._$s(0, "a-open-type", _vm.openType),
-        "app-parameter": _vm._$s(0, "a-app-parameter", _vm.appParameter),
-        "hover-stop-propagation": _vm._$s(
-          0,
-          "a-hover-stop-propagation",
-          _vm.hoverStopPropagation
-        ),
-        "send-message-title": _vm._$s(
-          0,
-          "a-send-message-title",
-          _vm.sendMessageTitle
-        ),
-        lang: _vm._$s(0, "a-lang", _vm.lang),
-        "data-name": _vm._$s(0, "a-data-name", _vm.dataName),
-        "session-from": _vm._$s(0, "a-session-from", _vm.sessionFrom),
-        "send-message-img": _vm._$s(
-          0,
-          "a-send-message-img",
-          _vm.sendMessageImg
-        ),
-        "show-message-card": _vm._$s(
-          0,
-          "a-show-message-card",
-          _vm.showMessageCard
-        ),
-        "hover-class": _vm._$s(0, "a-hover-class", _vm.getHoverClass),
-        loading: _vm._$s(0, "a-loading", _vm.loading),
-        _i: 0
-      },
-      on: {
-        getphonenumber: _vm.getphonenumber,
-        getuserinfo: _vm.getuserinfo,
-        error: _vm.error,
-        opensetting: _vm.opensetting,
-        launchapp: _vm.launchapp,
-        click: function($event) {
-          $event.stopPropagation()
-          return _vm.click($event)
-        }
-      }
-    },
+    "view",
     [
-      _vm._t("default", null, { _i: 1 }),
-      _vm._$s(2, "i", _vm.ripple)
-        ? _c("view", {
-            staticClass: _vm._$s(2, "sc", "u-wave-ripple"),
-            class: _vm._$s(2, "c", [_vm.waveActive ? "u-wave-active" : ""]),
-            style: _vm._$s(2, "s", {
-              top: _vm.rippleTop + "px",
-              left: _vm.rippleLeft + "px",
-              width: _vm.fields.targetWidth + "px",
-              height: _vm.fields.targetWidth + "px",
-              "background-color": _vm.rippleBgColor || "rgba(0, 0, 0, 0.15)"
-            }),
-            attrs: { _i: 2 }
-          })
-        : _vm._e()
+      _c(
+        "view",
+        { staticClass: _vm._$s(1, "sc", "main-content"), attrs: { _i: 1 } },
+        [
+          _c(
+            "view",
+            {
+              staticClass: _vm._$s(2, "sc", "main-body"),
+              style: _vm._$s(2, "s", { height: _vm.deviceHeight + "px" }),
+              attrs: { _i: 2 }
+            },
+            [
+              _c(
+                "view",
+                { staticClass: _vm._$s(3, "sc", "content"), attrs: { _i: 3 } },
+                [
+                  _c(
+                    "view",
+                    {
+                      staticClass: _vm._$s(4, "sc", "rank-head"),
+                      attrs: { _i: 4 }
+                    },
+                    [
+                      _c(
+                        "view",
+                        {
+                          staticClass: _vm._$s(5, "sc", "rank-block"),
+                          class: _vm._$s(5, "c", [
+                            "selected-item",
+                            _vm.allSelect ? "selected-item" : "un-select-item"
+                          ]),
+                          attrs: { _i: 5 }
+                        },
+                        [
+                          _c("text", {
+                            attrs: { _i: 6 },
+                            on: {
+                              click: function($event) {
+                                return _vm.changeTab("all")
+                              }
+                            }
+                          })
+                        ]
+                      ),
+                      _c(
+                        "view",
+                        {
+                          staticClass: _vm._$s(7, "sc", "rank-block"),
+                          class: _vm._$s(7, "c", [
+                            _vm.citySelect ? "selected-item" : "un-select-item"
+                          ]),
+                          attrs: { _i: 7 }
+                        },
+                        [
+                          _c("text", {
+                            attrs: { _i: 8 },
+                            on: {
+                              click: function($event) {
+                                return _vm.changeTab("city")
+                              }
+                            }
+                          })
+                        ]
+                      )
+                    ]
+                  )
+                ]
+              ),
+              _c(
+                "view",
+                [
+                  [
+                    _c("view", [
+                      _c("text"),
+                      _c("text"),
+                      _c("text"),
+                      _c("div", {
+                        staticClass: _vm._$s(15, "sc", "titleline"),
+                        attrs: { _i: 15 }
+                      })
+                    ])
+                  ],
+                  _vm._l(
+                    _vm._$s(16, "f", { forItems: _vm.ranking_list }),
+                    function(item, index, $20, $30) {
+                      return [
+                        _c(
+                          "view",
+                          {
+                            key: _vm._$s(16, "f", {
+                              forIndex: $20,
+                              keyIndex: 0,
+                              key: 16 + "-0" + $30
+                            }),
+                            style: _vm._$s("17-" + $30, "s", {
+                              color: _vm.getcolor(index),
+                              "padding-top": "10px"
+                            }),
+                            attrs: { _i: "17-" + $30 }
+                          },
+                          [
+                            _c("text", [
+                              _vm._v(
+                                _vm._$s(
+                                  "18-" + $30,
+                                  "t0-0",
+                                  _vm._s(_vm.getIndex(index))
+                                )
+                              )
+                            ]),
+                            _c("text", [
+                              _vm._v(
+                                _vm._$s("19-" + $30, "t0-0", _vm._s(item.name))
+                              )
+                            ]),
+                            _c("text", [
+                              _vm._v(
+                                _vm._$s(
+                                  "20-" + $30,
+                                  "t0-0",
+                                  _vm._s(item.rankingDays)
+                                )
+                              )
+                            ])
+                          ]
+                        ),
+                        _c("div", {
+                          key: _vm._$s(16, "f", {
+                            forIndex: $20,
+                            keyIndex: 1,
+                            key: 16 + "-1" + $30
+                          }),
+                          staticClass: _vm._$s(
+                            "21-" + $30,
+                            "sc",
+                            "partingline"
+                          ),
+                          attrs: { _i: "21-" + $30 }
+                        })
+                      ]
+                    }
+                  )
+                ],
+                2
+              ),
+              _c(
+                "view",
+                {
+                  staticClass: _vm._$s(22, "sc", "my-content"),
+                  attrs: { _i: 22 }
+                },
+                [
+                  _c(
+                    "view",
+                    {
+                      staticClass: _vm._$s(23, "sc", "rank-self"),
+                      attrs: { _i: 23 }
+                    },
+                    [
+                      _c("text", [
+                        _vm._v(
+                          _vm._$s(
+                            24,
+                            "t0-0",
+                            _vm._s(_vm.getIndex(_vm.my_rank.userRanking - 1))
+                          )
+                        )
+                      ]),
+                      _c("text", [
+                        _vm._v(
+                          _vm._$s(25, "t0-0", _vm._s(_vm.my_rank.userName))
+                        )
+                      ]),
+                      _c("text", [
+                        _vm._v(_vm._$s(26, "t0-0", _vm._s(_vm.my_rank.daysGap)))
+                      ]),
+                      _c("text", [
+                        _vm._v(
+                          _vm._$s(
+                            27,
+                            "t0-0",
+                            _vm._s(_vm.my_rank.userRankingDays)
+                          )
+                        )
+                      ])
+                    ]
+                  )
+                ]
+              )
+            ]
+          )
+        ]
+      ),
+      _c("u-tabbar", {
+        attrs: { list: _vm.tabbar, "mid-button": false, height: "55px", _i: 28 }
+      })
     ],
-    2
+    1
   )
 }
 var recyclableRender = false
@@ -368,368 +482,15 @@ render._withStripped = true
 
 
 /***/ }),
-/* 8 */
-/*!*****************************************************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-button/u-button.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************************************************************************************************/
+/* 9 */
+/*!***********************************************************************************************************************************************!*\
+  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/pages/profile/ranking.vue?vue&type=script&lang=js&mpType=page ***!
+  \***********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_button_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/babel-loader/lib!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-1!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/using-components.js!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./u-button.vue?vue&type=script&lang=js& */ 9);
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_button_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_button_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_button_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_button_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_button_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default.a); 
-
-/***/ }),
-/* 9 */
-/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/using-components.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!/Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-button/u-button.vue?vue&type=script&lang=js& ***!
-  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/**
- * button 按钮
- * @description Button 按钮
- * @tutorial https://www.uviewui.com/components/button.html
- * @property {String} size 按钮的大小
- * @property {Boolean} ripple 是否开启点击水波纹效果
- * @property {String} ripple-bg-color 水波纹的背景色，ripple为true时有效
- * @property {String} type 按钮的样式类型
- * @property {Boolean} plain 按钮是否镂空，背景色透明
- * @property {Boolean} disabled 是否禁用
- * @property {Boolean} hair-line 是否显示按钮的细边框(默认true)
- * @property {Boolean} shape 按钮外观形状，见文档说明
- * @property {Boolean} loading 按钮名称前是否带 loading 图标(App-nvue 平台，在 ios 上为雪花，Android上为圆圈)
- * @property {String} form-type 用于 <form> 组件，点击分别会触发 <form> 组件的 submit/reset 事件
- * @property {String} open-type 开放能力
- * @property {String} data-name 额外传参参数，用于小程序的data-xxx属性，通过target.dataset.name获取
- * @property {String} hover-class 指定按钮按下去的样式类。当 hover-class="none" 时，没有点击态效果(App-nvue 平台暂不支持)
- * @property {Number} hover-start-time 按住后多久出现点击态，单位毫秒
- * @property {Number} hover-stay-time 手指松开后点击态保留时间，单位毫秒
- * @property {Object} custom-style 对按钮的自定义样式，对象形式，见文档说明
- * @event {Function} click 按钮点击
- * @event {Function} getphonenumber open-type="getPhoneNumber"时有效
- * @event {Function} getuserinfo 用户点击该按钮时，会返回获取到的用户信息，从返回参数的detail中获取到的值同uni.getUserInfo
- * @event {Function} error 当使用开放能力时，发生错误的回调
- * @event {Function} opensetting 在打开授权设置页并关闭后回调
- * @event {Function} launchapp 打开 APP 成功的回调
- * @example <u-button>月落</u-button>
- */var _default2 =
-{
-  name: 'u-button',
-  props: {
-    // 是否细边框
-    hairLine: {
-      type: Boolean,
-      default: true },
-
-    // 按钮的预置样式，default，primary，error，warning，success
-    type: {
-      type: String,
-      default: 'default' },
-
-    // 按钮尺寸，default，medium，mini
-    size: {
-      type: String,
-      default: 'default' },
-
-    // 按钮形状，circle（两边为半圆），square（带圆角）
-    shape: {
-      type: String,
-      default: 'square' },
-
-    // 按钮是否镂空
-    plain: {
-      type: Boolean,
-      default: false },
-
-    // 是否禁止状态
-    disabled: {
-      type: Boolean,
-      default: false },
-
-    // 是否加载中
-    loading: {
-      type: Boolean,
-      default: false },
-
-    // 开放能力，具体请看uniapp稳定关于button组件部分说明
-    // https://uniapp.dcloud.io/component/button
-    openType: {
-      type: String,
-      default: '' },
-
-    // 用于 <form> 组件，点击分别会触发 <form> 组件的 submit/reset 事件
-    // 取值为submit（提交表单），reset（重置表单）
-    formType: {
-      type: String,
-      default: '' },
-
-    // 打开 APP 时，向 APP 传递的参数，open-type=launchApp时有效
-    // 只微信小程序、QQ小程序有效
-    appParameter: {
-      type: String,
-      default: '' },
-
-    // 指定是否阻止本节点的祖先节点出现点击态，微信小程序有效
-    hoverStopPropagation: {
-      type: Boolean,
-      default: false },
-
-    // 指定返回用户信息的语言，zh_CN 简体中文，zh_TW 繁体中文，en 英文。只微信小程序有效
-    lang: {
-      type: String,
-      default: 'en' },
-
-    // 会话来源，open-type="contact"时有效。只微信小程序有效
-    sessionFrom: {
-      type: String,
-      default: '' },
-
-    // 会话内消息卡片标题，open-type="contact"时有效
-    // 默认当前标题，只微信小程序有效
-    sendMessageTitle: {
-      type: String,
-      default: '' },
-
-    // 会话内消息卡片点击跳转小程序路径，open-type="contact"时有效
-    // 默认当前分享路径，只微信小程序有效
-    sendMessagePath: {
-      type: String,
-      default: '' },
-
-    // 会话内消息卡片图片，open-type="contact"时有效
-    // 默认当前页面截图，只微信小程序有效
-    sendMessageImg: {
-      type: String,
-      default: '' },
-
-    // 是否显示会话内消息卡片，设置此参数为 true，用户进入客服会话会在右下角显示"可能要发送的小程序"提示，
-    // 用户点击后可以快速发送小程序消息，open-type="contact"时有效
-    showMessageCard: {
-      type: Boolean,
-      default: false },
-
-    // 手指按（触摸）按钮时按钮时的背景颜色
-    hoverBgColor: {
-      type: String,
-      default: '' },
-
-    // 水波纹的背景颜色
-    rippleBgColor: {
-      type: String,
-      default: '' },
-
-    // 是否开启水波纹效果
-    ripple: {
-      type: Boolean,
-      default: false },
-
-    // 按下的类名
-    hoverClass: {
-      type: String,
-      default: '' },
-
-    // 自定义样式，对象形式
-    customStyle: {
-      type: Object,
-      default: function _default() {
-        return {};
-      } },
-
-    // 额外传参参数，用于小程序的data-xxx属性，通过target.dataset.name获取
-    dataName: {
-      type: String,
-      default: '' },
-
-    // 节流，一定时间内只能触发一次
-    throttleTime: {
-      type: [String, Number],
-      default: 1000 },
-
-    // 按住后多久出现点击态，单位毫秒
-    hoverStartTime: {
-      type: [String, Number],
-      default: 20 },
-
-    // 手指松开后点击态保留时间，单位毫秒
-    hoverStayTime: {
-      type: [String, Number],
-      default: 150 } },
-
-
-  computed: {
-    // 当没有传bgColor变量时，按钮按下去的颜色类名
-    getHoverClass: function getHoverClass() {
-      // 如果开启水波纹效果，则不启用hover-class效果
-      if (this.loading || this.disabled || this.ripple || this.hoverClass) return '';
-      var hoverClass = '';
-      hoverClass = this.plain ? 'u-' + this.type + '-plain-hover' : 'u-' + this.type + '-hover';
-      return hoverClass;
-    },
-    // 在'primary', 'success', 'error', 'warning'类型下，不显示边框，否则会造成四角有毛刺现象
-    showHairLineBorder: function showHairLineBorder() {
-      if (['primary', 'success', 'error', 'warning'].indexOf(this.type) >= 0 && !this.plain) {
-        return '';
-      } else {
-        return 'u-hairline-border';
-      }
-    } },
-
-  data: function data() {
-    return {
-      rippleTop: 0, // 水波纹的起点Y坐标到按钮上边界的距离
-      rippleLeft: 0, // 水波纹起点X坐标到按钮左边界的距离
-      fields: {}, // 波纹按钮节点信息
-      waveActive: false // 激活水波纹
-    };
-  },
-  methods: {
-    // 按钮点击
-    click: function click(e) {var _this = this;
-      // 进行节流控制，每this.throttle毫秒内，只在开始处执行
-      this.$u.throttle(function () {
-        // 如果按钮时disabled和loading状态，不触发水波纹效果
-        if (_this.loading === true || _this.disabled === true) return;
-        // 是否开启水波纹效果
-        if (_this.ripple) {
-          // 每次点击时，移除上一次的类，再次添加，才能触发动画效果
-          _this.waveActive = false;
-          _this.$nextTick(function () {
-            this.getWaveQuery(e);
-          });
-        }
-        _this.$emit('click', e);
-      }, this.throttleTime);
-    },
-    // 查询按钮的节点信息
-    getWaveQuery: function getWaveQuery(e) {var _this2 = this;
-      this.getElQuery().then(function (res) {
-        // 查询返回的是一个数组节点
-        var data = res[0];
-        // 查询不到节点信息，不操作
-        if (!data.width || !data.width) return;
-        // 水波纹的最终形态是一个正方形(通过border-radius让其变为一个圆形)，这里要保证正方形的边长等于按钮的最长边
-        // 最终的方形（变换后的圆形）才能覆盖整个按钮
-        data.targetWidth = data.height > data.width ? data.height : data.width;
-        if (!data.targetWidth) return;
-        _this2.fields = data;
-        var touchesX = '',
-        touchesY = '';
-
-
-
-
-
-
-
-
-
-        touchesX = e.touches[0].clientX;
-        touchesY = e.touches[0].clientY;
-
-        // 获取触摸点相对于按钮上边和左边的x和y坐标，原理是通过屏幕的触摸点（touchesY），减去按钮的上边界data.top
-        // 但是由于`transform-origin`默认是center，所以这里再减去半径才是水波纹view应该的位置
-        // 总的来说，就是把水波纹的矩形（变换后的圆形）的中心点，移动到我们的触摸点位置
-        _this2.rippleTop = touchesY - data.top - data.targetWidth / 2;
-        _this2.rippleLeft = touchesX - data.left - data.targetWidth / 2;
-        _this2.$nextTick(function () {
-          _this2.waveActive = true;
-        });
-      });
-    },
-    // 获取节点信息
-    getElQuery: function getElQuery() {var _this3 = this;
-      return new Promise(function (resolve) {
-        var queryInfo = '';
-        // 获取元素节点信息，请查看uniapp相关文档
-        // https://uniapp.dcloud.io/api/ui/nodes-info?id=nodesrefboundingclientrect
-        queryInfo = uni.createSelectorQuery().in(_this3);
-
-
-
-        queryInfo.select('.u-btn').boundingClientRect();
-        queryInfo.exec(function (data) {
-          resolve(data);
-        });
-      });
-    },
-    // 下面为对接uniapp官方按钮开放能力事件回调的对接
-    getphonenumber: function getphonenumber(res) {
-      this.$emit('getphonenumber', res);
-    },
-    getuserinfo: function getuserinfo(res) {
-      this.$emit('getuserinfo', res);
-    },
-    error: function error(res) {
-      this.$emit('error', res);
-    },
-    opensetting: function opensetting(res) {
-      this.$emit('opensetting', res);
-    },
-    launchapp: function launchapp(res) {
-      this.$emit('launchapp', res);
-    } } };exports.default = _default2;
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_ranking_vue_vue_type_script_lang_js_mpType_page__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/babel-loader/lib!../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-1!../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/using-components.js!../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./ranking.vue?vue&type=script&lang=js&mpType=page */ 20);\n/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_ranking_vue_vue_type_script_lang_js_mpType_page__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_ranking_vue_vue_type_script_lang_js_mpType_page__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_ranking_vue_vue_type_script_lang_js_mpType_page__WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_ranking_vue_vue_type_script_lang_js_mpType_page__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));\n /* harmony default export */ __webpack_exports__[\"default\"] = (_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_ranking_vue_vue_type_script_lang_js_mpType_page__WEBPACK_IMPORTED_MODULE_0___default.a); //# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbbnVsbF0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQXN3QixDQUFnQix3dEJBQUcsRUFBQyIsImZpbGUiOiI5LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IG1vZCBmcm9tIFwiLSEuLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi9BcHBsaWNhdGlvbnMvSEJ1aWxkZXJYLmFwcC9Db250ZW50cy9IQnVpbGRlclgvcGx1Z2lucy91bmlhcHAtY2xpL25vZGVfbW9kdWxlcy9iYWJlbC1sb2FkZXIvbGliL2luZGV4LmpzIS4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uL0FwcGxpY2F0aW9ucy9IQnVpbGRlclguYXBwL0NvbnRlbnRzL0hCdWlsZGVyWC9wbHVnaW5zL3VuaWFwcC1jbGkvbm9kZV9tb2R1bGVzL0BkY2xvdWRpby92dWUtY2xpLXBsdWdpbi11bmkvcGFja2FnZXMvd2VicGFjay1wcmVwcm9jZXNzLWxvYWRlci9pbmRleC5qcz8/cmVmLS02LTEhLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vQXBwbGljYXRpb25zL0hCdWlsZGVyWC5hcHAvQ29udGVudHMvSEJ1aWxkZXJYL3BsdWdpbnMvdW5pYXBwLWNsaS9ub2RlX21vZHVsZXMvQGRjbG91ZGlvL3Z1ZS1jbGktcGx1Z2luLXVuaS9wYWNrYWdlcy93ZWJwYWNrLXVuaS1hcHAtbG9hZGVyL3VzaW5nLWNvbXBvbmVudHMuanMhLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vQXBwbGljYXRpb25zL0hCdWlsZGVyWC5hcHAvQ29udGVudHMvSEJ1aWxkZXJYL3BsdWdpbnMvdW5pYXBwLWNsaS9ub2RlX21vZHVsZXMvQGRjbG91ZGlvL3Z1ZS1jbGktcGx1Z2luLXVuaS9wYWNrYWdlcy92dWUtbG9hZGVyL2xpYi9pbmRleC5qcz8/dnVlLWxvYWRlci1vcHRpb25zIS4vcmFua2luZy52dWU/dnVlJnR5cGU9c2NyaXB0Jmxhbmc9anMmbXBUeXBlPXBhZ2VcIjsgZXhwb3J0IGRlZmF1bHQgbW9kOyBleHBvcnQgKiBmcm9tIFwiLSEuLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi9BcHBsaWNhdGlvbnMvSEJ1aWxkZXJYLmFwcC9Db250ZW50cy9IQnVpbGRlclgvcGx1Z2lucy91bmlhcHAtY2xpL25vZGVfbW9kdWxlcy9iYWJlbC1sb2FkZXIvbGliL2luZGV4LmpzIS4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uL0FwcGxpY2F0aW9ucy9IQnVpbGRlclguYXBwL0NvbnRlbnRzL0hCdWlsZGVyWC9wbHVnaW5zL3VuaWFwcC1jbGkvbm9kZV9tb2R1bGVzL0BkY2xvdWRpby92dWUtY2xpLXBsdWdpbi11bmkvcGFja2FnZXMvd2VicGFjay1wcmVwcm9jZXNzLWxvYWRlci9pbmRleC5qcz8/cmVmLS02LTEhLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vQXBwbGljYXRpb25zL0hCdWlsZGVyWC5hcHAvQ29udGVudHMvSEJ1aWxkZXJYL3BsdWdpbnMvdW5pYXBwLWNsaS9ub2RlX21vZHVsZXMvQGRjbG91ZGlvL3Z1ZS1jbGktcGx1Z2luLXVuaS9wYWNrYWdlcy93ZWJwYWNrLXVuaS1hcHAtbG9hZGVyL3VzaW5nLWNvbXBvbmVudHMuanMhLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vQXBwbGljYXRpb25zL0hCdWlsZGVyWC5hcHAvQ29udGVudHMvSEJ1aWxkZXJYL3BsdWdpbnMvdW5pYXBwLWNsaS9ub2RlX21vZHVsZXMvQGRjbG91ZGlvL3Z1ZS1jbGktcGx1Z2luLXVuaS9wYWNrYWdlcy92dWUtbG9hZGVyL2xpYi9pbmRleC5qcz8/dnVlLWxvYWRlci1vcHRpb25zIS4vcmFua2luZy52dWU/dnVlJnR5cGU9c2NyaXB0Jmxhbmc9anMmbXBUeXBlPXBhZ2VcIiJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///9\n");
 
 /***/ }),
 /* 10 */
@@ -1833,1585 +1594,68 @@ render._withStripped = true
   !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-input/u-input.vue ***!
   \**************************************************************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _u_input_vue_vue_type_template_id_fdbb9fe6_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./u-input.vue?vue&type=template&id=fdbb9fe6&scoped=true& */ 20);
-/* harmony import */ var _u_input_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./u-input.vue?vue&type=script&lang=js& */ 27);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _u_input_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _u_input_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js */ 10);
-
-var renderjs
-
-
-
-
-/* normalize component */
-
-var component = Object(_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _u_input_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _u_input_vue_vue_type_template_id_fdbb9fe6_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _u_input_vue_vue_type_template_id_fdbb9fe6_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  "fdbb9fe6",
-  null,
-  false,
-  _u_input_vue_vue_type_template_id_fdbb9fe6_scoped_true___WEBPACK_IMPORTED_MODULE_0__["components"],
-  renderjs
-)
-
-component.options.__file = "node_modules/uview-ui/components/u-input/u-input.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+throw new Error("Module build failed (from ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/index.js):\nError: ENOENT: no such file or directory, open '/Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-input/u-input.vue'");
 
 /***/ }),
 /* 20 */
-/*!*********************************************************************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-input/u-input.vue?vue&type=template&id=fdbb9fe6&scoped=true& ***!
-  \*********************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns, recyclableRender, components */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/using-components.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!/Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/pages/profile/ranking.vue?vue&type=script&lang=js&mpType=page ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_input_vue_vue_type_template_id_fdbb9fe6_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--10-0!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/filter-modules-template.js!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./u-input.vue?vue&type=template&id=fdbb9fe6&scoped=true& */ 21);
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_input_vue_vue_type_template_id_fdbb9fe6_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_input_vue_vue_type_template_id_fdbb9fe6_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_input_vue_vue_type_template_id_fdbb9fe6_scoped_true___WEBPACK_IMPORTED_MODULE_0__["recyclableRender"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "components", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_input_vue_vue_type_template_id_fdbb9fe6_scoped_true___WEBPACK_IMPORTED_MODULE_0__["components"]; });
-
-
+eval("/* WEBPACK VAR INJECTION */(function(__f__) {Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0; //\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\nvar _default =\n{\n  data: function data() {\n    return {\n      tabbar: this.$store.state.tabbar,\n      deviceHeight: 0,\n      allSelect: true,\n      citySelect: false,\n      ranking_list: [],\n      my_rank: {},\n      address: 'null',\n      useraddress: '' };\n\n  },\n  onLoad: function onLoad() {var _this = this;\n    var deviceInfo = uni.getSystemInfoSync();\n    this.deviceHeight = deviceInfo.windowHeight - 80;\n    uni.request({\n      url: \"http://101.35.91.117:7884/users/profile/\" + uni.getStorageSync('userId'),\n      method: 'get' }).\n    then(function (res) {\n      if (_this.useraddress == 'None' | _this.useraddress == null) {\n        _this.useraddress = 'null';\n      } else {\n        var temp = res[1].data.address.split(',');\n        _this.useraddress = temp[temp.length - 1];\n      }\n      __f__(\"log\", _this.useraddress, \" at pages/profile/ranking.vue:87\");\n\n    });\n  },\n  onShow: function onShow() {\n    this.getRankData();\n  },\n  methods: {\n    onClickBtn: function onClickBtn() {\n\n    },\n    changeTab: function changeTab(e) {\n      if (e === 'all') {\n        this.citySelect = false;\n        this.allSelect = true;\n        this.address = 'null';\n        this.getRankData();\n      } else if (e === 'city') {\n        this.allSelect = false;\n        this.citySelect = true;\n        this.address = this.useraddress;\n        this.getRankData();\n      }\n    },\n    getRankData: function getRankData() {var _this2 = this;\n      uni.request({\n        url: \"http://101.35.91.117:7884/ranking/topTen/\" + this.address,\n        method: 'get' }).\n      then(function (res) {\n        _this2.ranking_list = res[1].data.filter(function (x) {return x['rankingDays'] != -1;});\n        __f__(\"log\", _this2.ranking_list, \" at pages/profile/ranking.vue:117\");\n      });\n      uni.request({\n        url: \"http://101.35.91.117:7884/ranking/previous/\" + uni.getStorageSync('userId') + \"/\" + this.address,\n        method: 'get' }).\n      then(function (res) {\n        _this2.my_rank = res[1].data;\n        __f__(\"log\", _this2.my_rank, \" at pages/profile/ranking.vue:124\");\n      });\n    },\n\n    getIndex: function getIndex(index) {\n      if (index == 0) {\n        return '1st';\n      } else\n      if (index == 1) {\n        return '2nd';\n      } else if (index == 2) {\n        return '3rd';\n      } else\n      {\n        return index + 1 + 'nd';\n      }\n    },\n    getcolor: function getcolor(index) {\n      if (index == 0) {\n        return 'red';\n      } else\n      if (index == 1) {\n        return 'orange';\n      } else if (index == 2) {\n        return 'green';\n      } else\n      {\n        return '#626262';\n      }\n    } } };exports.default = _default;\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/lib/format-log.js */ 15)[\"default\"]))//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVuaS1hcHA6Ly8vcGFnZXMvcHJvZmlsZS9yYW5raW5nLnZ1ZSJdLCJuYW1lcyI6WyJkYXRhIiwidGFiYmFyIiwiJHN0b3JlIiwic3RhdGUiLCJkZXZpY2VIZWlnaHQiLCJhbGxTZWxlY3QiLCJjaXR5U2VsZWN0IiwicmFua2luZ19saXN0IiwibXlfcmFuayIsImFkZHJlc3MiLCJ1c2VyYWRkcmVzcyIsIm9uTG9hZCIsImRldmljZUluZm8iLCJ1bmkiLCJnZXRTeXN0ZW1JbmZvU3luYyIsIndpbmRvd0hlaWdodCIsInJlcXVlc3QiLCJ1cmwiLCJnZXRTdG9yYWdlU3luYyIsIm1ldGhvZCIsInRoZW4iLCJyZXMiLCJ0ZW1wIiwic3BsaXQiLCJsZW5ndGgiLCJvblNob3ciLCJnZXRSYW5rRGF0YSIsIm1ldGhvZHMiLCJvbkNsaWNrQnRuIiwiY2hhbmdlVGFiIiwiZSIsImZpbHRlciIsIngiLCJnZXRJbmRleCIsImluZGV4IiwiZ2V0Y29sb3IiXSwibWFwcGluZ3MiOiJxSUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVlO0FBQ2RBLE1BRGMsa0JBQ1A7QUFDTixXQUFPO0FBQ05DLFlBQU0sRUFBRSxLQUFLQyxNQUFMLENBQVlDLEtBQVosQ0FBa0JGLE1BRHBCO0FBRU5HLGtCQUFZLEVBQUUsQ0FGUjtBQUdOQyxlQUFTLEVBQUMsSUFISjtBQUlOQyxnQkFBVSxFQUFDLEtBSkw7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ZUFBTyxLQUFQO0FBQ0EsT0FGRDtBQUdLLFVBQUlBLEtBQUssSUFBRSxDQUFYLEVBQWE7QUFDakIsZUFBTyxLQUFQO0FBQ0EsT0FGSSxNQUVDLElBQUlBLEtBQUssSUFBRSxDQUFYLEVBQWE7QUFDbEIsZUFBTyxLQUFQO0FBQ0EsT0FGSztBQUdGO0FBQ0gsZUFBT0EsS0FBSyxHQUFDLENBQU4sR0FBUSxJQUFmO0FBQ0E7QUFDRCxLQTlDTztBQStDUkMsWUEvQ1Esb0JBK0NDRCxLQS9DRCxFQStDTztBQUNkLFVBQUlBLEtBQUssSUFBRSxDQUFYLEVBQWE7QUFDWixlQUFPLEtBQVA7QUFDQSxPQUZEO0FBR0ssVUFBSUEsS0FBSyxJQUFFLENBQVgsRUFBYTtBQUNqQixlQUFPLFFBQVA7QUFDQSxPQUZJLE1BRUMsSUFBSUEsS0FBSyxJQUFFLENBQVgsRUFBYTtBQUNsQixlQUFPLE9BQVA7QUFDQSxPQUZLO0FBR0Y7QUFDSCxlQUFPLFNBQVA7QUFDQTtBQUNELEtBM0RPLEVBakNLLEUiLCJmaWxlIjoiMjAuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cblxuZXhwb3J0IGRlZmF1bHQge1xuXHRkYXRhKCkge1xuXHRcdHJldHVybiB7XG5cdFx0XHR0YWJiYXI6IHRoaXMuJHN0b3JlLnN0YXRlLnRhYmJhcixcblx0XHRcdGRldmljZUhlaWdodDogMCxcblx0XHRcdGFsbFNlbGVjdDp0cnVlLFxuXHRcdFx0Y2l0eVNlbGVjdDpmYWxzZSxcblx0XHRcdHJhbmtpbmdfbGlzdDpbXSxcblx0XHRcdG15X3Jhbms6e30sXG5cdFx0XHRhZGRyZXNzOidudWxsJyxcblx0XHRcdHVzZXJhZGRyZXNzOicnLFxuXHRcdH1cblx0fSxcblx0b25Mb2FkKCkge1xuXHRcdGxldCBkZXZpY2VJbmZvID0gdW5pLmdldFN5c3RlbUluZm9TeW5jKCk7XG5cdFx0dGhpcy5kZXZpY2VIZWlnaHQgPSBkZXZpY2VJbmZvLndpbmRvd0hlaWdodC04MDtcblx0XHR1bmkucmVxdWVzdCh7XG5cdFx0XHR1cmw6IFwiaHR0cDovLzEwMS4zNS45MS4xMTc6Nzg4NC91c2Vycy9wcm9maWxlL1wiK3VuaS5nZXRTdG9yYWdlU3luYygndXNlcklkJyksXG5cdFx0XHRcdG1ldGhvZDogJ2dldCcsXG5cdFx0XHR9KS50aGVuKHJlcz0+e1xuXHRcdFx0XHRpZiAodGhpcy51c2VyYWRkcmVzcz09J05vbmUnfHRoaXMudXNlcmFkZHJlc3M9PW51bGwpe1xuXHRcdFx0XHRcdHRoaXMudXNlcmFkZHJlc3M9J251bGwnXG5cdFx0XHRcdH1lbHNle1xuXHRcdFx0XHRcdHZhciB0ZW1wPXJlc1sxXS5kYXRhLmFkZHJlc3Muc3BsaXQoJywnKVxuXHRcdFx0XHRcdHRoaXMudXNlcmFkZHJlc3MgPSB0ZW1wW3RlbXAubGVuZ3RoLTFdXG5cdFx0XHRcdH1cblx0XHRcdFx0Y29uc29sZS5sb2codGhpcy51c2VyYWRkcmVzcylcblx0XHRcdFx0XG5cdFx0fSk7XG5cdH0sXG5cdG9uU2hvdygpe1xuXHRcdHRoaXMuZ2V0UmFua0RhdGEoKVxuXHR9LFxuXHRtZXRob2RzOiB7XG5cdFx0b25DbGlja0J0bigpe1xuXHRcdFx0XG5cdFx0fSxcblx0XHRjaGFuZ2VUYWIoZSl7XG5cdFx0XHRpZiAoZSA9PT0gJ2FsbCcpe1xuXHRcdFx0XHR0aGlzLmNpdHlTZWxlY3QgPSBmYWxzZVxuXHRcdFx0XHR0aGlzLmFsbFNlbGVjdCA9IHRydWVcblx0XHRcdFx0dGhpcy5hZGRyZXNzPSdudWxsJ1xuXHRcdFx0XHR0aGlzLmdldFJhbmtEYXRhKClcblx0XHRcdH1lbHNlIGlmKGUgPT09ICdjaXR5Jyl7XG5cdFx0XHRcdHRoaXMuYWxsU2VsZWN0ID0gZmFsc2Vcblx0XHRcdFx0dGhpcy5jaXR5U2VsZWN0ID0gdHJ1ZVxuXHRcdFx0XHR0aGlzLmFkZHJlc3M9dGhpcy51c2VyYWRkcmVzc1xuXHRcdFx0XHR0aGlzLmdldFJhbmtEYXRhKClcblx0XHRcdH1cblx0XHR9LFxuXHRcdGdldFJhbmtEYXRhKCl7XG5cdFx0XHR1bmkucmVxdWVzdCh7XG5cdFx0XHRcdHVybDogXCJodHRwOi8vMTAxLjM1LjkxLjExNzo3ODg0L3JhbmtpbmcvdG9wVGVuL1wiK3RoaXMuYWRkcmVzcyxcblx0XHRcdFx0bWV0aG9kOiAnZ2V0Jyxcblx0XHRcdH0pLnRoZW4ocmVzPT57XG5cdFx0XHRcdHRoaXMucmFua2luZ19saXN0ID0gcmVzWzFdLmRhdGEuZmlsdGVyKHg9PnhbJ3JhbmtpbmdEYXlzJ10hPS0xKVxuXHRcdFx0XHRjb25zb2xlLmxvZyh0aGlzLnJhbmtpbmdfbGlzdClcblx0XHRcdH0pXG5cdFx0XHR1bmkucmVxdWVzdCh7XG5cdFx0XHRcdHVybDogXCJodHRwOi8vMTAxLjM1LjkxLjExNzo3ODg0L3JhbmtpbmcvcHJldmlvdXMvXCIrdW5pLmdldFN0b3JhZ2VTeW5jKCd1c2VySWQnKStcIi9cIit0aGlzLmFkZHJlc3MsXG5cdFx0XHRcdG1ldGhvZDogJ2dldCcsXG5cdFx0XHR9KS50aGVuKHJlcz0+e1xuXHRcdFx0XHR0aGlzLm15X3JhbmsgPSByZXNbMV0uZGF0YVxuXHRcdFx0XHRjb25zb2xlLmxvZyh0aGlzLm15X3JhbmspXG5cdFx0XHR9KVxuXHRcdH0sXG5cdFx0XG5cdFx0Z2V0SW5kZXgoaW5kZXgpe1xuXHRcdFx0aWYgKGluZGV4PT0wKXtcblx0XHRcdFx0cmV0dXJuICcxc3QnXG5cdFx0XHR9XG5cdFx0XHRlbHNlIGlmIChpbmRleD09MSl7XG5cdFx0XHRcdHJldHVybiAnMm5kJ1xuXHRcdFx0fWVsc2UgaWYgKGluZGV4PT0yKXtcblx0XHRcdFx0cmV0dXJuICczcmQnXG5cdFx0XHR9XG5cdFx0XHRlbHNle1xuXHRcdFx0XHRyZXR1cm4gaW5kZXgrMSsnbmQnXG5cdFx0XHR9XG5cdFx0fSxcblx0XHRnZXRjb2xvcihpbmRleCl7XG5cdFx0XHRpZiAoaW5kZXg9PTApe1xuXHRcdFx0XHRyZXR1cm4gJ3JlZCdcblx0XHRcdH1cblx0XHRcdGVsc2UgaWYgKGluZGV4PT0xKXtcblx0XHRcdFx0cmV0dXJuICdvcmFuZ2UnXG5cdFx0XHR9ZWxzZSBpZiAoaW5kZXg9PTIpe1xuXHRcdFx0XHRyZXR1cm4gJ2dyZWVuJ1xuXHRcdFx0fVxuXHRcdFx0ZWxzZXtcblx0XHRcdFx0cmV0dXJuICcjNjI2MjYyJ1xuXHRcdFx0fVxuXHRcdH1cblx0XHRcblx0fVxufVxuIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///20\n");
 
 /***/ }),
-/* 21 */
-/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--10-0!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/filter-modules-template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!/Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-input/u-input.vue?vue&type=template&id=fdbb9fe6&scoped=true& ***!
-  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns, recyclableRender, components */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
-var components
-try {
-  components = {
-    uIcon: __webpack_require__(/*! uview-ui/components/u-icon/u-icon.vue */ 22).default
-  }
-} catch (e) {
-  if (
-    e.message.indexOf("Cannot find module") !== -1 &&
-    e.message.indexOf(".vue") !== -1
-  ) {
-    console.error(e.message)
-    console.error("1. 排查组件名称拼写是否正确")
-    console.error(
-      "2. 排查组件是否符合 easycom 规范，文档：https://uniapp.dcloud.net.cn/collocation/pages?id=easycom"
-    )
-    console.error(
-      "3. 若组件不符合 easycom 规范，需手动引入，并在 components 中注册该组件"
-    )
-  } else {
-    throw e
-  }
-}
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "view",
-    {
-      staticClass: _vm._$s(0, "sc", "u-input"),
-      class: _vm._$s(0, "c", {
-        "u-input--border": _vm.border,
-        "u-input--error": _vm.validateState
-      }),
-      style: _vm._$s(0, "s", {
-        padding: "0 " + (_vm.border ? 20 : 0) + "rpx",
-        borderColor: _vm.borderColor,
-        textAlign: _vm.inputAlign
-      }),
-      attrs: { _i: 0 },
-      on: {
-        click: function($event) {
-          $event.stopPropagation()
-          return _vm.inputClick($event)
-        }
-      }
-    },
-    [
-      _vm._$s(1, "i", _vm.type == "textarea")
-        ? _c("textarea", {
-            staticClass: _vm._$s(1, "sc", "u-input__input u-input__textarea"),
-            style: _vm._$s(1, "s", [_vm.getStyle]),
-            attrs: {
-              value: _vm._$s(1, "a-value", _vm.defaultValue),
-              placeholder: _vm._$s(1, "a-placeholder", _vm.placeholder),
-              placeholderStyle: _vm._$s(
-                1,
-                "a-placeholderStyle",
-                _vm.placeholderStyle
-              ),
-              disabled: _vm._$s(1, "a-disabled", _vm.disabled),
-              maxlength: _vm._$s(1, "a-maxlength", _vm.inputMaxlength),
-              fixed: _vm._$s(1, "a-fixed", _vm.fixed),
-              focus: _vm._$s(1, "a-focus", _vm.focus),
-              autoHeight: _vm._$s(1, "a-autoHeight", _vm.autoHeight),
-              "selection-end": _vm._$s(1, "a-selection-end", _vm.uSelectionEnd),
-              "selection-start": _vm._$s(
-                1,
-                "a-selection-start",
-                _vm.uSelectionStart
-              ),
-              "cursor-spacing": _vm._$s(
-                1,
-                "a-cursor-spacing",
-                _vm.getCursorSpacing
-              ),
-              "show-confirm-bar": _vm._$s(
-                1,
-                "a-show-confirm-bar",
-                _vm.showConfirmbar
-              ),
-              _i: 1
-            },
-            on: {
-              input: _vm.handleInput,
-              blur: _vm.handleBlur,
-              focus: _vm.onFocus,
-              confirm: _vm.onConfirm
-            }
-          })
-        : _c("input", {
-            staticClass: _vm._$s(2, "sc", "u-input__input"),
-            style: _vm._$s(2, "s", [_vm.getStyle]),
-            attrs: {
-              type: _vm._$s(
-                2,
-                "a-type",
-                _vm.type == "password" ? "text" : _vm.type
-              ),
-              value: _vm._$s(2, "a-value", _vm.defaultValue),
-              password: _vm._$s(
-                2,
-                "a-password",
-                _vm.type == "password" && !_vm.showPassword
-              ),
-              placeholder: _vm._$s(2, "a-placeholder", _vm.placeholder),
-              placeholderStyle: _vm._$s(
-                2,
-                "a-placeholderStyle",
-                _vm.placeholderStyle
-              ),
-              disabled: _vm._$s(
-                2,
-                "a-disabled",
-                _vm.disabled || _vm.type === "select"
-              ),
-              maxlength: _vm._$s(2, "a-maxlength", _vm.inputMaxlength),
-              focus: _vm._$s(2, "a-focus", _vm.focus),
-              confirmType: _vm._$s(2, "a-confirmType", _vm.confirmType),
-              "cursor-spacing": _vm._$s(
-                2,
-                "a-cursor-spacing",
-                _vm.getCursorSpacing
-              ),
-              "selection-end": _vm._$s(2, "a-selection-end", _vm.uSelectionEnd),
-              "selection-start": _vm._$s(
-                2,
-                "a-selection-start",
-                _vm.uSelectionStart
-              ),
-              "show-confirm-bar": _vm._$s(
-                2,
-                "a-show-confirm-bar",
-                _vm.showConfirmbar
-              ),
-              _i: 2
-            },
-            on: {
-              focus: _vm.onFocus,
-              blur: _vm.handleBlur,
-              input: _vm.handleInput,
-              confirm: _vm.onConfirm
-            }
-          }),
-      _c(
-        "view",
-        {
-          staticClass: _vm._$s(3, "sc", "u-input__right-icon u-flex"),
-          attrs: { _i: 3 }
-        },
-        [
-          _vm._$s(4, "i", _vm.clearable && _vm.value != "" && _vm.focused)
-            ? _c(
-                "view",
-                {
-                  staticClass: _vm._$s(
-                    4,
-                    "sc",
-                    "u-input__right-icon__clear u-input__right-icon__item"
-                  ),
-                  attrs: { _i: 4 },
-                  on: { click: _vm.onClear }
-                },
-                [
-                  _c("u-icon", {
-                    attrs: {
-                      size: "32",
-                      name: "close-circle-fill",
-                      color: "#c0c4cc",
-                      _i: 5
-                    }
-                  })
-                ],
-                1
-              )
-            : _vm._e(),
-          _vm._$s(6, "i", _vm.passwordIcon && _vm.type == "password")
-            ? _c(
-                "view",
-                {
-                  staticClass: _vm._$s(
-                    6,
-                    "sc",
-                    "u-input__right-icon__clear u-input__right-icon__item"
-                  ),
-                  attrs: { _i: 6 }
-                },
-                [
-                  _c("u-icon", {
-                    attrs: {
-                      size: "32",
-                      name: !_vm.showPassword ? "eye" : "eye-fill",
-                      color: "#c0c4cc",
-                      _i: 7
-                    },
-                    on: {
-                      click: function($event) {
-                        _vm.showPassword = !_vm.showPassword
-                      }
-                    }
-                  })
-                ],
-                1
-              )
-            : _vm._e(),
-          _vm._$s(8, "i", _vm.type == "select")
-            ? _c(
-                "view",
-                {
-                  staticClass: _vm._$s(
-                    8,
-                    "sc",
-                    "u-input__right-icon--select u-input__right-icon__item"
-                  ),
-                  class: _vm._$s(8, "c", {
-                    "u-input__right-icon--select--reverse": _vm.selectOpen
-                  }),
-                  attrs: { _i: 8 }
-                },
-                [
-                  _c("u-icon", {
-                    attrs: {
-                      name: "arrow-down-fill",
-                      size: "26",
-                      color: "#c0c4cc",
-                      _i: 9
-                    }
-                  })
-                ],
-                1
-              )
-            : _vm._e()
-        ]
-      )
-    ]
-  )
-}
-var recyclableRender = false
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
+/* 21 */,
 /* 22 */
 /*!************************************************************************************************************************************!*\
   !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-icon/u-icon.vue ***!
   \************************************************************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _u_icon_vue_vue_type_template_id_172979f2_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./u-icon.vue?vue&type=template&id=172979f2&scoped=true& */ 23);
-/* harmony import */ var _u_icon_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./u-icon.vue?vue&type=script&lang=js& */ 25);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _u_icon_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _u_icon_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js */ 10);
-
-var renderjs
-
-
-
-
-/* normalize component */
-
-var component = Object(_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _u_icon_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _u_icon_vue_vue_type_template_id_172979f2_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _u_icon_vue_vue_type_template_id_172979f2_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  "172979f2",
-  null,
-  false,
-  _u_icon_vue_vue_type_template_id_172979f2_scoped_true___WEBPACK_IMPORTED_MODULE_0__["components"],
-  renderjs
-)
-
-component.options.__file = "node_modules/uview-ui/components/u-icon/u-icon.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+throw new Error("Module build failed (from ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/index.js):\nError: ENOENT: no such file or directory, open '/Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-icon/u-icon.vue'");
 
 /***/ }),
-/* 23 */
-/*!*******************************************************************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-icon/u-icon.vue?vue&type=template&id=172979f2&scoped=true& ***!
-  \*******************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns, recyclableRender, components */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_icon_vue_vue_type_template_id_172979f2_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--10-0!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/filter-modules-template.js!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./u-icon.vue?vue&type=template&id=172979f2&scoped=true& */ 24);
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_icon_vue_vue_type_template_id_172979f2_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_icon_vue_vue_type_template_id_172979f2_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_icon_vue_vue_type_template_id_172979f2_scoped_true___WEBPACK_IMPORTED_MODULE_0__["recyclableRender"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "components", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_icon_vue_vue_type_template_id_172979f2_scoped_true___WEBPACK_IMPORTED_MODULE_0__["components"]; });
-
-
-
-/***/ }),
-/* 24 */
-/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--10-0!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/filter-modules-template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!/Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-icon/u-icon.vue?vue&type=template&id=172979f2&scoped=true& ***!
-  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns, recyclableRender, components */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
-var components
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "view",
-    {
-      staticClass: _vm._$s(0, "sc", "u-icon"),
-      class: _vm._$s(0, "c", ["u-icon--" + _vm.labelPos]),
-      style: _vm._$s(0, "s", [_vm.customStyle]),
-      attrs: { _i: 0 },
-      on: { click: _vm.click }
-    },
-    [
-      _vm._$s(1, "i", _vm.isImg)
-        ? _c("image", {
-            staticClass: _vm._$s(1, "sc", "u-icon__img"),
-            style: _vm._$s(1, "s", [_vm.imgStyle]),
-            attrs: {
-              src: _vm._$s(1, "a-src", _vm.name),
-              mode: _vm._$s(1, "a-mode", _vm.imgMode),
-              _i: 1
-            }
-          })
-        : _c(
-            "text",
-            {
-              staticClass: _vm._$s(2, "sc", "u-icon__icon"),
-              class: _vm._$s(2, "c", _vm.customClass),
-              style: _vm._$s(2, "s", [_vm.iconStyle]),
-              attrs: {
-                "hover-class": _vm._$s(2, "a-hover-class", _vm.hoverClass),
-                _i: 2
-              },
-              on: { touchstart: _vm.touchstart }
-            },
-            [
-              _vm._$s(3, "i", _vm.showDecimalIcon)
-                ? _c("text", {
-                    staticClass: _vm._$s(3, "sc", "u-icon__decimal"),
-                    class: _vm._$s(3, "c", _vm.decimalIconClass),
-                    style: _vm._$s(3, "s", [_vm.decimalIconStyle]),
-                    attrs: {
-                      "hover-class": _vm._$s(
-                        3,
-                        "a-hover-class",
-                        _vm.hoverClass
-                      ),
-                      _i: 3
-                    }
-                  })
-                : _vm._e()
-            ]
-          ),
-      _vm._$s(4, "i", _vm.label !== "")
-        ? _c(
-            "text",
-            {
-              staticClass: _vm._$s(4, "sc", "u-icon__label"),
-              style: _vm._$s(4, "s", {
-                color: _vm.labelColor,
-                fontSize: _vm.$u.addUnit(_vm.labelSize),
-                marginLeft:
-                  _vm.labelPos == "right" ? _vm.$u.addUnit(_vm.marginLeft) : 0,
-                marginTop:
-                  _vm.labelPos == "bottom" ? _vm.$u.addUnit(_vm.marginTop) : 0,
-                marginRight:
-                  _vm.labelPos == "left" ? _vm.$u.addUnit(_vm.marginRight) : 0,
-                marginBottom:
-                  _vm.labelPos == "top" ? _vm.$u.addUnit(_vm.marginBottom) : 0
-              }),
-              attrs: { _i: 4 }
-            },
-            [_vm._v(_vm._$s(4, "t0-0", _vm._s(_vm.label)))]
-          )
-        : _vm._e()
-    ]
-  )
-}
-var recyclableRender = false
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-/* 25 */
-/*!*************************************************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-icon/u-icon.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_icon_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/babel-loader/lib!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-1!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/using-components.js!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./u-icon.vue?vue&type=script&lang=js& */ 26);
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_icon_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_icon_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_icon_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_icon_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_icon_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default.a); 
-
-/***/ }),
-/* 26 */
-/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/using-components.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!/Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-icon/u-icon.vue?vue&type=script&lang=js& ***!
-  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/**
- * icon 图标
- * @description 基于字体的图标集，包含了大多数常见场景的图标。
- * @tutorial https://www.uviewui.com/components/icon.html
- * @property {String} name 图标名称，见示例图标集
- * @property {String} color 图标颜色（默认inherit）
- * @property {String | Number} size 图标字体大小，单位rpx（默认32）
- * @property {String | Number} label-size label字体大小，单位rpx（默认28）
- * @property {String} label 图标右侧的label文字（默认28）
- * @property {String} label-pos label文字相对于图标的位置，只能right或bottom（默认right）
- * @property {String} label-color label字体颜色（默认#606266）
- * @property {Object} custom-style icon的样式，对象形式
- * @property {String} custom-prefix 自定义字体图标库时，需要写上此值
- * @property {String | Number} margin-left label在右侧时与图标的距离，单位rpx（默认6）
- * @property {String | Number} margin-top label在下方时与图标的距离，单位rpx（默认6）
- * @property {String | Number} margin-bottom label在上方时与图标的距离，单位rpx（默认6）
- * @property {String | Number} margin-right label在左侧时与图标的距离，单位rpx（默认6）
- * @property {String} label-pos label相对于图标的位置，只能right或bottom（默认right）
- * @property {String} index 一个用于区分多个图标的值，点击图标时通过click事件传出
- * @property {String} hover-class 图标按下去的样式类，用法同uni的view组件的hover-class参数，详情见官网
- * @property {String} width 显示图片小图标时的宽度
- * @property {String} height 显示图片小图标时的高度
- * @property {String} top 图标在垂直方向上的定位
- * @property {String} top 图标在垂直方向上的定位
- * @property {String} top 图标在垂直方向上的定位
- * @property {Boolean} show-decimal-icon 是否为DecimalIcon
- * @property {String} inactive-color 背景颜色，可接受主题色，仅Decimal时有效
- * @property {String | Number} percent 显示的百分比，仅Decimal时有效
- * @event {Function} click 点击图标时触发
- * @example <u-icon name="photo" color="#2979ff" size="28"></u-icon>
- */var _default2 =
-{
-  name: 'u-icon',
-  props: {
-    // 图标类名
-    name: {
-      type: String,
-      default: '' },
-
-    // 图标颜色，可接受主题色
-    color: {
-      type: String,
-      default: '' },
-
-    // 字体大小，单位rpx
-    size: {
-      type: [Number, String],
-      default: 'inherit' },
-
-    // 是否显示粗体
-    bold: {
-      type: Boolean,
-      default: false },
-
-    // 点击图标的时候传递事件出去的index（用于区分点击了哪一个）
-    index: {
-      type: [Number, String],
-      default: '' },
-
-    // 触摸图标时的类名
-    hoverClass: {
-      type: String,
-      default: '' },
-
-    // 自定义扩展前缀，方便用户扩展自己的图标库
-    customPrefix: {
-      type: String,
-      default: 'uicon' },
-
-    // 图标右边或者下面的文字
-    label: {
-      type: [String, Number],
-      default: '' },
-
-    // label的位置，只能右边或者下边
-    labelPos: {
-      type: String,
-      default: 'right' },
-
-    // label的大小
-    labelSize: {
-      type: [String, Number],
-      default: '28' },
-
-    // label的颜色
-    labelColor: {
-      type: String,
-      default: '#606266' },
-
-    // label与图标的距离(横向排列)
-    marginLeft: {
-      type: [String, Number],
-      default: '6' },
-
-    // label与图标的距离(竖向排列)
-    marginTop: {
-      type: [String, Number],
-      default: '6' },
-
-    // label与图标的距离(竖向排列)
-    marginRight: {
-      type: [String, Number],
-      default: '6' },
-
-    // label与图标的距离(竖向排列)
-    marginBottom: {
-      type: [String, Number],
-      default: '6' },
-
-    // 图片的mode
-    imgMode: {
-      type: String,
-      default: 'widthFix' },
-
-    // 自定义样式
-    customStyle: {
-      type: Object,
-      default: function _default() {
-        return {};
-      } },
-
-    // 用于显示图片小图标时，图片的宽度
-    width: {
-      type: [String, Number],
-      default: '' },
-
-    // 用于显示图片小图标时，图片的高度
-    height: {
-      type: [String, Number],
-      default: '' },
-
-    // 用于解决某些情况下，让图标垂直居中的用途
-    top: {
-      type: [String, Number],
-      default: 0 },
-
-    // 是否为DecimalIcon
-    showDecimalIcon: {
-      type: Boolean,
-      default: false },
-
-    // 背景颜色，可接受主题色，仅Decimal时有效
-    inactiveColor: {
-      type: String,
-      default: '#ececec' },
-
-    // 显示的百分比，仅Decimal时有效
-    percent: {
-      type: [Number, String],
-      default: '50' } },
-
-
-  computed: {
-    customClass: function customClass() {
-      var classes = [];
-      classes.push(this.customPrefix + '-' + this.name);
-      // uView的自定义图标类名为u-iconfont
-      if (this.customPrefix == 'uicon') {
-        classes.push('u-iconfont');
-      } else {
-        classes.push(this.customPrefix);
-      }
-      // 主题色，通过类配置
-      if (this.showDecimalIcon && this.inactiveColor && this.$u.config.type.includes(this.inactiveColor)) {
-        classes.push('u-icon__icon--' + this.inactiveColor);
-      } else if (this.color && this.$u.config.type.includes(this.color)) classes.push('u-icon__icon--' + this.color);
-      // 阿里，头条，百度小程序通过数组绑定类名时，无法直接使用[a, b, c]的形式，否则无法识别
-      // 故需将其拆成一个字符串的形式，通过空格隔开各个类名
-
-
-
-      return classes;
-    },
-    iconStyle: function iconStyle() {
-      var style = {};
-      style = {
-        fontSize: this.size == 'inherit' ? 'inherit' : this.$u.addUnit(this.size),
-        fontWeight: this.bold ? 'bold' : 'normal',
-        // 某些特殊情况需要设置一个到顶部的距离，才能更好的垂直居中
-        top: this.$u.addUnit(this.top) };
-
-      // 非主题色值时，才当作颜色值
-      if (this.showDecimalIcon && this.inactiveColor && !this.$u.config.type.includes(this.inactiveColor)) {
-        style.color = this.inactiveColor;
-      } else if (this.color && !this.$u.config.type.includes(this.color)) style.color = this.color;
-
-      return style;
-    },
-    // 判断传入的name属性，是否图片路径，只要带有"/"均认为是图片形式
-    isImg: function isImg() {
-      return this.name.indexOf('/') !== -1;
-    },
-    imgStyle: function imgStyle() {
-      var style = {};
-      // 如果设置width和height属性，则优先使用，否则使用size属性
-      style.width = this.width ? this.$u.addUnit(this.width) : this.$u.addUnit(this.size);
-      style.height = this.height ? this.$u.addUnit(this.height) : this.$u.addUnit(this.size);
-      return style;
-    },
-    decimalIconStyle: function decimalIconStyle() {
-      var style = {};
-      style = {
-        fontSize: this.size == 'inherit' ? 'inherit' : this.$u.addUnit(this.size),
-        fontWeight: this.bold ? 'bold' : 'normal',
-        // 某些特殊情况需要设置一个到顶部的距离，才能更好的垂直居中
-        top: this.$u.addUnit(this.top),
-        width: this.percent + '%' };
-
-      // 非主题色值时，才当作颜色值
-      if (this.color && !this.$u.config.type.includes(this.color)) style.color = this.color;
-      return style;
-    },
-    decimalIconClass: function decimalIconClass() {
-      var classes = [];
-      classes.push(this.customPrefix + '-' + this.name);
-      // uView的自定义图标类名为u-iconfont
-      if (this.customPrefix == 'uicon') {
-        classes.push('u-iconfont');
-      } else {
-        classes.push(this.customPrefix);
-      }
-      // 主题色，通过类配置
-      if (this.color && this.$u.config.type.includes(this.color)) classes.push('u-icon__icon--' + this.color);else
-      classes.push('u-icon__icon--primary');
-      // 阿里，头条，百度小程序通过数组绑定类名时，无法直接使用[a, b, c]的形式，否则无法识别
-      // 故需将其拆成一个字符串的形式，通过空格隔开各个类名
-
-
-
-      return classes;
-    } },
-
-  methods: {
-    click: function click() {
-      this.$emit('click', this.index);
-    },
-    touchstart: function touchstart() {
-      this.$emit('touchstart', this.index);
-    } } };exports.default = _default2;
-
-/***/ }),
-/* 27 */
-/*!***************************************************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-input/u-input.vue?vue&type=script&lang=js& ***!
-  \***************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_input_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/babel-loader/lib!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-1!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/using-components.js!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./u-input.vue?vue&type=script&lang=js& */ 28);
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_input_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_input_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_input_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_input_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_input_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default.a); 
-
-/***/ }),
-/* 28 */
-/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/using-components.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!/Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-input/u-input.vue?vue&type=script&lang=js& ***!
-  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var _emitter = _interopRequireDefault(__webpack_require__(/*! ../../libs/util/emitter.js */ 29));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/**
- * input 输入框
- * @description 此组件为一个输入框，默认没有边框和样式，是专门为配合表单组件u-form而设计的，利用它可以快速实现表单验证，输入内容，下拉选择等功能。
- * @tutorial http://uviewui.com/components/input.html
- * @property {String} type 模式选择，见官网说明
- * @property {Boolean} clearable 是否显示右侧的清除图标(默认true)
- * @property {} v-model 用于双向绑定输入框的值
- * @property {String} input-align 输入框文字的对齐方式(默认left)
- * @property {String} placeholder placeholder显示值(默认 '请输入内容')
- * @property {Boolean} disabled 是否禁用输入框(默认false)
- * @property {String Number} maxlength 输入框的最大可输入长度(默认140)
- * @property {String Number} selection-start 光标起始位置，自动聚焦时有效，需与selection-end搭配使用（默认-1）
- * @property {String Number} maxlength 光标结束位置，自动聚焦时有效，需与selection-start搭配使用（默认-1）
- * @property {String Number} cursor-spacing 指定光标与键盘的距离，单位px(默认0)
- * @property {String} placeholderStyle placeholder的样式，字符串形式，如"color: red;"(默认 "color: #c0c4cc;")
- * @property {String} confirm-type 设置键盘右下角按钮的文字，仅在type为text时生效(默认done)
- * @property {Object} custom-style 自定义输入框的样式，对象形式
- * @property {Boolean} focus 是否自动获得焦点(默认false)
- * @property {Boolean} fixed 如果type为textarea，且在一个"position:fixed"的区域，需要指明为true(默认false)
- * @property {Boolean} password-icon type为password时，是否显示右侧的密码查看图标(默认true)
- * @property {Boolean} border 是否显示边框(默认false)
- * @property {String} border-color 输入框的边框颜色(默认#dcdfe6)
- * @property {Boolean} auto-height 是否自动增高输入区域，type为textarea时有效(默认true)
- * @property {String Number} height 高度，单位rpx(text类型时为70，textarea时为100)
- * @example <u-input v-model="value" :type="type" :border="border" />
- */var _default2 = { name: 'u-input', mixins: [_emitter.default], props: { value: { type: [String, Number], default: '' }, // 输入框的类型，textarea，text，number
-    type: { type: String, default: 'text' }, inputAlign: { type: String, default: 'left' }, placeholder: { type: String, default: '请输入内容' }, disabled: { type: Boolean, default: false }, maxlength: { type: [Number, String], default: 140 }, placeholderStyle: { type: String, default: 'color: #c0c4cc;' }, confirmType: { type: String, default: 'done' }, // 输入框的自定义样式
-    customStyle: { type: Object, default: function _default() {return {};} }, // 如果 textarea 是在一个 position:fixed 的区域，需要显示指定属性 fixed 为 true
-    fixed: { type: Boolean, default: false }, // 是否自动获得焦点
-    focus: { type: Boolean, default: false }, // 密码类型时，是否显示右侧的密码图标
-    passwordIcon: { type: Boolean, default: true }, // input|textarea是否显示边框
-    border: { type: Boolean, default: false }, // 输入框的边框颜色
-    borderColor: { type: String, default: '#dcdfe6' }, autoHeight: { type: Boolean, default: true }, // type=select时，旋转右侧的图标，标识当前处于打开还是关闭select的状态
-    // open-打开，close-关闭
-    selectOpen: { type: Boolean, default: false }, // 高度，单位rpx
-    height: {
-      type: [Number, String],
-      default: '' },
-
-    // 是否可清空
-    clearable: {
-      type: Boolean,
-      default: true },
-
-    // 指定光标与键盘的距离，单位 px
-    cursorSpacing: {
-      type: [Number, String],
-      default: 0 },
-
-    // 光标起始位置，自动聚焦时有效，需与selection-end搭配使用
-    selectionStart: {
-      type: [Number, String],
-      default: -1 },
-
-    // 光标结束位置，自动聚焦时有效，需与selection-start搭配使用
-    selectionEnd: {
-      type: [Number, String],
-      default: -1 },
-
-    // 是否自动去除两端的空格
-    trim: {
-      type: Boolean,
-      default: true },
-
-    // 是否显示键盘上方带有”完成“按钮那一栏
-    showConfirmbar: {
-      type: Boolean,
-      default: true } },
-
-
-  data: function data() {
-    return {
-      defaultValue: this.value,
-      inputHeight: 70, // input的高度
-      textareaHeight: 100, // textarea的高度
-      validateState: false, // 当前input的验证状态，用于错误时，边框是否改为红色
-      focused: false, // 当前是否处于获得焦点的状态
-      showPassword: false, // 是否预览密码
-      lastValue: '' // 用于头条小程序，判断@input中，前后的值是否发生了变化，因为头条中文下，按下键没有输入内容，也会触发@input时间
-    };
-  },
-  watch: {
-    value: function value(nVal, oVal) {
-      this.defaultValue = nVal;
-      // 当值发生变化，且为select类型时(此时input被设置为disabled，不会触发@input事件)，模拟触发@input事件
-      if (nVal != oVal && this.type == 'select') this.handleInput({
-        detail: {
-          value: nVal } });
-
-
-    } },
-
-  computed: {
-    // 因为uniapp的input组件的maxlength组件必须要数值，这里转为数值，给用户可以传入字符串数值
-    inputMaxlength: function inputMaxlength() {
-      return Number(this.maxlength);
-    },
-    getStyle: function getStyle() {
-      var style = {};
-      // 如果没有自定义高度，就根据type为input还是textare来分配一个默认的高度
-      style.minHeight = this.height ? this.height + 'rpx' : this.type == 'textarea' ?
-      this.textareaHeight + 'rpx' : this.inputHeight + 'rpx';
-      style = Object.assign(style, this.customStyle);
-      return style;
-    },
-    //
-    getCursorSpacing: function getCursorSpacing() {
-      return Number(this.cursorSpacing);
-    },
-    // 光标起始位置
-    uSelectionStart: function uSelectionStart() {
-      return String(this.selectionStart);
-    },
-    // 光标结束位置
-    uSelectionEnd: function uSelectionEnd() {
-      return String(this.selectionEnd);
-    } },
-
-  created: function created() {
-    // 监听u-form-item发出的错误事件，将输入框边框变红色
-    this.$on('on-form-item-error', this.onFormItemError);
-  },
-  methods: {
-    /**
-              * change 事件
-              * @param event
-              */
-    handleInput: function handleInput(event) {var _this = this;
-      var value = event.detail.value;
-      // 判断是否去除空格
-      if (this.trim) value = this.$u.trim(value);
-      // vue 原生的方法 return 出去
-      this.$emit('input', value);
-      // 当前model 赋值
-      this.defaultValue = value;
-      // 过一个生命周期再发送事件给u-form-item，否则this.$emit('input')更新了父组件的值，但是微信小程序上
-      // 尚未更新到u-form-item，导致获取的值为空，从而校验混论
-      // 这里不能延时时间太短，或者使用this.$nextTick，否则在头条上，会造成混乱
-      setTimeout(function () {
-        // 头条小程序由于自身bug，导致中文下，每按下一个键(尚未完成输入)，都会触发一次@input，导致错误，这里进行判断处理
-
-
-
-
-        // 将当前的值发送到 u-form-item 进行校验
-        _this.dispatch('u-form-item', 'on-form-change', value);
-      }, 40);
-    },
-    /**
-        * blur 事件
-        * @param event
-        */
-    handleBlur: function handleBlur(event) {var _this2 = this;
-      // 最开始使用的是监听图标@touchstart事件，自从hx2.8.4后，此方法在微信小程序出错
-      // 这里改为监听点击事件，手点击清除图标时，同时也发生了@blur事件，导致图标消失而无法点击，这里做一个延时
-      setTimeout(function () {
-        _this2.focused = false;
-      }, 100);
-      // vue 原生的方法 return 出去
-      this.$emit('blur', event.detail.value);
-      setTimeout(function () {
-        // 头条小程序由于自身bug，导致中文下，每按下一个键(尚未完成输入)，都会触发一次@input，导致错误，这里进行判断处理
-
-
-
-
-        // 将当前的值发送到 u-form-item 进行校验
-        _this2.dispatch('u-form-item', 'on-form-blur', event.detail.value);
-      }, 40);
-    },
-    onFormItemError: function onFormItemError(status) {
-      this.validateState = status;
-    },
-    onFocus: function onFocus(event) {
-      this.focused = true;
-      this.$emit('focus');
-    },
-    onConfirm: function onConfirm(e) {
-      this.$emit('confirm', e.detail.value);
-    },
-    onClear: function onClear(event) {
-      this.$emit('input', '');
-    },
-    inputClick: function inputClick() {
-      this.$emit('click');
-    } } };exports.default = _default2;
-
-/***/ }),
-/* 29 */
-/*!****************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/libs/util/emitter.js ***!
-  \****************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; /**
-                                                                                                      * 递归使用 call 方式this指向
-                                                                                                      * @param componentName // 需要找的组件的名称
-                                                                                                      * @param eventName // 事件名称
-                                                                                                      * @param params // 需要传递的参数
-                                                                                                      */
-function _broadcast(componentName, eventName, params) {
-  // 循环子节点找到名称一样的子节点 否则 递归 当前子节点
-  this.$children.map(function (child) {
-    if (componentName === child.$options.name) {
-      child.$emit.apply(child, [eventName].concat(params));
-    } else {
-      _broadcast.apply(child, [componentName, eventName].concat(params));
-    }
-  });
-}var _default =
-{
-  methods: {
-    /**
-              * 派发 (向上查找) (一个)
-              * @param componentName // 需要找的组件的名称
-              * @param eventName // 事件名称
-              * @param params // 需要传递的参数
-              */
-    dispatch: function dispatch(componentName, eventName, params) {
-      var parent = this.$parent || this.$root; //$parent 找到最近的父节点 $root 根节点
-      var name = parent.$options.name; // 获取当前组件实例的name
-      // 如果当前有节点 && 当前没名称 且 当前名称等于需要传进来的名称的时候就去查找当前的节点
-      // 循环出当前名称的一样的组件实例
-      while (parent && (!name || name !== componentName)) {
-        parent = parent.$parent;
-        if (parent) {
-          name = parent.$options.name;
-        }
-      }
-      // 有节点表示当前找到了name一样的实例
-      if (parent) {
-        parent.$emit.apply(parent, [eventName].concat(params));
-      }
-    },
-    /**
-        * 广播 (向下查找) (广播多个)
-        * @param componentName // 需要找的组件的名称
-        * @param eventName // 事件名称
-        * @param params // 需要传递的参数
-        */
-    broadcast: function broadcast(componentName, eventName, params) {
-      _broadcast.call(this, componentName, eventName, params);
-    } } };exports.default = _default;
-
-/***/ }),
+/* 23 */,
+/* 24 */,
+/* 25 */,
+/* 26 */,
+/* 27 */,
+/* 28 */,
+/* 29 */,
 /* 30 */
 /*!**********************************************************************************************************************************!*\
   !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-row/u-row.vue ***!
   \**********************************************************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _u_row_vue_vue_type_template_id_bf124e26___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./u-row.vue?vue&type=template&id=bf124e26& */ 31);
-/* harmony import */ var _u_row_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./u-row.vue?vue&type=script&lang=js& */ 33);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _u_row_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _u_row_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js */ 10);
-
-var renderjs
-
-
-
-
-/* normalize component */
-
-var component = Object(_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _u_row_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _u_row_vue_vue_type_template_id_bf124e26___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _u_row_vue_vue_type_template_id_bf124e26___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null,
-  false,
-  _u_row_vue_vue_type_template_id_bf124e26___WEBPACK_IMPORTED_MODULE_0__["components"],
-  renderjs
-)
-
-component.options.__file = "node_modules/uview-ui/components/u-row/u-row.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+throw new Error("Module build failed (from ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/index.js):\nError: ENOENT: no such file or directory, open '/Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-row/u-row.vue'");
 
 /***/ }),
-/* 31 */
-/*!*****************************************************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-row/u-row.vue?vue&type=template&id=bf124e26& ***!
-  \*****************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns, recyclableRender, components */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_row_vue_vue_type_template_id_bf124e26___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--10-0!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/filter-modules-template.js!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./u-row.vue?vue&type=template&id=bf124e26& */ 32);
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_row_vue_vue_type_template_id_bf124e26___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_row_vue_vue_type_template_id_bf124e26___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_row_vue_vue_type_template_id_bf124e26___WEBPACK_IMPORTED_MODULE_0__["recyclableRender"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "components", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_row_vue_vue_type_template_id_bf124e26___WEBPACK_IMPORTED_MODULE_0__["components"]; });
-
-
-
-/***/ }),
-/* 32 */
-/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--10-0!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/filter-modules-template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!/Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-row/u-row.vue?vue&type=template&id=bf124e26& ***!
-  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns, recyclableRender, components */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
-var components
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "view",
-    {
-      staticClass: _vm._$s(0, "sc", "u-row"),
-      style: _vm._$s(0, "s", {
-        alignItems: _vm.uAlignItem,
-        justifyContent: _vm.uJustify
-      }),
-      attrs: { _i: 0 },
-      on: { click: _vm.click }
-    },
-    [_vm._t("default", null, { _i: 1 })],
-    2
-  )
-}
-var recyclableRender = false
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-/* 33 */
-/*!***********************************************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-row/u-row.vue?vue&type=script&lang=js& ***!
-  \***********************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_row_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/babel-loader/lib!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-1!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/using-components.js!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./u-row.vue?vue&type=script&lang=js& */ 34);
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_row_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_row_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_row_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_row_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_row_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default.a); 
-
-/***/ }),
-/* 34 */
-/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/using-components.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!/Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-row/u-row.vue?vue&type=script&lang=js& ***!
-  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/**
- * row 行布局
- * @description 通过基础的 12 分栏，迅速简便地创建布局。
- * @tutorial https://www.uviewui.com/components/layout.html#row-props
- * @property {String Number} gutter 栅格间隔，左右各为此值的一半，单位rpx（默认0）
- * @property {String} justify 水平排列方式(微信小程序暂不支持)默认（start(或flex-start)）
- * @property {String} align 垂直排列方式（默认center）
- * @example <u-row gutter="16"></u-row>
- */var _default =
-{
-  name: "u-row",
-  props: {
-    // 给col添加间距，左右边距各占一半
-    gutter: {
-      type: [String, Number],
-      default: 20 },
-
-    // 水平排列方式，可选值为`start`(或`flex-start`)、`end`(或`flex-end`)、`center`、`around`(或`space-around`)、`between`(或`space-between`)
-    justify: {
-      type: String,
-      default: 'start' },
-
-    // 垂直对齐方式，可选值为top、center、bottom
-    align: {
-      type: String,
-      default: 'center' },
-
-    // 是否阻止事件传播
-    stop: {
-      type: Boolean,
-      default: true } },
-
-
-  computed: {
-    uJustify: function uJustify() {
-      if (this.justify == 'end' || this.justify == 'start') return 'flex-' + this.justify;else
-      if (this.justify == 'around' || this.justify == 'between') return 'space-' + this.justify;else
-      return this.justify;
-    },
-    uAlignItem: function uAlignItem() {
-      if (this.align == 'top') return 'flex-start';
-      if (this.align == 'bottom') return 'flex-end';else
-      return this.align;
-    } },
-
-  methods: {
-    click: function click(e) {
-      this.$emit('click');
-    } } };exports.default = _default;
-
-/***/ }),
+/* 31 */,
+/* 32 */,
+/* 33 */,
+/* 34 */,
 /* 35 */
 /*!**********************************************************************************************************************************!*\
   !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-col/u-col.vue ***!
   \**********************************************************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _u_col_vue_vue_type_template_id_26dd4db9___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./u-col.vue?vue&type=template&id=26dd4db9& */ 36);
-/* harmony import */ var _u_col_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./u-col.vue?vue&type=script&lang=js& */ 38);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _u_col_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _u_col_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js */ 10);
-
-var renderjs
-
-
-
-
-/* normalize component */
-
-var component = Object(_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _u_col_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _u_col_vue_vue_type_template_id_26dd4db9___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _u_col_vue_vue_type_template_id_26dd4db9___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null,
-  false,
-  _u_col_vue_vue_type_template_id_26dd4db9___WEBPACK_IMPORTED_MODULE_0__["components"],
-  renderjs
-)
-
-component.options.__file = "node_modules/uview-ui/components/u-col/u-col.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+throw new Error("Module build failed (from ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/index.js):\nError: ENOENT: no such file or directory, open '/Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-col/u-col.vue'");
 
 /***/ }),
-/* 36 */
-/*!*****************************************************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-col/u-col.vue?vue&type=template&id=26dd4db9& ***!
-  \*****************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns, recyclableRender, components */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_col_vue_vue_type_template_id_26dd4db9___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--10-0!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/filter-modules-template.js!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./u-col.vue?vue&type=template&id=26dd4db9& */ 37);
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_col_vue_vue_type_template_id_26dd4db9___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_col_vue_vue_type_template_id_26dd4db9___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_col_vue_vue_type_template_id_26dd4db9___WEBPACK_IMPORTED_MODULE_0__["recyclableRender"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "components", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_col_vue_vue_type_template_id_26dd4db9___WEBPACK_IMPORTED_MODULE_0__["components"]; });
-
-
-
-/***/ }),
-/* 37 */
-/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--10-0!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/filter-modules-template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!/Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-col/u-col.vue?vue&type=template&id=26dd4db9& ***!
-  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns, recyclableRender, components */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
-var components
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "view",
-    {
-      staticClass: _vm._$s(0, "sc", "u-col"),
-      class: _vm._$s(0, "c", ["u-col-" + _vm.span]),
-      style: _vm._$s(0, "s", {
-        padding: "0 " + (Number(_vm.gutter) / 2 + "rpx"),
-        marginLeft: (100 / 12) * _vm.offset + "%",
-        flex: "0 0 " + (100 / 12) * _vm.span + "%",
-        alignItems: _vm.uAlignItem,
-        justifyContent: _vm.uJustify,
-        textAlign: _vm.textAlign
-      }),
-      attrs: { _i: 0 },
-      on: { click: _vm.click }
-    },
-    [_vm._t("default", null, { _i: 1 })],
-    2
-  )
-}
-var recyclableRender = false
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-/* 38 */
-/*!***********************************************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-col/u-col.vue?vue&type=script&lang=js& ***!
-  \***********************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_col_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/babel-loader/lib!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-1!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/using-components.js!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./u-col.vue?vue&type=script&lang=js& */ 39);
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_col_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_col_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_col_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_col_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_col_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default.a); 
-
-/***/ }),
-/* 39 */
-/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/using-components.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!/Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-col/u-col.vue?vue&type=script&lang=js& ***!
-  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/**
- * col 布局单元格
- * @description 通过基础的 12 分栏，迅速简便地创建布局（搭配<u-row>使用）
- * @tutorial https://www.uviewui.com/components/layout.html
- * @property {String Number} span 栅格占据的列数，总12等分（默认0）
- * @property {String} text-align 文字水平对齐方式（默认left）
- * @property {String Number} offset 分栏左边偏移，计算方式与span相同（默认0）
- * @example <u-col span="3"><view class="demo-layout bg-purple"></view></u-col>
- */var _default =
-{
-  name: "u-col",
-  props: {
-    // 占父容器宽度的多少等分，总分为12份
-    span: {
-      type: [Number, String],
-      default: 12 },
-
-    // 指定栅格左侧的间隔数(总12栏)
-    offset: {
-      type: [Number, String],
-      default: 0 },
-
-    // 水平排列方式，可选值为`start`(或`flex-start`)、`end`(或`flex-end`)、`center`、`around`(或`space-around`)、`between`(或`space-between`)
-    justify: {
-      type: String,
-      default: 'start' },
-
-    // 垂直对齐方式，可选值为top、center、bottom
-    align: {
-      type: String,
-      default: 'center' },
-
-    // 文字对齐方式
-    textAlign: {
-      type: String,
-      default: 'left' },
-
-    // 是否阻止事件传播
-    stop: {
-      type: Boolean,
-      default: true } },
-
-
-  data: function data() {
-    return {
-      gutter: 20 // 给col添加间距，左右边距各占一半，从父组件u-row获取
-    };
-  },
-  created: function created() {
-    this.parent = false;
-  },
-  mounted: function mounted() {
-    // 获取父组件实例，并赋值给对应的参数
-    this.parent = this.$u.$parent.call(this, 'u-row');
-    if (this.parent) {
-      this.gutter = this.parent.gutter;
-    }
-  },
-  computed: {
-    uJustify: function uJustify() {
-      if (this.justify == 'end' || this.justify == 'start') return 'flex-' + this.justify;else
-      if (this.justify == 'around' || this.justify == 'between') return 'space-' + this.justify;else
-      return this.justify;
-    },
-    uAlignItem: function uAlignItem() {
-      if (this.align == 'top') return 'flex-start';
-      if (this.align == 'bottom') return 'flex-end';else
-      return this.align;
-    } },
-
-  methods: {
-    click: function click(e) {
-      this.$emit('click');
-    } } };exports.default = _default;
-
-/***/ }),
+/* 36 */,
+/* 37 */,
+/* 38 */,
+/* 39 */,
 /* 40 */
 /*!********************************************************************************************************************!*\
   !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/components/hqs-popup/hqs-popup.vue ***!
@@ -4289,109 +2533,31 @@ var render = function() {
       ),
       _c(
         "view",
-        { staticClass: _vm._$s(43, "sc", "ncontent"), attrs: { _i: 43 } },
+        { staticClass: _vm._$s(43, "sc", "content"), attrs: { _i: 43 } },
         [
           _c(
             "view",
-            { staticClass: _vm._$s(44, "sc", "like-card"), attrs: { _i: 44 } },
+            {
+              staticClass: _vm._$s(44, "sc", "rank-card"),
+              attrs: { _i: 44 },
+              on: { click: _vm.goRanking }
+            },
             [
-              _c("text"),
               _c(
                 "view",
                 {
-                  staticClass: _vm._$s(46, "sc", "demo-layout bg-purple-light"),
-                  attrs: { _i: 46 }
+                  staticClass: _vm._$s(45, "sc", "rank-block"),
+                  attrs: { _i: 45 }
                 },
-                [
-                  _c("image", {
-                    attrs: {
-                      src: _vm._$s(
-                        47,
-                        "a-src",
-                        __webpack_require__(/*! ../../static/refresh.png */ 98)
-                      ),
-                      _i: 47
-                    },
-                    on: { click: _vm.refresh }
-                  })
-                ]
+                [_c("view"), _c("view")]
               ),
-              _vm._$s(48, "i", _vm.shopList.length == 0)
-                ? _c(
-                    "view",
-                    [
-                      _c("text"),
-                      _c(
-                        "u-button",
-                        {
-                          attrs: { shape: "circle", _i: 50 },
-                          on: { click: _vm.goGrocery }
-                        },
-                        [_vm._v("")]
-                      )
-                    ],
-                    1
-                  )
-                : _vm._e(),
               _c(
-                "scroll-view",
-                { attrs: { _i: 51 } },
-                [
-                  _vm._l(_vm._$s(52, "f", { forItems: _vm.shopList }), function(
-                    item,
-                    index,
-                    $20,
-                    $30
-                  ) {
-                    return [
-                      _c(
-                        "view",
-                        {
-                          key: _vm._$s(52, "f", {
-                            forIndex: $20,
-                            keyIndex: 0,
-                            key: 52 + "-0" + $30
-                          }),
-                          staticClass: _vm._$s(
-                            "53-" + $30,
-                            "sc",
-                            "scroll_item"
-                          ),
-                          style: _vm._$s("53-" + $30, "s", {
-                            "background-image": "url(" + item.picture + ")"
-                          }),
-                          attrs: { _i: "53-" + $30 }
-                        },
-                        [
-                          _c(
-                            "view",
-                            [
-                              _c(
-                                "u-button",
-                                {
-                                  attrs: { shape: "circle", _i: "55-" + $30 },
-                                  on: {
-                                    click: function($event) {
-                                      return _vm.deleteItem(item.pid)
-                                    }
-                                  }
-                                },
-                                [_vm._v("")]
-                              )
-                            ],
-                            1
-                          ),
-                          _c("text", [
-                            _vm._v(
-                              _vm._$s("56-" + $30, "t0-0", _vm._s(item.name))
-                            )
-                          ])
-                        ]
-                      )
-                    ]
-                  })
-                ],
-                2
+                "view",
+                {
+                  staticClass: _vm._$s(48, "sc", "rank-block"),
+                  attrs: { _i: 48 }
+                },
+                [_c("view"), _c("view")]
               )
             ]
           )
@@ -4399,23 +2565,23 @@ var render = function() {
       ),
       _c(
         "view",
-        { staticClass: _vm._$s(57, "sc", "ncontent"), attrs: { _i: 57 } },
+        { staticClass: _vm._$s(51, "sc", "ncontent"), attrs: { _i: 51 } },
         [
           _c(
             "view",
             [
               _c(
                 "u-button",
-                { attrs: { _i: 59 }, on: { click: _vm.goSetting } },
+                { attrs: { _i: 53 }, on: { click: _vm.goSetting } },
                 [
                   _c("image", {
                     attrs: {
                       src: _vm._$s(
-                        60,
+                        54,
                         "a-src",
                         __webpack_require__(/*! ../../static/setting.png */ 99)
                       ),
-                      _i: 60
+                      _i: 54
                     }
                   }),
                   _c("view"),
@@ -4428,7 +2594,7 @@ var render = function() {
         ]
       ),
       _c("u-tabbar", {
-        attrs: { list: _vm.tabbar, "mid-button": false, height: "55px", _i: 62 }
+        attrs: { list: _vm.tabbar, "mid-button": false, height: "55px", _i: 56 }
       })
     ],
     1
@@ -4446,1945 +2612,76 @@ render._withStripped = true
   !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-image/u-image.vue ***!
   \**************************************************************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _u_image_vue_vue_type_template_id_6dd0d12f_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./u-image.vue?vue&type=template&id=6dd0d12f&scoped=true& */ 63);
-/* harmony import */ var _u_image_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./u-image.vue?vue&type=script&lang=js& */ 65);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _u_image_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _u_image_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js */ 10);
-
-var renderjs
-
-
-
-
-/* normalize component */
-
-var component = Object(_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _u_image_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _u_image_vue_vue_type_template_id_6dd0d12f_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _u_image_vue_vue_type_template_id_6dd0d12f_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  "6dd0d12f",
-  null,
-  false,
-  _u_image_vue_vue_type_template_id_6dd0d12f_scoped_true___WEBPACK_IMPORTED_MODULE_0__["components"],
-  renderjs
-)
-
-component.options.__file = "node_modules/uview-ui/components/u-image/u-image.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+throw new Error("Module build failed (from ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/index.js):\nError: ENOENT: no such file or directory, open '/Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-image/u-image.vue'");
 
 /***/ }),
-/* 63 */
-/*!*********************************************************************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-image/u-image.vue?vue&type=template&id=6dd0d12f&scoped=true& ***!
-  \*********************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns, recyclableRender, components */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_image_vue_vue_type_template_id_6dd0d12f_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--10-0!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/filter-modules-template.js!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./u-image.vue?vue&type=template&id=6dd0d12f&scoped=true& */ 64);
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_image_vue_vue_type_template_id_6dd0d12f_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_image_vue_vue_type_template_id_6dd0d12f_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_image_vue_vue_type_template_id_6dd0d12f_scoped_true___WEBPACK_IMPORTED_MODULE_0__["recyclableRender"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "components", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_image_vue_vue_type_template_id_6dd0d12f_scoped_true___WEBPACK_IMPORTED_MODULE_0__["components"]; });
-
-
-
-/***/ }),
-/* 64 */
-/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--10-0!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/filter-modules-template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!/Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-image/u-image.vue?vue&type=template&id=6dd0d12f&scoped=true& ***!
-  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns, recyclableRender, components */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
-var components
-try {
-  components = {
-    uIcon: __webpack_require__(/*! uview-ui/components/u-icon/u-icon.vue */ 22).default
-  }
-} catch (e) {
-  if (
-    e.message.indexOf("Cannot find module") !== -1 &&
-    e.message.indexOf(".vue") !== -1
-  ) {
-    console.error(e.message)
-    console.error("1. 排查组件名称拼写是否正确")
-    console.error(
-      "2. 排查组件是否符合 easycom 规范，文档：https://uniapp.dcloud.net.cn/collocation/pages?id=easycom"
-    )
-    console.error(
-      "3. 若组件不符合 easycom 规范，需手动引入，并在 components 中注册该组件"
-    )
-  } else {
-    throw e
-  }
-}
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "view",
-    {
-      staticClass: _vm._$s(0, "sc", "u-image"),
-      style: _vm._$s(0, "s", [_vm.wrapStyle, _vm.backgroundStyle]),
-      attrs: { _i: 0 },
-      on: { click: _vm.onClick }
-    },
-    [
-      _vm._$s(1, "i", !_vm.isError)
-        ? _c("image", {
-            staticClass: _vm._$s(1, "sc", "u-image__image"),
-            style: _vm._$s(1, "s", {
-              borderRadius:
-                _vm.shape == "circle" ? "50%" : _vm.$u.addUnit(_vm.borderRadius)
-            }),
-            attrs: {
-              src: _vm._$s(1, "a-src", _vm.src),
-              mode: _vm._$s(1, "a-mode", _vm.mode),
-              "lazy-load": _vm._$s(1, "a-lazy-load", _vm.lazyLoad),
-              "show-menu-by-longpress": _vm._$s(
-                1,
-                "a-show-menu-by-longpress",
-                _vm.showMenuByLongpress
-              ),
-              _i: 1
-            },
-            on: { error: _vm.onErrorHandler, load: _vm.onLoadHandler }
-          })
-        : _vm._e(),
-      _vm._$s(2, "i", _vm.showLoading && _vm.loading)
-        ? _c(
-            "view",
-            {
-              staticClass: _vm._$s(2, "sc", "u-image__loading"),
-              style: _vm._$s(2, "s", {
-                borderRadius:
-                  _vm.shape == "circle"
-                    ? "50%"
-                    : _vm.$u.addUnit(_vm.borderRadius),
-                backgroundColor: this.bgColor
-              }),
-              attrs: { _i: 2 }
-            },
-            [
-              _vm._$s(3, "i", _vm.$slots.loading)
-                ? _vm._t("loading", null, { _i: 3 })
-                : _c("u-icon", {
-                    attrs: {
-                      name: _vm.loadingIcon,
-                      width: _vm.width,
-                      height: _vm.height,
-                      _i: 4
-                    }
-                  })
-            ],
-            2
-          )
-        : _vm._e(),
-      _vm._$s(5, "i", _vm.showError && _vm.isError && !_vm.loading)
-        ? _c(
-            "view",
-            {
-              staticClass: _vm._$s(5, "sc", "u-image__error"),
-              style: _vm._$s(5, "s", {
-                borderRadius:
-                  _vm.shape == "circle"
-                    ? "50%"
-                    : _vm.$u.addUnit(_vm.borderRadius)
-              }),
-              attrs: { _i: 5 }
-            },
-            [
-              _vm._$s(6, "i", _vm.$slots.error)
-                ? _vm._t("error", null, { _i: 6 })
-                : _c("u-icon", {
-                    attrs: {
-                      name: _vm.errorIcon,
-                      width: _vm.width,
-                      height: _vm.height,
-                      _i: 7
-                    }
-                  })
-            ],
-            2
-          )
-        : _vm._e()
-    ]
-  )
-}
-var recyclableRender = false
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-/* 65 */
-/*!***************************************************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-image/u-image.vue?vue&type=script&lang=js& ***!
-  \***************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_image_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/babel-loader/lib!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-1!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/using-components.js!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./u-image.vue?vue&type=script&lang=js& */ 66);
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_image_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_image_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_image_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_image_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_image_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default.a); 
-
-/***/ }),
-/* 66 */
-/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/using-components.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!/Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-image/u-image.vue?vue&type=script&lang=js& ***!
-  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/**
- * Image 图片
- * @description 此组件为uni-app的image组件的加强版，在继承了原有功能外，还支持淡入动画、加载中、加载失败提示、圆角值和形状等。
- * @tutorial https://uviewui.com/components/image.html
- * @property {String} src 图片地址
- * @property {String} mode 裁剪模式，见官网说明
- * @property {String | Number} width 宽度，单位任意，如果为数值，则为rpx单位（默认100%）
- * @property {String | Number} height 高度，单位任意，如果为数值，则为rpx单位（默认 auto）
- * @property {String} shape 图片形状，circle-圆形，square-方形（默认square）
- * @property {String | Number} border-radius 圆角值，单位任意，如果为数值，则为rpx单位（默认 0）
- * @property {Boolean} lazy-load 是否懒加载，仅微信小程序、App、百度小程序、字节跳动小程序有效（默认 true）
- * @property {Boolean} show-menu-by-longpress 是否开启长按图片显示识别小程序码菜单，仅微信小程序有效（默认 false）
- * @property {String} loading-icon 加载中的图标，或者小图片（默认 photo）
- * @property {String} error-icon 加载失败的图标，或者小图片（默认 error-circle）
- * @property {Boolean} show-loading 是否显示加载中的图标或者自定义的slot（默认 true）
- * @property {Boolean} show-error 是否显示加载错误的图标或者自定义的slot（默认 true）
- * @property {Boolean} fade 是否需要淡入效果（默认 true）
- * @property {String Number} width 传入图片路径时图片的宽度
- * @property {String Number} height 传入图片路径时图片的高度
- * @property {Boolean} webp 只支持网络资源，只对微信小程序有效（默认 false）
- * @property {String | Number} duration 搭配fade参数的过渡时间，单位ms（默认 500）
- * @event {Function} click 点击图片时触发
- * @event {Function} error 图片加载失败时触发
- * @event {Function} load 图片加载成功时触发
- * @example <u-image width="100%" height="300rpx" :src="src"></u-image>
- */var _default =
-{
-  name: 'u-image',
-  props: {
-    // 图片地址
-    src: {
-      type: String,
-      default: '' },
-
-    // 裁剪模式
-    mode: {
-      type: String,
-      default: 'aspectFill' },
-
-    // 宽度，单位任意
-    width: {
-      type: [String, Number],
-      default: '100%' },
-
-    // 高度，单位任意
-    height: {
-      type: [String, Number],
-      default: 'auto' },
-
-    // 图片形状，circle-圆形，square-方形
-    shape: {
-      type: String,
-      default: 'square' },
-
-    // 圆角，单位任意
-    borderRadius: {
-      type: [String, Number],
-      default: 0 },
-
-    // 是否懒加载，微信小程序、App、百度小程序、字节跳动小程序
-    lazyLoad: {
-      type: Boolean,
-      default: true },
-
-    // 开启长按图片显示识别微信小程序码菜单
-    showMenuByLongpress: {
-      type: Boolean,
-      default: true },
-
-    // 加载中的图标，或者小图片
-    loadingIcon: {
-      type: String,
-      default: 'photo' },
-
-    // 加载失败的图标，或者小图片
-    errorIcon: {
-      type: String,
-      default: 'error-circle' },
-
-    // 是否显示加载中的图标或者自定义的slot
-    showLoading: {
-      type: Boolean,
-      default: true },
-
-    // 是否显示加载错误的图标或者自定义的slot
-    showError: {
-      type: Boolean,
-      default: true },
-
-    // 是否需要淡入效果
-    fade: {
-      type: Boolean,
-      default: true },
-
-    // 只支持网络资源，只对微信小程序有效
-    webp: {
-      type: Boolean,
-      default: false },
-
-    // 过渡时间，单位ms
-    duration: {
-      type: [String, Number],
-      default: 500 },
-
-    // 背景颜色，用于深色页面加载图片时，为了和背景色融合
-    bgColor: {
-      type: String,
-      default: '#f3f4f6' } },
-
-
-  data: function data() {
-    return {
-      // 图片是否加载错误，如果是，则显示错误占位图
-      isError: false,
-      // 初始化组件时，默认为加载中状态
-      loading: true,
-      // 不透明度，为了实现淡入淡出的效果
-      opacity: 1,
-      // 过渡时间，因为props的值无法修改，故需要一个中间值
-      durationTime: this.duration,
-      // 图片加载完成时，去掉背景颜色，因为如果是png图片，就会显示灰色的背景
-      backgroundStyle: {} };
-
-  },
-  watch: {
-    src: {
-      immediate: true,
-      handler: function handler(n) {
-        if (!n) {
-          // 如果传入null或者''，或者false，或者undefined，标记为错误状态
-          this.isError = true;
-          this.loading = false;
-        } else {
-          this.isError = false;
-        }
-      } } },
-
-
-  computed: {
-    wrapStyle: function wrapStyle() {
-      var style = {};
-      // 通过调用addUnit()方法，如果有单位，如百分比，px单位等，直接返回，如果是纯粹的数值，则加上rpx单位
-      style.width = this.$u.addUnit(this.width);
-      style.height = this.$u.addUnit(this.height);
-      // 如果是配置了圆形，设置50%的圆角，否则按照默认的配置值
-      style.borderRadius = this.shape == 'circle' ? '50%' : this.$u.addUnit(this.borderRadius);
-      // 如果设置圆角，必须要有hidden，否则可能圆角无效
-      style.overflow = this.borderRadius > 0 ? 'hidden' : 'visible';
-      if (this.fade) {
-        style.opacity = this.opacity;
-        style.transition = "opacity ".concat(Number(this.durationTime) / 1000, "s ease-in-out");
-      }
-      return style;
-    } },
-
-  methods: {
-    // 点击图片
-    onClick: function onClick() {
-      this.$emit('click');
-    },
-    // 图片加载失败
-    onErrorHandler: function onErrorHandler(err) {
-      this.loading = false;
-      this.isError = true;
-      this.$emit('error', err);
-    },
-    // 图片加载完成，标记loading结束
-    onLoadHandler: function onLoadHandler() {var _this = this;
-      this.loading = false;
-      this.isError = false;
-      this.$emit('load');
-      // 如果不需要动画效果，就不执行下方代码，同时移除加载时的背景颜色
-      // 否则无需fade效果时，png图片依然能看到下方的背景色
-      if (!this.fade) return this.removeBgColor();
-      // 原来opacity为1(不透明，是为了显示占位图)，改成0(透明，意味着该元素显示的是背景颜色，默认的灰色)，再改成1，是为了获得过渡效果
-      this.opacity = 0;
-      // 这里设置为0，是为了图片展示到背景全透明这个过程时间为0，延时之后延时之后重新设置为duration，是为了获得背景透明(灰色)
-      // 到图片展示的过程中的淡入效果
-      this.durationTime = 0;
-      // 延时50ms，否则在浏览器H5，过渡效果无效
-      setTimeout(function () {
-        _this.durationTime = _this.duration;
-        _this.opacity = 1;
-        setTimeout(function () {
-          _this.removeBgColor();
-        }, _this.durationTime);
-      }, 50);
-    },
-    // 移除图片的背景色
-    removeBgColor: function removeBgColor() {
-      // 淡入动画过渡完成后，将背景设置为透明色，否则png图片会看到灰色的背景
-      this.backgroundStyle = {
-        backgroundColor: 'transparent' };
-
-    } } };exports.default = _default;
-
-/***/ }),
+/* 63 */,
+/* 64 */,
+/* 65 */,
+/* 66 */,
 /* 67 */
 /*!******************************************************************************************************************************************!*\
   !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-divider/u-divider.vue ***!
   \******************************************************************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _u_divider_vue_vue_type_template_id_239d3faa_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./u-divider.vue?vue&type=template&id=239d3faa&scoped=true& */ 68);
-/* harmony import */ var _u_divider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./u-divider.vue?vue&type=script&lang=js& */ 70);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _u_divider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _u_divider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js */ 10);
-
-var renderjs
-
-
-
-
-/* normalize component */
-
-var component = Object(_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _u_divider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _u_divider_vue_vue_type_template_id_239d3faa_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _u_divider_vue_vue_type_template_id_239d3faa_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  "239d3faa",
-  null,
-  false,
-  _u_divider_vue_vue_type_template_id_239d3faa_scoped_true___WEBPACK_IMPORTED_MODULE_0__["components"],
-  renderjs
-)
-
-component.options.__file = "node_modules/uview-ui/components/u-divider/u-divider.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+throw new Error("Module build failed (from ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/index.js):\nError: ENOENT: no such file or directory, open '/Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-divider/u-divider.vue'");
 
 /***/ }),
-/* 68 */
-/*!*************************************************************************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-divider/u-divider.vue?vue&type=template&id=239d3faa&scoped=true& ***!
-  \*************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns, recyclableRender, components */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_divider_vue_vue_type_template_id_239d3faa_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--10-0!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/filter-modules-template.js!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./u-divider.vue?vue&type=template&id=239d3faa&scoped=true& */ 69);
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_divider_vue_vue_type_template_id_239d3faa_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_divider_vue_vue_type_template_id_239d3faa_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_divider_vue_vue_type_template_id_239d3faa_scoped_true___WEBPACK_IMPORTED_MODULE_0__["recyclableRender"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "components", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_divider_vue_vue_type_template_id_239d3faa_scoped_true___WEBPACK_IMPORTED_MODULE_0__["components"]; });
-
-
-
-/***/ }),
-/* 69 */
-/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--10-0!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/filter-modules-template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!/Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-divider/u-divider.vue?vue&type=template&id=239d3faa&scoped=true& ***!
-  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns, recyclableRender, components */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
-var components
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "view",
-    {
-      staticClass: _vm._$s(0, "sc", "u-divider"),
-      style: _vm._$s(0, "s", {
-        height: _vm.height == "auto" ? "auto" : _vm.height + "rpx",
-        backgroundColor: _vm.bgColor,
-        marginBottom: _vm.marginBottom + "rpx",
-        marginTop: _vm.marginTop + "rpx"
-      }),
-      attrs: { _i: 0 },
-      on: { click: _vm.click }
-    },
-    [
-      _c("view", {
-        staticClass: _vm._$s(1, "sc", "u-divider-line"),
-        class: _vm._$s(1, "c", [
-          _vm.type ? "u-divider-line--bordercolor--" + _vm.type : ""
-        ]),
-        style: _vm._$s(1, "s", [_vm.lineStyle]),
-        attrs: { _i: 1 }
-      }),
-      _vm._$s(2, "i", _vm.useSlot)
-        ? _c(
-            "view",
-            {
-              staticClass: _vm._$s(2, "sc", "u-divider-text"),
-              style: _vm._$s(2, "s", {
-                color: _vm.color,
-                fontSize: _vm.fontSize + "rpx"
-              }),
-              attrs: { _i: 2 }
-            },
-            [_vm._t("default", null, { _i: 3 })],
-            2
-          )
-        : _vm._e(),
-      _c("view", {
-        staticClass: _vm._$s(4, "sc", "u-divider-line"),
-        class: _vm._$s(4, "c", [
-          _vm.type ? "u-divider-line--bordercolor--" + _vm.type : ""
-        ]),
-        style: _vm._$s(4, "s", [_vm.lineStyle]),
-        attrs: { _i: 4 }
-      })
-    ]
-  )
-}
-var recyclableRender = false
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-/* 70 */
-/*!*******************************************************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-divider/u-divider.vue?vue&type=script&lang=js& ***!
-  \*******************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_divider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/babel-loader/lib!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-1!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/using-components.js!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./u-divider.vue?vue&type=script&lang=js& */ 71);
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_divider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_divider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_divider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_divider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_divider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default.a); 
-
-/***/ }),
-/* 71 */
-/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/using-components.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!/Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-divider/u-divider.vue?vue&type=script&lang=js& ***!
-  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/**
- * divider 分割线
- * @description 区隔内容的分割线，一般用于页面底部"没有更多"的提示。
- * @tutorial https://www.uviewui.com/components/divider.html
- * @property {String Number} half-width 文字左或右边线条宽度，数值或百分比，数值时单位为rpx
- * @property {String} border-color 线条颜色，优先级高于type（默认#dcdfe6）
- * @property {String} color 文字颜色（默认#909399）
- * @property {String Number} fontSize 字体大小，单位rpx（默认26）
- * @property {String} bg-color 整个divider的背景颜色（默认呢#ffffff）
- * @property {String Number} height 整个divider的高度，单位rpx（默认40）
- * @property {String} type 将线条设置主题色（默认primary）
- * @property {Boolean} useSlot 是否使用slot传入内容，如果不传入，中间不会有空隙（默认true）
- * @property {String Number} margin-top 与前一个组件的距离，单位rpx（默认0）
- * @property {String Number} margin-bottom 与后一个组件的距离，单位rpx（0）
- * @event {Function} click divider组件被点击时触发
- * @example <u-divider color="#fa3534">长河落日圆</u-divider>
- */var _default =
-{
-  name: 'u-divider',
-  props: {
-    // 单一边divider横线的宽度(数值)，单位rpx。或者百分比
-    halfWidth: {
-      type: [Number, String],
-      default: 150 },
-
-    // divider横线的颜色，如设置，
-    borderColor: {
-      type: String,
-      default: '#dcdfe6' },
-
-    // 主题色，可以是primary|info|success|warning|error之一值
-    type: {
-      type: String,
-      default: 'primary' },
-
-    // 文字颜色
-    color: {
-      type: String,
-      default: '#909399' },
-
-    // 文字大小，单位rpx
-    fontSize: {
-      type: [Number, String],
-      default: 26 },
-
-    // 整个divider的背景颜色
-    bgColor: {
-      type: String,
-      default: '#ffffff' },
-
-    // 整个divider的高度单位rpx
-    height: {
-      type: [Number, String],
-      default: 'auto' },
-
-    // 上边距
-    marginTop: {
-      type: [String, Number],
-      default: 0 },
-
-    // 下边距
-    marginBottom: {
-      type: [String, Number],
-      default: 0 },
-
-    // 是否使用slot传入内容，如果不用slot传入内容，先的中间就不会有空隙
-    useSlot: {
-      type: Boolean,
-      default: true } },
-
-
-  computed: {
-    lineStyle: function lineStyle() {
-      var style = {};
-      if (String(this.halfWidth).indexOf('%') != -1) style.width = this.halfWidth;else
-      style.width = this.halfWidth + 'rpx';
-      // borderColor优先级高于type值
-      if (this.borderColor) style.borderColor = this.borderColor;
-      return style;
-    } },
-
-  methods: {
-    click: function click() {
-      this.$emit('click');
-    } } };exports.default = _default;
-
-/***/ }),
+/* 68 */,
+/* 69 */,
+/* 70 */,
+/* 71 */,
 /* 72 */
 /*!************************************************************************************************************************************!*\
   !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-grid/u-grid.vue ***!
   \************************************************************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _u_grid_vue_vue_type_template_id_50bc7b32_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./u-grid.vue?vue&type=template&id=50bc7b32&scoped=true& */ 73);
-/* harmony import */ var _u_grid_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./u-grid.vue?vue&type=script&lang=js& */ 75);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _u_grid_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _u_grid_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js */ 10);
-
-var renderjs
-
-
-
-
-/* normalize component */
-
-var component = Object(_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _u_grid_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _u_grid_vue_vue_type_template_id_50bc7b32_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _u_grid_vue_vue_type_template_id_50bc7b32_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  "50bc7b32",
-  null,
-  false,
-  _u_grid_vue_vue_type_template_id_50bc7b32_scoped_true___WEBPACK_IMPORTED_MODULE_0__["components"],
-  renderjs
-)
-
-component.options.__file = "node_modules/uview-ui/components/u-grid/u-grid.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+throw new Error("Module build failed (from ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/index.js):\nError: ENOENT: no such file or directory, open '/Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-grid/u-grid.vue'");
 
 /***/ }),
-/* 73 */
-/*!*******************************************************************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-grid/u-grid.vue?vue&type=template&id=50bc7b32&scoped=true& ***!
-  \*******************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns, recyclableRender, components */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_grid_vue_vue_type_template_id_50bc7b32_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--10-0!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/filter-modules-template.js!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./u-grid.vue?vue&type=template&id=50bc7b32&scoped=true& */ 74);
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_grid_vue_vue_type_template_id_50bc7b32_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_grid_vue_vue_type_template_id_50bc7b32_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_grid_vue_vue_type_template_id_50bc7b32_scoped_true___WEBPACK_IMPORTED_MODULE_0__["recyclableRender"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "components", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_grid_vue_vue_type_template_id_50bc7b32_scoped_true___WEBPACK_IMPORTED_MODULE_0__["components"]; });
-
-
-
-/***/ }),
-/* 74 */
-/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--10-0!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/filter-modules-template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!/Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-grid/u-grid.vue?vue&type=template&id=50bc7b32&scoped=true& ***!
-  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns, recyclableRender, components */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
-var components
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "view",
-    {
-      staticClass: _vm._$s(0, "sc", "u-grid"),
-      class: _vm._$s(0, "c", { "u-border-top u-border-left": _vm.border }),
-      style: _vm._$s(0, "s", [_vm.gridStyle]),
-      attrs: { _i: 0 }
-    },
-    [_vm._t("default", null, { _i: 1 })],
-    2
-  )
-}
-var recyclableRender = false
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-/* 75 */
-/*!*************************************************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-grid/u-grid.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_grid_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/babel-loader/lib!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-1!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/using-components.js!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./u-grid.vue?vue&type=script&lang=js& */ 76);
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_grid_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_grid_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_grid_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_grid_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_grid_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default.a); 
-
-/***/ }),
-/* 76 */
-/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/using-components.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!/Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-grid/u-grid.vue?vue&type=script&lang=js& ***!
-  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-
-/**
- * grid 宫格布局
- * @description 宫格组件一般用于同时展示多个同类项目的场景，可以给宫格的项目设置徽标组件(badge)，或者图标等，也可以扩展为左右滑动的轮播形式。
- * @tutorial https://www.uviewui.com/components/grid.html
- * @property {String Number} col 宫格的列数（默认3）
- * @property {Boolean} border 是否显示宫格的边框（默认true）
- * @property {Boolean} hover-class 点击宫格的时候，是否显示按下的灰色背景（默认false）
- * @event {Function} click 点击宫格触发
- * @example <u-grid :col="3" @click="click"></u-grid>
- */var _default =
-{
-  name: 'u-grid',
-  props: {
-    // 分成几列
-    col: {
-      type: [Number, String],
-      default: 3 },
-
-    // 是否显示边框
-    border: {
-      type: Boolean,
-      default: true },
-
-    // 宫格对齐方式，表现为数量少的时候，靠左，居中，还是靠右
-    align: {
-      type: String,
-      default: 'left' },
-
-    // 宫格按压时的样式类，"none"为无效果
-    hoverClass: {
-      type: String,
-      default: 'u-hover-class' } },
-
-
-  data: function data() {
-    return {
-      index: 0 };
-
-  },
-  watch: {
-    // 当父组件需要子组件需要共享的参数发生了变化，手动通知子组件
-    parentData: function parentData() {
-      if (this.children.length) {
-        this.children.map(function (child) {
-          // 判断子组件(u-radio)如果有updateParentData方法的话，就就执行(执行的结果是子组件重新从父组件拉取了最新的值)
-          typeof child.updateParentData == 'function' && child.updateParentData();
-        });
-      }
-    } },
-
-  created: function created() {
-    // 如果将children定义在data中，在微信小程序会造成循环引用而报错
-    this.children = [];
-  },
-  computed: {
-    // 计算父组件的值是否发生变化
-    parentData: function parentData() {
-      return [this.hoverClass, this.col, this.size, this.border];
-    },
-    // 宫格对齐方式
-    gridStyle: function gridStyle() {
-      var style = {};
-      switch (this.align) {
-        case 'left':
-          style.justifyContent = 'flex-start';
-          break;
-        case 'center':
-          style.justifyContent = 'center';
-          break;
-        case 'right':
-          style.justifyContent = 'flex-end';
-          break;
-        default:style.justifyContent = 'flex-start';}
-      ;
-      return style;
-    } },
-
-  methods: {
-    click: function click(index) {
-      this.$emit('click', index);
-    } } };exports.default = _default;
-
-/***/ }),
+/* 73 */,
+/* 74 */,
+/* 75 */,
+/* 76 */,
 /* 77 */
 /*!**********************************************************************************************************************************************!*\
   !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-grid-item/u-grid-item.vue ***!
   \**********************************************************************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _u_grid_item_vue_vue_type_template_id_99a45d26_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./u-grid-item.vue?vue&type=template&id=99a45d26&scoped=true& */ 78);
-/* harmony import */ var _u_grid_item_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./u-grid-item.vue?vue&type=script&lang=js& */ 80);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _u_grid_item_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _u_grid_item_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js */ 10);
-
-var renderjs
-
-
-
-
-/* normalize component */
-
-var component = Object(_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _u_grid_item_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _u_grid_item_vue_vue_type_template_id_99a45d26_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _u_grid_item_vue_vue_type_template_id_99a45d26_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  "99a45d26",
-  null,
-  false,
-  _u_grid_item_vue_vue_type_template_id_99a45d26_scoped_true___WEBPACK_IMPORTED_MODULE_0__["components"],
-  renderjs
-)
-
-component.options.__file = "node_modules/uview-ui/components/u-grid-item/u-grid-item.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+throw new Error("Module build failed (from ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/index.js):\nError: ENOENT: no such file or directory, open '/Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-grid-item/u-grid-item.vue'");
 
 /***/ }),
-/* 78 */
-/*!*****************************************************************************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-grid-item/u-grid-item.vue?vue&type=template&id=99a45d26&scoped=true& ***!
-  \*****************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns, recyclableRender, components */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_grid_item_vue_vue_type_template_id_99a45d26_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--10-0!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/filter-modules-template.js!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./u-grid-item.vue?vue&type=template&id=99a45d26&scoped=true& */ 79);
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_grid_item_vue_vue_type_template_id_99a45d26_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_grid_item_vue_vue_type_template_id_99a45d26_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_grid_item_vue_vue_type_template_id_99a45d26_scoped_true___WEBPACK_IMPORTED_MODULE_0__["recyclableRender"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "components", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_grid_item_vue_vue_type_template_id_99a45d26_scoped_true___WEBPACK_IMPORTED_MODULE_0__["components"]; });
-
-
-
-/***/ }),
-/* 79 */
-/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--10-0!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/filter-modules-template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!/Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-grid-item/u-grid-item.vue?vue&type=template&id=99a45d26&scoped=true& ***!
-  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns, recyclableRender, components */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
-var components
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "view",
-    {
-      staticClass: _vm._$s(0, "sc", "u-grid-item"),
-      style: _vm._$s(0, "s", {
-        background: _vm.bgColor,
-        width: _vm.width
-      }),
-      attrs: {
-        "hover-class": _vm._$s(0, "a-hover-class", _vm.parentData.hoverClass),
-        _i: 0
-      },
-      on: { click: _vm.click }
-    },
-    [
-      _c(
-        "view",
-        {
-          staticClass: _vm._$s(1, "sc", "u-grid-item-box"),
-          class: _vm._$s(1, "c", [
-            _vm.parentData.border ? "u-border-right u-border-bottom" : ""
-          ]),
-          style: _vm._$s(1, "s", [_vm.customStyle]),
-          attrs: { _i: 1 }
-        },
-        [_vm._t("default", null, { _i: 2 })],
-        2
-      )
-    ]
-  )
-}
-var recyclableRender = false
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-/* 80 */
-/*!***********************************************************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-grid-item/u-grid-item.vue?vue&type=script&lang=js& ***!
-  \***********************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_grid_item_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/babel-loader/lib!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-1!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/using-components.js!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./u-grid-item.vue?vue&type=script&lang=js& */ 81);
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_grid_item_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_grid_item_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_grid_item_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_grid_item_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_grid_item_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default.a); 
-
-/***/ }),
-/* 81 */
-/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/using-components.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!/Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-grid-item/u-grid-item.vue?vue&type=script&lang=js& ***!
-  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/**
- * gridItem 提示
- * @description 宫格组件一般用于同时展示多个同类项目的场景，可以给宫格的项目设置徽标组件(badge)，或者图标等，也可以扩展为左右滑动的轮播形式。搭配u-grid使用
- * @tutorial https://www.uviewui.com/components/grid.html
- * @property {String} bg-color 宫格的背景颜色（默认#ffffff）
- * @property {String Number} index 点击宫格时，返回的值
- * @property {Object} custom-style 自定义样式，对象形式
- * @event {Function} click 点击宫格触发
- * @example <u-grid-item></u-grid-item>
- */var _default2 =
-{
-  name: "u-grid-item",
-  props: {
-    // 背景颜色
-    bgColor: {
-      type: String,
-      default: '#ffffff' },
-
-    // 点击时返回的index
-    index: {
-      type: [Number, String],
-      default: '' },
-
-    // 自定义样式，对象形式
-    customStyle: {
-      type: Object,
-      default: function _default() {
-        return {
-          padding: '30rpx 0' };
-
-      } } },
-
-
-  data: function data() {
-    return {
-      parentData: {
-        hoverClass: '', // 按下去的时候，是否显示背景灰色
-        col: 3, // 父组件划分的宫格数
-        border: true // 是否显示边框，根据父组件决定
-      } };
-
-  },
-  created: function created() {
-    // 父组件的实例
-    this.updateParentData();
-    // this.parent在updateParentData()中定义
-    this.parent.children.push(this);
-  },
-  computed: {
-    // 每个grid-item的宽度
-    width: function width() {
-      return 100 / Number(this.parentData.col) + '%';
-    } },
-
-  methods: {
-    // 获取父组件的参数
-    updateParentData: function updateParentData() {
-      // 此方法写在mixin中
-      this.getParentData('u-grid');
-    },
-    click: function click() {
-      this.$emit('click', this.index);
-      this.parent && this.parent.click(this.index);
-    } } };exports.default = _default2;
-
-/***/ }),
+/* 78 */,
+/* 79 */,
+/* 80 */,
+/* 81 */,
 /* 82 */
 /*!****************************************************************************************************************************************!*\
   !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-tabbar/u-tabbar.vue ***!
   \****************************************************************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _u_tabbar_vue_vue_type_template_id_3426a5b2_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./u-tabbar.vue?vue&type=template&id=3426a5b2&scoped=true& */ 83);
-/* harmony import */ var _u_tabbar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./u-tabbar.vue?vue&type=script&lang=js& */ 90);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _u_tabbar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _u_tabbar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js */ 10);
-
-var renderjs
-
-
-
-
-/* normalize component */
-
-var component = Object(_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _u_tabbar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _u_tabbar_vue_vue_type_template_id_3426a5b2_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _u_tabbar_vue_vue_type_template_id_3426a5b2_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  "3426a5b2",
-  null,
-  false,
-  _u_tabbar_vue_vue_type_template_id_3426a5b2_scoped_true___WEBPACK_IMPORTED_MODULE_0__["components"],
-  renderjs
-)
-
-component.options.__file = "node_modules/uview-ui/components/u-tabbar/u-tabbar.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+throw new Error("Module build failed (from ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/index.js):\nError: ENOENT: no such file or directory, open '/Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-tabbar/u-tabbar.vue'");
 
 /***/ }),
-/* 83 */
-/*!***********************************************************************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-tabbar/u-tabbar.vue?vue&type=template&id=3426a5b2&scoped=true& ***!
-  \***********************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns, recyclableRender, components */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_tabbar_vue_vue_type_template_id_3426a5b2_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--10-0!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/filter-modules-template.js!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./u-tabbar.vue?vue&type=template&id=3426a5b2&scoped=true& */ 84);
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_tabbar_vue_vue_type_template_id_3426a5b2_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_tabbar_vue_vue_type_template_id_3426a5b2_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_tabbar_vue_vue_type_template_id_3426a5b2_scoped_true___WEBPACK_IMPORTED_MODULE_0__["recyclableRender"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "components", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_tabbar_vue_vue_type_template_id_3426a5b2_scoped_true___WEBPACK_IMPORTED_MODULE_0__["components"]; });
-
-
-
-/***/ }),
-/* 84 */
-/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--10-0!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/filter-modules-template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!/Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-tabbar/u-tabbar.vue?vue&type=template&id=3426a5b2&scoped=true& ***!
-  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns, recyclableRender, components */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
-var components
-try {
-  components = {
-    uIcon: __webpack_require__(/*! uview-ui/components/u-icon/u-icon.vue */ 22).default,
-    uBadge: __webpack_require__(/*! uview-ui/components/u-badge/u-badge.vue */ 85).default
-  }
-} catch (e) {
-  if (
-    e.message.indexOf("Cannot find module") !== -1 &&
-    e.message.indexOf(".vue") !== -1
-  ) {
-    console.error(e.message)
-    console.error("1. 排查组件名称拼写是否正确")
-    console.error(
-      "2. 排查组件是否符合 easycom 规范，文档：https://uniapp.dcloud.net.cn/collocation/pages?id=easycom"
-    )
-    console.error(
-      "3. 若组件不符合 easycom 规范，需手动引入，并在 components 中注册该组件"
-    )
-  } else {
-    throw e
-  }
-}
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _vm._$s(0, "i", _vm.show)
-    ? _c(
-        "view",
-        {
-          staticClass: _vm._$s(0, "sc", "u-tabbar"),
-          attrs: { _i: 0 },
-          on: {
-            touchmove: function($event) {
-              $event.stopPropagation()
-              $event.preventDefault()
-              return (function() {})($event)
-            }
-          }
-        },
-        [
-          _c(
-            "view",
-            {
-              staticClass: _vm._$s(
-                1,
-                "sc",
-                "u-tabbar__content safe-area-inset-bottom"
-              ),
-              class: _vm._$s(1, "c", {
-                "u-border-top": _vm.borderTop
-              }),
-              style: _vm._$s(1, "s", {
-                height: _vm.$u.addUnit(_vm.height),
-                backgroundColor: _vm.bgColor
-              }),
-              attrs: { _i: 1 }
-            },
-            [
-              _vm._l(_vm._$s(2, "f", { forItems: _vm.list }), function(
-                item,
-                index,
-                $20,
-                $30
-              ) {
-                return _c(
-                  "view",
-                  {
-                    key: _vm._$s(2, "f", { forIndex: $20, key: index }),
-                    staticClass: _vm._$s(
-                      "2-" + $30,
-                      "sc",
-                      "u-tabbar__content__item"
-                    ),
-                    class: _vm._$s("2-" + $30, "c", {
-                      "u-tabbar__content__circle":
-                        _vm.midButton && item.midButton
-                    }),
-                    style: _vm._$s("2-" + $30, "s", {
-                      backgroundColor: _vm.bgColor
-                    }),
-                    attrs: { _i: "2-" + $30 },
-                    on: {
-                      click: function($event) {
-                        $event.stopPropagation()
-                        return _vm.clickHandler(index)
-                      }
-                    }
-                  },
-                  [
-                    _c(
-                      "view",
-                      {
-                        class: _vm._$s("3-" + $30, "c", [
-                          _vm.midButton && item.midButton
-                            ? "u-tabbar__content__circle__button"
-                            : "u-tabbar__content__item__button"
-                        ]),
-                        attrs: { _i: "3-" + $30 }
-                      },
-                      [
-                        _c("u-icon", {
-                          attrs: {
-                            size:
-                              _vm.midButton && item.midButton
-                                ? _vm.midButtonSize
-                                : _vm.iconSize,
-                            name: _vm.elIconPath(index),
-                            "img-mode": "scaleToFill",
-                            color: _vm.elColor(index),
-                            "custom-prefix": item.customIcon
-                              ? "custom-icon"
-                              : "uicon",
-                            _i: "4-" + $30
-                          }
-                        }),
-                        _vm._$s("5-" + $30, "i", item.count || item.isDot)
-                          ? _c("u-badge", {
-                              attrs: {
-                                count: item.count,
-                                "is-dot": item.isDot,
-                                offset: [
-                                  -2,
-                                  _vm.getOffsetRight(item.count, item.isDot)
-                                ],
-                                _i: "5-" + $30
-                              }
-                            })
-                          : _vm._e()
-                      ],
-                      1
-                    ),
-                    _c(
-                      "view",
-                      {
-                        staticClass: _vm._$s(
-                          "6-" + $30,
-                          "sc",
-                          "u-tabbar__content__item__text"
-                        ),
-                        style: _vm._$s("6-" + $30, "s", {
-                          color: _vm.elColor(index)
-                        }),
-                        attrs: { _i: "6-" + $30 }
-                      },
-                      [
-                        _c(
-                          "text",
-                          {
-                            staticClass: _vm._$s("7-" + $30, "sc", "u-line-1"),
-                            attrs: { _i: "7-" + $30 }
-                          },
-                          [
-                            _vm._v(
-                              _vm._$s("7-" + $30, "t0-0", _vm._s(item.text))
-                            )
-                          ]
-                        )
-                      ]
-                    )
-                  ]
-                )
-              }),
-              _vm._$s(8, "i", _vm.midButton)
-                ? _c("view", {
-                    staticClass: _vm._$s(
-                      8,
-                      "sc",
-                      "u-tabbar__content__circle__border"
-                    ),
-                    class: _vm._$s(8, "c", {
-                      "u-border": _vm.borderTop
-                    }),
-                    style: _vm._$s(8, "s", {
-                      backgroundColor: _vm.bgColor,
-                      left: _vm.midButtonLeft
-                    }),
-                    attrs: { _i: 8 }
-                  })
-                : _vm._e()
-            ],
-            2
-          ),
-          _c("view", {
-            staticClass: _vm._$s(
-              9,
-              "sc",
-              "u-fixed-placeholder safe-area-inset-bottom"
-            ),
-            style: _vm._$s(9, "s", {
-              height:
-                "calc(" +
-                _vm.$u.addUnit(_vm.height) +
-                " + " +
-                (_vm.midButton ? 48 : 0) +
-                "rpx)"
-            }),
-            attrs: { _i: 9 }
-          })
-        ]
-      )
-    : _vm._e()
-}
-var recyclableRender = false
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-/* 85 */
-/*!**************************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-badge/u-badge.vue ***!
-  \**************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _u_badge_vue_vue_type_template_id_662d25bf_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./u-badge.vue?vue&type=template&id=662d25bf&scoped=true& */ 86);
-/* harmony import */ var _u_badge_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./u-badge.vue?vue&type=script&lang=js& */ 88);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _u_badge_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _u_badge_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js */ 10);
-
-var renderjs
-
-
-
-
-/* normalize component */
-
-var component = Object(_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _u_badge_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _u_badge_vue_vue_type_template_id_662d25bf_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _u_badge_vue_vue_type_template_id_662d25bf_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  "662d25bf",
-  null,
-  false,
-  _u_badge_vue_vue_type_template_id_662d25bf_scoped_true___WEBPACK_IMPORTED_MODULE_0__["components"],
-  renderjs
-)
-
-component.options.__file = "node_modules/uview-ui/components/u-badge/u-badge.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-/* 86 */
-/*!*********************************************************************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-badge/u-badge.vue?vue&type=template&id=662d25bf&scoped=true& ***!
-  \*********************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns, recyclableRender, components */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_badge_vue_vue_type_template_id_662d25bf_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--10-0!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/filter-modules-template.js!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./u-badge.vue?vue&type=template&id=662d25bf&scoped=true& */ 87);
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_badge_vue_vue_type_template_id_662d25bf_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_badge_vue_vue_type_template_id_662d25bf_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_badge_vue_vue_type_template_id_662d25bf_scoped_true___WEBPACK_IMPORTED_MODULE_0__["recyclableRender"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "components", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_badge_vue_vue_type_template_id_662d25bf_scoped_true___WEBPACK_IMPORTED_MODULE_0__["components"]; });
-
-
-
-/***/ }),
-/* 87 */
-/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--10-0!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/filter-modules-template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!/Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-badge/u-badge.vue?vue&type=template&id=662d25bf&scoped=true& ***!
-  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns, recyclableRender, components */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
-var components
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _vm._$s(0, "i", _vm.show)
-    ? _c(
-        "view",
-        {
-          staticClass: _vm._$s(0, "sc", "u-badge"),
-          class: _vm._$s(0, "c", [
-            _vm.isDot ? "u-badge-dot" : "",
-            _vm.size == "mini" ? "u-badge-mini" : "",
-            _vm.type ? "u-badge--bg--" + _vm.type : ""
-          ]),
-          style: _vm._$s(0, "s", [
-            {
-              top: _vm.offset[0] + "rpx",
-              right: _vm.offset[1] + "rpx",
-              fontSize: _vm.fontSize + "rpx",
-              position: _vm.absolute ? "absolute" : "static",
-              color: _vm.color,
-              backgroundColor: _vm.bgColor
-            },
-            _vm.boxStyle
-          ]),
-          attrs: { _i: 0 }
-        },
-        [_vm._v(_vm._$s(0, "t0-0", _vm._s(_vm.showText)))]
-      )
-    : _vm._e()
-}
-var recyclableRender = false
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-/* 88 */
-/*!***************************************************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-badge/u-badge.vue?vue&type=script&lang=js& ***!
-  \***************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_badge_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/babel-loader/lib!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-1!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/using-components.js!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./u-badge.vue?vue&type=script&lang=js& */ 89);
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_badge_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_badge_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_badge_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_badge_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_badge_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default.a); 
-
-/***/ }),
-/* 89 */
-/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/using-components.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!/Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-badge/u-badge.vue?vue&type=script&lang=js& ***!
-  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/**
- * badge 角标
- * @description 本组件一般用于展示头像的地方，如个人中心，或者评论列表页的用户头像展示等场所。
- * @tutorial https://www.uviewui.com/components/badge.html
- * @property {String Number} count 展示的数字，大于 overflowCount 时显示为 ${overflowCount}+，为0且show-zero为false时隐藏
- * @property {Boolean} is-dot 不展示数字，只有一个小点（默认false）
- * @property {Boolean} absolute 组件是否绝对定位，为true时，offset参数才有效（默认true）
- * @property {String Number} overflow-count 展示封顶的数字值（默认99）
- * @property {String} type 使用预设的背景颜色（默认error）
- * @property {Boolean} show-zero 当数值为 0 时，是否展示 Badge（默认false）
- * @property {String} size Badge的尺寸，设为mini会得到小一号的Badge（默认default）
- * @property {Array} offset 设置badge的位置偏移，格式为 [x, y]，也即设置的为top和right的值，单位rpx。absolute为true时有效（默认[20, 20]）
- * @property {String} color 字体颜色（默认#ffffff）
- * @property {String} bgColor 背景颜色，优先级比type高，如设置，type参数会失效
- * @property {Boolean} is-center 组件中心点是否和父组件右上角重合，优先级比offset高，如设置，offset参数会失效（默认false）
- * @example <u-badge type="error" count="7"></u-badge>
- */var _default2 =
-{
-  name: 'u-badge',
-  props: {
-    // primary,warning,success,error,info
-    type: {
-      type: String,
-      default: 'error' },
-
-    // default, mini
-    size: {
-      type: String,
-      default: 'default' },
-
-    //是否是圆点
-    isDot: {
-      type: Boolean,
-      default: false },
-
-    // 显示的数值内容
-    count: {
-      type: [Number, String] },
-
-    // 展示封顶的数字值
-    overflowCount: {
-      type: Number,
-      default: 99 },
-
-    // 当数值为 0 时，是否展示 Badge
-    showZero: {
-      type: Boolean,
-      default: false },
-
-    // 位置偏移
-    offset: {
-      type: Array,
-      default: function _default() {
-        return [20, 20];
-      } },
-
-    // 是否开启绝对定位，开启了offset才会起作用
-    absolute: {
-      type: Boolean,
-      default: true },
-
-    // 字体大小
-    fontSize: {
-      type: [String, Number],
-      default: '24' },
-
-    // 字体演示
-    color: {
-      type: String,
-      default: '#ffffff' },
-
-    // badge的背景颜色
-    bgColor: {
-      type: String,
-      default: '' },
-
-    // 是否让badge组件的中心点和父组件右上角重合，配置的话，offset将会失效
-    isCenter: {
-      type: Boolean,
-      default: false } },
-
-
-  computed: {
-    // 是否将badge中心与父组件右上角重合
-    boxStyle: function boxStyle() {
-      var style = {};
-      if (this.isCenter) {
-        style.top = 0;
-        style.right = 0;
-        // Y轴-50%，意味着badge向上移动了badge自身高度一半，X轴50%，意味着向右移动了自身宽度一半
-        style.transform = "translateY(-50%) translateX(50%)";
-      } else {
-        style.top = this.offset[0] + 'rpx';
-        style.right = this.offset[1] + 'rpx';
-        style.transform = "translateY(0) translateX(0)";
-      }
-      // 如果尺寸为mini，后接上scal()
-      if (this.size == 'mini') {
-        style.transform = style.transform + " scale(0.8)";
-      }
-      return style;
-    },
-    // isDot类型时，不显示文字
-    showText: function showText() {
-      if (this.isDot) return '';else
-      {
-        if (this.count > this.overflowCount) return "".concat(this.overflowCount, "+");else
-        return this.count;
-      }
-    },
-    // 是否显示组件
-    show: function show() {
-      // 如果count的值为0，并且showZero设置为false，不显示组件
-      if (this.count == 0 && this.showZero == false) return false;else
-      return true;
-    } } };exports.default = _default2;
-
-/***/ }),
-/* 90 */
-/*!*****************************************************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-tabbar/u-tabbar.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_tabbar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/babel-loader/lib!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-1!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/using-components.js!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./u-tabbar.vue?vue&type=script&lang=js& */ 91);
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_tabbar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_tabbar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_tabbar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_tabbar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_tabbar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default.a); 
-
-/***/ }),
-/* 91 */
-/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/using-components.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!/Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-tabbar/u-tabbar.vue?vue&type=script&lang=js& ***!
-  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 92));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};} //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-var _default2 =
-{
-  props: {
-    // 显示与否
-    show: {
-      type: Boolean,
-      default: true },
-
-    // 通过v-model绑定current值
-    value: {
-      type: [String, Number],
-      default: 0 },
-
-    // 整个tabbar的背景颜色
-    bgColor: {
-      type: String,
-      default: '#ffffff' },
-
-    // tabbar的高度，默认50px，单位任意，如果为数值，则为rpx单位
-    height: {
-      type: [String, Number],
-      default: '50px' },
-
-    // 非凸起图标的大小，单位任意，数值默认rpx
-    iconSize: {
-      type: [String, Number],
-      default: 40 },
-
-    // 凸起的图标的大小，单位任意，数值默认rpx
-    midButtonSize: {
-      type: [String, Number],
-      default: 90 },
-
-    // 激活时的演示，包括字体图标，提示文字等的演示
-    activeColor: {
-      type: String,
-      default: '#303133' },
-
-    // 未激活时的颜色
-    inactiveColor: {
-      type: String,
-      default: '#606266' },
-
-    // 是否显示中部的凸起按钮
-    midButton: {
-      type: Boolean,
-      default: false },
-
-    // 配置参数
-    list: {
-      type: Array,
-      default: function _default() {
-        return [];
-      } },
-
-    // 切换前的回调
-    beforeSwitch: {
-      type: Function,
-      default: null },
-
-    // 是否显示顶部的横线
-    borderTop: {
-      type: Boolean,
-      default: true },
-
-    // 是否隐藏原生tabbar
-    hideTabBar: {
-      type: Boolean,
-      default: true } },
-
-
-  data: function data() {
-    return {
-      // 由于安卓太菜了，通过css居中凸起按钮的外层元素有误差，故通过js计算将其居中
-      midButtonLeft: '50%',
-      pageUrl: '' // 当前页面URL
-    };
-  },
-  created: function created() {
-    // 是否隐藏原生tabbar
-    if (this.hideTabBar) uni.hideTabBar();
-    // 获取引入了u-tabbar页面的路由地址，该地址没有路径前面的"/"
-    var pages = getCurrentPages();
-    // 页面栈中的最后一个即为项为当前页面，route属性为页面路径
-    this.pageUrl = pages[pages.length - 1].route;
-  },
-  computed: {
-    elIconPath: function elIconPath() {var _this = this;
-      return function (index) {
-        // 历遍u-tabbar的每一项item时，判断是否传入了pagePath参数，如果传入了
-        // 和data中的pageUrl参数对比，如果相等，即可判断当前的item对应当前的tabbar页面，设置高亮图标
-        // 采用这个方法，可以无需使用v-model绑定的value值
-        var pagePath = _this.list[index].pagePath;
-        // 如果定义了pagePath属性，意味着使用系统自带tabbar方案，否则使用一个页面用几个组件模拟tabbar页面的方案
-        // 这两个方案对处理tabbar item的激活与否方式不一样
-        if (pagePath) {
-          if (pagePath == _this.pageUrl || pagePath == '/' + _this.pageUrl) {
-            return _this.list[index].selectedIconPath;
-          } else {
-            return _this.list[index].iconPath;
-          }
-        } else {
-          // 普通方案中，索引等于v-model值时，即为激活项
-          return index == _this.value ? _this.list[index].selectedIconPath : _this.list[index].iconPath;
-        }
-      };
-    },
-    elColor: function elColor() {var _this2 = this;
-      return function (index) {
-        // 判断方法同理于elIconPath
-        var pagePath = _this2.list[index].pagePath;
-        if (pagePath) {
-          if (pagePath == _this2.pageUrl || pagePath == '/' + _this2.pageUrl) return _this2.activeColor;else
-          return _this2.inactiveColor;
-        } else {
-          return index == _this2.value ? _this2.activeColor : _this2.inactiveColor;
-        }
-      };
-    } },
-
-  mounted: function mounted() {
-    this.midButton && this.getMidButtonLeft();
-  },
-  methods: {
-    clickHandler: function clickHandler(index) {var _this3 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var beforeSwitch;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:if (!(
-                _this3.beforeSwitch && typeof _this3.beforeSwitch === 'function')) {_context.next = 10;break;}
-                // 执行回调，同时传入索引当作参数
-                // 在微信，支付宝等环境(H5正常)，会导致父组件定义的customBack()函数体中的this变成子组件的this
-                // 通过bind()方法，绑定父组件的this，让this.customBack()的this为父组件的上下文
-                beforeSwitch = _this3.beforeSwitch.bind(_this3.$u.$parent.call(_this3))(index);
-                // 判断是否返回了promise
-                if (!(!!beforeSwitch && typeof beforeSwitch.then === 'function')) {_context.next = 7;break;}_context.next = 5;return (
-                  beforeSwitch.then(function (res) {
-                    // promise返回成功，
-                    _this3.switchTab(index);
-                  }).catch(function (err) {
-
-                  }));case 5:_context.next = 8;break;case 7:
-                if (beforeSwitch === true) {
-                  // 如果返回true
-                  _this3.switchTab(index);
-                }case 8:_context.next = 11;break;case 10:
-
-                _this3.switchTab(index);case 11:case "end":return _context.stop();}}}, _callee);}))();
-
-    },
-    // 切换tab
-    switchTab: function switchTab(index) {
-      // 发出事件和修改v-model绑定的值
-      this.$emit('change', index);
-      // 如果有配置pagePath属性，使用uni.switchTab进行跳转
-      if (this.list[index].pagePath) {
-        uni.switchTab({
-          url: this.list[index].pagePath });
-
-      } else {
-        // 如果配置了papgePath属性，将不会双向绑定v-model传入的value值
-        // 因为这个模式下，不再需要v-model绑定的value值了，而是通过getCurrentPages()适配
-        this.$emit('input', index);
-      }
-    },
-    // 计算角标的right值
-    getOffsetRight: function getOffsetRight(count, isDot) {
-      // 点类型，count大于9(两位数)，分别设置不同的right值，避免位置太挤
-      if (isDot) {
-        return -20;
-      } else if (count > 9) {
-        return -40;
-      } else {
-        return -30;
-      }
-    },
-    // 获取凸起按钮外层元素的left值，让其水平居中
-    getMidButtonLeft: function getMidButtonLeft() {
-      var windowWidth = this.$u.sys().windowWidth;
-      // 由于安卓中css计算left: 50%的结果不准确，故用js计算
-      this.midButtonLeft = windowWidth / 2 + 'px';
-    } } };exports.default = _default2;
-
-/***/ }),
+/* 83 */,
+/* 84 */,
+/* 85 */,
+/* 86 */,
+/* 87 */,
+/* 88 */,
+/* 89 */,
+/* 90 */,
+/* 91 */,
 /* 92 */
 /*!**********************************************************!*\
   !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
@@ -7242,7 +3539,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _App
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("/* WEBPACK VAR INJECTION */(function(__f__) {Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0; //\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\nvar _default =\n{\n  data: function data() {\n    return {\n      tabbar: this.$store.state.tabbar,\n      deviceHeight: '',\n      userInfo: {},\n      avatar: '',\n      shopList: [] };\n\n  },\n  onLoad: function onLoad() {\n    // let deviceInfo = uni.getSystemInfoSync();\n    // this.deviceHeight = deviceInfo.windowHeight;\n    // Location.reload;\n    this.loadInfo();\n  },\n  // onShow(){\n  // \tthis.loadInfo();\n  // },\n  methods: {\n    getList: function getList() {var _this = this;\n      uni.request({\n        url: \"http://101.35.91.117:7884/potential/\" + uni.getStorageSync('userId'),\n        method: 'get' }).\n      then(function (res) {\n        __f__(\"log\", 'load', res[1].data, \" at pages/profile/profile.vue:153\");\n        _this.shopList = res[1].data;\n      });\n    },\n    refresh: function refresh() {var _this2 = this;\n      uni.showLoading({ title: 'refreshing', mask: true });\n      uni.request({\n        url: \"http://101.35.91.117:7884/potential/update/\" + uni.getStorageSync('userId'),\n        method: 'get' }).\n      then(function (res) {\n        __f__(\"log\", 'load', res[1].data, \" at pages/profile/profile.vue:163\");\n        setTimeout(function () {uni.hideLoading();}, 500);\n        _this2.getList();\n      });\n    },\n    logoutAction: function logoutAction() {\n      uni.setStorageSync('userId', '');\n      uni.navigateTo({\n        url: \"/pages/welcome/welcome\" });\n\n    },\n    goSetting: function goSetting() {\n      uni.navigateTo({\n        url: '../setting/setting' });\n\n    },\n    goEdit: function goEdit() {\n      uni.navigateTo({\n        url: '../edit/edit' });\n\n    },\n    deleteItem: function deleteItem(id) {var _this3 = this;\n      uni.request({\n\n        url: \"http://101.35.91.117:7884/potential/delete/\" + id,\n        method: 'get' }).\n      then(function (res) {\n        __f__(\"log\", 'load', res[1].data, \" at pages/profile/profile.vue:190\");\n        _this3.getList();\n      });\n    },\n    save: function save(id) {var _this4 = this;\n      uni.request({\n        url: \"http://101.35.91.117:7884/potential/update/status/save/\" + id,\n        method: 'get' }).\n      then(function (res) {\n        __f__(\"log\", 'load', res[1].data, \" at pages/profile/profile.vue:199\");\n        _this4.getList();\n      });\n    },\n    unsave: function unsave(id) {var _this5 = this;\n      uni.request({\n        url: \"http://101.35.91.117:7884/potential/update/status/potential/\" + id,\n        method: 'get' }).\n      then(function (res) {\n        __f__(\"log\", 'load', res[1].data, \" at pages/profile/profile.vue:208\");\n        _this5.getList();\n      });\n    },\n    loadInfo: function loadInfo() {var _this6 = this;\n      // uni.request({\n      // url: \"http://101.35.91.117:7884/users/avatar/\"+uni.getStorageSync('userId'),\n      // method: 'get',\n      // }).then(res=>{\n      // \tconsole.log('res',res)\n      // \tif(res[1].data!=''){\n      // \t\tthis.avatar = res[1].data\n      // \t}else{\n      // \t\tthis.avatar = \"../../static/girl.png\"\n      // \t}\n      // })\n      this.avatar = \"http://101.35.91.117:7884/users/avatar/\" + uni.getStorageSync('userId') + '?' + Math.random();\n      if (this.avatar == '') {\n        this.avatar = \"../../static/girl.png\";\n      }\n      uni.request({\n        url: \"http://101.35.91.117:7884/users/profile/\" + uni.getStorageSync('userId'),\n        method: 'get' }).\n      then(function (res) {\n        __f__(\"log\", 'load', res[1].data, \" at pages/profile/profile.vue:232\");\n        _this6.userInfo = res[1].data;\n        __f__(\"log\", 'load', _this6.userInfo.name, \" at pages/profile/profile.vue:234\");\n        if (_this6.userInfo.name == '' | _this6.userInfo.name == null) {\n          _this6.userInfo.name = \"Unknow\";\n        }\n        if (_this6.userInfo.address == 'None' | _this6.userInfo.address == null) {\n          _this6.userInfo.address = \"City, State, Country\";\n        }\n      });\n      this.getList();\n    },\n    goGrocery: function goGrocery() {\n      uni.switchTab({\n        url: \"../grocery/grocery\" });\n\n    } } };exports.default = _default;\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/lib/format-log.js */ 15)[\"default\"]))//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVuaS1hcHA6Ly8vcGFnZXMvcHJvZmlsZS9wcm9maWxlLnZ1ZSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBK0hBO0FBQ0EsTUFEQSxrQkFDQTtBQUNBO0FBQ0Esc0NBREE7QUFFQSxzQkFGQTtBQUdBLGtCQUhBO0FBSUEsZ0JBSkE7QUFLQSxrQkFMQTs7QUFPQSxHQVRBO0FBVUEsUUFWQSxvQkFVQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsR0FmQTtBQWdCQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLFdBREEscUJBQ0E7QUFDQTtBQUNBLGtGQURBO0FBRUEscUJBRkE7QUFHQSxVQUhBLENBR0E7QUFDQTtBQUNBO0FBQ0EsT0FOQTtBQU9BLEtBVEE7QUFVQSxXQVZBLHFCQVVBO0FBQ0E7QUFDQTtBQUNBLHlGQURBO0FBRUEscUJBRkE7QUFHQSxVQUhBLENBR0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxPQVBBO0FBUUEsS0FwQkE7QUFxQkEsZ0JBckJBLDBCQXFCQTtBQUNBO0FBQ0E7QUFDQSxxQ0FEQTs7QUFHQSxLQTFCQTtBQTJCQSxhQTNCQSx1QkEyQkE7QUFDQTtBQUNBLGlDQURBOztBQUdBLEtBL0JBO0FBZ0NBLFVBaENBLG9CQWdDQTtBQUNBO0FBQ0EsMkJBREE7O0FBR0EsS0FwQ0E7QUFxQ0EsY0FyQ0Esc0JBcUNBLEVBckNBLEVBcUNBO0FBQ0E7O0FBRUEsK0RBRkE7QUFHQSxxQkFIQTtBQUlBLFVBSkEsQ0FJQTtBQUNBO0FBQ0E7QUFDQSxPQVBBO0FBUUEsS0E5Q0E7QUErQ0EsUUEvQ0EsZ0JBK0NBLEVBL0NBLEVBK0NBO0FBQ0E7QUFDQSwyRUFEQTtBQUVBLHFCQUZBO0FBR0EsVUFIQSxDQUdBO0FBQ0E7QUFDQTtBQUNBLE9BTkE7QUFPQSxLQXZEQTtBQXdEQSxVQXhEQSxrQkF3REEsRUF4REEsRUF3REE7QUFDQTtBQUNBLGdGQURBO0FBRUEscUJBRkE7QUFHQSxVQUhBLENBR0E7QUFDQTtBQUNBO0FBQ0EsT0FOQTtBQU9BLEtBaEVBO0FBaUVBLFlBakVBLHNCQWlFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0Esc0ZBREE7QUFFQSxxQkFGQTtBQUdBLFVBSEEsQ0FHQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLE9BYkE7QUFjQTtBQUNBLEtBaEdBO0FBaUdBLGFBakdBLHVCQWlHQTtBQUNBO0FBQ0EsaUNBREE7O0FBR0EsS0FyR0EsRUFuQkEsRSIsImZpbGUiOiIxMDEuanMiLCJzb3VyY2VzQ29udGVudCI6WyI8dGVtcGxhdGU+XG5cdDx2aWV3PlxuXHRcdDx2aWV3IGNsYXNzPVwiY29udGVudFwiID5cblx0XHRcdDx2aWV3IGNsYXNzPVwiaGVhZC1pbWdcIj48dS1pbWFnZSA6c3JjPVwiYXZhdGFyXCIgc2hhcGU9XCJjaXJjbGVcIiB3aWR0aD1cIjI1MFwiIGhlaWdodD1cIjI1MFwiPjwvdS1pbWFnZT48L3ZpZXc+XG5cdFx0XHQ8dmlldyBjbGFzcz1cImluZm8tY2FyZCBcIiA+XG5cdFx0XHRcdDx2aWV3IGNsYXNzPVwiZWRpdC1idG5cIj5cblx0XHRcdFx0XHQ8dS1yb3cgZ3V0dGVyPVwiMjBcIj5cblx0XHRcdFx0XHRcdDx1LWNvbCBzcGFuPVwiNVwiPlxuXHRcdFx0XHRcdFx0XHQ8dmlldyBjbGFzcz1cImRlbW8tbGF5b3V0IGJnLXB1cnBsZVwiPjwvdmlldz5cblx0XHRcdFx0XHRcdDwvdS1jb2w+XG5cdFx0XHRcdFx0XHQ8dS1jb2wgc3Bhbj1cIjRcIj5cblx0XHRcdFx0XHRcdFx0PHZpZXcgY2xhc3M9XCJkZW1vLWxheW91dCBiZy1wdXJwbGUtbGlnaHRcIj48L3ZpZXc+XG5cdFx0XHRcdFx0XHQ8L3UtY29sPlxuXHRcdFx0XHRcdFx0PHUtY29sIHNwYW49XCIzXCI+XG5cdFx0XHRcdFx0XHRcdDx2aWV3IGNsYXNzPVwiZGVtby1sYXlvdXQgYmctcHVycGxlLWRhcmtcIj5cblx0XHRcdFx0XHRcdFx0XHQ8dS1idXR0b24gc2hhcGU9XCJjaXJjbGVcIiBzdHlsZT1cImJhY2tncm91bmQtY29sb3I6ICNGNUM5Nzk7Y29sb3I6IHdoaXRlO3dpZHRoOiAxMjBycHg7XCIgQGNsaWNrPVwiZ29FZGl0XCIgPkVkaXQ8L3UtYnV0dG9uPlxuXHRcdFx0XHRcdFx0XHQ8L3ZpZXc+XG5cdFx0XHRcdFx0XHQ8L3UtY29sPlxuXHRcdFx0XHRcdDwvdS1yb3c+XG5cdFx0XHRcdFx0XG5cdFx0XHRcdDwvdmlldz5cblx0XHRcdFx0PHRleHQgY2xhc3M9XCJ1cy1uYW1lXCI+e3t1c2VySW5mby5uYW1lfX08L3RleHQ+XG5cdFx0XHRcdDx2aWV3IHN0eWxlPVwiaGVpZ2h0OiAzMHJweDtcIj48L3ZpZXc+XG5cdFx0XHRcdDx2aWV3IGNsYXNzPVwibW9yZS1pbmZvXCI+XG5cdFx0XHRcdFx0PHUtcm93IGd1dHRlcj1cIjIwXCIganVzdGlmeT1cImNlbnRlclwiPlxuXHRcdFx0XHRcdFx0PHUtY29sIHNwYW49XCI0XCIgc3R5bGU9XCJ0ZXh0LWFsaWduOiBjZW50ZXI7XCI+XG5cdFx0XHRcdFx0XHRcdDx2aWV3IGNsYXNzPVwiZGVtby1sYXlvdXQgYmctcHVycGxlXCIgPlxuXHRcdFx0XHRcdFx0XHRcdDxpbWFnZSB2LWlmPVwidXNlckluZm8uZ2VuZGVyPT0wXCJzcmM9XCIuLi8uLi9zdGF0aWMvbWFuLWljby5wbmdcIiBzdHlsZT1cIndpZHRoOiAyMHB4O2hlaWdodDogMjBweDtcIj5cblx0XHRcdFx0XHRcdFx0XHQ8aW1hZ2Ugdi1lbHNlLWlmPVwidXNlckluZm8uZ2VuZGVyPT0xXCJzcmM9XCIuLi8uLi9zdGF0aWMvbWFuLnBuZ1wiIHN0eWxlPVwid2lkdGg6IDIwcHg7aGVpZ2h0OiAyMHB4O1wiPlxuXHRcdFx0XHRcdFx0XHRcdDxpbWFnZSB2LWVsc2UtaWY9XCJ1c2VySW5mby5nZW5kZXI9Mlwic3JjPVwiLi4vLi4vc3RhdGljL25ldXRyYWwucG5nXCIgc3R5bGU9XCJ3aWR0aDogMjBweDtoZWlnaHQ6IDIwcHg7XCI+XG5cdFx0XHRcdFx0XHRcdFx0PGltYWdlIHYtZWxzZS1pZj1cInVzZXJJbmZvLmdlbmRlcj09M1wic3JjPVwiLi4vLi4vc3RhdGljL25ldXRyYWwucG5nXCIgc3R5bGU9XCJ3aWR0aDogMjBweDtoZWlnaHQ6IDIwcHg7XCI+XG5cdFx0XHRcdFx0XHRcdDwvdmlldz5cblx0XHRcdFx0XHRcdDwvdS1jb2w+XG5cdFx0XHRcdFx0XHQ8dS1jb2wgc3R5bGU9XCJ0ZXh0LWFsaWduOiBjZW50ZXI7XCI+XG5cdFx0XHRcdFx0XHRcdDx2aWV3IGNsYXNzPVwiZGVtby1sYXlvdXQgYmctcHVycGxlLWxpZ2h0XCIgPlxuXHRcdFx0XHRcdFx0XHRcdDx0ZXh0Pnt7dXNlckluZm8uYWRkcmVzc319PC90ZXh0PlxuXHRcdFx0XHRcdFx0XHQ8L3ZpZXc+XG5cdFx0XHRcdFx0XHQ8L3UtY29sPlxuXHRcdFx0XHRcdFx0PHUtY29sIHNwYW49XCIzXCI+XG5cdFx0XHRcdFx0XHRcdDx2aWV3IGNsYXNzPVwiZGVtby1sYXlvdXQgYmctcHVycGxlLWRhcmtcIj5cblx0XHRcdFx0XHRcdFx0PC92aWV3PlxuXHRcdFx0XHRcdFx0PC91LWNvbD5cblx0XHRcdFx0XHQ8L3Utcm93PlxuXHRcdFx0XHRcdDx2aWV3IHN0eWxlPVwidGV4dC1hbGlnbjogY2VudGVyO1wiPlxuXHRcdFx0XHRcdFx0PCEtLSA8dGV4dD4yNTwvdGV4dD4gLS0+XG5cdFx0XHRcdFx0PC92aWV3PlxuXHRcdFx0XHRcdDx2aWV3PlxuXHRcdFx0XHRcdFx0PHUtZGl2aWRlciBoYWxmLXdpZHRoPVwiNjAlXCI+PC91LWRpdmlkZXI+XG5cdFx0XHRcdFx0PC92aWV3PlxuXHRcdFx0XHRcdDx2aWV3IHN0eWxlPVwibWFyZ2luLXRvcDogMjBycHg7XCI+XG5cdFx0XHRcdFx0XHQ8dS1ncmlkIDpjb2w9XCIzXCIgOmJvcmRlcj1cImZhbHNlXCI+XG5cdFx0XHRcdFx0XHRcdDx1LWdyaWQtaXRlbT5cblx0XHRcdFx0XHRcdFx0XHQ8dmlldyBjbGFzcz1cImdyaWQtdGV4dCBmdG5cIj57e3VzZXJJbmZvLnRvdGFsSXRlbUNvdW50fX08L3ZpZXc+XG5cdFx0XHRcdFx0XHRcdFx0PHZpZXcgY2xhc3M9XCJncmlkLXRleHRcIj5BZGRlZDwvdmlldz5cblx0XHRcdFx0XHRcdFx0PC91LWdyaWQtaXRlbT5cblx0XHRcdFx0XHRcdFx0PHUtZ3JpZC1pdGVtPlxuXHRcdFx0XHRcdFx0XHRcdDx2aWV3IGNsYXNzPVwiZ3JpZC10ZXh0IGZ0blwiPnt7dXNlckluZm8uY29uc3VtZWRJdGVtQ291bnR9fTwvdmlldz5cblx0XHRcdFx0XHRcdFx0XHQ8dmlldyBjbGFzcz1cImdyaWQtdGV4dFwiPkNvbnN1bWVkPC92aWV3PlxuXHRcdFx0XHRcdFx0XHQ8L3UtZ3JpZC1pdGVtPlxuXHRcdFx0XHRcdFx0XHQ8dS1ncmlkLWl0ZW0+XG5cdFx0XHRcdFx0XHRcdFx0PHZpZXcgY2xhc3M9XCJncmlkLXRleHQgZnRuXCI+e3t1c2VySW5mby5leHBpcmVkSXRlbUNvdW50fX08L3ZpZXc+XG5cdFx0XHRcdFx0XHRcdFx0PHZpZXcgY2xhc3M9XCJncmlkLXRleHRcIj5FeHBpcmVkPC92aWV3PlxuXHRcdFx0XHRcdFx0XHQ8L3UtZ3JpZC1pdGVtPlxuXHRcdFx0XHRcdFx0PC91LWdyaWQ+XG5cdFx0XHRcdFx0PC92aWV3PlxuXHRcdFx0XHQ8L3ZpZXc+XG5cdFx0XHQ8L3ZpZXc+XG5cdFx0PC92aWV3PlxuXHRcdDx2aWV3IGNsYXNzPVwibmNvbnRlbnRcIj5cblx0XHRcdDx2aWV3IGNsYXNzPVwibGlrZS1jYXJkXCI+XG5cdFx0XHRcdDx0ZXh0IHN0eWxlPVwidGV4dC1hbGlnbjogbGVmdDttYXJnaW4tbGVmdDogMTVycHg7IGZvbnQtc2l6ZTogMzBycHg7XCI+U2hvcHBpbmcgTGlzdDwvdGV4dD5cblx0XHRcdFx0XG5cdFx0XHRcdDx2aWV3ICBjbGFzcz1cImRlbW8tbGF5b3V0IGJnLXB1cnBsZS1saWdodFwiPlxuXHRcdFx0XHRcdDxpbWFnZSBzcmM9XCIuLi8uLi9zdGF0aWMvcmVmcmVzaC5wbmdcIiBzdHlsZT1cIndpZHRoOiA0NnJweDtoZWlnaHQ6IDQwcnB4O2Rpc3BsYXk6IGlubGluZS1ibG9jazsgbWFyZ2luLXJpZ2h0OjEwJTsgZmxvYXQ6cmlnaHRcIiBAY2xpY2s9XCJyZWZyZXNoXCI+XG5cdFx0XHRcdDwvdmlldz5cblx0XHRcdFx0PHZpZXcgdi1pZj1cInNob3BMaXN0Lmxlbmd0aD09MFwiIHN0eWxlPVwibWFyZ2luLXRvcDogOCU7XCI+XG5cdFx0XHRcdFx0PHRleHQ+Tm8gaXRlbSBhZGRlZCwgcGxlYXNlIHRyeSBhZGQgc29tZSBpdGVtIGZpcnN0LjwvdGV4dD5cblx0XHRcdFx0XHQ8dS1idXR0b24gc2hhcGU9XCJjaXJjbGVcIiBzdHlsZT1cImJhY2tncm91bmQtY29sb3I6ICNGNUM5Nzk7Y29sb3I6IHdoaXRlO3dpZHRoOiAxODBycHg7XCIgQGNsaWNrPVwiZ29Hcm9jZXJ5XCIgPkFkZCBJdGVtPC91LWJ1dHRvbj5cblx0XHRcdFx0PC92aWV3PlxuXHRcdFx0XHQ8c2Nyb2xsLXZpZXcgOnNjcm9sbC13aXRoLWFuaW1hdGlvbj1cInRydWVcIiAgOnNjcm9sbC14PVwidHJ1ZVwiIHN0eWxlPVwid2hpdGUtc3BhY2U6IG5vd3JhcDtcIiA+XG5cdFx0XHRcdCAgPHRlbXBsYXRlIHYtZm9yPVwiKGl0ZW0sIGluZGV4KSBpbiBzaG9wTGlzdFwiPlxuXHRcdFx0XHRcdCAgPHZpZXcgY2xhc3M9XCJzY3JvbGxfaXRlbVwiIDpzdHlsZT1cInsnYmFja2dyb3VuZC1pbWFnZSc6ICd1cmwoJytpdGVtLnBpY3R1cmUrJyknfVwiPlxuXHRcdFx0XHRcdFx0PHZpZXcgc3R5bGU9XCJoZWlnaHQ6IDIwJTtcIj5cdFx0XHRcdFx0XHRcdFx0XG5cdFx0XHRcdFx0XHRcdDx1LWJ1dHRvbiBzaGFwZT1cImNpcmNsZVwiIHN0eWxlPVwiYmFja2dyb3VuZC1jb2xvcjogI0ZGMDkwOTtjb2xvcjogd2hpdGU7IGhlaWdodDogNjBycHg7IHdpZHRoOiAxMTBycHg7IGZsb2F0OmxlZnQ7IG1hcmdpbi1sZWZ0OiA0JTsgbWFyZ2luLXRvcDogNCU7XCIgQGNsaWNrPVwiZGVsZXRlSXRlbShpdGVtLnBpZClcIiA+RGVsZXRlPC91LWJ1dHRvbj5cbjwhLS0gXHRcdFx0XHRcdFx0XHQ8aW1hZ2Ugdi1pZj1cIml0ZW0uc3RhdHVzPT0ncG90ZW50aWFsJ1wiIHNyYz1cIi4uLy4uL3N0YXRpYy9oZWFydC1saW5lLnBuZ1wiIHN0eWxlPVwiaGVpZ2h0OiA4MHJweDsgd2lkdGg6IDgwcnB4OyBmbG9hdDpyaWdodDsgIG1hcmdpbi1yaWdodDogNiU7IG1hcmdpbi10b3A6IDQlO1wiIEBjbGljaz1cInNhdmUoaXRlbS5waWQpXCI+PC9pbWFnZT5cblx0XHRcdFx0XHRcdFx0PGltYWdlIHYtaWY9XCJpdGVtLnN0YXR1cz09J3NhdmUnXCIgc3JjPVwiLi4vLi4vc3RhdGljL2hlYXJ0LWZpbGwucG5nXCIgc3R5bGU9XCJoZWlnaHQ6IDgwcnB4OyB3aWR0aDogODBycHg7IGZsb2F0OnJpZ2h0OyAgbWFyZ2luLXJpZ2h0OiA2JTsgbWFyZ2luLXRvcDogNCU7XCIgQGNsaWNrPVwidW5zYXZlKGl0ZW0ucGlkKVwiPjwvaW1hZ2U+IC0tPlxuXHRcdFx0XHRcdFx0XHRcblx0XHRcdFx0XHRcdDwvdmlldz5cblx0XHRcdFx0XHRcdDx0ZXh0IHN0eWxlPVwiY29sb3I6ICNGRkZGRkY7bWFyZ2luLWxlZnQ6IDQlO21hcmdpbi1yaWdodDogMTclO2ZvbnQtc2l6ZTogNDBycHg7Zm9udC13ZWlnaHQ6IGJvbGQ7IHRleHQtc3Ryb2tlOjJycHggIzAwMDAwMFwiPnt7IGl0ZW0ubmFtZSB9fTwvdGV4dD5cblx0XHRcdFx0XHRcdFxuXHRcdFx0XHRcdFx0XG5cdFx0XHRcdFx0ICA8L3ZpZXc+XG5cdFx0XHRcdCAgPC90ZW1wbGF0ZT5cblx0XHRcdFx0PC9zY3JvbGwtdmlldz5cbjwhLS0gXHRcdFx0XHQ8dGV4dCBzdHlsZT1cInRleHQtYWxpZ246IGxlZnQ7bWFyZ2luLWxlZnQ6IDE1cnB4O1wiPldlZWtseSBQb3RlbnRpYWwgU2hvcHBpbmcgTGlzdDwvdGV4dD5cblx0XHRcdFx0XG5cdFx0XHRcdDx2aWV3PlxuXHRcdFx0XHRcdDxpbWFnZSBzcmM9XCIuLi8uLi9zdGF0aWMvcm91LnBuZ1wiIGNsYXNzPVwibGlrZS1pbWdcIj5cblx0XHRcdFx0XHRcdFxuXHRcdFx0XHQ8L3ZpZXc+XG5cdFx0XHRcdDx2aWV3IGNsYXNzPVwiaW1nLWNvbnRyb2xsZXJcIj5cblx0XHRcdFx0XHQ8IS0tIDx0ZXh0PmJ1dHRvbiBhbmQgdGV4dCBob3ZlcjwvdGV4dD4gLS0+XG5cdFx0XHRcdFx0XG48IS0tIFx0XHRcdFx0PC92aWV3PiAtLT5cblx0XHRcdDwvdmlldz5cblx0XHRcdFxuXHRcdDwvdmlldz5cblx0XHQ8dmlldyBjbGFzcz1cIm5jb250ZW50XCI+XG5cdFx0XHQ8dmlldz5cblx0XHRcdFx0PHUtYnV0dG9uIHN0eWxlPVwid2lkdGg6IDQwMHJweDtiYWNrZ3JvdW5kLWNvbG9yOiAjNDQzQzM0O2NvbG9yOiB3aGl0ZTttYXJnaW4tdG9wOiAzMHJweDtcIiBAY2xpY2s9XCJnb1NldHRpbmdcIj5cblx0XHRcdFx0XHQ8aW1hZ2Ugc3JjPVwiLi4vLi4vc3RhdGljL3NldHRpbmcucG5nXCIgc3R5bGU9XCJ3aWR0aDogMjBweDtoZWlnaHQ6IDIwcHg7XCI+PC9pbWFnZT5cblx0XHRcdFx0XHQ8dmlldyBzdHlsZT1cIndpZHRoOiAxNnJweDtcIj48L3ZpZXc+XG5cdFx0XHRcdFx0U2V0dGluZ1xuXHRcdFx0XHQ8L3UtYnV0dG9uPlxuXHRcdFx0PC92aWV3PlxuXHRcdDwvdmlldz5cblx0XHQ8IS0tICNpZmRlZiBBUFAtUExVUyAtLT5cblx0XHQ8dS10YWJiYXIgOmxpc3Q9XCJ0YWJiYXJcIiA6bWlkLWJ1dHRvbj1cImZhbHNlXCIgaGVpZ2h0PVwiNTVweFwiPjwvdS10YWJiYXI+XG5cdFx0PCEtLSAjZW5kaWYgLS0+XG5cdFx0XG5cdFx0PCEtLSAjaWZkZWYgSDUgLS0+XG5cdFx0PHUtdGFiYmFyIDpsaXN0PVwidGFiYmFyXCIgOm1pZC1idXR0b249XCJmYWxzZVwiPjwvdS10YWJiYXI+XG5cdFx0PCEtLSAjZW5kaWYgLS0+XG5cdDwvdmlldz5cbjwvdGVtcGxhdGU+XG5cbjxzY3JpcHQ+XG5cdGV4cG9ydCBkZWZhdWx0IHtcblx0XHRkYXRhKCkge1xuXHRcdFx0cmV0dXJuIHtcblx0XHRcdFx0dGFiYmFyOiB0aGlzLiRzdG9yZS5zdGF0ZS50YWJiYXIsXG5cdFx0XHRcdGRldmljZUhlaWdodDogJycsXG5cdFx0XHRcdHVzZXJJbmZvOnt9LFxuXHRcdFx0XHRhdmF0YXI6JycsXG5cdFx0XHRcdHNob3BMaXN0OltdLFxuXHRcdFx0fVxuXHRcdH0sXG5cdFx0b25Mb2FkKCkge1xuXHRcdFx0Ly8gbGV0IGRldmljZUluZm8gPSB1bmkuZ2V0U3lzdGVtSW5mb1N5bmMoKTtcblx0XHRcdC8vIHRoaXMuZGV2aWNlSGVpZ2h0ID0gZGV2aWNlSW5mby53aW5kb3dIZWlnaHQ7XG5cdFx0XHQvLyBMb2NhdGlvbi5yZWxvYWQ7XG5cdFx0XHR0aGlzLmxvYWRJbmZvKCk7XG5cdFx0fSxcblx0XHQvLyBvblNob3coKXtcblx0XHQvLyBcdHRoaXMubG9hZEluZm8oKTtcblx0XHQvLyB9LFxuXHRcdG1ldGhvZHM6IHtcblx0XHRcdGdldExpc3QoKXtcblx0XHRcdFx0dW5pLnJlcXVlc3Qoe1xuXHRcdFx0XHR1cmw6IFwiaHR0cDovLzEwMS4zNS45MS4xMTc6Nzg4NC9wb3RlbnRpYWwvXCIrdW5pLmdldFN0b3JhZ2VTeW5jKCd1c2VySWQnKSxcblx0XHRcdFx0bWV0aG9kOiAnZ2V0Jyxcblx0XHRcdFx0fSkudGhlbihyZXM9Pntcblx0XHRcdFx0XHRjb25zb2xlLmxvZygnbG9hZCcscmVzWzFdLmRhdGEpXG5cdFx0XHRcdFx0dGhpcy5zaG9wTGlzdCA9IHJlc1sxXS5kYXRhXG5cdFx0XHRcdH0pXG5cdFx0XHR9LFxuXHRcdFx0cmVmcmVzaCgpe1xuXHRcdFx0XHR1bmkuc2hvd0xvYWRpbmcoe3RpdGxlOiAncmVmcmVzaGluZycsbWFzazp0cnVlfSk7XG5cdFx0XHRcdHVuaS5yZXF1ZXN0KHtcblx0XHRcdFx0dXJsOiBcImh0dHA6Ly8xMDEuMzUuOTEuMTE3Ojc4ODQvcG90ZW50aWFsL3VwZGF0ZS9cIit1bmkuZ2V0U3RvcmFnZVN5bmMoJ3VzZXJJZCcpLFxuXHRcdFx0XHRtZXRob2Q6ICdnZXQnLFxuXHRcdFx0XHR9KS50aGVuKHJlcz0+e1xuXHRcdFx0XHRcdGNvbnNvbGUubG9nKCdsb2FkJyxyZXNbMV0uZGF0YSlcblx0XHRcdFx0XHRzZXRUaW1lb3V0KGZ1bmN0aW9uICgpIHt1bmkuaGlkZUxvYWRpbmcoKTt9LCA1MDApO1xuXHRcdFx0XHRcdHRoaXMuZ2V0TGlzdCgpO1xuXHRcdFx0XHR9KVxuXHRcdFx0fSxcblx0XHRcdGxvZ291dEFjdGlvbigpe1xuICAgICAgICAgICAgICAgIHVuaS5zZXRTdG9yYWdlU3luYygndXNlcklkJywgJycpXG4gICAgICAgICAgICAgICAgdW5pLm5hdmlnYXRlVG8oe1xuICAgICAgICAgICAgICAgICAgICB1cmw6IFwiL3BhZ2VzL3dlbGNvbWUvd2VsY29tZVwiXG4gICAgICAgICAgICAgICAgfSlcbiAgICAgICAgICAgIH0sXG5cdFx0XHRnb1NldHRpbmcoKXtcblx0XHRcdFx0dW5pLm5hdmlnYXRlVG8oe1xuXHRcdFx0XHRcdHVybDonLi4vc2V0dGluZy9zZXR0aW5nJ1xuXHRcdFx0XHR9KVxuXHRcdFx0fSxcblx0XHRcdGdvRWRpdCgpe1xuXHRcdFx0XHR1bmkubmF2aWdhdGVUbyh7XG5cdFx0XHRcdFx0dXJsOicuLi9lZGl0L2VkaXQnXG5cdFx0XHRcdH0pXG5cdFx0XHR9LFxuXHRcdFx0ZGVsZXRlSXRlbShpZCl7XG5cdFx0XHRcdHVuaS5yZXF1ZXN0KHtcblx0XHRcdFx0XHRcblx0XHRcdFx0dXJsOiBcImh0dHA6Ly8xMDEuMzUuOTEuMTE3Ojc4ODQvcG90ZW50aWFsL2RlbGV0ZS9cIitpZCxcblx0XHRcdFx0bWV0aG9kOiAnZ2V0Jyxcblx0XHRcdFx0fSkudGhlbihyZXM9Pntcblx0XHRcdFx0XHRjb25zb2xlLmxvZygnbG9hZCcscmVzWzFdLmRhdGEpXG5cdFx0XHRcdFx0dGhpcy5nZXRMaXN0KClcblx0XHRcdFx0fSlcblx0XHRcdH0sXG5cdFx0XHRzYXZlKGlkKXtcblx0XHRcdFx0dW5pLnJlcXVlc3Qoe1xuXHRcdFx0XHR1cmw6IFwiaHR0cDovLzEwMS4zNS45MS4xMTc6Nzg4NC9wb3RlbnRpYWwvdXBkYXRlL3N0YXR1cy9zYXZlL1wiK2lkLFxuXHRcdFx0XHRtZXRob2Q6ICdnZXQnLFxuXHRcdFx0XHR9KS50aGVuKHJlcz0+e1xuXHRcdFx0XHRcdGNvbnNvbGUubG9nKCdsb2FkJyxyZXNbMV0uZGF0YSlcblx0XHRcdFx0XHR0aGlzLmdldExpc3QoKVxuXHRcdFx0XHR9KVxuXHRcdFx0fSxcblx0XHRcdHVuc2F2ZShpZCl7XG5cdFx0XHRcdHVuaS5yZXF1ZXN0KHtcblx0XHRcdFx0dXJsOiBcImh0dHA6Ly8xMDEuMzUuOTEuMTE3Ojc4ODQvcG90ZW50aWFsL3VwZGF0ZS9zdGF0dXMvcG90ZW50aWFsL1wiK2lkLFxuXHRcdFx0XHRtZXRob2Q6ICdnZXQnLFxuXHRcdFx0XHR9KS50aGVuKHJlcz0+e1xuXHRcdFx0XHRcdGNvbnNvbGUubG9nKCdsb2FkJyxyZXNbMV0uZGF0YSlcblx0XHRcdFx0XHR0aGlzLmdldExpc3QoKVxuXHRcdFx0XHR9KVxuXHRcdFx0fSxcblx0XHRcdGxvYWRJbmZvKCl7XG5cdFx0XHRcdC8vIHVuaS5yZXF1ZXN0KHtcblx0XHRcdFx0Ly8gdXJsOiBcImh0dHA6Ly8xMDEuMzUuOTEuMTE3Ojc4ODQvdXNlcnMvYXZhdGFyL1wiK3VuaS5nZXRTdG9yYWdlU3luYygndXNlcklkJyksXG5cdFx0XHRcdC8vIG1ldGhvZDogJ2dldCcsXG5cdFx0XHRcdC8vIH0pLnRoZW4ocmVzPT57XG5cdFx0XHRcdC8vIFx0Y29uc29sZS5sb2coJ3JlcycscmVzKVxuXHRcdFx0XHQvLyBcdGlmKHJlc1sxXS5kYXRhIT0nJyl7XG5cdFx0XHRcdC8vIFx0XHR0aGlzLmF2YXRhciA9IHJlc1sxXS5kYXRhXG5cdFx0XHRcdC8vIFx0fWVsc2V7XG5cdFx0XHRcdC8vIFx0XHR0aGlzLmF2YXRhciA9IFwiLi4vLi4vc3RhdGljL2dpcmwucG5nXCJcblx0XHRcdFx0Ly8gXHR9XG5cdFx0XHRcdC8vIH0pXG5cdFx0XHRcdHRoaXMuYXZhdGFyPVwiaHR0cDovLzEwMS4zNS45MS4xMTc6Nzg4NC91c2Vycy9hdmF0YXIvXCIrdW5pLmdldFN0b3JhZ2VTeW5jKCd1c2VySWQnKSsnPycrTWF0aC5yYW5kb20oKVxuXHRcdFx0XHRpZih0aGlzLmF2YXRhcj09Jycpe1xuXHRcdFx0XHRcdHRoaXMuYXZhdGFyID0gXCIuLi8uLi9zdGF0aWMvZ2lybC5wbmdcIlxuXHRcdFx0XHR9XG5cdFx0XHRcdHVuaS5yZXF1ZXN0KHtcblx0XHRcdFx0dXJsOiBcImh0dHA6Ly8xMDEuMzUuOTEuMTE3Ojc4ODQvdXNlcnMvcHJvZmlsZS9cIit1bmkuZ2V0U3RvcmFnZVN5bmMoJ3VzZXJJZCcpLFxuXHRcdFx0XHRtZXRob2Q6ICdnZXQnLFxuXHRcdFx0XHR9KS50aGVuKHJlcz0+e1xuXHRcdFx0XHRcdGNvbnNvbGUubG9nKCdsb2FkJyxyZXNbMV0uZGF0YSlcblx0XHRcdFx0XHR0aGlzLnVzZXJJbmZvPXJlc1sxXS5kYXRhXG5cdFx0XHRcdFx0Y29uc29sZS5sb2coJ2xvYWQnLHRoaXMudXNlckluZm8ubmFtZSlcblx0XHRcdFx0XHRpZih0aGlzLnVzZXJJbmZvLm5hbWU9PScnfHRoaXMudXNlckluZm8ubmFtZT09bnVsbCl7XG5cdFx0XHRcdFx0XHR0aGlzLnVzZXJJbmZvLm5hbWU9XCJVbmtub3dcIjtcblx0XHRcdFx0XHR9XG5cdFx0XHRcdFx0aWYodGhpcy51c2VySW5mby5hZGRyZXNzPT0nTm9uZSd8dGhpcy51c2VySW5mby5hZGRyZXNzPT1udWxsKXtcblx0XHRcdFx0XHRcdHRoaXMudXNlckluZm8uYWRkcmVzcz1cIkNpdHksIFN0YXRlLCBDb3VudHJ5XCI7XG5cdFx0XHRcdFx0fVxuXHRcdFx0XHR9KVxuXHRcdFx0XHR0aGlzLmdldExpc3QoKVxuXHRcdFx0fSxcblx0XHRcdGdvR3JvY2VyeSgpe1xuXHRcdFx0XHR1bmkuc3dpdGNoVGFiKHtcblx0XHRcdFx0XHR1cmw6IFwiLi4vZ3JvY2VyeS9ncm9jZXJ5XCJcblx0XHRcdFx0fSk7XG5cdFx0XHR9LFxuICAgICAgICAgICAgXG5cdFx0fSxcdFx0XHRcblx0fVxuPC9zY3JpcHQ+XG5cbjxzdHlsZT5cbnBhZ2V7XG5cdGJhY2tncm91bmQtY29sb3I6ICNCMEMwN0E7XG59XG4uY29udGVudHtcblx0ZGlzcGxheTogZmxleDtcblx0d2lkdGg6IDEwMCU7XG5cdGp1c3RpZnktY29udGVudDogY2VudGVyO1xuXHQvKiBmbGV4LWRpcmVjdGlvbjogY29sdW1uOyAqL1xuXHR0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG4uaW5mby1jYXJke1xuXHR3aWR0aDogOTAlO1xuXHRoZWlnaHQ6IDUwMHJweDtcblx0YmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XG5cdG1hcmdpbi10b3A6IDI1MHJweDtcblx0Ym9yZGVyLXJhZGl1czogMTBweDtcblx0ZGlzcGxheTogZmxleDtcblx0anVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG5cdGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG5cdHRleHQtYWxpZ246IGNlbnRlcjtcbn1cbi51cy1uYW1le1xuXHQvKiBtYXJnaW4tdG9wOiAtMTAwcnB4OyAqL1xuXHRmb250LXNpemU6IDMwcHg7XG5cdGZvbnQtd2VpZ2h0OiA3MDA7XG59XG4uaGVhZC1pbWd7XG5cdHdpZHRoOiAyNTBycHg7XG5cdGhlaWdodDogMjUwcnB4O1xuXHRwb3NpdGlvbjogYWJzb2x1dGU7XG5cdHRvcDogMTEwcnB4O1xufVxuLmVkaXQtYnRue1xuLyogXHRwb3NpdGlvbjogYWJzb2x1dGU7XG5cdHJpZ2h0OiA2MHJweDsgKi9cblx0bWFyZ2luLXRvcDogLTEwcnB4O1xufVxuLm1vcmUtaW5mb3tcblx0bWFyZ2luLXRvcDogMTBycHg7XG5cdHdpZHRoOiAxMDAlO1xufVxuLmZ0bntcblx0Zm9udC13ZWlnaHQ6IDkwMDtcblx0Zm9udC1zaXplOiAxNXB4O1xufVxuLm5jb250ZW50e1xuXHRkaXNwbGF5OiBmbGV4O1xuXHR3aWR0aDogMTAwJTtcblx0anVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG59XG4ubGlrZS1jYXJke1xuXHR3aWR0aDogOTAlO1xuXHRoZWlnaHQ6IDMyMHJweDtcblx0YmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XG5cdG1hcmdpbi10b3A6IDMwcnB4O1xuXHRib3JkZXItcmFkaXVzOiAxMHB4O1xuXHRkaXNwbGF5OiBmbGV4O1xuXHRqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcblx0ZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcblx0dGV4dC1hbGlnbjogY2VudGVyO1xufVxuLmxpa2UtaW1ne1xuXHRoZWlnaHQ6IDEyNHB4O1xufVxuLmltZy1jb250cm9sbGVye1xuXHRwb3NpdGlvbjogYWJzb2x1dGU7XG5cbn1cbi5zY3JvbGxfaXRlbXtcbiAgd2lkdGg6OTAlOyBcbiAgaGVpZ2h0OjExNnB4OyBcbiAgbWFyZ2luOiA1cHggNXB4IDVweCA1cHg7XG4gIGJvcmRlci1yYWRpdXM6IDEwcnB4O1xuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIG1hcmdpbi1sZWZ0OiAxMHB4O1xuICBiYWNrZ3JvdW5kLXNpemU6IDEwMCU7XG4gIG9wYWNpdHk6MC42OyBmaWx0ZXI6IGFscGhhKG9wYWNpdHk9NjApO1xuICBiYWNrZ3JvdW5kOiAjM0Y1MzZFO1xuICBcbn1cblxuLnNjcm9sbF9pdGVtX3RleHQge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgbWFyZ2luLXRvcDogNnB4O1xuICBmb250LXNpemU6IDEycHg7XG4gIGNvbG9yOiB3aGl0ZTtcbiAgZm9udC13ZWlnaHQ6IDgwMDtcbn1cbi5kaW17XG4gIG9wYWNpdHk6MC42OyBmaWx0ZXI6IGFscGhhKG9wYWNpdHk9NjApO1xufVxuXG48L3N0eWxlPlxuIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///101\n");
+eval("/* WEBPACK VAR INJECTION */(function(__f__) {Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0; //\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\nvar _default =\n{\n  data: function data() {\n    return {\n      tabbar: this.$store.state.tabbar,\n      deviceHeight: '',\n      userInfo: {},\n      avatar: '',\n      shopList: [] };\n\n  },\n  onLoad: function onLoad() {\n    // let deviceInfo = uni.getSystemInfoSync();\n    // this.deviceHeight = deviceInfo.windowHeight;\n    // Location.reload;\n    this.loadInfo();\n  },\n  onShow: function onShow() {\n    this.loadInfo();\n  },\n  methods: {\n    getList: function getList() {var _this = this;\n      uni.request({\n        url: \"http://101.35.91.117:7884/potential/\" + uni.getStorageSync('userId'),\n        method: 'get' }).\n      then(function (res) {\n        __f__(\"log\", 'load', res[1].data, \" at pages/profile/profile.vue:128\");\n        _this.shopList = res[1].data;\n      });\n    },\n    refresh: function refresh() {var _this2 = this;\n      uni.showLoading({ title: 'refreshing', mask: true });\n      uni.request({\n        url: \"http://101.35.91.117:7884/potential/update/\" + uni.getStorageSync('userId'),\n        method: 'get' }).\n      then(function (res) {\n        __f__(\"log\", 'load', res[1].data, \" at pages/profile/profile.vue:138\");\n        setTimeout(function () {uni.hideLoading();}, 500);\n        _this2.getList();\n      });\n    },\n    logoutAction: function logoutAction() {\n      uni.setStorageSync('userId', '');\n      uni.navigateTo({\n        url: \"/pages/welcome/welcome\" });\n\n    },\n    goSetting: function goSetting() {\n      uni.navigateTo({\n        url: '../setting/setting' });\n\n    },\n    goEdit: function goEdit() {\n      uni.navigateTo({\n        url: '../edit/edit' });\n\n    },\n    deleteItem: function deleteItem(id) {var _this3 = this;\n      uni.request({\n\n        url: \"http://101.35.91.117:7884/potential/delete/\" + id,\n        method: 'get' }).\n      then(function (res) {\n        __f__(\"log\", 'load', res[1].data, \" at pages/profile/profile.vue:165\");\n        _this3.getList();\n      });\n    },\n    save: function save(id) {var _this4 = this;\n      uni.request({\n        url: \"http://101.35.91.117:7884/potential/update/status/save/\" + id,\n        method: 'get' }).\n      then(function (res) {\n        __f__(\"log\", 'load', res[1].data, \" at pages/profile/profile.vue:174\");\n        _this4.getList();\n      });\n    },\n    unsave: function unsave(id) {var _this5 = this;\n      uni.request({\n        url: \"http://101.35.91.117:7884/potential/update/status/potential/\" + id,\n        method: 'get' }).\n      then(function (res) {\n        __f__(\"log\", 'load', res[1].data, \" at pages/profile/profile.vue:183\");\n        _this5.getList();\n      });\n    },\n    loadInfo: function loadInfo() {var _this6 = this;\n      // uni.request({\n      // url: \"http://101.35.91.117:7884/users/avatar/\"+uni.getStorageSync('userId'),\n      // method: 'get',\n      // }).then(res=>{\n      // \tconsole.log('res',res)\n      // \tif(res[1].data!=''){\n      // \t\tthis.avatar = res[1].data\n      // \t}else{\n      // \t\tthis.avatar = \"../../static/girl.png\"\n      // \t}\n      // })\n      this.avatar = \"http://101.35.91.117:7884/users/avatar/\" + uni.getStorageSync('userId') + '?' + Math.random();\n      if (this.avatar == '') {\n        this.avatar = \"../../static/girl.png\";\n      }\n      uni.request({\n        url: \"http://101.35.91.117:7884/users/profile/\" + uni.getStorageSync('userId'),\n        method: 'get' }).\n      then(function (res) {\n        __f__(\"log\", 'load', res[1].data, \" at pages/profile/profile.vue:207\");\n        _this6.userInfo = res[1].data;\n        __f__(\"log\", 'load', _this6.userInfo.name, \" at pages/profile/profile.vue:209\");\n        if (_this6.userInfo.name == '' | _this6.userInfo.name == null) {\n          _this6.userInfo.name = \"Unknow\";\n        }\n        if (_this6.userInfo.address == 'None' | _this6.userInfo.address == null) {\n          _this6.userInfo.address = \"City, State, Country\";\n        }\n      });\n      this.getList();\n    },\n    goGrocery: function goGrocery() {\n      uni.switchTab({\n        url: \"../grocery/grocery\" });\n\n    },\n    goRanking: function goRanking() {\n      uni.navigateTo({\n        url: '../profile/ranking' });\n\n    } } };exports.default = _default;\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/lib/format-log.js */ 15)[\"default\"]))//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVuaS1hcHA6Ly8vcGFnZXMvcHJvZmlsZS9wcm9maWxlLnZ1ZSJdLCJuYW1lcyI6WyJkYXRhIiwidGFiYmFyIiwiJHN0b3JlIiwic3RhdGUiLCJkZXZpY2VIZWlnaHQiLCJ1c2VySW5mbyIsImF2YXRhciIsInNob3BMaXN0Iiwib25Mb2FkIiwibG9hZEluZm8iLCJvblNob3ciLCJtZXRob2RzIiwiZ2V0TGlzdCIsInVuaSIsInJlcXVlc3QiLCJ1cmwiLCJnZXRTdG9yYWdlU3luYyIsIm1ldGhvZCIsInRoZW4iLCJyZXMiLCJyZWZyZXNoIiwic2hvd0xvYWRpbmciLCJ0aXRsZSIsIm1hc2siLCJzZXRUaW1lb3V0IiwiaGlkZUxvYWRpbmciLCJsb2dvdXRBY3Rpb24iLCJzZXRTdG9yYWdlU3luYyIsIm5hdmlnYXRlVG8iLCJnb1NldHRpbmciLCJnb0VkaXQiLCJkZWxldGVJdGVtIiwiaWQiLCJzYXZlIiwidW5zYXZlIiwiTWF0aCIsInJhbmRvbSIsIm5hbWUiLCJhZGRyZXNzIiwiZ29Hcm9jZXJ5Iiwic3dpdGNoVGFiIiwiZ29SYW5raW5nIl0sIm1hcHBpbmdzIjoicUlBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFZ0I7QUFDZEEsTUFEYyxrQkFDUDtBQUNOLFdBQU87QUFDTkMsWUFBTSxFQUFFLEtBQUtDLE1BQUwsQ0FBWUMsS0FBWixDQUFrQkYsTUFEcEI7QUFFTkcsa0JBQVksRUFBRSxFQUZSO0FBR05DLGNBQVEsRUFBQyxFQUhIO0FBSU5DLFlBQU0sRUFBQyxFQUpEO0FBS05DLGNBQVEsRUFBQyxFQUxILEVBQVA7O0FBT0EsR0FUYTtBQVVkQyxRQVZjLG9CQVVMO0FBQ1I7QUFDQTtBQUNBO0FBQ0EsU0FBS0MsUUFBTDtBQUNBLEdBZmE7QUFnQmRDLFFBaEJjLG9CQWdCTjtBQUNQLFNBQUtELFFBQUw7QUFDQSxHQWxCYTtBQW1CZEUsU0FBTyxFQUFFO0FBQ1JDLFdBRFEscUJBQ0M7QUFDUkMsU0FBRyxDQUFDQyxPQUFKLENBQVk7QUFDWkMsV0FBRyxFQUFFLHlDQUF1Q0YsR0FBRyxDQUFDRyxjQUFKLENBQW1CLFFBQW5CLENBRGhDO0FBRVpDLGNBQU0sRUFBRSxLQUZJLEVBQVo7QUFHR0MsVUFISCxDQUdRLFVBQUFDLEdBQUcsRUFBRTtBQUNaLHFCQUFZLE1BQVosRUFBbUJBLEdBQUcsQ0FBQyxDQUFELENBQUgsQ0FBT25CLElBQTFCO0FBQ0EsYUFBSSxDQUFDTyxRQUFMLEdBQWdCWSxHQUFHLENBQUMsQ0FBRCxDQUFILENBQU9uQixJQUF2QjtBQUNBLE9BTkQ7QUFPQSxLQVRPO0FBVVJvQixXQVZRLHFCQVVDO0FBQ1JQLFNBQUcsQ0FBQ1EsV0FBSixDQUFnQixFQUFDQyxLQUFLLEVBQUUsWUFBUixFQUFxQkMsSUFBSSxFQUFDLElBQTFCLEVBQWhCO0FBQ0FWLFNBQUcsQ0FBQ0MsT0FBSixDQUFZO0FBQ1pDLFdBQUcsRUFBRSxnREFBOENGLEdBQUcsQ0FBQ0csY0FBSixDQUFtQixRQUFuQixDQUR2QztBQUVaQyxjQUFNLEVBQUUsS0FGSSxFQUFaO0FBR0dDLFVBSEgsQ0FHUSxVQUFBQyxHQUFHLEVBQUU7QUFDWixxQkFBWSxNQUFaLEVBQW1CQSxHQUFHLENBQUMsQ0FBRCxDQUFILENBQU9uQixJQUExQjtBQUNBd0Isa0JBQVUsQ0FBQyxZQUFZLENBQUNYLEdBQUcsQ0FBQ1ksV0FBSixHQUFtQixDQUFqQyxFQUFtQyxHQUFuQyxDQUFWO0FBQ0EsY0FBSSxDQUFDYixPQUFMO0FBQ0EsT0FQRDtBQVFBLEtBcEJPO0FBcUJSYyxnQkFyQlEsMEJBcUJNO0FBQ0RiLFNBQUcsQ0FBQ2MsY0FBSixDQUFtQixRQUFuQixFQUE2QixFQUE3QjtBQUNBZCxTQUFHLENBQUNlLFVBQUosQ0FBZTtBQUNYYixXQUFHLEVBQUUsd0JBRE0sRUFBZjs7QUFHSCxLQTFCRjtBQTJCUmMsYUEzQlEsdUJBMkJHO0FBQ1ZoQixTQUFHLENBQUNlLFVBQUosQ0FBZTtBQUNkYixXQUFHLEVBQUMsb0JBRFUsRUFBZjs7QUFHQSxLQS9CTztBQWdDUmUsVUFoQ1Esb0JBZ0NBO0FBQ1BqQixTQUFHLENBQUNlLFVBQUosQ0FBZTtBQUNkYixXQUFHLEVBQUMsY0FEVSxFQUFmOztBQUdBLEtBcENPO0FBcUNSZ0IsY0FyQ1Esc0JBcUNHQyxFQXJDSCxFQXFDTTtBQUNibkIsU0FBRyxDQUFDQyxPQUFKLENBQVk7O0FBRVpDLFdBQUcsRUFBRSxnREFBOENpQixFQUZ2QztBQUdaZixjQUFNLEVBQUUsS0FISSxFQUFaO0FBSUdDLFVBSkgsQ0FJUSxVQUFBQyxHQUFHLEVBQUU7QUFDWixxQkFBWSxNQUFaLEVBQW1CQSxHQUFHLENBQUMsQ0FBRCxDQUFILENBQU9uQixJQUExQjtBQUNBLGNBQUksQ0FBQ1ksT0FBTDtBQUNBLE9BUEQ7QUFRQSxLQTlDTztBQStDUnFCLFFBL0NRLGdCQStDSEQsRUEvQ0csRUErQ0E7QUFDUG5CLFNBQUcsQ0FBQ0MsT0FBSixDQUFZO0FBQ1pDLFdBQUcsRUFBRSw0REFBMERpQixFQURuRDtBQUVaZixjQUFNLEVBQUUsS0FGSSxFQUFaO0FBR0dDLFVBSEgsQ0FHUSxVQUFBQyxHQUFHLEVBQUU7QUFDWixxQkFBWSxNQUFaLEVBQW1CQSxHQUFHLENBQUMsQ0FBRCxDQUFILENBQU9uQixJQUExQjtBQUNBLGNBQUksQ0FBQ1ksT0FBTDtBQUNBLE9BTkQ7QUFPQSxLQXZETztBQXdEUnNCLFVBeERRLGtCQXdEREYsRUF4REMsRUF3REU7QUFDVG5CLFNBQUcsQ0FBQ0MsT0FBSixDQUFZO0FBQ1pDLFdBQUcsRUFBRSxpRUFBK0RpQixFQUR4RDtBQUVaZixjQUFNLEVBQUUsS0FGSSxFQUFaO0FBR0dDLFVBSEgsQ0FHUSxVQUFBQyxHQUFHLEVBQUU7QUFDWixxQkFBWSxNQUFaLEVBQW1CQSxHQUFHLENBQUMsQ0FBRCxDQUFILENBQU9uQixJQUExQjtBQUNBLGNBQUksQ0FBQ1ksT0FBTDtBQUNBLE9BTkQ7QUFPQSxLQWhFTztBQWlFUkgsWUFqRVEsc0JBaUVFO0FBQ1Q7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLFdBQUtILE1BQUwsR0FBWSw0Q0FBMENPLEdBQUcsQ0FBQ0csY0FBSixDQUFtQixRQUFuQixDQUExQyxHQUF1RSxHQUF2RSxHQUEyRW1CLElBQUksQ0FBQ0MsTUFBTCxFQUF2RjtBQUNBLFVBQUcsS0FBSzlCLE1BQUwsSUFBYSxFQUFoQixFQUFtQjtBQUNsQixhQUFLQSxNQUFMLEdBQWMsdUJBQWQ7QUFDQTtBQUNETyxTQUFHLENBQUNDLE9BQUosQ0FBWTtBQUNaQyxXQUFHLEVBQUUsNkNBQTJDRixHQUFHLENBQUNHLGNBQUosQ0FBbUIsUUFBbkIsQ0FEcEM7QUFFWkMsY0FBTSxFQUFFLEtBRkksRUFBWjtBQUdHQyxVQUhILENBR1EsVUFBQUMsR0FBRyxFQUFFO0FBQ1oscUJBQVksTUFBWixFQUFtQkEsR0FBRyxDQUFDLENBQUQsQ0FBSCxDQUFPbkIsSUFBMUI7QUFDQSxjQUFJLENBQUNLLFFBQUwsR0FBY2MsR0FBRyxDQUFDLENBQUQsQ0FBSCxDQUFPbkIsSUFBckI7QUFDQSxxQkFBWSxNQUFaLEVBQW1CLE1BQUksQ0FBQ0ssUUFBTCxDQUFjZ0MsSUFBakM7QUFDQSxZQUFHLE1BQUksQ0FBQ2hDLFFBQUwsQ0FBY2dDLElBQWQsSUFBb0IsRUFBcEIsR0FBdUIsTUFBSSxDQUFDaEMsUUFBTCxDQUFjZ0MsSUFBZCxJQUFvQixJQUE5QyxFQUFtRDtBQUNsRCxnQkFBSSxDQUFDaEMsUUFBTCxDQUFjZ0MsSUFBZCxHQUFtQixRQUFuQjtBQUNBO0FBQ0QsWUFBRyxNQUFJLENBQUNoQyxRQUFMLENBQWNpQyxPQUFkLElBQXVCLE1BQXZCLEdBQThCLE1BQUksQ0FBQ2pDLFFBQUwsQ0FBY2lDLE9BQWQsSUFBdUIsSUFBeEQsRUFBNkQ7QUFDNUQsZ0JBQUksQ0FBQ2pDLFFBQUwsQ0FBY2lDLE9BQWQsR0FBc0Isc0JBQXRCO0FBQ0E7QUFDRCxPQWJEO0FBY0EsV0FBSzFCLE9BQUw7QUFDQSxLQWhHTztBQWlHUjJCLGFBakdRLHVCQWlHRztBQUNWMUIsU0FBRyxDQUFDMkIsU0FBSixDQUFjO0FBQ2J6QixXQUFHLEVBQUUsb0JBRFEsRUFBZDs7QUFHQSxLQXJHTztBQXNHUjBCLGFBdEdRLHVCQXNHRztBQUNWNUIsU0FBRyxDQUFDZSxVQUFKLENBQWU7QUFDZGIsV0FBRyxFQUFDLG9CQURVLEVBQWY7O0FBR0EsS0ExR08sRUFuQkssRSIsImZpbGUiOiIxMDEuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cblxuXHRleHBvcnQgZGVmYXVsdCB7XG5cdFx0ZGF0YSgpIHtcblx0XHRcdHJldHVybiB7XG5cdFx0XHRcdHRhYmJhcjogdGhpcy4kc3RvcmUuc3RhdGUudGFiYmFyLFxuXHRcdFx0XHRkZXZpY2VIZWlnaHQ6ICcnLFxuXHRcdFx0XHR1c2VySW5mbzp7fSxcblx0XHRcdFx0YXZhdGFyOicnLFxuXHRcdFx0XHRzaG9wTGlzdDpbXSxcblx0XHRcdH1cblx0XHR9LFxuXHRcdG9uTG9hZCgpIHtcblx0XHRcdC8vIGxldCBkZXZpY2VJbmZvID0gdW5pLmdldFN5c3RlbUluZm9TeW5jKCk7XG5cdFx0XHQvLyB0aGlzLmRldmljZUhlaWdodCA9IGRldmljZUluZm8ud2luZG93SGVpZ2h0O1xuXHRcdFx0Ly8gTG9jYXRpb24ucmVsb2FkO1xuXHRcdFx0dGhpcy5sb2FkSW5mbygpO1xuXHRcdH0sXG5cdFx0b25TaG93KCl7XG5cdFx0XHR0aGlzLmxvYWRJbmZvKCk7XG5cdFx0fSxcblx0XHRtZXRob2RzOiB7XG5cdFx0XHRnZXRMaXN0KCl7XG5cdFx0XHRcdHVuaS5yZXF1ZXN0KHtcblx0XHRcdFx0dXJsOiBcImh0dHA6Ly8xMDEuMzUuOTEuMTE3Ojc4ODQvcG90ZW50aWFsL1wiK3VuaS5nZXRTdG9yYWdlU3luYygndXNlcklkJyksXG5cdFx0XHRcdG1ldGhvZDogJ2dldCcsXG5cdFx0XHRcdH0pLnRoZW4ocmVzPT57XG5cdFx0XHRcdFx0Y29uc29sZS5sb2coJ2xvYWQnLHJlc1sxXS5kYXRhKVxuXHRcdFx0XHRcdHRoaXMuc2hvcExpc3QgPSByZXNbMV0uZGF0YVxuXHRcdFx0XHR9KVxuXHRcdFx0fSxcblx0XHRcdHJlZnJlc2goKXtcblx0XHRcdFx0dW5pLnNob3dMb2FkaW5nKHt0aXRsZTogJ3JlZnJlc2hpbmcnLG1hc2s6dHJ1ZX0pO1xuXHRcdFx0XHR1bmkucmVxdWVzdCh7XG5cdFx0XHRcdHVybDogXCJodHRwOi8vMTAxLjM1LjkxLjExNzo3ODg0L3BvdGVudGlhbC91cGRhdGUvXCIrdW5pLmdldFN0b3JhZ2VTeW5jKCd1c2VySWQnKSxcblx0XHRcdFx0bWV0aG9kOiAnZ2V0Jyxcblx0XHRcdFx0fSkudGhlbihyZXM9Pntcblx0XHRcdFx0XHRjb25zb2xlLmxvZygnbG9hZCcscmVzWzFdLmRhdGEpXG5cdFx0XHRcdFx0c2V0VGltZW91dChmdW5jdGlvbiAoKSB7dW5pLmhpZGVMb2FkaW5nKCk7fSwgNTAwKTtcblx0XHRcdFx0XHR0aGlzLmdldExpc3QoKTtcblx0XHRcdFx0fSlcblx0XHRcdH0sXG5cdFx0XHRsb2dvdXRBY3Rpb24oKXtcbiAgICAgICAgICAgICAgICB1bmkuc2V0U3RvcmFnZVN5bmMoJ3VzZXJJZCcsICcnKVxuICAgICAgICAgICAgICAgIHVuaS5uYXZpZ2F0ZVRvKHtcbiAgICAgICAgICAgICAgICAgICAgdXJsOiBcIi9wYWdlcy93ZWxjb21lL3dlbGNvbWVcIlxuICAgICAgICAgICAgICAgIH0pXG4gICAgICAgICAgICB9LFxuXHRcdFx0Z29TZXR0aW5nKCl7XG5cdFx0XHRcdHVuaS5uYXZpZ2F0ZVRvKHtcblx0XHRcdFx0XHR1cmw6Jy4uL3NldHRpbmcvc2V0dGluZydcblx0XHRcdFx0fSlcblx0XHRcdH0sXG5cdFx0XHRnb0VkaXQoKXtcblx0XHRcdFx0dW5pLm5hdmlnYXRlVG8oe1xuXHRcdFx0XHRcdHVybDonLi4vZWRpdC9lZGl0J1xuXHRcdFx0XHR9KVxuXHRcdFx0fSxcblx0XHRcdGRlbGV0ZUl0ZW0oaWQpe1xuXHRcdFx0XHR1bmkucmVxdWVzdCh7XG5cdFx0XHRcdFx0XG5cdFx0XHRcdHVybDogXCJodHRwOi8vMTAxLjM1LjkxLjExNzo3ODg0L3BvdGVudGlhbC9kZWxldGUvXCIraWQsXG5cdFx0XHRcdG1ldGhvZDogJ2dldCcsXG5cdFx0XHRcdH0pLnRoZW4ocmVzPT57XG5cdFx0XHRcdFx0Y29uc29sZS5sb2coJ2xvYWQnLHJlc1sxXS5kYXRhKVxuXHRcdFx0XHRcdHRoaXMuZ2V0TGlzdCgpXG5cdFx0XHRcdH0pXG5cdFx0XHR9LFxuXHRcdFx0c2F2ZShpZCl7XG5cdFx0XHRcdHVuaS5yZXF1ZXN0KHtcblx0XHRcdFx0dXJsOiBcImh0dHA6Ly8xMDEuMzUuOTEuMTE3Ojc4ODQvcG90ZW50aWFsL3VwZGF0ZS9zdGF0dXMvc2F2ZS9cIitpZCxcblx0XHRcdFx0bWV0aG9kOiAnZ2V0Jyxcblx0XHRcdFx0fSkudGhlbihyZXM9Pntcblx0XHRcdFx0XHRjb25zb2xlLmxvZygnbG9hZCcscmVzWzFdLmRhdGEpXG5cdFx0XHRcdFx0dGhpcy5nZXRMaXN0KClcblx0XHRcdFx0fSlcblx0XHRcdH0sXG5cdFx0XHR1bnNhdmUoaWQpe1xuXHRcdFx0XHR1bmkucmVxdWVzdCh7XG5cdFx0XHRcdHVybDogXCJodHRwOi8vMTAxLjM1LjkxLjExNzo3ODg0L3BvdGVudGlhbC91cGRhdGUvc3RhdHVzL3BvdGVudGlhbC9cIitpZCxcblx0XHRcdFx0bWV0aG9kOiAnZ2V0Jyxcblx0XHRcdFx0fSkudGhlbihyZXM9Pntcblx0XHRcdFx0XHRjb25zb2xlLmxvZygnbG9hZCcscmVzWzFdLmRhdGEpXG5cdFx0XHRcdFx0dGhpcy5nZXRMaXN0KClcblx0XHRcdFx0fSlcblx0XHRcdH0sXG5cdFx0XHRsb2FkSW5mbygpe1xuXHRcdFx0XHQvLyB1bmkucmVxdWVzdCh7XG5cdFx0XHRcdC8vIHVybDogXCJodHRwOi8vMTAxLjM1LjkxLjExNzo3ODg0L3VzZXJzL2F2YXRhci9cIit1bmkuZ2V0U3RvcmFnZVN5bmMoJ3VzZXJJZCcpLFxuXHRcdFx0XHQvLyBtZXRob2Q6ICdnZXQnLFxuXHRcdFx0XHQvLyB9KS50aGVuKHJlcz0+e1xuXHRcdFx0XHQvLyBcdGNvbnNvbGUubG9nKCdyZXMnLHJlcylcblx0XHRcdFx0Ly8gXHRpZihyZXNbMV0uZGF0YSE9Jycpe1xuXHRcdFx0XHQvLyBcdFx0dGhpcy5hdmF0YXIgPSByZXNbMV0uZGF0YVxuXHRcdFx0XHQvLyBcdH1lbHNle1xuXHRcdFx0XHQvLyBcdFx0dGhpcy5hdmF0YXIgPSBcIi4uLy4uL3N0YXRpYy9naXJsLnBuZ1wiXG5cdFx0XHRcdC8vIFx0fVxuXHRcdFx0XHQvLyB9KVxuXHRcdFx0XHR0aGlzLmF2YXRhcj1cImh0dHA6Ly8xMDEuMzUuOTEuMTE3Ojc4ODQvdXNlcnMvYXZhdGFyL1wiK3VuaS5nZXRTdG9yYWdlU3luYygndXNlcklkJykrJz8nK01hdGgucmFuZG9tKClcblx0XHRcdFx0aWYodGhpcy5hdmF0YXI9PScnKXtcblx0XHRcdFx0XHR0aGlzLmF2YXRhciA9IFwiLi4vLi4vc3RhdGljL2dpcmwucG5nXCJcblx0XHRcdFx0fVxuXHRcdFx0XHR1bmkucmVxdWVzdCh7XG5cdFx0XHRcdHVybDogXCJodHRwOi8vMTAxLjM1LjkxLjExNzo3ODg0L3VzZXJzL3Byb2ZpbGUvXCIrdW5pLmdldFN0b3JhZ2VTeW5jKCd1c2VySWQnKSxcblx0XHRcdFx0bWV0aG9kOiAnZ2V0Jyxcblx0XHRcdFx0fSkudGhlbihyZXM9Pntcblx0XHRcdFx0XHRjb25zb2xlLmxvZygnbG9hZCcscmVzWzFdLmRhdGEpXG5cdFx0XHRcdFx0dGhpcy51c2VySW5mbz1yZXNbMV0uZGF0YVxuXHRcdFx0XHRcdGNvbnNvbGUubG9nKCdsb2FkJyx0aGlzLnVzZXJJbmZvLm5hbWUpXG5cdFx0XHRcdFx0aWYodGhpcy51c2VySW5mby5uYW1lPT0nJ3x0aGlzLnVzZXJJbmZvLm5hbWU9PW51bGwpe1xuXHRcdFx0XHRcdFx0dGhpcy51c2VySW5mby5uYW1lPVwiVW5rbm93XCI7XG5cdFx0XHRcdFx0fVxuXHRcdFx0XHRcdGlmKHRoaXMudXNlckluZm8uYWRkcmVzcz09J05vbmUnfHRoaXMudXNlckluZm8uYWRkcmVzcz09bnVsbCl7XG5cdFx0XHRcdFx0XHR0aGlzLnVzZXJJbmZvLmFkZHJlc3M9XCJDaXR5LCBTdGF0ZSwgQ291bnRyeVwiO1xuXHRcdFx0XHRcdH1cblx0XHRcdFx0fSlcblx0XHRcdFx0dGhpcy5nZXRMaXN0KClcblx0XHRcdH0sXG5cdFx0XHRnb0dyb2NlcnkoKXtcblx0XHRcdFx0dW5pLnN3aXRjaFRhYih7XG5cdFx0XHRcdFx0dXJsOiBcIi4uL2dyb2NlcnkvZ3JvY2VyeVwiXG5cdFx0XHRcdH0pO1xuXHRcdFx0fSxcblx0XHRcdGdvUmFua2luZygpe1xuXHRcdFx0XHR1bmkubmF2aWdhdGVUbyh7XG5cdFx0XHRcdFx0dXJsOicuLi9wcm9maWxlL3JhbmtpbmcnXG5cdFx0XHRcdH0pXG5cdFx0XHR9LFxuICAgICAgICAgICAgXG5cdFx0fSxcdFx0XHRcblx0fVxuIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///101\n");
 
 /***/ }),
 /* 102 */
@@ -8598,7 +4895,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _App
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("/* WEBPACK VAR INJECTION */(function(__f__) {Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0; //\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\nvar _default =\n{\n  data: function data() {\n    return {\n      tabbar: this.$store.state.tabbar,\n      avatar: \"\",\n      user: {},\n      config: {\n        title: '',\n        color: 'black',\n        backgroundColor: '#FFFFFF',\n        back: false,\n        backTxt: 'xxxxxx',\n        statusBarBackground: '#FFFFFF',\n        rightButton: [{\n          key: 'notification',\n          icon: '&#xE61E;',\n          position: 'right' }],\n\n        leftButton: [{\n          key: 'text',\n          icon: '&#xe680;',\n          txt: '\\xa0\\xa0\\xa0Track My Grocery',\n          position: 'left' }] },\n\n\n      item_box: [\n      {\n        'itemId': 1,\n        'title': 'Fridge Cleaning',\n        'img': 'https://imgs.heartplan.cn/Fp11e_N392CzYKutu_3IsudIiM9R/preview',\n        'name': 'Grilled Sweet Potatoes',\n        'type': 'Sweet Potatoes, Celery',\n        'view': '50' },\n\n      {\n        'itemId': 2,\n        'title': 'Fridge Cleaning',\n        'img': 'https://imgs.heartplan.cn/Fp11e_N392CzYKutu_3IsudIiM9R/preview',\n        'name': 'Grilled Sweet Potatoes',\n        'type': 'Sweet Potatoes, Celery',\n        'view': '50' }],\n\n\n      expiringFoodList: [],\n      randomRecipesList: [],\n      consumePop: false,\n      needChangeItem: '',\n      popFrom: 'bottom',\n      notificationData: '' };\n\n  },\n  onLoad: function onLoad() {\n    var clientInfo = plus.push.getClientInfo();\n    __f__(\"log\", 'clientid ', clientInfo.clientid, \" at pages/home/home.vue:198\");\n    Location.reload;\n  },\n  onShow: function onShow() {\n    this.loadinfo();\n    this.getCol();\n    this.getNotificationData();\n  },\n  methods: {\n    onClickBtn: function onClickBtn(e) {\n      if (e.key == 'notification') {\n        var notificationDataString = encodeURIComponent(JSON.stringify(this.notificationData));\n        uni.navigateTo({\n          url: '../notification/notification?notificationDataString=' + notificationDataString });\n\n      }\n    },\n    toDetail: function toDetail(e) {\n      __f__(\"log\", e, \" at pages/home/home.vue:216\");\n      uni.navigateTo({\n        url: '../grocery/detail?id=' + e + '&backType=2' });\n\n    },\n    consumeSelect: function consumeSelect(e) {\n      __f__(\"log\", e, \" at pages/home/home.vue:222\");\n      this.consumePop = true;\n      this.needChangeItem = e;\n\n    },\n    isReminded: function isReminded(e) {\n      // console.log(new Date(this.expiringFoodList[e].remindTime))\n\n      var now = new Date();\n      // console.log(now)\n      if (new Date(this.expiringFoodList[e].remindTime) > new Date()) {\n        return false;\n      } else {\n        return true;\n      }\n    },\n    getFreshness: function getFreshness(e) {\n      // console.log(this.expiringFoodList[e].addDate)\n      // console.log(this.expiringFoodList[e].expDate)\n      var totalTime = new Date(this.expiringFoodList[e].expDate) - new Date(this.expiringFoodList[e].addDate);\n      var restTime = new Date(this.expiringFoodList[e].expDate) - new Date();\n      // console.log(restTime/totalTime)\n      return (1 - restTime / totalTime) * 100;\n    },\n    consume: function consume(e) {var _this = this;\n      if (e === 'yes') {\n        var changedItem = this.expiringFoodList[this.needChangeItem];\n        // var lsConsumeTime = new Date().toLocaleDateString().split(\"/\");\n        // //China Timezone needed\n        // // if(lsConsumeTime[2].length === 1){\n        // //     lsConsumeTime[2] = \"0\" + lsConsumeTime[2]\n        // // }\n        // //Australian Timezone needed\n        // if(lsConsumeTime[1].length === 1){\n        // \tlsConsumeTime[1] = \"0\" + lsConsumeTime[1]\n        // }\n        // var consumeTime = lsConsumeTime[2]+\"-\"+lsConsumeTime[0]+\"-\"+lsConsumeTime[1]\n        this.consumeItem(changedItem);\n        __f__(\"log\", changedItem, \" at pages/home/home.vue:260\");\n        __f__(\"log\", changedItem.itemId, \" at pages/home/home.vue:261\");\n        uni.request({\n          url: 'http://101.35.91.117:7884/item/update/status/' + \"consume\" + \"/id/\" + changedItem.itemId }).\n        then(function (res) {\n          _this.getCol();\n          __f__(\"log\", res[1], \" at pages/home/home.vue:266\");\n        });\n\n      }\n      this.consumePop = false;\n\n    },\n    consumeItem: function consumeItem(item) {\n      var itemUpdated = {\n        \"addDate\": item.addDate,\n        \"addMethod\": item.addMethod,\n        \"category\": item.category,\n        \"conDate\": new Date(),\n        \"detail\": item.detail,\n        \"expDate\": item.expDate,\n        \"itemId\": item.itemId,\n        \"name\": item.name,\n        \"remindTime\": item.remindTime,\n        \"status\": \"consume\",\n        \"uid\": uni.getStorageSync('userId') };\n\n      __f__(\"log\", JSON.stringify(itemUpdated), \" at pages/home/home.vue:287\");\n      uni.request({\n        method: 'POST',\n        url: 'http://101.35.91.117:7884/item/update',\n        data: JSON.stringify(itemUpdated) }).\n      then(function (res) {\n        __f__(\"log\", res, \" at pages/home/home.vue:293\");\n        // this.getCol()\n      });\n    },\n    loadinfo: function loadinfo() {var _this2 = this;\n      // uni.request({\n      // url: \"http://101.35.91.117:7884/users/avatar/\"+uni.getStorageSync('userId'),\n      // method: 'get',\n      // }).then(res=>{\n      // \tconsole.log('res',res)\n      // \tif(res[1].data!=''){\n      // \t\tthis.avatar = res[1].data\n      // \t}else{\n      // \t\tthis.avatar = \"../../static/girl.png\"\n      // \t}\n      // })\n\n      this.avatar = \"http://101.35.91.117:7884/users/avatar/\" + uni.getStorageSync('userId');\n      if (this.avatar == '') {\n        this.avatar = \"../../static/girl.png\";\n      };\n      uni.request({\n        url: \"http://101.35.91.117:7884/users/profile/\" + uni.getStorageSync('userId'),\n        method: 'get' }).\n      then(function (res) {\n        // console.log('load',res[1].data)\n        _this2.user = res[1].data;\n        __f__(\"log\", 'load', _this2.user.name, \" at pages/home/home.vue:320\");\n        if (_this2.user.name == '' | _this2.user.name == null) {\n          _this2.user.name = \"Unknow\";\n        }\n        if (_this2.user.address == 'None' | _this2.user.address == null) {\n          _this2.user.address = \"City, State, Country\";\n        }\n      });\n    },\n\n    getCol: function getCol() {var _this3 = this;\n\n      // if (uni.getStorageSync('userId')){\n\n      // }\n\n      uni.request({\n        url: 'http://101.35.91.117:7884/item/user/' + uni.getStorageSync('userId') }).\n      then(function (res) {\n        __f__(\"log\", res[1].data, \" at pages/home/home.vue:339\");\n        _this3.updateItemList(res[1].data);\n      });\n    },\n\n    updateItemList: function updateItemList(foodList) {\n      var expiringFoodList = [];\n      for (var i = 0; i < foodList.length; i++) {\n        var item = foodList[i];\n        var itemInfo = {\n          \"addDate\": item.addDate,\n          \"addMethod\": item.addMethod,\n          \"category\": item.category,\n          \"conDate\": item.conDate,\n          \"detail\": item.detail,\n          \"expDate\": item.expDate.substr(0, 10),\n          \"itemId\": item.itemId,\n          \"name\": item.name,\n          \"remindTime\": item.remindTime,\n          \"status\": item.status,\n          \"time\": this.iCitime,\n          \"uid\": uni.getStorageSync('userId'),\n          \"img\": item.picture };\n\n        if (foodList[i].status === 'instock') {\n          expiringFoodList.push(itemInfo);\n          // console.log(item.remindTime);\n        }\n      }\n      expiringFoodList.sort(function (a, b) {\n        var dateA = a.remindTime;\n        var dateB = b.remindTime;\n        if (dateA < dateB) {\n          return -1;\n        } else if (dateA > dateB) {\n          return 1;\n        } else {\n          if (a.expDate < b.expDate) {\n            return -1;\n          } else {\n            return 1;\n          }\n        }\n        return 0;\n      });\n\n      // console.log(expiringFoodList)\n      this.expiringFoodList = expiringFoodList;\n      // console.log(this.expiringFoodList)\n    },\n    getRandomRecipes: function getRandomRecipes() {var _this4 = this;\n      uni.request({\n        url: \"http://101.35.91.117:7884/recipe/random\",\n        method: 'get' }).\n      then(function (res) {\n        _this4.loadRecipe(res[1].data);\n        _this4.$store.commit(\"setRecipe\", res[1].data);\n      });\n    },\n    loadRecipe: function loadRecipe(recipeList) {\n      var tmp = [];\n      var List = [];\n      for (var i = 0; i < recipeList.length; i++) {\n        var recipe = recipeList[i];\n        var recipeInfo = {\n          \"recipeId\": recipe.id,\n          'img': recipe.image,\n          'name': recipe.title };\n\n        if (tmp.length == 2) {\n          List.push(tmp);\n          tmp = [];\n        }\n        tmp.push(recipeInfo);\n      }\n      if (tmp.length != 0) {\n        List.push(tmp);\n      }\n      this.randomRecipesList = List;\n      __f__(\"log\", this.randomRecipesList, \" at pages/home/home.vue:418\");\n    },\n    getNotificationData: function getNotificationData() {var _this5 = this;\n      uni.request({\n        url: \"http://101.35.91.117:7884/notification/get/\" + uni.getStorageSync('userId'),\n        method: 'get' }).\n      then(function (res) {\n        __f__(\"log\", res, \" at pages/home/home.vue:425\");\n        __f__(\"log\", 'load', res[1].data, \" at pages/home/home.vue:426\");\n        // this.shopList = res[1].data\n        _this5.notificationData = res[1].data.itemNotificationList;\n      });\n    } } };exports.default = _default;\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/lib/format-log.js */ 15)[\"default\"]))//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVuaS1hcHA6Ly8vcGFnZXMvaG9tZS9ob21lLnZ1ZSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFnSkE7QUFDQSxNQURBLGtCQUNBO0FBQ0E7QUFDQSxzQ0FEQTtBQUVBLGdCQUZBO0FBR0EsY0FIQTtBQUlBO0FBQ0EsaUJBREE7QUFFQSxzQkFGQTtBQUdBLGtDQUhBO0FBSUEsbUJBSkE7QUFLQSx5QkFMQTtBQU1BLHNDQU5BO0FBT0E7QUFDQSw2QkFEQTtBQUVBLDBCQUZBO0FBR0EsMkJBSEEsR0FQQTs7QUFZQTtBQUNBLHFCQURBO0FBRUEsMEJBRkE7QUFHQSw2Q0FIQTtBQUlBLDBCQUpBLEdBWkEsRUFKQTs7O0FBdUJBO0FBQ0E7QUFDQSxtQkFEQTtBQUVBLGtDQUZBO0FBR0EsK0VBSEE7QUFJQSx3Q0FKQTtBQUtBLHdDQUxBO0FBTUEsb0JBTkEsRUFEQTs7QUFTQTtBQUNBLG1CQURBO0FBRUEsa0NBRkE7QUFHQSwrRUFIQTtBQUlBLHdDQUpBO0FBS0Esd0NBTEE7QUFNQSxvQkFOQSxFQVRBLENBdkJBOzs7QUF5Q0EsMEJBekNBO0FBMENBLDJCQTFDQTtBQTJDQSx1QkEzQ0E7QUE0Q0Esd0JBNUNBO0FBNkNBLHVCQTdDQTtBQThDQSwwQkE5Q0E7O0FBZ0RBLEdBbERBO0FBbURBLFFBbkRBLG9CQW1EQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLEdBdkRBO0FBd0RBLFFBeERBLG9CQXdEQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLEdBNURBO0FBNkRBO0FBQ0EsY0FEQSxzQkFDQSxDQURBLEVBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSw4RkFEQTs7QUFHQTtBQUNBLEtBUkE7QUFTQSxZQVRBLG9CQVNBLENBVEEsRUFTQTtBQUNBO0FBQ0E7QUFDQSx3REFEQTs7QUFHQSxLQWRBO0FBZUEsaUJBZkEseUJBZUEsQ0FmQSxFQWVBO0FBQ0E7QUFDQTtBQUNBOztBQUVBLEtBcEJBO0FBcUJBLGNBckJBLHNCQXFCQSxDQXJCQSxFQXFCQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsT0FGQSxNQUVBO0FBQ0E7QUFDQTtBQUNBLEtBL0JBO0FBZ0NBLGdCQWhDQSx3QkFnQ0EsQ0FoQ0EsRUFnQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxLQXZDQTtBQXdDQSxXQXhDQSxtQkF3Q0EsQ0F4Q0EsRUF3Q0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLHdHQURBO0FBRUEsWUFGQSxDQUVBO0FBQ0E7QUFDQTtBQUNBLFNBTEE7O0FBT0E7QUFDQTs7QUFFQSxLQWxFQTtBQW1FQSxlQW5FQSx1QkFtRUEsSUFuRUEsRUFtRUE7QUFDQTtBQUNBLCtCQURBO0FBRUEsbUNBRkE7QUFHQSxpQ0FIQTtBQUlBLDZCQUpBO0FBS0EsNkJBTEE7QUFNQSwrQkFOQTtBQU9BLDZCQVBBO0FBUUEseUJBUkE7QUFTQSxxQ0FUQTtBQVVBLDJCQVZBO0FBV0EsMkNBWEE7O0FBYUE7QUFDQTtBQUNBLHNCQURBO0FBRUEsb0RBRkE7QUFHQSx5Q0FIQTtBQUlBLFVBSkEsQ0FJQTtBQUNBO0FBQ0E7QUFDQSxPQVBBO0FBUUEsS0ExRkE7QUEyRkEsWUEzRkEsc0JBMkZBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0Esc0ZBREE7QUFFQSxxQkFGQTtBQUdBLFVBSEEsQ0FHQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLE9BYkE7QUFjQSxLQTFIQTs7QUE0SEEsVUE1SEEsb0JBNEhBOztBQUVBOztBQUVBOztBQUVBO0FBQ0Esa0ZBREE7QUFFQSxVQUZBLENBRUE7QUFDQTtBQUNBO0FBQ0EsT0FMQTtBQU1BLEtBeElBOztBQTBJQSxrQkExSUEsMEJBMElBLFFBMUlBLEVBMElBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxpQ0FEQTtBQUVBLHFDQUZBO0FBR0EsbUNBSEE7QUFJQSxpQ0FKQTtBQUtBLCtCQUxBO0FBTUEsK0NBTkE7QUFPQSwrQkFQQTtBQVFBLDJCQVJBO0FBU0EsdUNBVEE7QUFVQSwrQkFWQTtBQVdBLDhCQVhBO0FBWUEsNkNBWkE7QUFhQSw2QkFiQTs7QUFlQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLFNBRkEsTUFFQTtBQUNBO0FBQ0EsU0FGQSxNQUVBO0FBQ0E7QUFDQTtBQUNBLFdBRkEsTUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsT0FmQTs7QUFpQkE7QUFDQTtBQUNBO0FBQ0EsS0F0TEE7QUF1TEEsb0JBdkxBLDhCQXVMQTtBQUNBO0FBQ0Esc0RBREE7QUFFQSxxQkFGQTtBQUdBLFVBSEEsQ0FHQTtBQUNBO0FBQ0E7QUFDQSxPQU5BO0FBT0EsS0EvTEE7QUFnTUEsY0FoTUEsc0JBZ01BLFVBaE1BLEVBZ01BO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLCtCQURBO0FBRUEsNkJBRkE7QUFHQSw4QkFIQTs7QUFLQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsS0FyTkE7QUFzTkEsdUJBdE5BLGlDQXNOQTtBQUNBO0FBQ0EseUZBREE7QUFFQSxxQkFGQTtBQUdBLFVBSEEsQ0FHQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsT0FSQTtBQVNBLEtBaE9BLEVBN0RBLEUiLCJmaWxlIjoiMTE0LmpzIiwic291cmNlc0NvbnRlbnQiOlsiPHRlbXBsYXRlPlxuXHQ8dmlldz5cblx0XHQ8aHgtbmF2YmFyIHJlZj1cImh4bmJcIiA6Y29uZmlnPVwiY29uZmlnXCIgQGNsaWNrQnRuPVwib25DbGlja0J0blwiPlxuXHRcdDwvaHgtbmF2YmFyPlxuXHRcdFxuXHRcdFxuXHRcdDx2aWV3IHN0eWxlPVwibWFyZ2luLXRvcDogNjBweDtcIj5cblx0XHRcdDx1LXJvdyBndXR0ZXI9XCIxNlwiIGp1c3RpZnk9XCJzcGFjZS1iZXR3ZWVuXCI+XG5cdFx0XHRcdDx1LWNvbCBzcGFuPVwiOVwiPlxuXHRcdFx0XHRcdDx2aWV3IGNsYXNzPVwiZGVtby1sYXlvdXQgYmctcHVycGxlXCI+XG5cdFx0XHRcdFx0XHQ8dmlldyBjbGFzcz1cIm5hbWVcIiBzdHlsZT1cImZvbnRcIj5cblx0XHRcdFx0XHRcdFx0PHRleHQgc3R5bGU9XCJmb250LXNpemU6IDIwcHg7Zm9udC13ZWlnaHQ6IDgwMDtjb2xvcjogIzk5OTk5OTtcIj5XZWxjb21lIEJhY2ssIDwvdGV4dD5cblx0XHRcdFx0XHRcdFx0PHRleHQgc3R5bGU9XCJmb250LXNpemU6IDI4cHg7Y29sb3I6ICMwMDAwMDA7Zm9udC13ZWlnaHQ6IDkwMDtcIj57e3VzZXIubmFtZX19PC90ZXh0PlxuXHRcdFx0XHRcdFx0PC92aWV3PlxuXHRcdFx0XHRcdDwvdmlldz5cblx0XHRcdFx0PC91LWNvbD5cblx0XHRcdFx0PHUtY29sIHNwYW49XCIzXCI+XG5cdFx0XHRcdFx0PHZpZXcgY2xhc3M9XCJkZW1vLWxheW91dCBiZy1wdXJwbGUtbGlnaHRcIj5cblx0XHRcdFx0XHRcdDx1LWltYWdlIDpzcmM9XCJhdmF0YXJcIiBzaGFwZT1cImNpcmNsZVwiIHdpZHRoPVwiMTYwXCIgaGVpZ2h0PVwiMTYwXCI+PC91LWltYWdlPlxuXHRcdFx0XHRcdFx0XG5cdFx0XHRcdFx0PC92aWV3PlxuXHRcdFx0XHQ8L3UtY29sPlxuXHRcdFx0PC91LXJvdz5cblx0XHQ8L3ZpZXc+XG5cdFx0PHZpZXcgY2xhc3M9XCJcIiBzdHlsZT1cInBhZGRpbmc6IDAgMTVweCAwIDE1cHg7bWFyZ2luLXRvcDogMzBweDtcIj5cblx0XHRcdDx1LXJvdyBndXR0ZXI9XCIxNlwiIGp1c3RpZnk9XCJzcGFjZS1iZXR3ZWVuXCI+XG5cdFx0XHRcdDx1LWNvbCBzcGFuPVwiOVwiPlxuXHRcdFx0XHRcdDx2aWV3IGNsYXNzPVwiZGVtby1sYXlvdXQgYmctcHVycGxlXCI+XG5cdFx0XHRcdFx0XHQ8dGV4dCBzdHlsZT1cImZvbnQtc2l6ZTogMTZweDtmb250LXdlaWdodDogNTAwO1wiPkV4cGlyaW5nICBQcm9kdWN0czwvdGV4dD5cblx0XHRcdFx0XHQ8L3ZpZXc+XG5cdFx0XHRcdDwvdS1jb2w+XG48IS0tIFx0XHRcdFx0PHUtY29sIHNwYW49XCIzXCI+XG5cdFx0XHRcdFx0PHZpZXcgY2xhc3M9XCJkZW1vLWxheW91dCBiZy1wdXJwbGUtbGlnaHRcIiBzdHlsZT1cInRleHQtYWxpZ246IHJpZ2h0O1wiPlxuXHRcdFx0XHRcdFx0PGltYWdlIHNyYz1cIi4uLy4uL3N0YXRpYy8wMDAucG5nXCIgc3R5bGU9XCJ3aWR0aDogMjZweDtoZWlnaHQ6IDI3cHg7ZGlzcGxheTogaW5saW5lLWJsb2NrO1wiPlxuXHRcdFx0XHRcdDwvdmlldz5cblx0XHRcdFx0PC91LWNvbD4gLS0+XG5cdFx0XHQ8L3Utcm93Plx0XG5cdFx0PC92aWV3PlxuXHRcdDx2aWV3IGNsYXNzPVwiXCI+XG5cdFx0XHQ8c2Nyb2xsLXZpZXcgOnNjcm9sbC13aXRoLWFuaW1hdGlvbj1cInRydWVcIiAgOnNjcm9sbC14PVwidHJ1ZVwiIHN0eWxlPVwid2hpdGUtc3BhY2U6IG5vd3JhcDtcIiA+XG5cdFx0XHQgIDx0ZW1wbGF0ZSB2LWZvcj1cIihpdGVtLCBpbmRleCkgaW4gZXhwaXJpbmdGb29kTGlzdFwiPlxuXHRcdFx0XHQgIFxuXHRcdFx0XHQ8dmlldyBjbGFzcz1cInNjcm9sbF9pdGVtXCIgOnN0eWxlPVwieydiYWNrZ3JvdW5kLWltYWdlJzogJ3VybCgnKydodHRwOi8vMTAxLjM1LjkxLjExNzo3ODg0L2l0ZW0vcGljdHVyZS8nK2l0ZW0uaXRlbUlkKyc/JytNYXRoLnJhbmRvbSgpKycpJywnZmlsdGVyJzogJ2dyYXlzY2FsZSgnK2dldEZyZXNobmVzcyhpbmRleCkrJyUpJ31cIj5cblx0XHRcdFx0XHQ8aW1hZ2Ugc3JjPVwiLi4vLi4vc3RhdGljL2tuaWZlX2ZvcmsucG5nXCIgc3R5bGU9XCJ3aWR0aDogMjBweDtoZWlnaHQ6IDIwcHg7ZmxvYXQ6cmlnaHRcIiBAY2xpY2s9XCJjb25zdW1lU2VsZWN0KGluZGV4KVwiIC8+XG5cdFx0XHRcdFx0PHZpZXcgc3R5bGU9XCJoZWlnaHQ6IDEwMCU7XCIgIEBjbGljaz1cInRvRGV0YWlsKGl0ZW0uaXRlbUlkKVwiPlxuXHRcdFx0XHRcdFx0XHRcblx0XHRcdFx0PC92aWV3PlxuXHRcdFx0XHRcdDx0ZXh0IHN0eWxlPVwibWFyZ2luLWxlZnQ6IDE0cHg7Zm9udC1zaXplOiAxNnB4O2ZvbnQtd2VpZ2h0OiA1MDA7XCI+e3sgaXRlbS5uYW1lIH19PC90ZXh0PlxuXHRcdFx0XHRcdDx2aWV3IGNsYXNzPVwiXCIgc3R5bGU9XCJtYXJnaW4tbGVmdDogMTRweDtcIj5cblx0XHRcdFx0XHRcdDxpbWFnZSBzcmM9XCIuLi8uLi9zdGF0aWMvcmVtaW5kLnBuZ1wiIHN0eWxlPVwid2lkdGg6IDE1cHg7aGVpZ2h0OiAxNXB4O1wiIHYtaWY9XCJpc1JlbWluZGVkKGluZGV4KVwiIC8+XG5cdFx0XHRcdFx0XHQ8dGV4dCBzdHlsZT1cImRpc3BsYXk6IGlubGluZS1ibG9jazttYXJnaW4tbGVmdDogNXB4O1wiPnt7aXRlbS5leHBEYXRlLnNwbGl0KFwiVFwiKVswXS5zcGxpdCgnLScpWzJdKycvJysgaXRlbS5leHBEYXRlLnNwbGl0KFwiVFwiKVswXS5zcGxpdCgnLScpWzFdIH19PC90ZXh0PlxuXHRcdFx0XHRcdDwvdmlldz5cblx0XHRcdFx0ICA8L3ZpZXc+XG5cdFx0XHRcdCAgXG5cdFx0XHQgIDwvdGVtcGxhdGU+XG5cdFx0XHQ8L3Njcm9sbC12aWV3PlxuXHRcdDwvdmlldz5cblxuXHRcdDx2aWV3IGNsYXNzPVwiXCIgc3R5bGU9XCJwYWRkaW5nOiAwIDE1cHggMCAxNXB4O21hcmdpbi10b3A6IDMwcHg7XCI+XG5cdFx0XHQ8dS1yb3cgZ3V0dGVyPVwiMTZcIiBqdXN0aWZ5PVwic3BhY2UtYmV0d2VlblwiPlxuXHRcdFx0XHQ8dS1jb2wgc3Bhbj1cIjlcIj5cblx0XHRcdFx0XHQ8dmlldyBjbGFzcz1cImRlbW8tbGF5b3V0IGJnLXB1cnBsZVwiPlxuXHRcdFx0XHRcdFx0PHRleHQgc3R5bGU9XCJmb250LXNpemU6IDE2cHg7Zm9udC13ZWlnaHQ6IDUwMDtcIj5SZWNpcGUgUmVjb21tZW5kYXRpb248L3RleHQ+XG5cdFx0XHRcdFx0PC92aWV3PlxuXHRcdFx0XHQ8L3UtY29sPlxuXHRcdFx0XHQ8dS1jb2wgc3Bhbj1cIjNcIj5cblx0XHRcdFx0XHQ8dmlldyBjbGFzcz1cImRlbW8tbGF5b3V0IGJnLXB1cnBsZS1saWdodFwiIEBjbGljaz1cImdldFJhbmRvbVJlY2lwZXNcIiBzdHlsZT1cInRleHQtYWxpZ246IHJpZ2h0O1wiPlxuXHRcdFx0XHRcdFx0PGltYWdlIHNyYz1cIi4uLy4uL3N0YXRpYy9yZWZyZXNoLnBuZ1wiIHN0eWxlPVwid2lkdGg6IDI5cHg7aGVpZ2h0OiAyN3B4O2Rpc3BsYXk6IGlubGluZS1ibG9jaztcIj5cblx0XHRcdFx0XHQ8L3ZpZXc+XG5cdFx0XHRcdDwvdS1jb2w+XG5cdFx0XHQ8L3Utcm93Plx0XG5cdFx0PC92aWV3PlxuXHRcdFxuXHRcdFxuXHRcdDwhLS0gPHZpZXcgY2xhc3M9XCJcIiBzdHlsZT1cInBhZGRpbmc6IDAgMTVweCAwIDE1cHg7bWFyZ2luLXRvcDogMzBweDtcIiA+IC0tPlxuXHRcdDx2aWV3IGNsYXNzPVwiXCIgc3R5bGU9XCJwYWRkaW5nOiAwIDE1cHggMCAxNXB4O21hcmdpbi10b3A6IDMwcHg7XCIgdi1mb3I9XCJyZWNpcGUgaW4gcmFuZG9tUmVjaXBlc0xpc3RcIj5cblx0XHRcdDx1LXJvdyBndXR0ZXI9XCIwXCIganVzdGlmeT1cInNwYWNlLWJldHdlZW5cIj5cblxuXHRcdFx0XHQ8dS1jb2wgc3Bhbj1cIjZcIj5cblx0XHRcdFx0XHQ8dmlldyBjbGFzcz1cImRlbW8tbGF5b3V0IGJnLXB1cnBsZS1saWdodCBjYXJkXCIgQGNsaWNrPVwidG9EZXRhaWwoKHJlY2lwZVswXSkucmVjaXBlSWQpXCI+XG5cdFx0XHRcdFx0XHQ8dmlldyBjbGFzcz1cImNhcmQtYm94XCI+XG5cdFx0XHRcdFx0XHRcdDx1LWltYWdlIGJvcmRlci1yYWRpdXM9XCI2cHhcIiBoZWlnaHQ9XCIxMzhweFwiIHdpZHRoPVwiMTAwJVwiIDpzcmM9XCIocmVjaXBlWzBdKS5pbWdcIiA6ZmFkZT1cInRydWVcIiBkdXJhdGlvbj1cIjQ1MFwiPjwvdS1pbWFnZT5cblx0XHRcdFx0XHRcdFx0PHRleHQgc3R5bGU9XCJmb250LXNpemU6IDEycHg7Zm9udC13ZWlnaHQ6IDUwMDtcIj57eyAocmVjaXBlWzBdKS5uYW1lIH19PC90ZXh0PlxuXHRcdFx0XHRcdFx0XHRcblx0XHRcdFx0XHRcdFx0PHZpZXcgc3R5bGU9XCJ0ZXh0LWFsaWduOiBsZWZ0O21hcmdpbi10b3A6IDEwcHg7XCI+XG5cdFx0XHRcdFx0XHRcdFx0PGltYWdlIHNyYz1cIi4uLy4uL3N0YXRpYy9iLW1lZGFsLnBuZ1wiIHN0eWxlPVwid2lkdGg6IDE1cHg7aGVpZ2h0OiAxNXB4O21hcmdpbi1sZWZ0OiAzMHJweDtcIj5cblx0XHRcdFx0XHRcdFx0XHQ8dGV4dCBzdHlsZT1cImRpc3BsYXk6IGlubGluZS1ibG9jazttYXJnaW4tbGVmdDogMTBweDtmb250LXNpemU6IDEwcHg7XCI+e3sgTWF0aC5mbG9vcigoTWF0aC5yYW5kb20oKSAqIDUwMDApICsgMTAwKSB9fSBMaWtlczwvdGV4dD5cblx0XHRcdFx0XHRcdFx0XHRcblx0XHRcdFx0XHRcdFx0PC92aWV3PlxuPCEtLSBcdFx0XHRcdFx0XHRcdDx2aWV3IHN0eWxlPVwibWFyZ2luLXRvcDogMTBweDt0ZXh0LWFsaWduOiBsZWZ0O21hcmdpbi1sZWZ0OiAzMHJweDtcIj5cblx0XHRcdFx0XHRcdFx0XHQ8dGV4dCBzdHlsZT1cImZvbnQtc2l6ZTogMTJweDtjb2xvcjogIzRDRDk2NDtmb250LXdlaWdodDogNTAwO1wiPkJlZWYsIE11c2hyb29tPC90ZXh0PlxuXHRcdFx0XHRcdFx0XHQ8L3ZpZXc+IC0tPlxuXHRcdFx0XHRcdFx0PC92aWV3PlxuXHRcdFx0XHRcdDwvdmlldz5cblx0XHRcdFx0PC91LWNvbD5cblx0XHRcdFx0XG5cdFx0XHRcdDx1LWNvbCBzcGFuPVwiNlwiIHYtaWY9XCJyZWNpcGUubGVuZ3RoID09IDJcIj5cblx0XHRcdFx0XHQ8dmlldyBjbGFzcz1cImRlbW8tbGF5b3V0IGJnLXB1cnBsZS1saWdodCBjYXJkXCIgQGNsaWNrPVwidG9EZXRhaWwoKHJlY2lwZVsxXSkucmVjaXBlSWQpXCI+XG5cdFx0XHRcdFx0XHQ8dmlldyBjbGFzcz1cImNhcmQtYm94XCI+XG5cdFx0XHRcdFx0XHRcdDx1LWltYWdlIGJvcmRlci1yYWRpdXM9XCI2cHhcIiBoZWlnaHQ9XCIxMzhweFwiIHdpZHRoPVwiMTAwJVwiIDpzcmM9XCIocmVjaXBlWzFdKS5pbWdcIiA6ZmFkZT1cInRydWVcIiBkdXJhdGlvbj1cIjQ1MFwiPjwvdS1pbWFnZT5cblx0XHRcdFx0XHRcdFx0PHRleHQgc3R5bGU9XCJmb250LXNpemU6IDEycHg7Zm9udC13ZWlnaHQ6IDUwMDtcIj57eyAocmVjaXBlWzFdKS5uYW1lIH19PC90ZXh0PlxuXHRcdFx0XHRcdFx0XHRcblx0XHRcdFx0XHRcdFx0PHZpZXcgc3R5bGU9XCJ0ZXh0LWFsaWduOiBsZWZ0O21hcmdpbi10b3A6IDEwcHg7XCI+XG5cdFx0XHRcdFx0XHRcdFx0PGltYWdlIHNyYz1cIi4uLy4uL3N0YXRpYy9iLW1lZGFsLnBuZ1wiIHN0eWxlPVwid2lkdGg6IDE1cHg7aGVpZ2h0OiAxNXB4O21hcmdpbi1sZWZ0OiAzMHJweDtcIj5cblx0XHRcdFx0XHRcdFx0XHQ8dGV4dCBzdHlsZT1cImRpc3BsYXk6IGlubGluZS1ibG9jazttYXJnaW4tbGVmdDogMTBweDtmb250LXNpemU6IDEwcHg7XCI+e3sgTWF0aC5mbG9vcigoTWF0aC5yYW5kb20oKSAqIDUwMDApICsgMTAwKSB9fSBMaWtlczwvdGV4dD5cblx0XHRcdFx0XHRcdFx0XHRcblx0XHRcdFx0XHRcdFx0PC92aWV3PlxuPCEtLSBcdFx0XHRcdFx0XHRcdDx2aWV3IHN0eWxlPVwibWFyZ2luLXRvcDogMTBweDt0ZXh0LWFsaWduOiBsZWZ0O21hcmdpbi1sZWZ0OiAzMHJweDtcIj5cblx0XHRcdFx0XHRcdFx0XHQ8dGV4dCBzdHlsZT1cImZvbnQtc2l6ZTogMTJweDtjb2xvcjogIzRDRDk2NDtmb250LXdlaWdodDogNTAwO1wiPkJlZWYsIE11c2hyb29tPC90ZXh0PlxuXHRcdFx0XHRcdFx0XHQ8L3ZpZXc+IC0tPlxuXHRcdFx0XHRcdFx0PC92aWV3PlxuXHRcdFx0XHRcdDwvdmlldz5cblx0XHRcdFx0PC91LWNvbD5cblxuXHRcdFx0PC91LXJvdz5cdFxuXHRcdDwvdmlldz5cblx0XHRcblx0XHRcblx0XHQ8aHFzLXBvcHVwICB0aXRsZT1cIlwiIDpmcm9tPVwicG9wRnJvbVwiIHYtbW9kZWw9XCJjb25zdW1lUG9wXCIgOnJvdW5kPVwiMjBcIiA6c2hvd0Nsb3NlPVwiZmFsc2VcIiBoZWlnaHQ9XCIzMDBweFwiPlxuXHRcdFx0PHZpZXcgY2xhc3M9XCJ0LWJnXCI+XG5cdFx0XHRcdDx0ZXh0IHN0eWxlPVwiZm9udC1zaXplOiAyMHB4O2ZvbnQtd2VpZ2h0OiA5MDA7XCI+SGF2ZSB5b3UgY29uc3VtZWQgYWxyZWFkeT88L3RleHQ+XG5cdFx0XHRcdDx2aWV3IGNsYXNzPVwic20taXBib3hcIj5cblx0XHRcdFx0XHQ8IS0tIDx0ZXh0Pi08L3RleHQ+IC0tPlxuXHRcdFx0XHRcdDwhLS0gPHZpZXcgc3R5bGU9XCJtYXJnaW4tdG9wOiAxMHB4O2ZvbnQtc2l6ZTogMjBweDttYXJnaW4tcmlnaHQ6IDE1cHg7XCIgQGNsaWNrPVwiIHBhY2tzLT0gMVwiPi08L3ZpZXc+XG5cdFx0XHRcdFx0PHUtaW5wdXQgc3R5bGU9XCJmb250LXdlaWdodDogOTAwO2Rpc3BsYXk6IGlubGluZS1ibG9jaztiYWNrZ3JvdW5kLWNvbG9yOiAjRjNGMUYxO2JvcmRlci1yYWRpdXM6IDEwcHg7XCIgcGxhY2Vob2xkZXI9XCJBbW91bnRcIiB2LW1vZGVsPVwicGFja3NcIiAgY2xhc3M9XCJmbi1pbnB1dFwiIGhlaWdodD1cIjkwXCIgaW5wdXQtYWxpZ249XCJjZW50ZXJcIi8+XG5cdFx0XHRcdFx0PHZpZXcgY2xhc3M9XCJzdW0taXRlbVwiIEBjbGljaz1cIiBwYWNrcys9IDFcIj4rPC92aWV3PiAtLT5cblx0XHRcdFx0PC92aWV3PlxuXHRcdFx0XHQ8dmlldyBzdHlsZT1cIm1hcmdpbi10b3A6IDMwcHg7XCI+XG5cdFx0XHRcdFx0PHUtYnV0dG9uIHNoYXBlPVwiY2lyY2xlXCIgOmhhaXItbGluZT1cImZhbHNlXCIgc3R5bGU9XCJ3aWR0aDogMTMwcHg7YmFja2dyb3VuZC1jb2xvcjogI0Y1Qzk3OTtib3JkZXItY29sb3I6ICNGNUM5Nzk7XCIgQGNsaWNrPVwiY29uc3VtZSgneWVzJylcIj5ZZXM8L3UtYnV0dG9uPlxuXHRcdFx0XHRcdDx1LWJ1dHRvbiBzaGFwZT1cImNpcmNsZVwiIDpoYWlyLWxpbmU9XCJmYWxzZVwiIHN0eWxlPVwid2lkdGg6IDEzMHB4O2JhY2tncm91bmQtY29sb3I6ICNGNUM5Nzk7Ym9yZGVyLWNvbG9yOiAjRjVDOTc5O21hcmdpbi10b3A6IDEwcHg7XCIgQGNsaWNrPVwiY29uc3VtZSgnbm8nKVwiPk5vPC91LWJ1dHRvbj5cblx0XHRcdFx0PC92aWV3PlxuXHRcdFx0PC92aWV3PlxuXHRcdDwvaHFzLXBvcHVwPlxuXHRcdDwhLS0gI2lmZGVmIEFQUC1QTFVTIC0tPlxuXHRcdDx1LXRhYmJhciA6bGlzdD1cInRhYmJhclwiIDptaWQtYnV0dG9uPVwiZmFsc2VcIiBoZWlnaHQ9XCI1NXB4XCI+PC91LXRhYmJhcj5cblx0XHQ8IS0tICNlbmRpZiAtLT5cblx0XHRcblx0XHQ8IS0tICNpZmRlZiBINSAtLT5cblx0XHQ8dS10YWJiYXIgOmxpc3Q9XCJ0YWJiYXJcIiA6bWlkLWJ1dHRvbj1cImZhbHNlXCI+PC91LXRhYmJhcj5cblx0XHQ8IS0tICNlbmRpZiAtLT5cblx0PC92aWV3PlxuPC90ZW1wbGF0ZT5cblxuPHNjcmlwdD5cblx0ZXhwb3J0IGRlZmF1bHQge1xuXHRcdGRhdGEoKSB7XG5cdFx0XHRyZXR1cm4ge1xuXHRcdFx0XHR0YWJiYXI6IHRoaXMuJHN0b3JlLnN0YXRlLnRhYmJhcixcblx0XHRcdFx0YXZhdGFyOlwiXCIsXG5cdFx0XHRcdHVzZXI6e30sXG5cdFx0XHRcdGNvbmZpZzp7XG5cdFx0XHRcdFx0dGl0bGU6ICcnLFxuXHRcdFx0XHRcdGNvbG9yOiAnYmxhY2snLFxuXHRcdFx0XHRcdGJhY2tncm91bmRDb2xvcjogJyNGRkZGRkYnLFxuXHRcdFx0XHRcdGJhY2s6IGZhbHNlLFxuXHRcdFx0XHRcdGJhY2tUeHQ6ICd4eHh4eHgnLFxuXHRcdFx0XHRcdHN0YXR1c0JhckJhY2tncm91bmQ6JyNGRkZGRkYnLFxuXHRcdFx0XHRcdHJpZ2h0QnV0dG9uOlt7XG5cdFx0XHRcdFx0XHRrZXk6ICdub3RpZmljYXRpb24nLFxuXHRcdFx0XHRcdFx0aWNvbjogJyYjeEU2MUU7Jyxcblx0XHRcdFx0XHRcdHBvc2l0aW9uOiAncmlnaHQnXG5cdFx0XHRcdFx0fV0sXG5cdFx0XHRcdFx0bGVmdEJ1dHRvbjogW3tcblx0XHRcdFx0XHRcdGtleTogJ3RleHQnLFxuXHRcdFx0XHRcdFx0aWNvbjogJyYjeGU2ODA7Jyxcblx0XHRcdFx0XHRcdHR4dDogJ1xceGEwXFx4YTBcXHhhMFRyYWNrIE15IEdyb2NlcnknLFxuXHRcdFx0XHRcdFx0cG9zaXRpb246ICdsZWZ0J1xuXHRcdFx0XHRcdH1dLFxuXHRcdFx0XHR9LFxuXHRcdFx0XHRpdGVtX2JveDogW1xuXHRcdFx0XHRcdHtcblx0XHRcdFx0XHRcdCdpdGVtSWQnOjEsXG5cdFx0XHRcdFx0XHQndGl0bGUnOiAnRnJpZGdlIENsZWFuaW5nJyxcblx0XHRcdFx0XHRcdCdpbWcnOiAnaHR0cHM6Ly9pbWdzLmhlYXJ0cGxhbi5jbi9GcDExZV9OMzkyQ3pZS3V0dV8zSXN1ZElpTTlSL3ByZXZpZXcnLFxuXHRcdFx0XHRcdFx0J25hbWUnOiAnR3JpbGxlZCBTd2VldCBQb3RhdG9lcycsXG5cdFx0XHRcdFx0XHQndHlwZSc6J1N3ZWV0IFBvdGF0b2VzLCBDZWxlcnknLFxuXHRcdFx0XHRcdFx0J3ZpZXcnOiAnNTAnXG5cdFx0XHRcdFx0fSxcblx0XHRcdFx0XHR7XG5cdFx0XHRcdFx0XHQnaXRlbUlkJzoyLFxuXHRcdFx0XHRcdFx0J3RpdGxlJzogJ0ZyaWRnZSBDbGVhbmluZycsXG5cdFx0XHRcdFx0XHQnaW1nJzogJ2h0dHBzOi8vaW1ncy5oZWFydHBsYW4uY24vRnAxMWVfTjM5MkN6WUt1dHVfM0lzdWRJaU05Ui9wcmV2aWV3Jyxcblx0XHRcdFx0XHRcdCduYW1lJzogJ0dyaWxsZWQgU3dlZXQgUG90YXRvZXMnLFxuXHRcdFx0XHRcdFx0J3R5cGUnOidTd2VldCBQb3RhdG9lcywgQ2VsZXJ5Jyxcblx0XHRcdFx0XHRcdCd2aWV3JzogJzUwJ1xuXHRcdFx0XHRcdH1cblx0XHRcdFx0XSxcblx0XHRcdFx0ZXhwaXJpbmdGb29kTGlzdDogW10sXG5cdFx0XHRcdHJhbmRvbVJlY2lwZXNMaXN0OiBbXSxcblx0XHRcdFx0Y29uc3VtZVBvcDpmYWxzZSxcblx0XHRcdFx0bmVlZENoYW5nZUl0ZW06ICcnLFxuXHRcdFx0XHRwb3BGcm9tOiAnYm90dG9tJyxcblx0XHRcdFx0bm90aWZpY2F0aW9uRGF0YTogJycsXG5cdFx0XHR9XG5cdFx0fSxcblx0XHRvbkxvYWQoKXtcblx0XHRcdGxldCBjbGllbnRJbmZvID0gcGx1cy5wdXNoLmdldENsaWVudEluZm8oKTtcblx0XHRcdGNvbnNvbGUubG9nKCdjbGllbnRpZCAnLCBjbGllbnRJbmZvLmNsaWVudGlkKTtcblx0XHRcdExvY2F0aW9uLnJlbG9hZDtcblx0XHR9LFxuXHRcdG9uU2hvdygpe1xuXHRcdFx0dGhpcy5sb2FkaW5mbygpXG5cdFx0XHR0aGlzLmdldENvbCgpXG5cdFx0XHR0aGlzLmdldE5vdGlmaWNhdGlvbkRhdGEoKVxuXHRcdH0sXG5cdFx0bWV0aG9kczoge1xuXHRcdFx0b25DbGlja0J0bihlKXtcblx0XHRcdFx0aWYgKGUua2V5ID09ICdub3RpZmljYXRpb24nKXtcblx0XHRcdFx0XHRsZXQgbm90aWZpY2F0aW9uRGF0YVN0cmluZyA9IGVuY29kZVVSSUNvbXBvbmVudChKU09OLnN0cmluZ2lmeSh0aGlzLm5vdGlmaWNhdGlvbkRhdGEpKVxuXHRcdFx0XHRcdHVuaS5uYXZpZ2F0ZVRvKHtcblx0XHRcdFx0XHR1cmw6ICcuLi9ub3RpZmljYXRpb24vbm90aWZpY2F0aW9uP25vdGlmaWNhdGlvbkRhdGFTdHJpbmc9JyArIG5vdGlmaWNhdGlvbkRhdGFTdHJpbmdcblx0XHRcdFx0fSlcblx0XHRcdFx0fVxuXHRcdFx0fSxcblx0XHRcdHRvRGV0YWlsKGUpe1xuXHRcdFx0XHRjb25zb2xlLmxvZyhlKVxuXHRcdFx0XHR1bmkubmF2aWdhdGVUbyh7XG5cdFx0XHRcdFx0dXJsOiAnLi4vZ3JvY2VyeS9kZXRhaWw/aWQ9JyArIGUgKyAnJmJhY2tUeXBlPTInXG5cdFx0XHRcdH0pXG5cdFx0XHR9LFxuXHRcdFx0Y29uc3VtZVNlbGVjdChlKXtcblx0XHRcdFx0Y29uc29sZS5sb2coZSlcblx0XHRcdFx0dGhpcy5jb25zdW1lUG9wID0gdHJ1ZVxuXHRcdFx0XHR0aGlzLm5lZWRDaGFuZ2VJdGVtID0gZVxuXHRcdFx0XHRcblx0XHRcdH0sXG5cdFx0XHRpc1JlbWluZGVkKGUpe1xuXHRcdFx0XHQvLyBjb25zb2xlLmxvZyhuZXcgRGF0ZSh0aGlzLmV4cGlyaW5nRm9vZExpc3RbZV0ucmVtaW5kVGltZSkpXG5cdFx0XHRcdFxuXHRcdFx0XHR2YXIgbm93ID0gbmV3IERhdGUoKVxuXHRcdFx0XHQvLyBjb25zb2xlLmxvZyhub3cpXG5cdFx0XHRcdGlmKG5ldyBEYXRlKHRoaXMuZXhwaXJpbmdGb29kTGlzdFtlXS5yZW1pbmRUaW1lKT5uZXcgRGF0ZSgpKXtcblx0XHRcdFx0XHRyZXR1cm4gZmFsc2Vcblx0XHRcdFx0fWVsc2V7XG5cdFx0XHRcdFx0cmV0dXJuIHRydWVcblx0XHRcdFx0fVxuXHRcdFx0fSxcblx0XHRcdGdldEZyZXNobmVzcyhlKXtcblx0XHRcdFx0Ly8gY29uc29sZS5sb2codGhpcy5leHBpcmluZ0Zvb2RMaXN0W2VdLmFkZERhdGUpXG5cdFx0XHRcdC8vIGNvbnNvbGUubG9nKHRoaXMuZXhwaXJpbmdGb29kTGlzdFtlXS5leHBEYXRlKVxuXHRcdFx0XHRjb25zdCB0b3RhbFRpbWUgPSBuZXcgRGF0ZSh0aGlzLmV4cGlyaW5nRm9vZExpc3RbZV0uZXhwRGF0ZSktbmV3IERhdGUodGhpcy5leHBpcmluZ0Zvb2RMaXN0W2VdLmFkZERhdGUpXG5cdFx0XHRcdGNvbnN0IHJlc3RUaW1lID0gbmV3IERhdGUodGhpcy5leHBpcmluZ0Zvb2RMaXN0W2VdLmV4cERhdGUpLW5ldyBEYXRlKClcblx0XHRcdFx0Ly8gY29uc29sZS5sb2cocmVzdFRpbWUvdG90YWxUaW1lKVxuXHRcdFx0XHRyZXR1cm4gKDEtcmVzdFRpbWUvdG90YWxUaW1lKSoxMDBcblx0XHRcdH0sXG5cdFx0XHRjb25zdW1lKGUpe1xuXHRcdFx0XHRpZiAoZSA9PT0gJ3llcycpe1xuXHRcdFx0XHRcdHZhciBjaGFuZ2VkSXRlbSA9IHRoaXMuZXhwaXJpbmdGb29kTGlzdFt0aGlzLm5lZWRDaGFuZ2VJdGVtXVxuXHRcdFx0XHRcdC8vIHZhciBsc0NvbnN1bWVUaW1lID0gbmV3IERhdGUoKS50b0xvY2FsZURhdGVTdHJpbmcoKS5zcGxpdChcIi9cIik7XG5cdFx0XHRcdFx0Ly8gLy9DaGluYSBUaW1lem9uZSBuZWVkZWRcblx0XHRcdFx0XHQvLyAvLyBpZihsc0NvbnN1bWVUaW1lWzJdLmxlbmd0aCA9PT0gMSl7XG5cdFx0XHRcdFx0Ly8gLy8gICAgIGxzQ29uc3VtZVRpbWVbMl0gPSBcIjBcIiArIGxzQ29uc3VtZVRpbWVbMl1cblx0XHRcdFx0XHQvLyAvLyB9XG5cdFx0XHRcdFx0Ly8gLy9BdXN0cmFsaWFuIFRpbWV6b25lIG5lZWRlZFxuXHRcdFx0XHRcdC8vIGlmKGxzQ29uc3VtZVRpbWVbMV0ubGVuZ3RoID09PSAxKXtcblx0XHRcdFx0XHQvLyBcdGxzQ29uc3VtZVRpbWVbMV0gPSBcIjBcIiArIGxzQ29uc3VtZVRpbWVbMV1cblx0XHRcdFx0XHQvLyB9XG5cdFx0XHRcdFx0Ly8gdmFyIGNvbnN1bWVUaW1lID0gbHNDb25zdW1lVGltZVsyXStcIi1cIitsc0NvbnN1bWVUaW1lWzBdK1wiLVwiK2xzQ29uc3VtZVRpbWVbMV1cblx0XHRcdFx0XHR0aGlzLmNvbnN1bWVJdGVtKGNoYW5nZWRJdGVtKVxuXHRcdFx0XHRcdGNvbnNvbGUubG9nKGNoYW5nZWRJdGVtKVxuXHRcdFx0XHRcdGNvbnNvbGUubG9nKGNoYW5nZWRJdGVtLml0ZW1JZClcblx0XHRcdFx0XHR1bmkucmVxdWVzdCh7XG5cdFx0XHRcdFx0XHR1cmw6ICdodHRwOi8vMTAxLjM1LjkxLjExNzo3ODg0L2l0ZW0vdXBkYXRlL3N0YXR1cy8nK1wiY29uc3VtZVwiK1wiL2lkL1wiK2NoYW5nZWRJdGVtLml0ZW1JZCxcblx0XHRcdFx0XHR9KS50aGVuKHJlcyA9PiB7XG5cdFx0XHRcdFx0XHR0aGlzLmdldENvbCgpXG5cdFx0XHRcdFx0XHRjb25zb2xlLmxvZyhyZXNbMV0pXG5cdFx0XHRcdFx0fSlcblx0XHRcdCAgICAgICAgXG5cdFx0XHRcdH1cblx0XHRcdFx0dGhpcy5jb25zdW1lUG9wID0gZmFsc2Vcblx0XHRcdFx0XG5cdFx0XHR9LFxuXHRcdFx0Y29uc3VtZUl0ZW0oaXRlbSl7XG5cdFx0XHRcdGxldCBpdGVtVXBkYXRlZCA9IHtcblx0XHRcdFx0ICBcImFkZERhdGVcIjogaXRlbS5hZGREYXRlLFxuXHRcdFx0XHQgIFwiYWRkTWV0aG9kXCI6IGl0ZW0uYWRkTWV0aG9kLFxuXHRcdFx0XHQgIFwiY2F0ZWdvcnlcIjogaXRlbS5jYXRlZ29yeSxcblx0XHRcdFx0ICBcImNvbkRhdGVcIjogbmV3IERhdGUoKSxcblx0XHRcdFx0ICBcImRldGFpbFwiOiBpdGVtLmRldGFpbCxcblx0XHRcdFx0ICBcImV4cERhdGVcIjogaXRlbS5leHBEYXRlLFxuXHRcdFx0XHQgIFwiaXRlbUlkXCI6IGl0ZW0uaXRlbUlkLFxuXHRcdFx0XHQgIFwibmFtZVwiOiBpdGVtLm5hbWUsXG5cdFx0XHRcdCAgXCJyZW1pbmRUaW1lXCI6IGl0ZW0ucmVtaW5kVGltZSxcblx0XHRcdFx0ICBcInN0YXR1c1wiOiBcImNvbnN1bWVcIixcblx0XHRcdFx0ICBcInVpZFwiOiB1bmkuZ2V0U3RvcmFnZVN5bmMoJ3VzZXJJZCcpXG5cdFx0XHRcdH1cblx0XHRcdFx0Y29uc29sZS5sb2coSlNPTi5zdHJpbmdpZnkoaXRlbVVwZGF0ZWQpKVxuXHRcdFx0XHR1bmkucmVxdWVzdCh7XG5cdFx0XHRcdFx0bWV0aG9kOidQT1NUJyxcblx0XHRcdFx0XHR1cmw6J2h0dHA6Ly8xMDEuMzUuOTEuMTE3Ojc4ODQvaXRlbS91cGRhdGUnLFxuXHRcdFx0XHRcdGRhdGE6SlNPTi5zdHJpbmdpZnkoaXRlbVVwZGF0ZWQpXG5cdFx0XHRcdH0pLnRoZW4ocmVzID0+IHtcblx0XHRcdFx0XHRjb25zb2xlLmxvZyhyZXMpXG5cdFx0XHRcdFx0Ly8gdGhpcy5nZXRDb2woKVxuXHRcdFx0XHR9KVxuXHRcdFx0fSxcblx0XHRcdGxvYWRpbmZvKCl7XG5cdFx0XHRcdC8vIHVuaS5yZXF1ZXN0KHtcblx0XHRcdFx0Ly8gdXJsOiBcImh0dHA6Ly8xMDEuMzUuOTEuMTE3Ojc4ODQvdXNlcnMvYXZhdGFyL1wiK3VuaS5nZXRTdG9yYWdlU3luYygndXNlcklkJyksXG5cdFx0XHRcdC8vIG1ldGhvZDogJ2dldCcsXG5cdFx0XHRcdC8vIH0pLnRoZW4ocmVzPT57XG5cdFx0XHRcdC8vIFx0Y29uc29sZS5sb2coJ3JlcycscmVzKVxuXHRcdFx0XHQvLyBcdGlmKHJlc1sxXS5kYXRhIT0nJyl7XG5cdFx0XHRcdC8vIFx0XHR0aGlzLmF2YXRhciA9IHJlc1sxXS5kYXRhXG5cdFx0XHRcdC8vIFx0fWVsc2V7XG5cdFx0XHRcdC8vIFx0XHR0aGlzLmF2YXRhciA9IFwiLi4vLi4vc3RhdGljL2dpcmwucG5nXCJcblx0XHRcdFx0Ly8gXHR9XG5cdFx0XHRcdC8vIH0pXG5cdFx0XHRcdFxuXHRcdFx0XHR0aGlzLmF2YXRhcj1cImh0dHA6Ly8xMDEuMzUuOTEuMTE3Ojc4ODQvdXNlcnMvYXZhdGFyL1wiK3VuaS5nZXRTdG9yYWdlU3luYygndXNlcklkJyk7XG5cdFx0XHRcdGlmKHRoaXMuYXZhdGFyPT0nJyl7XG5cdFx0XHRcdFx0dGhpcy5hdmF0YXIgPSBcIi4uLy4uL3N0YXRpYy9naXJsLnBuZ1wiXG5cdFx0XHRcdH07XG5cdFx0XHRcdHVuaS5yZXF1ZXN0KHtcblx0XHRcdFx0dXJsOiBcImh0dHA6Ly8xMDEuMzUuOTEuMTE3Ojc4ODQvdXNlcnMvcHJvZmlsZS9cIit1bmkuZ2V0U3RvcmFnZVN5bmMoJ3VzZXJJZCcpLFxuXHRcdFx0XHRtZXRob2Q6ICdnZXQnLFxuXHRcdFx0XHR9KS50aGVuKHJlcz0+e1xuXHRcdFx0XHRcdC8vIGNvbnNvbGUubG9nKCdsb2FkJyxyZXNbMV0uZGF0YSlcblx0XHRcdFx0XHR0aGlzLnVzZXI9cmVzWzFdLmRhdGFcblx0XHRcdFx0XHRjb25zb2xlLmxvZygnbG9hZCcsdGhpcy51c2VyLm5hbWUpXG5cdFx0XHRcdFx0aWYodGhpcy51c2VyLm5hbWU9PScnfHRoaXMudXNlci5uYW1lPT1udWxsKXtcblx0XHRcdFx0XHRcdHRoaXMudXNlci5uYW1lPVwiVW5rbm93XCI7XG5cdFx0XHRcdFx0fVxuXHRcdFx0XHRcdGlmKHRoaXMudXNlci5hZGRyZXNzPT0nTm9uZSd8dGhpcy51c2VyLmFkZHJlc3M9PW51bGwpe1xuXHRcdFx0XHRcdFx0dGhpcy51c2VyLmFkZHJlc3M9XCJDaXR5LCBTdGF0ZSwgQ291bnRyeVwiO1xuXHRcdFx0XHRcdH1cblx0XHRcdFx0fSlcblx0XHRcdH0sXG5cdFx0XHRcblx0XHRcdGdldENvbCgpe1xuXHRcdFx0XHRcblx0XHRcdFx0Ly8gaWYgKHVuaS5nZXRTdG9yYWdlU3luYygndXNlcklkJykpe1xuXHRcdFx0XHRcdFxuXHRcdFx0XHQvLyB9XG5cdFx0XHRcdFxuXHRcdFx0XHR1bmkucmVxdWVzdCh7XG5cdFx0XHRcdFx0dXJsOidodHRwOi8vMTAxLjM1LjkxLjExNzo3ODg0L2l0ZW0vdXNlci8nK3VuaS5nZXRTdG9yYWdlU3luYygndXNlcklkJylcblx0XHRcdFx0fSkudGhlbihyZXMgPT4ge1xuXHRcdFx0XHRcdGNvbnNvbGUubG9nKHJlc1sxXS5kYXRhKVxuXHRcdFx0XHRcdHRoaXMudXBkYXRlSXRlbUxpc3QocmVzWzFdLmRhdGEpXG5cdFx0XHRcdH0pXG5cdFx0XHR9LFxuXHRcdFx0XG5cdFx0XHR1cGRhdGVJdGVtTGlzdChmb29kTGlzdCl7XG5cdFx0XHRcdGxldCBleHBpcmluZ0Zvb2RMaXN0ID0gW11cblx0XHRcdFx0Zm9yICh2YXIgaT0wO2k8Zm9vZExpc3QubGVuZ3RoO2krKyl7XG5cdFx0XHQgICAgICAgIHZhciBpdGVtID0gZm9vZExpc3RbaV1cblx0XHRcdFx0XHR2YXIgaXRlbUluZm8gPSB7XG5cdFx0XHQgICAgICAgICAgICBcImFkZERhdGVcIjogaXRlbS5hZGREYXRlLFxuXHRcdFx0ICAgICAgICAgICAgXCJhZGRNZXRob2RcIjogaXRlbS5hZGRNZXRob2QsXG5cdFx0XHQgICAgICAgICAgICBcImNhdGVnb3J5XCI6IGl0ZW0uY2F0ZWdvcnksXG5cdFx0XHQgICAgICAgICAgICBcImNvbkRhdGVcIjogaXRlbS5jb25EYXRlLFxuXHRcdFx0ICAgICAgICAgICAgXCJkZXRhaWxcIjogaXRlbS5kZXRhaWwsXG5cdFx0XHQgICAgICAgICAgICBcImV4cERhdGVcIjogaXRlbS5leHBEYXRlLnN1YnN0cigwLDEwKSxcblx0XHRcdCAgICAgICAgICAgIFwiaXRlbUlkXCI6IGl0ZW0uaXRlbUlkLFxuXHRcdFx0ICAgICAgICAgICAgXCJuYW1lXCI6IGl0ZW0ubmFtZSxcblx0XHRcdCAgICAgICAgICAgIFwicmVtaW5kVGltZVwiOiBpdGVtLnJlbWluZFRpbWUsXG5cdFx0XHQgICAgICAgICAgICBcInN0YXR1c1wiOiBpdGVtLnN0YXR1cyxcblx0XHRcdFx0XHRcdFwidGltZVwiOnRoaXMuaUNpdGltZSxcblx0XHRcdCAgICAgICAgICAgIFwidWlkXCI6IHVuaS5nZXRTdG9yYWdlU3luYygndXNlcklkJyksXG5cdFx0XHRcdFx0XHRcImltZ1wiOiBpdGVtLnBpY3R1cmVcblx0XHRcdFx0XHR9XG5cdFx0XHRcdFx0aWYgKGZvb2RMaXN0W2ldLnN0YXR1cyA9PT0gJ2luc3RvY2snKXtcblx0XHRcdFx0XHRcdGV4cGlyaW5nRm9vZExpc3QucHVzaChpdGVtSW5mbyk7XG5cdFx0XHRcdFx0XHQvLyBjb25zb2xlLmxvZyhpdGVtLnJlbWluZFRpbWUpO1xuXHRcdFx0XHRcdH1cdFx0XHRcdFx0XG5cdFx0XHRcdH1cblx0XHRcdFx0ZXhwaXJpbmdGb29kTGlzdC5zb3J0KGZ1bmN0aW9uKGEsIGIpe1xuXHRcdFx0XHQgIGxldCBkYXRlQSA9IGEucmVtaW5kVGltZTtcblx0XHRcdFx0ICBsZXQgZGF0ZUIgPSBiLnJlbWluZFRpbWU7XG5cdFx0XHRcdCAgaWYgKGRhdGVBIDwgZGF0ZUIpe1xuXHRcdFx0XHQgICAgcmV0dXJuIC0xO1xuXHRcdFx0XHQgIH0gZWxzZSBpZiAoZGF0ZUEgPiBkYXRlQil7XG5cdFx0XHRcdCAgICByZXR1cm4gMTtcblx0XHRcdFx0ICB9ZWxzZXtcblx0XHRcdFx0XHQgIGlmKCBhLmV4cERhdGU8Yi5leHBEYXRlKXtcblx0XHRcdFx0XHRcdCAgcmV0dXJuIC0xXG5cdFx0XHRcdFx0ICB9ZWxzZXtcblx0XHRcdFx0XHRcdCAgcmV0dXJuIDFcblx0XHRcdFx0XHQgIH1cblx0XHRcdFx0ICB9XG5cdFx0XHRcdCAgcmV0dXJuIDA7XG5cdFx0XHRcdH0pO1xuXG5cdFx0XHRcdC8vIGNvbnNvbGUubG9nKGV4cGlyaW5nRm9vZExpc3QpXG5cdFx0XHRcdHRoaXMuZXhwaXJpbmdGb29kTGlzdCA9IGV4cGlyaW5nRm9vZExpc3Rcblx0XHRcdFx0Ly8gY29uc29sZS5sb2codGhpcy5leHBpcmluZ0Zvb2RMaXN0KVxuXHRcdFx0fSxcblx0XHRcdGdldFJhbmRvbVJlY2lwZXMoKXtcblx0XHRcdFx0dW5pLnJlcXVlc3Qoe1xuXHRcdFx0XHR1cmw6IFwiaHR0cDovLzEwMS4zNS45MS4xMTc6Nzg4NC9yZWNpcGUvcmFuZG9tXCIsXG5cdFx0XHRcdG1ldGhvZDogJ2dldCcsXG5cdFx0XHRcdH0pLnRoZW4ocmVzPT57XG5cdFx0XHRcdFx0dGhpcy5sb2FkUmVjaXBlKHJlc1sxXS5kYXRhKTtcblx0XHRcdFx0XHR0aGlzLiRzdG9yZS5jb21taXQoXCJzZXRSZWNpcGVcIixyZXNbMV0uZGF0YSk7XG5cdFx0XHRcdH0pXG5cdFx0XHR9LFxuXHRcdFx0bG9hZFJlY2lwZShyZWNpcGVMaXN0KXtcblx0XHRcdFx0bGV0IHRtcCA9IFtdXG5cdFx0XHRcdGxldCBMaXN0ID0gW11cblx0XHRcdFx0Zm9yICh2YXIgaT0wO2k8cmVjaXBlTGlzdC5sZW5ndGg7aSsrKXtcblx0XHRcdFx0ICAgIHZhciByZWNpcGUgPSByZWNpcGVMaXN0W2ldXG5cdFx0XHRcdFx0dmFyIHJlY2lwZUluZm8gPSB7XG5cdFx0XHRcdFx0ICAgIFwicmVjaXBlSWRcIjogcmVjaXBlLmlkLFxuXHRcdFx0XHRcdFx0J2ltZyc6IHJlY2lwZS5pbWFnZSxcblx0XHRcdFx0XHRcdCduYW1lJzogcmVjaXBlLnRpdGxlLFxuXHRcdFx0XHRcdH07XG5cdFx0XHRcdFx0aWYgKHRtcC5sZW5ndGggPT0gMil7XG5cdFx0XHRcdFx0XHRMaXN0LnB1c2godG1wKTtcblx0XHRcdFx0XHRcdHRtcCA9IFtdO1xuXHRcdFx0XHRcdH1cblx0XHRcdFx0XHR0bXAucHVzaChyZWNpcGVJbmZvKTtcblx0XHRcdFx0fVxuXHRcdFx0XHRpZiAodG1wLmxlbmd0aCAhPTApIHtcblx0XHRcdFx0XHRMaXN0LnB1c2godG1wKTtcblx0XHRcdFx0fVxuXHRcdFx0XHR0aGlzLnJhbmRvbVJlY2lwZXNMaXN0PUxpc3Q7XG5cdFx0XHRcdGNvbnNvbGUubG9nKHRoaXMucmFuZG9tUmVjaXBlc0xpc3QpO1xuXHRcdFx0fSxcblx0XHRcdGdldE5vdGlmaWNhdGlvbkRhdGEoKXtcblx0XHRcdFx0dW5pLnJlcXVlc3Qoe1xuXHRcdFx0XHR1cmw6IFwiaHR0cDovLzEwMS4zNS45MS4xMTc6Nzg4NC9ub3RpZmljYXRpb24vZ2V0L1wiK3VuaS5nZXRTdG9yYWdlU3luYygndXNlcklkJyksXG5cdFx0XHRcdG1ldGhvZDogJ2dldCcsXG5cdFx0XHRcdH0pLnRoZW4ocmVzPT57XG5cdFx0XHRcdFx0Y29uc29sZS5sb2cocmVzKVxuXHRcdFx0XHRcdGNvbnNvbGUubG9nKCdsb2FkJyxyZXNbMV0uZGF0YSlcblx0XHRcdFx0XHQvLyB0aGlzLnNob3BMaXN0ID0gcmVzWzFdLmRhdGFcblx0XHRcdFx0XHR0aGlzLm5vdGlmaWNhdGlvbkRhdGEgPSByZXNbMV0uZGF0YS5pdGVtTm90aWZpY2F0aW9uTGlzdFxuXHRcdFx0XHR9KVxuXHRcdFx0fSxcblx0XHR9XG5cdH1cbjwvc2NyaXB0PlxuXG48c3R5bGU+XG4ubmFtZXtcblx0ZGlzcGxheTogZmxleDtcblx0ZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcblx0dGV4dC1hbGlnbjogbGVmdDtcblx0bWFyZ2luLWxlZnQ6IDE1cHg7XG59XG4uc2Nyb2xsX2l0ZW17XG4gIGJhY2tncm91bmQ6ICNmN2VkYzg7XG4gIFxuICBcblxuICAgIFxuICBmaWx0ZXI6Z3JheTtcbiAgd2lkdGg6MTAwcHg7IFxuICBoZWlnaHQ6MTAwcHg7IFxuICBtYXJnaW46IDVweCA1cHggNXB4IDVweDtcbiAgYm9yZGVyLXJhZGl1czogMjVycHg7XG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgbWFyZ2luLWxlZnQ6IDEwcHg7XG4gIGJhY2tncm91bmQtc2l6ZTogMTAwJTtcbn1cblxuLnNjcm9sbF9pdGVtX3RleHQge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgbWFyZ2luLXRvcDogNnB4O1xuICBmb250LXNpemU6IDEycHg7XG4gIGNvbG9yOiB3aGl0ZTtcbiAgZm9udC13ZWlnaHQ6IDgwMDtcbn1cbi5jYXJke1xuXHRkaXNwbGF5OiBmbGV4O1xuXHRqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcblx0YWxpZ24taXRlbXM6IGNlbnRlcjtcbn1cbi5jYXJkLWJveHtcblx0YmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XG5cdHdpZHRoOiA5NSU7XG5cdGhlaWdodDogMjE4cHg7XG5cdGJvcmRlci1yYWRpdXM6IDEwcHg7XG5cdGJvcmRlcjpzb2xpZCAgMXB4ICNDOEM3Q0M7XG5cdHRleHQtYWxpZ246IGNlbnRlcjtcbn1cbi50LWJne1xuXHRkaXNwbGF5OiBmbGV4O1xuXHRmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuXHRhbGlnbi1pdGVtczogY2VudGVyO1xuXHRqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbn1cbjwvc3R5bGU+XG4iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///114\n");
+eval("/* WEBPACK VAR INJECTION */(function(__f__) {Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0; //\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\nvar _default =\n{\n  data: function data() {\n    return {\n      tabbar: this.$store.state.tabbar,\n      avatar: \"\",\n      user: {},\n      config: {\n        title: '',\n        color: 'black',\n        backgroundColor: '#FFFFFF',\n        back: false,\n        backTxt: 'xxxxxx',\n        statusBarBackground: '#FFFFFF',\n        rightButton: [{\n          key: 'notification',\n          icon: '&#xE61E;',\n          position: 'right' }],\n\n        leftButton: [{\n          key: 'text',\n          icon: '&#xe680;',\n          txt: '\\xa0\\xa0\\xa0Track My Grocery',\n          position: 'left' }] },\n\n\n      item_box: [\n      {\n        'itemId': 1,\n        'title': 'Fridge Cleaning',\n        'img': 'https://imgs.heartplan.cn/Fp11e_N392CzYKutu_3IsudIiM9R/preview',\n        'name': 'Grilled Sweet Potatoes',\n        'type': 'Sweet Potatoes, Celery',\n        'view': '50' },\n\n      {\n        'itemId': 2,\n        'title': 'Fridge Cleaning',\n        'img': 'https://imgs.heartplan.cn/Fp11e_N392CzYKutu_3IsudIiM9R/preview',\n        'name': 'Grilled Sweet Potatoes',\n        'type': 'Sweet Potatoes, Celery',\n        'view': '50' }],\n\n\n      expiringFoodList: [],\n      randomRecipesList: [],\n      consumePop: false,\n      needChangeItem: '',\n      popFrom: 'bottom',\n      notificationData: '' };\n\n  },\n  onLoad: function onLoad() {\n    // let clientInfo = plus.push.getClientInfo();\n    // console.log('clientid ', clientInfo.clientid);\n    Location.reload;\n    this.$refs.popup.open('center');\n    __f__(\"log\", \"pop！！\", \" at pages/home/home.vue:201\");\n  },\n  onShow: function onShow() {\n    this.loadinfo();\n    this.getCol();\n    this.getNotificationData();\n  },\n  methods: {\n    onClickBtn: function onClickBtn(e) {\n      if (e.key == 'notification') {\n        var notificationDataString = encodeURIComponent(JSON.stringify(this.notificationData));\n        uni.navigateTo({\n          url: '../notification/notification?notificationDataString=' + notificationDataString });\n\n      }\n    },\n    toDetail: function toDetail(e) {\n      __f__(\"log\", e, \" at pages/home/home.vue:218\");\n      uni.navigateTo({\n        url: '../grocery/detail?id=' + e + '&backType=2' });\n\n    },\n    consumeSelect: function consumeSelect(e) {\n      __f__(\"log\", e, \" at pages/home/home.vue:224\");\n      this.consumePop = true;\n      this.needChangeItem = e;\n\n    },\n    isReminded: function isReminded(e) {\n      // console.log(new Date(this.expiringFoodList[e].remindTime))\n\n      var now = new Date();\n      // console.log(now)\n      if (new Date(this.expiringFoodList[e].remindTime) > new Date()) {\n        return false;\n      } else {\n        return true;\n      }\n    },\n    getFreshness: function getFreshness(e) {\n      // console.log(this.expiringFoodList[e].addDate)\n      // console.log(this.expiringFoodList[e].expDate)\n      var totalTime = new Date(this.expiringFoodList[e].expDate) - new Date(this.expiringFoodList[e].addDate);\n      var restTime = new Date(this.expiringFoodList[e].expDate) - new Date();\n      // console.log(restTime/totalTime)\n      return (1 - restTime / totalTime) * 100;\n    },\n    consume: function consume(e) {var _this = this;\n      if (e === 'yes') {\n        var changedItem = this.expiringFoodList[this.needChangeItem];\n        // var lsConsumeTime = new Date().toLocaleDateString().split(\"/\");\n        // //China Timezone needed\n        // // if(lsConsumeTime[2].length === 1){\n        // //     lsConsumeTime[2] = \"0\" + lsConsumeTime[2]\n        // // }\n        // //Australian Timezone needed\n        // if(lsConsumeTime[1].length === 1){\n        // \tlsConsumeTime[1] = \"0\" + lsConsumeTime[1]\n        // }\n        // var consumeTime = lsConsumeTime[2]+\"-\"+lsConsumeTime[0]+\"-\"+lsConsumeTime[1]\n        this.consumeItem(changedItem);\n        __f__(\"log\", changedItem, \" at pages/home/home.vue:262\");\n        __f__(\"log\", changedItem.itemId, \" at pages/home/home.vue:263\");\n        uni.request({\n          url: 'http://101.35.91.117:7884/item/update/status/' + \"consume\" + \"/id/\" + changedItem.itemId }).\n        then(function (res) {\n          _this.getCol();\n          __f__(\"log\", res[1], \" at pages/home/home.vue:268\");\n        });\n\n      }\n      this.consumePop = false;\n\n    },\n    consumeItem: function consumeItem(item) {\n      var itemUpdated = {\n        \"addDate\": item.addDate,\n        \"addMethod\": item.addMethod,\n        \"category\": item.category,\n        \"conDate\": new Date(),\n        \"detail\": item.detail,\n        \"expDate\": item.expDate,\n        \"itemId\": item.itemId,\n        \"name\": item.name,\n        \"remindTime\": item.remindTime,\n        \"status\": \"consume\",\n        \"uid\": uni.getStorageSync('userId') };\n\n      __f__(\"log\", JSON.stringify(itemUpdated), \" at pages/home/home.vue:289\");\n      uni.request({\n        method: 'POST',\n        url: 'http://101.35.91.117:7884/item/update',\n        data: JSON.stringify(itemUpdated) }).\n      then(function (res) {\n        __f__(\"log\", res, \" at pages/home/home.vue:295\");\n        // this.getCol()\n      });\n    },\n    loadinfo: function loadinfo() {var _this2 = this;\n      // uni.request({\n      // url: \"http://101.35.91.117:7884/users/avatar/\"+uni.getStorageSync('userId'),\n      // method: 'get',\n      // }).then(res=>{\n      // \tconsole.log('res',res)\n      // \tif(res[1].data!=''){\n      // \t\tthis.avatar = res[1].data\n      // \t}else{\n      // \t\tthis.avatar = \"../../static/girl.png\"\n      // \t}\n      // })\n\n      this.avatar = \"http://101.35.91.117:7884/users/avatar/\" + uni.getStorageSync('userId');\n      if (this.avatar == '') {\n        this.avatar = \"../../static/girl.png\";\n      };\n      uni.request({\n        url: \"http://101.35.91.117:7884/users/profile/\" + uni.getStorageSync('userId'),\n        method: 'get' }).\n      then(function (res) {\n        // console.log('load',res[1].data)\n        _this2.user = res[1].data;\n        __f__(\"log\", 'load', _this2.user.name, \" at pages/home/home.vue:322\");\n        if (_this2.user.name == '' | _this2.user.name == null) {\n          _this2.user.name = \"Unknow\";\n        }\n        if (_this2.user.address == 'None' | _this2.user.address == null) {\n          _this2.user.address = \"City, State, Country\";\n        }\n      });\n    },\n\n    getCol: function getCol() {var _this3 = this;\n\n      // if (uni.getStorageSync('userId')){\n\n      // }\n\n      uni.request({\n        url: 'http://101.35.91.117:7884/item/user/' + uni.getStorageSync('userId') }).\n      then(function (res) {\n        __f__(\"log\", res[1].data, \" at pages/home/home.vue:341\");\n        _this3.updateItemList(res[1].data);\n      });\n    },\n\n    updateItemList: function updateItemList(foodList) {\n      var expiringFoodList = [];\n      for (var i = 0; i < foodList.length; i++) {\n        var item = foodList[i];\n        var itemInfo = {\n          \"addDate\": item.addDate,\n          \"addMethod\": item.addMethod,\n          \"category\": item.category,\n          \"conDate\": item.conDate,\n          \"detail\": item.detail,\n          \"expDate\": item.expDate.substr(0, 10),\n          \"itemId\": item.itemId,\n          \"name\": item.name,\n          \"remindTime\": item.remindTime,\n          \"status\": item.status,\n          \"time\": this.iCitime,\n          \"uid\": uni.getStorageSync('userId'),\n          \"img\": item.picture };\n\n        if (foodList[i].status === 'instock') {\n          expiringFoodList.push(itemInfo);\n          // console.log(item.remindTime);\n        }\n      }\n      expiringFoodList.sort(function (a, b) {\n        var dateA = a.remindTime;\n        var dateB = b.remindTime;\n        if (dateA < dateB) {\n          return -1;\n        } else if (dateA > dateB) {\n          return 1;\n        } else {\n          if (a.expDate < b.expDate) {\n            return -1;\n          } else {\n            return 1;\n          }\n        }\n        return 0;\n      });\n\n      // console.log(expiringFoodList)\n      this.expiringFoodList = expiringFoodList;\n      // console.log(this.expiringFoodList)\n    },\n    getRandomRecipes: function getRandomRecipes() {var _this4 = this;\n      uni.request({\n        url: \"http://101.35.91.117:7884/recipe/random\",\n        method: 'get' }).\n      then(function (res) {\n        _this4.loadRecipe(res[1].data);\n        _this4.$store.commit(\"setRecipe\", res[1].data);\n      });\n    },\n    loadRecipe: function loadRecipe(recipeList) {\n      var tmp = [];\n      var List = [];\n      for (var i = 0; i < recipeList.length; i++) {\n        var recipe = recipeList[i];\n        var recipeInfo = {\n          \"recipeId\": recipe.id,\n          'img': recipe.image,\n          'name': recipe.title };\n\n        if (tmp.length == 2) {\n          List.push(tmp);\n          tmp = [];\n        }\n        tmp.push(recipeInfo);\n      }\n      if (tmp.length != 0) {\n        List.push(tmp);\n      }\n      this.randomRecipesList = List;\n      __f__(\"log\", this.randomRecipesList, \" at pages/home/home.vue:420\");\n    },\n    getNotificationData: function getNotificationData() {var _this5 = this;\n      uni.request({\n        url: \"http://101.35.91.117:7884/notification/get/\" + uni.getStorageSync('userId'),\n        method: 'get' }).\n      then(function (res) {\n        __f__(\"log\", res, \" at pages/home/home.vue:427\");\n        __f__(\"log\", 'res[1].data', res[1].data, \" at pages/home/home.vue:428\");\n        // this.shopList = res[1].data\n        var resData = res[1].data;\n        _this5.notificationData = resData.itemNotificationList;\n        if (resData.unreadNum > 0) {\n          // uni.showToast({\n          // \ttitle: \"You have \" + resData.unreadNum + \" messages unread!\",\n          // \ticon: 'success',\n          // \tduration: 2000,\n          // });\n          try {\n            var notificationCount = uni.getStorageSync(\"NotificationCount\");\n          } catch (error) {\n            __f__(\"log\", \"error is :\", error, \" at pages/home/home.vue:441\");\n            var notificationCount = 1;\n            uni.setStorageSync(\"NotificationCount\", notificationCount);\n            // uni.setStorage({key: \"NotificationCount\",\n            // \t\t\t\tdata: notificationCount})\n          }\n          __f__(\"log\", notificationCount == \"\", \" at pages/home/home.vue:447\");\n          if (notificationCount == \"\") {\n            var notificationCount = 1;\n            uni.setStorageSync(\"NotificationCount\", notificationCount);\n          } else {\n            uni.setStorageSync(\"NotificationCount\", notificationCount + 1);\n          }\n          __f__(\"log\", \"notificationCount is: \", notificationCount, \" at pages/home/home.vue:454\");\n          if (notificationCount == 1) {\n            uni.showModal({\n              title: \"Notification\",\n              content: \"You have \" + resData.unreadNum + \" messages unread!\",\n              showCancel: false,\n              success: function success(res) {\n                if (res.confirm) {\n                  __f__(\"log\", '用户点击确定', \" at pages/home/home.vue:462\");\n                } else if (res.cancel) {\n                  __f__(\"log\", '用户点击取消', \" at pages/home/home.vue:464\");\n                }\n              } });\n\n          }\n\n        }\n      });\n    },\n    popNotification: function popNotification() {\n\n    } } };exports.default = _default;\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/lib/format-log.js */ 15)[\"default\"]))//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVuaS1hcHA6Ly8vcGFnZXMvaG9tZS9ob21lLnZ1ZSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFnSkE7QUFDQSxNQURBLGtCQUNBO0FBQ0E7QUFDQSxzQ0FEQTtBQUVBLGdCQUZBO0FBR0EsY0FIQTtBQUlBO0FBQ0EsaUJBREE7QUFFQSxzQkFGQTtBQUdBLGtDQUhBO0FBSUEsbUJBSkE7QUFLQSx5QkFMQTtBQU1BLHNDQU5BO0FBT0E7QUFDQSw2QkFEQTtBQUVBLDBCQUZBO0FBR0EsMkJBSEEsR0FQQTs7QUFZQTtBQUNBLHFCQURBO0FBRUEsMEJBRkE7QUFHQSw2Q0FIQTtBQUlBLDBCQUpBLEdBWkEsRUFKQTs7O0FBdUJBO0FBQ0E7QUFDQSxtQkFEQTtBQUVBLGtDQUZBO0FBR0EsK0VBSEE7QUFJQSx3Q0FKQTtBQUtBLHdDQUxBO0FBTUEsb0JBTkEsRUFEQTs7QUFTQTtBQUNBLG1CQURBO0FBRUEsa0NBRkE7QUFHQSwrRUFIQTtBQUlBLHdDQUpBO0FBS0Esd0NBTEE7QUFNQSxvQkFOQSxFQVRBLENBdkJBOzs7QUF5Q0EsMEJBekNBO0FBMENBLDJCQTFDQTtBQTJDQSx1QkEzQ0E7QUE0Q0Esd0JBNUNBO0FBNkNBLHVCQTdDQTtBQThDQSwwQkE5Q0E7O0FBZ0RBLEdBbERBO0FBbURBLFFBbkRBLG9CQW1EQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxHQXpEQTtBQTBEQSxRQTFEQSxvQkEwREE7QUFDQTtBQUNBO0FBQ0E7QUFDQSxHQTlEQTtBQStEQTtBQUNBLGNBREEsc0JBQ0EsQ0FEQSxFQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsOEZBREE7O0FBR0E7QUFDQSxLQVJBO0FBU0EsWUFU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O0FBQ0EsV0FIQSxNQUdBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLG1DQURBO0FBRUEsNEVBRkE7QUFHQSwrQkFIQTtBQUlBO0FBQ0E7QUFDQTtBQUNBLGlCQUZBLE1BRUE7QUFDQTtBQUNBO0FBQ0EsZUFWQTs7QUFZQTs7QUFFQTtBQUNBLE9BaERBO0FBaURBLEtBeFFBO0FBeVFBLG1CQXpRQSw2QkF5UUE7O0FBRUEsS0EzUUEsRUEvREEsRSIsImZpbGUiOiIxMTQuanMiLCJzb3VyY2VzQ29udGVudCI6WyI8dGVtcGxhdGU+XG5cdDx2aWV3PlxuXHRcdDxoeC1uYXZiYXIgcmVmPVwiaHhuYlwiIDpjb25maWc9XCJjb25maWdcIiBAY2xpY2tCdG49XCJvbkNsaWNrQnRuXCI+XG5cdFx0PC9oeC1uYXZiYXI+XG5cdFx0XG5cdFx0XG5cdFx0PHZpZXcgc3R5bGU9XCJtYXJnaW4tdG9wOiA2MHB4O1wiPlxuXHRcdFx0PHUtcm93IGd1dHRlcj1cIjE2XCIganVzdGlmeT1cInNwYWNlLWJldHdlZW5cIj5cblx0XHRcdFx0PHUtY29sIHNwYW49XCI5XCI+XG5cdFx0XHRcdFx0PHZpZXcgY2xhc3M9XCJkZW1vLWxheW91dCBiZy1wdXJwbGVcIj5cblx0XHRcdFx0XHRcdDx2aWV3IGNsYXNzPVwibmFtZVwiIHN0eWxlPVwiZm9udFwiPlxuXHRcdFx0XHRcdFx0XHQ8dGV4dCBzdHlsZT1cImZvbnQtc2l6ZTogMjBweDtmb250LXdlaWdodDogODAwO2NvbG9yOiAjOTk5OTk5O1wiPldlbGNvbWUgQmFjaywgPC90ZXh0PlxuXHRcdFx0XHRcdFx0XHQ8dGV4dCBzdHlsZT1cImZvbnQtc2l6ZTogMjhweDtjb2xvcjogIzAwMDAwMDtmb250LXdlaWdodDogOTAwO1wiPnt7dXNlci5uYW1lfX08L3RleHQ+XG5cdFx0XHRcdFx0XHQ8L3ZpZXc+XG5cdFx0XHRcdFx0PC92aWV3PlxuXHRcdFx0XHQ8L3UtY29sPlxuXHRcdFx0XHQ8dS1jb2wgc3Bhbj1cIjNcIj5cblx0XHRcdFx0XHQ8dmlldyBjbGFzcz1cImRlbW8tbGF5b3V0IGJnLXB1cnBsZS1saWdodFwiPlxuXHRcdFx0XHRcdFx0PHUtaW1hZ2UgOnNyYz1cImF2YXRhclwiIHNoYXBlPVwiY2lyY2xlXCIgd2lkdGg9XCIxNjBcIiBoZWlnaHQ9XCIxNjBcIj48L3UtaW1hZ2U+XG5cdFx0XHRcdFx0XHRcblx0XHRcdFx0XHQ8L3ZpZXc+XG5cdFx0XHRcdDwvdS1jb2w+XG5cdFx0XHQ8L3Utcm93PlxuXHRcdDwvdmlldz5cblx0XHQ8dmlldyBjbGFzcz1cIlwiIHN0eWxlPVwicGFkZGluZzogMCAxNXB4IDAgMTVweDttYXJnaW4tdG9wOiAzMHB4O1wiPlxuXHRcdFx0PHUtcm93IGd1dHRlcj1cIjE2XCIganVzdGlmeT1cInNwYWNlLWJldHdlZW5cIj5cblx0XHRcdFx0PHUtY29sIHNwYW49XCI5XCI+XG5cdFx0XHRcdFx0PHZpZXcgY2xhc3M9XCJkZW1vLWxheW91dCBiZy1wdXJwbGVcIj5cblx0XHRcdFx0XHRcdDx0ZXh0IHN0eWxlPVwiZm9udC1zaXplOiAxNnB4O2ZvbnQtd2VpZ2h0OiA1MDA7XCI+RXhwaXJpbmcgIFByb2R1Y3RzPC90ZXh0PlxuXHRcdFx0XHRcdDwvdmlldz5cblx0XHRcdFx0PC91LWNvbD5cbjwhLS0gXHRcdFx0XHQ8dS1jb2wgc3Bhbj1cIjNcIj5cblx0XHRcdFx0XHQ8dmlldyBjbGFzcz1cImRlbW8tbGF5b3V0IGJnLXB1cnBsZS1saWdodFwiIHN0eWxlPVwidGV4dC1hbGlnbjogcmlnaHQ7XCI+XG5cdFx0XHRcdFx0XHQ8aW1hZ2Ugc3JjPVwiLi4vLi4vc3RhdGljLzAwMC5wbmdcIiBzdHlsZT1cIndpZHRoOiAyNnB4O2hlaWdodDogMjdweDtkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XCI+XG5cdFx0XHRcdFx0PC92aWV3PlxuXHRcdFx0XHQ8L3UtY29sPiAtLT5cblx0XHRcdDwvdS1yb3c+XHRcblx0XHQ8L3ZpZXc+XG5cdFx0PHZpZXcgY2xhc3M9XCJcIj5cblx0XHRcdDxzY3JvbGwtdmlldyA6c2Nyb2xsLXdpdGgtYW5pbWF0aW9uPVwidHJ1ZVwiICA6c2Nyb2xsLXg9XCJ0cnVlXCIgc3R5bGU9XCJ3aGl0ZS1zcGFjZTogbm93cmFwO1wiID5cblx0XHRcdCAgPHRlbXBsYXRlIHYtZm9yPVwiKGl0ZW0sIGluZGV4KSBpbiBleHBpcmluZ0Zvb2RMaXN0XCI+XG5cdFx0XHRcdCAgXG5cdFx0XHRcdDx2aWV3IGNsYXNzPVwic2Nyb2xsX2l0ZW1cIiA6c3R5bGU9XCJ7J2JhY2tncm91bmQtaW1hZ2UnOiAndXJsKCcrJ2h0dHA6Ly8xMDEuMzUuOTEuMTE3Ojc4ODQvaXRlbS9waWN0dXJlLycraXRlbS5pdGVtSWQrJz8nK01hdGgucmFuZG9tKCkrJyknLCdmaWx0ZXInOiAnZ3JheXNjYWxlKCcrZ2V0RnJlc2huZXNzKGluZGV4KSsnJSknfVwiPlxuXHRcdFx0XHRcdDxpbWFnZSBzcmM9XCIuLi8uLi9zdGF0aWMva25pZmVfZm9yay5wbmdcIiBzdHlsZT1cIndpZHRoOiAyMHB4O2hlaWdodDogMjBweDtmbG9hdDpyaWdodFwiIEBjbGljaz1cImNvbnN1bWVTZWxlY3QoaW5kZXgpXCIgLz5cblx0XHRcdFx0XHQ8dmlldyBzdHlsZT1cImhlaWdodDogMTAwJTtcIiAgQGNsaWNrPVwidG9EZXRhaWwoaXRlbS5pdGVtSWQpXCI+XG5cdFx0XHRcdFx0XHRcdFxuXHRcdFx0XHQ8L3ZpZXc+XG5cdFx0XHRcdFx0PHRleHQgc3R5bGU9XCJtYXJnaW4tbGVmdDogMTRweDtmb250LXNpemU6IDE2cHg7Zm9udC13ZWlnaHQ6IDUwMDtcIj57eyBpdGVtLm5hbWUgfX08L3RleHQ+XG5cdFx0XHRcdFx0PHZpZXcgY2xhc3M9XCJcIiBzdHlsZT1cIm1hcmdpbi1sZWZ0OiAxNHB4O1wiPlxuXHRcdFx0XHRcdFx0PGltYWdlIHNyYz1cIi4uLy4uL3N0YXRpYy9yZW1pbmQucG5nXCIgc3R5bGU9XCJ3aWR0aDogMTVweDtoZWlnaHQ6IDE1cHg7XCIgdi1pZj1cImlzUmVtaW5kZWQoaW5kZXgpXCIgLz5cblx0XHRcdFx0XHRcdDx0ZXh0IHN0eWxlPVwiZGlzcGxheTogaW5saW5lLWJsb2NrO21hcmdpbi1sZWZ0OiA1cHg7XCI+e3tpdGVtLmV4cERhdGUuc3BsaXQoXCJUXCIpWzBdLnNwbGl0KCctJylbMl0rJy8nKyBpdGVtLmV4cERhdGUuc3BsaXQoXCJUXCIpWzBdLnNwbGl0KCctJylbMV0gfX08L3RleHQ+XG5cdFx0XHRcdFx0PC92aWV3PlxuXHRcdFx0XHQgIDwvdmlldz5cblx0XHRcdFx0ICBcblx0XHRcdCAgPC90ZW1wbGF0ZT5cblx0XHRcdDwvc2Nyb2xsLXZpZXc+XG5cdFx0PC92aWV3PlxuXG5cdFx0PHZpZXcgY2xhc3M9XCJcIiBzdHlsZT1cInBhZGRpbmc6IDAgMTVweCAwIDE1cHg7bWFyZ2luLXRvcDogMzBweDtcIj5cblx0XHRcdDx1LXJvdyBndXR0ZXI9XCIxNlwiIGp1c3RpZnk9XCJzcGFjZS1iZXR3ZWVuXCI+XG5cdFx0XHRcdDx1LWNvbCBzcGFuPVwiOVwiPlxuXHRcdFx0XHRcdDx2aWV3IGNsYXNzPVwiZGVtby1sYXlvdXQgYmctcHVycGxlXCI+XG5cdFx0XHRcdFx0XHQ8dGV4dCBzdHlsZT1cImZvbnQtc2l6ZTogMTZweDtmb250LXdlaWdodDogNTAwO1wiPlJlY2lwZSBSZWNvbW1lbmRhdGlvbjwvdGV4dD5cblx0XHRcdFx0XHQ8L3ZpZXc+XG5cdFx0XHRcdDwvdS1jb2w+XG5cdFx0XHRcdDx1LWNvbCBzcGFuPVwiM1wiPlxuXHRcdFx0XHRcdDx2aWV3IGNsYXNzPVwiZGVtby1sYXlvdXQgYmctcHVycGxlLWxpZ2h0XCIgQGNsaWNrPVwiZ2V0UmFuZG9tUmVjaXBlc1wiIHN0eWxlPVwidGV4dC1hbGlnbjogcmlnaHQ7XCI+XG5cdFx0XHRcdFx0XHQ8aW1hZ2Ugc3JjPVwiLi4vLi4vc3RhdGljL3JlZnJlc2gucG5nXCIgc3R5bGU9XCJ3aWR0aDogMjlweDtoZWlnaHQ6IDI3cHg7ZGlzcGxheTogaW5saW5lLWJsb2NrO1wiPlxuXHRcdFx0XHRcdDwvdmlldz5cblx0XHRcdFx0PC91LWNvbD5cblx0XHRcdDwvdS1yb3c+XHRcblx0XHQ8L3ZpZXc+XG5cdFx0XG5cdFx0XG5cdFx0PCEtLSA8dmlldyBjbGFzcz1cIlwiIHN0eWxlPVwicGFkZGluZzogMCAxNXB4IDAgMTVweDttYXJnaW4tdG9wOiAzMHB4O1wiID4gLS0+XG5cdFx0PHZpZXcgY2xhc3M9XCJcIiBzdHlsZT1cInBhZGRpbmc6IDAgMTVweCAwIDE1cHg7bWFyZ2luLXRvcDogMzBweDtcIiB2LWZvcj1cInJlY2lwZSBpbiByYW5kb21SZWNpcGVzTGlzdFwiPlxuXHRcdFx0PHUtcm93IGd1dHRlcj1cIjBcIiBqdXN0aWZ5PVwic3BhY2UtYmV0d2VlblwiPlxuXG5cdFx0XHRcdDx1LWNvbCBzcGFuPVwiNlwiPlxuXHRcdFx0XHRcdDx2aWV3IGNsYXNzPVwiZGVtby1sYXlvdXQgYmctcHVycGxlLWxpZ2h0IGNhcmRcIiBAY2xpY2s9XCJ0b0RldGFpbCgocmVjaXBlWzBdKS5yZWNpcGVJZClcIj5cblx0XHRcdFx0XHRcdDx2aWV3IGNsYXNzPVwiY2FyZC1ib3hcIj5cblx0XHRcdFx0XHRcdFx0PHUtaW1hZ2UgYm9yZGVyLXJhZGl1cz1cIjZweFwiIGhlaWdodD1cIjEzOHB4XCIgd2lkdGg9XCIxMDAlXCIgOnNyYz1cIihyZWNpcGVbMF0pLmltZ1wiIDpmYWRlPVwidHJ1ZVwiIGR1cmF0aW9uPVwiNDUwXCI+PC91LWltYWdlPlxuXHRcdFx0XHRcdFx0XHQ8dGV4dCBzdHlsZT1cImZvbnQtc2l6ZTogMTJweDtmb250LXdlaWdodDogNTAwO1wiPnt7IChyZWNpcGVbMF0pLm5hbWUgfX08L3RleHQ+XG5cdFx0XHRcdFx0XHRcdFxuXHRcdFx0XHRcdFx0XHQ8dmlldyBzdHlsZT1cInRleHQtYWxpZ246IGxlZnQ7bWFyZ2luLXRvcDogMTBweDtcIj5cblx0XHRcdFx0XHRcdFx0XHQ8aW1hZ2Ugc3JjPVwiLi4vLi4vc3RhdGljL2ItbWVkYWwucG5nXCIgc3R5bGU9XCJ3aWR0aDogMTVweDtoZWlnaHQ6IDE1cHg7bWFyZ2luLWxlZnQ6IDMwcnB4O1wiPlxuXHRcdFx0XHRcdFx0XHRcdDx0ZXh0IHN0eWxlPVwiZGlzcGxheTogaW5saW5lLWJsb2NrO21hcmdpbi1sZWZ0OiAxMHB4O2ZvbnQtc2l6ZTogMTBweDtcIj57eyBNYXRoLmZsb29yKChNYXRoLnJhbmRvbSgpICogNTAwMCkgKyAxMDApIH19IExpa2VzPC90ZXh0PlxuXHRcdFx0XHRcdFx0XHRcdFxuXHRcdFx0XHRcdFx0XHQ8L3ZpZXc+XG48IS0tIFx0XHRcdFx0XHRcdFx0PHZpZXcgc3R5bGU9XCJtYXJnaW4tdG9wOiAxMHB4O3RleHQtYWxpZ246IGxlZnQ7bWFyZ2luLWxlZnQ6IDMwcnB4O1wiPlxuXHRcdFx0XHRcdFx0XHRcdDx0ZXh0IHN0eWxlPVwiZm9udC1zaXplOiAxMnB4O2NvbG9yOiAjNENEOTY0O2ZvbnQtd2VpZ2h0OiA1MDA7XCI+QmVlZiwgTXVzaHJvb208L3RleHQ+XG5cdFx0XHRcdFx0XHRcdDwvdmlldz4gLS0+XG5cdFx0XHRcdFx0XHQ8L3ZpZXc+XG5cdFx0XHRcdFx0PC92aWV3PlxuXHRcdFx0XHQ8L3UtY29sPlxuXHRcdFx0XHRcblx0XHRcdFx0PHUtY29sIHNwYW49XCI2XCIgdi1pZj1cInJlY2lwZS5sZW5ndGggPT0gMlwiPlxuXHRcdFx0XHRcdDx2aWV3IGNsYXNzPVwiZGVtby1sYXlvdXQgYmctcHVycGxlLWxpZ2h0IGNhcmRcIiBAY2xpY2s9XCJ0b0RldGFpbCgocmVjaXBlWzFdKS5yZWNpcGVJZClcIj5cblx0XHRcdFx0XHRcdDx2aWV3IGNsYXNzPVwiY2FyZC1ib3hcIj5cblx0XHRcdFx0XHRcdFx0PHUtaW1hZ2UgYm9yZGVyLXJhZGl1cz1cIjZweFwiIGhlaWdodD1cIjEzOHB4XCIgd2lkdGg9XCIxMDAlXCIgOnNyYz1cIihyZWNpcGVbMV0pLmltZ1wiIDpmYWRlPVwidHJ1ZVwiIGR1cmF0aW9uPVwiNDUwXCI+PC91LWltYWdlPlxuXHRcdFx0XHRcdFx0XHQ8dGV4dCBzdHlsZT1cImZvbnQtc2l6ZTogMTJweDtmb250LXdlaWdodDogNTAwO1wiPnt7IChyZWNpcGVbMV0pLm5hbWUgfX08L3RleHQ+XG5cdFx0XHRcdFx0XHRcdFxuXHRcdFx0XHRcdFx0XHQ8dmlldyBzdHlsZT1cInRleHQtYWxpZ246IGxlZnQ7bWFyZ2luLXRvcDogMTBweDtcIj5cblx0XHRcdFx0XHRcdFx0XHQ8aW1hZ2Ugc3JjPVwiLi4vLi4vc3RhdGljL2ItbWVkYWwucG5nXCIgc3R5bGU9XCJ3aWR0aDogMTVweDtoZWlnaHQ6IDE1cHg7bWFyZ2luLWxlZnQ6IDMwcnB4O1wiPlxuXHRcdFx0XHRcdFx0XHRcdDx0ZXh0IHN0eWxlPVwiZGlzcGxheTogaW5saW5lLWJsb2NrO21hcmdpbi1sZWZ0OiAxMHB4O2ZvbnQtc2l6ZTogMTBweDtcIj57eyBNYXRoLmZsb29yKChNYXRoLnJhbmRvbSgpICogNTAwMCkgKyAxMDApIH19IExpa2VzPC90ZXh0PlxuXHRcdFx0XHRcdFx0XHRcdFxuXHRcdFx0XHRcdFx0XHQ8L3ZpZXc+XG48IS0tIFx0XHRcdFx0XHRcdFx0PHZpZXcgc3R5bGU9XCJtYXJnaW4tdG9wOiAxMHB4O3RleHQtYWxpZ246IGxlZnQ7bWFyZ2luLWxlZnQ6IDMwcnB4O1wiPlxuXHRcdFx0XHRcdFx0XHRcdDx0ZXh0IHN0eWxlPVwiZm9udC1zaXplOiAxMnB4O2NvbG9yOiAjNENEOTY0O2ZvbnQtd2VpZ2h0OiA1MDA7XCI+QmVlZiwgTXVzaHJvb208L3RleHQ+XG5cdFx0XHRcdFx0XHRcdDwvdmlldz4gLS0+XG5cdFx0XHRcdFx0XHQ8L3ZpZXc+XG5cdFx0XHRcdFx0PC92aWV3PlxuXHRcdFx0XHQ8L3UtY29sPlxuXG5cdFx0XHQ8L3Utcm93Plx0XG5cdFx0PC92aWV3PlxuXHRcdFxuXHRcdFxuXHRcdDxocXMtcG9wdXAgIHRpdGxlPVwiXCIgOmZyb209XCJwb3BGcm9tXCIgdi1tb2RlbD1cImNvbnN1bWVQb3BcIiA6cm91bmQ9XCIyMFwiIDpzaG93Q2xvc2U9XCJmYWxzZVwiIGhlaWdodD1cIjMwMHB4XCI+XG5cdFx0XHQ8dmlldyBjbGFzcz1cInQtYmdcIj5cblx0XHRcdFx0PHRleHQgc3R5bGU9XCJmb250LXNpemU6IDIwcHg7Zm9udC13ZWlnaHQ6IDkwMDtcIj5IYXZlIHlvdSBjb25zdW1lZCBhbHJlYWR5PzwvdGV4dD5cblx0XHRcdFx0PHZpZXcgY2xhc3M9XCJzbS1pcGJveFwiPlxuXHRcdFx0XHRcdDwhLS0gPHRleHQ+LTwvdGV4dD4gLS0+XG5cdFx0XHRcdFx0PCEtLSA8dmlldyBzdHlsZT1cIm1hcmdpbi10b3A6IDEwcHg7Zm9udC1zaXplOiAyMHB4O21hcmdpbi1yaWdodDogMTVweDtcIiBAY2xpY2s9XCIgcGFja3MtPSAxXCI+LTwvdmlldz5cblx0XHRcdFx0XHQ8dS1pbnB1dCBzdHlsZT1cImZvbnQtd2VpZ2h0OiA5MDA7ZGlzcGxheTogaW5saW5lLWJsb2NrO2JhY2tncm91bmQtY29sb3I6ICNGM0YxRjE7Ym9yZGVyLXJhZGl1czogMTBweDtcIiBwbGFjZWhvbGRlcj1cIkFtb3VudFwiIHYtbW9kZWw9XCJwYWNrc1wiICBjbGFzcz1cImZuLWlucHV0XCIgaGVpZ2h0PVwiOTBcIiBpbnB1dC1hbGlnbj1cImNlbnRlclwiLz5cblx0XHRcdFx0XHQ8dmlldyBjbGFzcz1cInN1bS1pdGVtXCIgQGNsaWNrPVwiIHBhY2tzKz0gMVwiPis8L3ZpZXc+IC0tPlxuXHRcdFx0XHQ8L3ZpZXc+XG5cdFx0XHRcdDx2aWV3IHN0eWxlPVwibWFyZ2luLXRvcDogMzBweDtcIj5cblx0XHRcdFx0XHQ8dS1idXR0b24gc2hhcGU9XCJjaXJjbGVcIiA6aGFpci1saW5lPVwiZmFsc2VcIiBzdHlsZT1cIndpZHRoOiAxMzBweDtiYWNrZ3JvdW5kLWNvbG9yOiAjRjVDOTc5O2JvcmRlci1jb2xvcjogI0Y1Qzk3OTtcIiBAY2xpY2s9XCJjb25zdW1lKCd5ZXMnKVwiPlllczwvdS1idXR0b24+XG5cdFx0XHRcdFx0PHUtYnV0dG9uIHNoYXBlPVwiY2lyY2xlXCIgOmhhaXItbGluZT1cImZhbHNlXCIgc3R5bGU9XCJ3aWR0aDogMTMwcHg7YmFja2dyb3VuZC1jb2xvcjogI0Y1Qzk3OTtib3JkZXItY29sb3I6ICNGNUM5Nzk7bWFyZ2luLXRvcDogMTBweDtcIiBAY2xpY2s9XCJjb25zdW1lKCdubycpXCI+Tm88L3UtYnV0dG9uPlxuXHRcdFx0XHQ8L3ZpZXc+XG5cdFx0XHQ8L3ZpZXc+XG5cdFx0PC9ocXMtcG9wdXA+XG5cdFx0PCEtLSAjaWZkZWYgQVBQLVBMVVMgLS0+XG5cdFx0PHUtdGFiYmFyIDpsaXN0PVwidGFiYmFyXCIgOm1pZC1idXR0b249XCJmYWxzZVwiIGhlaWdodD1cIjU1cHhcIj48L3UtdGFiYmFyPlxuXHRcdDwhLS0gI2VuZGlmIC0tPlxuXHRcdFxuXHRcdDwhLS0gI2lmZGVmIEg1IC0tPlxuXHRcdDx1LXRhYmJhciA6bGlzdD1cInRhYmJhclwiIDptaWQtYnV0dG9uPVwiZmFsc2VcIj48L3UtdGFiYmFyPlxuXHRcdDwhLS0gI2VuZGlmIC0tPlxuXHQ8L3ZpZXc+XG48L3RlbXBsYXRlPlxuXG48c2NyaXB0PlxuXHRleHBvcnQgZGVmYXVsdCB7XG5cdFx0ZGF0YSgpIHtcblx0XHRcdHJldHVybiB7XG5cdFx0XHRcdHRhYmJhcjogdGhpcy4kc3RvcmUuc3RhdGUudGFiYmFyLFxuXHRcdFx0XHRhdmF0YXI6XCJcIixcblx0XHRcdFx0dXNlcjp7fSxcblx0XHRcdFx0Y29uZmlnOntcblx0XHRcdFx0XHR0aXRsZTogJycsXG5cdFx0XHRcdFx0Y29sb3I6ICdibGFjaycsXG5cdFx0XHRcdFx0YmFja2dyb3VuZENvbG9yOiAnI0ZGRkZGRicsXG5cdFx0XHRcdFx0YmFjazogZmFsc2UsXG5cdFx0XHRcdFx0YmFja1R4dDogJ3h4eHh4eCcsXG5cdFx0XHRcdFx0c3RhdHVzQmFyQmFja2dyb3VuZDonI0ZGRkZGRicsXG5cdFx0XHRcdFx0cmlnaHRCdXR0b246W3tcblx0XHRcdFx0XHRcdGtleTogJ25vdGlmaWNhdGlvbicsXG5cdFx0XHRcdFx0XHRpY29uOiAnJiN4RTYxRTsnLFxuXHRcdFx0XHRcdFx0cG9zaXRpb246ICdyaWdodCdcblx0XHRcdFx0XHR9XSxcblx0XHRcdFx0XHRsZWZ0QnV0dG9uOiBbe1xuXHRcdFx0XHRcdFx0a2V5OiAndGV4dCcsXG5cdFx0XHRcdFx0XHRpY29uOiAnJiN4ZTY4MDsnLFxuXHRcdFx0XHRcdFx0dHh0OiAnXFx4YTBcXHhhMFxceGEwVHJhY2sgTXkgR3JvY2VyeScsXG5cdFx0XHRcdFx0XHRwb3NpdGlvbjogJ2xlZnQnXG5cdFx0XHRcdFx0fV0sXG5cdFx0XHRcdH0sXG5cdFx0XHRcdGl0ZW1fYm94OiBbXG5cdFx0XHRcdFx0e1xuXHRcdFx0XHRcdFx0J2l0ZW1JZCc6MSxcblx0XHRcdFx0XHRcdCd0aXRsZSc6ICdGcmlkZ2UgQ2xlYW5pbmcnLFxuXHRcdFx0XHRcdFx0J2ltZyc6ICdodHRwczovL2ltZ3MuaGVhcnRwbGFuLmNuL0ZwMTFlX04zOTJDellLdXR1XzNJc3VkSWlNOVIvcHJldmlldycsXG5cdFx0XHRcdFx0XHQnbmFtZSc6ICdHcmlsbGVkIFN3ZWV0IFBvdGF0b2VzJyxcblx0XHRcdFx0XHRcdCd0eXBlJzonU3dlZXQgUG90YXRvZXMsIENlbGVyeScsXG5cdFx0XHRcdFx0XHQndmlldyc6ICc1MCdcblx0XHRcdFx0XHR9LFxuXHRcdFx0XHRcdHtcblx0XHRcdFx0XHRcdCdpdGVtSWQnOjIsXG5cdFx0XHRcdFx0XHQndGl0bGUnOiAnRnJpZGdlIENsZWFuaW5nJyxcblx0XHRcdFx0XHRcdCdpbWcnOiAnaHR0cHM6Ly9pbWdzLmhlYXJ0cGxhbi5jbi9GcDExZV9OMzkyQ3pZS3V0dV8zSXN1ZElpTTlSL3ByZXZpZXcnLFxuXHRcdFx0XHRcdFx0J25hbWUnOiAnR3JpbGxlZCBTd2VldCBQb3RhdG9lcycsXG5cdFx0XHRcdFx0XHQndHlwZSc6J1N3ZWV0IFBvdGF0b2VzLCBDZWxlcnknLFxuXHRcdFx0XHRcdFx0J3ZpZXcnOiAnNTAnXG5cdFx0XHRcdFx0fVxuXHRcdFx0XHRdLFxuXHRcdFx0XHRleHBpcmluZ0Zvb2RMaXN0OiBbXSxcblx0XHRcdFx0cmFuZG9tUmVjaXBlc0xpc3Q6IFtdLFxuXHRcdFx0XHRjb25zdW1lUG9wOmZhbHNlLFxuXHRcdFx0XHRuZWVkQ2hhbmdlSXRlbTogJycsXG5cdFx0XHRcdHBvcEZyb206ICdib3R0b20nLFxuXHRcdFx0XHRub3RpZmljYXRpb25EYXRhOiAnJyxcblx0XHRcdH1cblx0XHR9LFxuXHRcdG9uTG9hZCgpe1xuXHRcdFx0Ly8gbGV0IGNsaWVudEluZm8gPSBwbHVzLnB1c2guZ2V0Q2xpZW50SW5mbygpO1xuXHRcdFx0Ly8gY29uc29sZS5sb2coJ2NsaWVudGlkICcsIGNsaWVudEluZm8uY2xpZW50aWQpO1xuXHRcdFx0TG9jYXRpb24ucmVsb2FkO1xuXHRcdFx0dGhpcy4kcmVmcy5wb3B1cC5vcGVuKCdjZW50ZXInKVxuXHRcdFx0Y29uc29sZS5sb2coXCJwb3DvvIHvvIFcIilcblx0XHR9LFxuXHRcdG9uU2hvdygpe1xuXHRcdFx0dGhpcy5sb2FkaW5mbygpXG5cdFx0XHR0aGlzLmdldENvbCgpXG5cdFx0XHR0aGlzLmdldE5vdGlmaWNhdGlvbkRhdGEoKVxuXHRcdH0sXG5cdFx0bWV0aG9kczoge1xuXHRcdFx0b25DbGlja0J0bihlKXtcblx0XHRcdFx0aWYgKGUua2V5ID09ICdub3RpZmljYXRpb24nKXtcblx0XHRcdFx0XHRsZXQgbm90aWZpY2F0aW9uRGF0YVN0cmluZyA9IGVuY29kZVVSSUNvbXBvbmVudChKU09OLnN0cmluZ2lmeSh0aGlzLm5vdGlmaWNhdGlvbkRhdGEpKVxuXHRcdFx0XHRcdHVuaS5uYXZpZ2F0ZVRvKHtcblx0XHRcdFx0XHR1cmw6ICcuLi9ub3RpZmljYXRpb24vbm90aWZpY2F0aW9uP25vdGlmaWNhdGlvbkRhdGFTdHJpbmc9JyArIG5vdGlmaWNhdGlvbkRhdGFTdHJpbmdcblx0XHRcdFx0fSlcblx0XHRcdFx0fVxuXHRcdFx0fSxcblx0XHRcdHRvRGV0YWlsKGUpe1xuXHRcdFx0XHRjb25zb2xlLmxvZyhlKVxuXHRcdFx0XHR1bmkubmF2aWdhdGVUbyh7XG5cdFx0XHRcdFx0dXJsOiAnLi4vZ3JvY2VyeS9kZXRhaWw/aWQ9JyArIGUgKyAnJmJhY2tUeXBlPTInXG5cdFx0XHRcdH0pXG5cdFx0XHR9LFxuXHRcdFx0Y29uc3VtZVNlbGVjdChlKXtcblx0XHRcdFx0Y29uc29sZS5sb2coZSlcblx0XHRcdFx0dGhpcy5jb25zdW1lUG9wID0gdHJ1ZVxuXHRcdFx0XHR0aGlzLm5lZWRDaGFuZ2VJdGVtID0gZVxuXHRcdFx0XHRcblx0XHRcdH0sXG5cdFx0XHRpc1JlbWluZGVkKGUpe1xuXHRcdFx0XHQvLyBjb25zb2xlLmxvZyhuZXcgRGF0ZSh0aGlzLmV4cGlyaW5nRm9vZExpc3RbZV0ucmVtaW5kVGltZSkpXG5cdFx0XHRcdFxuXHRcdFx0XHR2YXIgbm93ID0gbmV3IERhdGUoKVxuXHRcdFx0XHQvLyBjb25zb2xlLmxvZyhub3cpXG5cdFx0XHRcdGlmKG5ldyBEYXRlKHRoaXMuZXhwaXJpbmdGb29kTGlzdFtlXS5yZW1pbmRUaW1lKT5uZXcgRGF0ZSgpKXtcblx0XHRcdFx0XHRyZXR1cm4gZmFsc2Vcblx0XHRcdFx0fWVsc2V7XG5cdFx0XHRcdFx0cmV0dXJuIHRydWVcblx0XHRcdFx0fVxuXHRcdFx0fSxcblx0XHRcdGdldEZyZXNobmVzcyhlKXtcblx0XHRcdFx0Ly8gY29uc29sZS5sb2codGhpcy5leHBpcmluZ0Zvb2RMaXN0W2VdLmFkZERhdGUpXG5cdFx0XHRcdC8vIGNvbnNvbGUubG9nKHRoaXMuZXhwaXJpbmdGb29kTGlzdFtlXS5leHBEYXRlKVxuXHRcdFx0XHRjb25zdCB0b3RhbFRpbWUgPSBuZXcgRGF0ZSh0aGlzLmV4cGlyaW5nRm9vZExpc3RbZV0uZXhwRGF0ZSktbmV3IERhdGUodGhpcy5leHBpcmluZ0Zvb2RMaXN0W2VdLmFkZERhdGUpXG5cdFx0XHRcdGNvbnN0IHJlc3RUaW1lID0gbmV3IERhdGUodGhpcy5leHBpcmluZ0Zvb2RMaXN0W2VdLmV4cERhdGUpLW5ldyBEYXRlKClcblx0XHRcdFx0Ly8gY29uc29sZS5sb2cocmVzdFRpbWUvdG90YWxUaW1lKVxuXHRcdFx0XHRyZXR1cm4gKDEtcmVzdFRpbWUvdG90YWxUaW1lKSoxMDBcblx0XHRcdH0sXG5cdFx0XHRjb25zdW1lKGUpe1xuXHRcdFx0XHRpZiAoZSA9PT0gJ3llcycpe1xuXHRcdFx0XHRcdHZhciBjaGFuZ2VkSXRlbSA9IHRoaXMuZXhwaXJpbmdGb29kTGlzdFt0aGlzLm5lZWRDaGFuZ2VJdGVtXVxuXHRcdFx0XHRcdC8vIHZhciBsc0NvbnN1bWVUaW1lID0gbmV3IERhdGUoKS50b0xvY2FsZURhdGVTdHJpbmcoKS5zcGxpdChcIi9cIik7XG5cdFx0XHRcdFx0Ly8gLy9DaGluYSBUaW1lem9uZSBuZWVkZWRcblx0XHRcdFx0XHQvLyAvLyBpZihsc0NvbnN1bWVUaW1lWzJdLmxlbmd0aCA9PT0gMSl7XG5cdFx0XHRcdFx0Ly8gLy8gICAgIGxzQ29uc3VtZVRpbWVbMl0gPSBcIjBcIiArIGxzQ29uc3VtZVRpbWVbMl1cblx0XHRcdFx0XHQvLyAvLyB9XG5cdFx0XHRcdFx0Ly8gLy9BdXN0cmFsaWFuIFRpbWV6b25lIG5lZWRlZFxuXHRcdFx0XHRcdC8vIGlmKGxzQ29uc3VtZVRpbWVbMV0ubGVuZ3RoID09PSAxKXtcblx0XHRcdFx0XHQvLyBcdGxzQ29uc3VtZVRpbWVbMV0gPSBcIjBcIiArIGxzQ29uc3VtZVRpbWVbMV1cblx0XHRcdFx0XHQvLyB9XG5cdFx0XHRcdFx0Ly8gdmFyIGNvbnN1bWVUaW1lID0gbHNDb25zdW1lVGltZVsyXStcIi1cIitsc0NvbnN1bWVUaW1lWzBdK1wiLVwiK2xzQ29uc3VtZVRpbWVbMV1cblx0XHRcdFx0XHR0aGlzLmNvbnN1bWVJdGVtKGNoYW5nZWRJdGVtKVxuXHRcdFx0XHRcdGNvbnNvbGUubG9nKGNoYW5nZWRJdGVtKVxuXHRcdFx0XHRcdGNvbnNvbGUubG9nKGNoYW5nZWRJdGVtLml0ZW1JZClcblx0XHRcdFx0XHR1bmkucmVxdWVzdCh7XG5cdFx0XHRcdFx0XHR1cmw6ICdodHRwOi8vMTAxLjM1LjkxLjExNzo3ODg0L2l0ZW0vdXBkYXRlL3N0YXR1cy8nK1wiY29uc3VtZVwiK1wiL2lkL1wiK2NoYW5nZWRJdGVtLml0ZW1JZCxcblx0XHRcdFx0XHR9KS50aGVuKHJlcyA9PiB7XG5cdFx0XHRcdFx0XHR0aGlzLmdldENvbCgpXG5cdFx0XHRcdFx0XHRjb25zb2xlLmxvZyhyZXNbMV0pXG5cdFx0XHRcdFx0fSlcblx0XHRcdCAgICAgICAgXG5cdFx0XHRcdH1cblx0XHRcdFx0dGhpcy5jb25zdW1lUG9wID0gZmFsc2Vcblx0XHRcdFx0XG5cdFx0XHR9LFxuXHRcdFx0Y29uc3VtZUl0ZW0oaXRlbSl7XG5cdFx0XHRcdGxldCBpdGVtVXBkYXRlZCA9IHtcblx0XHRcdFx0ICBcImFkZERhdGVcIjogaXRlbS5hZGREYXRlLFxuXHRcdFx0XHQgIFwiYWRkTWV0aG9kXCI6IGl0ZW0uYWRkTWV0aG9kLFxuXHRcdFx0XHQgIFwiY2F0ZWdvcnlcIjogaXRlbS5jYXRlZ29yeSxcblx0XHRcdFx0ICBcImNvbkRhdGVcIjogbmV3IERhdGUoKSxcblx0XHRcdFx0ICBcImRldGFpbFwiOiBpdGVtLmRldGFpbCxcblx0XHRcdFx0ICBcImV4cERhdGVcIjogaXRlbS5leHBEYXRlLFxuXHRcdFx0XHQgIFwiaXRlbUlkXCI6IGl0ZW0uaXRlbUlkLFxuXHRcdFx0XHQgIFwibmFtZVwiOiBpdGVtLm5hbWUsXG5cdFx0XHRcdCAgXCJyZW1pbmRUaW1lXCI6IGl0ZW0ucmVtaW5kVGltZSxcblx0XHRcdFx0ICBcInN0YXR1c1wiOiBcImNvbnN1bWVcIixcblx0XHRcdFx0ICBcInVpZFwiOiB1bmkuZ2V0U3RvcmFnZVN5bmMoJ3VzZXJJZCcpXG5cdFx0XHRcdH1cblx0XHRcdFx0Y29uc29sZS5sb2coSlNPTi5zdHJpbmdpZnkoaXRlbVVwZGF0ZWQpKVxuXHRcdFx0XHR1bmkucmVxdWVzdCh7XG5cdFx0XHRcdFx0bWV0aG9kOidQT1NUJyxcblx0XHRcdFx0XHR1cmw6J2h0dHA6Ly8xMDEuMzUuOTEuMTE3Ojc4ODQvaXRlbS91cGRhdGUnLFxuXHRcdFx0XHRcdGRhdGE6SlNPTi5zdHJpbmdpZnkoaXRlbVVwZGF0ZWQpXG5cdFx0XHRcdH0pLnRoZW4ocmVzID0+IHtcblx0XHRcdFx0XHRjb25zb2xlLmxvZyhyZXMpXG5cdFx0XHRcdFx0Ly8gdGhpcy5nZXRDb2woKVxuXHRcdFx0XHR9KVxuXHRcdFx0fSxcblx0XHRcdGxvYWRpbmZvKCl7XG5cdFx0XHRcdC8vIHVuaS5yZXF1ZXN0KHtcblx0XHRcdFx0Ly8gdXJsOiBcImh0dHA6Ly8xMDEuMzUuOTEuMTE3Ojc4ODQvdXNlcnMvYXZhdGFyL1wiK3VuaS5nZXRTdG9yYWdlU3luYygndXNlcklkJyksXG5cdFx0XHRcdC8vIG1ldGhvZDogJ2dldCcsXG5cdFx0XHRcdC8vIH0pLnRoZW4ocmVzPT57XG5cdFx0XHRcdC8vIFx0Y29uc29sZS5sb2coJ3JlcycscmVzKVxuXHRcdFx0XHQvLyBcdGlmKHJlc1sxXS5kYXRhIT0nJyl7XG5cdFx0XHRcdC8vIFx0XHR0aGlzLmF2YXRhciA9IHJlc1sxXS5kYXRhXG5cdFx0XHRcdC8vIFx0fWVsc2V7XG5cdFx0XHRcdC8vIFx0XHR0aGlzLmF2YXRhciA9IFwiLi4vLi4vc3RhdGljL2dpcmwucG5nXCJcblx0XHRcdFx0Ly8gXHR9XG5cdFx0XHRcdC8vIH0pXG5cdFx0XHRcdFxuXHRcdFx0XHR0aGlzLmF2YXRhcj1cImh0dHA6Ly8xMDEuMzUuOTEuMTE3Ojc4ODQvdXNlcnMvYXZhdGFyL1wiK3VuaS5nZXRTdG9yYWdlU3luYygndXNlcklkJyk7XG5cdFx0XHRcdGlmKHRoaXMuYXZhdGFyPT0nJyl7XG5cdFx0XHRcdFx0dGhpcy5hdmF0YXIgPSBcIi4uLy4uL3N0YXRpYy9naXJsLnBuZ1wiXG5cdFx0XHRcdH07XG5cdFx0XHRcdHVuaS5yZXF1ZXN0KHtcblx0XHRcdFx0dXJsOiBcImh0dHA6Ly8xMDEuMzUuOTEuMTE3Ojc4ODQvdXNlcnMvcHJvZmlsZS9cIit1bmkuZ2V0U3RvcmFnZVN5bmMoJ3VzZXJJZCcpLFxuXHRcdFx0XHRtZXRob2Q6ICdnZXQnLFxuXHRcdFx0XHR9KS50aGVuKHJlcz0+e1xuXHRcdFx0XHRcdC8vIGNvbnNvbGUubG9nKCdsb2FkJyxyZXNbMV0uZGF0YSlcblx0XHRcdFx0XHR0aGlzLnVzZXI9cmVzWzFdLmRhdGFcblx0XHRcdFx0XHRjb25zb2xlLmxvZygnbG9hZCcsdGhpcy51c2VyLm5hbWUpXG5cdFx0XHRcdFx0aWYodGhpcy51c2VyLm5hbWU9PScnfHRoaXMudXNlci5uYW1lPT1udWxsKXtcblx0XHRcdFx0XHRcdHRoaXMudXNlci5uYW1lPVwiVW5rbm93XCI7XG5cdFx0XHRcdFx0fVxuXHRcdFx0XHRcdGlmKHRoaXMudXNlci5hZGRyZXNzPT0nTm9uZSd8dGhpcy51c2VyLmFkZHJlc3M9PW51bGwpe1xuXHRcdFx0XHRcdFx0dGhpcy51c2VyLmFkZHJlc3M9XCJDaXR5LCBTdGF0ZSwgQ291bnRyeVwiO1xuXHRcdFx0XHRcdH1cblx0XHRcdFx0fSlcblx0XHRcdH0sXG5cdFx0XHRcblx0XHRcdGdldENvbCgpe1xuXHRcdFx0XHRcblx0XHRcdFx0Ly8gaWYgKHVuaS5nZXRTdG9yYWdlU3luYygndXNlcklkJykpe1xuXHRcdFx0XHRcdFxuXHRcdFx0XHQvLyB9XG5cdFx0XHRcdFxuXHRcdFx0XHR1bmkucmVxdWVzdCh7XG5cdFx0XHRcdFx0dXJsOidodHRwOi8vMTAxLjM1LjkxLjExNzo3ODg0L2l0ZW0vdXNlci8nK3VuaS5nZXRTdG9yYWdlU3luYygndXNlcklkJylcblx0XHRcdFx0fSkudGhlbihyZXMgPT4ge1xuXHRcdFx0XHRcdGNvbnNvbGUubG9nKHJlc1sxXS5kYXRhKVxuXHRcdFx0XHRcdHRoaXMudXBkYXRlSXRlbUxpc3QocmVzWzFdLmRhdGEpXG5cdFx0XHRcdH0pXG5cdFx0XHR9LFxuXHRcdFx0XG5cdFx0XHR1cGRhdGVJdGVtTGlzdChmb29kTGlzdCl7XG5cdFx0XHRcdGxldCBleHBpcmluZ0Zvb2RMaXN0ID0gW11cblx0XHRcdFx0Zm9yICh2YXIgaT0wO2k8Zm9vZExpc3QubGVuZ3RoO2krKyl7XG5cdFx0XHQgICAgICAgIHZhciBpdGVtID0gZm9vZExpc3RbaV1cblx0XHRcdFx0XHR2YXIgaXRlbUluZm8gPSB7XG5cdFx0XHQgICAgICAgICAgICBcImFkZERhdGVcIjogaXRlbS5hZGREYXRlLFxuXHRcdFx0ICAgICAgICAgICAgXCJhZGRNZXRob2RcIjogaXRlbS5hZGRNZXRob2QsXG5cdFx0XHQgICAgICAgICAgICBcImNhdGVnb3J5XCI6IGl0ZW0uY2F0ZWdvcnksXG5cdFx0XHQgICAgICAgICAgICBcImNvbkRhdGVcIjogaXRlbS5jb25EYXRlLFxuXHRcdFx0ICAgICAgICAgICAgXCJkZXRhaWxcIjogaXRlbS5kZXRhaWwsXG5cdFx0XHQgICAgICAgICAgICBcImV4cERhdGVcIjogaXRlbS5leHBEYXRlLnN1YnN0cigwLDEwKSxcblx0XHRcdCAgICAgICAgICAgIFwiaXRlbUlkXCI6IGl0ZW0uaXRlbUlkLFxuXHRcdFx0ICAgICAgICAgICAgXCJuYW1lXCI6IGl0ZW0ubmFtZSxcblx0XHRcdCAgICAgICAgICAgIFwicmVtaW5kVGltZVwiOiBpdGVtLnJlbWluZFRpbWUsXG5cdFx0XHQgICAgICAgICAgICBcInN0YXR1c1wiOiBpdGVtLnN0YXR1cyxcblx0XHRcdFx0XHRcdFwidGltZVwiOnRoaXMuaUNpdGltZSxcblx0XHRcdCAgICAgICAgICAgIFwidWlkXCI6IHVuaS5nZXRTdG9yYWdlU3luYygndXNlcklkJyksXG5cdFx0XHRcdFx0XHRcImltZ1wiOiBpdGVtLnBpY3R1cmVcblx0XHRcdFx0XHR9XG5cdFx0XHRcdFx0aWYgKGZvb2RMaXN0W2ldLnN0YXR1cyA9PT0gJ2luc3RvY2snKXtcblx0XHRcdFx0XHRcdGV4cGlyaW5nRm9vZExpc3QucHVzaChpdGVtSW5mbyk7XG5cdFx0XHRcdFx0XHQvLyBjb25zb2xlLmxvZyhpdGVtLnJlbWluZFRpbWUpO1xuXHRcdFx0XHRcdH1cdFx0XHRcdFx0XG5cdFx0XHRcdH1cblx0XHRcdFx0ZXhwaXJpbmdGb29kTGlzdC5zb3J0KGZ1bmN0aW9uKGEsIGIpe1xuXHRcdFx0XHQgIGxldCBkYXRlQSA9IGEucmVtaW5kVGltZTtcblx0XHRcdFx0ICBsZXQgZGF0ZUIgPSBiLnJlbWluZFRpbWU7XG5cdFx0XHRcdCAgaWYgKGRhdGVBIDwgZGF0ZUIpe1xuXHRcdFx0XHQgICAgcmV0dXJuIC0xO1xuXHRcdFx0XHQgIH0gZWxzZSBpZiAoZGF0ZUEgPiBkYXRlQil7XG5cdFx0XHRcdCAgICByZXR1cm4gMTtcblx0XHRcdFx0ICB9ZWxzZXtcblx0XHRcdFx0XHQgIGlmKCBhLmV4cERhdGU8Yi5leHBEYXRlKXtcblx0XHRcdFx0XHRcdCAgcmV0dXJuIC0xXG5cdFx0XHRcdFx0ICB9ZWxzZXtcblx0XHRcdFx0XHRcdCAgcmV0dXJuIDFcblx0XHRcdFx0XHQgIH1cblx0XHRcdFx0ICB9XG5cdFx0XHRcdCAgcmV0dXJuIDA7XG5cdFx0XHRcdH0pO1xuXG5cdFx0XHRcdC8vIGNvbnNvbGUubG9nKGV4cGlyaW5nRm9vZExpc3QpXG5cdFx0XHRcdHRoaXMuZXhwaXJpbmdGb29kTGlzdCA9IGV4cGlyaW5nRm9vZExpc3Rcblx0XHRcdFx0Ly8gY29uc29sZS5sb2codGhpcy5leHBpcmluZ0Zvb2RMaXN0KVxuXHRcdFx0fSxcblx0XHRcdGdldFJhbmRvbVJlY2lwZXMoKXtcblx0XHRcdFx0dW5pLnJlcXVlc3Qoe1xuXHRcdFx0XHR1cmw6IFwiaHR0cDovLzEwMS4zNS45MS4xMTc6Nzg4NC9yZWNpcGUvcmFuZG9tXCIsXG5cdFx0XHRcdG1ldGhvZDogJ2dldCcsXG5cdFx0XHRcdH0pLnRoZW4ocmVzPT57XG5cdFx0XHRcdFx0dGhpcy5sb2FkUmVjaXBlKHJlc1sxXS5kYXRhKTtcblx0XHRcdFx0XHR0aGlzLiRzdG9yZS5jb21taXQoXCJzZXRSZWNpcGVcIixyZXNbMV0uZGF0YSk7XG5cdFx0XHRcdH0pXG5cdFx0XHR9LFxuXHRcdFx0bG9hZFJlY2lwZShyZWNpcGVMaXN0KXtcblx0XHRcdFx0bGV0IHRtcCA9IFtdXG5cdFx0XHRcdGxldCBMaXN0ID0gW11cblx0XHRcdFx0Zm9yICh2YXIgaT0wO2k8cmVjaXBlTGlzdC5sZW5ndGg7aSsrKXtcblx0XHRcdFx0ICAgIHZhciByZWNpcGUgPSByZWNpcGVMaXN0W2ldXG5cdFx0XHRcdFx0dmFyIHJlY2lwZUluZm8gPSB7XG5cdFx0XHRcdFx0ICAgIFwicmVjaXBlSWRcIjogcmVjaXBlLmlkLFxuXHRcdFx0XHRcdFx0J2ltZyc6IHJlY2lwZS5pbWFnZSxcblx0XHRcdFx0XHRcdCduYW1lJzogcmVjaXBlLnRpdGxlLFxuXHRcdFx0XHRcdH07XG5cdFx0XHRcdFx0aWYgKHRtcC5sZW5ndGggPT0gMil7XG5cdFx0XHRcdFx0XHRMaXN0LnB1c2godG1wKTtcblx0XHRcdFx0XHRcdHRtcCA9IFtdO1xuXHRcdFx0XHRcdH1cblx0XHRcdFx0XHR0bXAucHVzaChyZWNpcGVJbmZvKTtcblx0XHRcdFx0fVxuXHRcdFx0XHRpZiAodG1wLmxlbmd0aCAhPTApIHtcblx0XHRcdFx0XHRMaXN0LnB1c2godG1wKTtcblx0XHRcdFx0fVxuXHRcdFx0XHR0aGlzLnJhbmRvbVJlY2lwZXNMaXN0PUxpc3Q7XG5cdFx0XHRcdGNvbnNvbGUubG9nKHRoaXMucmFuZG9tUmVjaXBlc0xpc3QpO1xuXHRcdFx0fSxcblx0XHRcdGdldE5vdGlmaWNhdGlvbkRhdGEoKSB7XG5cdFx0XHRcdHVuaS5yZXF1ZXN0KHtcblx0XHRcdFx0dXJsOiBcImh0dHA6Ly8xMDEuMzUuOTEuMTE3Ojc4ODQvbm90aWZpY2F0aW9uL2dldC9cIit1bmkuZ2V0U3RvcmFnZVN5bmMoJ3VzZXJJZCcpLFxuXHRcdFx0XHRtZXRob2Q6ICdnZXQnLFxuXHRcdFx0XHR9KS50aGVuKHJlcz0+e1xuXHRcdFx0XHRcdGNvbnNvbGUubG9nKHJlcylcblx0XHRcdFx0XHRjb25zb2xlLmxvZygncmVzWzFdLmRhdGEnLCByZXNbMV0uZGF0YSlcblx0XHRcdFx0XHQvLyB0aGlzLnNob3BMaXN0ID0gcmVzWzFdLmRhdGFcblx0XHRcdFx0XHR2YXIgcmVzRGF0YSA9IHJlc1sxXS5kYXRhXG5cdFx0XHRcdFx0dGhpcy5ub3RpZmljYXRpb25EYXRhID0gcmVzRGF0YS5pdGVtTm90aWZpY2F0aW9uTGlzdFxuXHRcdFx0XHRcdGlmIChyZXNEYXRhLnVucmVhZE51bSA+IDApIHtcblx0XHRcdFx0XHRcdC8vIHVuaS5zaG93VG9hc3Qoe1xuXHRcdFx0XHRcdFx0Ly8gXHR0aXRsZTogXCJZb3UgaGF2ZSBcIiArIHJlc0RhdGEudW5yZWFkTnVtICsgXCIgbWVzc2FnZXMgdW5yZWFkIVwiLFxuXHRcdFx0XHRcdFx0Ly8gXHRpY29uOiAnc3VjY2VzcycsXG5cdFx0XHRcdFx0XHQvLyBcdGR1cmF0aW9uOiAyMDAwLFxuXHRcdFx0XHRcdFx0Ly8gfSk7XG5cdFx0XHRcdFx0XHR0cnkge1xuXHRcdFx0XHRcdFx0XHR2YXIgbm90aWZpY2F0aW9uQ291bnQgPSB1bmkuZ2V0U3RvcmFnZVN5bmMoXCJOb3RpZmljYXRpb25Db3VudFwiKVxuXHRcdFx0XHRcdFx0fSBjYXRjaCAoZXJyb3IpIHtcblx0XHRcdFx0XHRcdFx0Y29uc29sZS5sb2coXCJlcnJvciBpcyA6XCIsIGVycm9yKVxuXHRcdFx0XHRcdFx0XHR2YXIgbm90aWZpY2F0aW9uQ291bnQgPSAxXG5cdFx0XHRcdFx0XHRcdHVuaS5zZXRTdG9yYWdlU3luYyhcIk5vdGlmaWNhdGlvbkNvdW50XCIsIG5vdGlmaWNhdGlvbkNvdW50KVxuXHRcdFx0XHRcdFx0XHQvLyB1bmkuc2V0U3RvcmFnZSh7a2V5OiBcIk5vdGlmaWNhdGlvbkNvdW50XCIsXG5cdFx0XHRcdFx0XHRcdC8vIFx0XHRcdFx0ZGF0YTogbm90aWZpY2F0aW9uQ291bnR9KVxuXHRcdFx0XHRcdFx0fVxuXHRcdFx0XHRcdFx0Y29uc29sZS5sb2cobm90aWZpY2F0aW9uQ291bnQgPT0gXCJcIilcblx0XHRcdFx0XHRcdGlmIChub3RpZmljYXRpb25Db3VudCA9PSBcIlwiKSB7XG5cdFx0XHRcdFx0XHRcdHZhciBub3RpZmljYXRpb25Db3VudCA9IDFcblx0XHRcdFx0XHRcdFx0dW5pLnNldFN0b3JhZ2VTeW5jKFwiTm90aWZpY2F0aW9uQ291bnRcIiwgbm90aWZpY2F0aW9uQ291bnQpXG5cdFx0XHRcdFx0XHR9IGVsc2Uge1xuXHRcdFx0XHRcdFx0XHR1bmkuc2V0U3RvcmFnZVN5bmMoXCJOb3RpZmljYXRpb25Db3VudFwiLCBub3RpZmljYXRpb25Db3VudCArIDEpXG5cdFx0XHRcdFx0XHR9XG5cdFx0XHRcdFx0XHRjb25zb2xlLmxvZyhcIm5vdGlmaWNhdGlvbkNvdW50IGlzOiBcIiwgbm90aWZpY2F0aW9uQ291bnQpXG5cdFx0XHRcdFx0XHRpZiAobm90aWZpY2F0aW9uQ291bnQgPT0gMSkge1xuXHRcdFx0XHRcdFx0XHR1bmkuc2hvd01vZGFsKHtcblx0XHRcdFx0XHRcdFx0XHR0aXRsZTogXCJOb3RpZmljYXRpb25cIixcblx0XHRcdFx0XHRcdFx0XHRjb250ZW50OiBcIllvdSBoYXZlIFwiICsgcmVzRGF0YS51bnJlYWROdW0gKyBcIiBtZXNzYWdlcyB1bnJlYWQhXCIsXG5cdFx0XHRcdFx0XHRcdFx0c2hvd0NhbmNlbDogZmFsc2UsXG5cdFx0XHRcdFx0XHRcdFx0c3VjY2VzczogZnVuY3Rpb24gKHJlcykge1xuXHRcdFx0XHRcdFx0XHRcdFx0aWYgKHJlcy5jb25maXJtKSB7XG5cdFx0XHRcdFx0XHRcdFx0XHRcdGNvbnNvbGUubG9nKCfnlKjmiLfngrnlh7vnoa7lrponKTtcblx0XHRcdFx0XHRcdFx0XHRcdH0gZWxzZSBpZiAocmVzLmNhbmNlbCkge1xuXHRcdFx0XHRcdFx0XHRcdFx0XHRjb25zb2xlLmxvZygn55So5oi354K55Ye75Y+W5raIJyk7XG5cdFx0XHRcdFx0XHRcdFx0XHR9XG5cdFx0XHRcdFx0XHRcdFx0fVxuXHRcdFx0XHRcdFx0XHR9KVxuXHRcdFx0XHRcdFx0fVxuXHRcdFx0XHRcdFx0XG5cdFx0XHRcdFx0fVxuXHRcdFx0XHR9KVxuXHRcdFx0fSxcblx0XHRcdHBvcE5vdGlmaWNhdGlvbigpIHtcblx0XHRcdFx0XG5cdFx0XHR9LFxuXHRcdH1cblx0fVxuPC9zY3JpcHQ+XG5cbjxzdHlsZT5cbi5uYW1le1xuXHRkaXNwbGF5OiBmbGV4O1xuXHRmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuXHR0ZXh0LWFsaWduOiBsZWZ0O1xuXHRtYXJnaW4tbGVmdDogMTVweDtcbn1cbi5zY3JvbGxfaXRlbXtcbiAgYmFja2dyb3VuZDogI2Y3ZWRjODtcbiAgXG4gIFxuXG4gICAgXG4gIGZpbHRlcjpncmF5O1xuICB3aWR0aDoxMDBweDsgXG4gIGhlaWdodDoxMDBweDsgXG4gIG1hcmdpbjogNXB4IDVweCA1cHggNXB4O1xuICBib3JkZXItcmFkaXVzOiAyNXJweDtcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICBtYXJnaW4tbGVmdDogMTBweDtcbiAgYmFja2dyb3VuZC1zaXplOiAxMDAlO1xufVxuXG4uc2Nyb2xsX2l0ZW1fdGV4dCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBtYXJnaW4tdG9wOiA2cHg7XG4gIGZvbnQtc2l6ZTogMTJweDtcbiAgY29sb3I6IHdoaXRlO1xuICBmb250LXdlaWdodDogODAwO1xufVxuLmNhcmR7XG5cdGRpc3BsYXk6IGZsZXg7XG5cdGp1c3RpZnktY29udGVudDogY2VudGVyO1xuXHRhbGlnbi1pdGVtczogY2VudGVyO1xufVxuLmNhcmQtYm94e1xuXHRiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcblx0d2lkdGg6IDk1JTtcblx0aGVpZ2h0OiAyMThweDtcblx0Ym9yZGVyLXJhZGl1czogMTBweDtcblx0Ym9yZGVyOnNvbGlkICAxcHggI0M4QzdDQztcblx0dGV4dC1hbGlnbjogY2VudGVyO1xufVxuLnQtYmd7XG5cdGRpc3BsYXk6IGZsZXg7XG5cdGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG5cdGFsaWduLWl0ZW1zOiBjZW50ZXI7XG5cdGp1c3RpZnktY29udGVudDogY2VudGVyO1xufVxuPC9zdHlsZT5cbiJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///114\n");
 
 /***/ }),
 /* 115 */
@@ -10657,1884 +6954,25 @@ module.exports = Vue;
   !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-calendar/u-calendar.vue ***!
   \********************************************************************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _u_calendar_vue_vue_type_template_id_59e686e7_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./u-calendar.vue?vue&type=template&id=59e686e7&scoped=true& */ 130);
-/* harmony import */ var _u_calendar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./u-calendar.vue?vue&type=script&lang=js& */ 142);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _u_calendar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _u_calendar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js */ 10);
-
-var renderjs
-
-
-
-
-/* normalize component */
-
-var component = Object(_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _u_calendar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _u_calendar_vue_vue_type_template_id_59e686e7_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _u_calendar_vue_vue_type_template_id_59e686e7_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  "59e686e7",
-  null,
-  false,
-  _u_calendar_vue_vue_type_template_id_59e686e7_scoped_true___WEBPACK_IMPORTED_MODULE_0__["components"],
-  renderjs
-)
-
-component.options.__file = "node_modules/uview-ui/components/u-calendar/u-calendar.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+throw new Error("Module build failed (from ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/index.js):\nError: ENOENT: no such file or directory, open '/Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-calendar/u-calendar.vue'");
 
 /***/ }),
-/* 130 */
-/*!***************************************************************************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-calendar/u-calendar.vue?vue&type=template&id=59e686e7&scoped=true& ***!
-  \***************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns, recyclableRender, components */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_calendar_vue_vue_type_template_id_59e686e7_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--10-0!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/filter-modules-template.js!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./u-calendar.vue?vue&type=template&id=59e686e7&scoped=true& */ 131);
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_calendar_vue_vue_type_template_id_59e686e7_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_calendar_vue_vue_type_template_id_59e686e7_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_calendar_vue_vue_type_template_id_59e686e7_scoped_true___WEBPACK_IMPORTED_MODULE_0__["recyclableRender"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "components", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_calendar_vue_vue_type_template_id_59e686e7_scoped_true___WEBPACK_IMPORTED_MODULE_0__["components"]; });
-
-
-
-/***/ }),
-/* 131 */
-/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--10-0!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/filter-modules-template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!/Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-calendar/u-calendar.vue?vue&type=template&id=59e686e7&scoped=true& ***!
-  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns, recyclableRender, components */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
-var components
-try {
-  components = {
-    uPopup: __webpack_require__(/*! uview-ui/components/u-popup/u-popup.vue */ 132).default,
-    uIcon: __webpack_require__(/*! uview-ui/components/u-icon/u-icon.vue */ 22).default,
-    uButton: __webpack_require__(/*! uview-ui/components/u-button/u-button.vue */ 5).default
-  }
-} catch (e) {
-  if (
-    e.message.indexOf("Cannot find module") !== -1 &&
-    e.message.indexOf(".vue") !== -1
-  ) {
-    console.error(e.message)
-    console.error("1. 排查组件名称拼写是否正确")
-    console.error(
-      "2. 排查组件是否符合 easycom 规范，文档：https://uniapp.dcloud.net.cn/collocation/pages?id=easycom"
-    )
-    console.error(
-      "3. 若组件不符合 easycom 规范，需手动引入，并在 components 中注册该组件"
-    )
-  } else {
-    throw e
-  }
-}
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "u-popup",
-    {
-      attrs: {
-        closeable: true,
-        maskCloseAble: _vm.maskCloseAble,
-        mode: "bottom",
-        popup: false,
-        length: "auto",
-        safeAreaInsetBottom: _vm.safeAreaInsetBottom,
-        "z-index": _vm.uZIndex,
-        "border-radius": _vm.borderRadius,
-        closeable: _vm.closeable,
-        _i: 0
-      },
-      on: { close: _vm.close },
-      model: {
-        value: _vm._$s(0, "v-model", _vm.value),
-        callback: function($$v) {
-          _vm.value = $$v
-        },
-        expression: "value"
-      }
-    },
-    [
-      _c(
-        "view",
-        { staticClass: _vm._$s(1, "sc", "u-calendar"), attrs: { _i: 1 } },
-        [
-          _c(
-            "view",
-            {
-              staticClass: _vm._$s(2, "sc", "u-calendar__header"),
-              attrs: { _i: 2 }
-            },
-            [
-              _vm._$s(3, "i", !_vm.$slots["tooltip"])
-                ? _c(
-                    "view",
-                    {
-                      staticClass: _vm._$s(3, "sc", "u-calendar__header__text"),
-                      attrs: { _i: 3 }
-                    },
-                    [_vm._v(_vm._$s(3, "t0-0", _vm._s(_vm.toolTip)))]
-                  )
-                : _vm._t("tooltip", null, { _i: 4 })
-            ],
-            2
-          ),
-          _c(
-            "view",
-            {
-              staticClass: _vm._$s(
-                5,
-                "sc",
-                "u-calendar__action u-flex u-row-center"
-              ),
-              attrs: { _i: 5 }
-            },
-            [
-              _c(
-                "view",
-                {
-                  staticClass: _vm._$s(6, "sc", "u-calendar__action__icon"),
-                  attrs: { _i: 6 }
-                },
-                [
-                  _vm._$s(7, "i", _vm.changeYear)
-                    ? _c("u-icon", {
-                        attrs: {
-                          name: "arrow-left-double",
-                          color: _vm.yearArrowColor,
-                          _i: 7
-                        },
-                        on: {
-                          click: function($event) {
-                            return _vm.changeYearHandler(0)
-                          }
-                        }
-                      })
-                    : _vm._e()
-                ],
-                1
-              ),
-              _c(
-                "view",
-                {
-                  staticClass: _vm._$s(8, "sc", "u-calendar__action__icon"),
-                  attrs: { _i: 8 }
-                },
-                [
-                  _vm._$s(9, "i", _vm.changeMonth)
-                    ? _c("u-icon", {
-                        attrs: {
-                          name: "arrow-left",
-                          color: _vm.monthArrowColor,
-                          _i: 9
-                        },
-                        on: {
-                          click: function($event) {
-                            return _vm.changeMonthHandler(0)
-                          }
-                        }
-                      })
-                    : _vm._e()
-                ],
-                1
-              ),
-              _c(
-                "view",
-                {
-                  staticClass: _vm._$s(10, "sc", "u-calendar__action__text"),
-                  attrs: { _i: 10 }
-                },
-                [_vm._v(_vm._$s(10, "t0-0", _vm._s(_vm.showTitle)))]
-              ),
-              _c(
-                "view",
-                {
-                  staticClass: _vm._$s(11, "sc", "u-calendar__action__icon"),
-                  attrs: { _i: 11 }
-                },
-                [
-                  _vm._$s(12, "i", _vm.changeMonth)
-                    ? _c("u-icon", {
-                        attrs: {
-                          name: "arrow-right",
-                          color: _vm.monthArrowColor,
-                          _i: 12
-                        },
-                        on: {
-                          click: function($event) {
-                            return _vm.changeMonthHandler(1)
-                          }
-                        }
-                      })
-                    : _vm._e()
-                ],
-                1
-              ),
-              _c(
-                "view",
-                {
-                  staticClass: _vm._$s(13, "sc", "u-calendar__action__icon"),
-                  attrs: { _i: 13 }
-                },
-                [
-                  _vm._$s(14, "i", _vm.changeYear)
-                    ? _c("u-icon", {
-                        attrs: {
-                          name: "arrow-right-double",
-                          color: _vm.yearArrowColor,
-                          _i: 14
-                        },
-                        on: {
-                          click: function($event) {
-                            return _vm.changeYearHandler(1)
-                          }
-                        }
-                      })
-                    : _vm._e()
-                ],
-                1
-              )
-            ]
-          ),
-          _c(
-            "view",
-            {
-              staticClass: _vm._$s(15, "sc", "u-calendar__week-day"),
-              attrs: { _i: 15 }
-            },
-            _vm._l(_vm._$s(16, "f", { forItems: _vm.weekDayZh }), function(
-              item,
-              index,
-              $20,
-              $30
-            ) {
-              return _c(
-                "view",
-                {
-                  key: _vm._$s(16, "f", { forIndex: $20, key: index }),
-                  staticClass: _vm._$s(
-                    "16-" + $30,
-                    "sc",
-                    "u-calendar__week-day__text"
-                  ),
-                  attrs: { _i: "16-" + $30 }
-                },
-                [_vm._v(_vm._$s("16-" + $30, "t0-0", _vm._s(item)))]
-              )
-            }),
-            0
-          ),
-          _c(
-            "view",
-            {
-              staticClass: _vm._$s(17, "sc", "u-calendar__content"),
-              attrs: { _i: 17 }
-            },
-            [
-              _vm._l(_vm._$s(18, "f", { forItems: _vm.weekdayArr }), function(
-                item,
-                index,
-                $21,
-                $31
-              ) {
-                return [
-                  _c("view", {
-                    key: _vm._$s(18, "f", {
-                      forIndex: $21,
-                      keyIndex: 0,
-                      key: index + "_0"
-                    }),
-                    staticClass: _vm._$s(
-                      "19-" + $31,
-                      "sc",
-                      "u-calendar__content__item"
-                    ),
-                    attrs: { _i: "19-" + $31 }
-                  })
-                ]
-              }),
-              _vm._l(_vm._$s(20, "f", { forItems: _vm.daysArr }), function(
-                item,
-                index,
-                $22,
-                $32
-              ) {
-                return _c(
-                  "view",
-                  {
-                    key: _vm._$s(20, "f", { forIndex: $22, key: index }),
-                    staticClass: _vm._$s(
-                      "20-" + $32,
-                      "sc",
-                      "u-calendar__content__item"
-                    ),
-                    class: _vm._$s("20-" + $32, "c", {
-                      "u-hover-class": _vm.openDisAbled(
-                        _vm.year,
-                        _vm.month,
-                        index + 1
-                      ),
-                      "u-calendar__content--start-date":
-                        (_vm.mode == "range" &&
-                          _vm.startDate ==
-                            _vm.year + "-" + _vm.month + "-" + (index + 1)) ||
-                        _vm.mode == "date",
-                      "u-calendar__content--end-date":
-                        (_vm.mode == "range" &&
-                          _vm.endDate ==
-                            _vm.year + "-" + _vm.month + "-" + (index + 1)) ||
-                        _vm.mode == "date"
-                    }),
-                    style: _vm._$s("20-" + $32, "s", {
-                      backgroundColor: _vm.getColor(index, 1)
-                    }),
-                    attrs: { _i: "20-" + $32 },
-                    on: {
-                      click: function($event) {
-                        return _vm.dateClick(index)
-                      }
-                    }
-                  },
-                  [
-                    _c(
-                      "view",
-                      {
-                        staticClass: _vm._$s(
-                          "21-" + $32,
-                          "sc",
-                          "u-calendar__content__item__inner"
-                        ),
-                        style: _vm._$s("21-" + $32, "s", {
-                          color: _vm.getColor(index, 2)
-                        }),
-                        attrs: { _i: "21-" + $32 }
-                      },
-                      [
-                        _c("view", [
-                          _vm._v(
-                            _vm._$s("22-" + $32, "t0-0", _vm._s(index + 1))
-                          )
-                        ])
-                      ]
-                    ),
-                    _vm._$s(
-                      "23-" + $32,
-                      "i",
-                      _vm.mode == "range" &&
-                        _vm.startDate ==
-                          _vm.year + "-" + _vm.month + "-" + (index + 1) &&
-                        _vm.startDate != _vm.endDate
-                    )
-                      ? _c(
-                          "view",
-                          {
-                            staticClass: _vm._$s(
-                              "23-" + $32,
-                              "sc",
-                              "u-calendar__content__item__tips"
-                            ),
-                            style: _vm._$s("23-" + $32, "s", {
-                              color: _vm.activeColor
-                            }),
-                            attrs: { _i: "23-" + $32 }
-                          },
-                          [
-                            _vm._v(
-                              _vm._$s(
-                                "23-" + $32,
-                                "t0-0",
-                                _vm._s(_vm.startText)
-                              )
-                            )
-                          ]
-                        )
-                      : _vm._e(),
-                    _vm._$s(
-                      "24-" + $32,
-                      "i",
-                      _vm.mode == "range" &&
-                        _vm.endDate ==
-                          _vm.year + "-" + _vm.month + "-" + (index + 1)
-                    )
-                      ? _c(
-                          "view",
-                          {
-                            staticClass: _vm._$s(
-                              "24-" + $32,
-                              "sc",
-                              "u-calendar__content__item__tips"
-                            ),
-                            style: _vm._$s("24-" + $32, "s", {
-                              color: _vm.activeColor
-                            }),
-                            attrs: { _i: "24-" + $32 }
-                          },
-                          [
-                            _vm._v(
-                              _vm._$s("24-" + $32, "t0-0", _vm._s(_vm.endText))
-                            )
-                          ]
-                        )
-                      : _vm._e()
-                  ]
-                )
-              }),
-              _c(
-                "view",
-                {
-                  staticClass: _vm._$s(
-                    25,
-                    "sc",
-                    "u-calendar__content__bg-month"
-                  ),
-                  attrs: { _i: 25 }
-                },
-                [_vm._v(_vm._$s(25, "t0-0", _vm._s(_vm.month)))]
-              )
-            ],
-            2
-          ),
-          _c(
-            "view",
-            {
-              staticClass: _vm._$s(26, "sc", "u-calendar__bottom"),
-              attrs: { _i: 26 }
-            },
-            [
-              _c(
-                "view",
-                {
-                  staticClass: _vm._$s(27, "sc", "u-calendar__bottom__choose"),
-                  attrs: { _i: 27 }
-                },
-                [
-                  _c("text", [
-                    _vm._v(
-                      _vm._$s(
-                        28,
-                        "t0-0",
-                        _vm._s(
-                          _vm.mode == "date" ? _vm.activeDate : _vm.startDate
-                        )
-                      )
-                    )
-                  ]),
-                  _vm._$s(29, "i", _vm.endDate)
-                    ? _c("text", [
-                        _vm._v(_vm._$s(29, "t0-0", _vm._s(_vm.endDate)))
-                      ])
-                    : _vm._e()
-                ]
-              ),
-              _c(
-                "view",
-                {
-                  staticClass: _vm._$s(30, "sc", "u-calendar__bottom__btn"),
-                  attrs: { _i: 30 }
-                },
-                [
-                  _c(
-                    "u-button",
-                    {
-                      attrs: {
-                        type: _vm.btnType,
-                        shape: "circle",
-                        size: "default",
-                        _i: 31
-                      },
-                      on: {
-                        click: function($event) {
-                          return _vm.btnFix(false)
-                        }
-                      }
-                    },
-                    [_vm._v("")]
-                  )
-                ],
-                1
-              )
-            ]
-          )
-        ]
-      )
-    ]
-  )
-}
-var recyclableRender = false
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-/* 132 */
-/*!**************************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-popup/u-popup.vue ***!
-  \**************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _u_popup_vue_vue_type_template_id_52d4ddd1_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./u-popup.vue?vue&type=template&id=52d4ddd1&scoped=true& */ 133);
-/* harmony import */ var _u_popup_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./u-popup.vue?vue&type=script&lang=js& */ 140);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _u_popup_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _u_popup_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js */ 10);
-
-var renderjs
-
-
-
-
-/* normalize component */
-
-var component = Object(_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _u_popup_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _u_popup_vue_vue_type_template_id_52d4ddd1_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _u_popup_vue_vue_type_template_id_52d4ddd1_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  "52d4ddd1",
-  null,
-  false,
-  _u_popup_vue_vue_type_template_id_52d4ddd1_scoped_true___WEBPACK_IMPORTED_MODULE_0__["components"],
-  renderjs
-)
-
-component.options.__file = "node_modules/uview-ui/components/u-popup/u-popup.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-/* 133 */
-/*!*********************************************************************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-popup/u-popup.vue?vue&type=template&id=52d4ddd1&scoped=true& ***!
-  \*********************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns, recyclableRender, components */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_popup_vue_vue_type_template_id_52d4ddd1_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--10-0!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/filter-modules-template.js!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./u-popup.vue?vue&type=template&id=52d4ddd1&scoped=true& */ 134);
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_popup_vue_vue_type_template_id_52d4ddd1_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_popup_vue_vue_type_template_id_52d4ddd1_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_popup_vue_vue_type_template_id_52d4ddd1_scoped_true___WEBPACK_IMPORTED_MODULE_0__["recyclableRender"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "components", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_popup_vue_vue_type_template_id_52d4ddd1_scoped_true___WEBPACK_IMPORTED_MODULE_0__["components"]; });
-
-
-
-/***/ }),
-/* 134 */
-/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--10-0!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/filter-modules-template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!/Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-popup/u-popup.vue?vue&type=template&id=52d4ddd1&scoped=true& ***!
-  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns, recyclableRender, components */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
-var components
-try {
-  components = {
-    uMask: __webpack_require__(/*! uview-ui/components/u-mask/u-mask.vue */ 135).default,
-    uIcon: __webpack_require__(/*! uview-ui/components/u-icon/u-icon.vue */ 22).default
-  }
-} catch (e) {
-  if (
-    e.message.indexOf("Cannot find module") !== -1 &&
-    e.message.indexOf(".vue") !== -1
-  ) {
-    console.error(e.message)
-    console.error("1. 排查组件名称拼写是否正确")
-    console.error(
-      "2. 排查组件是否符合 easycom 规范，文档：https://uniapp.dcloud.net.cn/collocation/pages?id=easycom"
-    )
-    console.error(
-      "3. 若组件不符合 easycom 规范，需手动引入，并在 components 中注册该组件"
-    )
-  } else {
-    throw e
-  }
-}
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _vm._$s(0, "i", _vm.visibleSync)
-    ? _c(
-        "view",
-        {
-          staticClass: _vm._$s(0, "sc", "u-drawer"),
-          style: _vm._$s(0, "s", [
-            _vm.customStyle,
-            {
-              zIndex: _vm.uZindex - 1
-            }
-          ]),
-          attrs: { _i: 0 }
-        },
-        [
-          _c("u-mask", {
-            attrs: {
-              duration: _vm.duration,
-              "custom-style": _vm.maskCustomStyle,
-              maskClickAble: _vm.maskCloseAble,
-              "z-index": _vm.uZindex - 2,
-              show: _vm.showDrawer && _vm.mask,
-              _i: 1
-            },
-            on: { click: _vm.maskClick }
-          }),
-          _c(
-            "view",
-            {
-              staticClass: _vm._$s(2, "sc", "u-drawer-content"),
-              class: _vm._$s(2, "c", [
-                _vm.safeAreaInsetBottom ? "safe-area-inset-bottom" : "",
-                "u-drawer-" + _vm.mode,
-                _vm.showDrawer ? "u-drawer-content-visible" : "",
-                _vm.zoom && _vm.mode == "center" ? "u-animation-zoom" : ""
-              ]),
-              style: _vm._$s(2, "s", [_vm.style]),
-              attrs: { _i: 2 },
-              on: {
-                touchmove: function($event) {
-                  $event.stopPropagation()
-                  $event.preventDefault()
-                },
-                click: [
-                  function($event) {
-                    return _vm.modeCenterClose(_vm.mode)
-                  },
-                  function($event) {
-                    $event.stopPropagation()
-                    $event.preventDefault()
-                  }
-                ]
-              }
-            },
-            [
-              _vm._$s(3, "i", _vm.mode == "center")
-                ? _c(
-                    "view",
-                    {
-                      staticClass: _vm._$s(3, "sc", "u-mode-center-box"),
-                      style: _vm._$s(3, "s", [_vm.centerStyle]),
-                      attrs: { _i: 3 },
-                      on: {
-                        touchmove: function($event) {
-                          $event.stopPropagation()
-                          $event.preventDefault()
-                        },
-                        click: function($event) {
-                          $event.stopPropagation()
-                          $event.preventDefault()
-                        }
-                      }
-                    },
-                    [
-                      _vm._$s(4, "i", _vm.closeable)
-                        ? _c("u-icon", {
-                            staticClass: _vm._$s(4, "sc", "u-close"),
-                            class: _vm._$s(4, "c", [
-                              "u-close--" + _vm.closeIconPos
-                            ]),
-                            attrs: {
-                              name: _vm.closeIcon,
-                              color: _vm.closeIconColor,
-                              size: _vm.closeIconSize,
-                              _i: 4
-                            },
-                            on: { click: _vm.close }
-                          })
-                        : _vm._e(),
-                      _c(
-                        "scroll-view",
-                        {
-                          staticClass: _vm._$s(
-                            5,
-                            "sc",
-                            "u-drawer__scroll-view"
-                          ),
-                          attrs: { _i: 5 }
-                        },
-                        [_vm._t("default", null, { _i: 6 })],
-                        2
-                      )
-                    ],
-                    1
-                  )
-                : _c(
-                    "scroll-view",
-                    {
-                      staticClass: _vm._$s(7, "sc", "u-drawer__scroll-view"),
-                      attrs: { _i: 7 }
-                    },
-                    [_vm._t("default", null, { _i: 8 })],
-                    2
-                  ),
-              _c(
-                "view",
-                {
-                  staticClass: _vm._$s(9, "sc", "u-close"),
-                  class: _vm._$s(9, "c", ["u-close--" + _vm.closeIconPos]),
-                  attrs: { _i: 9 },
-                  on: { click: _vm.close }
-                },
-                [
-                  _vm._$s(10, "i", _vm.mode != "center" && _vm.closeable)
-                    ? _c("u-icon", {
-                        attrs: {
-                          name: _vm.closeIcon,
-                          color: _vm.closeIconColor,
-                          size: _vm.closeIconSize,
-                          _i: 10
-                        }
-                      })
-                    : _vm._e()
-                ],
-                1
-              )
-            ]
-          )
-        ],
-        1
-      )
-    : _vm._e()
-}
-var recyclableRender = false
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-/* 135 */
-/*!************************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-mask/u-mask.vue ***!
-  \************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _u_mask_vue_vue_type_template_id_7775dba7_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./u-mask.vue?vue&type=template&id=7775dba7&scoped=true& */ 136);
-/* harmony import */ var _u_mask_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./u-mask.vue?vue&type=script&lang=js& */ 138);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _u_mask_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _u_mask_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js */ 10);
-
-var renderjs
-
-
-
-
-/* normalize component */
-
-var component = Object(_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _u_mask_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _u_mask_vue_vue_type_template_id_7775dba7_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _u_mask_vue_vue_type_template_id_7775dba7_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  "7775dba7",
-  null,
-  false,
-  _u_mask_vue_vue_type_template_id_7775dba7_scoped_true___WEBPACK_IMPORTED_MODULE_0__["components"],
-  renderjs
-)
-
-component.options.__file = "node_modules/uview-ui/components/u-mask/u-mask.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-/* 136 */
-/*!*******************************************************************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-mask/u-mask.vue?vue&type=template&id=7775dba7&scoped=true& ***!
-  \*******************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns, recyclableRender, components */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_mask_vue_vue_type_template_id_7775dba7_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--10-0!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/filter-modules-template.js!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./u-mask.vue?vue&type=template&id=7775dba7&scoped=true& */ 137);
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_mask_vue_vue_type_template_id_7775dba7_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_mask_vue_vue_type_template_id_7775dba7_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_mask_vue_vue_type_template_id_7775dba7_scoped_true___WEBPACK_IMPORTED_MODULE_0__["recyclableRender"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "components", function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_10_0_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_filter_modules_template_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_page_meta_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_mask_vue_vue_type_template_id_7775dba7_scoped_true___WEBPACK_IMPORTED_MODULE_0__["components"]; });
-
-
-
-/***/ }),
-/* 137 */
-/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--10-0!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/filter-modules-template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!/Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-mask/u-mask.vue?vue&type=template&id=7775dba7&scoped=true& ***!
-  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns, recyclableRender, components */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
-var components
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "view",
-    {
-      staticClass: _vm._$s(0, "sc", "u-mask"),
-      class: _vm._$s(0, "c", {
-        "u-mask-zoom": _vm.zoom,
-        "u-mask-show": _vm.show
-      }),
-      style: _vm._$s(0, "s", [_vm.maskStyle, _vm.zoomStyle]),
-      attrs: { _i: 0 },
-      on: {
-        touchmove: function($event) {
-          $event.stopPropagation()
-          $event.preventDefault()
-          return (function() {})($event)
-        },
-        click: _vm.click
-      }
-    },
-    [_vm._t("default", null, { _i: 1 })],
-    2
-  )
-}
-var recyclableRender = false
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-/* 138 */
-/*!*************************************************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-mask/u-mask.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_mask_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/babel-loader/lib!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-1!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/using-components.js!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./u-mask.vue?vue&type=script&lang=js& */ 139);
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_mask_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_mask_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_mask_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_mask_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_mask_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default.a); 
-
-/***/ }),
-/* 139 */
-/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/using-components.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!/Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-mask/u-mask.vue?vue&type=script&lang=js& ***!
-  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;} //
-//
-//
-//
-//
-//
-//
-//
-//
-
-/**
- * mask 遮罩
- * @description 创建一个遮罩层，用于强调特定的页面元素，并阻止用户对遮罩下层的内容进行操作，一般用于弹窗场景
- * @tutorial https://www.uviewui.com/components/mask.html
- * @property {Boolean} show 是否显示遮罩（默认false）
- * @property {String Number} z-index z-index 层级（默认1070）
- * @property {Object} custom-style 自定义样式对象，见上方说明
- * @property {String Number} duration 动画时长，单位毫秒（默认300）
- * @property {Boolean} zoom 是否使用scale对遮罩进行缩放（默认true）
- * @property {Boolean} mask-click-able 遮罩是否可点击，为false时点击不会发送click事件（默认true）
- * @event {Function} click mask-click-able为true时，点击遮罩发送此事件
- * @example <u-mask :show="show" @click="show = false"></u-mask>
- */var _default2 =
-{
-  name: "u-mask",
-  props: {
-    // 是否显示遮罩
-    show: {
-      type: Boolean,
-      default: false },
-
-    // 层级z-index
-    zIndex: {
-      type: [Number, String],
-      default: '' },
-
-    // 用户自定义样式
-    customStyle: {
-      type: Object,
-      default: function _default() {
-        return {};
-      } },
-
-    // 遮罩的动画样式， 是否使用使用zoom进行scale进行缩放
-    zoom: {
-      type: Boolean,
-      default: true },
-
-    // 遮罩的过渡时间，单位为ms
-    duration: {
-      type: [Number, String],
-      default: 300 },
-
-    // 是否可以通过点击遮罩进行关闭
-    maskClickAble: {
-      type: Boolean,
-      default: true } },
-
-
-  data: function data() {
-    return {
-      zoomStyle: {
-        transform: '' },
-
-      scale: 'scale(1.2, 1.2)' };
-
-  },
-  watch: {
-    show: function show(n) {
-      if (n && this.zoom) {
-        // 当展示遮罩的时候，设置scale为1，达到缩小(原来为1.2)的效果
-        this.zoomStyle.transform = 'scale(1, 1)';
-      } else if (!n && this.zoom) {
-        // 当隐藏遮罩的时候，设置scale为1.2，达到放大(因为显示遮罩时已重置为1)的效果
-        this.zoomStyle.transform = this.scale;
-      }
-    } },
-
-  computed: {
-    maskStyle: function maskStyle() {
-      var style = {};
-      style.backgroundColor = "rgba(0, 0, 0, 0.6)";
-      if (this.show) style.zIndex = this.zIndex ? this.zIndex : this.$u.zIndex.mask;else
-      style.zIndex = -1;
-      style.transition = "all ".concat(this.duration / 1000, "s ease-in-out");
-      // 判断用户传递的对象是否为空，不为空就进行合并
-      if (Object.keys(this.customStyle).length) style = _objectSpread(_objectSpread({},
-      style),
-      this.customStyle);
-
-      return style;
-    } },
-
-  methods: {
-    click: function click() {
-      if (!this.maskClickAble) return;
-      this.$emit('click');
-    } } };exports.default = _default2;
-
-/***/ }),
-/* 140 */
-/*!***************************************************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-popup/u-popup.vue?vue&type=script&lang=js& ***!
-  \***************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_popup_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/babel-loader/lib!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-1!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/using-components.js!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./u-popup.vue?vue&type=script&lang=js& */ 141);
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_popup_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_popup_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_popup_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_popup_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_popup_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default.a); 
-
-/***/ }),
-/* 141 */
-/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/using-components.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!/Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-popup/u-popup.vue?vue&type=script&lang=js& ***!
-  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/**
- * popup 弹窗
- * @description 弹出层容器，用于展示弹窗、信息提示等内容，支持上、下、左、右和中部弹出。组件只提供容器，内部内容由用户自定义
- * @tutorial https://www.uviewui.com/components/popup.html
- * @property {String} mode 弹出方向（默认left）
- * @property {Boolean} mask 是否显示遮罩（默认true）
- * @property {Stringr | Number} length mode=left | 见官网说明（默认auto）
- * @property {Boolean} zoom 是否开启缩放动画，只在mode为center时有效（默认true）
- * @property {Boolean} safe-area-inset-bottom 是否开启底部安全区适配（默认false）
- * @property {Boolean} mask-close-able 点击遮罩是否可以关闭弹出层（默认true）
- * @property {Object} custom-style 用户自定义样式
- * @property {Stringr | Number} negative-top 中部弹出时，往上偏移的值
- * @property {Numberr | String} border-radius 弹窗圆角值（默认0）
- * @property {Numberr | String} z-index 弹出内容的z-index值（默认1075）
- * @property {Boolean} closeable 是否显示关闭图标（默认false）
- * @property {String} close-icon 关闭图标的名称，只能uView的内置图标
- * @property {String} close-icon-pos 自定义关闭图标位置（默认top-right）
- * @property {String} close-icon-color 关闭图标的颜色（默认#909399）
- * @property {Number | String} close-icon-size 关闭图标的大小，单位rpx（默认30）
- * @event {Function} open 弹出层打开
- * @event {Function} close 弹出层收起
- * @example <u-popup v-model="show"><view>出淤泥而不染，濯清涟而不妖</view></u-popup>
- */var _default2 =
-{
-  name: 'u-popup',
-  props: {
-    /**
-            * 显示状态
-            */
-    show: {
-      type: Boolean,
-      default: false },
-
-    /**
-                         * 弹出方向，left|right|top|bottom|center
-                         */
-    mode: {
-      type: String,
-      default: 'left' },
-
-    /**
-                          * 是否显示遮罩
-                          */
-    mask: {
-      type: Boolean,
-      default: true },
-
-    // 抽屉的宽度(mode=left|right)，或者高度(mode=top|bottom)，单位rpx，或者"auto"
-    // 或者百分比"50%"，表示由内容撑开高度或者宽度
-    length: {
-      type: [Number, String],
-      default: 'auto' },
-
-    // 是否开启缩放动画，只在mode=center时有效
-    zoom: {
-      type: Boolean,
-      default: true },
-
-    // 是否开启底部安全区适配，开启的话，会在iPhoneX机型底部添加一定的内边距
-    safeAreaInsetBottom: {
-      type: Boolean,
-      default: false },
-
-    // 是否可以通过点击遮罩进行关闭
-    maskCloseAble: {
-      type: Boolean,
-      default: true },
-
-    // 用户自定义样式
-    customStyle: {
-      type: Object,
-      default: function _default() {
-        return {};
-      } },
-
-    value: {
-      type: Boolean,
-      default: false },
-
-    // 此为内部参数，不在文档对外使用，为了解决Picker和keyboard等融合了弹窗的组件
-    // 对v-model双向绑定多层调用造成报错不能修改props值的问题
-    popup: {
-      type: Boolean,
-      default: true },
-
-    // 显示显示弹窗的圆角，单位rpx
-    borderRadius: {
-      type: [Number, String],
-      default: 0 },
-
-    zIndex: {
-      type: [Number, String],
-      default: '' },
-
-    // 是否显示关闭图标
-    closeable: {
-      type: Boolean,
-      default: false },
-
-    // 关闭图标的名称，只能uView的内置图标
-    closeIcon: {
-      type: String,
-      default: 'close' },
-
-    // 自定义关闭图标位置，top-left为左上角，top-right为右上角，bottom-left为左下角，bottom-right为右下角
-    closeIconPos: {
-      type: String,
-      default: 'top-right' },
-
-    // 关闭图标的颜色
-    closeIconColor: {
-      type: String,
-      default: '#909399' },
-
-    // 关闭图标的大小，单位rpx
-    closeIconSize: {
-      type: [String, Number],
-      default: '30' },
-
-    // 宽度，只对左，右，中部弹出时起作用，单位rpx，或者"auto"
-    // 或者百分比"50%"，表示由内容撑开高度或者宽度，优先级高于length参数
-    width: {
-      type: String,
-      default: '' },
-
-    // 高度，只对上，下，中部弹出时起作用，单位rpx，或者"auto"
-    // 或者百分比"50%"，表示由内容撑开高度或者宽度，优先级高于length参数
-    height: {
-      type: String,
-      default: '' },
-
-    // 给一个负的margin-top，往上偏移，避免和键盘重合的情况，仅在mode=center时有效
-    negativeTop: {
-      type: [String, Number],
-      default: 0 },
-
-    // 遮罩的样式，一般用于修改遮罩的透明度
-    maskCustomStyle: {
-      type: Object,
-      default: function _default() {
-        return {};
-      } },
-
-    // 遮罩打开或收起的动画过渡时间，单位ms
-    duration: {
-      type: [String, Number],
-      default: 250 } },
-
-
-  data: function data() {
-    return {
-      visibleSync: false,
-      showDrawer: false,
-      timer: null,
-      closeFromInner: false // value的值改变，是发生在内部还是外部
-    };
-  },
-  computed: {
-    // 根据mode的位置，设定其弹窗的宽度(mode = left|right)，或者高度(mode = top|bottom)
-    style: function style() {
-      var style = {};
-      // 如果是左边或者上边弹出时，需要给translate设置为负值，用于隐藏
-      if (this.mode == 'left' || this.mode == 'right') {
-        style = {
-          width: this.width ? this.getUnitValue(this.width) : this.getUnitValue(this.length),
-          height: '100%',
-          transform: "translate3D(".concat(this.mode == 'left' ? '-100%' : '100%', ",0px,0px)") };
-
-      } else if (this.mode == 'top' || this.mode == 'bottom') {
-        style = {
-          width: '100%',
-          height: this.height ? this.getUnitValue(this.height) : this.getUnitValue(this.length),
-          transform: "translate3D(0px,".concat(this.mode == 'top' ? '-100%' : '100%', ",0px)") };
-
-      }
-      style.zIndex = this.uZindex;
-      // 如果用户设置了borderRadius值，添加弹窗的圆角
-      if (this.borderRadius) {
-        switch (this.mode) {
-          case 'left':
-            style.borderRadius = "0 ".concat(this.borderRadius, "rpx ").concat(this.borderRadius, "rpx 0");
-            break;
-          case 'top':
-            style.borderRadius = "0 0 ".concat(this.borderRadius, "rpx ").concat(this.borderRadius, "rpx");
-            break;
-          case 'right':
-            style.borderRadius = "".concat(this.borderRadius, "rpx 0 0 ").concat(this.borderRadius, "rpx");
-            break;
-          case 'bottom':
-            style.borderRadius = "".concat(this.borderRadius, "rpx ").concat(this.borderRadius, "rpx 0 0");
-            break;
-          default:}
-
-        // 不加可能圆角无效
-        style.overflow = 'hidden';
-      }
-      if (this.duration) style.transition = "all ".concat(this.duration / 1000, "s linear");
-      return style;
-    },
-    // 中部弹窗的特有样式
-    centerStyle: function centerStyle() {
-      var style = {};
-      style.width = this.width ? this.getUnitValue(this.width) : this.getUnitValue(this.length);
-      // 中部弹出的模式，如果没有设置高度，就用auto值，由内容撑开高度
-      style.height = this.height ? this.getUnitValue(this.height) : 'auto';
-      style.zIndex = this.uZindex;
-      style.marginTop = "-".concat(this.$u.addUnit(this.negativeTop));
-      if (this.borderRadius) {
-        style.borderRadius = "".concat(this.borderRadius, "rpx");
-        // 不加可能圆角无效
-        style.overflow = 'hidden';
-      }
-      return style;
-    },
-    // 计算整理后的z-index值
-    uZindex: function uZindex() {
-      return this.zIndex ? this.zIndex : this.$u.zIndex.popup;
-    } },
-
-  watch: {
-    value: function value(val) {
-      if (val) {
-        this.open();
-      } else if (!this.closeFromInner) {
-        this.close();
-      }
-      this.closeFromInner = false;
-    } },
-
-  mounted: function mounted() {
-    // 组件渲染完成时，检查value是否为true，如果是，弹出popup
-    this.value && this.open();
-  },
-  methods: {
-    // 判断传入的值，是否带有单位，如果没有，就默认用rpx单位
-    getUnitValue: function getUnitValue(val) {
-      if (/(%|px|rpx|auto)$/.test(val)) return val;else
-      return val + 'rpx';
-    },
-    // 遮罩被点击
-    maskClick: function maskClick() {
-      this.close();
-    },
-    close: function close() {
-      // 标记关闭是内部发生的，否则修改了value值，导致watch中对value检测，导致再执行一遍close
-      // 造成@close事件触发两次
-      this.closeFromInner = true;
-      this.change('showDrawer', 'visibleSync', false);
-    },
-    // 中部弹出时，需要.u-drawer-content将居中内容，此元素会铺满屏幕，点击需要关闭弹窗
-    // 让其只在mode=center时起作用
-    modeCenterClose: function modeCenterClose(mode) {
-      if (mode != 'center' || !this.maskCloseAble) return;
-      this.close();
-    },
-    open: function open() {
-      this.change('visibleSync', 'showDrawer', true);
-    },
-    // 此处的原理是，关闭时先通过动画隐藏弹窗和遮罩，再移除整个组件
-    // 打开时，先渲染组件，延时一定时间再让遮罩和弹窗的动画起作用
-    change: function change(param1, param2, status) {var _this = this;
-      // 如果this.popup为false，意味着为picker，actionsheet等组件调用了popup组件
-      if (this.popup == true) {
-        this.$emit('input', status);
-      }
-      this[param1] = status;
-      if (status) {
-
-
-
-
-
-
-
-        this.$nextTick(function () {
-          _this[param2] = status;
-          _this.$emit(status ? 'open' : 'close');
-        });
-
-      } else {
-        this.timer = setTimeout(function () {
-          _this[param2] = status;
-          _this.$emit(status ? 'open' : 'close');
-        }, this.duration);
-      }
-    } } };exports.default = _default2;
-
-/***/ }),
-/* 142 */
-/*!*********************************************************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-calendar/u-calendar.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_calendar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/babel-loader/lib!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-1!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/using-components.js!../../../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./u-calendar.vue?vue&type=script&lang=js& */ 143);
-/* harmony import */ var _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_calendar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_calendar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_calendar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_calendar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_1_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_app_loader_using_components_js_Applications_HBuilderX_app_Contents_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_index_js_vue_loader_options_u_calendar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default.a); 
-
-/***/ }),
-/* 143 */
-/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/using-components.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!/Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/components/u-calendar/u-calendar.vue?vue&type=script&lang=js& ***!
-  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/**
- * calendar 日历
- * @description 此组件用于单个选择日期，范围选择日期等，日历被包裹在底部弹起的容器中。
- * @tutorial http://uviewui.com/components/calendar.html
- * @property {String} mode 选择日期的模式，date-为单个日期，range-为选择日期范围
- * @property {Boolean} v-model 布尔值变量，用于控制日历的弹出与收起
- * @property {Boolean} safe-area-inset-bottom 是否开启底部安全区适配(默认false)
- * @property {Boolean} change-year 是否显示顶部的切换年份方向的按钮(默认true)
- * @property {Boolean} change-month 是否显示顶部的切换月份方向的按钮(默认true)
- * @property {String Number} max-year 可切换的最大年份(默认2050)
- * @property {String Number} min-year 可切换的最小年份(默认1950)
- * @property {String Number} min-date 最小可选日期(默认1950-01-01)
- * @property {String Number} max-date 最大可选日期(默认当前日期)
- * @property {String Number} 弹窗顶部左右两边的圆角值，单位rpx(默认20)
- * @property {Boolean} mask-close-able 是否允许通过点击遮罩关闭日历(默认true)
- * @property {String} month-arrow-color 月份切换按钮箭头颜色(默认#606266)
- * @property {String} year-arrow-color 年份切换按钮箭头颜色(默认#909399)
- * @property {String} color 日期字体的默认颜色(默认#303133)
- * @property {String} active-bg-color 起始/结束日期按钮的背景色(默认#2979ff)
- * @property {String Number} z-index 弹出时的z-index值(默认10075)
- * @property {String} active-color 起始/结束日期按钮的字体颜色(默认#ffffff)
- * @property {String} range-bg-color 起始/结束日期之间的区域的背景颜色(默认rgba(41,121,255,0.13))
- * @property {String} range-color 选择范围内字体颜色(默认#2979ff)
- * @property {String} start-text 起始日期底部的提示文字(默认 '开始')
- * @property {String} end-text 结束日期底部的提示文字(默认 '结束')
- * @property {String} btn-type 底部确定按钮的主题(默认 'primary')
- * @property {String} toolTip 顶部提示文字，如设置名为tooltip的slot，此参数将失效(默认 '选择日期')
- * @property {Boolean} closeable 是否显示右上角的关闭图标(默认true)
- * @example <u-calendar v-model="show" :mode="mode"></u-calendar>
- */var _default =
-
-{
-  name: 'u-calendar',
-  props: {
-    safeAreaInsetBottom: {
-      type: Boolean,
-      default: false },
-
-    // 是否允许通过点击遮罩关闭Picker
-    maskCloseAble: {
-      type: Boolean,
-      default: true },
-
-    // 通过双向绑定控制组件的弹出与收起
-    value: {
-      type: Boolean,
-      default: false },
-
-    // 弹出的z-index值
-    zIndex: {
-      type: [String, Number],
-      default: 0 },
-
-    // 是否允许切换年份
-    changeYear: {
-      type: Boolean,
-      default: true },
-
-    // 是否允许切换月份
-    changeMonth: {
-      type: Boolean,
-      default: true },
-
-    // date-单个日期选择，range-开始日期+结束日期选择
-    mode: {
-      type: String,
-      default: 'date' },
-
-    // 可切换的最大年份
-    maxYear: {
-      type: [Number, String],
-      default: 2050 },
-
-    // 可切换的最小年份
-    minYear: {
-      type: [Number, String],
-      default: 1950 },
-
-    // 最小可选日期(不在范围内日期禁用不可选)
-    minDate: {
-      type: [Number, String],
-      default: '1950-01-01' },
-
-    /**
-                                * 最大可选日期
-                                * 默认最大值为今天，之后的日期不可选
-                                * 2030-12-31
-                                * */
-    maxDate: {
-      type: [Number, String],
-      default: '' },
-
-    // 弹窗顶部左右两边的圆角值
-    borderRadius: {
-      type: [String, Number],
-      default: 20 },
-
-    // 月份切换按钮箭头颜色
-    monthArrowColor: {
-      type: String,
-      default: '#606266' },
-
-    // 年份切换按钮箭头颜色
-    yearArrowColor: {
-      type: String,
-      default: '#909399' },
-
-    // 默认日期字体颜色
-    color: {
-      type: String,
-      default: '#303133' },
-
-    // 选中|起始结束日期背景色
-    activeBgColor: {
-      type: String,
-      default: '#B0C07A' },
-
-    // 选中|起始结束日期字体颜色
-    activeColor: {
-      type: String,
-      default: '#ffffff' },
-
-    // 范围内日期背景色
-    rangeBgColor: {
-      type: String,
-      default: 'rgba(41,121,255,0.13)' },
-
-    // 范围内日期字体颜色
-    rangeColor: {
-      type: String,
-      default: '#B0C07A' },
-
-    // mode=range时生效，起始日期自定义文案
-    startText: {
-      type: String,
-      default: '开始' },
-
-    // mode=range时生效，结束日期自定义文案
-    endText: {
-      type: String,
-      default: '结束' },
-
-    //按钮样式类型
-    btnType: {
-      type: String,
-      default: 'primary' },
-
-    // 当前选中日期带选中效果
-    isActiveCurrent: {
-      type: Boolean,
-      default: true },
-
-    // 切换年月是否触发事件 mode=date时生效
-    isChange: {
-      type: Boolean,
-      default: false },
-
-    // 是否显示右上角的关闭图标
-    closeable: {
-      type: Boolean,
-      default: true },
-
-    // 顶部的提示文字
-    toolTip: {
-      type: String,
-      default: 'Choose Expired Date' } },
-
-
-  data: function data() {
-    return {
-      // 星期几,值为1-7
-      weekday: 1,
-      weekdayArr: [],
-      // 当前月有多少天
-      days: 0,
-      daysArr: [],
-      showTitle: '',
-      year: 2020,
-      month: 0,
-      day: 0,
-      startYear: 0,
-      startMonth: 0,
-      startDay: 0,
-      endYear: 0,
-      endMonth: 0,
-      endDay: 0,
-      today: '',
-      activeDate: '',
-      startDate: '',
-      endDate: '',
-      isStart: true,
-      min: null,
-      max: null,
-      weekDayZh: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'] };
-
-  },
-  computed: {
-    dataChange: function dataChange() {
-      return "".concat(this.mode, "-").concat(this.minDate, "-").concat(this.maxDate);
-    },
-    uZIndex: function uZIndex() {
-      // 如果用户有传递z-index值，优先使用
-      return this.zIndex ? this.zIndex : this.$u.zIndex.popup;
-    } },
-
-  watch: {
-    dataChange: function dataChange(val) {
-      this.init();
-    } },
-
-  created: function created() {
-    this.init();
-  },
-  methods: {
-    getColor: function getColor(index, type) {
-      var color = type == 1 ? '' : this.color;
-      var day = index + 1;
-      var date = "".concat(this.year, "-").concat(this.month, "-").concat(day);
-      var timestamp = new Date(date.replace(/\-/g, '/')).getTime();
-      var start = this.startDate.replace(/\-/g, '/');
-      var end = this.endDate.replace(/\-/g, '/');
-      if (this.isActiveCurrent && this.activeDate == date || this.startDate == date || this.endDate == date) {
-        color = type == 1 ? this.activeBgColor : this.activeColor;
-      } else if (this.endDate && timestamp > new Date(start).getTime() && timestamp < new Date(end).getTime()) {
-        color = type == 1 ? this.rangeBgColor : this.rangeColor;
-      }
-      return color;
-    },
-    init: function init() {
-      var now = new Date();
-      this.year = now.getFullYear();
-      this.month = now.getMonth() + 1;
-      this.day = now.getDate();
-      this.today = "".concat(now.getFullYear(), "-").concat(now.getMonth() + 1, "-").concat(now.getDate());
-      this.activeDate = this.today;
-      this.min = this.initDate(this.minDate);
-      this.max = this.initDate(this.maxDate || this.today);
-      this.startDate = "";
-      this.startYear = 0;
-      this.startMonth = 0;
-      this.startDay = 0;
-      this.endYear = 0;
-      this.endMonth = 0;
-      this.endDay = 0;
-      this.endDate = "";
-      this.isStart = true;
-      this.changeData();
-    },
-    //日期处理
-    initDate: function initDate(date) {
-      var fdate = date.split('-');
-      return {
-        year: Number(fdate[0] || 1920),
-        month: Number(fdate[1] || 1),
-        day: Number(fdate[2] || 1) };
-
-    },
-    openDisAbled: function openDisAbled(year, month, day) {
-      var bool = true;
-      var date = "".concat(year, "/").concat(month, "/").concat(day);
-      // let today = this.today.replace(/\-/g, '/');
-      var min = "".concat(this.min.year, "/").concat(this.min.month, "/").concat(this.min.day);
-      var max = "".concat(this.max.year, "/").concat(this.max.month, "/").concat(this.max.day);
-      var timestamp = new Date(date).getTime();
-      if (timestamp >= new Date(min).getTime() && timestamp <= new Date(max).getTime()) {
-        bool = false;
-      }
-      return bool;
-    },
-    generateArray: function generateArray(start, end) {
-      return Array.from(new Array(end + 1).keys()).slice(start);
-    },
-    formatNum: function formatNum(num) {
-      return num < 10 ? '0' + num : num + '';
-    },
-    //一个月有多少天
-    getMonthDay: function getMonthDay(year, month) {
-      var days = new Date(year, month, 0).getDate();
-      return days;
-    },
-    getWeekday: function getWeekday(year, month) {
-      var date = new Date("".concat(year, "/").concat(month, "/01 00:00:00"));
-      return date.getDay();
-    },
-    checkRange: function checkRange(year) {
-      var overstep = false;
-      if (year < this.minYear || year > this.maxYear) {
-        uni.showToast({
-          title: "日期超出范围啦~",
-          icon: 'none' });
-
-        overstep = true;
-      }
-      return overstep;
-    },
-    changeMonthHandler: function changeMonthHandler(isAdd) {
-      if (isAdd) {
-        var month = this.month + 1;
-        var year = month > 12 ? this.year + 1 : this.year;
-        if (!this.checkRange(year)) {
-          this.month = month > 12 ? 1 : month;
-          this.year = year;
-          this.changeData();
-        }
-
-      } else {
-        var _month = this.month - 1;
-        var _year = _month < 1 ? this.year - 1 : this.year;
-        if (!this.checkRange(_year)) {
-          this.month = _month < 1 ? 12 : _month;
-          this.year = _year;
-          this.changeData();
-        }
-      }
-    },
-    changeYearHandler: function changeYearHandler(isAdd) {
-      var year = isAdd ? this.year + 1 : this.year - 1;
-      if (!this.checkRange(year)) {
-        this.year = year;
-        this.changeData();
-      }
-    },
-    changeData: function changeData() {
-      this.days = this.getMonthDay(this.year, this.month);
-      this.daysArr = this.generateArray(1, this.days);
-      this.weekday = this.getWeekday(this.year, this.month);
-      this.weekdayArr = this.generateArray(1, this.weekday);
-      this.showTitle = "".concat(this.year, "-").concat(this.month);
-      if (this.isChange && this.mode == 'date') {
-        this.btnFix(true);
-      }
-    },
-    dateClick: function dateClick(day) {
-      day += 1;
-      if (!this.openDisAbled(this.year, this.month, day)) {
-        this.day = day;
-        var date = "".concat(this.year, "-").concat(this.month, "-").concat(day);
-        if (this.mode == 'date') {
-          this.activeDate = date;
-        } else {
-          var compare = new Date(date.replace(/\-/g, '/')).getTime() < new Date(this.startDate.replace(/\-/g, '/')).getTime();
-          if (this.isStart || compare) {
-            this.startDate = date;
-            this.startYear = this.year;
-            this.startMonth = this.month;
-            this.startDay = this.day;
-            this.endYear = 0;
-            this.endMonth = 0;
-            this.endDay = 0;
-            this.endDate = "";
-            this.activeDate = "";
-            this.isStart = false;
-          } else {
-            this.endDate = date;
-            this.endYear = this.year;
-            this.endMonth = this.month;
-            this.endDay = this.day;
-            this.isStart = true;
-          }
-        }
-      }
-    },
-    close: function close() {
-      // 修改通过v-model绑定的父组件变量的值为false，从而隐藏日历弹窗
-      this.$emit('input', false);
-    },
-    getWeekText: function getWeekText(date) {
-      date = new Date("".concat(date.replace(/\-/g, '/'), " 00:00:00"));
-      var week = date.getDay();
-      return ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'][week];
-    },
-    btnFix: function btnFix(show) {
-      if (!show) {
-        this.close();
-      }
-      if (this.mode == 'date') {
-        var arr = this.activeDate.split('-');
-        var year = this.isChange ? this.year : Number(arr[0]);
-        var month = this.isChange ? this.month : Number(arr[1]);
-        var day = this.isChange ? this.day : Number(arr[2]);
-        //当前月有多少天
-        var days = this.getMonthDay(year, month);
-        var result = "".concat(year, "-").concat(this.formatNum(month), "-").concat(this.formatNum(day));
-        var weekText = this.getWeekText(result);
-        var isToday = false;
-        if ("".concat(year, "-").concat(month, "-").concat(day) == this.today) {
-          //今天
-          isToday = true;
-        }
-        this.$emit('change', {
-          year: year,
-          month: month,
-          day: day,
-          days: days,
-          result: result,
-          week: weekText,
-          isToday: isToday
-          // switch: show //是否是切换年月操作
-        });
-      } else {
-        if (!this.startDate || !this.endDate) return;
-        var startMonth = this.formatNum(this.startMonth);
-        var startDay = this.formatNum(this.startDay);
-        var startDate = "".concat(this.startYear, "-").concat(startMonth, "-").concat(startDay);
-        var startWeek = this.getWeekText(startDate);
-
-        var endMonth = this.formatNum(this.endMonth);
-        var endDay = this.formatNum(this.endDay);
-        var endDate = "".concat(this.endYear, "-").concat(endMonth, "-").concat(endDay);
-        var endWeek = this.getWeekText(endDate);
-        this.$emit('change', {
-          startYear: this.startYear,
-          startMonth: this.startMonth,
-          startDay: this.startDay,
-          startDate: startDate,
-          startWeek: startWeek,
-          endYear: this.endYear,
-          endMonth: this.endMonth,
-          endDay: this.endDay,
-          endDate: endDate,
-          endWeek: endWeek });
-
-      }
-    } } };exports.default = _default;
-
-/***/ }),
+/* 130 */,
+/* 131 */,
+/* 132 */,
+/* 133 */,
+/* 134 */,
+/* 135 */,
+/* 136 */,
+/* 137 */,
+/* 138 */,
+/* 139 */,
+/* 140 */,
+/* 141 */,
+/* 142 */,
+/* 143 */,
 /* 144 */
 /*!*************************************************************************************************!*\
   !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/static/cart.png ***!
@@ -12581,10 +7019,9 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _App
   !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/using-components.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!/Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/pages/grocery/grocery.vue?vue&type=script&lang=js&mpType=page ***!
   \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-eval("/* WEBPACK VAR INJECTION */(function(__f__) {Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nvar _hxNavbar = _interopRequireDefault(__webpack_require__(/*! @/components/hx-navbar/hx-navbar */ 105));\nvar _xflSelect = _interopRequireDefault(__webpack_require__(/*! ../../components/xfl-select/xfl-select.vue */ 123));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} //\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\nvar _default = { components: { hxNavbar: _hxNavbar.default }, data: function data() {return { tabbar: this.$store.state.tabbar, filepath: '', iisSelect: true, iTime: '', iTimeInAussieFormat: '', itemEditor: false, cshow: false, chNum: false, issSelect: false, popFrom: 'bottom', packs: 0, round: 20, needChangeItem: '', addItemToList: true, needAddItem: false, iDetails: '', iCitime: '', iName: '', iItemid: '', status: 'instock', iCategory: '', refreshiCategory: true, shopList: [], oldstockList: [], stockList: [], add_src: '', editItem: null, icode: '', config1: { title: 'Grocery', color: 'black', backgroundColor: '#B0C07A', back: false, statusBarBackground: '#B0C07A', rightButton: [{ key: 'scan', icon: '&#xe62c;', position: 'left' }], leftButton: [{ key: 'add', icon: '&#xe603;', position: 'left' }] }, config2: { title: 'Add product', color: 'black', back: false, backgroundColor: '#B0C07A', statusBarBackground: '#B0C07A', leftButton: [{ key: 'back', icon: '&#xe679;', position: 'left' }], rightButton: [{ key: 'scan', icon: '&#xe62c;', position: 'left' }] }, options: ['Eggs', 'Fruit', 'Vegetable', 'Dairy', 'Animal product', 'Frozen', 'Canned Goods', 'Frozen Foods', 'Deli', 'Others'], sortingMethod: ['Recent Added', 'A-z', 'Expire Soon'], chooseTags: ['Expired', 'Consumed', 'All'], value: '' };}, onLoad: function onLoad() {// console.log(uni.getStorageSync('userId'))\n    this.getCol(); // setInterval(() => {\n    // \tthis.getCol()\n    // },1000)\n  }, onShow: function onShow() {this.getCol();}, methods: { get_src: function get_src() {return this.add_src;}, change: function change(data) {__f__(\"log\", data.index, \" at pages/grocery/grocery.vue:511\");__f__(\"log\", data.value, \" at pages/grocery/grocery.vue:512\");}, getCategory: function getCategory(category) {this.iCategory = category.newVal;this.$forceUpdate();}, save: function save() {var _this = this;var date = new Date();var nowMonth = date.getMonth() + 1;var strDate = date.getDate();var seperator = \"-\";if (nowMonth >= 1 && nowMonth <= 9) {nowMonth = \"0\" + nowMonth;}if (strDate >= 0 && strDate <= 9) {strDate = \"0\" + strDate;} // var nowDate = date.getFullYear() + seperator + nowMonth + seperator + strDate;\n      // convert remind time to correct form\n      var expDate = new Date(this.iTime);var remindTime = expDate.getDate() - this.iCitime;var lsRemindTime = new Date(expDate.setDate(remindTime)).toLocaleDateString().split(\"/\"); // console.log(remindTime);\n      // console.log(lsRemindTime);\n      //China Timezone needed\n      // if(lsRemindTime[2].length === 1){\n      //     lsRemindTime[2] = \"0\" + lsRemindTime[2]\n      // }\n      //Australian Timezone needed\n      // console.log(new Date())\n      if (lsRemindTime[1].length === 1) {lsRemindTime[1] = \"0\" + lsRemindTime[1];}var remindTime = lsRemindTime[0] + \"-\" + lsRemindTime[1] + \"-\" + lsRemindTime[2]; // console.log(remindTime);\n      // console.log(lsRemindTime);\n      this.tab(this.iTime, date);var item = { \"addDate\": new Date(), \"addMethod\": \"manual\", \"category\": this.iCategory, \"conDate\": 0, \"detail\": this.iDetails, \"expDate\": this.iTime, // \"itemId\": 0,\n        \"name\": this.iName, \"remindTime\": remindTime, \"status\": this.status, \"otherDetail\": this.iDetails, \"uid\": uni.getStorageSync('userId'), \"isConsumed\": 0 };__f__(\"log\", JSON.stringify(item), \" at pages/grocery/grocery.vue:574\");var that = this;uni.request({ method: 'POST', url: 'http://101.35.91.117:7884/item/insert', data: JSON.stringify(item) }).then(function (res) {__f__(\"log\", that.filepath[0], \" at pages/grocery/grocery.vue:581\");__f__(\"log\", res[1].data, \" at pages/grocery/grocery.vue:582\");uni.uploadFile({ url: 'http://101.35.91.117:7884/item/update/picture', filePath: that.filepath[0], name: 'picture', formData: { item_id: res[1].data // file: tempFilePath   \n          }, success: function success(uploadFileRes) {__f__(\"log\", uploadFileRes, \" at pages/grocery/grocery.vue:592\");}, fail: function fail(err) {__f__(\"log\", err, \" at pages/grocery/grocery.vue:595\");} });});this.needAddItem = false;this.addItemToList = true;setTimeout(function () {_this.getCol();}, 1000);}, getCol: function getCol() {var _this2 = this; // if (uni.getStorageSync('userId')){\n      // }\n      uni.request({ url: 'http://101.35.91.117:7884/item/user/' + uni.getStorageSync('userId') }).then(function (res) {__f__(\"log\", 'res[1].data is: ', res[1].data, \" at pages/grocery/grocery.vue:619\");_this2.getList();_this2.updateItemList(res[1].data);});}, getList: function getList() {var _this3 = this;uni.request({ url: \"http://101.35.91.117:7884/potential/\" + uni.getStorageSync('userId'), method: 'get' }).then(function (res) {// console.log('load',res[1].data)\n        _this3.shopList = res[1].data;});}, // 计算两个date相差多少天\n    dateMinus: function dateMinus(dateStart, dateEnd) {var sdate = new Date(dateStart);var now = new Date(dateEnd);var days = now.getTime() - sdate.getTime();var day = Math.floor(days / (1000 * 60 * 60 * 24));return day;}, updateItemList: function updateItemList(itemList) {var stockList = [];var oldstockList = [];var todayDate = new Date(Date.now());for (var i = 0; i < itemList.length; i++) {var item = itemList[i];var exp = new Date(item.expDate.substr(0, 10)); // console.log('exp is: ', exp)\n        // console.log('与今天差的天数：', this.dateMinus(todayDate, exp))\n        var expireDays = this.dateMinus(todayDate, exp);var remind = new Date(item.remindTime.substr(0, 10)); // this.getImgById(item.itemId)\n        var temp = item.picture; // console.log(\"img\", item.picture)\n        if (temp == null) {temp = \"../../static/stock-icon.png\";}var itemInfo = { \"addDate\": item.addDate, \"addMethod\": item.addMethod, \"category\": item.category, \"conDate\": item.conDate.substr(0, 10), \"detail\": item.detail, \"expDate\": item.expDate.substr(0, 10), \"itemId\": item.itemId, \"img\": temp, \"name\": item.name, \"remindTime\": item.remindTime, \"status\": item.status, \"time\": this.DateDiff(remind, exp), \"potential\": item.potential, \"uid\": uni.getStorageSync('userId'), \"expireDays\": expireDays };if (itemList[i].status === 'instock') {stockList.push(itemInfo);} else {oldstockList.push(itemInfo);}} // console.log(stockList)\n      // console.log(this.oldstockList)\n      this.stockList = stockList;this.oldstockList = oldstockList; // console.log(this.stockList)\n    }, consumeItem: function consumeItem(item) {var _this4 = this;var itemUpdated = { \"addDate\": item.addDate, \"addMethod\": item.addMethod, \"category\": item.category, \"conDate\": new Date(), \"detail\": item.detail, \"expDate\": item.expDate, \"itemId\": item.itemId, \"name\": item.name, \"remindTime\": item.remindTime, \"status\": \"consume\", \"uid\": uni.getStorageSync('userId') };uni.request({ method: 'POST', url: 'http://101.35.91.117:7884/item/update', data: JSON.stringify(itemUpdated) }).then(function (res) {__f__(\"log\", res, \" at pages/grocery/grocery.vue:712\");_this4.getCol();});}, changeTime: function changeTime(e) {this.iTime = e.result;var array = this.iTime.split('-');this.iTimeInAussieFormat = array[2] + \"-\" + array[1] + \"-\" + array[0];__f__(\"log\", this.iTimeInAussieFormat, \" at pages/grocery/grocery.vue:721\");__f__(\"log\", this.iTime, \" at pages/grocery/grocery.vue:722\");}, openTime: function openTime() {this.cshow = true;}, changeTab: function changeTab(e) {if (e === 'is') {this.issSelect = false;this.iisSelect = true;} else if (e === 'hs') {this.iisSelect = false;this.issSelect = true;}}, changeAmount: function changeAmount(e) {this.packs = parseInt(this.stockList[e].packs);this.chNum = true;this.needChangeItem = e;}, consume: function consume(e) {var _this5 = this;var changedItem = this.stockList[this.needChangeItem];var lsConsumeTime = new Date().toLocaleDateString().split(\"/\"); //China Timezone needed\n      // if(lsConsumeTime[2].length === 1){\n      //     lsConsumeTime[2] = \"0\" + lsConsumeTime[2]\n      // }\n      //Australian Timezone needed\n      if (lsConsumeTime[1].length === 1) {lsConsumeTime[1] = \"0\" + lsConsumeTime[1];}var consumeTime = lsConsumeTime[2] + \"-\" + lsConsumeTime[0] + \"-\" + lsConsumeTime[1];changedItem.conDate = consumeTime;if (e === 'yes') {this.consumeItem(changedItem);__f__(\"log\", changedItem, \" at pages/grocery/grocery.vue:760\");__f__(\"log\", changedItem.itemId, \" at pages/grocery/grocery.vue:761\");uni.request({ url: 'http://101.35.91.117:7884/item/update/status/' + \"consume\" + \"/id/\" + changedItem.itemId }).then(function (res) {_this5.getCol();__f__(\"log\", res[1], \" at pages/grocery/grocery.vue:768\");});}this.chNum = false;this.itemEditor = false;}, scanCode: function scanCode() {var _this6 = this; // let that = this\n      uni.scanCode({ success: function success(res) {__f__(\"log\", 'type：' + res.scanType, \" at pages/grocery/grocery.vue:781\");__f__(\"log\", 'codeID：' + res.result, \" at pages/grocery/grocery.vue:782\");_this6.icode = res.result;uni.request({ url: \"https://world.openfoodfacts.org/api/v2/product/\" + _this6.icode }).then(function (ires) {var name = ires[1].data.product.product_name;__f__(\"log\", name, \" at pages/grocery/grocery.vue:788\");var categories = ires[1].data.product.categories.split(',');__f__(\"log\", categories[1], \" at pages/grocery/grocery.vue:790\");_this6.iName = name;_this6.iCategory = categories[1];_this6.refreshiCategory = false;_this6.$nextTick(function () {this.refreshiCategory = true;});_this6.$forceUpdate();});} });}, // searchProduct(){\n    // \tif(this.iCategory === ''){\n    // \t\tthis.list = this.options  \n    // \t}else{\n    // \t\tthis.showList = []\n    // \t\tthis.showList = this.options.filter((item)=>{\n    // \t\t\treturn item.label.indexOf(this.iCategory)>=0\n    // \t\t})\n    // \t} \n    // \tconsole.log(this.showList)\n    // \tthis.showSelect = true\n    // },   \n    scanDate: function scanDate() {var that = this;uni.chooseImage({ count: 1, sizeType: ['original', 'compressed'], sourceType: ['camera', 'album'], success: function success(res) {__f__(\"log\", String(res.tempFilePaths[0]), \" at pages/grocery/grocery.vue:823\");uni.previewImage({ urls: res.tempFilePaths }); //跳过服务器\n          __f__(\"log\", \"上传了: \" + String(res.tempFilePaths[0]) + \"  --------\", \" at pages/grocery/grocery.vue:829\");__f__(\"log\", \"ocr 的返回结果：\", \" at pages/grocery/grocery.vue:830\");that.iTime = \"2022-11-22\"; // console.log(that.iTime);\n          // uni.uploadFile({\n          // url: 'http://localhost:8080/ocr', // ------------------- 每次测之前改一下 ------------------------\n          // method : 'POST',\n          // // filePath : res.tempFilePaths[0],\n          // filePath : String(res.tempFilePaths[0]),\n          // name : 'media',\n          // header: {\n          // \t'content-type': 'multipart/form-data' \n          // },\n          // success: (res) => {\n          // \tconsole.log(res.statusCode)\n          // \tconsole.log(\"上传了: \" + String(res.tempFilePaths[0]) + \"  --------\")\n          // \tconsole.log(\"ocr 的返回结果：\");\n          // \tconsole.log(res.data);\n          // \tthat.iTime = uploadFileRes;\n          // \tconsole.log(that.iTime);\n          // },\n          // fail: (uploadFileRes) => {\n          // \tconsole.log(uploadFileRes.statusCode)\n          // \tconsole.log(\"爷失败了\");\n          // \tconsole.log(uploadFileRes+\"\\n==============\");\n          // }\n          // });\n        } });}, onClickBtn: function onClickBtn(e) {if (e.key == 'add') {// console.log('111')\n        this.addItemToList = false;this.needAddItem = true; // this.iName = '';\n        // this.iCategory = ''; ////// ------\n        this.iTime = '';this.iCitime = '';this.iDetails = '';this.iItemid = ''; // console.log('change')\n      } else if (e.key == 'back') {this.addItemToList = true;this.needAddItem = false;} else if (e.key == 'scan') {this.scanCode();this.needAddItem = true;this.addItemToList = false; // this.iTime = '';\n        // this.iCitime = '';\n        // this.iDetails = '';\n        // this.iItemid = '';\n      } else {this.scanDate();}}, DateDiff: function DateDiff(date1, date2) {var date1utc = Date.UTC(date1.getFullYear(), date1.getMonth(), date1.getDate());var date2utc = Date.UTC(date2.getFullYear(), date2.getMonth(), date2.getDate());var day = 1000 * 60 * 60 * 24;return (date2utc - date1utc) / day;}, choosePhoto: function choosePhoto() {var that = this;uni.chooseImage({ count: 1, sizeType: ['original', 'compressed'], sourceType: ['album', 'camera'], success: function success(res) {__f__(\"log\", JSON.stringify(res.tempFilePaths), \" at pages/grocery/grocery.vue:909\");that.filepath = res.tempFilePaths;that.add_src = res.tempFilePaths[0]; // console.log(that.add_src)\n          // uni.previewImage({\n          // \turls: res.tempFilePaths,\n          // });\n        } });}, tab: function tab(date1, date2) {// console.log(date1, date2)\n      // exp 1, today2\n      var oDate1 = new Date(date1); // console.log(oDate1)\n      var oDate2 = new Date(date2); // console.log(oDate2)\n      if (oDate1.getTime() >= oDate2.getTime()) {// console.log('instock');\n        this.status = 'instock';\n      } else if (oDate1.getTime() < oDate2.getTime()) {\n        __f__(\"log\", 'expire', \" at pages/grocery/grocery.vue:930\");\n        this.status = 'expire';\n      }\n    },\n    edit: function edit(item, index) {\n      this.itemEditor = true;\n      // Object.keys(item).forEach(key => {\n      // \tconsole.log(key, item[key]);\n      // });\n      this.iName = item.name;\n      this.iCategory = item.category;\n      // this.iTime = item.expDate;\n      this.iTimeInAussieFormat = item.expDate;\n      this.iCitime = item.time;\n      this.iDetails = item.detail;\n      this.iItemid = item.itemId;\n      this.editItem = item;\n    },\n    editClient: function editClient() {var _this7 = this;\n\n      var date = new Date();\n\n      var nowMonth = date.getMonth() + 1;\n\n      var strDate = date.getDate();\n\n      var seperator = \"-\";\n\n      if (nowMonth >= 1 && nowMonth <= 9) {\n        nowMonth = \"0\" + nowMonth;\n      }\n\n      if (strDate >= 0 && strDate <= 9) {\n        strDate = \"0\" + strDate;\n      }\n      // var nowDate = date.getFullYear() + seperator + nowMonth + seperator + strDate;\n\n      // convert remind time to correct form\n      var expDate = new Date(this.iTimeInAussieFormat);\n      var remindTime = expDate.getDate() - this.iCitime;\n      var lsRemindTime = new Date(expDate.setDate(remindTime)).toLocaleDateString().split(\"/\");\n      // console.log(remindTime);\n      // console.log(lsRemindTime);\n      //China Timezone needed\n      // if(lsRemindTime[2].length === 1){\n      //     lsRemindTime[2] = \"0\" + lsRemindTime[2]\n      // }\n      //Australian Timezone needed\n      // console.log(new Date())\n      if (lsRemindTime[1].length === 1) {\n        lsRemindTime[1] = \"0\" + lsRemindTime[1];\n      }\n      var remindTime = lsRemindTime[0] + \"-\" + lsRemindTime[1] + \"-\" + lsRemindTime[2];\n      // console.log(remindTime);\n      // console.log(lsRemindTime);\n\n      this.tab(this.iTime, date);\n      var item = {\n        \"addDate\": this.editItem.addDate,\n        \"addMethod\": this.editItem.addMethod,\n        \"category\": this.iCategory,\n        \"conDate\": this.editItem.conDate,\n        \"detail\": this.iDetails,\n        \"expDate\": this.iTimeInAussieFormat,\n        \"itemId\": this.iItemid,\n        \"name\": this.iName,\n        \"remindTime\": remindTime,\n        \"status\": this.editItem.status,\n        \"otherDetail\": this.iDetails,\n        \"uId\": uni.getStorageSync('userId') };\n\n      __f__(\"log\", JSON.stringify(item), \" at pages/grocery/grocery.vue:1001\");\n      uni.request({\n        method: 'POST',\n        url: 'http://101.35.91.117:7884/item/update',\n        data: JSON.stringify(item) }).\n      then(function (res) {\n        __f__(\"log\", res, \" at pages/grocery/grocery.vue:1007\");\n      });\n      this.needAddItem = false;\n      this.addItemToList = true;\n\n      setTimeout(function () {\n        _this7.getCol();\n      }, 1000);\n      this.itemEditor = false;\n\n    },\n    selectSortingItemList: function selectSortingItemList(category) {\n\n      if (category.newVal === \"A-z\") {\n        this.sortStockListAlphabetical();\n      } else if (category.newVal === \"Expire Soon\") {\n        this.sortStockListByExpDate();\n      } else if (category.newVal === \"Recent Added\") {\n        this.sortStockListByAddDate();\n      }\n\n    },\n    sortStockListAlphabetical: function sortStockListAlphabetical() {\n      // this function will sort the stocklist by the name of each item in ascending order\n      this.stockList.sort(function (a, b) {\n        var dateA = a.name;\n        var dateB = b.name;\n        if (dateA < dateB) {\n          return -1;\n        } else if (dateA > dateB) {\n          return 1;\n        }\n        return 0;\n      });\n    },\n\n    sortStockListByExpDate: function sortStockListByExpDate() {\n      // this function will sort the stocklist by the expire date of each item in ascending order\n      // E.g. Apple expires at 2021/Dec/12, Orange expires at 2021/Nov/11, Tofu expires at 2021/Dec/31\n      // the order after sort will be Orange -> Apple -> Tofu\n      this.oldstockList.sort(function (a, b) {\n        var dateA = a.expDate;\n        var dateB = b.expDate;\n        if (dateA < dateB) {\n          return -1;\n        } else if (dateA > dateB) {\n          return 1;\n        }\n        return 0;\n      });\n    },\n\n    sortStockListByAddDate: function sortStockListByAddDate() {\n      // this function will sort the stocklist by the date date of each item in ascending order\n      // E.g. Apple added at 2021/Dec/12, Orange added at 2021/Nov/11, Tofu added at 2021/Dec/31\n      // the order after sort will be Orange -> Apple -> Tofu\n      this.stockList.sort(function (a, b) {\n        var dateA = a.addDate;\n        var dateB = b.addDate;\n        if (dateA < dateB) {\n          return -1;\n        } else if (dateA > dateB) {\n          return 1;\n        }\n        return 0;\n      });\n    },\n\n    //history   -1:all, -2:expire, -3:consume\n    selectItemTags: function selectItemTags(tags) {var _this8 = this;\n      if (tags.newVal === \"Expired\") {\n\n        __f__(\"log\", '测试过期', \" at pages/grocery/grocery.vue:1079\");\n\n        uni.request({\n          url: 'http://101.35.91.117:7884/item/user/' + uni.getStorageSync('userId') + '/-2',\n          method: 'get' }).\n        then(function (res) {\n          __f__(\"log\", 'load', res[1].data, \" at pages/grocery/grocery.vue:1085\");\n          _this8.oldstockList = res[1].data;\n        });\n\n\n\n      } else if (tags.newVal === \"Consumed\") {\n\n        __f__(\"log\", '测试消耗', \" at pages/grocery/grocery.vue:1093\");\n        uni.request({\n          url: 'http://101.35.91.117:7884/item/user/' + uni.getStorageSync('userId') + '/-3',\n          method: 'get' }).\n        then(function (res) {\n          __f__(\"log\", 'load', res[1].data, \" at pages/grocery/grocery.vue:1098\");\n          _this8.oldstockList = res[1].data;\n        });\n      } else if (tags.newVal === \"All\") {\n\n        __f__(\"log\", '没有过滤器', \" at pages/grocery/grocery.vue:1103\");\n        uni.request({\n          url: 'http://101.35.91.117:7884/item/user/' + uni.getStorageSync('userId') + '/-1',\n          method: 'get' }).\n        then(function (res) {\n          __f__(\"log\", 'load', res[1].data, \" at pages/grocery/grocery.vue:1108\");\n          _this8.oldstockList = res[1].data;\n        });\n      }\n    },\n\n\n\n    getImgById: function getImgById(id) {\n      uni.request({\n        url: \"http://101.35.91.117:7884/item/picture/\" + id,\n        method: 'get' }).\n      then(function (res) {\n        __f__(\"log\", res[1].data, \" at pages/grocery/grocery.vue:1121\");\n      });\n    },\n\n    saveList: function saveList(id) {var _this9 = this;\n      uni.showLoading({ title: 'updating', mask: true });\n      uni.request({\n        url: \"http://101.35.91.117:7884/potential/add/\" + id + \"/\" + uni.getStorageSync('userId'),\n        method: 'get' }).\n      then(function (res) {\n        _this9.getCol();\n        setTimeout(function () {uni.hideLoading();}, 1000);\n      });\n    },\n    deleteList: function deleteList(id) {var _this10 = this;\n      uni.showLoading({ title: 'updating', mask: true });\n      uni.request({\n        url: \"http://101.35.91.117:7884/potential/remove/\" + id + \"/\" + uni.getStorageSync('userId'),\n        method: 'get' }).\n      then(function (res) {\n        _this10.getCol();\n        setTimeout(function () {uni.hideLoading();}, 1000);\n      });\n    },\n    changePhoto: function changePhoto() {\n      var that = this;\n      uni.chooseImage({\n        count: 1,\n        sizeType: ['original', 'compressed'],\n        sourceType: ['album', 'camera'],\n        success: function success(res) {\n          // console.log(that.iItemid)\n          // console.log(res.tempFilePaths[0])\n          uni.uploadFile({\n            url: 'http://101.35.91.117:7884/item/update/picture',\n            filePath: res.tempFilePaths[0],\n            name: 'picture',\n            formData: {\n              item_id: that.iItemid\n              // file: tempFilePath   \n            },\n            success: function success(uploadFileRes) {\n              // console.log(uploadFileRes);\n              // location.reload()\n              setTimeout(function () {\n                that.getCol();\n              }, 1000);\n            },\n            fail: function fail(err) {\n              __f__(\"log\", err, \" at pages/grocery/grocery.vue:1170\");\n            } });\n\n        } });\n\n\n      this.itemEditor = false;\n\n    } } };exports.default = _default;\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/lib/format-log.js */ 15)[\"default\"]))//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVuaS1hcHA6Ly8vcGFnZXMvZ3JvY2VyeS9ncm9jZXJ5LnZ1ZSJdLCJuYW1lcyI6WyJjb21wb25lbnRzIiwiaHhOYXZiYXIiLCJkYXRhIiwidGFiYmFyIiwiJHN0b3JlIiwic3RhdGUiLCJmaWxlcGF0aCIsImlpc1NlbGVjdCIsImlUaW1lIiwiaVRpbWVJbkF1c3NpZUZvcm1hdCIsIml0ZW1FZGl0b3IiLCJjc2hvdyIsImNoTnVtIiwiaXNzU2VsZWN0IiwicG9wRnJvbSIsInBhY2tzIiwicm91bmQiLCJuZWVkQ2hhbmdlSXRlbSIsImFkZEl0ZW1Ub0xpc3QiLCJuZWVkQWRkSXRlbSIsImlEZXRhaWxzIiwiaUNpdGltZSIsImlOYW1lIiwiaUl0ZW1pZCIsInN0YXR1cyIsImlDYXRlZ29yeSIsInJlZnJlc2hpQ2F0ZWdvcnkiLCJzaG9wTGlzdCIsIm9sZHN0b2NrTGlzdCIsInN0b2NrTGlzdCIsImFkZF9zcmMiLCJlZGl0SXRlbSIsImljb2RlIiwiY29uZmlnMSIsInRpdGxlIiwiY29sb3IiLCJiYWNrZ3JvdW5kQ29sb3IiLCJiYWNrIiwic3RhdHVzQmFyQmFja2dyb3VuZCIsInJpZ2h0QnV0dG9uIiwia2V5IiwiaWNvbiIsInBvc2l0aW9uIiwibGVmdEJ1dHRvbiIsImNvbmZpZzIiLCJvcHRpb25zIiwic29ydGluZ01ldGhvZCIsImNob29zZVRhZ3MiLCJ2YWx1ZSIsIm9uTG9hZCIsImdldENvbCIsIm9uU2hvdyIsIm1ldGhvZHMiLCJnZXRfc3JjIiwiY2hhbmdlIiwiaW5kZXgiLCJnZXRDYXRlZ29yeSIsImNhdGVnb3J5IiwibmV3VmFsIiwiJGZvcmNlVXBkYXRlIiwic2F2ZSIsImRhdGUiLCJEYXRlIiwibm93TW9udGgiLCJnZXRNb250aCIsInN0ckRhdGUiLCJnZXREYXRlIiwic2VwZXJhdG9yIiwiZXhwRGF0ZSIsInJlbWluZFRpbWUiLCJsc1JlbWluZFRpbWUiLCJzZXREYXRlIiwidG9Mb2NhbGVEYXRlU3RyaW5nIiwic3BsaXQiLCJsZW5ndGgiLCJ0YWIiLCJpdGVtIiwidW5pIiwiZ2V0U3RvcmFnZVN5bmMiLCJKU09OIiwic3RyaW5naWZ5IiwidGhhdCIsInJlcXVlc3QiLCJtZXRob2QiLCJ1cmwiLCJ0aGVuIiwicmVzIiwidXBsb2FkRmlsZSIsImZpbGVQYXRoIiwibmFtZSIsImZvcm1EYXRhIiwiaXRlbV9pZCIsInN1Y2Nlc3MiLCJ1cGxvYWRGaWxlUmVzIiwiZmFpbCIsImVyciIsInNldFRpbWVvdXQiLCJnZXRMaXN0IiwidXBkYXRlSXRlbUxpc3QiLCJkYXRlTWludXMiLCJkYXRlU3RhcnQiLCJkYXRlRW5kIiwic2RhdGUiLCJub3ciLCJkYXlzIiwiZ2V0VGltZSIsImRheSIsIk1hdGgiLCJmbG9vciIsIml0ZW1MaXN0IiwidG9kYXlEYXRlIiwiaSIsImV4cCIsInN1YnN0ciIsImV4cGlyZURheXMiLCJyZW1pbmQiLCJ0ZW1wIiwicGljdHVyZSIsIml0ZW1JbmZvIiwiYWRkRGF0ZSIsImFkZE1ldGhvZCIsImNvbkRhdGUiLCJkZXRhaWwiLCJpdGVtSWQiLCJEYXRlRGlmZiIsInBvdGVudGlhbCIsInB1c2giLCJjb25zdW1lSXRlbSIsIml0ZW1VcGRhdGVkIiwiY2hhbmdlVGltZSIsImUiLCJyZXN1bHQiLCJhcnJheSIsIm9wZW5UaW1lIiwiY2hhbmdlVGFiIiwiY2hhbmdlQW1vdW50IiwicGFyc2VJbnQiLCJjb25zdW1lIiwiY2hhbmdlZEl0ZW0iLCJsc0NvbnN1bWVUaW1lIiwiY29uc3VtZVRpbWUiLCJzY2FuQ29kZSIsInNjYW5UeXBlIiwiaXJlcyIsInByb2R1Y3QiLCJwcm9kdWN0X25hbWUiLCJjYXRlZ29yaWVzIiwiJG5leHRUaWNrIiwic2NhbkRhdGUiLCJjaG9vc2VJbWFnZSIsImNvdW50Iiwic2l6ZVR5cGUiLCJzb3VyY2VUeXBlIiwiU3RyaW5nIiwidGVtcEZpbGVQYXRocyIsInByZXZpZXdJbWFnZSIsInVybHMiLCJvbkNsaWNrQnRuIiwiZGF0ZTEiLCJkYXRlMiIsImRhdGUxdXRjIiwiVVRDIiwiZ2V0RnVsbFllYXIiLCJkYXRlMnV0YyIsImNob29zZVBob3RvIiwib0RhdGUxIiwib0RhdGUyIiwiZWRpdCIsInRpbWUiLCJlZGl0Q2xpZW50Iiwic2VsZWN0U29ydGluZ0l0ZW1MaXN0Iiwic29ydFN0b2NrTGlzdEFscGhhYmV0aWNhbCIsInNvcnRTdG9ja0xpc3RCeUV4cERhdGUiLCJzb3J0U3RvY2tMaXN0QnlBZGREYXRlIiwic29ydCIsImEiLCJiIiwiZGF0ZUEiLCJkYXRlQiIsInNlbGVjdEl0ZW1UYWdzIiwidGFncyIsImdldEltZ0J5SWQiLCJpZCIsInNhdmVMaXN0Iiwic2hvd0xvYWRpbmciLCJtYXNrIiwiaGlkZUxvYWRpbmciLCJkZWxldGVMaXN0IiwiY2hhbmdlUGhvdG8iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBbWFDO0FBQ0Esb0gsOEZBcGFEO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO2VBSWdCLEVBQ2RBLFVBQVUsRUFBRSxFQUFDQyxRQUFRLEVBQVJBLGlCQUFELEVBREUsRUFFZEMsSUFGYyxrQkFFUCxDQUNOLE9BQU8sRUFDTkMsTUFBTSxFQUFFLEtBQUtDLE1BQUwsQ0FBWUMsS0FBWixDQUFrQkYsTUFEcEIsRUFFTkcsUUFBUSxFQUFDLEVBRkgsRUFHTkMsU0FBUyxFQUFFLElBSEwsRUFJTkMsS0FBSyxFQUFFLEVBSkQsRUFLTkMsbUJBQW1CLEVBQUUsRUFMZixFQU1OQyxVQUFVLEVBQUUsS0FOTixFQU9OQyxLQUFLLEVBQUUsS0FQRCxFQVFOQyxLQUFLLEVBQUUsS0FSRCxFQVNOQyxTQUFTLEVBQUUsS0FUTCxFQVVOQyxPQUFPLEVBQUUsUUFWSCxFQVdOQyxLQUFLLEVBQUUsQ0FYRCxFQVlOQyxLQUFLLEVBQUUsRUFaRCxFQWFOQyxjQUFjLEVBQUUsRUFiVixFQWNOQyxhQUFhLEVBQUUsSUFkVCxFQWVOQyxXQUFXLEVBQUUsS0FmUCxFQWdCTkMsUUFBUSxFQUFFLEVBaEJKLEVBaUJOQyxPQUFPLEVBQUUsRUFqQkgsRUFrQk5DLEtBQUssRUFBRSxFQWxCRCxFQW1CTkMsT0FBTyxFQUFFLEVBbkJILEVBb0JOQyxNQUFNLEVBQUMsU0FwQkQsRUFxQk1DLFNBQVMsRUFBRSxFQXJCakIsRUFzQk5DLGdCQUFnQixFQUFFLElBdEJaLEVBdUJOQyxRQUFRLEVBQUMsRUF2QkgsRUF3Qk5DLFlBQVksRUFBRSxFQXhCUixFQXlCTkMsU0FBUyxFQUFDLEVBekJKLEVBMEJOQyxPQUFPLEVBQUMsRUExQkYsRUEyQk5DLFFBQVEsRUFBQyxJQTNCSCxFQTRCTkMsS0FBSyxFQUFDLEVBNUJBLEVBNkJOQyxPQUFPLEVBQUMsRUFDUEMsS0FBSyxFQUFFLFNBREEsRUFFUEMsS0FBSyxFQUFFLE9BRkEsRUFHUEMsZUFBZSxFQUFFLFNBSFYsRUFJUEMsSUFBSSxFQUFFLEtBSkMsRUFNUEMsbUJBQW1CLEVBQUMsU0FOYixFQU9QQyxXQUFXLEVBQUMsQ0FBQyxFQUNaQyxHQUFHLEVBQUUsTUFETyxFQUVaQyxJQUFJLEVBQUUsVUFGTSxFQUdaQyxRQUFRLEVBQUUsTUFIRSxFQUFELENBUEwsRUFZUEMsVUFBVSxFQUFFLENBQUMsRUFDWkgsR0FBRyxFQUFFLEtBRE8sRUFFWkMsSUFBSSxFQUFFLFVBRk0sRUFHWkMsUUFBUSxFQUFFLE1BSEUsRUFBRCxDQVpMLEVBN0JGLEVBK0NORSxPQUFPLEVBQUMsRUFDUFYsS0FBSyxFQUFFLGFBREEsRUFFUEMsS0FBSyxFQUFFLE9BRkEsRUFHUEUsSUFBSSxFQUFFLEtBSEMsRUFJUEQsZUFBZSxFQUFFLFNBSlYsRUFLUEUsbUJBQW1CLEVBQUMsU0FMYixFQU1QSyxVQUFVLEVBQUUsQ0FBQyxFQUNaSCxHQUFHLEVBQUUsTUFETyxFQUVaQyxJQUFJLEVBQUUsVUFGTSxFQUdaQyxRQUFRLEVBQUUsTUFIRSxFQUFELENBTkwsRUFXUEgsV0FBVyxFQUFDLENBQUMsRUFDWkMsR0FBRyxFQUFFLE1BRE8sRUFFWkMsSUFBSSxFQUFFLFVBRk0sRUFHWkMsUUFBUSxFQUFFLE1BSEUsRUFBRCxDQVhMLEVBL0NGLEVBZ0VORyxPQUFPLEVBQUUsQ0FBQyxNQUFELEVBQVMsT0FBVCxFQUFpQixXQUFqQixFQUE2QixPQUE3QixFQUFxQyxnQkFBckMsRUFBc0QsUUFBdEQsRUFBK0QsY0FBL0QsRUFBOEUsY0FBOUUsRUFBNkYsTUFBN0YsRUFBb0csUUFBcEcsQ0FoRUgsRUFpRU5DLGFBQWEsRUFBRSxDQUFDLGNBQUQsRUFBaUIsS0FBakIsRUFBd0IsYUFBeEIsQ0FqRVQsRUFrRU5DLFVBQVUsRUFBRSxDQUFDLFNBQUQsRUFBWSxVQUFaLEVBQXdCLEtBQXhCLENBbEVOLEVBbUVOQyxLQUFLLEVBQUUsRUFuRUQsRUFBUCxDQXFFQSxDQXhFYSxFQXlFZEMsTUF6RWMsb0JBeUVOLENBQ1A7QUFDQSxTQUFLQyxNQUFMLEdBRk8sQ0FHUDtBQUNBO0FBQ0E7QUFFQSxHQWhGYSxFQWlGZEMsTUFqRmMsb0JBaUZOLENBQ1AsS0FBS0QsTUFBTCxHQUNBLENBbkZhLEVBb0ZkRSxPQUFPLEVBQUUsRUFDUkMsT0FEUSxxQkFDQyxDQUNSLE9BQU8sS0FBS3ZCLE9BQVosQ0FDQSxDQUhPLEVBSVJ3QixNQUpRLGtCQUlEcEQsSUFKQyxFQUlJLENBQ1gsYUFBWUEsSUFBSSxDQUFDcUQsS0FBakIsdUNBQ0EsYUFBWXJELElBQUksQ0FBQzhDLEtBQWpCLHVDQUNBLENBUE8sRUFRQ1EsV0FSRCx1QkFRYUMsUUFSYixFQVFzQixDQUNqQixLQUFLaEMsU0FBTCxHQUFpQmdDLFFBQVEsQ0FBQ0MsTUFBMUIsQ0FDWixLQUFLQyxZQUFMLEdBQ1MsQ0FYRixFQWFSQyxJQWJRLGtCQWFGLGtCQUVMLElBQUlDLElBQUksR0FBRyxJQUFJQyxJQUFKLEVBQVgsQ0FFQSxJQUFJQyxRQUFRLEdBQUdGLElBQUksQ0FBQ0csUUFBTCxLQUFrQixDQUFqQyxDQUVBLElBQUlDLE9BQU8sR0FBR0osSUFBSSxDQUFDSyxPQUFMLEVBQWQsQ0FFQSxJQUFJQyxTQUFTLEdBQUcsR0FBaEIsQ0FFQSxJQUFJSixRQUFRLElBQUksQ0FBWixJQUFpQkEsUUFBUSxJQUFJLENBQWpDLEVBQW9DLENBQ2pDQSxRQUFRLEdBQUcsTUFBTUEsUUFBakIsQ0FDRixDQUVELElBQUlFLE9BQU8sSUFBSSxDQUFYLElBQWdCQSxPQUFPLElBQUksQ0FBL0IsRUFBa0MsQ0FDL0JBLE9BQU8sR0FBRyxNQUFNQSxPQUFoQixDQUNGLENBaEJJLENBaUJMO0FBRVk7QUFDQSxVQUFJRyxPQUFPLEdBQUcsSUFBSU4sSUFBSixDQUFTLEtBQUt0RCxLQUFkLENBQWQsQ0FDWixJQUFJNkQsVUFBVSxHQUFJRCxPQUFPLENBQUNGLE9BQVIsS0FBb0IsS0FBSzdDLE9BQTNDLENBQ0EsSUFBSWlELFlBQVksR0FBRyxJQUFJUixJQUFKLENBQVNNLE9BQU8sQ0FBQ0csT0FBUixDQUFnQkYsVUFBaEIsQ0FBVCxFQUFzQ0csa0JBQXRDLEdBQTJEQyxLQUEzRCxDQUFpRSxHQUFqRSxDQUFuQixDQXRCSyxDQXVCTDtBQUNBO0FBRVk7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNaO0FBQ1ksVUFBR0gsWUFBWSxDQUFDLENBQUQsQ0FBWixDQUFnQkksTUFBaEIsS0FBMkIsQ0FBOUIsRUFBZ0MsQ0FDNUJKLFlBQVksQ0FBQyxDQUFELENBQVosR0FBa0IsTUFBTUEsWUFBWSxDQUFDLENBQUQsQ0FBcEMsQ0FDSCxDQUNELElBQUlELFVBQVUsR0FBR0MsWUFBWSxDQUFDLENBQUQsQ0FBWixHQUFnQixHQUFoQixHQUFvQkEsWUFBWSxDQUFDLENBQUQsQ0FBaEMsR0FBb0MsR0FBcEMsR0FBd0NBLFlBQVksQ0FBQyxDQUFELENBQXJFLENBbkNQLENBb0NMO0FBQ0E7QUFFWSxXQUFLSyxHQUFMLENBQVMsS0FBS25FLEtBQWQsRUFBb0JxRCxJQUFwQixFQUNaLElBQUllLElBQUksR0FBRyxFQUNULFdBQVcsSUFBSWQsSUFBSixFQURGLEVBRVQsYUFBYSxRQUZKLEVBR1QsWUFBWSxLQUFLckMsU0FIUixFQUlULFdBQVcsQ0FKRixFQUtULFVBQVUsS0FBS0wsUUFMTixFQU1ULFdBQVcsS0FBS1osS0FOUCxFQU9UO0FBQ0EsZ0JBQVEsS0FBS2MsS0FSSixFQVNULGNBQWMrQyxVQVRMLEVBVVQsVUFBVSxLQUFLN0MsTUFWTixFQVdULGVBQWUsS0FBS0osUUFYWCxFQVlULE9BQU95RCxHQUFHLENBQUNDLGNBQUosQ0FBbUIsUUFBbkIsQ0FaRSxFQWFULGNBQWEsQ0FiSixFQUFYLENBZUEsYUFBWUMsSUFBSSxDQUFDQyxTQUFMLENBQWVKLElBQWYsQ0FBWix1Q0FDQSxJQUFJSyxJQUFJLEdBQUMsSUFBVCxDQUNBSixHQUFHLENBQUNLLE9BQUosQ0FBWSxFQUNYQyxNQUFNLEVBQUMsTUFESSxFQUVYQyxHQUFHLEVBQUMsdUNBRk8sRUFHWGxGLElBQUksRUFBQzZFLElBQUksQ0FBQ0MsU0FBTCxDQUFlSixJQUFmLENBSE0sRUFBWixFQUlHUyxJQUpILENBSVEsVUFBQUMsR0FBRyxFQUFJLENBQ2QsYUFBWUwsSUFBSSxDQUFDM0UsUUFBTCxDQUFjLENBQWQsQ0FBWix1Q0FDQSxhQUFZZ0YsR0FBRyxDQUFDLENBQUQsQ0FBSCxDQUFPcEYsSUFBbkIsdUNBQ0EyRSxHQUFHLENBQUNVLFVBQUosQ0FBZSxFQUNkSCxHQUFHLEVBQUUsK0NBRFMsRUFFZEksUUFBUSxFQUFFUCxJQUFJLENBQUMzRSxRQUFMLENBQWMsQ0FBZCxDQUZJLEVBR2RtRixJQUFJLEVBQUUsU0FIUSxFQUlkQyxRQUFRLEVBQUUsRUFDVEMsT0FBTyxFQUFFTCxHQUFHLENBQUMsQ0FBRCxDQUFILENBQU9wRixJQURQLENBRVQ7QUFGUyxXQUpJLEVBUWQwRixPQUFPLEVBQUUsaUJBQUNDLGFBQUQsRUFBbUIsQ0FDM0IsYUFBWUEsYUFBWix1Q0FDQSxDQVZhLEVBV2RDLElBQUksRUFBRSxjQUFDQyxHQUFELEVBQVMsQ0FDZCxhQUFZQSxHQUFaLHVDQUNBLENBYmEsRUFBZixFQWlCQSxDQXhCRCxFQXlCQSxLQUFLNUUsV0FBTCxHQUFtQixLQUFuQixDQUNBLEtBQUtELGFBQUwsR0FBcUIsSUFBckIsQ0FFQThFLFVBQVUsQ0FBQyxZQUFNLENBQ2hCLEtBQUksQ0FBQzlDLE1BQUwsR0FDQSxDQUZTLEVBRVIsSUFGUSxDQUFWLENBR0EsQ0FyR08sRUF3R1JBLE1BeEdRLG9CQXdHQSxvQkFFUDtBQUVBO0FBRUEyQixTQUFHLENBQUNLLE9BQUosQ0FBWSxFQUNYRSxHQUFHLEVBQUMseUNBQXVDUCxHQUFHLENBQUNDLGNBQUosQ0FBbUIsUUFBbkIsQ0FEaEMsRUFBWixFQUVHTyxJQUZILENBRVEsVUFBQUMsR0FBRyxFQUFJLENBQ2QsYUFBWSxrQkFBWixFQUErQkEsR0FBRyxDQUFDLENBQUQsQ0FBSCxDQUFPcEYsSUFBdEMsdUNBQ0EsTUFBSSxDQUFDK0YsT0FBTCxHQUNBLE1BQUksQ0FBQ0MsY0FBTCxDQUFvQlosR0FBRyxDQUFDLENBQUQsQ0FBSCxDQUFPcEYsSUFBM0IsRUFDQSxDQU5ELEVBT0EsQ0FySE8sRUF1SFIrRixPQXZIUSxxQkF1SEMsbUJBQ1JwQixHQUFHLENBQUNLLE9BQUosQ0FBWSxFQUNaRSxHQUFHLEVBQUUseUNBQXVDUCxHQUFHLENBQUNDLGNBQUosQ0FBbUIsUUFBbkIsQ0FEaEMsRUFFWkssTUFBTSxFQUFFLEtBRkksRUFBWixFQUdHRSxJQUhILENBR1EsVUFBQUMsR0FBRyxFQUFFLENBQ1o7QUFDQSxjQUFJLENBQUMzRCxRQUFMLEdBQWdCMkQsR0FBRyxDQUFDLENBQUQsQ0FBSCxDQUFPcEYsSUFBdkIsQ0FDQSxDQU5ELEVBT0EsQ0EvSE8sRUFnSVI7QUFDQWlHLGFBaklRLHFCQWlJRUMsU0FqSUYsRUFpSWFDLE9BakliLEVBaUlzQixDQUM3QixJQUFJQyxLQUFLLEdBQUcsSUFBSXhDLElBQUosQ0FBU3NDLFNBQVQsQ0FBWixDQUNBLElBQUlHLEdBQUcsR0FBRyxJQUFJekMsSUFBSixDQUFTdUMsT0FBVCxDQUFWLENBQ0EsSUFBSUcsSUFBSSxHQUFHRCxHQUFHLENBQUNFLE9BQUosS0FBZ0JILEtBQUssQ0FBQ0csT0FBTixFQUEzQixDQUNBLElBQUlDLEdBQUcsR0FBR0MsSUFBSSxDQUFDQyxLQUFMLENBQVdKLElBQUksSUFBSSxPQUFPLEVBQVAsR0FBWSxFQUFaLEdBQWlCLEVBQXJCLENBQWYsQ0FBVixDQUVBLE9BQU9FLEdBQVAsQ0FDQSxDQXhJTyxFQXlJUlIsY0F6SVEsMEJBeUlPVyxRQXpJUCxFQXlJZ0IsQ0FDdkIsSUFBSWhGLFNBQVMsR0FBRyxFQUFoQixDQUNZLElBQUlELFlBQVksR0FBRyxFQUFuQixDQUNaLElBQUlrRixTQUFTLEdBQUcsSUFBSWhELElBQUosQ0FBU0EsSUFBSSxDQUFDeUMsR0FBTCxFQUFULENBQWhCLENBQ0EsS0FBSyxJQUFJUSxDQUFDLEdBQUMsQ0FBWCxFQUFhQSxDQUFDLEdBQUNGLFFBQVEsQ0FBQ25DLE1BQXhCLEVBQStCcUMsQ0FBQyxFQUFoQyxFQUFtQyxDQUNuQixJQUFJbkMsSUFBSSxHQUFHaUMsUUFBUSxDQUFDRSxDQUFELENBQW5CLENBQ2YsSUFBSUMsR0FBRyxHQUFHLElBQUlsRCxJQUFKLENBQVNjLElBQUksQ0FBQ1IsT0FBTCxDQUFhNkMsTUFBYixDQUFvQixDQUFwQixFQUFzQixFQUF0QixDQUFULENBQVYsQ0FGa0MsQ0FHbEM7QUFDQTtBQUNBLFlBQUlDLFVBQVUsR0FBRyxLQUFLZixTQUFMLENBQWVXLFNBQWYsRUFBMEJFLEdBQTFCLENBQWpCLENBQ0EsSUFBSUcsTUFBTSxHQUFHLElBQUlyRCxJQUFKLENBQVNjLElBQUksQ0FBQ1AsVUFBTCxDQUFnQjRDLE1BQWhCLENBQXVCLENBQXZCLEVBQXlCLEVBQXpCLENBQVQsQ0FBYixDQU5rQyxDQU9sQztBQUNBLFlBQUlHLElBQUksR0FBR3hDLElBQUksQ0FBQ3lDLE9BQWhCLENBUmtDLENBU2xDO0FBQ0EsWUFBR0QsSUFBSSxJQUFFLElBQVQsRUFBYyxDQUNiQSxJQUFJLEdBQUcsNkJBQVAsQ0FDQSxDQUNELElBQUlFLFFBQVEsR0FBRyxFQUNJLFdBQVcxQyxJQUFJLENBQUMyQyxPQURwQixFQUVJLGFBQWEzQyxJQUFJLENBQUM0QyxTQUZ0QixFQUdJLFlBQVk1QyxJQUFJLENBQUNuQixRQUhyQixFQUlJLFdBQVdtQixJQUFJLENBQUM2QyxPQUFMLENBQWFSLE1BQWIsQ0FBb0IsQ0FBcEIsRUFBc0IsRUFBdEIsQ0FKZixFQUtJLFVBQVVyQyxJQUFJLENBQUM4QyxNQUxuQixFQU1JLFdBQVc5QyxJQUFJLENBQUNSLE9BQUwsQ0FBYTZDLE1BQWIsQ0FBb0IsQ0FBcEIsRUFBc0IsRUFBdEIsQ0FOZixFQU9JLFVBQVVyQyxJQUFJLENBQUMrQyxNQVBuQixFQVFkLE9BQU1QLElBUlEsRUFTSSxRQUFReEMsSUFBSSxDQUFDYSxJQVRqQixFQVVJLGNBQWNiLElBQUksQ0FBQ1AsVUFWdkIsRUFXSSxVQUFVTyxJQUFJLENBQUNwRCxNQVhuQixFQVlkLFFBQU8sS0FBS29HLFFBQUwsQ0FBY1QsTUFBZCxFQUFxQkgsR0FBckIsQ0FaTyxFQWFkLGFBQWFwQyxJQUFJLENBQUNpRCxTQWJKLEVBY0ksT0FBT2hELEdBQUcsQ0FBQ0MsY0FBSixDQUFtQixRQUFuQixDQWRYLEVBZWQsY0FBY29DLFVBZkEsRUFBZixDQWtCQSxJQUFJTCxRQUFRLENBQUNFLENBQUQsQ0FBUixDQUFZdkYsTUFBWixLQUF1QixTQUEzQixFQUFxQyxDQUNwQ0ssU0FBUyxDQUFDaUcsSUFBVixDQUFlUixRQUFmLEVBQ0EsQ0FGRCxNQUVLLENBQ0oxRixZQUFZLENBQUNrRyxJQUFiLENBQWtCUixRQUFsQixFQUNBLENBRUQsQ0F6Q3NCLENBMEN2QjtBQUNBO0FBQ0EsV0FBS3pGLFNBQUwsR0FBaUJBLFNBQWpCLENBQ1ksS0FBS0QsWUFBTCxHQUFvQkEsWUFBcEIsQ0E3Q1csQ0E4Q3ZCO0FBQ0EsS0F4TE8sRUEwTFJtRyxXQTFMUSx1QkEwTEluRCxJQTFMSixFQTBMUyxtQkFDaEIsSUFBSW9ELFdBQVcsR0FBRyxFQUNoQixXQUFXcEQsSUFBSSxDQUFDMkMsT0FEQSxFQUVoQixhQUFhM0MsSUFBSSxDQUFDNEMsU0FGRixFQUdoQixZQUFZNUMsSUFBSSxDQUFDbkIsUUFIRCxFQUloQixXQUFXLElBQUlLLElBQUosRUFKSyxFQUtoQixVQUFVYyxJQUFJLENBQUM4QyxNQUxDLEVBTWhCLFdBQVc5QyxJQUFJLENBQUNSLE9BTkEsRUFPaEIsVUFBVVEsSUFBSSxDQUFDK0MsTUFQQyxFQVFoQixRQUFRL0MsSUFBSSxDQUFDYSxJQVJHLEVBU2hCLGNBQWNiLElBQUksQ0FBQ1AsVUFUSCxFQVVoQixVQUFVLFNBVk0sRUFXaEIsT0FBT1EsR0FBRyxDQUFDQyxjQUFKLENBQW1CLFFBQW5CLENBWFMsRUFBbEIsQ0FjQUQsR0FBRyxDQUFDSyxPQUFKLENBQVksRUFDWEMsTUFBTSxFQUFDLE1BREksRUFFWEMsR0FBRyxFQUFDLHVDQUZPLEVBR1hsRixJQUFJLEVBQUM2RSxJQUFJLENBQUNDLFNBQUwsQ0FBZWdELFdBQWYsQ0FITSxFQUFaLEVBSUczQyxJQUpILENBSVEsVUFBQUMsR0FBRyxFQUFJLENBQ2QsYUFBWUEsR0FBWix1Q0FDQSxNQUFJLENBQUNwQyxNQUFMLEdBQ0EsQ0FQRCxFQVFBLENBak5PLEVBbU5SK0UsVUFuTlEsc0JBbU5HQyxDQW5OSCxFQW1OSyxDQUNaLEtBQUsxSCxLQUFMLEdBQWEwSCxDQUFDLENBQUNDLE1BQWYsQ0FDQSxJQUFJQyxLQUFLLEdBQUcsS0FBSzVILEtBQUwsQ0FBV2lFLEtBQVgsQ0FBaUIsR0FBakIsQ0FBWixDQUNBLEtBQUtoRSxtQkFBTCxHQUEyQjJILEtBQUssQ0FBQyxDQUFELENBQUwsR0FBUyxHQUFULEdBQWFBLEtBQUssQ0FBQyxDQUFELENBQWxCLEdBQXNCLEdBQXRCLEdBQTBCQSxLQUFLLENBQUMsQ0FBRCxDQUExRCxDQUNBLGFBQVksS0FBSzNILG1CQUFqQix1Q0FDQSxhQUFZLEtBQUtELEtBQWpCLHVDQUVBLENBMU5PLEVBMk5SNkgsUUEzTlEsc0JBMk5FLENBQ1QsS0FBSzFILEtBQUwsR0FBYSxJQUFiLENBQ0EsQ0E3Tk8sRUE4TlIySCxTQTlOUSxxQkE4TkVKLENBOU5GLEVBOE5JLENBQ1gsSUFBSUEsQ0FBQyxLQUFLLElBQVYsRUFBZSxDQUNkLEtBQUtySCxTQUFMLEdBQWlCLEtBQWpCLENBQ0EsS0FBS04sU0FBTCxHQUFpQixJQUFqQixDQUNBLENBSEQsTUFHTSxJQUFHMkgsQ0FBQyxLQUFLLElBQVQsRUFBYyxDQUNuQixLQUFLM0gsU0FBTCxHQUFpQixLQUFqQixDQUNBLEtBQUtNLFNBQUwsR0FBaUIsSUFBakIsQ0FDQSxDQUNELENBdE9PLEVBdU9SMEgsWUF2T1Esd0JBdU9LTCxDQXZPTCxFQXVPTyxDQUNkLEtBQUtuSCxLQUFMLEdBQWF5SCxRQUFRLENBQUMsS0FBSzNHLFNBQUwsQ0FBZXFHLENBQWYsRUFBa0JuSCxLQUFuQixDQUFyQixDQUNBLEtBQUtILEtBQUwsR0FBYSxJQUFiLENBQ0EsS0FBS0ssY0FBTCxHQUFzQmlILENBQXRCLENBR0EsQ0E3T08sRUE4T1JPLE9BOU9RLG1CQThPQVAsQ0E5T0EsRUE4T0UsbUJBQ1QsSUFBSVEsV0FBVyxHQUFHLEtBQUs3RyxTQUFMLENBQWUsS0FBS1osY0FBcEIsQ0FBbEIsQ0FDQSxJQUFJMEgsYUFBYSxHQUFHLElBQUk3RSxJQUFKLEdBQVdVLGtCQUFYLEdBQWdDQyxLQUFoQyxDQUFzQyxHQUF0QyxDQUFwQixDQUZTLENBR0c7QUFDQTtBQUNBO0FBQ0E7QUFDWjtBQUNZLFVBQUdrRSxhQUFhLENBQUMsQ0FBRCxDQUFiLENBQWlCakUsTUFBakIsS0FBNEIsQ0FBL0IsRUFBaUMsQ0FDN0JpRSxhQUFhLENBQUMsQ0FBRCxDQUFiLEdBQW1CLE1BQU1BLGFBQWEsQ0FBQyxDQUFELENBQXRDLENBQ0gsQ0FDYixJQUFJQyxXQUFXLEdBQUdELGFBQWEsQ0FBQyxDQUFELENBQWIsR0FBaUIsR0FBakIsR0FBcUJBLGFBQWEsQ0FBQyxDQUFELENBQWxDLEdBQXNDLEdBQXRDLEdBQTBDQSxhQUFhLENBQUMsQ0FBRCxDQUF6RSxDQUNBRCxXQUFXLENBQUNqQixPQUFaLEdBQXNCbUIsV0FBdEIsQ0FFQSxJQUFJVixDQUFDLEtBQUssS0FBVixFQUFnQixDQUNmLEtBQUtILFdBQUwsQ0FBaUJXLFdBQWpCLEVBQ0EsYUFBWUEsV0FBWix1Q0FDQSxhQUFZQSxXQUFXLENBQUNmLE1BQXhCLHVDQUdBOUMsR0FBRyxDQUFDSyxPQUFKLENBQVksRUFDWEUsR0FBRyxFQUFFLGtEQUFnRCxTQUFoRCxHQUEwRCxNQUExRCxHQUFpRXNELFdBQVcsQ0FBQ2YsTUFEdkUsRUFBWixFQUVHdEMsSUFGSCxDQUVRLFVBQUFDLEdBQUcsRUFBSSxDQUNkLE1BQUksQ0FBQ3BDLE1BQUwsR0FDQSxhQUFZb0MsR0FBRyxDQUFDLENBQUQsQ0FBZix1Q0FDQSxDQUxELEVBTUEsQ0FDRCxLQUFLMUUsS0FBTCxHQUFhLEtBQWIsQ0FDQSxLQUFLRixVQUFMLEdBQWdCLEtBQWhCLENBRUEsQ0E1UU8sRUErUVJtSSxRQS9RUSxzQkErUUUsb0JBQ1Q7QUFDQWhFLFNBQUcsQ0FBQ2dFLFFBQUosQ0FBYSxFQUNUakQsT0FBTyxFQUFFLGlCQUFDTixHQUFELEVBQVMsQ0FDZCxhQUFZLFVBQVVBLEdBQUcsQ0FBQ3dELFFBQTFCLHVDQUNBLGFBQVksWUFBWXhELEdBQUcsQ0FBQzZDLE1BQTVCLHVDQUNOLE1BQUksQ0FBQ25HLEtBQUwsR0FBYXNELEdBQUcsQ0FBQzZDLE1BQWpCLENBQ0F0RCxHQUFHLENBQUNLLE9BQUosQ0FBWSxFQUNYRSxHQUFHLEVBQUUsb0RBQW9ELE1BQUksQ0FBQ3BELEtBRG5ELEVBQVosRUFFR3FELElBRkgsQ0FFUSxVQUFBMEQsSUFBSSxFQUFFLENBQ2IsSUFBSXRELElBQUksR0FBR3NELElBQUksQ0FBQyxDQUFELENBQUosQ0FBUTdJLElBQVIsQ0FBYThJLE9BQWIsQ0FBcUJDLFlBQWhDLENBQ0EsYUFBWXhELElBQVosdUNBQ0EsSUFBSXlELFVBQVUsR0FBR0gsSUFBSSxDQUFDLENBQUQsQ0FBSixDQUFRN0ksSUFBUixDQUFhOEksT0FBYixDQUFxQkUsVUFBckIsQ0FBZ0N6RSxLQUFoQyxDQUFzQyxHQUF0QyxDQUFqQixDQUNBLGFBQVl5RSxVQUFVLENBQUMsQ0FBRCxDQUF0Qix1Q0FDQSxNQUFJLENBQUM1SCxLQUFMLEdBQWFtRSxJQUFiLENBQ0EsTUFBSSxDQUFDaEUsU0FBTCxHQUFpQnlILFVBQVUsQ0FBQyxDQUFELENBQTNCLENBQ0EsTUFBSSxDQUFDeEgsZ0JBQUwsR0FBd0IsS0FBeEIsQ0FDQSxNQUFJLENBQUN5SCxTQUFMLENBQWUsWUFBVSxDQUN4QixLQUFLekgsZ0JBQUwsR0FBd0IsSUFBeEIsQ0FDQSxDQUZELEVBR0EsTUFBSSxDQUFDaUMsWUFBTCxHQUNBLENBZEQsRUFlRyxDQXBCUSxFQUFiLEVBc0JBLENBdlNPLEVBd1NSO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNTeUYsWUFwVEQsc0JBb1RXLENBQ2xCLElBQUluRSxJQUFJLEdBQUcsSUFBWCxDQUNZSixHQUFHLENBQUN3RSxXQUFKLENBQWdCLEVBQ1pDLEtBQUssRUFBRSxDQURLLEVBRVpDLFFBQVEsRUFBRSxDQUFDLFVBQUQsRUFBYSxZQUFiLENBRkUsRUFJWkMsVUFBVSxFQUFFLENBQUMsUUFBRCxFQUFXLE9BQVgsQ0FKQSxFQU1aNUQsT0FBTyxFQUFHLGlCQUFDTixHQUFELEVBQVMsQ0FDZixhQUFZbUUsTUFBTSxDQUFDbkUsR0FBRyxDQUFDb0UsYUFBSixDQUFrQixDQUFsQixDQUFELENBQWxCLHVDQUNsQjdFLEdBQUcsQ0FBQzhFLFlBQUosQ0FBaUIsRUFDaEJDLElBQUksRUFBRXRFLEdBQUcsQ0FBQ29FLGFBRE0sRUFBakIsRUFGaUMsQ0FNakM7QUFDQSx1QkFBWSxVQUFVRCxNQUFNLENBQUNuRSxHQUFHLENBQUNvRSxhQUFKLENBQWtCLENBQWxCLENBQUQsQ0FBaEIsR0FBeUMsWUFBckQsdUNBQ0EsYUFBWSxZQUFaLHVDQUVBekUsSUFBSSxDQUFDekUsS0FBTCxHQUFhLFlBQWIsQ0FWaUMsQ0FXakM7QUFDQTtBQUNDO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUVBO0FBQ0E7QUFFQTtBQUVEO0FBRWUsU0EvQ1csRUFBaEIsRUFpREgsQ0F2V0YsRUF3V1JxSixVQXhXUSxzQkF3V0czQixDQXhXSCxFQXdXSyxDQUNaLElBQUlBLENBQUMsQ0FBQzFGLEdBQUYsSUFBUyxLQUFiLEVBQW1CLENBQ2xCO0FBQ0EsYUFBS3RCLGFBQUwsR0FBcUIsS0FBckIsQ0FDQSxLQUFLQyxXQUFMLEdBQW1CLElBQW5CLENBSGtCLENBSWxCO0FBRUE7QUFFQSxhQUFLWCxLQUFMLEdBQWEsRUFBYixDQUNBLEtBQUthLE9BQUwsR0FBZSxFQUFmLENBQ0EsS0FBS0QsUUFBTCxHQUFnQixFQUFoQixDQUNBLEtBQUtHLE9BQUwsR0FBZSxFQUFmLENBWGtCLENBWWxCO0FBQ0EsT0FiRCxNQWFNLElBQUcyRyxDQUFDLENBQUMxRixHQUFGLElBQVMsTUFBWixFQUFtQixDQUN4QixLQUFLdEIsYUFBTCxHQUFxQixJQUFyQixDQUNBLEtBQUtDLFdBQUwsR0FBbUIsS0FBbkIsQ0FDQSxDQUhLLE1BR0EsSUFBRytHLENBQUMsQ0FBQzFGLEdBQUYsSUFBUyxNQUFaLEVBQW1CLENBQ1QsS0FBS3FHLFFBQUwsR0FDZixLQUFLMUgsV0FBTCxHQUFtQixJQUFuQixDQUNBLEtBQUtELGFBQUwsR0FBcUIsS0FBckIsQ0FId0IsQ0FJeEI7QUFDQTtBQUNBO0FBQ0E7QUFDWSxPQVJQLE1BUVcsQ0FDaEIsS0FBS2tJLFFBQUwsR0FDQSxDQUNELENBcFlPLEVBc1lSeEIsUUF0WVEsb0JBc1lDa0MsS0F0WUQsRUFzWVFDLEtBdFlSLEVBc1llLENBQ3RCLElBQU1DLFFBQVEsR0FBR2xHLElBQUksQ0FBQ21HLEdBQUwsQ0FBU0gsS0FBSyxDQUFDSSxXQUFOLEVBQVQsRUFBOEJKLEtBQUssQ0FBQzlGLFFBQU4sRUFBOUIsRUFBZ0Q4RixLQUFLLENBQUM1RixPQUFOLEVBQWhELENBQWpCLENBQ0EsSUFBTWlHLFFBQVEsR0FBR3JHLElBQUksQ0FBQ21HLEdBQUwsQ0FBU0YsS0FBSyxDQUFDRyxXQUFOLEVBQVQsRUFBOEJILEtBQUssQ0FBQy9GLFFBQU4sRUFBOUIsRUFBZ0QrRixLQUFLLENBQUM3RixPQUFOLEVBQWhELENBQWpCLENBQ0EsSUFBSXdDLEdBQUcsR0FBRyxPQUFLLEVBQUwsR0FBUSxFQUFSLEdBQVcsRUFBckIsQ0FDQSxPQUFPLENBQUN5RCxRQUFRLEdBQUdILFFBQVosSUFBc0J0RCxHQUE3QixDQUNBLENBM1lPLEVBNFlSMEQsV0E1WVEseUJBNFlLLENBQ1osSUFBSW5GLElBQUksR0FBRyxJQUFYLENBQ0FKLEdBQUcsQ0FBQ3dFLFdBQUosQ0FBZ0IsRUFDWkMsS0FBSyxFQUFFLENBREssRUFFWkMsUUFBUSxFQUFFLENBQUMsVUFBRCxFQUFhLFlBQWIsQ0FGRSxFQUdaQyxVQUFVLEVBQUUsQ0FBQyxPQUFELEVBQVMsUUFBVCxDQUhBLEVBSVo1RCxPQUFPLEVBQUUsaUJBQVVOLEdBQVYsRUFBZSxDQUNwQixhQUFZUCxJQUFJLENBQUNDLFNBQUwsQ0FBZU0sR0FBRyxDQUFDb0UsYUFBbkIsQ0FBWix1Q0FDTnpFLElBQUksQ0FBQzNFLFFBQUwsR0FBZ0JnRixHQUFHLENBQUNvRSxhQUFwQixDQUNBekUsSUFBSSxDQUFDbkQsT0FBTCxHQUFhd0QsR0FBRyxDQUFDb0UsYUFBSixDQUFrQixDQUFsQixDQUFiLENBSDBCLENBSTFCO0FBQ0E7QUFDQTtBQUNBO0FBQ0csU0FaVyxFQUFoQixFQWNBLENBNVpPLEVBNlpSL0UsR0E3WlEsZUE2WkptRixLQTdaSSxFQTZaRUMsS0E3WkYsRUE2WlEsQ0FDSDtBQUNaO0FBQ0EsVUFBSU0sTUFBTSxHQUFHLElBQUl2RyxJQUFKLENBQVNnRyxLQUFULENBQWIsQ0FIZSxDQUlIO0FBQ1osVUFBSVEsTUFBTSxHQUFHLElBQUl4RyxJQUFKLENBQVNpRyxLQUFULENBQWIsQ0FMZSxDQU1IO0FBQ1osVUFBR00sTUFBTSxDQUFDNUQsT0FBUCxNQUFvQjZELE1BQU0sQ0FBQzdELE9BQVAsRUFBdkIsRUFBd0MsQ0FDdkM7QUFDQSxhQUFLakYsTUFBTCxHQUFZLFNBQVo7QUFDQSxPQUhELE1BR08sSUFBRzZJLE1BQU0sQ0FBQzVELE9BQVAsS0FBbUI2RCxNQUFNLENBQUM3RCxPQUFQLEVBQXRCLEVBQXVDO0FBQzdDLHFCQUFZLFFBQVo7QUFDQSxhQUFLakYsTUFBTCxHQUFZLFFBQVo7QUFDQTtBQUNELEtBM2FPO0FBNGFSK0ksUUE1YVEsZ0JBNGFIM0YsSUE1YUcsRUE0YUdyQixLQTVhSCxFQTRhUztBQUNoQixXQUFLN0MsVUFBTCxHQUFrQixJQUFsQjtBQUNBO0FBQ0E7QUFDQTtBQUNBLFdBQUtZLEtBQUwsR0FBYXNELElBQUksQ0FBQ2EsSUFBbEI7QUFDQSxXQUFLaEUsU0FBTCxHQUFpQm1ELElBQUksQ0FBQ25CLFFBQXRCO0FBQ0E7QUFDQSxXQUFLaEQsbUJBQUwsR0FBMkJtRSxJQUFJLENBQUNSLE9BQWhDO0FBQ0EsV0FBSy9DLE9BQUwsR0FBZXVELElBQUksQ0FBQzRGLElBQXBCO0FBQ0EsV0FBS3BKLFFBQUwsR0FBZ0J3RCxJQUFJLENBQUM4QyxNQUFyQjtBQUNBLFdBQUtuRyxPQUFMLEdBQWVxRCxJQUFJLENBQUMrQyxNQUFwQjtBQUNBLFdBQUs1RixRQUFMLEdBQWdCNkMsSUFBaEI7QUFDQSxLQXpiTztBQTBiUjZGLGNBMWJRLHdCQTBiSTs7QUFFVixVQUFJNUcsSUFBSSxHQUFHLElBQUlDLElBQUosRUFBWDs7QUFFQSxVQUFJQyxRQUFRLEdBQUdGLElBQUksQ0FBQ0csUUFBTCxLQUFrQixDQUFqQzs7QUFFQSxVQUFJQyxPQUFPLEdBQUdKLElBQUksQ0FBQ0ssT0FBTCxFQUFkOztBQUVBLFVBQUlDLFNBQVMsR0FBRyxHQUFoQjs7QUFFQSxVQUFJSixRQUFRLElBQUksQ0FBWixJQUFpQkEsUUFBUSxJQUFJLENBQWpDLEVBQW9DO0FBQ2pDQSxnQkFBUSxHQUFHLE1BQU1BLFFBQWpCO0FBQ0Y7O0FBRUQsVUFBSUUsT0FBTyxJQUFJLENBQVgsSUFBZ0JBLE9BQU8sSUFBSSxDQUEvQixFQUFrQztBQUMvQkEsZUFBTyxHQUFHLE1BQU1BLE9BQWhCO0FBQ0Y7QUFDRDs7QUFFRztBQUNBLFVBQUlHLE9BQU8sR0FBRyxJQUFJTixJQUFKLENBQVMsS0FBS3JELG1CQUFkLENBQWQ7QUFDQSxVQUFJNEQsVUFBVSxHQUFJRCxPQUFPLENBQUNGLE9BQVIsS0FBb0IsS0FBSzdDLE9BQTNDO0FBQ0gsVUFBSWlELFlBQVksR0FBRyxJQUFJUixJQUFKLENBQVNNLE9BQU8sQ0FBQ0csT0FBUixDQUFnQkYsVUFBaEIsQ0FBVCxFQUFzQ0csa0JBQXRDLEdBQTJEQyxLQUEzRCxDQUFpRSxHQUFqRSxDQUFuQjtBQUNHO0FBQ0E7QUFDSDtBQUNHO0FBQ0E7QUFDQTtBQUNBO0FBQ0g7QUFDRyxVQUFHSCxZQUFZLENBQUMsQ0FBRCxDQUFaLENBQWdCSSxNQUFoQixLQUEyQixDQUE5QixFQUFnQztBQUM1Qkosb0JBQVksQ0FBQyxDQUFELENBQVosR0FBa0IsTUFBTUEsWUFBWSxDQUFDLENBQUQsQ0FBcEM7QUFDSDtBQUNELFVBQUlELFVBQVUsR0FBR0MsWUFBWSxDQUFDLENBQUQsQ0FBWixHQUFnQixHQUFoQixHQUFvQkEsWUFBWSxDQUFDLENBQUQsQ0FBaEMsR0FBb0MsR0FBcEMsR0FBd0NBLFlBQVksQ0FBQyxDQUFELENBQXJFO0FBQ0g7QUFDQTs7QUFFQSxXQUFLSyxHQUFMLENBQVMsS0FBS25FLEtBQWQsRUFBb0JxRCxJQUFwQjtBQUNBLFVBQUllLElBQUksR0FBRztBQUNULG1CQUFXLEtBQUs3QyxRQUFMLENBQWN3RixPQURoQjtBQUVULHFCQUFhLEtBQUt4RixRQUFMLENBQWN5RixTQUZsQjtBQUdULG9CQUFZLEtBQUsvRixTQUhSO0FBSVQsbUJBQVcsS0FBS00sUUFBTCxDQUFjMEYsT0FKaEI7QUFLVCxrQkFBVSxLQUFLckcsUUFMTjtBQU1ULG1CQUFXLEtBQUtYLG1CQU5QO0FBT1Qsa0JBQVUsS0FBS2MsT0FQTjtBQVFULGdCQUFRLEtBQUtELEtBUko7QUFTVCxzQkFBYytDLFVBVEw7QUFVVCxrQkFBVSxLQUFLdEMsUUFBTCxDQUFjUCxNQVZmO0FBV1QsdUJBQWUsS0FBS0osUUFYWDtBQVlULGVBQU95RCxHQUFHLENBQUNDLGNBQUosQ0FBbUIsUUFBbkIsQ0FaRSxFQUFYOztBQWNBLG1CQUFZQyxJQUFJLENBQUNDLFNBQUwsQ0FBZUosSUFBZixDQUFaO0FBQ0FDLFNBQUcsQ0FBQ0ssT0FBSixDQUFZO0FBQ1hDLGNBQU0sRUFBQyxNQURJO0FBRVhDLFdBQUcsRUFBQyx1Q0FGTztBQUdYbEYsWUFBSSxFQUFDNkUsSUFBSSxDQUFDQyxTQUFMLENBQWVKLElBQWYsQ0FITSxFQUFaO0FBSUdTLFVBSkgsQ0FJUSxVQUFBQyxHQUFHLEVBQUk7QUFDZCxxQkFBWUEsR0FBWjtBQUNBLE9BTkQ7QUFPQSxXQUFLbkUsV0FBTCxHQUFtQixLQUFuQjtBQUNBLFdBQUtELGFBQUwsR0FBcUIsSUFBckI7O0FBRUE4RSxnQkFBVSxDQUFDLFlBQU07QUFDaEIsY0FBSSxDQUFDOUMsTUFBTDtBQUNBLE9BRlMsRUFFUixJQUZRLENBQVY7QUFHQSxXQUFLeEMsVUFBTCxHQUFrQixLQUFsQjs7QUFFRCxLQS9mTztBQWdnQlJnSyx5QkFoZ0JRLGlDQWdnQmNqSCxRQWhnQmQsRUFnZ0J1Qjs7QUFFOUIsVUFBSUEsUUFBUSxDQUFDQyxNQUFULEtBQW9CLEtBQXhCLEVBQThCO0FBQzdCLGFBQUtpSCx5QkFBTDtBQUNBLE9BRkQsTUFFTSxJQUFJbEgsUUFBUSxDQUFDQyxNQUFULEtBQW9CLGFBQXhCLEVBQXNDO0FBQzNDLGFBQUtrSCxzQkFBTDtBQUNBLE9BRkssTUFFQSxJQUFJbkgsUUFBUSxDQUFDQyxNQUFULEtBQW9CLGNBQXhCLEVBQXVDO0FBQzVDLGFBQUttSCxzQkFBTDtBQUNBOztBQUVELEtBMWdCTztBQTJnQlJGLDZCQTNnQlEsdUNBMmdCbUI7QUFDMUI7QUFDQSxXQUFLOUksU0FBTCxDQUFlaUosSUFBZixDQUFvQixVQUFTQyxDQUFULEVBQVlDLENBQVosRUFBYztBQUNoQyxZQUFJQyxLQUFLLEdBQUdGLENBQUMsQ0FBQ3RGLElBQWQ7QUFDQSxZQUFJeUYsS0FBSyxHQUFHRixDQUFDLENBQUN2RixJQUFkO0FBQ0EsWUFBSXdGLEtBQUssR0FBR0MsS0FBWixFQUFrQjtBQUNoQixpQkFBTyxDQUFDLENBQVI7QUFDRCxTQUZELE1BRU8sSUFBSUQsS0FBSyxHQUFHQyxLQUFaLEVBQWtCO0FBQ3ZCLGlCQUFPLENBQVA7QUFDRDtBQUNELGVBQU8sQ0FBUDtBQUNELE9BVEQ7QUFVQSxLQXZoQk87O0FBeWhCUk4sMEJBemhCUSxvQ0F5aEJnQjtBQUN2QjtBQUNBO0FBQ0E7QUFDQSxXQUFLaEosWUFBTCxDQUFrQmtKLElBQWxCLENBQXVCLFVBQVNDLENBQVQsRUFBWUMsQ0FBWixFQUFjO0FBQ25DLFlBQUlDLEtBQUssR0FBR0YsQ0FBQyxDQUFDM0csT0FBZDtBQUNBLFlBQUk4RyxLQUFLLEdBQUdGLENBQUMsQ0FBQzVHLE9BQWQ7QUFDQSxZQUFJNkcsS0FBSyxHQUFHQyxLQUFaLEVBQWtCO0FBQ2hCLGlCQUFPLENBQUMsQ0FBUjtBQUNELFNBRkQsTUFFTyxJQUFJRCxLQUFLLEdBQUdDLEtBQVosRUFBa0I7QUFDdkIsaUJBQU8sQ0FBUDtBQUNEO0FBQ0QsZUFBTyxDQUFQO0FBQ0QsT0FURDtBQVVBLEtBdmlCTzs7QUF5aUJSTCwwQkF6aUJRLG9DQXlpQmdCO0FBQ3ZCO0FBQ0E7QUFDQTtBQUNBLFdBQUtoSixTQUFMLENBQWVpSixJQUFmLENBQW9CLFVBQVNDLENBQVQsRUFBWUMsQ0FBWixFQUFjO0FBQ2hDLFlBQUlDLEtBQUssR0FBR0YsQ0FBQyxDQUFDeEQsT0FBZDtBQUNBLFlBQUkyRCxLQUFLLEdBQUdGLENBQUMsQ0FBQ3pELE9BQWQ7QUFDQSxZQUFJMEQsS0FBSyxHQUFHQyxLQUFaLEVBQWtCO0FBQ2hCLGlCQUFPLENBQUMsQ0FBUjtBQUNELFNBRkQsTUFFTyxJQUFJRCxLQUFLLEdBQUdDLEtBQVosRUFBa0I7QUFDdkIsaUJBQU8sQ0FBUDtBQUNEO0FBQ0QsZUFBTyxDQUFQO0FBQ0QsT0FURDtBQVVBLEtBdmpCTzs7QUF5akJSO0FBQ0FDLGtCQTFqQlEsMEJBMGpCT0MsSUExakJQLEVBMGpCWTtBQUNuQixVQUFJQSxJQUFJLENBQUMxSCxNQUFMLEtBQWdCLFNBQXBCLEVBQThCOztBQUU3QixxQkFBWSxNQUFaOztBQUVBbUIsV0FBRyxDQUFDSyxPQUFKLENBQVk7QUFDWkUsYUFBRyxFQUFFLHlDQUF1Q1AsR0FBRyxDQUFDQyxjQUFKLENBQW1CLFFBQW5CLENBQXZDLEdBQXNFLEtBRC9EO0FBRVpLLGdCQUFNLEVBQUUsS0FGSSxFQUFaO0FBR0dFLFlBSEgsQ0FHUSxVQUFBQyxHQUFHLEVBQUU7QUFDWix1QkFBWSxNQUFaLEVBQW1CQSxHQUFHLENBQUMsQ0FBRCxDQUFILENBQU9wRixJQUExQjtBQUNBLGdCQUFJLENBQUMwQixZQUFMLEdBQW9CMEQsR0FBRyxDQUFDLENBQUQsQ0FBSCxDQUFPcEYsSUFBM0I7QUFDQSxTQU5EOzs7O0FBVUEsT0FkRCxNQWNPLElBQUlrTCxJQUFJLENBQUMxSCxNQUFMLEtBQWdCLFVBQXBCLEVBQWdDOztBQUV0QyxxQkFBWSxNQUFaO0FBQ0FtQixXQUFHLENBQUNLLE9BQUosQ0FBWTtBQUNaRSxhQUFHLEVBQUUseUNBQXVDUCxHQUFHLENBQUNDLGNBQUosQ0FBbUIsUUFBbkIsQ0FBdkMsR0FBc0UsS0FEL0Q7QUFFWkssZ0JBQU0sRUFBRSxLQUZJLEVBQVo7QUFHR0UsWUFISCxDQUdRLFVBQUFDLEdBQUcsRUFBRTtBQUNaLHVCQUFZLE1BQVosRUFBbUJBLEdBQUcsQ0FBQyxDQUFELENBQUgsQ0FBT3BGLElBQTFCO0FBQ0EsZ0JBQUksQ0FBQzBCLFlBQUwsR0FBb0IwRCxHQUFHLENBQUMsQ0FBRCxDQUFILENBQU9wRixJQUEzQjtBQUNBLFNBTkQ7QUFPQSxPQVZNLE1BVUEsSUFBSWtMLElBQUksQ0FBQzFILE1BQUwsS0FBZ0IsS0FBcEIsRUFBMkI7O0FBRWpDLHFCQUFZLE9BQVo7QUFDQW1CLFdBQUcsQ0FBQ0ssT0FBSixDQUFZO0FBQ1pFLGFBQUcsRUFBRSx5Q0FBdUNQLEdBQUcsQ0FBQ0MsY0FBSixDQUFtQixRQUFuQixDQUF2QyxHQUFzRSxLQUQvRDtBQUVaSyxnQkFBTSxFQUFFLEtBRkksRUFBWjtBQUdHRSxZQUhILENBR1EsVUFBQUMsR0FBRyxFQUFFO0FBQ1osdUJBQVksTUFBWixFQUFtQkEsR0FBRyxDQUFDLENBQUQsQ0FBSCxDQUFPcEYsSUFBMUI7QUFDQSxnQkFBSSxDQUFDMEIsWUFBTCxHQUFvQjBELEdBQUcsQ0FBQyxDQUFELENBQUgsQ0FBT3BGLElBQTNCO0FBQ0EsU0FORDtBQU9BO0FBQ0QsS0E5bEJPOzs7O0FBa21CUm1MLGNBbG1CUSxzQkFrbUJHQyxFQWxtQkgsRUFrbUJNO0FBQ2J6RyxTQUFHLENBQUNLLE9BQUosQ0FBWTtBQUNaRSxXQUFHLEVBQUUsNENBQTBDa0csRUFEbkM7QUFFWm5HLGNBQU0sRUFBRSxLQUZJLEVBQVo7QUFHR0UsVUFISCxDQUdRLFVBQUFDLEdBQUcsRUFBRTtBQUNaLHFCQUFZQSxHQUFHLENBQUMsQ0FBRCxDQUFILENBQU9wRixJQUFuQjtBQUNBLE9BTEQ7QUFNQSxLQXptQk87O0FBMm1CUnFMLFlBM21CUSxvQkEybUJDRCxFQTNtQkQsRUEybUJJO0FBQ1h6RyxTQUFHLENBQUMyRyxXQUFKLENBQWdCLEVBQUN0SixLQUFLLEVBQUUsVUFBUixFQUFtQnVKLElBQUksRUFBQyxJQUF4QixFQUFoQjtBQUNBNUcsU0FBRyxDQUFDSyxPQUFKLENBQVk7QUFDWkUsV0FBRyxFQUFFLDZDQUEyQ2tHLEVBQTNDLEdBQThDLEdBQTlDLEdBQWtEekcsR0FBRyxDQUFDQyxjQUFKLENBQW1CLFFBQW5CLENBRDNDO0FBRVpLLGNBQU0sRUFBRSxLQUZJLEVBQVo7QUFHR0UsVUFISCxDQUdRLFVBQUFDLEdBQUcsRUFBRTtBQUNaLGNBQUksQ0FBQ3BDLE1BQUw7QUFDQThDLGtCQUFVLENBQUMsWUFBWSxDQUFDbkIsR0FBRyxDQUFDNkcsV0FBSixHQUFtQixDQUFqQyxFQUFtQyxJQUFuQyxDQUFWO0FBQ0EsT0FORDtBQU9BLEtBcG5CTztBQXFuQlJDLGNBcm5CUSxzQkFxbkJHTCxFQXJuQkgsRUFxbkJNO0FBQ2J6RyxTQUFHLENBQUMyRyxXQUFKLENBQWdCLEVBQUN0SixLQUFLLEVBQUUsVUFBUixFQUFtQnVKLElBQUksRUFBQyxJQUF4QixFQUFoQjtBQUNBNUcsU0FBRyxDQUFDSyxPQUFKLENBQVk7QUFDWkUsV0FBRyxFQUFFLGdEQUE4Q2tHLEVBQTlDLEdBQWlELEdBQWpELEdBQXFEekcsR0FBRyxDQUFDQyxjQUFKLENBQW1CLFFBQW5CLENBRDlDO0FBRVpLLGNBQU0sRUFBRSxLQUZJLEVBQVo7QUFHR0UsVUFISCxDQUdRLFVBQUFDLEdBQUcsRUFBRTtBQUNaLGVBQUksQ0FBQ3BDLE1BQUw7QUFDQThDLGtCQUFVLENBQUMsWUFBWSxDQUFDbkIsR0FBRyxDQUFDNkcsV0FBSixHQUFtQixDQUFqQyxFQUFtQyxJQUFuQyxDQUFWO0FBQ0EsT0FORDtBQU9BLEtBOW5CTztBQStuQlJFLGVBL25CUSx5QkErbkJLO0FBQ1osVUFBSTNHLElBQUksR0FBRyxJQUFYO0FBQ0FKLFNBQUcsQ0FBQ3dFLFdBQUosQ0FBZ0I7QUFDWkMsYUFBSyxFQUFFLENBREs7QUFFWkMsZ0JBQVEsRUFBRSxDQUFDLFVBQUQsRUFBYSxZQUFiLENBRkU7QUFHWkMsa0JBQVUsRUFBRSxDQUFDLE9BQUQsRUFBUyxRQUFULENBSEE7QUFJWjVELGVBQU8sRUFBRSxpQkFBVU4sR0FBVixFQUFlO0FBQzFCO0FBQ0E7QUFDQVQsYUFBRyxDQUFDVSxVQUFKLENBQWU7QUFDZEgsZUFBRyxFQUFFLCtDQURTO0FBRWRJLG9CQUFRLEVBQUVGLEdBQUcsQ0FBQ29FLGFBQUosQ0FBa0IsQ0FBbEIsQ0FGSTtBQUdkakUsZ0JBQUksRUFBRSxTQUhRO0FBSWRDLG9CQUFRLEVBQUU7QUFDVEMscUJBQU8sRUFBRVYsSUFBSSxDQUFDMUQ7QUFDZDtBQUZTLGFBSkk7QUFRZHFFLG1CQUFPLEVBQUUsaUJBQUNDLGFBQUQsRUFBbUI7QUFDM0I7QUFDQTtBQUNBRyx3QkFBVSxDQUFDLFlBQU07QUFDaEJmLG9CQUFJLENBQUMvQixNQUFMO0FBQ0EsZUFGUyxFQUVSLElBRlEsQ0FBVjtBQUdBLGFBZGE7QUFlZDRDLGdCQUFJLEVBQUUsY0FBQ0MsR0FBRCxFQUFTO0FBQ2QsMkJBQVlBLEdBQVo7QUFDQSxhQWpCYSxFQUFmOztBQW1CRyxTQTFCVyxFQUFoQjs7O0FBNkJBLFdBQUtyRixVQUFMLEdBQWdCLEtBQWhCOztBQUVBLEtBaHFCTyxFQXBGSyxFIiwiZmlsZSI6IjE0OC5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG5cblx0aW1wb3J0IGh4TmF2YmFyIGZyb20gXCJAL2NvbXBvbmVudHMvaHgtbmF2YmFyL2h4LW5hdmJhclwiO1xuXHRpbXBvcnQgeGZsU2VsZWN0IGZyb20gJy4uLy4uL2NvbXBvbmVudHMveGZsLXNlbGVjdC94Zmwtc2VsZWN0LnZ1ZSc7IFxuXHRleHBvcnQgZGVmYXVsdCB7XG5cdFx0Y29tcG9uZW50czoge2h4TmF2YmFyfSxcblx0XHRkYXRhKCkge1xuXHRcdFx0cmV0dXJuIHtcblx0XHRcdFx0dGFiYmFyOiB0aGlzLiRzdG9yZS5zdGF0ZS50YWJiYXIsXG5cdFx0XHRcdGZpbGVwYXRoOicnLFxuXHRcdFx0XHRpaXNTZWxlY3Q6IHRydWUsXG5cdFx0XHRcdGlUaW1lOiAnJyxcblx0XHRcdFx0aVRpbWVJbkF1c3NpZUZvcm1hdDogJycsXG5cdFx0XHRcdGl0ZW1FZGl0b3I6IGZhbHNlLFxuXHRcdFx0XHRjc2hvdzogZmFsc2UsXG5cdFx0XHRcdGNoTnVtOiBmYWxzZSxcblx0XHRcdFx0aXNzU2VsZWN0OiBmYWxzZSxcblx0XHRcdFx0cG9wRnJvbTogJ2JvdHRvbScsXG5cdFx0XHRcdHBhY2tzOiAwLFxuXHRcdFx0XHRyb3VuZDogMjAsXG5cdFx0XHRcdG5lZWRDaGFuZ2VJdGVtOiAnJyxcblx0XHRcdFx0YWRkSXRlbVRvTGlzdDogdHJ1ZSxcblx0XHRcdFx0bmVlZEFkZEl0ZW06IGZhbHNlLFxuXHRcdFx0XHRpRGV0YWlsczogJycsXG5cdFx0XHRcdGlDaXRpbWU6ICcnLFxuXHRcdFx0XHRpTmFtZTogJycsXG5cdFx0XHRcdGlJdGVtaWQ6ICcnLFxuXHRcdFx0XHRzdGF0dXM6J2luc3RvY2snLFxuICAgICAgICAgICAgICAgIGlDYXRlZ29yeTogJycsXG5cdFx0XHRcdHJlZnJlc2hpQ2F0ZWdvcnk6IHRydWUsXG5cdFx0XHRcdHNob3BMaXN0OltdLFxuXHRcdFx0XHRvbGRzdG9ja0xpc3Q6IFtdLFxuXHRcdFx0XHRzdG9ja0xpc3Q6W10sXG5cdFx0XHRcdGFkZF9zcmM6JycsXG5cdFx0XHRcdGVkaXRJdGVtOm51bGwsXG5cdFx0XHRcdGljb2RlOicnLFxuXHRcdFx0XHRjb25maWcxOntcblx0XHRcdFx0XHR0aXRsZTogJ0dyb2NlcnknLFxuXHRcdFx0XHRcdGNvbG9yOiAnYmxhY2snLFxuXHRcdFx0XHRcdGJhY2tncm91bmRDb2xvcjogJyNCMEMwN0EnLFxuXHRcdFx0XHRcdGJhY2s6IGZhbHNlLFxuXHRcblx0XHRcdFx0XHRzdGF0dXNCYXJCYWNrZ3JvdW5kOicjQjBDMDdBJyxcblx0XHRcdFx0XHRyaWdodEJ1dHRvbjpbe1xuXHRcdFx0XHRcdFx0a2V5OiAnc2NhbicsXG5cdFx0XHRcdFx0XHRpY29uOiAnJiN4ZTYyYzsnLFxuXHRcdFx0XHRcdFx0cG9zaXRpb246ICdsZWZ0J1xuXHRcdFx0XHRcdH1dLFxuXHRcdFx0XHRcdGxlZnRCdXR0b246IFt7XG5cdFx0XHRcdFx0XHRrZXk6ICdhZGQnLFxuXHRcdFx0XHRcdFx0aWNvbjogJyYjeGU2MDM7Jyxcblx0XHRcdFx0XHRcdHBvc2l0aW9uOiAnbGVmdCdcblx0XHRcdFx0XHR9XSxcblx0XHRcdFx0fSxcblx0XHRcdFx0Y29uZmlnMjp7XG5cdFx0XHRcdFx0dGl0bGU6ICdBZGQgcHJvZHVjdCcsXG5cdFx0XHRcdFx0Y29sb3I6ICdibGFjaycsXG5cdFx0XHRcdFx0YmFjazogZmFsc2UsXG5cdFx0XHRcdFx0YmFja2dyb3VuZENvbG9yOiAnI0IwQzA3QScsXG5cdFx0XHRcdFx0c3RhdHVzQmFyQmFja2dyb3VuZDonI0IwQzA3QScsXG5cdFx0XHRcdFx0bGVmdEJ1dHRvbjogW3tcblx0XHRcdFx0XHRcdGtleTogJ2JhY2snLFxuXHRcdFx0XHRcdFx0aWNvbjogJyYjeGU2Nzk7Jyxcblx0XHRcdFx0XHRcdHBvc2l0aW9uOiAnbGVmdCdcblx0XHRcdFx0XHR9XSxcblx0XHRcdFx0XHRyaWdodEJ1dHRvbjpbe1xuXHRcdFx0XHRcdFx0a2V5OiAnc2NhbicsXG5cdFx0XHRcdFx0XHRpY29uOiAnJiN4ZTYyYzsnLFxuXHRcdFx0XHRcdFx0cG9zaXRpb246ICdsZWZ0J1xuXHRcdFx0XHRcdH1dLFxuXHRcdFx0XHR9LFxuXHRcdFx0XHRvcHRpb25zOiBbJ0VnZ3MnLCAnRnJ1aXQnLCdWZWdldGFibGUnLCdEYWlyeScsJ0FuaW1hbCBwcm9kdWN0JywnRnJvemVuJywnQ2FubmVkIEdvb2RzJywnRnJvemVuIEZvb2RzJywnRGVsaScsJ090aGVycyddLFxuXHRcdFx0XHRzb3J0aW5nTWV0aG9kOiBbJ1JlY2VudCBBZGRlZCcsICdBLXonLCAnRXhwaXJlIFNvb24nXSxcblx0XHRcdFx0Y2hvb3NlVGFnczogWydFeHBpcmVkJywgJ0NvbnN1bWVkJywgJ0FsbCddLFxuXHRcdFx0XHR2YWx1ZTogJycsXG5cdFx0XHR9XG5cdFx0fSxcblx0XHRvbkxvYWQoKXtcblx0XHRcdC8vIGNvbnNvbGUubG9nKHVuaS5nZXRTdG9yYWdlU3luYygndXNlcklkJykpXG5cdFx0XHR0aGlzLmdldENvbCgpXG5cdFx0XHQvLyBzZXRJbnRlcnZhbCgoKSA9PiB7XG5cdFx0XHQvLyBcdHRoaXMuZ2V0Q29sKClcblx0XHRcdC8vIH0sMTAwMClcblx0XHRcdFxuXHRcdH0sXG5cdFx0b25TaG93KCl7XG5cdFx0XHR0aGlzLmdldENvbCgpXG5cdFx0fSxcblx0XHRtZXRob2RzOiB7XG5cdFx0XHRnZXRfc3JjKCl7XG5cdFx0XHRcdHJldHVybiB0aGlzLmFkZF9zcmNcblx0XHRcdH0sXG5cdFx0XHRjaGFuZ2UoZGF0YSl7XG5cdFx0XHRcdGNvbnNvbGUubG9nKGRhdGEuaW5kZXgpO1xuXHRcdFx0XHRjb25zb2xlLmxvZyhkYXRhLnZhbHVlKTtcblx0XHRcdH0sXG4gICAgICAgICAgICBnZXRDYXRlZ29yeShjYXRlZ29yeSl7XG4gICAgICAgICAgICAgICAgdGhpcy5pQ2F0ZWdvcnkgPSBjYXRlZ29yeS5uZXdWYWw7XG5cdFx0XHRcdHRoaXMuJGZvcmNlVXBkYXRlKClcbiAgICAgICAgICAgIH0sXG4gICAgICAgICAgICBcblx0XHRcdHNhdmUoKXtcblx0XHRcdFx0XG5cdFx0XHRcdHZhciBkYXRlID0gbmV3IERhdGUoKTtcblx0XHRcdFx0XG5cdFx0XHRcdHZhciBub3dNb250aCA9IGRhdGUuZ2V0TW9udGgoKSArIDE7XG5cdFx0XHRcdFxuXHRcdFx0XHR2YXIgc3RyRGF0ZSA9IGRhdGUuZ2V0RGF0ZSgpO1xuXHRcdFx0XHRcblx0XHRcdFx0dmFyIHNlcGVyYXRvciA9IFwiLVwiO1xuXHRcdFx0XHRcblx0XHRcdFx0aWYgKG5vd01vbnRoID49IDEgJiYgbm93TW9udGggPD0gOSkge1xuXHRcdFx0XHQgICBub3dNb250aCA9IFwiMFwiICsgbm93TW9udGg7XG5cdFx0XHRcdH1cblx0XHRcdFx0XG5cdFx0XHRcdGlmIChzdHJEYXRlID49IDAgJiYgc3RyRGF0ZSA8PSA5KSB7XG5cdFx0XHRcdCAgIHN0ckRhdGUgPSBcIjBcIiArIHN0ckRhdGU7XG5cdFx0XHRcdH1cblx0XHRcdFx0Ly8gdmFyIG5vd0RhdGUgPSBkYXRlLmdldEZ1bGxZZWFyKCkgKyBzZXBlcmF0b3IgKyBub3dNb250aCArIHNlcGVyYXRvciArIHN0ckRhdGU7XG4gICAgICAgICAgICAgICAgXG4gICAgICAgICAgICAgICAgLy8gY29udmVydCByZW1pbmQgdGltZSB0byBjb3JyZWN0IGZvcm1cbiAgICAgICAgICAgICAgICB2YXIgZXhwRGF0ZSA9IG5ldyBEYXRlKHRoaXMuaVRpbWUpO1xuXHRcdFx0XHR2YXIgcmVtaW5kVGltZSA9IChleHBEYXRlLmdldERhdGUoKSAtIHRoaXMuaUNpdGltZSk7XG5cdFx0XHRcdHZhciBsc1JlbWluZFRpbWUgPSBuZXcgRGF0ZShleHBEYXRlLnNldERhdGUocmVtaW5kVGltZSkpLnRvTG9jYWxlRGF0ZVN0cmluZygpLnNwbGl0KFwiL1wiKTtcblx0XHRcdFx0Ly8gY29uc29sZS5sb2cocmVtaW5kVGltZSk7XG5cdFx0XHRcdC8vIGNvbnNvbGUubG9nKGxzUmVtaW5kVGltZSk7XG5cbiAgICAgICAgICAgICAgICAvL0NoaW5hIFRpbWV6b25lIG5lZWRlZFxuICAgICAgICAgICAgICAgIC8vIGlmKGxzUmVtaW5kVGltZVsyXS5sZW5ndGggPT09IDEpe1xuICAgICAgICAgICAgICAgIC8vICAgICBsc1JlbWluZFRpbWVbMl0gPSBcIjBcIiArIGxzUmVtaW5kVGltZVsyXVxuICAgICAgICAgICAgICAgIC8vIH1cbiAgICAgICAgICAgICAgICAvL0F1c3RyYWxpYW4gVGltZXpvbmUgbmVlZGVkXG5cdFx0XHRcdC8vIGNvbnNvbGUubG9nKG5ldyBEYXRlKCkpXG4gICAgICAgICAgICAgICAgaWYobHNSZW1pbmRUaW1lWzFdLmxlbmd0aCA9PT0gMSl7XG4gICAgICAgICAgICAgICAgICAgIGxzUmVtaW5kVGltZVsxXSA9IFwiMFwiICsgbHNSZW1pbmRUaW1lWzFdXG4gICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgIHZhciByZW1pbmRUaW1lID0gbHNSZW1pbmRUaW1lWzBdK1wiLVwiK2xzUmVtaW5kVGltZVsxXStcIi1cIitsc1JlbWluZFRpbWVbMl1cblx0XHRcdFx0Ly8gY29uc29sZS5sb2cocmVtaW5kVGltZSk7XG5cdFx0XHRcdC8vIGNvbnNvbGUubG9nKGxzUmVtaW5kVGltZSk7XG5cdFx0XHRcdFxuICAgICAgICAgICAgICAgIHRoaXMudGFiKHRoaXMuaVRpbWUsZGF0ZSk7XG5cdFx0XHRcdGxldCBpdGVtID0ge1xuXHRcdFx0XHQgIFwiYWRkRGF0ZVwiOiBuZXcgRGF0ZSgpLFxuXHRcdFx0XHQgIFwiYWRkTWV0aG9kXCI6IFwibWFudWFsXCIsXG5cdFx0XHRcdCAgXCJjYXRlZ29yeVwiOiB0aGlzLmlDYXRlZ29yeSxcblx0XHRcdFx0ICBcImNvbkRhdGVcIjogMCxcblx0XHRcdFx0ICBcImRldGFpbFwiOiB0aGlzLmlEZXRhaWxzLFxuXHRcdFx0XHQgIFwiZXhwRGF0ZVwiOiB0aGlzLmlUaW1lLFxuXHRcdFx0XHQgIC8vIFwiaXRlbUlkXCI6IDAsXG5cdFx0XHRcdCAgXCJuYW1lXCI6IHRoaXMuaU5hbWUsXG5cdFx0XHRcdCAgXCJyZW1pbmRUaW1lXCI6IHJlbWluZFRpbWUsXG5cdFx0XHRcdCAgXCJzdGF0dXNcIjogdGhpcy5zdGF0dXMsXG5cdFx0XHRcdCAgXCJvdGhlckRldGFpbFwiOiB0aGlzLmlEZXRhaWxzLFxuXHRcdFx0XHQgIFwidWlkXCI6IHVuaS5nZXRTdG9yYWdlU3luYygndXNlcklkJyksXG5cdFx0XHRcdCAgXCJpc0NvbnN1bWVkXCI6MFxuXHRcdFx0XHR9XG5cdFx0XHRcdGNvbnNvbGUubG9nKEpTT04uc3RyaW5naWZ5KGl0ZW0pKTtcblx0XHRcdFx0bGV0IHRoYXQ9dGhpc1xuXHRcdFx0XHR1bmkucmVxdWVzdCh7XG5cdFx0XHRcdFx0bWV0aG9kOidQT1NUJyxcblx0XHRcdFx0XHR1cmw6J2h0dHA6Ly8xMDEuMzUuOTEuMTE3Ojc4ODQvaXRlbS9pbnNlcnQnLFxuXHRcdFx0XHRcdGRhdGE6SlNPTi5zdHJpbmdpZnkoaXRlbSlcblx0XHRcdFx0fSkudGhlbihyZXMgPT4ge1xuXHRcdFx0XHRcdGNvbnNvbGUubG9nKHRoYXQuZmlsZXBhdGhbMF0pXG5cdFx0XHRcdFx0Y29uc29sZS5sb2cocmVzWzFdLmRhdGEpXG5cdFx0XHRcdFx0dW5pLnVwbG9hZEZpbGUoe1xuXHRcdFx0XHRcdFx0dXJsOiAnaHR0cDovLzEwMS4zNS45MS4xMTc6Nzg4NC9pdGVtL3VwZGF0ZS9waWN0dXJlJywgXG5cdFx0XHRcdFx0XHRmaWxlUGF0aDogdGhhdC5maWxlcGF0aFswXSwgXG5cdFx0XHRcdFx0XHRuYW1lOiAncGljdHVyZScsIFxuXHRcdFx0XHRcdFx0Zm9ybURhdGE6IHtcblx0XHRcdFx0XHRcdFx0aXRlbV9pZDogcmVzWzFdLmRhdGFcblx0XHRcdFx0XHRcdFx0Ly8gZmlsZTogdGVtcEZpbGVQYXRoICAgXG5cdFx0XHRcdFx0XHR9LFxuXHRcdFx0XHRcdFx0c3VjY2VzczogKHVwbG9hZEZpbGVSZXMpID0+IHtcblx0XHRcdFx0XHRcdFx0Y29uc29sZS5sb2codXBsb2FkRmlsZVJlcyk7XG5cdFx0XHRcdFx0XHR9LFxuXHRcdFx0XHRcdFx0ZmFpbDogKGVycikgPT4ge1xuXHRcdFx0XHRcdFx0XHRjb25zb2xlLmxvZyhlcnIpXG5cdFx0XHRcdFx0XHR9LFxuXHRcdFx0XHRcdFx0XG5cdFx0XHRcdFx0fSk7XG5cdFx0XHRcdFx0XG5cdFx0XHRcdH0pXG5cdFx0XHRcdHRoaXMubmVlZEFkZEl0ZW0gPSBmYWxzZVxuXHRcdFx0XHR0aGlzLmFkZEl0ZW1Ub0xpc3QgPSB0cnVlXG5cblx0XHRcdFx0c2V0VGltZW91dCgoKSA9PiB7XG5cdFx0XHRcdFx0dGhpcy5nZXRDb2woKVxuXHRcdFx0XHR9LDEwMDApXG5cdFx0XHR9LFxuXHRcdFx0XG4gICAgICAgICAgICBcblx0XHRcdGdldENvbCgpe1xuXHRcdFx0XHRcblx0XHRcdFx0Ly8gaWYgKHVuaS5nZXRTdG9yYWdlU3luYygndXNlcklkJykpe1xuXHRcdFx0XHRcdFxuXHRcdFx0XHQvLyB9XG5cdFx0XHRcdFxuXHRcdFx0XHR1bmkucmVxdWVzdCh7XG5cdFx0XHRcdFx0dXJsOidodHRwOi8vMTAxLjM1LjkxLjExNzo3ODg0L2l0ZW0vdXNlci8nK3VuaS5nZXRTdG9yYWdlU3luYygndXNlcklkJylcblx0XHRcdFx0fSkudGhlbihyZXMgPT4ge1xuXHRcdFx0XHRcdGNvbnNvbGUubG9nKCdyZXNbMV0uZGF0YSBpczogJyxyZXNbMV0uZGF0YSlcblx0XHRcdFx0XHR0aGlzLmdldExpc3QoKVxuXHRcdFx0XHRcdHRoaXMudXBkYXRlSXRlbUxpc3QocmVzWzFdLmRhdGEpXG5cdFx0XHRcdH0pXG5cdFx0XHR9LFxuXHRcdFx0XG5cdFx0XHRnZXRMaXN0KCl7XG5cdFx0XHRcdHVuaS5yZXF1ZXN0KHtcblx0XHRcdFx0dXJsOiBcImh0dHA6Ly8xMDEuMzUuOTEuMTE3Ojc4ODQvcG90ZW50aWFsL1wiK3VuaS5nZXRTdG9yYWdlU3luYygndXNlcklkJyksXG5cdFx0XHRcdG1ldGhvZDogJ2dldCcsXG5cdFx0XHRcdH0pLnRoZW4ocmVzPT57XG5cdFx0XHRcdFx0Ly8gY29uc29sZS5sb2coJ2xvYWQnLHJlc1sxXS5kYXRhKVxuXHRcdFx0XHRcdHRoaXMuc2hvcExpc3QgPSByZXNbMV0uZGF0YVxuXHRcdFx0XHR9KVxuXHRcdFx0fSxcblx0XHRcdC8vIOiuoeeul+S4pOS4qmRhdGXnm7jlt67lpJrlsJHlpKlcblx0XHRcdGRhdGVNaW51cyhkYXRlU3RhcnQsIGRhdGVFbmQpIHtcblx0XHRcdFx0dmFyIHNkYXRlID0gbmV3IERhdGUoZGF0ZVN0YXJ0KTsgXG5cdFx0XHRcdHZhciBub3cgPSBuZXcgRGF0ZShkYXRlRW5kKTsgXG5cdFx0XHRcdHZhciBkYXlzID0gbm93LmdldFRpbWUoKSAtIHNkYXRlLmdldFRpbWUoKTsgXG5cdFx0XHRcdHZhciBkYXkgPSBNYXRoLmZsb29yKGRheXMgLyAoMTAwMCAqIDYwICogNjAgKiAyNCkpOyBcblx0XHRcdFx0XHRcblx0XHRcdFx0cmV0dXJuIGRheTtcblx0XHRcdH0sXG5cdFx0XHR1cGRhdGVJdGVtTGlzdChpdGVtTGlzdCl7XG5cdFx0XHRcdGxldCBzdG9ja0xpc3QgPSBbXVxuICAgICAgICAgICAgICAgIGxldCBvbGRzdG9ja0xpc3QgPSBbXVxuXHRcdFx0XHRsZXQgdG9kYXlEYXRlID0gbmV3IERhdGUoRGF0ZS5ub3coKSlcblx0XHRcdFx0Zm9yICh2YXIgaT0wO2k8aXRlbUxpc3QubGVuZ3RoO2krKyl7XG4gICAgICAgICAgICAgICAgICAgIHZhciBpdGVtID0gaXRlbUxpc3RbaV1cblx0XHRcdFx0XHR2YXIgZXhwID0gbmV3IERhdGUoaXRlbS5leHBEYXRlLnN1YnN0cigwLDEwKSlcblx0XHRcdFx0XHQvLyBjb25zb2xlLmxvZygnZXhwIGlzOiAnLCBleHApXG5cdFx0XHRcdFx0Ly8gY29uc29sZS5sb2coJ+S4juS7iuWkqeW3rueahOWkqeaVsO+8micsIHRoaXMuZGF0ZU1pbnVzKHRvZGF5RGF0ZSwgZXhwKSlcblx0XHRcdFx0XHR2YXIgZXhwaXJlRGF5cyA9IHRoaXMuZGF0ZU1pbnVzKHRvZGF5RGF0ZSwgZXhwKVxuXHRcdFx0XHRcdHZhciByZW1pbmQgPSBuZXcgRGF0ZShpdGVtLnJlbWluZFRpbWUuc3Vic3RyKDAsMTApKVxuXHRcdFx0XHRcdC8vIHRoaXMuZ2V0SW1nQnlJZChpdGVtLml0ZW1JZClcblx0XHRcdFx0XHR2YXIgdGVtcCA9IGl0ZW0ucGljdHVyZVxuXHRcdFx0XHRcdC8vIGNvbnNvbGUubG9nKFwiaW1nXCIsIGl0ZW0ucGljdHVyZSlcblx0XHRcdFx0XHRpZih0ZW1wPT1udWxsKXtcblx0XHRcdFx0XHRcdHRlbXAgPSBcIi4uLy4uL3N0YXRpYy9zdG9jay1pY29uLnBuZ1wiXG5cdFx0XHRcdFx0fVxuXHRcdFx0XHRcdHZhciBpdGVtSW5mbyA9IHtcbiAgICAgICAgICAgICAgICAgICAgICAgIFwiYWRkRGF0ZVwiOiBpdGVtLmFkZERhdGUsXG4gICAgICAgICAgICAgICAgICAgICAgICBcImFkZE1ldGhvZFwiOiBpdGVtLmFkZE1ldGhvZCxcbiAgICAgICAgICAgICAgICAgICAgICAgIFwiY2F0ZWdvcnlcIjogaXRlbS5jYXRlZ29yeSxcbiAgICAgICAgICAgICAgICAgICAgICAgIFwiY29uRGF0ZVwiOiBpdGVtLmNvbkRhdGUuc3Vic3RyKDAsMTApLFxuICAgICAgICAgICAgICAgICAgICAgICAgXCJkZXRhaWxcIjogaXRlbS5kZXRhaWwsXG4gICAgICAgICAgICAgICAgICAgICAgICBcImV4cERhdGVcIjogaXRlbS5leHBEYXRlLnN1YnN0cigwLDEwKSxcbiAgICAgICAgICAgICAgICAgICAgICAgIFwiaXRlbUlkXCI6IGl0ZW0uaXRlbUlkLFxuXHRcdFx0XHRcdFx0XCJpbWdcIjp0ZW1wLFxuICAgICAgICAgICAgICAgICAgICAgICAgXCJuYW1lXCI6IGl0ZW0ubmFtZSxcbiAgICAgICAgICAgICAgICAgICAgICAgIFwicmVtaW5kVGltZVwiOiBpdGVtLnJlbWluZFRpbWUsXG4gICAgICAgICAgICAgICAgICAgICAgICBcInN0YXR1c1wiOiBpdGVtLnN0YXR1cyxcblx0XHRcdFx0XHRcdFwidGltZVwiOnRoaXMuRGF0ZURpZmYocmVtaW5kLGV4cCksXG5cdFx0XHRcdFx0XHRcInBvdGVudGlhbFwiOiBpdGVtLnBvdGVudGlhbCxcbiAgICAgICAgICAgICAgICAgICAgICAgIFwidWlkXCI6IHVuaS5nZXRTdG9yYWdlU3luYygndXNlcklkJyksXG5cdFx0XHRcdFx0XHRcImV4cGlyZURheXNcIjogZXhwaXJlRGF5c1xuXHRcdFx0XHRcdH1cblx0XHRcdFx0XHRcblx0XHRcdFx0XHRpZiAoaXRlbUxpc3RbaV0uc3RhdHVzID09PSAnaW5zdG9jaycpe1xuXHRcdFx0XHRcdFx0c3RvY2tMaXN0LnB1c2goaXRlbUluZm8pXG5cdFx0XHRcdFx0fWVsc2V7XG5cdFx0XHRcdFx0XHRvbGRzdG9ja0xpc3QucHVzaChpdGVtSW5mbylcblx0XHRcdFx0XHR9XG5cdFx0XHRcdFx0XG5cdFx0XHRcdH1cblx0XHRcdFx0Ly8gY29uc29sZS5sb2coc3RvY2tMaXN0KVxuXHRcdFx0XHQvLyBjb25zb2xlLmxvZyh0aGlzLm9sZHN0b2NrTGlzdClcblx0XHRcdFx0dGhpcy5zdG9ja0xpc3QgPSBzdG9ja0xpc3RcbiAgICAgICAgICAgICAgICB0aGlzLm9sZHN0b2NrTGlzdCA9IG9sZHN0b2NrTGlzdFxuXHRcdFx0XHQvLyBjb25zb2xlLmxvZyh0aGlzLnN0b2NrTGlzdClcblx0XHRcdH0sXG5cdFx0XHRcblx0XHRcdGNvbnN1bWVJdGVtKGl0ZW0pe1xuXHRcdFx0XHRsZXQgaXRlbVVwZGF0ZWQgPSB7XG5cdFx0XHRcdCAgXCJhZGREYXRlXCI6IGl0ZW0uYWRkRGF0ZSxcblx0XHRcdFx0ICBcImFkZE1ldGhvZFwiOiBpdGVtLmFkZE1ldGhvZCxcblx0XHRcdFx0ICBcImNhdGVnb3J5XCI6IGl0ZW0uY2F0ZWdvcnksXG5cdFx0XHRcdCAgXCJjb25EYXRlXCI6IG5ldyBEYXRlKCksXG5cdFx0XHRcdCAgXCJkZXRhaWxcIjogaXRlbS5kZXRhaWwsXG5cdFx0XHRcdCAgXCJleHBEYXRlXCI6IGl0ZW0uZXhwRGF0ZSxcblx0XHRcdFx0ICBcIml0ZW1JZFwiOiBpdGVtLml0ZW1JZCxcblx0XHRcdFx0ICBcIm5hbWVcIjogaXRlbS5uYW1lLFxuXHRcdFx0XHQgIFwicmVtaW5kVGltZVwiOiBpdGVtLnJlbWluZFRpbWUsXG5cdFx0XHRcdCAgXCJzdGF0dXNcIjogXCJjb25zdW1lXCIsXG5cdFx0XHRcdCAgXCJ1aWRcIjogdW5pLmdldFN0b3JhZ2VTeW5jKCd1c2VySWQnKVxuXHRcdFx0XHR9XG5cdFx0XHRcdFxuXHRcdFx0XHR1bmkucmVxdWVzdCh7XG5cdFx0XHRcdFx0bWV0aG9kOidQT1NUJyxcblx0XHRcdFx0XHR1cmw6J2h0dHA6Ly8xMDEuMzUuOTEuMTE3Ojc4ODQvaXRlbS91cGRhdGUnLFxuXHRcdFx0XHRcdGRhdGE6SlNPTi5zdHJpbmdpZnkoaXRlbVVwZGF0ZWQpXG5cdFx0XHRcdH0pLnRoZW4ocmVzID0+IHtcblx0XHRcdFx0XHRjb25zb2xlLmxvZyhyZXMpXG5cdFx0XHRcdFx0dGhpcy5nZXRDb2woKVxuXHRcdFx0XHR9KVxuXHRcdFx0fSxcblxuXHRcdFx0Y2hhbmdlVGltZShlKXtcblx0XHRcdFx0dGhpcy5pVGltZSA9IGUucmVzdWx0XG5cdFx0XHRcdHZhciBhcnJheSA9IHRoaXMuaVRpbWUuc3BsaXQoJy0nKVxuXHRcdFx0XHR0aGlzLmlUaW1lSW5BdXNzaWVGb3JtYXQgPSBhcnJheVsyXStcIi1cIithcnJheVsxXStcIi1cIithcnJheVswXVxuXHRcdFx0XHRjb25zb2xlLmxvZyh0aGlzLmlUaW1lSW5BdXNzaWVGb3JtYXQpXG5cdFx0XHRcdGNvbnNvbGUubG9nKHRoaXMuaVRpbWUpXG4gICAgICAgICAgICAgICAgXG5cdFx0XHR9LFxuXHRcdFx0b3BlblRpbWUoKXtcblx0XHRcdFx0dGhpcy5jc2hvdyA9IHRydWVcblx0XHRcdH0sXG5cdFx0XHRjaGFuZ2VUYWIoZSl7XG5cdFx0XHRcdGlmIChlID09PSAnaXMnKXtcblx0XHRcdFx0XHR0aGlzLmlzc1NlbGVjdCA9IGZhbHNlXG5cdFx0XHRcdFx0dGhpcy5paXNTZWxlY3QgPSB0cnVlXG5cdFx0XHRcdH1lbHNlIGlmKGUgPT09ICdocycpe1xuXHRcdFx0XHRcdHRoaXMuaWlzU2VsZWN0ID0gZmFsc2Vcblx0XHRcdFx0XHR0aGlzLmlzc1NlbGVjdCA9IHRydWVcblx0XHRcdFx0fVxuXHRcdFx0fSxcblx0XHRcdGNoYW5nZUFtb3VudChlKXtcblx0XHRcdFx0dGhpcy5wYWNrcyA9IHBhcnNlSW50KHRoaXMuc3RvY2tMaXN0W2VdLnBhY2tzKVxuXHRcdFx0XHR0aGlzLmNoTnVtID0gdHJ1ZVxuXHRcdFx0XHR0aGlzLm5lZWRDaGFuZ2VJdGVtID0gZVxuXHRcdFx0XHRcblx0XHRcdFx0XG5cdFx0XHR9LFxuXHRcdFx0Y29uc3VtZShlKXtcblx0XHRcdFx0dmFyIGNoYW5nZWRJdGVtID0gdGhpcy5zdG9ja0xpc3RbdGhpcy5uZWVkQ2hhbmdlSXRlbV1cblx0XHRcdFx0dmFyIGxzQ29uc3VtZVRpbWUgPSBuZXcgRGF0ZSgpLnRvTG9jYWxlRGF0ZVN0cmluZygpLnNwbGl0KFwiL1wiKTtcbiAgICAgICAgICAgICAgICAvL0NoaW5hIFRpbWV6b25lIG5lZWRlZFxuICAgICAgICAgICAgICAgIC8vIGlmKGxzQ29uc3VtZVRpbWVbMl0ubGVuZ3RoID09PSAxKXtcbiAgICAgICAgICAgICAgICAvLyAgICAgbHNDb25zdW1lVGltZVsyXSA9IFwiMFwiICsgbHNDb25zdW1lVGltZVsyXVxuICAgICAgICAgICAgICAgIC8vIH1cblx0XHRcdFx0Ly9BdXN0cmFsaWFuIFRpbWV6b25lIG5lZWRlZFxuICAgICAgICAgICAgICAgIGlmKGxzQ29uc3VtZVRpbWVbMV0ubGVuZ3RoID09PSAxKXtcbiAgICAgICAgICAgICAgICAgICAgbHNDb25zdW1lVGltZVsxXSA9IFwiMFwiICsgbHNDb25zdW1lVGltZVsxXVxuICAgICAgICAgICAgICAgIH1cblx0XHRcdFx0dmFyIGNvbnN1bWVUaW1lID0gbHNDb25zdW1lVGltZVsyXStcIi1cIitsc0NvbnN1bWVUaW1lWzBdK1wiLVwiK2xzQ29uc3VtZVRpbWVbMV1cblx0XHRcdFx0Y2hhbmdlZEl0ZW0uY29uRGF0ZSA9IGNvbnN1bWVUaW1lXG4gICAgICAgICAgICAgICAgXG5cdFx0XHRcdGlmIChlID09PSAneWVzJyl7XG5cdFx0XHRcdFx0dGhpcy5jb25zdW1lSXRlbShjaGFuZ2VkSXRlbSlcblx0XHRcdFx0XHRjb25zb2xlLmxvZyhjaGFuZ2VkSXRlbSlcblx0XHRcdFx0XHRjb25zb2xlLmxvZyhjaGFuZ2VkSXRlbS5pdGVtSWQpXG4gICAgICAgICAgICAgICAgICAgIFxuICAgICAgICAgICAgICAgICAgICBcblx0XHRcdFx0XHR1bmkucmVxdWVzdCh7XG5cdFx0XHRcdFx0XHR1cmw6ICdodHRwOi8vMTAxLjM1LjkxLjExNzo3ODg0L2l0ZW0vdXBkYXRlL3N0YXR1cy8nK1wiY29uc3VtZVwiK1wiL2lkL1wiK2NoYW5nZWRJdGVtLml0ZW1JZCxcblx0XHRcdFx0XHR9KS50aGVuKHJlcyA9PiB7XG5cdFx0XHRcdFx0XHR0aGlzLmdldENvbCgpXG5cdFx0XHRcdFx0XHRjb25zb2xlLmxvZyhyZXNbMV0pXG5cdFx0XHRcdFx0fSlcblx0XHRcdFx0fVxuXHRcdFx0XHR0aGlzLmNoTnVtID0gZmFsc2Vcblx0XHRcdFx0dGhpcy5pdGVtRWRpdG9yPWZhbHNlXG5cdFx0XHRcdFxuXHRcdFx0fSxcbiAgICAgICAgICAgIFxuXHRcdFx0XG5cdFx0XHRzY2FuQ29kZSgpe1xuXHRcdFx0XHQvLyBsZXQgdGhhdCA9IHRoaXNcblx0XHRcdFx0dW5pLnNjYW5Db2RlKHtcblx0XHRcdFx0ICAgIHN1Y2Nlc3M6IChyZXMpID0+IHtcblx0XHRcdFx0ICAgICAgICBjb25zb2xlLmxvZygndHlwZe+8micgKyByZXMuc2NhblR5cGUpO1xuXHRcdFx0XHQgICAgICAgIGNvbnNvbGUubG9nKCdjb2RlSUTvvJonICsgcmVzLnJlc3VsdCk7XG5cdFx0XHRcdFx0XHR0aGlzLmljb2RlID0gcmVzLnJlc3VsdDtcblx0XHRcdFx0XHRcdHVuaS5yZXF1ZXN0KHtcblx0XHRcdFx0XHRcdFx0dXJsOiBcImh0dHBzOi8vd29ybGQub3BlbmZvb2RmYWN0cy5vcmcvYXBpL3YyL3Byb2R1Y3QvXCIgKyB0aGlzLmljb2RlLFx0XHRcblx0XHRcdFx0XHRcdH0pLnRoZW4oaXJlcz0+e1xuXHRcdFx0XHRcdFx0XHR2YXIgbmFtZSA9IGlyZXNbMV0uZGF0YS5wcm9kdWN0LnByb2R1Y3RfbmFtZVxuXHRcdFx0XHRcdFx0XHRjb25zb2xlLmxvZyhuYW1lKVxuXHRcdFx0XHRcdFx0XHR2YXIgY2F0ZWdvcmllcyA9IGlyZXNbMV0uZGF0YS5wcm9kdWN0LmNhdGVnb3JpZXMuc3BsaXQoJywnKVxuXHRcdFx0XHRcdFx0XHRjb25zb2xlLmxvZyhjYXRlZ29yaWVzWzFdKVxuXHRcdFx0XHRcdFx0XHR0aGlzLmlOYW1lID0gbmFtZVxuXHRcdFx0XHRcdFx0XHR0aGlzLmlDYXRlZ29yeSA9IGNhdGVnb3JpZXNbMV1cblx0XHRcdFx0XHRcdFx0dGhpcy5yZWZyZXNoaUNhdGVnb3J5ID0gZmFsc2Vcblx0XHRcdFx0XHRcdFx0dGhpcy4kbmV4dFRpY2soZnVuY3Rpb24oKXtcblx0XHRcdFx0XHRcdFx0XHR0aGlzLnJlZnJlc2hpQ2F0ZWdvcnkgPSB0cnVlXG5cdFx0XHRcdFx0XHRcdH0pXG5cdFx0XHRcdFx0XHRcdHRoaXMuJGZvcmNlVXBkYXRlKClcblx0XHRcdFx0XHRcdH0pO1xuXHRcdFx0XHQgICAgfVxuXHRcdFx0XHR9KTtcdFx0XG5cdFx0XHR9LFxuXHRcdFx0Ly8gc2VhcmNoUHJvZHVjdCgpe1xuXHRcdFx0Ly8gXHRpZih0aGlzLmlDYXRlZ29yeSA9PT0gJycpe1xuXHRcdFx0Ly8gXHRcdHRoaXMubGlzdCA9IHRoaXMub3B0aW9ucyAgXG5cdFx0XHQvLyBcdH1lbHNle1xuXHRcdFx0Ly8gXHRcdHRoaXMuc2hvd0xpc3QgPSBbXVxuXHRcdFx0Ly8gXHRcdHRoaXMuc2hvd0xpc3QgPSB0aGlzLm9wdGlvbnMuZmlsdGVyKChpdGVtKT0+e1xuXHRcdFx0Ly8gXHRcdFx0cmV0dXJuIGl0ZW0ubGFiZWwuaW5kZXhPZih0aGlzLmlDYXRlZ29yeSk+PTBcblx0XHRcdC8vIFx0XHR9KVxuXHRcdFx0Ly8gXHR9IFxuXHRcdFx0Ly8gXHRjb25zb2xlLmxvZyh0aGlzLnNob3dMaXN0KVxuXHRcdFx0Ly8gXHR0aGlzLnNob3dTZWxlY3QgPSB0cnVlXG5cdFx0XHQvLyB9LCAgIFxuICAgICAgICAgICAgc2NhbkRhdGUoKXtcblx0XHRcdFx0bGV0IHRoYXQgPSB0aGlzXG4gICAgICAgICAgICAgICAgdW5pLmNob29zZUltYWdlKHtcbiAgICAgICAgICAgICAgICAgICAgY291bnQ6IDEsIFxuICAgICAgICAgICAgICAgICAgICBzaXplVHlwZTogWydvcmlnaW5hbCcsICdjb21wcmVzc2VkJ10sIFxuXG4gICAgICAgICAgICAgICAgICAgIHNvdXJjZVR5cGU6IFsnY2FtZXJhJywgJ2FsYnVtJ10sIFxuXG4gICAgICAgICAgICAgICAgICAgIHN1Y2Nlc3M6ICAocmVzKSA9PiB7XG4gICAgICAgICAgICAgICAgICAgICAgICBjb25zb2xlLmxvZyhTdHJpbmcocmVzLnRlbXBGaWxlUGF0aHNbMF0pKTtcblx0XHRcdFx0XHRcdHVuaS5wcmV2aWV3SW1hZ2Uoe1xuXHRcdFx0XHRcdFx0XHR1cmxzOiByZXMudGVtcEZpbGVQYXRocyxcblx0XHRcdFx0XHRcdH0pO1xuXHRcdFx0XHRcdFx0XG5cdFx0XHRcdFx0XHQvL+i3s+i/h+acjeWKoeWZqFxuXHRcdFx0XHRcdFx0Y29uc29sZS5sb2coXCLkuIrkvKDkuoY6IFwiICsgU3RyaW5nKHJlcy50ZW1wRmlsZVBhdGhzWzBdKSArIFwiICAtLS0tLS0tLVwiKVxuXHRcdFx0XHRcdFx0Y29uc29sZS5sb2coXCJvY3Ig55qE6L+U5Zue57uT5p6c77yaXCIpO1xuXHRcdFx0XHRcdFx0XG5cdFx0XHRcdFx0XHR0aGF0LmlUaW1lID0gXCIyMDIyLTExLTIyXCI7XG5cdFx0XHRcdFx0XHQvLyBjb25zb2xlLmxvZyh0aGF0LmlUaW1lKTtcblx0XHRcdFx0XHRcdC8vIHVuaS51cGxvYWRGaWxlKHtcblx0XHRcdFx0XHRcdFx0Ly8gdXJsOiAnaHR0cDovL2xvY2FsaG9zdDo4MDgwL29jcicsIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0g5q+P5qyh5rWL5LmL5YmN5pS55LiA5LiLIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuXHRcdFx0XHRcdFx0XHQvLyBtZXRob2QgOiAnUE9TVCcsXG5cdFx0XHRcdFx0XHRcdC8vIC8vIGZpbGVQYXRoIDogcmVzLnRlbXBGaWxlUGF0aHNbMF0sXG5cdFx0XHRcdFx0XHRcdC8vIGZpbGVQYXRoIDogU3RyaW5nKHJlcy50ZW1wRmlsZVBhdGhzWzBdKSxcblx0XHRcdFx0XHRcdFx0Ly8gbmFtZSA6ICdtZWRpYScsXG5cdFx0XHRcdFx0XHRcdC8vIGhlYWRlcjoge1xuXHRcdFx0XHRcdFx0XHQvLyBcdCdjb250ZW50LXR5cGUnOiAnbXVsdGlwYXJ0L2Zvcm0tZGF0YScgXG5cdFx0XHRcdFx0XHRcdC8vIH0sXG5cdFx0XHRcdFx0XHRcdFxuXHRcdFx0XHRcdFx0XHQvLyBzdWNjZXNzOiAocmVzKSA9PiB7XG5cdFx0XHRcdFx0XHRcdC8vIFx0Y29uc29sZS5sb2cocmVzLnN0YXR1c0NvZGUpXG5cdFx0XHRcdFx0XHRcdC8vIFx0Y29uc29sZS5sb2coXCLkuIrkvKDkuoY6IFwiICsgU3RyaW5nKHJlcy50ZW1wRmlsZVBhdGhzWzBdKSArIFwiICAtLS0tLS0tLVwiKVxuXHRcdFx0XHRcdFx0XHQvLyBcdGNvbnNvbGUubG9nKFwib2NyIOeahOi/lOWbnue7k+aenO+8mlwiKTtcblx0XHRcdFx0XHRcdFx0Ly8gXHRjb25zb2xlLmxvZyhyZXMuZGF0YSk7XG5cblx0XHRcdFx0XHRcdFx0Ly8gXHR0aGF0LmlUaW1lID0gdXBsb2FkRmlsZVJlcztcblx0XHRcdFx0XHRcdFx0Ly8gXHRjb25zb2xlLmxvZyh0aGF0LmlUaW1lKTtcblx0XHRcdFx0XHRcdFx0Ly8gfSxcblx0XHRcdFx0XHRcdFx0Ly8gZmFpbDogKHVwbG9hZEZpbGVSZXMpID0+IHtcblx0XHRcdFx0XHRcdFx0Ly8gXHRjb25zb2xlLmxvZyh1cGxvYWRGaWxlUmVzLnN0YXR1c0NvZGUpXG5cdFx0XHRcdFx0XHRcdFx0XG5cdFx0XHRcdFx0XHRcdC8vIFx0Y29uc29sZS5sb2coXCLniLflpLHotKXkuoZcIik7XG5cdFx0XHRcdFx0XHRcdC8vIFx0Y29uc29sZS5sb2codXBsb2FkRmlsZVJlcytcIlxcbj09PT09PT09PT09PT09XCIpO1xuXHRcdFx0XHRcdFx0XHRcdFxuXHRcdFx0XHRcdFx0XHQvLyB9XG5cdFx0XHRcdFx0XHRcdFxuXHRcdFx0XHRcdFx0Ly8gfSk7XG5cdFx0XHRcdFx0XHRcbiAgICAgICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgIH0pO1xuICAgICAgICAgICAgfSxcblx0XHRcdG9uQ2xpY2tCdG4oZSl7XG5cdFx0XHRcdGlmIChlLmtleSA9PSAnYWRkJyl7XG5cdFx0XHRcdFx0Ly8gY29uc29sZS5sb2coJzExMScpXG5cdFx0XHRcdFx0dGhpcy5hZGRJdGVtVG9MaXN0ID0gZmFsc2Vcblx0XHRcdFx0XHR0aGlzLm5lZWRBZGRJdGVtID0gdHJ1ZVxuXHRcdFx0XHRcdC8vIHRoaXMuaU5hbWUgPSAnJztcblx0XHRcdFx0XHRcblx0XHRcdFx0XHQvLyB0aGlzLmlDYXRlZ29yeSA9ICcnOyAvLy8vLy8gLS0tLS0tXG5cdFx0XHRcdFx0XG5cdFx0XHRcdFx0dGhpcy5pVGltZSA9ICcnO1xuXHRcdFx0XHRcdHRoaXMuaUNpdGltZSA9ICcnO1xuXHRcdFx0XHRcdHRoaXMuaURldGFpbHMgPSAnJztcblx0XHRcdFx0XHR0aGlzLmlJdGVtaWQgPSAnJztcblx0XHRcdFx0XHQvLyBjb25zb2xlLmxvZygnY2hhbmdlJylcblx0XHRcdFx0fWVsc2UgaWYoZS5rZXkgPT0gJ2JhY2snKXtcblx0XHRcdFx0XHR0aGlzLmFkZEl0ZW1Ub0xpc3QgPSB0cnVlXG5cdFx0XHRcdFx0dGhpcy5uZWVkQWRkSXRlbSA9IGZhbHNlXG5cdFx0XHRcdH1lbHNlIGlmKGUua2V5ID09ICdzY2FuJyl7XG4gICAgICAgICAgICAgICAgICAgIHRoaXMuc2NhbkNvZGUoKTtcblx0XHRcdFx0XHR0aGlzLm5lZWRBZGRJdGVtID0gdHJ1ZVxuXHRcdFx0XHRcdHRoaXMuYWRkSXRlbVRvTGlzdCA9IGZhbHNlXG5cdFx0XHRcdFx0Ly8gdGhpcy5pVGltZSA9ICcnO1xuXHRcdFx0XHRcdC8vIHRoaXMuaUNpdGltZSA9ICcnO1xuXHRcdFx0XHRcdC8vIHRoaXMuaURldGFpbHMgPSAnJztcblx0XHRcdFx0XHQvLyB0aGlzLmlJdGVtaWQgPSAnJztcbiAgICAgICAgICAgICAgICB9ZWxzZXtcblx0XHRcdFx0XHR0aGlzLnNjYW5EYXRlKCk7XG5cdFx0XHRcdH1cblx0XHRcdH0sXG4gICAgICAgICAgICBcblx0XHRcdERhdGVEaWZmKGRhdGUxLCBkYXRlMikge1xuXHRcdFx0XHRjb25zdCBkYXRlMXV0YyA9IERhdGUuVVRDKGRhdGUxLmdldEZ1bGxZZWFyKCksIGRhdGUxLmdldE1vbnRoKCksIGRhdGUxLmdldERhdGUoKSk7XG5cdFx0XHRcdGNvbnN0IGRhdGUydXRjID0gRGF0ZS5VVEMoZGF0ZTIuZ2V0RnVsbFllYXIoKSwgZGF0ZTIuZ2V0TW9udGgoKSwgZGF0ZTIuZ2V0RGF0ZSgpKTtcblx0XHRcdFx0dmFyIGRheSA9IDEwMDAqNjAqNjAqMjQ7XG5cdFx0XHRcdHJldHVybiAoZGF0ZTJ1dGMgLSBkYXRlMXV0YykvZGF5XG5cdFx0XHR9LFxuXHRcdFx0Y2hvb3NlUGhvdG8oKXtcblx0XHRcdFx0bGV0IHRoYXQgPSB0aGlzXG5cdFx0XHRcdHVuaS5jaG9vc2VJbWFnZSh7XG5cdFx0XHRcdCAgICBjb3VudDogMSwgXG5cdFx0XHRcdCAgICBzaXplVHlwZTogWydvcmlnaW5hbCcsICdjb21wcmVzc2VkJ10sIFxuXHRcdFx0XHQgICAgc291cmNlVHlwZTogWydhbGJ1bScsJ2NhbWVyYSddLCBcblx0XHRcdFx0ICAgIHN1Y2Nlc3M6IGZ1bmN0aW9uIChyZXMpIHtcblx0XHRcdFx0ICAgICAgICBjb25zb2xlLmxvZyhKU09OLnN0cmluZ2lmeShyZXMudGVtcEZpbGVQYXRocykpO1xuXHRcdFx0XHRcdFx0dGhhdC5maWxlcGF0aCA9IHJlcy50ZW1wRmlsZVBhdGhzXG5cdFx0XHRcdFx0XHR0aGF0LmFkZF9zcmM9cmVzLnRlbXBGaWxlUGF0aHNbMF1cblx0XHRcdFx0XHRcdC8vIGNvbnNvbGUubG9nKHRoYXQuYWRkX3NyYylcblx0XHRcdFx0XHRcdC8vIHVuaS5wcmV2aWV3SW1hZ2Uoe1xuXHRcdFx0XHRcdFx0Ly8gXHR1cmxzOiByZXMudGVtcEZpbGVQYXRocyxcblx0XHRcdFx0XHRcdC8vIH0pO1xuXHRcdFx0XHQgICAgfVxuXHRcdFx0XHR9KTtcblx0XHRcdH0sXG5cdFx0XHR0YWIoZGF0ZTEsZGF0ZTIpe1xuICAgICAgICAgICAgICAgIC8vIGNvbnNvbGUubG9nKGRhdGUxLCBkYXRlMilcblx0XHRcdFx0Ly8gZXhwIDEsIHRvZGF5MlxuXHRcdFx0XHR2YXIgb0RhdGUxID0gbmV3IERhdGUoZGF0ZTEpO1xuICAgICAgICAgICAgICAgIC8vIGNvbnNvbGUubG9nKG9EYXRlMSlcblx0XHRcdFx0dmFyIG9EYXRlMiA9IG5ldyBEYXRlKGRhdGUyKTtcbiAgICAgICAgICAgICAgICAvLyBjb25zb2xlLmxvZyhvRGF0ZTIpXG5cdFx0XHRcdGlmKG9EYXRlMS5nZXRUaW1lKCkgPj0gb0RhdGUyLmdldFRpbWUoKSl7XG5cdFx0XHRcdFx0Ly8gY29uc29sZS5sb2coJ2luc3RvY2snKTtcblx0XHRcdFx0XHR0aGlzLnN0YXR1cz0naW5zdG9jayc7XG5cdFx0XHRcdH0gZWxzZSBpZihvRGF0ZTEuZ2V0VGltZSgpIDwgb0RhdGUyLmdldFRpbWUoKSl7XG5cdFx0XHRcdFx0Y29uc29sZS5sb2coJ2V4cGlyZScpO1xuXHRcdFx0XHRcdHRoaXMuc3RhdHVzPSdleHBpcmUnO1xuXHRcdFx0XHR9XG5cdFx0XHR9LFxuXHRcdFx0ZWRpdChpdGVtLCBpbmRleCl7XG5cdFx0XHRcdHRoaXMuaXRlbUVkaXRvciA9IHRydWU7XG5cdFx0XHRcdC8vIE9iamVjdC5rZXlzKGl0ZW0pLmZvckVhY2goa2V5ID0+IHtcblx0XHRcdFx0Ly8gXHRjb25zb2xlLmxvZyhrZXksIGl0ZW1ba2V5XSk7XG5cdFx0XHRcdC8vIH0pO1xuXHRcdFx0XHR0aGlzLmlOYW1lID0gaXRlbS5uYW1lO1xuXHRcdFx0XHR0aGlzLmlDYXRlZ29yeSA9IGl0ZW0uY2F0ZWdvcnk7XG5cdFx0XHRcdC8vIHRoaXMuaVRpbWUgPSBpdGVtLmV4cERhdGU7XG5cdFx0XHRcdHRoaXMuaVRpbWVJbkF1c3NpZUZvcm1hdCA9IGl0ZW0uZXhwRGF0ZVxuXHRcdFx0XHR0aGlzLmlDaXRpbWUgPSBpdGVtLnRpbWU7XG5cdFx0XHRcdHRoaXMuaURldGFpbHMgPSBpdGVtLmRldGFpbDtcblx0XHRcdFx0dGhpcy5pSXRlbWlkID0gaXRlbS5pdGVtSWQ7XG5cdFx0XHRcdHRoaXMuZWRpdEl0ZW0gPSBpdGVtXG5cdFx0XHR9LFxuXHRcdFx0ZWRpdENsaWVudCgpe1xuXG5cdFx0XHRcdFx0dmFyIGRhdGUgPSBuZXcgRGF0ZSgpO1xuXHRcdFx0XHRcdFxuXHRcdFx0XHRcdHZhciBub3dNb250aCA9IGRhdGUuZ2V0TW9udGgoKSArIDE7XG5cdFx0XHRcdFx0XG5cdFx0XHRcdFx0dmFyIHN0ckRhdGUgPSBkYXRlLmdldERhdGUoKTtcblx0XHRcdFx0XHRcblx0XHRcdFx0XHR2YXIgc2VwZXJhdG9yID0gXCItXCI7XG5cdFx0XHRcdFx0XG5cdFx0XHRcdFx0aWYgKG5vd01vbnRoID49IDEgJiYgbm93TW9udGggPD0gOSkge1xuXHRcdFx0XHRcdCAgIG5vd01vbnRoID0gXCIwXCIgKyBub3dNb250aDtcblx0XHRcdFx0XHR9XG5cdFx0XHRcdFx0XG5cdFx0XHRcdFx0aWYgKHN0ckRhdGUgPj0gMCAmJiBzdHJEYXRlIDw9IDkpIHtcblx0XHRcdFx0XHQgICBzdHJEYXRlID0gXCIwXCIgKyBzdHJEYXRlO1xuXHRcdFx0XHRcdH1cblx0XHRcdFx0XHQvLyB2YXIgbm93RGF0ZSA9IGRhdGUuZ2V0RnVsbFllYXIoKSArIHNlcGVyYXRvciArIG5vd01vbnRoICsgc2VwZXJhdG9yICsgc3RyRGF0ZTtcblx0XHRcdFx0ICAgIFxuXHRcdFx0XHQgICAgLy8gY29udmVydCByZW1pbmQgdGltZSB0byBjb3JyZWN0IGZvcm1cblx0XHRcdFx0ICAgIHZhciBleHBEYXRlID0gbmV3IERhdGUodGhpcy5pVGltZUluQXVzc2llRm9ybWF0KTtcblx0XHRcdFx0ICAgIHZhciByZW1pbmRUaW1lID0gKGV4cERhdGUuZ2V0RGF0ZSgpIC0gdGhpcy5pQ2l0aW1lKTsgXG5cdFx0XHRcdFx0dmFyIGxzUmVtaW5kVGltZSA9IG5ldyBEYXRlKGV4cERhdGUuc2V0RGF0ZShyZW1pbmRUaW1lKSkudG9Mb2NhbGVEYXRlU3RyaW5nKCkuc3BsaXQoXCIvXCIpO1xuXHRcdFx0XHQgICAgLy8gY29uc29sZS5sb2cocmVtaW5kVGltZSk7XG5cdFx0XHRcdCAgICAvLyBjb25zb2xlLmxvZyhsc1JlbWluZFRpbWUpO1xuXHRcdFx0XHRcdC8vQ2hpbmEgVGltZXpvbmUgbmVlZGVkXG5cdFx0XHRcdCAgICAvLyBpZihsc1JlbWluZFRpbWVbMl0ubGVuZ3RoID09PSAxKXtcblx0XHRcdFx0ICAgIC8vICAgICBsc1JlbWluZFRpbWVbMl0gPSBcIjBcIiArIGxzUmVtaW5kVGltZVsyXVxuXHRcdFx0XHQgICAgLy8gfVxuXHRcdFx0XHQgICAgLy9BdXN0cmFsaWFuIFRpbWV6b25lIG5lZWRlZFxuXHRcdFx0XHRcdC8vIGNvbnNvbGUubG9nKG5ldyBEYXRlKCkpXG5cdFx0XHRcdCAgICBpZihsc1JlbWluZFRpbWVbMV0ubGVuZ3RoID09PSAxKXtcblx0XHRcdFx0ICAgICAgICBsc1JlbWluZFRpbWVbMV0gPSBcIjBcIiArIGxzUmVtaW5kVGltZVsxXVxuXHRcdFx0XHQgICAgfVxuXHRcdFx0XHQgICAgdmFyIHJlbWluZFRpbWUgPSBsc1JlbWluZFRpbWVbMF0rXCItXCIrbHNSZW1pbmRUaW1lWzFdK1wiLVwiK2xzUmVtaW5kVGltZVsyXVxuXHRcdFx0XHRcdC8vIGNvbnNvbGUubG9nKHJlbWluZFRpbWUpO1xuXHRcdFx0XHRcdC8vIGNvbnNvbGUubG9nKGxzUmVtaW5kVGltZSk7XG5cdFx0XHRcdFx0XG5cdFx0XHRcdFx0dGhpcy50YWIodGhpcy5pVGltZSxkYXRlKTtcblx0XHRcdFx0XHRsZXQgaXRlbSA9IHtcblx0XHRcdFx0XHQgIFwiYWRkRGF0ZVwiOiB0aGlzLmVkaXRJdGVtLmFkZERhdGUsXG5cdFx0XHRcdFx0ICBcImFkZE1ldGhvZFwiOiB0aGlzLmVkaXRJdGVtLmFkZE1ldGhvZCxcblx0XHRcdFx0XHQgIFwiY2F0ZWdvcnlcIjogdGhpcy5pQ2F0ZWdvcnksXG5cdFx0XHRcdFx0ICBcImNvbkRhdGVcIjogdGhpcy5lZGl0SXRlbS5jb25EYXRlLFxuXHRcdFx0XHRcdCAgXCJkZXRhaWxcIjogdGhpcy5pRGV0YWlscyxcblx0XHRcdFx0XHQgIFwiZXhwRGF0ZVwiOiB0aGlzLmlUaW1lSW5BdXNzaWVGb3JtYXQsXG5cdFx0XHRcdFx0ICBcIml0ZW1JZFwiOiB0aGlzLmlJdGVtaWQsXG5cdFx0XHRcdFx0ICBcIm5hbWVcIjogdGhpcy5pTmFtZSxcblx0XHRcdFx0XHQgIFwicmVtaW5kVGltZVwiOiByZW1pbmRUaW1lLFxuXHRcdFx0XHRcdCAgXCJzdGF0dXNcIjogdGhpcy5lZGl0SXRlbS5zdGF0dXMsXG5cdFx0XHRcdFx0ICBcIm90aGVyRGV0YWlsXCI6IHRoaXMuaURldGFpbHMsXG5cdFx0XHRcdFx0ICBcInVJZFwiOiB1bmkuZ2V0U3RvcmFnZVN5bmMoJ3VzZXJJZCcpXG5cdFx0XHRcdFx0fVxuXHRcdFx0XHRcdGNvbnNvbGUubG9nKEpTT04uc3RyaW5naWZ5KGl0ZW0pKVxuXHRcdFx0XHRcdHVuaS5yZXF1ZXN0KHtcblx0XHRcdFx0XHRcdG1ldGhvZDonUE9TVCcsXG5cdFx0XHRcdFx0XHR1cmw6J2h0dHA6Ly8xMDEuMzUuOTEuMTE3Ojc4ODQvaXRlbS91cGRhdGUnLFxuXHRcdFx0XHRcdFx0ZGF0YTpKU09OLnN0cmluZ2lmeShpdGVtKVxuXHRcdFx0XHRcdH0pLnRoZW4ocmVzID0+IHtcblx0XHRcdFx0XHRcdGNvbnNvbGUubG9nKHJlcylcblx0XHRcdFx0XHR9KVxuXHRcdFx0XHRcdHRoaXMubmVlZEFkZEl0ZW0gPSBmYWxzZVxuXHRcdFx0XHRcdHRoaXMuYWRkSXRlbVRvTGlzdCA9IHRydWVcblx0XHRcdFx0XG5cdFx0XHRcdFx0c2V0VGltZW91dCgoKSA9PiB7XG5cdFx0XHRcdFx0XHR0aGlzLmdldENvbCgpXG5cdFx0XHRcdFx0fSwxMDAwKVxuXHRcdFx0XHRcdHRoaXMuaXRlbUVkaXRvciA9IGZhbHNlO1xuXHRcdFx0XHRcdFxuXHRcdFx0fSxcblx0XHRcdHNlbGVjdFNvcnRpbmdJdGVtTGlzdChjYXRlZ29yeSl7XG5cdFx0XHRcdFxuXHRcdFx0XHRpZiAoY2F0ZWdvcnkubmV3VmFsID09PSBcIkEtelwiKXtcblx0XHRcdFx0XHR0aGlzLnNvcnRTdG9ja0xpc3RBbHBoYWJldGljYWwoKTtcblx0XHRcdFx0fWVsc2UgaWYgKGNhdGVnb3J5Lm5ld1ZhbCA9PT0gXCJFeHBpcmUgU29vblwiKXtcblx0XHRcdFx0XHR0aGlzLnNvcnRTdG9ja0xpc3RCeUV4cERhdGUoKTtcblx0XHRcdFx0fWVsc2UgaWYgKGNhdGVnb3J5Lm5ld1ZhbCA9PT0gXCJSZWNlbnQgQWRkZWRcIil7XG5cdFx0XHRcdFx0dGhpcy5zb3J0U3RvY2tMaXN0QnlBZGREYXRlKCk7XG5cdFx0XHRcdH1cblxuXHRcdFx0fSxcblx0XHRcdHNvcnRTdG9ja0xpc3RBbHBoYWJldGljYWwoKXtcblx0XHRcdFx0Ly8gdGhpcyBmdW5jdGlvbiB3aWxsIHNvcnQgdGhlIHN0b2NrbGlzdCBieSB0aGUgbmFtZSBvZiBlYWNoIGl0ZW0gaW4gYXNjZW5kaW5nIG9yZGVyXG5cdFx0XHRcdHRoaXMuc3RvY2tMaXN0LnNvcnQoZnVuY3Rpb24oYSwgYil7XG5cdFx0XHRcdCAgbGV0IGRhdGVBID0gYS5uYW1lO1xuXHRcdFx0XHQgIGxldCBkYXRlQiA9IGIubmFtZTtcblx0XHRcdFx0ICBpZiAoZGF0ZUEgPCBkYXRlQil7XG5cdFx0XHRcdCAgICByZXR1cm4gLTE7XG5cdFx0XHRcdCAgfSBlbHNlIGlmIChkYXRlQSA+IGRhdGVCKXtcblx0XHRcdFx0ICAgIHJldHVybiAxO1xuXHRcdFx0XHQgIH0gICBcblx0XHRcdFx0ICByZXR1cm4gMDtcblx0XHRcdFx0fSk7XG5cdFx0XHR9XG5cdFx0XHQsXG5cdFx0XHRzb3J0U3RvY2tMaXN0QnlFeHBEYXRlKCl7XG5cdFx0XHRcdC8vIHRoaXMgZnVuY3Rpb24gd2lsbCBzb3J0IHRoZSBzdG9ja2xpc3QgYnkgdGhlIGV4cGlyZSBkYXRlIG9mIGVhY2ggaXRlbSBpbiBhc2NlbmRpbmcgb3JkZXJcblx0XHRcdFx0Ly8gRS5nLiBBcHBsZSBleHBpcmVzIGF0IDIwMjEvRGVjLzEyLCBPcmFuZ2UgZXhwaXJlcyBhdCAyMDIxL05vdi8xMSwgVG9mdSBleHBpcmVzIGF0IDIwMjEvRGVjLzMxXG5cdFx0XHRcdC8vIHRoZSBvcmRlciBhZnRlciBzb3J0IHdpbGwgYmUgT3JhbmdlIC0+IEFwcGxlIC0+IFRvZnVcblx0XHRcdFx0dGhpcy5vbGRzdG9ja0xpc3Quc29ydChmdW5jdGlvbihhLCBiKXtcblx0XHRcdFx0ICBsZXQgZGF0ZUEgPSBhLmV4cERhdGU7XG5cdFx0XHRcdCAgbGV0IGRhdGVCID0gYi5leHBEYXRlO1xuXHRcdFx0XHQgIGlmIChkYXRlQSA8IGRhdGVCKXtcblx0XHRcdFx0ICAgIHJldHVybiAtMTtcblx0XHRcdFx0ICB9IGVsc2UgaWYgKGRhdGVBID4gZGF0ZUIpe1xuXHRcdFx0XHQgICAgcmV0dXJuIDE7XG5cdFx0XHRcdCAgfSAgIFxuXHRcdFx0XHQgIHJldHVybiAwO1xuXHRcdFx0XHR9KTtcblx0XHRcdH1cblx0XHRcdCxcblx0XHRcdHNvcnRTdG9ja0xpc3RCeUFkZERhdGUoKXtcblx0XHRcdFx0Ly8gdGhpcyBmdW5jdGlvbiB3aWxsIHNvcnQgdGhlIHN0b2NrbGlzdCBieSB0aGUgZGF0ZSBkYXRlIG9mIGVhY2ggaXRlbSBpbiBhc2NlbmRpbmcgb3JkZXJcblx0XHRcdFx0Ly8gRS5nLiBBcHBsZSBhZGRlZCBhdCAyMDIxL0RlYy8xMiwgT3JhbmdlIGFkZGVkIGF0IDIwMjEvTm92LzExLCBUb2Z1IGFkZGVkIGF0IDIwMjEvRGVjLzMxXG5cdFx0XHRcdC8vIHRoZSBvcmRlciBhZnRlciBzb3J0IHdpbGwgYmUgT3JhbmdlIC0+IEFwcGxlIC0+IFRvZnVcblx0XHRcdFx0dGhpcy5zdG9ja0xpc3Quc29ydChmdW5jdGlvbihhLCBiKXtcblx0XHRcdFx0ICBsZXQgZGF0ZUEgPSBhLmFkZERhdGU7XG5cdFx0XHRcdCAgbGV0IGRhdGVCID0gYi5hZGREYXRlO1xuXHRcdFx0XHQgIGlmIChkYXRlQSA8IGRhdGVCKXtcblx0XHRcdFx0ICAgIHJldHVybiAtMTtcblx0XHRcdFx0ICB9IGVsc2UgaWYgKGRhdGVBID4gZGF0ZUIpe1xuXHRcdFx0XHQgICAgcmV0dXJuIDE7XG5cdFx0XHRcdCAgfSAgIFxuXHRcdFx0XHQgIHJldHVybiAwO1xuXHRcdFx0XHR9KTtcblx0XHRcdH0sXG5cdFx0XHRcblx0XHRcdC8vaGlzdG9yeSAgIC0xOmFsbCwgLTI6ZXhwaXJlLCAtMzpjb25zdW1lXG5cdFx0XHRzZWxlY3RJdGVtVGFncyh0YWdzKXtcblx0XHRcdFx0aWYgKHRhZ3MubmV3VmFsID09PSBcIkV4cGlyZWRcIil7XG5cblx0XHRcdFx0XHRjb25zb2xlLmxvZygn5rWL6K+V6L+H5pyfJylcblx0XHRcdFx0XHRcblx0XHRcdFx0XHR1bmkucmVxdWVzdCh7XG5cdFx0XHRcdFx0dXJsOiAnaHR0cDovLzEwMS4zNS45MS4xMTc6Nzg4NC9pdGVtL3VzZXIvJyt1bmkuZ2V0U3RvcmFnZVN5bmMoJ3VzZXJJZCcpICsgJy8tMicsXG5cdFx0XHRcdFx0bWV0aG9kOiAnZ2V0Jyxcblx0XHRcdFx0XHR9KS50aGVuKHJlcz0+e1xuXHRcdFx0XHRcdFx0Y29uc29sZS5sb2coJ2xvYWQnLHJlc1sxXS5kYXRhKVxuXHRcdFx0XHRcdFx0dGhpcy5vbGRzdG9ja0xpc3QgPSByZXNbMV0uZGF0YVxuXHRcdFx0XHRcdH0pXG5cdFx0XHRcdFx0XG5cdFx0XHRcdFx0XG5cdFx0XHRcdFx0XG5cdFx0XHRcdH0gZWxzZSBpZiAodGFncy5uZXdWYWwgPT09IFwiQ29uc3VtZWRcIikge1xuXHRcdFx0XHRcdFxuXHRcdFx0XHRcdGNvbnNvbGUubG9nKCfmtYvor5XmtojogJcnKVxuXHRcdFx0XHRcdHVuaS5yZXF1ZXN0KHtcblx0XHRcdFx0XHR1cmw6ICdodHRwOi8vMTAxLjM1LjkxLjExNzo3ODg0L2l0ZW0vdXNlci8nK3VuaS5nZXRTdG9yYWdlU3luYygndXNlcklkJykgKyAnLy0zJyxcblx0XHRcdFx0XHRtZXRob2Q6ICdnZXQnLFxuXHRcdFx0XHRcdH0pLnRoZW4ocmVzPT57XG5cdFx0XHRcdFx0XHRjb25zb2xlLmxvZygnbG9hZCcscmVzWzFdLmRhdGEpXG5cdFx0XHRcdFx0XHR0aGlzLm9sZHN0b2NrTGlzdCA9IHJlc1sxXS5kYXRhXG5cdFx0XHRcdFx0fSlcblx0XHRcdFx0fSBlbHNlIGlmICh0YWdzLm5ld1ZhbCA9PT0gXCJBbGxcIikge1xuXHRcdFx0XHRcdFxuXHRcdFx0XHRcdGNvbnNvbGUubG9nKCfmsqHmnInov4fmu6TlmagnKVxuXHRcdFx0XHRcdHVuaS5yZXF1ZXN0KHtcblx0XHRcdFx0XHR1cmw6ICdodHRwOi8vMTAxLjM1LjkxLjExNzo3ODg0L2l0ZW0vdXNlci8nK3VuaS5nZXRTdG9yYWdlU3luYygndXNlcklkJykgKyAnLy0xJyxcblx0XHRcdFx0XHRtZXRob2Q6ICdnZXQnLFxuXHRcdFx0XHRcdH0pLnRoZW4ocmVzPT57XG5cdFx0XHRcdFx0XHRjb25zb2xlLmxvZygnbG9hZCcscmVzWzFdLmRhdGEpXG5cdFx0XHRcdFx0XHR0aGlzLm9sZHN0b2NrTGlzdCA9IHJlc1sxXS5kYXRhXG5cdFx0XHRcdFx0fSlcblx0XHRcdFx0fVxuXHRcdFx0fSxcdFx0XG5cdFx0XHRcblx0XHRcdFxuXHRcdFx0XG5cdFx0XHRnZXRJbWdCeUlkKGlkKXtcblx0XHRcdFx0dW5pLnJlcXVlc3Qoe1xuXHRcdFx0XHR1cmw6IFwiaHR0cDovLzEwMS4zNS45MS4xMTc6Nzg4NC9pdGVtL3BpY3R1cmUvXCIraWQsXG5cdFx0XHRcdG1ldGhvZDogJ2dldCcsXG5cdFx0XHRcdH0pLnRoZW4ocmVzPT57XG5cdFx0XHRcdFx0Y29uc29sZS5sb2cocmVzWzFdLmRhdGEpXG5cdFx0XHRcdH0pXG5cdFx0XHR9LFxuXHRcdFx0XG5cdFx0XHRzYXZlTGlzdChpZCl7XG5cdFx0XHRcdHVuaS5zaG93TG9hZGluZyh7dGl0bGU6ICd1cGRhdGluZycsbWFzazp0cnVlfSk7XG5cdFx0XHRcdHVuaS5yZXF1ZXN0KHtcblx0XHRcdFx0dXJsOiBcImh0dHA6Ly8xMDEuMzUuOTEuMTE3Ojc4ODQvcG90ZW50aWFsL2FkZC9cIitpZCtcIi9cIit1bmkuZ2V0U3RvcmFnZVN5bmMoJ3VzZXJJZCcpLFxuXHRcdFx0XHRtZXRob2Q6ICdnZXQnLFxuXHRcdFx0XHR9KS50aGVuKHJlcz0+e1xuXHRcdFx0XHRcdHRoaXMuZ2V0Q29sKClcblx0XHRcdFx0XHRzZXRUaW1lb3V0KGZ1bmN0aW9uICgpIHt1bmkuaGlkZUxvYWRpbmcoKTt9LCAxMDAwKTtcblx0XHRcdFx0fSlcblx0XHRcdH0sXG5cdFx0XHRkZWxldGVMaXN0KGlkKXtcblx0XHRcdFx0dW5pLnNob3dMb2FkaW5nKHt0aXRsZTogJ3VwZGF0aW5nJyxtYXNrOnRydWV9KTtcblx0XHRcdFx0dW5pLnJlcXVlc3Qoe1xuXHRcdFx0XHR1cmw6IFwiaHR0cDovLzEwMS4zNS45MS4xMTc6Nzg4NC9wb3RlbnRpYWwvcmVtb3ZlL1wiK2lkK1wiL1wiK3VuaS5nZXRTdG9yYWdlU3luYygndXNlcklkJyksXG5cdFx0XHRcdG1ldGhvZDogJ2dldCcsXG5cdFx0XHRcdH0pLnRoZW4ocmVzPT57XG5cdFx0XHRcdFx0dGhpcy5nZXRDb2woKVxuXHRcdFx0XHRcdHNldFRpbWVvdXQoZnVuY3Rpb24gKCkge3VuaS5oaWRlTG9hZGluZygpO30sIDEwMDApO1xuXHRcdFx0XHR9KVxuXHRcdFx0fSxcdFx0XG5cdFx0XHRjaGFuZ2VQaG90bygpe1xuXHRcdFx0XHRsZXQgdGhhdCA9IHRoaXNcblx0XHRcdFx0dW5pLmNob29zZUltYWdlKHtcblx0XHRcdFx0ICAgIGNvdW50OiAxLCBcblx0XHRcdFx0ICAgIHNpemVUeXBlOiBbJ29yaWdpbmFsJywgJ2NvbXByZXNzZWQnXSwgXG5cdFx0XHRcdCAgICBzb3VyY2VUeXBlOiBbJ2FsYnVtJywnY2FtZXJhJ10sIFxuXHRcdFx0XHQgICAgc3VjY2VzczogZnVuY3Rpb24gKHJlcykge1xuXHRcdFx0XHRcdFx0Ly8gY29uc29sZS5sb2codGhhdC5pSXRlbWlkKVxuXHRcdFx0XHRcdFx0Ly8gY29uc29sZS5sb2cocmVzLnRlbXBGaWxlUGF0aHNbMF0pXG5cdFx0XHRcdFx0XHR1bmkudXBsb2FkRmlsZSh7XG5cdFx0XHRcdFx0XHRcdHVybDogJ2h0dHA6Ly8xMDEuMzUuOTEuMTE3Ojc4ODQvaXRlbS91cGRhdGUvcGljdHVyZScsIFxuXHRcdFx0XHRcdFx0XHRmaWxlUGF0aDogcmVzLnRlbXBGaWxlUGF0aHNbMF0sIFxuXHRcdFx0XHRcdFx0XHRuYW1lOiAncGljdHVyZScsIFxuXHRcdFx0XHRcdFx0XHRmb3JtRGF0YToge1xuXHRcdFx0XHRcdFx0XHRcdGl0ZW1faWQ6IHRoYXQuaUl0ZW1pZFxuXHRcdFx0XHRcdFx0XHRcdC8vIGZpbGU6IHRlbXBGaWxlUGF0aCAgIFxuXHRcdFx0XHRcdFx0XHR9LFxuXHRcdFx0XHRcdFx0XHRzdWNjZXNzOiAodXBsb2FkRmlsZVJlcykgPT4ge1xuXHRcdFx0XHRcdFx0XHRcdC8vIGNvbnNvbGUubG9nKHVwbG9hZEZpbGVSZXMpO1xuXHRcdFx0XHRcdFx0XHRcdC8vIGxvY2F0aW9uLnJlbG9hZCgpXG5cdFx0XHRcdFx0XHRcdFx0c2V0VGltZW91dCgoKSA9PiB7XG5cdFx0XHRcdFx0XHRcdFx0XHR0aGF0LmdldENvbCgpXG5cdFx0XHRcdFx0XHRcdFx0fSwxMDAwKVxuXHRcdFx0XHRcdFx0XHR9LFxuXHRcdFx0XHRcdFx0XHRmYWlsOiAoZXJyKSA9PiB7XG5cdFx0XHRcdFx0XHRcdFx0Y29uc29sZS5sb2coZXJyKVxuXHRcdFx0XHRcdFx0XHR9XG5cdFx0XHRcdFx0XHR9KTtcblx0XHRcdFx0ICAgIH1cblx0XHRcdFx0fSk7XG5cdFx0XHRcdFxuXHRcdFx0XHR0aGlzLml0ZW1FZGl0b3I9ZmFsc2Vcblx0XHRcdFx0XG5cdFx0XHR9XG5cdFx0XHRcblx0XHR9LFxuXHRcdFxuXG5cdH1cblx0XG4iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///148\n");
+eval("throw new Error(\"Module build failed (from ./node_modules/babel-loader/lib/index.js):\\nSyntaxError: /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/pages/grocery/grocery.vue: Unexpected token (583:3)\\n\\n  581 | \\t\\t\\t\\t\\tconsole.log(that.filepath[0])\\n  582 | \\t\\t\\t\\t\\tconsole.log(res[1].data)\\n> 583 | <<<<<<< HEAD\\n      |    ^\\n  584 | \\t\\t\\t\\t\\tuni.uploadFile({\\n  585 | \\t\\t\\t\\t\\t\\turl: 'http://101.35.91.117:7884/item/update/picture', \\n  586 | \\t\\t\\t\\t\\t\\tfilePath: that.filepath[0], \\n    at Object._raise (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:746:17)\\n    at Object.raiseWithData (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:739:17)\\n    at Object.raise (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:733:17)\\n    at Object.unexpected (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:8807:16)\\n    at Object.jsxParseIdentifier (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:4412:12)\\n    at Object.jsxParseNamespacedName (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:4422:23)\\n    at Object.jsxParseElementName (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:4433:21)\\n    at Object.jsxParseOpeningElementAt (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:4519:22)\\n    at Object.jsxParseElementAt (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:4552:33)\\n    at Object.jsxParseElement (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:4626:17)\\n    at Object.parseExprAtom (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:4633:19)\\n    at Object.parseExprSubscripts (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:9656:23)\\n    at Object.parseMaybeUnary (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:9636:21)\\n    at Object.parseExprOpBaseRightExpr (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:9599:34)\\n    at Object.parseExprOpRightExpr (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:9592:21)\\n    at Object.parseExprOp (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:9558:27)\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIxNDguanMiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///148\n");
 
 /***/ }),
 /* 149 */
@@ -12636,6 +7073,7 @@ var components
 try {
   components = {
     hxNavbar: __webpack_require__(/*! @/components/hx-navbar/hx-navbar.nvue */ 105).default,
+    uSearch: __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module 'uview-ui/components/u-search/u-search.vue'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())).default,
     uImage: __webpack_require__(/*! uview-ui/components/u-image/u-image.vue */ 62).default,
     uTabbar: __webpack_require__(/*! uview-ui/components/u-tabbar/u-tabbar.vue */ 82).default
   }
@@ -12680,23 +7118,46 @@ var render = function() {
               attrs: { _i: 3 }
             },
             [
-              _vm._l(_vm._$s(4, "f", { forItems: _vm.itemList }), function(
+              _c("u-search", {
+                attrs: {
+                  placeholder: "Search Ingredient",
+                  "show-action": true,
+                  actionText: "search",
+                  margin: "30rpx 50rpx",
+                  height: "50",
+                  animation: true,
+                  _i: 4
+                },
+                on: {
+                  custom: function($event) {
+                    return _vm.searchRecipe()
+                  }
+                },
+                model: {
+                  value: _vm._$s(4, "v-model", _vm.searchIngre),
+                  callback: function($$v) {
+                    _vm.searchIngre = $$v
+                  },
+                  expression: "searchIngre"
+                }
+              }),
+              _vm._l(_vm._$s(5, "f", { forItems: _vm.itemList }), function(
                 item,
                 index,
                 $20,
                 $30
               ) {
                 return [
-                  _vm._$s("5-" + $30, "i", index == 0)
+                  _vm._$s("6-" + $30, "i", index == 0)
                     ? _c(
                         "view",
                         {
-                          key: _vm._$s(4, "f", {
+                          key: _vm._$s(5, "f", {
                             forIndex: $20,
                             keyIndex: 0,
-                            key: 4 + "-0" + $30
+                            key: 5 + "-0" + $30
                           }),
-                          attrs: { _i: "5-" + $30 },
+                          attrs: { _i: "6-" + $30 },
                           on: {
                             click: function($event) {
                               return _vm.toDetail(item.itemId)
@@ -12707,7 +7168,7 @@ var render = function() {
                           _c("view", [
                             _c("text", [
                               _vm._v(
-                                _vm._$s("7-" + $30, "t0-0", _vm._s(item.title))
+                                _vm._$s("8-" + $30, "t0-0", _vm._s(item.title))
                               )
                             ])
                           ]),
@@ -12715,38 +7176,38 @@ var render = function() {
                             "view",
                             {
                               staticClass: _vm._$s(
-                                "8-" + $30,
+                                "9-" + $30,
                                 "sc",
                                 "main-item"
                               ),
-                              attrs: { _i: "8-" + $30 }
+                              attrs: { _i: "9-" + $30 }
                             },
                             [
                               _c(
                                 "view",
                                 {
                                   staticClass: _vm._$s(
-                                    "9-" + $30,
+                                    "10-" + $30,
                                     "sc",
                                     "main-item-img"
                                   ),
-                                  attrs: { _i: "9-" + $30 }
+                                  attrs: { _i: "10-" + $30 }
                                 },
                                 [
                                   _c("u-image", {
                                     staticClass: _vm._$s(
-                                      "10-" + $30,
+                                      "11-" + $30,
                                       "sc",
                                       "actual-img"
                                     ),
                                     attrs: {
                                       "border-radius": "5px",
                                       height: "116px",
-                                      width: "95%",
+                                      width: "90%",
                                       src: item.img,
                                       fade: true,
                                       duration: "450",
-                                      _i: "10-" + $30
+                                      _i: "11-" + $30
                                     }
                                   })
                                 ],
@@ -12756,18 +7217,18 @@ var render = function() {
                                 "view",
                                 {
                                   staticClass: _vm._$s(
-                                    "11-" + $30,
+                                    "12-" + $30,
                                     "sc",
                                     "main-item-hover"
                                   ),
-                                  attrs: { _i: "11-" + $30 }
+                                  attrs: { _i: "12-" + $30 }
                                 },
                                 [
                                   _c("view"),
                                   _c("text", [
                                     _vm._v(
                                       _vm._$s(
-                                        "13-" + $30,
+                                        "14-" + $30,
                                         "t0-0",
                                         _vm._s(_vm.limitWords(item.name))
                                       )
@@ -12777,17 +7238,17 @@ var render = function() {
                                     _c("image", {
                                       attrs: {
                                         src: _vm._$s(
-                                          "15-" + $30,
+                                          "16-" + $30,
                                           "a-src",
                                           __webpack_require__(/*! ../../static/bottle.png */ 152)
                                         ),
-                                        _i: "15-" + $30
+                                        _i: "16-" + $30
                                       }
                                     }),
                                     _c("text", [
                                       _vm._v(
                                         _vm._$s(
-                                          "16-" + $30,
+                                          "17-" + $30,
                                           "t0-0",
                                           _vm._s(_vm.limited(item.type))
                                         )
@@ -12796,17 +7257,17 @@ var render = function() {
                                     _c("image", {
                                       attrs: {
                                         src: _vm._$s(
-                                          "17-" + $30,
+                                          "18-" + $30,
                                           "a-src",
                                           __webpack_require__(/*! ../../static/medal.png */ 153)
                                         ),
-                                        _i: "17-" + $30
+                                        _i: "18-" + $30
                                       }
                                     }),
                                     _c("text", [
                                       _vm._v(
                                         _vm._$s(
-                                          "18-" + $30,
+                                          "19-" + $30,
                                           "t0-0",
                                           _vm._s(
                                             Math.floor(
@@ -12824,16 +7285,16 @@ var render = function() {
                         ]
                       )
                     : _vm._e(),
-                  _vm._$s("19-" + $30, "i", index != 0)
+                  _vm._$s("20-" + $30, "i", index != 0)
                     ? _c(
                         "view",
                         {
-                          key: _vm._$s(4, "f", {
+                          key: _vm._$s(5, "f", {
                             forIndex: $20,
                             keyIndex: 1,
-                            key: 4 + "-1" + $30
+                            key: 5 + "-1" + $30
                           }),
-                          attrs: { _i: "19-" + $30 },
+                          attrs: { _i: "20-" + $30 },
                           on: {
                             click: function($event) {
                               return _vm.toDetail(item.itemId)
@@ -12844,7 +7305,7 @@ var render = function() {
                           _c("view", [
                             _c("text", [
                               _vm._v(
-                                _vm._$s("21-" + $30, "t0-0", _vm._s(item.title))
+                                _vm._$s("22-" + $30, "t0-0", _vm._s(item.title))
                               )
                             ])
                           ]),
@@ -12852,27 +7313,27 @@ var render = function() {
                             "view",
                             {
                               staticClass: _vm._$s(
-                                "22-" + $30,
+                                "23-" + $30,
                                 "sc",
                                 "main-item"
                               ),
-                              attrs: { _i: "22-" + $30 }
+                              attrs: { _i: "23-" + $30 }
                             },
                             [
                               _c(
                                 "view",
                                 {
                                   staticClass: _vm._$s(
-                                    "23-" + $30,
+                                    "24-" + $30,
                                     "sc",
                                     "main-item-img"
                                   ),
-                                  attrs: { _i: "23-" + $30 }
+                                  attrs: { _i: "24-" + $30 }
                                 },
                                 [
                                   _c("u-image", {
                                     staticClass: _vm._$s(
-                                      "24-" + $30,
+                                      "25-" + $30,
                                       "sc",
                                       "actual-img"
                                     ),
@@ -12883,7 +7344,7 @@ var render = function() {
                                       src: item.img,
                                       fade: true,
                                       duration: "450",
-                                      _i: "24-" + $30
+                                      _i: "25-" + $30
                                     }
                                   })
                                 ],
@@ -12893,18 +7354,18 @@ var render = function() {
                                 "view",
                                 {
                                   staticClass: _vm._$s(
-                                    "25-" + $30,
+                                    "26-" + $30,
                                     "sc",
                                     "main-item-hover"
                                   ),
-                                  attrs: { _i: "25-" + $30 }
+                                  attrs: { _i: "26-" + $30 }
                                 },
                                 [
                                   _c("view"),
                                   _c("text", [
                                     _vm._v(
                                       _vm._$s(
-                                        "27-" + $30,
+                                        "28-" + $30,
                                         "t0-0",
                                         _vm._s(_vm.limitWords(item.name))
                                       )
@@ -12914,17 +7375,17 @@ var render = function() {
                                     _c("image", {
                                       attrs: {
                                         src: _vm._$s(
-                                          "29-" + $30,
+                                          "30-" + $30,
                                           "a-src",
                                           __webpack_require__(/*! ../../static/bottle.png */ 152)
                                         ),
-                                        _i: "29-" + $30
+                                        _i: "30-" + $30
                                       }
                                     }),
                                     _c("text", [
                                       _vm._v(
                                         _vm._$s(
-                                          "30-" + $30,
+                                          "31-" + $30,
                                           "t0-0",
                                           _vm._s(_vm.limited(item.type))
                                         )
@@ -12933,17 +7394,17 @@ var render = function() {
                                     _c("image", {
                                       attrs: {
                                         src: _vm._$s(
-                                          "31-" + $30,
+                                          "32-" + $30,
                                           "a-src",
                                           __webpack_require__(/*! ../../static/medal.png */ 153)
                                         ),
-                                        _i: "31-" + $30
+                                        _i: "32-" + $30
                                       }
                                     }),
                                     _c("text", [
                                       _vm._v(
                                         _vm._$s(
-                                          "32-" + $30,
+                                          "33-" + $30,
                                           "t0-0",
                                           _vm._s(
                                             Math.floor(
@@ -12969,7 +7430,7 @@ var render = function() {
         ]
       ),
       _c("u-tabbar", {
-        attrs: { list: _vm.tabbar, "mid-button": false, height: "55px", _i: 33 }
+        attrs: { list: _vm.tabbar, "mid-button": false, height: "55px", _i: 34 }
       })
     ],
     1
@@ -13021,7 +7482,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _App
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("/* WEBPACK VAR INJECTION */(function(__f__) {Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0; //\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\nvar _default =\n{\n  data: function data() {\n    return {\n      tabbar: this.$store.state.tabbar,\n      config: {\n        title: 'Recipe',\n        color: 'black',\n        backgroundColor: '#B0C07A',\n        back: false,\n\n        statusBarBackground: '#B0C07A' },\n\n      deviceHeight: 0,\n      itemList: [] };\n\n\n  },\n  onLoad: function onLoad() {\n    var deviceInfo = uni.getSystemInfoSync();\n    this.deviceHeight = deviceInfo.windowHeight;\n    // this.getAllRecipe();\n  },\n  onShow: function onShow() {\n    this.getAllRecipe();\n  },\n  methods: {\n    onClickBtn: function onClickBtn() {\n\n    },\n    getAllRecipe: function getAllRecipe() {var _this = this;\n      uni.request({\n        url: \"http://101.35.91.117:7884/recipe/\" + uni.getStorageSync('userId'),\n        method: 'get' }).\n      then(function (res) {\n        _this.loadRecipe(res[1].data);\n        _this.$store.commit(\"setRecipe\", res[1].data);\n      });\n    },\n    toDetail: function toDetail(e) {\n      uni.navigateTo({\n        url: '/pages/article/article?id=' + e });\n\n    },\n    loadRecipe: function loadRecipe(itemList) {\n      var List = [];\n      for (var i = 0; i < itemList.length; i++) {\n        var item = itemList[i];\n        var used = \"\";\n        for (var j = 0; j < item.usedIngredients.length; j++) {\n          used += item.usedIngredients[j].name;\n          used += \" \";\n        }\n        __f__(\"log\", used, \" at pages/recipe/recipe.vue:124\");\n        var recipeInfo = {\n          \"itemId\": item.id,\n          \"title\": \"Fridge Cleaning\",\n          'img': item.image,\n          'name': item.title,\n          'type': used,\n          'likes': item.likes };\n\n        List.push(recipeInfo);\n      }\n      this.itemList = List;\n    },\n    limitWords: function limitWords(txt) {\n      var str = txt;\n      var reg = /<[^<>]+>/g;\n      if (str.length >= 40) {\n        str = str.substr(0, 40) + '...';\n        str = str.replace(reg, '');\n      }\n      return str;\n    },\n    limited: function limited(txt) {\n      var str = txt;\n      var reg = /<[^<>]+>/g;\n      if (str.length >= 18) {\n        str = str.substr(0, 18) + '...';\n        str = str.replace(reg, '');\n      }\n      return str;\n    } } };exports.default = _default;\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/lib/format-log.js */ 15)[\"default\"]))//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVuaS1hcHA6Ly8vcGFnZXMvcmVjaXBlL3JlY2lwZS52dWUiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUF1RUE7QUFDQSxNQURBLGtCQUNBO0FBQ0E7QUFDQSxzQ0FEQTtBQUVBO0FBQ0EsdUJBREE7QUFFQSxzQkFGQTtBQUdBLGtDQUhBO0FBSUEsbUJBSkE7O0FBTUEsc0NBTkEsRUFGQTs7QUFVQSxxQkFWQTtBQVdBLGtCQVhBOzs7QUFjQSxHQWhCQTtBQWlCQSxRQWpCQSxvQkFpQkE7QUFDQTtBQUNBO0FBQ0E7QUFDQSxHQXJCQTtBQXNCQSxRQXRCQSxvQkFzQkE7QUFDQTtBQUNBLEdBeEJBO0FBeUJBO0FBQ0EsY0FEQSx3QkFDQTs7QUFFQSxLQUhBO0FBSUEsZ0JBSkEsMEJBSUE7QUFDQTtBQUNBLCtFQURBO0FBRUEscUJBRkE7QUFHQSxVQUhBLENBR0E7QUFDQTtBQUNBO0FBQ0EsT0FOQTtBQU9BLEtBWkE7QUFhQSxZQWJBLG9CQWFBLENBYkEsRUFhQTtBQUNBO0FBQ0EsNkNBREE7O0FBR0EsS0FqQkE7QUFrQkEsY0FsQkEsc0JBa0JBLFFBbEJBLEVBa0JBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSwyQkFEQTtBQUVBLG9DQUZBO0FBR0EsMkJBSEE7QUFJQSw0QkFKQTtBQUtBLHNCQUxBO0FBTUEsNkJBTkE7O0FBUUE7QUFDQTtBQUNBO0FBQ0EsS0F2Q0E7QUF3Q0EsY0F4Q0Esc0JBd0NBLEdBeENBLEVBd0NBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxLQWhEQTtBQWlEQSxXQWpEQSxtQkFpREEsR0FqREEsRUFpREE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLEtBekRBLEVBekJBLEUiLCJmaWxlIjoiMTU1LmpzIiwic291cmNlc0NvbnRlbnQiOlsiPHRlbXBsYXRlPlxuXHQ8dmlldz5cblx0XHQ8aHgtbmF2YmFyIHJlZj1cImh4bmJcIiA6Y29uZmlnPVwiY29uZmlnXCIgQGNsaWNrQnRuPVwib25DbGlja0J0blwiPlxuXHRcdDwvaHgtbmF2YmFyPlxuXHRcdFxuXHRcdDx2aWV3IGNsYXNzPVwibWFpbi1jb250ZW50XCI+XG5cdFx0XHQ8dmlldyBjbGFzcz1cIm1haW4tYm9keVwiIDpzdHlsZT1cInsnaGVpZ2h0JzogZGV2aWNlSGVpZ2h0ICsgJ3B4J31cIj5cblx0XHRcdFx0PGJsb2NrIHYtZm9yPVwiKGl0ZW0sIGluZGV4KSBpbiBpdGVtTGlzdFwiPlxuXHRcdFx0XHRcdDx2aWV3IGNsYXNzPVwiXCIgdi1pZj1cImluZGV4ID09IDBcIiBAY2xpY2s9XCJ0b0RldGFpbChpdGVtLml0ZW1JZClcIj5cblx0XHRcdFx0XHRcdDx2aWV3IHN0eWxlPVwidGV4dC1hbGlnbjogbGVmdDttYXJnaW4tbGVmdDogMjVweDttYXJnaW4tdG9wOiAyNXB4O2ZvbnQtd2VpZ2h0OiA2MDA7Zm9udC1zaXplOiAyNXB4O1wiPlxuXHRcdFx0XHRcdFx0XHQ8dGV4dCA+e3tpdGVtLnRpdGxlfX08L3RleHQ+XG5cdFx0XHRcdFx0XHQ8L3ZpZXc+XG5cdFx0XHRcdFx0XHQ8dmlldyBjbGFzcz1cIm1haW4taXRlbVwiID5cblx0XHRcdFx0XHRcdFx0PHZpZXcgY2xhc3M9XCJtYWluLWl0ZW0taW1nXCIgc3R5bGU9XCJ3aWR0aDogMTAwJTt0ZXh0LWFsaWduOiBjZW50ZXI7XCIgPlxuXHRcdFx0XHRcdFx0XHRcdDx1LWltYWdlIGNsYXNzPVwiYWN0dWFsLWltZ1wiIGJvcmRlci1yYWRpdXM9XCI1cHhcIiBoZWlnaHQ9XCIxMTZweFwiIHdpZHRoPVwiOTUlXCIgOnNyYz1cIml0ZW0uaW1nXCIgOmZhZGU9XCJ0cnVlXCIgZHVyYXRpb249XCI0NTBcIj48L3UtaW1hZ2U+XG5cdFx0XHRcdFx0XHRcdDwvdmlldz5cblx0XHRcdFx0XHRcdFx0PHZpZXcgY2xhc3M9XCJtYWluLWl0ZW0taG92ZXJcIj5cblx0XHRcdFx0XHRcdFx0XHQ8dmlldyBzdHlsZT1cImhlaWdodDogNDclO1wiPjwvdmlldz5cblx0XHRcdFx0XHRcdFx0XHQ8dGV4dCBzdHlsZT1cImNvbG9yOiAjMDAwMDAwO21hcmdpbi1sZWZ0OiAxNHB4O2ZvbnQtc2l6ZTogMTZweDtmb250LXdlaWdodDogNTAwO1wiPnt7IGxpbWl0V29yZHMoaXRlbS5uYW1lKSB9fTwvdGV4dD5cblx0XHRcdFx0XHRcdFx0XHQ8dmlldyBjbGFzcz1cIlwiIHN0eWxlPVwibWFyZ2luLWxlZnQ6IDE0cHg7bWFyZ2luLXRvcDogMTBweDtjb2xvcjogIzAwMDAwMDtcIj5cblx0XHRcdFx0XHRcdFx0XHRcdDxpbWFnZSBzcmM9XCIuLi8uLi9zdGF0aWMvYm90dGxlLnBuZ1wiIHN0eWxlPVwid2lkdGg6IDE1cHg7aGVpZ2h0OiAxNXB4O1wiPlxuXHRcdFx0XHRcdFx0XHRcdFx0PHRleHQgc3R5bGU9XCJkaXNwbGF5OiBpbmxpbmUtYmxvY2s7bWFyZ2luLWxlZnQ6IDVweDtcIj57eyBsaW1pdGVkKGl0ZW0udHlwZSkgfX08L3RleHQ+XG5cdFx0XHRcdFx0XHRcdFx0XHQ8aW1hZ2Ugc3JjPVwiLi4vLi4vc3RhdGljL21lZGFsLnBuZ1wiIHN0eWxlPVwid2lkdGg6IDE1cHg7aGVpZ2h0OiAxNXB4O21hcmdpbi1sZWZ0OiAzMHJweDtcIj5cblx0XHRcdFx0XHRcdFx0XHRcdDx0ZXh0IHN0eWxlPVwiZGlzcGxheTogaW5saW5lLWJsb2NrO21hcmdpbi1sZWZ0OiAxMHB4O1wiPnt7IE1hdGguZmxvb3IoKE1hdGgucmFuZG9tKCkgKiA1MDAwKSArIDEwMCkgfX0gTGlrZXM8L3RleHQ+XG5cdFx0XHRcdFx0XHRcdFx0PC92aWV3PlxuXHRcdFx0XHRcdFx0XHQ8L3ZpZXc+XG5cdFx0XHRcdFx0XHQ8L3ZpZXc+XG5cdFx0XHRcdFx0PC92aWV3PlxuXHRcdFx0XHRcdFxuXHRcdFx0XHRcdFxuXHRcdFx0XHRcdFxuXHRcdFx0XHRcdFxuXHRcdFx0XHRcdDx2aWV3IGNsYXNzPVwiXCIgIHYtaWY9XCJpbmRleCAhPSAwXCIgc3R5bGU9XCJtYXJnaW4tdG9wOiAxNTBweDtcIiBAY2xpY2s9XCJ0b0RldGFpbChpdGVtLml0ZW1JZClcIj5cblx0XHRcdFx0XHRcdDx2aWV3IHN0eWxlPVwidGV4dC1hbGlnbjogbGVmdDttYXJnaW4tbGVmdDogMjVweDttYXJnaW4tdG9wOiAyNXB4O2ZvbnQtd2VpZ2h0OiA2MDA7Zm9udC1zaXplOiAyNXB4O1wiPlxuXHRcdFx0XHRcdFx0XHQ8dGV4dCA+e3tpdGVtLnRpdGxlfX08L3RleHQ+XG5cdFx0XHRcdFx0XHQ8L3ZpZXc+XG5cdFx0XHRcdFx0XHQ8dmlldyBjbGFzcz1cIm1haW4taXRlbVwiID5cblx0XHRcdFx0XHRcdFx0PHZpZXcgY2xhc3M9XCJtYWluLWl0ZW0taW1nXCIgc3R5bGU9XCJ3aWR0aDogMTAwJTt0ZXh0LWFsaWduOiBjZW50ZXI7XCIgPlxuXHRcdFx0XHRcdFx0XHRcdDx1LWltYWdlIGNsYXNzPVwiYWN0dWFsLWltZ1wiIGJvcmRlci1yYWRpdXM9XCI1cHhcIiBoZWlnaHQ9XCIxMTZweFwiIHdpZHRoPVwiOTUlXCIgOnNyYz1cIml0ZW0uaW1nXCIgOmZhZGU9XCJ0cnVlXCIgZHVyYXRpb249XCI0NTBcIj48L3UtaW1hZ2U+XG5cdFx0XHRcdFx0XHRcdDwvdmlldz5cblx0XHRcdFx0XHRcdFx0PHZpZXcgY2xhc3M9XCJtYWluLWl0ZW0taG92ZXJcIj5cblx0XHRcdFx0XHRcdFx0XHQ8dmlldyBzdHlsZT1cImhlaWdodDogNDclO1wiPjwvdmlldz5cblx0XHRcdFx0XHRcdFx0XHQ8dGV4dCBzdHlsZT1cImNvbG9yOiAjMDAwMDAwO21hcmdpbi1sZWZ0OiAxNHB4O2ZvbnQtc2l6ZTogMTZweDtmb250LXdlaWdodDogNTAwO1wiPnt7IGxpbWl0V29yZHMoaXRlbS5uYW1lICl9fTwvdGV4dD5cblx0XHRcdFx0XHRcdFx0XHQ8dmlldyBjbGFzcz1cIlwiIHN0eWxlPVwibWFyZ2luLWxlZnQ6IDE0cHg7bWFyZ2luLXRvcDogMTBweDtjb2xvcjogIzAwMDAwMDtcIj5cblx0XHRcdFx0XHRcdFx0XHRcdDxpbWFnZSBzcmM9XCIuLi8uLi9zdGF0aWMvYm90dGxlLnBuZ1wiIHN0eWxlPVwid2lkdGg6IDE1cHg7aGVpZ2h0OiAxNXB4O1wiPlxuXHRcdFx0XHRcdFx0XHRcdFx0PHRleHQgc3R5bGU9XCJkaXNwbGF5OiBpbmxpbmUtYmxvY2s7bWFyZ2luLWxlZnQ6IDVweDtcIj57eyBsaW1pdGVkKGl0ZW0udHlwZSkgfX08L3RleHQ+XG5cdFx0XHRcdFx0XHRcdFx0XHQ8aW1hZ2Ugc3JjPVwiLi4vLi4vc3RhdGljL21lZGFsLnBuZ1wiIHN0eWxlPVwid2lkdGg6IDE1cHg7aGVpZ2h0OiAxNXB4O21hcmdpbi1sZWZ0OiAzMHJweDtcIj5cblx0XHRcdFx0XHRcdFx0XHRcdDx0ZXh0IHN0eWxlPVwiZGlzcGxheTogaW5saW5lLWJsb2NrO21hcmdpbi1sZWZ0OiAxMHB4O1wiPnt7IE1hdGguZmxvb3IoKE1hdGgucmFuZG9tKCkgKiA1MDAwKSArIDEwMCl9fSBMaWtlczwvdGV4dD5cblx0XHRcdFx0XHRcdFx0XHQ8L3ZpZXc+XG5cdFx0XHRcdFx0XHRcdDwvdmlldz5cblx0XHRcdFx0XHRcdDwvdmlldz5cblx0XHRcdFx0XHQ8L3ZpZXc+XG5cdFx0XHRcdFx0XG5cdFx0XHRcdFx0XG5cdFx0XHRcdFx0XG5cdFx0XHRcdDwvYmxvY2s+XG5cdFx0XHQ8L3ZpZXc+XG5cdFx0PC92aWV3PlxuXHRcdFxuXHRcdFxuXHRcdDwhLS0gI2lmZGVmIEFQUC1QTFVTIC0tPlxuXHRcdDx1LXRhYmJhciA6bGlzdD1cInRhYmJhclwiIDptaWQtYnV0dG9uPVwiZmFsc2VcIiBoZWlnaHQ9XCI1NXB4XCI+PC91LXRhYmJhcj5cblx0XHQ8IS0tICNlbmRpZiAtLT5cblx0XHRcblx0XHQ8IS0tICNpZmRlZiBINSAtLT5cblx0XHQ8dS10YWJiYXIgOmxpc3Q9XCJ0YWJiYXJcIiA6bWlkLWJ1dHRvbj1cImZhbHNlXCI+PC91LXRhYmJhcj5cblx0XHQ8IS0tICNlbmRpZiAtLT5cblx0PC92aWV3PlxuPC90ZW1wbGF0ZT5cblxuPHNjcmlwdD5cblx0ZXhwb3J0IGRlZmF1bHQge1xuXHRcdGRhdGEoKSB7XG5cdFx0XHRyZXR1cm4ge1xuXHRcdFx0XHR0YWJiYXI6IHRoaXMuJHN0b3JlLnN0YXRlLnRhYmJhcixcblx0XHRcdFx0Y29uZmlnOntcblx0XHRcdFx0XHR0aXRsZTogJ1JlY2lwZScsXG5cdFx0XHRcdFx0Y29sb3I6ICdibGFjaycsXG5cdFx0XHRcdFx0YmFja2dyb3VuZENvbG9yOiAnI0IwQzA3QScsXG5cdFx0XHRcdFx0YmFjazogZmFsc2UsXG5cdFx0XHRcdFx0XG5cdFx0XHRcdFx0c3RhdHVzQmFyQmFja2dyb3VuZDonI0IwQzA3QSdcblx0XHRcdFx0fSxcblx0XHRcdFx0ZGV2aWNlSGVpZ2h0OiAwLFxuXHRcdFx0XHRpdGVtTGlzdDogW1xuXHRcdFx0XHRdLFxuXHRcdFx0fVxuXHRcdH0sXG5cdFx0b25Mb2FkKCkge1xuXHRcdFx0bGV0IGRldmljZUluZm8gPSB1bmkuZ2V0U3lzdGVtSW5mb1N5bmMoKTtcblx0XHRcdHRoaXMuZGV2aWNlSGVpZ2h0ID0gZGV2aWNlSW5mby53aW5kb3dIZWlnaHQ7XG5cdFx0XHQvLyB0aGlzLmdldEFsbFJlY2lwZSgpO1xuXHRcdH0sXG5cdFx0b25TaG93KCl7XG5cdFx0XHR0aGlzLmdldEFsbFJlY2lwZSgpO1xuXHRcdH0sXG5cdFx0bWV0aG9kczoge1xuXHRcdFx0b25DbGlja0J0bigpe1xuXHRcdFx0XHRcblx0XHRcdH0sXG5cdFx0XHRnZXRBbGxSZWNpcGUoKXtcblx0XHRcdFx0dW5pLnJlcXVlc3Qoe1xuXHRcdFx0XHR1cmw6IFwiaHR0cDovLzEwMS4zNS45MS4xMTc6Nzg4NC9yZWNpcGUvXCIrdW5pLmdldFN0b3JhZ2VTeW5jKCd1c2VySWQnKSxcblx0XHRcdFx0bWV0aG9kOiAnZ2V0Jyxcblx0XHRcdFx0fSkudGhlbihyZXM9Pntcblx0XHRcdFx0XHR0aGlzLmxvYWRSZWNpcGUocmVzWzFdLmRhdGEpXG5cdFx0XHRcdFx0dGhpcy4kc3RvcmUuY29tbWl0KFwic2V0UmVjaXBlXCIscmVzWzFdLmRhdGEpXG5cdFx0XHRcdH0pXG5cdFx0XHR9LFxuXHRcdFx0dG9EZXRhaWwoZSl7XG5cdFx0XHRcdHVuaS5uYXZpZ2F0ZVRvKHtcblx0XHRcdFx0XHR1cmw6ICcvcGFnZXMvYXJ0aWNsZS9hcnRpY2xlP2lkPScrZVxuXHRcdFx0XHR9KVxuXHRcdFx0fSxcblx0XHRcdGxvYWRSZWNpcGUoaXRlbUxpc3Qpe1xuXHRcdFx0XHRsZXQgTGlzdCA9IFtdXG5cdFx0XHRcdGZvciAodmFyIGk9MDtpPGl0ZW1MaXN0Lmxlbmd0aDtpKyspe1xuXHRcdFx0XHQgICAgdmFyIGl0ZW0gPSBpdGVtTGlzdFtpXVxuXHRcdFx0XHRcdHZhciB1c2VkID0gXCJcIlxuXHRcdFx0XHRcdGZvciggdmFyIGo9MDtqPGl0ZW0udXNlZEluZ3JlZGllbnRzLmxlbmd0aDtqKyspe1xuXHRcdFx0XHRcdFx0dXNlZCs9aXRlbS51c2VkSW5ncmVkaWVudHNbal0ubmFtZVxuXHRcdFx0XHRcdFx0dXNlZCs9XCIgXCJcblx0XHRcdFx0XHR9XG5cdFx0XHRcdFx0Y29uc29sZS5sb2codXNlZCk7XG5cdFx0XHRcdFx0dmFyIHJlY2lwZUluZm8gPSB7XG5cdFx0XHRcdFx0ICAgIFwiaXRlbUlkXCI6IGl0ZW0uaWQsXG5cdFx0XHRcdFx0ICAgIFwidGl0bGVcIjogXCJGcmlkZ2UgQ2xlYW5pbmdcIixcblx0XHRcdFx0XHRcdCdpbWcnOiBpdGVtLmltYWdlLFxuXHRcdFx0XHRcdFx0J25hbWUnOiBpdGVtLnRpdGxlLFxuXHRcdFx0XHRcdFx0J3R5cGUnOiB1c2VkLFxuXHRcdFx0XHRcdFx0J2xpa2VzJzogaXRlbS5saWtlcyxcblx0XHRcdFx0XHR9XG5cdFx0XHRcdFx0TGlzdC5wdXNoKHJlY2lwZUluZm8pO1xuXHRcdFx0XHR9XG5cdFx0XHRcdHRoaXMuaXRlbUxpc3Q9TGlzdDtcblx0XHRcdH0sXG5cdFx0XHRsaW1pdFdvcmRzKHR4dCl7XG5cdFx0XHQgICAgdmFyIHN0ciA9IHR4dDtcblx0XHRcdFx0dmFyIHJlZyA9IC88W148Pl0rPi9nO1xuXHRcdFx0XHRpZiAoc3RyLmxlbmd0aCA+PSA0MCl7XG5cdFx0XHRcdFx0c3RyID0gc3RyLnN1YnN0cigwLDQwKSArICcuLi4nO1xuXHRcdFx0XHRcdHN0ciA9IHN0ci5yZXBsYWNlKHJlZywgJycpO1xuXHRcdFx0XHR9XG5cdFx0XHQgICAgcmV0dXJuIHN0cjtcblx0XHRcdH0sXG5cdFx0XHRsaW1pdGVkKHR4dCl7XG5cdFx0XHQgICAgdmFyIHN0ciA9IHR4dDtcblx0XHRcdFx0dmFyIHJlZyA9IC88W148Pl0rPi9nO1xuXHRcdFx0XHRpZiAoc3RyLmxlbmd0aCA+PSAxOCl7XG5cdFx0XHRcdFx0c3RyID0gc3RyLnN1YnN0cigwLDE4KSArICcuLi4nO1xuXHRcdFx0XHRcdHN0ciA9IHN0ci5yZXBsYWNlKHJlZywgJycpO1xuXHRcdFx0XHR9XG5cdFx0XHQgICAgcmV0dXJuIHN0cjtcblx0XHRcdH1cblx0XHR9XG5cdH1cbjwvc2NyaXB0PlxuXG48c3R5bGU+XG5cdHBhZ2V7XG5cdFx0YmFja2dyb3VuZC1jb2xvcjogI0IwQzA3QTtcblx0fVxuXHQubWFpbi1jb250ZW50e1xuXHRcdGRpc3BsYXk6IGZsZXg7XG5cdFx0anVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG5cdFx0dGV4dC1hbGlnbjogY2VudGVyO1xuXHR9XG5cdC5tYWluLWJvZHl7XG5cdFx0YmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XG5cdFx0d2lkdGg6IDkwJTtcblx0XHRib3JkZXItcmFkaXVzOiAxMHB4O1xuXHRcdHRleHQtYWxpZ246IGNlbnRlcjtcblx0fVxuXHQubWFpbi1pdGVte1xuXHRcdHBvc2l0aW9uOnJlbGF0aXZlO1xuXHRcdGRpc3BsYXk6IGZsZXg7XG5cdFx0anVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG5cdFx0dGV4dC1hbGlnbjogY2VudGVyO1xuXHRcdGJhY2tncm91bmQ6ICMwMDA7XG5cdH1cblx0Lm1haW4taXRlbS1pbWd7XG5cdFx0ZGlzcGxheTogZmxleDtcblx0XHRqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcblx0XHR0ZXh0LWFsaWduOiBjZW50ZXI7XG5cdFx0bWFyZ2luLXRvcDogMTBweDtcblx0XHRwb3NpdGlvbjogYWJzb2x1dGU7XG5cdFx0b3BhY2l0eTowLjY7XG5cdFx0ZmlsdGVyOiBhbHBoYShvcGFjaXR5PTYwKTtcblx0fVxuXG5cdFxuXHQubWFpbi1pdGVtLWhvdmVye1xuXG5cdFx0cG9zaXRpb246YWJzb2x1dGU7XG5cdFx0LyogYmFja2dyb3VuZC1jb2xvcjogIzRDRDk2NDsgKi9cblx0XHR6LWluZGV4OiA5OTk5OTk7XG5cdFx0d2lkdGg6IDk1JTtcblx0XHRoZWlnaHQ6IDExNnB4O1xuXHRcdG1hcmdpbi10b3A6IDEwcHg7XG5cdFx0dGV4dC1hbGlnbjogbGVmdDtcblx0fVxuXG48L3N0eWxlPlxuIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///155\n");
+eval("/* WEBPACK VAR INJECTION */(function(__f__) {Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0; //\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\nvar _default =\n{\n  data: function data() {\n    return {\n      tabbar: this.$store.state.tabbar,\n      config: {\n        title: 'Recipe',\n        color: 'black',\n        backgroundColor: '#B0C07A',\n        back: false,\n\n        statusBarBackground: '#B0C07A' },\n\n      deviceHeight: 0,\n      itemList: [],\n\n      searchList: [],\n\n      searchIngre: '' };\n\n  },\n  onLoad: function onLoad() {\n    var deviceInfo = uni.getSystemInfoSync();\n    this.deviceHeight = deviceInfo.windowHeight;\n    // this.getAllRecipe();\n  },\n  onShow: function onShow() {\n    if (this.searchIngre === '') {\n      this.getAllRecipe();\n    } else {\n      this.searchRecipe(this.searchIngre);\n    }\n\n  },\n  methods: {\n    onClickBtn: function onClickBtn() {\n\n    },\n    searchRecipe: function searchRecipe(searchIngre) {var _this = this;\n      // console.log(this.searchIngre);\n      uni.request({\n        url: \"http://101.35.91.117:7884/recipe/\" + uni.getStorageSync('userId'),\n        method: 'get' }).\n      then(function (res) {\n        _this.loadRecipe2(res[1].data);\n        _this.$store.commit(\"setRecipe\", res[1].data);\n      });\n\n    },\n\n    getAllRecipe: function getAllRecipe() {var _this2 = this;\n      uni.request({\n        url: \"http://101.35.91.117:7884/recipe/\" + uni.getStorageSync('userId'),\n        method: 'get' }).\n      then(function (res) {\n        _this2.loadRecipe(res[1].data);\n        _this2.$store.commit(\"setRecipe\", res[1].data);\n      });\n    },\n    toDetail: function toDetail(e) {\n      uni.navigateTo({\n        url: '/pages/article/article?id=' + e });\n\n    },\n\n    loadRecipe: function loadRecipe(itemList) {\n      var List = [];\n      // let ingre = this.searchIngre\n      for (var i = 0; i < itemList.length; i++) {\n        var item = itemList[i];\n        var used = \"\";\n        for (var j = 0; j < item.usedIngredients.length; j++) {\n          used += item.usedIngredients[j].name;\n          used += \" \";\n        }\n        __f__(\"log\", used, \" at pages/recipe/recipe.vue:144\");\n        var recipeInfo = {\n          \"itemId\": item.id,\n          // \"title\": \"Fridge Cleaning\",\n          'img': item.image,\n          'name': item.title,\n          'type': used,\n          'likes': item.likes };\n\n\n\n        List.push(recipeInfo);\n\n\n      }\n      this.itemList = List;\n    },\n    loadRecipe2: function loadRecipe2(searchList) {\n      var List = [];\n      var ingre = this.searchIngre;\n      for (var i = 0; i < searchList.length; i++) {\n        var item = searchList[i];\n        var used = \"\";\n        for (var j = 0; j < item.usedIngredients.length; j++) {\n          used += item.usedIngredients[j].name;\n          used += \" \";\n        }\n        __f__(\"log\", used, \" at pages/recipe/recipe.vue:171\");\n        var recipeInfo = {\n          \"itemId\": item.id,\n          // \"title\": \"Fridge Cleaning\",\n          'img': item.image,\n          'name': item.title,\n          'type': used,\n          'likes': item.likes };\n\n\n        if (used.includes(ingre)) {\n          __f__(\"log\", \"111\" + used, \" at pages/recipe/recipe.vue:182\");\n          List.push(recipeInfo);\n        }\n\n      }\n\n      this.itemList = List;\n      __f__(\"log\", this.itemList.length, \" at pages/recipe/recipe.vue:189\");\n    },\n    limitWords: function limitWords(txt) {\n      var str = txt;\n      var reg = /<[^<>]+>/g;\n      if (str.length >= 40) {\n        str = str.substr(0, 40) + '...';\n        str = str.replace(reg, '');\n      }\n      return str;\n    },\n    limited: function limited(txt) {\n      var str = txt;\n      var reg = /<[^<>]+>/g;\n      if (str.length >= 18) {\n        str = str.substr(0, 18) + '...';\n        str = str.replace(reg, '');\n      }\n      return str;\n    } } };exports.default = _default;\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/lib/format-log.js */ 15)[\"default\"]))//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVuaS1hcHA6Ly8vcGFnZXMvcmVjaXBlL3JlY2lwZS52dWUiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBcUVBO0FBQ0EsTUFEQSxrQkFDQTtBQUNBO0FBQ0Esc0NBREE7QUFFQTtBQUNBLHVCQURBO0FBRUEsc0JBRkE7QUFHQSxrQ0FIQTtBQUlBLG1CQUpBOztBQU1BLHNDQU5BLEVBRkE7O0FBVUEscUJBVkE7QUFXQSxrQkFYQTs7QUFhQSxvQkFiQTs7QUFlQSxxQkFmQTs7QUFpQkEsR0FuQkE7QUFvQkEsUUFwQkEsb0JBb0JBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsR0F4QkE7QUF5QkEsUUF6QkEsb0JBeUJBO0FBQ0E7QUFDQTtBQUNBLEtBRkEsTUFFQTtBQUNBO0FBQ0E7O0FBRUEsR0FoQ0E7QUFpQ0E7QUFDQSxjQURBLHdCQUNBOztBQUVBLEtBSEE7QUFJQSxnQkFKQSx3QkFJQSxXQUpBLEVBSUE7QUFDQTtBQUNBO0FBQ0EsK0VBREE7QUFFQSxxQkFGQTtBQUdBLFVBSEEsQ0FHQTtBQUNBO0FBQ0E7QUFDQSxPQU5BOztBQVFBLEtBZEE7O0FBZ0JBLGdCQWhCQSwwQkFnQkE7QUFDQTtBQUNBLCtFQURBO0FBRUEscUJBRkE7QUFHQSxVQUhBLENBR0E7QUFDQTtBQUNBO0FBQ0EsT0FOQTtBQU9BLEtBeEJBO0FBeUJBLFlBekJBLG9CQXlCQSxDQXpCQSxFQXlCQTtBQUNBO0FBQ0EsNkNBREE7O0FBR0EsS0E3QkE7O0FBK0JBLGNBL0JBLHNCQStCQSxRQS9CQSxFQStCQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSwyQkFEQTtBQUVBO0FBQ0EsMkJBSEE7QUFJQSw0QkFKQTtBQUtBLHNCQUxBO0FBTUEsNkJBTkE7Ozs7QUFVQTs7O0FBR0E7QUFDQTtBQUNBLEtBekRBO0FBMERBLGVBMURBLHVCQTBEQSxVQTFEQSxFQTBEQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSwyQkFEQTtBQUVBO0FBQ0EsMkJBSEE7QUFJQSw0QkFKQTtBQUtBLHNCQUxBO0FBTUEsNkJBTkE7OztBQVNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBOztBQUVBO0FBQ0E7QUFDQSxLQXZGQTtBQXdGQSxjQXhGQSxzQkF3RkEsR0F4RkEsRUF3RkE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLEtBaEdBO0FBaUdBLFdBakdBLG1CQWlHQSxHQWpHQSxFQWlHQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsS0F6R0EsRUFqQ0EsRSIsImZpbGUiOiIxNTUuanMiLCJzb3VyY2VzQ29udGVudCI6WyI8dGVtcGxhdGU+XG5cdDx2aWV3PlxuXHRcdDxoeC1uYXZiYXIgcmVmPVwiaHhuYlwiIDpjb25maWc9XCJjb25maWdcIiBAY2xpY2tCdG49XCJvbkNsaWNrQnRuXCI+XG5cdFx0PC9oeC1uYXZiYXI+XG5cdFx0XG5cdFx0PHZpZXcgY2xhc3M9XCJtYWluLWNvbnRlbnRcIj5cblx0XHRcdDx2aWV3IGNsYXNzPVwibWFpbi1ib2R5XCIgOnN0eWxlPVwieydoZWlnaHQnOiBkZXZpY2VIZWlnaHQgKyAncHgnfVwiPlxuXHRcdFx0XHQ8dS1zZWFyY2ggcGxhY2Vob2xkZXI9XCJTZWFyY2ggSW5ncmVkaWVudFwiIDpzaG93LWFjdGlvbj1cInRydWVcIiBhY3Rpb25UZXh0PVwic2VhcmNoXCIgbWFyZ2luPVwiMzBycHggNTBycHhcIiBoZWlnaHQ9XCI1MFwiIDphbmltYXRpb249XCJ0cnVlXCIgdi1tb2RlbD1cInNlYXJjaEluZ3JlXCIgQGN1c3RvbT1cInNlYXJjaFJlY2lwZSgpXCI+PC91LXNlYXJjaD5cblx0XHRcdFx0PGJsb2NrIHYtZm9yPVwiKGl0ZW0sIGluZGV4KSBpbiBpdGVtTGlzdFwiPlxuXHRcdFx0XHRcdDx2aWV3IGNsYXNzPVwiXCIgdi1pZj1cImluZGV4ID09IDBcIiBAY2xpY2s9XCJ0b0RldGFpbChpdGVtLml0ZW1JZClcIj5cblx0XHRcdFx0XHRcdDx2aWV3IHN0eWxlPVwidGV4dC1hbGlnbjogbGVmdDttYXJnaW4tbGVmdDogMjVweDttYXJnaW4tdG9wOiAtNXB4O2ZvbnQtd2VpZ2h0OiA2MDA7Zm9udC1zaXplOiAyNXB4O1wiPlxuXHRcdFx0XHRcdFx0XHQ8dGV4dCA+e3tpdGVtLnRpdGxlfX08L3RleHQ+XG5cdFx0XHRcdFx0XHQ8L3ZpZXc+XG5cdFx0XHRcdFx0XHQ8dmlldyBjbGFzcz1cIm1haW4taXRlbVwiID5cblx0XHRcdFx0XHRcdFx0PHZpZXcgY2xhc3M9XCJtYWluLWl0ZW0taW1nXCIgc3R5bGU9XCJ3aWR0aDogMTAwJTt0ZXh0LWFsaWduOiBjZW50ZXI7XCIgPlxuXHRcdFx0XHRcdFx0XHRcdDx1LWltYWdlIGNsYXNzPVwiYWN0dWFsLWltZ1wiIGJvcmRlci1yYWRpdXM9XCI1cHhcIiBoZWlnaHQ9XCIxMTZweFwiIHdpZHRoPVwiOTAlXCIgOnNyYz1cIml0ZW0uaW1nXCIgOmZhZGU9XCJ0cnVlXCIgZHVyYXRpb249XCI0NTBcIj48L3UtaW1hZ2U+XG5cdFx0XHRcdFx0XHRcdDwvdmlldz5cblx0XHRcdFx0XHRcdFx0PHZpZXcgY2xhc3M9XCJtYWluLWl0ZW0taG92ZXJcIj5cblx0XHRcdFx0XHRcdFx0XHQ8dmlldyBzdHlsZT1cImhlaWdodDogNDclO1wiPjwvdmlldz5cblx0XHRcdFx0XHRcdFx0XHQ8dGV4dCBzdHlsZT1cImNvbG9yOiAjMDAwMDAwO21hcmdpbi1sZWZ0OiAxNHB4O2ZvbnQtc2l6ZTogMTZweDtmb250LXdlaWdodDogNTAwO1wiPnt7IGxpbWl0V29yZHMoaXRlbS5uYW1lKSB9fTwvdGV4dD5cblx0XHRcdFx0XHRcdFx0XHQ8dmlldyBjbGFzcz1cIlwiIHN0eWxlPVwibWFyZ2luLWxlZnQ6IDE0cHg7bWFyZ2luLXRvcDogMTBweDtjb2xvcjogIzAwMDAwMDtcIj5cblx0XHRcdFx0XHRcdFx0XHRcdDxpbWFnZSBzcmM9XCIuLi8uLi9zdGF0aWMvYm90dGxlLnBuZ1wiIHN0eWxlPVwid2lkdGg6IDE1cHg7aGVpZ2h0OiAxNXB4O1wiPlxuXHRcdFx0XHRcdFx0XHRcdFx0PHRleHQgc3R5bGU9XCJkaXNwbGF5OiBpbmxpbmUtYmxvY2s7bWFyZ2luLWxlZnQ6IDVweDtcIj57eyBsaW1pdGVkKGl0ZW0udHlwZSkgfX08L3RleHQ+XG5cdFx0XHRcdFx0XHRcdFx0XHQ8aW1hZ2Ugc3JjPVwiLi4vLi4vc3RhdGljL21lZGFsLnBuZ1wiIHN0eWxlPVwid2lkdGg6IDE1cHg7aGVpZ2h0OiAxNXB4O21hcmdpbi1sZWZ0OiAzMHJweDtcIj5cblx0XHRcdFx0XHRcdFx0XHRcdDx0ZXh0IHN0eWxlPVwiZGlzcGxheTogaW5saW5lLWJsb2NrO21hcmdpbi1sZWZ0OiAxMHB4O1wiPnt7IE1hdGguZmxvb3IoKE1hdGgucmFuZG9tKCkgKiA1MDAwKSArIDEwMCkgfX0gTGlrZXM8L3RleHQ+XG5cdFx0XHRcdFx0XHRcdFx0PC92aWV3PlxuXHRcdFx0XHRcdFx0XHQ8L3ZpZXc+XG5cdFx0XHRcdFx0XHQ8L3ZpZXc+XG5cdFx0XHRcdFx0PC92aWV3PlxuXHRcdFx0XHRcdFxuXHRcdFx0XHRcdFxuXHRcdFx0XHRcdFxuXHRcdFx0XHRcdFxuXHRcdFx0XHRcdDx2aWV3IGNsYXNzPVwiXCIgIHYtaWY9XCJpbmRleCAhPSAwXCIgc3R5bGU9XCJtYXJnaW4tdG9wOiAxNTBweDtcIiBAY2xpY2s9XCJ0b0RldGFpbChpdGVtLml0ZW1JZClcIj5cblx0XHRcdFx0XHRcdDx2aWV3IHN0eWxlPVwidGV4dC1hbGlnbjogbGVmdDttYXJnaW4tbGVmdDogMjVweDttYXJnaW4tdG9wOiAyNXB4O2ZvbnQtd2VpZ2h0OiA2MDA7Zm9udC1zaXplOiAyNXB4O1wiPlxuXHRcdFx0XHRcdFx0XHQ8dGV4dCA+e3tpdGVtLnRpdGxlfX08L3RleHQ+XG5cdFx0XHRcdFx0XHQ8L3ZpZXc+XG5cdFx0XHRcdFx0XHQ8dmlldyBjbGFzcz1cIm1haW4taXRlbVwiID5cblx0XHRcdFx0XHRcdFx0PHZpZXcgY2xhc3M9XCJtYWluLWl0ZW0taW1nXCIgc3R5bGU9XCJ3aWR0aDogMTAwJTt0ZXh0LWFsaWduOiBjZW50ZXI7XCIgPlxuXHRcdFx0XHRcdFx0XHRcdDx1LWltYWdlIGNsYXNzPVwiYWN0dWFsLWltZ1wiIGJvcmRlci1yYWRpdXM9XCI1cHhcIiBoZWlnaHQ9XCIxMTZweFwiIHdpZHRoPVwiOTUlXCIgOnNyYz1cIml0ZW0uaW1nXCIgOmZhZGU9XCJ0cnVlXCIgZHVyYXRpb249XCI0NTBcIj48L3UtaW1hZ2U+XG5cdFx0XHRcdFx0XHRcdDwvdmlldz5cblx0XHRcdFx0XHRcdFx0PHZpZXcgY2xhc3M9XCJtYWluLWl0ZW0taG92ZXJcIj5cblx0XHRcdFx0XHRcdFx0XHQ8dmlldyBzdHlsZT1cImhlaWdodDogNDclO1wiPjwvdmlldz5cblx0XHRcdFx0XHRcdFx0XHQ8dGV4dCBzdHlsZT1cImNvbG9yOiAjMDAwMDAwO21hcmdpbi1sZWZ0OiAxNHB4O2ZvbnQtc2l6ZTogMTZweDtmb250LXdlaWdodDogNTAwO1wiPnt7IGxpbWl0V29yZHMoaXRlbS5uYW1lICl9fTwvdGV4dD5cblx0XHRcdFx0XHRcdFx0XHQ8dmlldyBjbGFzcz1cIlwiIHN0eWxlPVwibWFyZ2luLWxlZnQ6IDE0cHg7bWFyZ2luLXRvcDogMTBweDtjb2xvcjogIzAwMDAwMDtcIj5cblx0XHRcdFx0XHRcdFx0XHRcdDxpbWFnZSBzcmM9XCIuLi8uLi9zdGF0aWMvYm90dGxlLnBuZ1wiIHN0eWxlPVwid2lkdGg6IDE1cHg7aGVpZ2h0OiAxNXB4O1wiPlxuXHRcdFx0XHRcdFx0XHRcdFx0PHRleHQgc3R5bGU9XCJkaXNwbGF5OiBpbmxpbmUtYmxvY2s7bWFyZ2luLWxlZnQ6IDVweDtcIj57eyBsaW1pdGVkKGl0ZW0udHlwZSkgfX08L3RleHQ+XG5cdFx0XHRcdFx0XHRcdFx0XHQ8aW1hZ2Ugc3JjPVwiLi4vLi4vc3RhdGljL21lZGFsLnBuZ1wiIHN0eWxlPVwid2lkdGg6IDE1cHg7aGVpZ2h0OiAxNXB4O21hcmdpbi1sZWZ0OiAzMHJweDtcIj5cblx0XHRcdFx0XHRcdFx0XHRcdDx0ZXh0IHN0eWxlPVwiZGlzcGxheTogaW5saW5lLWJsb2NrO21hcmdpbi1sZWZ0OiAxMHB4O1wiPnt7IE1hdGguZmxvb3IoKE1hdGgucmFuZG9tKCkgKiA1MDAwKSArIDEwMCl9fSBMaWtlczwvdGV4dD5cblx0XHRcdFx0XHRcdFx0XHQ8L3ZpZXc+XG5cdFx0XHRcdFx0XHRcdDwvdmlldz5cblx0XHRcdFx0XHRcdDwvdmlldz5cblx0XHRcdFx0XHQ8L3ZpZXc+XHRcdFx0XG5cdFx0XHRcdDwvYmxvY2s+XG5cdFx0XHQ8L3ZpZXc+XG5cdFx0PC92aWV3PlxuXHRcdFxuXHRcdFxuXHRcdDwhLS0gI2lmZGVmIEFQUC1QTFVTIC0tPlxuXHRcdDx1LXRhYmJhciA6bGlzdD1cInRhYmJhclwiIDptaWQtYnV0dG9uPVwiZmFsc2VcIiBoZWlnaHQ9XCI1NXB4XCI+PC91LXRhYmJhcj5cblx0XHQ8IS0tICNlbmRpZiAtLT5cblx0XHRcblx0XHQ8IS0tICNpZmRlZiBINSAtLT5cblx0XHQ8dS10YWJiYXIgOmxpc3Q9XCJ0YWJiYXJcIiA6bWlkLWJ1dHRvbj1cImZhbHNlXCI+PC91LXRhYmJhcj5cblx0XHQ8IS0tICNlbmRpZiAtLT5cblx0PC92aWV3PlxuPC90ZW1wbGF0ZT5cblxuPHNjcmlwdD5cblx0ZXhwb3J0IGRlZmF1bHQge1xuXHRcdGRhdGEoKSB7XG5cdFx0XHRyZXR1cm4ge1xuXHRcdFx0XHR0YWJiYXI6IHRoaXMuJHN0b3JlLnN0YXRlLnRhYmJhcixcblx0XHRcdFx0Y29uZmlnOntcblx0XHRcdFx0XHR0aXRsZTogJ1JlY2lwZScsXG5cdFx0XHRcdFx0Y29sb3I6ICdibGFjaycsXG5cdFx0XHRcdFx0YmFja2dyb3VuZENvbG9yOiAnI0IwQzA3QScsXG5cdFx0XHRcdFx0YmFjazogZmFsc2UsXG5cdFx0XHRcdFx0XG5cdFx0XHRcdFx0c3RhdHVzQmFyQmFja2dyb3VuZDonI0IwQzA3QSdcblx0XHRcdFx0fSxcblx0XHRcdFx0ZGV2aWNlSGVpZ2h0OiAwLFxuXHRcdFx0XHRpdGVtTGlzdDogW1xuXHRcdFx0XHRdLFxuXHRcdFx0XHRzZWFyY2hMaXN0OiBbXHRcblx0XHRcdFx0XSxcblx0XHRcdFx0c2VhcmNoSW5ncmU6JycsXG5cdFx0XHR9XG5cdFx0fSxcblx0XHRvbkxvYWQoKSB7XG5cdFx0XHRsZXQgZGV2aWNlSW5mbyA9IHVuaS5nZXRTeXN0ZW1JbmZvU3luYygpO1xuXHRcdFx0dGhpcy5kZXZpY2VIZWlnaHQgPSBkZXZpY2VJbmZvLndpbmRvd0hlaWdodDtcblx0XHRcdC8vIHRoaXMuZ2V0QWxsUmVjaXBlKCk7XG5cdFx0fSxcblx0XHRvblNob3coKXtcblx0XHRcdGlmICh0aGlzLnNlYXJjaEluZ3JlID09PScnKSB7XG5cdFx0XHRcdHRoaXMuZ2V0QWxsUmVjaXBlKCk7XG5cdFx0XHR9IGVsc2Uge1xuXHRcdFx0XHR0aGlzLnNlYXJjaFJlY2lwZSh0aGlzLnNlYXJjaEluZ3JlKTtcblx0XHRcdH1cblx0XHRcdFxuXHRcdH0sXG5cdFx0bWV0aG9kczoge1xuXHRcdFx0b25DbGlja0J0bigpe1xuXHRcdFx0XHRcblx0XHRcdH0sXG5cdFx0XHRzZWFyY2hSZWNpcGUoc2VhcmNoSW5ncmUpe1xuXHRcdFx0XHQvLyBjb25zb2xlLmxvZyh0aGlzLnNlYXJjaEluZ3JlKTtcblx0XHRcdFx0dW5pLnJlcXVlc3Qoe1xuXHRcdFx0XHR1cmw6IFwiaHR0cDovLzEwMS4zNS45MS4xMTc6Nzg4NC9yZWNpcGUvXCIrdW5pLmdldFN0b3JhZ2VTeW5jKCd1c2VySWQnKSxcblx0XHRcdFx0bWV0aG9kOiAnZ2V0Jyxcblx0XHRcdFx0fSkudGhlbihyZXM9Pntcblx0XHRcdFx0XHR0aGlzLmxvYWRSZWNpcGUyKHJlc1sxXS5kYXRhKVxuXHRcdFx0XHRcdHRoaXMuJHN0b3JlLmNvbW1pdChcInNldFJlY2lwZVwiLHJlc1sxXS5kYXRhKVxuXHRcdFx0XHR9KVxuXG5cdFx0XHR9LFxuXHRcdFx0XG5cdFx0XHRnZXRBbGxSZWNpcGUoKXtcblx0XHRcdFx0dW5pLnJlcXVlc3Qoe1xuXHRcdFx0XHR1cmw6IFwiaHR0cDovLzEwMS4zNS45MS4xMTc6Nzg4NC9yZWNpcGUvXCIrdW5pLmdldFN0b3JhZ2VTeW5jKCd1c2VySWQnKSxcblx0XHRcdFx0bWV0aG9kOiAnZ2V0Jyxcblx0XHRcdFx0fSkudGhlbihyZXM9Pntcblx0XHRcdFx0XHR0aGlzLmxvYWRSZWNpcGUocmVzWzFdLmRhdGEpXG5cdFx0XHRcdFx0dGhpcy4kc3RvcmUuY29tbWl0KFwic2V0UmVjaXBlXCIscmVzWzFdLmRhdGEpXG5cdFx0XHRcdH0pXG5cdFx0XHR9LFxuXHRcdFx0dG9EZXRhaWwoZSl7XG5cdFx0XHRcdHVuaS5uYXZpZ2F0ZVRvKHtcblx0XHRcdFx0XHR1cmw6ICcvcGFnZXMvYXJ0aWNsZS9hcnRpY2xlP2lkPScrZVxuXHRcdFx0XHR9KVxuXHRcdFx0fSxcblxuXHRcdFx0bG9hZFJlY2lwZShpdGVtTGlzdCl7XG5cdFx0XHRcdGxldCBMaXN0ID0gW11cblx0XHRcdFx0Ly8gbGV0IGluZ3JlID0gdGhpcy5zZWFyY2hJbmdyZVxuXHRcdFx0XHRmb3IgKHZhciBpPTA7aTxpdGVtTGlzdC5sZW5ndGg7aSsrKXtcblx0XHRcdFx0ICAgIHZhciBpdGVtID0gaXRlbUxpc3RbaV1cblx0XHRcdFx0XHR2YXIgdXNlZCA9IFwiXCJcblx0XHRcdFx0XHRmb3IoIHZhciBqPTA7ajxpdGVtLnVzZWRJbmdyZWRpZW50cy5sZW5ndGg7aisrKXtcblx0XHRcdFx0XHRcdHVzZWQrPWl0ZW0udXNlZEluZ3JlZGllbnRzW2pdLm5hbWVcblx0XHRcdFx0XHRcdHVzZWQrPVwiIFwiXG5cdFx0XHRcdFx0fVxuXHRcdFx0XHRcdGNvbnNvbGUubG9nKHVzZWQpO1xuXHRcdFx0XHRcdHZhciByZWNpcGVJbmZvID0ge1xuXHRcdFx0XHRcdCAgICBcIml0ZW1JZFwiOiBpdGVtLmlkLFxuXHRcdFx0XHRcdCAgICAvLyBcInRpdGxlXCI6IFwiRnJpZGdlIENsZWFuaW5nXCIsXG5cdFx0XHRcdFx0XHQnaW1nJzogaXRlbS5pbWFnZSxcblx0XHRcdFx0XHRcdCduYW1lJzogaXRlbS50aXRsZSxcblx0XHRcdFx0XHRcdCd0eXBlJzogdXNlZCxcblx0XHRcdFx0XHRcdCdsaWtlcyc6IGl0ZW0ubGlrZXMsXG5cdFx0XHRcdFx0fVxuXHRcdFx0XHRcblx0XHRcdFx0XHRcdFxuXHRcdFx0XHRcdExpc3QucHVzaChyZWNpcGVJbmZvKTtcblx0XHRcdFx0XHRcblx0XHRcdFx0XHRcblx0XHRcdFx0fVxuXHRcdFx0XHR0aGlzLml0ZW1MaXN0PUxpc3Q7XG5cdFx0XHR9LFxuXHRcdFx0bG9hZFJlY2lwZTIoc2VhcmNoTGlzdCl7XG5cdFx0XHRcdGxldCBMaXN0ID0gW11cblx0XHRcdFx0dmFyIGluZ3JlID0gdGhpcy5zZWFyY2hJbmdyZVxuXHRcdFx0XHRmb3IgKHZhciBpPTA7aTxzZWFyY2hMaXN0Lmxlbmd0aDtpKyspe1xuXHRcdFx0XHQgICAgdmFyIGl0ZW0gPSBzZWFyY2hMaXN0W2ldXG5cdFx0XHRcdFx0dmFyIHVzZWQgPSBcIlwiXG5cdFx0XHRcdFx0Zm9yKCB2YXIgaj0wO2o8aXRlbS51c2VkSW5ncmVkaWVudHMubGVuZ3RoO2orKyl7XG5cdFx0XHRcdFx0XHR1c2VkKz1pdGVtLnVzZWRJbmdyZWRpZW50c1tqXS5uYW1lXG5cdFx0XHRcdFx0XHR1c2VkKz1cIiBcIlxuXHRcdFx0XHRcdH1cblx0XHRcdFx0XHRjb25zb2xlLmxvZyh1c2VkKTtcblx0XHRcdFx0XHR2YXIgcmVjaXBlSW5mbyA9IHtcblx0XHRcdFx0XHQgICAgXCJpdGVtSWRcIjogaXRlbS5pZCxcblx0XHRcdFx0XHQgICAgLy8gXCJ0aXRsZVwiOiBcIkZyaWRnZSBDbGVhbmluZ1wiLFxuXHRcdFx0XHRcdFx0J2ltZyc6IGl0ZW0uaW1hZ2UsXG5cdFx0XHRcdFx0XHQnbmFtZSc6IGl0ZW0udGl0bGUsXG5cdFx0XHRcdFx0XHQndHlwZSc6IHVzZWQsXG5cdFx0XHRcdFx0XHQnbGlrZXMnOiBpdGVtLmxpa2VzLFxuXHRcdFx0XHRcdH1cblx0XHRcdFx0XHRcblx0XHRcdFx0XHRpZiAodXNlZC5pbmNsdWRlcyhpbmdyZSkpIHtcblx0XHRcdFx0XHRcdGNvbnNvbGUubG9nKFwiMTExXCIgKyB1c2VkKVxuXHRcdFx0XHRcdFx0TGlzdC5wdXNoKHJlY2lwZUluZm8pO1xuXHRcdFx0XHRcdH1cblx0XHRcdFx0XHRcblx0XHRcdFx0fVxuXHRcdFx0XG5cdFx0XHRcdHRoaXMuaXRlbUxpc3Q9TGlzdDtcblx0XHRcdFx0Y29uc29sZS5sb2codGhpcy5pdGVtTGlzdC5sZW5ndGgpO1xuXHRcdFx0fSxcblx0XHRcdGxpbWl0V29yZHModHh0KXtcblx0XHRcdCAgICB2YXIgc3RyID0gdHh0O1xuXHRcdFx0XHR2YXIgcmVnID0gLzxbXjw+XSs+L2c7XG5cdFx0XHRcdGlmIChzdHIubGVuZ3RoID49IDQwKXtcblx0XHRcdFx0XHRzdHIgPSBzdHIuc3Vic3RyKDAsNDApICsgJy4uLic7XG5cdFx0XHRcdFx0c3RyID0gc3RyLnJlcGxhY2UocmVnLCAnJyk7XG5cdFx0XHRcdH1cblx0XHRcdCAgICByZXR1cm4gc3RyO1xuXHRcdFx0fSxcblx0XHRcdGxpbWl0ZWQodHh0KXtcblx0XHRcdCAgICB2YXIgc3RyID0gdHh0O1xuXHRcdFx0XHR2YXIgcmVnID0gLzxbXjw+XSs+L2c7XG5cdFx0XHRcdGlmIChzdHIubGVuZ3RoID49IDE4KXtcblx0XHRcdFx0XHRzdHIgPSBzdHIuc3Vic3RyKDAsMTgpICsgJy4uLic7XG5cdFx0XHRcdFx0c3RyID0gc3RyLnJlcGxhY2UocmVnLCAnJyk7XG5cdFx0XHRcdH1cblx0XHRcdCAgICByZXR1cm4gc3RyO1xuXHRcdFx0fVxuXHRcdH1cblx0fVxuPC9zY3JpcHQ+XG5cbjxzdHlsZT5cblx0cGFnZXtcblx0XHRiYWNrZ3JvdW5kLWNvbG9yOiAjQjBDMDdBO1xuXHR9XG5cdC5tYWluLWNvbnRlbnR7XG5cdFx0ZGlzcGxheTogZmxleDtcblx0XHRqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcblx0XHR0ZXh0LWFsaWduOiBjZW50ZXI7XG5cdFx0bWFyZ2luLWJvdHRvbTogNjtcblx0fVxuXHQubWFpbi1ib2R5e1xuXHRcdGJhY2tncm91bmQtY29sb3I6ICNmN2VkYzg7XG5cdFx0d2lkdGg6IDkwJTtcblx0XHRib3JkZXItcmFkaXVzOiAxMHB4O1xuXHRcdHRleHQtYWxpZ246IGNlbnRlcjtcdFx0XG5cdFx0bWFyZ2luLWJvdHRvbTogMTA7XG5cdH1cblx0Lm1haW4taXRlbXtcblx0XHRwb3NpdGlvbjpyZWxhdGl2ZTtcblx0XHRkaXNwbGF5OiBmbGV4O1xuXHRcdGp1c3RpZnktY29udGVudDogY2VudGVyO1xuXHRcdHRleHQtYWxpZ246IGNlbnRlcjtcblx0XHRiYWNrZ3JvdW5kOiAjMDAwO1xuXHR9XG5cdC5tYWluLWl0ZW0taW1ne1xuXHRcdGRpc3BsYXk6IGZsZXg7XG5cdFx0anVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG5cdFx0dGV4dC1hbGlnbjogY2VudGVyO1xuXHRcdC8qIGNvbHVtbi1jb3VudDogMjsgKi9cblx0XHRtYXJnaW4tdG9wOiAxMHB4O1xuXHRcdHBvc2l0aW9uOiBhYnNvbHV0ZTtcblx0XHRvcGFjaXR5OjAuNjtcblx0XHRmaWx0ZXI6IGFscGhhKG9wYWNpdHk9NjApO1xuXHR9XG5cblx0XG5cdC5tYWluLWl0ZW0taG92ZXJ7XG5cblx0XHRwb3NpdGlvbjphYnNvbHV0ZTtcblx0XHQvKiBiYWNrZ3JvdW5kLWNvbG9yOiAjNENEOTY0OyAqL1xuXHRcdHotaW5kZXg6IDE7XG5cdFx0d2lkdGg6IDk1JTtcblx0XHRoZWlnaHQ6IDExNnB4O1xuXHRcdG1hcmdpbi10b3A6IDEwcHg7XG5cdFx0dGV4dC1hbGlnbjogbGVmdDtcblx0fVxuXG48L3N0eWxlPlxuIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///155\n");
 
 /***/ }),
 /* 156 */
@@ -13484,89 +7945,133 @@ var render = function() {
           attrs: { id: "main-body", _i: 3 }
         },
         [
-          _c("view", { attrs: { id: "inboxTop", _i: 4 } }, [
-            _c(
-              "view",
-              [
-                _c("text"),
-                _c("xfl-select", {
-                  attrs: {
-                    list: _vm.candidates,
-                    clearable: false,
-                    initValue: _vm.candidates[0],
-                    style_Container:
-                      "height: 20px;width: auto; text-align: left; padding: 5px; padding-right: 15px;",
-                    _i: 7
-                  },
-                  on: { change: _vm.changeUnread }
+          _vm._$s(4, "i", _vm.isUnread)
+            ? _c("view", { attrs: { id: "inboxTop", _i: 4 } }, [
+                _c(
+                  "view",
+                  [
+                    _c("text"),
+                    _c("xfl-select", {
+                      attrs: {
+                        list: _vm.candidates,
+                        clearable: false,
+                        initValue: _vm.candidates[0],
+                        style_Container:
+                          "height: 20px;width: auto; text-align: left; padding: 5px; padding-right: 15px;",
+                        _i: 7
+                      },
+                      on: { change: _vm.changeUnread }
+                    })
+                  ],
+                  1
+                ),
+                _c("view", {
+                  attrs: { _i: 8 },
+                  on: { click: _vm.markAllAsReaded }
                 })
-              ],
-              1
-            ),
-            _c("view", { attrs: { _i: 8 }, on: { click: _vm.markAllReaded } })
-          ]),
-          _vm._$s(9, "i", _vm.isUnread)
+              ])
+            : _vm._e(),
+          _vm._$s(9, "i", !_vm.isUnread)
+            ? _c("view", { attrs: { id: "inboxTop", _i: 9 } }, [
+                _c(
+                  "view",
+                  [
+                    _c("text"),
+                    _c("xfl-select", {
+                      attrs: {
+                        list: _vm.candidates,
+                        clearable: false,
+                        initValue: _vm.candidates[0],
+                        style_Container:
+                          "height: 20px;width: auto; text-align: left; padding: 5px; padding-right: 15px;",
+                        _i: 12
+                      },
+                      on: { change: _vm.changeUnread }
+                    })
+                  ],
+                  1
+                )
+              ])
+            : _vm._e(),
+          _vm._$s(13, "i", _vm.isUnread)
             ? _c(
                 "scroll-view",
                 {
-                  staticClass: _vm._$s(9, "sc", "scroll-y"),
-                  style: _vm._$s(9, "s", { height: _vm.scrollerYHeight }),
-                  attrs: { _i: 9 }
+                  staticClass: _vm._$s(13, "sc", "scroll-y"),
+                  style: _vm._$s(13, "s", { height: _vm.scrollerYHeight }),
+                  attrs: { _i: 13 }
                 },
                 _vm._l(
-                  _vm._$s(10, "f", { forItems: _vm.notificationData }),
+                  _vm._$s(14, "f", { forItems: _vm.notificationData }),
                   function(item, index, $20, $30) {
                     return _c(
                       "uni-row",
                       {
-                        key: _vm._$s(10, "f", { forIndex: $20, key: index }),
-                        attrs: { _i: "10-" + $30 }
+                        key: _vm._$s(14, "f", { forIndex: $20, key: index }),
+                        attrs: { _i: "14-" + $30 }
                       },
                       [
-                        _vm._$s("11-" + $30, "i", item.unread)
+                        _vm._$s("15-" + $30, "i", item.unread)
                           ? _c(
                               "uni-col",
                               {
                                 staticClass: _vm._$s(
-                                  "11-" + $30,
+                                  "15-" + $30,
                                   "sc",
                                   "notificationCol"
                                 ),
-                                attrs: { _i: "11-" + $30 }
+                                attrs: { _i: "15-" + $30 },
+                                on: {
+                                  click: function($event) {
+                                    return _vm.markAsReaded(index)
+                                  }
+                                }
                               },
                               [
                                 _c("uni-icons", {
                                   attrs: {
                                     type: "chat",
                                     size: "30",
-                                    _i: "12-" + $30
+                                    _i: "16-" + $30
                                   }
                                 }),
                                 _c("text", {}, [
                                   _vm._v(
                                     _vm._$s(
-                                      "13-" + $30,
+                                      "17-" + $30,
                                       "t0-0",
                                       _vm._s(item.name)
                                     ) +
                                       _vm._$s(
-                                        "13-" + $30,
+                                        "17-" + $30,
                                         "t0-1",
                                         _vm._s(item.addDate)
                                       ) +
                                       _vm._$s(
-                                        "13-" + $30,
+                                        "17-" + $30,
                                         "t0-2",
-                                        _vm._s(item.remindDays)
+                                        _vm._s(item.expireDays)
                                       )
                                   )
-                                ])
+                                ]),
+                                _c("uni-icons", {
+                                  attrs: {
+                                    type: "checkmarkempty",
+                                    size: "30",
+                                    _i: "18-" + $30
+                                  },
+                                  on: {
+                                    click: function($event) {
+                                      return _vm.markAsReaded(index)
+                                    }
+                                  }
+                                })
                               ],
                               1
                             )
                           : _vm._e(),
                         _c("u-divider", {
-                          attrs: { "half-width": "60%", _i: "14-" + $30 }
+                          attrs: { "half-width": "60%", _i: "19-" + $30 }
                         })
                       ],
                       1
@@ -13576,59 +8081,59 @@ var render = function() {
                 1
               )
             : _vm._e(),
-          _vm._$s(15, "i", !_vm.isUnread)
+          _vm._$s(20, "i", !_vm.isUnread)
             ? _c(
                 "scroll-view",
                 {
-                  staticClass: _vm._$s(15, "sc", "scroll-y"),
-                  style: _vm._$s(15, "s", { height: _vm.scrollerYHeight }),
-                  attrs: { _i: 15 }
+                  staticClass: _vm._$s(20, "sc", "scroll-y"),
+                  style: _vm._$s(20, "s", { height: _vm.scrollerYHeight }),
+                  attrs: { _i: 20 }
                 },
                 _vm._l(
-                  _vm._$s(16, "f", { forItems: _vm.notificationData }),
+                  _vm._$s(21, "f", { forItems: _vm.notificationData }),
                   function(item, index, $21, $31) {
                     return _c(
                       "uni-row",
                       {
-                        key: _vm._$s(16, "f", { forIndex: $21, key: index }),
-                        attrs: { _i: "16-" + $31 }
+                        key: _vm._$s(21, "f", { forIndex: $21, key: index }),
+                        attrs: { _i: "21-" + $31 }
                       },
                       [
-                        _vm._$s("17-" + $31, "i", !item.unread)
+                        _vm._$s("22-" + $31, "i", !item.unread)
                           ? _c(
                               "uni-col",
                               {
                                 staticClass: _vm._$s(
-                                  "17-" + $31,
+                                  "22-" + $31,
                                   "sc",
                                   "notificationCol"
                                 ),
-                                attrs: { _i: "17-" + $31 }
+                                attrs: { _i: "22-" + $31 }
                               },
                               [
                                 _c("uni-icons", {
                                   attrs: {
                                     type: "chat",
                                     size: "30",
-                                    _i: "18-" + $31
+                                    _i: "23-" + $31
                                   }
                                 }),
                                 _c("text", {}, [
                                   _vm._v(
                                     _vm._$s(
-                                      "19-" + $31,
+                                      "24-" + $31,
                                       "t0-0",
                                       _vm._s(item.name)
                                     ) +
                                       _vm._$s(
-                                        "19-" + $31,
+                                        "24-" + $31,
                                         "t0-1",
                                         _vm._s(item.addDate)
                                       ) +
                                       _vm._$s(
-                                        "19-" + $31,
+                                        "24-" + $31,
                                         "t0-2",
-                                        _vm._s(item.remindDays)
+                                        _vm._s(item.expireDays)
                                       )
                                   )
                                 ])
@@ -13637,7 +8142,7 @@ var render = function() {
                             )
                           : _vm._e(),
                         _c("u-divider", {
-                          attrs: { "half-width": "60%", _i: "20-" + $31 }
+                          attrs: { "half-width": "60%", _i: "25-" + $31 }
                         })
                       ],
                       1
@@ -13650,10 +8155,10 @@ var render = function() {
         ]
       ),
       _c("u-tabbar", {
-        attrs: { list: _vm.tabbar, "mid-button": false, height: "55px", _i: 21 }
+        attrs: { list: _vm.tabbar, "mid-button": false, height: "55px", _i: 26 }
       }),
       _c("u-tabbar", {
-        attrs: { list: _vm.tabbar, "mid-button": false, _i: 22 }
+        attrs: { list: _vm.tabbar, "mid-button": false, _i: 27 }
       })
     ],
     1
@@ -13980,7 +8485,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _App
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("/* WEBPACK VAR INJECTION */(function(__f__) {Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0; //\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\nvar _default =\n{\n  data: function data() {\n    return {\n      store: this.$store,\n      tabbar: this.$store.state.tabbar,\n      // notificationData: [],\n      notificationData: [\n      {\n        \"name\": \" apple \",\n        \"addDate\": \"2022/04/01\",\n        \"remindDays\": 2,\n        \"unread\": true },\n\n      {\n        \"name\": \"banana\",\n        \"addDate\": \"2022/04/02\",\n        \"remindDays\": 2,\n        \"unread\": true },\n\n      {\n        \"name\": \"beef\",\n        \"addDate\": \"2022/04/03\",\n        \"remindDays\": 1,\n        \"unread\": true },\n\n      {\n        \"name\": \"lamb\",\n        \"addDate\": \"2022/04/03\",\n        \"remindDays\": 1,\n        \"unread\": false }],\n\n\n      candidates: [\"unread\", \"readed\"],\n      isUnread: true,\n      clientHeight: \"\" };\n\n\n  },\n  // created() {\n  // \tconsole.log(\"user id is \", uni.getStorageSync('userId'))\n  // \tthis.getList()\n  // },\n  onLoad: function onLoad(option) {\n    // console.log(\"user id is \", uni.getStorageSync('userId'))\n    // this.getList()\n    // console.log(option)\n    this.notificationData = JSON.parse(decodeURIComponent(option.notificationDataString));\n    // console.log('上一个页面传递过来的参数对象', this.notificationData );\n  },\n  computed: {\n    // 滚动区高度 \n    scrollerHeight: function scrollerHeight() {\n      __f__(\"log\", window.innerHeight, \" at pages/notification/notification.vue:120\");\n      return window.innerHeight - 160 + 'px'; //自定义高度需求\n    },\n    scrollerYHeight: function scrollerYHeight() {\n      __f__(\"log\", window.innerHeight, \" at pages/notification/notification.vue:124\");\n      return window.innerHeight - 200 + 'px'; //自定义高度需求\n    } },\n\n  methods: {\n    changeUnread: function changeUnread(xflSelectResult) {\n      __f__(\"log\", xflSelectResult, \" at pages/notification/notification.vue:130\");\n      if (xflSelectResult.newVal == this.candidates[0]) {\n        this.isUnread = true;\n      } else if (xflSelectResult.newVal == this.candidates[1]) {\n        this.isUnread = false;\n      }\n\n    },\n    markAllReaded: function markAllReaded() {\n      for (var i = 0; i < this.notificationData.length; i++) {\n        this.notificationData[i].unread = false;\n      }\n    },\n    getList: function getList() {var _this = this;\n      uni.request({\n        url: \"http://101.35.91.117:7884/notification/get/\" + uni.getStorageSync('userId'),\n        method: 'get' }).\n      then(function (res) {\n        __f__(\"log\", res, \" at pages/notification/notification.vue:148\");\n        __f__(\"log\", 'load', res[1].data, \" at pages/notification/notification.vue:149\");\n        // this.shopList = res[1].data\n        _this.notificationData = res[1].data.itemNotificationList;\n      });\n    } } };exports.default = _default;\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/lib/format-log.js */ 15)[\"default\"]))//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVuaS1hcHA6Ly8vcGFnZXMvbm90aWZpY2F0aW9uL25vdGlmaWNhdGlvbi52dWUiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQW1FQTtBQUNBLE1BREEsa0JBQ0E7QUFDQTtBQUNBLHdCQURBO0FBRUEsc0NBRkE7QUFHQTtBQUNBO0FBQ0E7QUFDQSx5QkFEQTtBQUVBLCtCQUZBO0FBR0EsdUJBSEE7QUFJQSxzQkFKQSxFQURBOztBQU9BO0FBQ0Esd0JBREE7QUFFQSwrQkFGQTtBQUdBLHVCQUhBO0FBSUEsc0JBSkEsRUFQQTs7QUFhQTtBQUNBLHNCQURBO0FBRUEsK0JBRkE7QUFHQSx1QkFIQTtBQUlBLHNCQUpBLEVBYkE7O0FBbUJBO0FBQ0Esc0JBREE7QUFFQSwrQkFGQTtBQUdBLHVCQUhBO0FBSUEsdUJBSkEsRUFuQkEsQ0FKQTs7O0FBOEJBLHNDQTlCQTtBQStCQSxvQkEvQkE7QUFnQ0Esc0JBaENBOzs7QUFtQ0EsR0FyQ0E7QUFzQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxRQTFDQSxrQkEwQ0EsTUExQ0EsRUEwQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsR0FoREE7QUFpREE7QUFDQTtBQUNBO0FBQ0E7QUFDQSw2Q0FGQSxDQUVBO0FBQ0EsS0FMQTtBQU1BO0FBQ0E7QUFDQSw2Q0FGQSxDQUVBO0FBQ0EsS0FUQSxFQWpEQTs7QUE0REE7QUFDQSxnQkFEQSx3QkFDQSxlQURBLEVBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxPQUZBLE1BRUE7QUFDQTtBQUNBOztBQUVBLEtBVEE7QUFVQSxpQkFWQSwyQkFVQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLEtBZEE7QUFlQSxXQWZBLHFCQWVBO0FBQ0E7QUFDQSx5RkFEQTtBQUVBLHFCQUZBO0FBR0EsVUFIQSxDQUdBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxPQVJBO0FBU0EsS0F6QkEsRUE1REEsRSIsImZpbGUiOiIxODIuanMiLCJzb3VyY2VzQ29udGVudCI6WyI8dGVtcGxhdGU+XG5cdDx2aWV3IGlkPVwibm90aWZpY2F0aW9uLXBhZ2VcIj5cblx0XHQ8dmlldyBpZD1cInRpdGxlXCI+XG5cdFx0XHQ8dGV4dCBzdHlsZT1cIm1hcmdpbi1sZWZ0OiAxJTsgZm9udC1zaXplOiAyOHB4O2NvbG9yOiAjMDAwMDAwO2ZvbnQtd2VpZ2h0OiA5MDA7XCI+aW5ib3g8L3RleHQ+XG5cdFx0PC92aWV3PlxuXHRcdDx2aWV3IGlkPVwibWFpbi1ib2R5XCIgOnN0eWxlPVwie2hlaWdodDogc2Nyb2xsZXJIZWlnaHR9XCI+XG5cdFx0XHQ8dmlldyBpZD1cImluYm94VG9wXCI+XG5cdFx0XHRcdDx2aWV3PlxuXHRcdFx0XHRcdDx0ZXh0Pk5vdGlmaWNhdGlvbjwvdGV4dD5cblx0XHRcdFx0XHQ8eGZsLXNlbGVjdCA6bGlzdD1cImNhbmRpZGF0ZXNcIlxuXHRcdFx0XHRcdFx0XHRcdDpjbGVhcmFibGU9XCJmYWxzZVwiXG5cdFx0XHRcdFx0XHRcdFx0OmluaXRWYWx1ZT1cImNhbmRpZGF0ZXNbMF1cIlxuXHRcdFx0XHRcdFx0XHRcdDpzdHlsZV9Db250YWluZXI9XCInaGVpZ2h0OiAyMHB4O3dpZHRoOiBhdXRvOyB0ZXh0LWFsaWduOiBsZWZ0OyBwYWRkaW5nOiA1cHg7IHBhZGRpbmctcmlnaHQ6IDE1cHg7J1wiXG5cdFx0XHRcdFx0XHRcdFx0QGNoYW5nZT1cImNoYW5nZVVucmVhZFwiPlxuXG5cdFx0XHRcdFx0PC94Zmwtc2VsZWN0PlxuXHRcdFx0XHQ8L3ZpZXc+XG5cdFx0XHRcdDx2aWV3IEBjbGljaz1cIm1hcmtBbGxSZWFkZWRcIj5NYXJrIGFsbCBhcyBSZWFkZWQ8L3ZpZXc+XG5cdFx0XHQ8L3ZpZXc+XG5cdFx0XHQ8c2Nyb2xsLXZpZXcgc2Nyb2xsLXk9XCJ0cnVlXCIgY2xhc3M9XCJzY3JvbGwteVwiIHYtaWY9XCJpc1VucmVhZFwiIDpzdHlsZT1cIntoZWlnaHQ6IHNjcm9sbGVyWUhlaWdodH1cIj5cblx0XHRcdFx0PHVuaS1yb3cgdi1mb3I9XCIoaXRlbSwgaW5kZXgpIGluIG5vdGlmaWNhdGlvbkRhdGFcIiA6a2V5PWluZGV4PlxuXHRcdFx0XHRcdDx1bmktY29sIHYtaWY9XCJpdGVtLnVucmVhZFwiIGNsYXNzPVwibm90aWZpY2F0aW9uQ29sXCI+XG5cdFx0XHRcdFx0XHQ8dW5pLWljb25zIHR5cGU9XCJjaGF0XCIgc2l6ZT1cIjMwXCI+PC91bmktaWNvbnM+XG5cdFx0XHRcdFx0XHQ8IS0tIDx2aWV3PlxuXHRcdFx0XHRcdFx0XHQ8dGV4dCBkZWNvZGU9J3RydWUnPlxuXHRcdFx0XHRcdFx0XHRcdEhpLCB5b3VyJmVuc3A7JmVtc3A7PGI+e3tpdGVtLm5hbWV9fTwvYj4gYWRkZWQgb25cblx0XHRcdFx0XHRcdFx0XHQ8c3Ryb25nIGNsYXNzPVwiYm9sZFRlc3RcIj57e2l0ZW0uYWRkRGF0ZX19PC9zdHJvbmc+IHdpbGwgZ2V0IGV4cGlyZWQgb25cblx0XHRcdFx0XHRcdFx0XHQ8c3Ryb25nIGNsYXNzPVwiYm9sZFRlc3RcIj57e2l0ZW0ucmVtaW5kRGF5c319PC9zdHJvbmc+IGRheXNcblx0XHRcdFx0XHRcdFx0PC90ZXh0PlxuXHRcdFx0XHRcdFx0PC92aWV3PiAtLT5cblx0XHRcdFx0XHRcdDx0ZXh0IGRlY29kZT0ndHJ1ZSc+XG5cdFx0XHRcdFx0XHRcdEhpLCB5b3VyIHt7aXRlbS5uYW1lfX0gYWRkZWQgb24ge3tpdGVtLmFkZERhdGV9fSB3aWxsIGdldCBleHBpcmVkIG9uIHt7aXRlbS5yZW1pbmREYXlzfX0gZGF5c1xuXHRcdFx0XHRcdFx0PC90ZXh0PlxuXHRcdFx0XHRcdFx0XG5cdFx0XHRcdFx0PC91bmktY29sPlxuXHRcdFx0XHRcdDx1LWRpdmlkZXIgaGFsZi13aWR0aD1cIjYwJVwiPjwvdS1kaXZpZGVyPlxuXHRcdFx0XHQ8L3VuaS1yb3c+XG5cdFx0XHQ8L3Njcm9sbC12aWV3PlxuXHRcdFx0PHNjcm9sbC12aWV3IHNjcm9sbC15PVwidHJ1ZVwiIGNsYXNzPVwic2Nyb2xsLXlcIiB2LWlmPVwiIWlzVW5yZWFkXCIgOnN0eWxlPVwie2hlaWdodDogc2Nyb2xsZXJZSGVpZ2h0fVwiPlxuXHRcdFx0XHQ8dW5pLXJvdyB2LWZvcj1cIihpdGVtLCBpbmRleCkgaW4gbm90aWZpY2F0aW9uRGF0YVwiIDprZXk9aW5kZXg+XG5cdFx0XHRcdFx0PHVuaS1jb2wgdi1pZj1cIiFpdGVtLnVucmVhZFwiIGNsYXNzPVwibm90aWZpY2F0aW9uQ29sXCI+XG5cdFx0XHRcdFx0XHQ8dW5pLWljb25zIHR5cGU9XCJjaGF0XCIgc2l6ZT1cIjMwXCI+PC91bmktaWNvbnM+XG5cdFx0XHRcdFx0XHQ8IS0tIDx2aWV3PlxuXHRcdFx0XHRcdFx0XHQ8dGV4dCBkZWNvZGU9J3RydWUnPlxuXHRcdFx0XHRcdFx0XHRcdEhpLCB5b3VyJmVuc3A7JmVtc3A7PGI+e3tpdGVtLm5hbWV9fTwvYj4gYWRkZWQgb25cblx0XHRcdFx0XHRcdFx0XHQ8c3Ryb25nIGNsYXNzPVwiYm9sZFRlc3RcIj57e2l0ZW0uYWRkRGF0ZX19PC9zdHJvbmc+IHdpbGwgZ2V0IGV4cGlyZWQgb25cblx0XHRcdFx0XHRcdFx0XHQ8c3Ryb25nIGNsYXNzPVwiYm9sZFRlc3RcIj57e2l0ZW0ucmVtaW5kRGF5c319PC9zdHJvbmc+IGRheXNcblx0XHRcdFx0XHRcdFx0PC90ZXh0PlxuXHRcdFx0XHRcdFx0PC92aWV3PiAtLT5cblx0XHRcdFx0XHRcdDx0ZXh0IGRlY29kZT0ndHJ1ZSc+XG5cdFx0XHRcdFx0XHRcdEhpLCB5b3VyIHt7aXRlbS5uYW1lfX0gYWRkZWQgb24ge3tpdGVtLmFkZERhdGV9fSB3aWxsIGdldCBleHBpcmVkIG9uIHt7aXRlbS5yZW1pbmREYXlzfX0gZGF5c1xuXHRcdFx0XHRcdFx0PC90ZXh0PlxuXHRcdFx0XHRcdFx0XG5cdFx0XHRcdFx0PC91bmktY29sPlxuXHRcdFx0XHRcdDx1LWRpdmlkZXIgaGFsZi13aWR0aD1cIjYwJVwiPjwvdS1kaXZpZGVyPlxuXHRcdFx0XHQ8L3VuaS1yb3c+XG5cdFx0XHQ8L3Njcm9sbC12aWV3PlxuXHRcdFx0XG5cdFx0XHRcblx0XHQ8L3ZpZXc+XG5cblx0XHQ8dS10YWJiYXIgOmxpc3Q9XCJ0YWJiYXJcIiA6bWlkLWJ1dHRvbj1cImZhbHNlXCIgaGVpZ2h0PVwiNTVweFwiPjwvdS10YWJiYXI+XG5cdFx0PHUtdGFiYmFyIDpsaXN0PVwidGFiYmFyXCIgOm1pZC1idXR0b249XCJmYWxzZVwiPjwvdS10YWJiYXI+XG5cdDwvdmlldz5cbjwvdGVtcGxhdGU+XG5cbjxzY3JpcHQ+XG5cdGV4cG9ydCBkZWZhdWx0IHtcblx0XHRkYXRhKCkge1xuXHRcdFx0cmV0dXJuIHtcblx0XHRcdFx0c3RvcmU6IHRoaXMuJHN0b3JlLFxuXHRcdFx0XHR0YWJiYXI6IHRoaXMuJHN0b3JlLnN0YXRlLnRhYmJhcixcblx0XHRcdFx0Ly8gbm90aWZpY2F0aW9uRGF0YTogW10sXG5cdFx0XHRcdG5vdGlmaWNhdGlvbkRhdGE6IFtcblx0XHRcdFx0XHR7XG5cdFx0XHRcdFx0XHRcIm5hbWVcIjogXCIgYXBwbGUgXCIsXG5cdFx0XHRcdFx0XHRcImFkZERhdGVcIjogXCIyMDIyLzA0LzAxXCIsXG5cdFx0XHRcdFx0XHRcInJlbWluZERheXNcIjogMixcblx0XHRcdFx0XHRcdFwidW5yZWFkXCI6IHRydWUsXG5cdFx0XHRcdFx0fSxcblx0XHRcdFx0XHR7XG5cdFx0XHRcdFx0XHRcIm5hbWVcIjogXCJiYW5hbmFcIixcblx0XHRcdFx0XHRcdFwiYWRkRGF0ZVwiOiBcIjIwMjIvMDQvMDJcIixcblx0XHRcdFx0XHRcdFwicmVtaW5kRGF5c1wiOiAyLFxuXHRcdFx0XHRcdFx0XCJ1bnJlYWRcIjogdHJ1ZSxcblx0XHRcdFx0XHR9LFxuXHRcdFx0XHRcdHtcblx0XHRcdFx0XHRcdFwibmFtZVwiOiBcImJlZWZcIixcblx0XHRcdFx0XHRcdFwiYWRkRGF0ZVwiOiBcIjIwMjIvMDQvMDNcIixcblx0XHRcdFx0XHRcdFwicmVtaW5kRGF5c1wiOiAxLFxuXHRcdFx0XHRcdFx0XCJ1bnJlYWRcIjogdHJ1ZSxcblx0XHRcdFx0XHR9LFxuXHRcdFx0XHRcdHtcblx0XHRcdFx0XHRcdFwibmFtZVwiOiBcImxhbWJcIixcblx0XHRcdFx0XHRcdFwiYWRkRGF0ZVwiOiBcIjIwMjIvMDQvMDNcIixcblx0XHRcdFx0XHRcdFwicmVtaW5kRGF5c1wiOiAxLFxuXHRcdFx0XHRcdFx0XCJ1bnJlYWRcIjogZmFsc2UsXG5cdFx0XHRcdFx0fVxuXHRcdFx0XHRdLFxuXHRcdFx0XHRjYW5kaWRhdGVzOiBbXCJ1bnJlYWRcIiwgXCJyZWFkZWRcIl0sXG5cdFx0XHRcdGlzVW5yZWFkOiB0cnVlLFxuXHRcdFx0XHRjbGllbnRIZWlnaHQ6IFwiXCIsXG5cblx0XHRcdH1cblx0XHR9LFxuXHRcdC8vIGNyZWF0ZWQoKSB7XG5cdFx0Ly8gXHRjb25zb2xlLmxvZyhcInVzZXIgaWQgaXMgXCIsIHVuaS5nZXRTdG9yYWdlU3luYygndXNlcklkJykpXG5cdFx0Ly8gXHR0aGlzLmdldExpc3QoKVxuXHRcdC8vIH0sXG5cdFx0b25Mb2FkKG9wdGlvbikge1xuXHRcdFx0Ly8gY29uc29sZS5sb2coXCJ1c2VyIGlkIGlzIFwiLCB1bmkuZ2V0U3RvcmFnZVN5bmMoJ3VzZXJJZCcpKVxuXHRcdFx0Ly8gdGhpcy5nZXRMaXN0KClcblx0XHRcdC8vIGNvbnNvbGUubG9nKG9wdGlvbilcblx0XHRcdHRoaXMubm90aWZpY2F0aW9uRGF0YSA9IEpTT04ucGFyc2UoZGVjb2RlVVJJQ29tcG9uZW50KG9wdGlvbi5ub3RpZmljYXRpb25EYXRhU3RyaW5nKSk7XG5cdFx0XHQvLyBjb25zb2xlLmxvZygn5LiK5LiA5Liq6aG16Z2i5Lyg6YCS6L+H5p2l55qE5Y+C5pWw5a+56LGhJywgdGhpcy5ub3RpZmljYXRpb25EYXRhICk7XG5cdFx0fSxcblx0XHRjb21wdXRlZDoge1xuXHRcdFx0Ly8g5rua5Yqo5Yy66auY5bqmIFxuXHRcdFx0c2Nyb2xsZXJIZWlnaHQ6IGZ1bmN0aW9uKCkge1xuXHRcdFx0XHRjb25zb2xlLmxvZyh3aW5kb3cuaW5uZXJIZWlnaHQpXG5cdFx0XHRcdHJldHVybiAod2luZG93LmlubmVySGVpZ2h0IC0gMTYwKSArICdweCc7IC8v6Ieq5a6a5LmJ6auY5bqm6ZyA5rGCXG5cdFx0XHR9LFxuXHRcdFx0c2Nyb2xsZXJZSGVpZ2h0OiBmdW5jdGlvbigpIHtcblx0XHRcdFx0Y29uc29sZS5sb2cod2luZG93LmlubmVySGVpZ2h0KVxuXHRcdFx0XHRyZXR1cm4gKHdpbmRvdy5pbm5lckhlaWdodCAtIDIwMCkgKyAncHgnOyAvL+iHquWumuS5iemrmOW6pumcgOaxglxuXHRcdFx0fSxcblx0XHR9LFxuXHRcdG1ldGhvZHM6IHtcblx0XHRcdGNoYW5nZVVucmVhZCh4ZmxTZWxlY3RSZXN1bHQpIHtcblx0XHRcdFx0Y29uc29sZS5sb2coeGZsU2VsZWN0UmVzdWx0KVxuXHRcdFx0XHRpZiAoeGZsU2VsZWN0UmVzdWx0Lm5ld1ZhbCA9PSB0aGlzLmNhbmRpZGF0ZXNbMF0pIHtcblx0XHRcdFx0XHR0aGlzLmlzVW5yZWFkID0gdHJ1ZVxuXHRcdFx0XHR9IGVsc2UgaWYgKHhmbFNlbGVjdFJlc3VsdC5uZXdWYWwgPT0gdGhpcy5jYW5kaWRhdGVzWzFdKSB7XG5cdFx0XHRcdFx0dGhpcy5pc1VucmVhZCA9IGZhbHNlXG5cdFx0XHRcdH1cblx0XHRcdFx0XG5cdFx0XHR9LFxuXHRcdFx0bWFya0FsbFJlYWRlZCgpIHtcblx0XHRcdFx0Zm9yIChsZXQgaT0wOyBpPHRoaXMubm90aWZpY2F0aW9uRGF0YS5sZW5ndGg7IGkrKykge1xuXHRcdFx0XHRcdHRoaXMubm90aWZpY2F0aW9uRGF0YVtpXS51bnJlYWQgPSBmYWxzZVxuXHRcdFx0XHR9XG5cdFx0XHR9LFxuXHRcdFx0Z2V0TGlzdCgpe1xuXHRcdFx0XHR1bmkucmVxdWVzdCh7XG5cdFx0XHRcdHVybDogXCJodHRwOi8vMTAxLjM1LjkxLjExNzo3ODg0L25vdGlmaWNhdGlvbi9nZXQvXCIrdW5pLmdldFN0b3JhZ2VTeW5jKCd1c2VySWQnKSxcblx0XHRcdFx0bWV0aG9kOiAnZ2V0Jyxcblx0XHRcdFx0fSkudGhlbihyZXM9Pntcblx0XHRcdFx0XHRjb25zb2xlLmxvZyhyZXMpXG5cdFx0XHRcdFx0Y29uc29sZS5sb2coJ2xvYWQnLHJlc1sxXS5kYXRhKVxuXHRcdFx0XHRcdC8vIHRoaXMuc2hvcExpc3QgPSByZXNbMV0uZGF0YVxuXHRcdFx0XHRcdHRoaXMubm90aWZpY2F0aW9uRGF0YSA9IHJlc1sxXS5kYXRhLml0ZW1Ob3RpZmljYXRpb25MaXN0XG5cdFx0XHRcdH0pXG5cdFx0XHR9LFxuXHRcdH1cblx0fVxuPC9zY3JpcHQ+XG5cbjxzdHlsZT5cblx0cGFnZSB7XG5cdFx0YmFja2dyb3VuZC1jb2xvcjogI0IwQzA3QTtcblx0fVxuXHQjbm90aWZpY2F0aW9uLXBhZ2Uge1xuXHRcdGRpc3BsYXk6IGZsZXg7XG5cdFx0anVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG5cdFx0YWxpZ24taXRlbXM6IGNlbnRlcjtcblx0XHRmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuXHR9XG5cdCN0aXRsZSB7XG5cdFx0ZGlzcGxheTogZmxleDtcblx0XHRqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcblx0XHR0ZXh0LWFsaWduOiBjZW50ZXI7XG5cdH1cblx0I21haW4tYm9keSB7XG5cdFx0YmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XG5cdFx0d2lkdGg6IDkwJTtcblx0XHRib3JkZXItcmFkaXVzOiAxMHB4O1xuXHRcdC8qIHRleHQtYWxpZ246IGNlbnRlcjsgKi9cblx0XHRwYWRkaW5nOiAxMHB4O1xuXHR9XG5cdCNpbmJveFRvcCB7XG5cdFx0ZGlzcGxheTogZmxleDtcblx0XHRmb250LWZhbWlseTogJ0ludGVyJztcblx0XHRmb250LXN0eWxlOiBub3JtYWw7XG5cdFx0Zm9udC13ZWlnaHQ6IDUwMDtcblx0XHRmb250LXNpemU6IDE0cHg7XG5cdFx0bGluZS1oZWlnaHQ6IDIwcHg7XG5cdFx0anVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xuXHR9XG5cdC5ub3RpZmljYXRpb25Db2wge1xuXHRcdG1pbi1oZWlnaHQ6IDUwcHg7XG5cdFx0ZGlzcGxheTogZmxleDtcblx0XHRhbGlnbi1pdGVtczogY2VudGVyO1xuXHR9XG5cdC51bmktaWNvbnMge1xuXHRcdG1hcmdpbjogMTBweDtcblx0fVxuPC9zdHlsZT4iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///182\n");
+eval("/* WEBPACK VAR INJECTION */(function(__f__) {Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 92));\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nvar _uniIcons = _interopRequireDefault(__webpack_require__(/*! ../../components/uni-icons/uni-icons.vue */ 175));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err);}_next(undefined);});};}var _default =\n{\n  components: { uniIcons: _uniIcons.default },\n  data: function data() {\n    return {\n      store: this.$store,\n      tabbar: this.$store.state.tabbar,\n      // notificationData: [],\n      notificationData: [\n      {\n        \"name\": \" apple \",\n        \"itemId\": 2,\n        \"addDate\": \"2022/04/01\",\n        \"expireDays\": 2,\n        \"unread\": true },\n\n      {\n        \"name\": \"banana\",\n        \"itemId\": 2,\n        \"addDate\": \"2022/04/02\",\n        \"expireDays\": 2,\n        \"unread\": true },\n\n      {\n        \"name\": \"beef\",\n        \"itemId\": 2,\n        \"addDate\": \"2022/04/03\",\n        \"expireDays\": 1,\n        \"unread\": true },\n\n      {\n        \"name\": \"lamb\",\n        \"itemId\": 2,\n        \"addDate\": \"2022/04/03\",\n        \"expireDays\": 1,\n        \"unread\": false }],\n\n\n      candidates: [\"unread\", \"readed\"],\n      isUnread: true,\n      clientHeight: \"\" };\n\n\n  },\n  // created() {\n  // \tconsole.log(\"user id is \", uni.getStorageSync('userId'))\n  // \tthis.getList()\n  // },\n  onLoad: function onLoad(option) {\n    // console.log(\"user id is \", uni.getStorageSync('userId'))\n    // this.getList()\n    // console.log(option)\n    this.notificationData = JSON.parse(decodeURIComponent(option.notificationDataString));\n    __f__(\"log\", '上一个页面传递过来的参数对象', this.notificationData, \" at pages/notification/notification.vue:134\");\n  },\n  computed: {\n    // 滚动区高度 \n    scrollerHeight: function scrollerHeight() {\n      __f__(\"log\", window.innerHeight, \" at pages/notification/notification.vue:139\");\n      return window.innerHeight - 160 + 'px'; //自定义高度需求\n    },\n    scrollerYHeight: function scrollerYHeight() {\n      __f__(\"log\", window.innerHeight, \" at pages/notification/notification.vue:143\");\n      return window.innerHeight - 200 + 'px'; //自定义高度需求\n    } },\n\n  methods: {\n    changeUnread: function changeUnread(xflSelectResult) {\n      __f__(\"log\", xflSelectResult, \" at pages/notification/notification.vue:149\");\n      if (xflSelectResult.newVal == this.candidates[0]) {\n        this.isUnread = true;\n      } else if (xflSelectResult.newVal == this.candidates[1]) {\n        this.isUnread = false;\n      }\n\n    },\n    markAllReaded: function markAllReaded() {\n      for (var i = 0; i < this.notificationData.length; i++) {\n        this.notificationData[i].unread = false;\n      }\n    },\n    getList: function getList() {var _this = this;\n      uni.request({\n        url: \"http://101.35.91.117:7884/notification/get/\" + uni.getStorageSync('userId'),\n        method: 'get' }).\n      then(function (res) {\n        __f__(\"log\", res, \" at pages/notification/notification.vue:167\");\n        __f__(\"log\", 'load', res[1].data, \" at pages/notification/notification.vue:168\");\n        // this.shopList = res[1].data\n        _this.notificationData = res[1].data.itemNotificationList;\n      });\n    },\n    markAsReaded: function markAsReaded(index) {var _this2 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var toReadedItemId, res, data;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:\n                toReadedItemId = _this2.notificationData[index].itemId;\n                __f__(\"log\", index, \" at pages/notification/notification.vue:175\");\n                __f__(\"log\", \"item id is: \", toReadedItemId, \" at pages/notification/notification.vue:176\");\n                // this.notificationData[index].unread = false\n                _context.next = 5;return uni.request({\n                  method: 'POST',\n                  url: 'http://101.35.91.117:7884/notification/post/' + toReadedItemId\n                  // data: 2\n                });case 5:res = _context.sent;\n                // 获取后端返回的数据\n                // -1:already readed, 0: itemId not exist, 1: success\n                data = res[1].data;\n                __f__(\"log\", \"res[1] is :\", res[1], \" at pages/notification/notification.vue:186\");\n                __f__(\"log\", \"res[1].data is :\", res[1].data, \" at pages/notification/notification.vue:187\");\n                if (data == 1) {\n                  _this2.notificationData[index].unread = false;\n                  // this.$set(this.notificationData[index], unread, false)\n                } else if (data == -1) {\n                  __f__(\"log\", \"already checked!\", \" at pages/notification/notification.vue:192\");\n                } else if (data == 0) {\n                  __f__(\"log\", \"item not exist in database!\", \" at pages/notification/notification.vue:194\");\n                }case 10:case \"end\":return _context.stop();}}}, _callee);}))();\n    },\n    markAllAsReaded: function markAllAsReaded() {var _this3 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var itemIdList, i, res, data, _i;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:\n                itemIdList = [];\n                for (i = 0; i < _this3.notificationData.length; i++) {\n                  if (_this3.notificationData[i].unread) {\n                    itemIdList.push(_this3.notificationData[i].itemId);\n                  }\n                }\n                __f__(\"log\", \"itemIdList is: \", itemIdList, \" at pages/notification/notification.vue:204\");_context2.next = 5;return (\n                  uni.request({\n                    method: 'POST',\n                    url: 'http://101.35.91.117:7884/notification/postList',\n                    data: JSON.stringify({ \"itemIdList\": itemIdList }) }));case 5:res = _context2.sent;\n\n                data = res[1].data;\n\n                __f__(\"log\", \"res is :\", res, \" at pages/notification/notification.vue:212\");\n                if (res[1].statusCode == 200) {\n                  for (_i = 0; _i < _this3.notificationData.length; _i++) {\n                    _this3.notificationData[_i].unread = false;\n                  }\n                } else if (data == -1) {\n                  __f__(\"log\", \"already checked!\", \" at pages/notification/notification.vue:218\");\n                } else if (data == 0) {\n                  __f__(\"log\", \"item not exist in database!\", \" at pages/notification/notification.vue:220\");\n                }\n                // this.getCol()\n              case 9:case \"end\":return _context2.stop();}}}, _callee2);}))();} } };exports.default = _default;\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/lib/format-log.js */ 15)[\"default\"]))//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVuaS1hcHA6Ly8vcGFnZXMvbm90aWZpY2F0aW9uL25vdGlmaWNhdGlvbi52dWUiXSwibmFtZXMiOlsiY29tcG9uZW50cyIsInVuaUljb25zIiwiZGF0YSIsInN0b3JlIiwiJHN0b3JlIiwidGFiYmFyIiwic3RhdGUiLCJub3RpZmljYXRpb25EYXRhIiwiY2FuZGlkYXRlcyIsImlzVW5yZWFkIiwiY2xpZW50SGVpZ2h0Iiwib25Mb2FkIiwib3B0aW9uIiwiSlNPTiIsInBhcnNlIiwiZGVjb2RlVVJJQ29tcG9uZW50Iiwibm90aWZpY2F0aW9uRGF0YVN0cmluZyIsImNvbXB1dGVkIiwic2Nyb2xsZXJIZWlnaHQiLCJ3aW5kb3ciLCJpbm5lckhlaWdodCIsInNjcm9sbGVyWUhlaWdodCIsIm1ldGhvZHMiLCJjaGFuZ2VVbnJlYWQiLCJ4ZmxTZWxlY3RSZXN1bHQiLCJuZXdWYWwiLCJtYXJrQWxsUmVhZGVkIiwiaSIsImxlbmd0aCIsInVucmVhZCIsImdldExpc3QiLCJ1bmkiLCJyZXF1ZXN0IiwidXJsIiwiZ2V0U3RvcmFnZVN5bmMiLCJtZXRob2QiLCJ0aGVuIiwicmVzIiwiaXRlbU5vdGlmaWNhdGlvbkxpc3QiLCJtYXJrQXNSZWFkZWQiLCJpbmRleCIsInRvUmVhZGVkSXRlbUlkIiwiaXRlbUlkIiwibWFya0FsbEFzUmVhZGVkIiwiaXRlbUlkTGlzdCIsInB1c2giLCJzdHJpbmdpZnkiLCJzdGF0dXNDb2RlIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQWdGQSxpSDtBQUNnQjtBQUNkQSxZQUFVLEVBQUUsRUFBRUMsUUFBUSxFQUFSQSxpQkFBRixFQURFO0FBRWRDLE1BRmMsa0JBRVA7QUFDTixXQUFPO0FBQ05DLFdBQUssRUFBRSxLQUFLQyxNQUROO0FBRU5DLFlBQU0sRUFBRSxLQUFLRCxNQUFMLENBQVlFLEtBQVosQ0FBa0JE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LEVBQXlCRSxNQUE3QixFQUFxQztBQUNwQ2UsOEJBQVUsQ0FBQ0MsSUFBWCxDQUFnQixNQUFJLENBQUN0QyxnQkFBTCxDQUFzQm9CLENBQXRCLEVBQXlCZSxNQUF6QztBQUNBO0FBQ0Q7QUFDRCw2QkFBWSxpQkFBWixFQUErQkUsVUFBL0IsaURBUHVCO0FBUVBiLHFCQUFHLENBQUNDLE9BQUosQ0FBWTtBQUMzQkcsMEJBQU0sRUFBQyxNQURvQjtBQUUzQkYsdUJBQUcsRUFBQyxpREFGdUI7QUFHM0IvQix3QkFBSSxFQUFDVyxJQUFJLENBQUNpQyxTQUFMLENBQWUsRUFBQyxjQUFjRixVQUFmLEVBQWYsQ0FIc0IsRUFBWixDQVJPLFNBUW5CUCxHQVJtQjs7QUFhbkJuQyxvQkFibUIsR0FhWm1DLEdBQUcsQ0FBQyxDQUFELENBQUgsQ0FBT25DLElBYks7O0FBZXZCLDZCQUFZLFVBQVosRUFBd0JtQyxHQUF4QjtBQUNBLG9CQUFJQSxHQUFHLENBQUMsQ0FBRCxDQUFILENBQU9VLFVBQVAsSUFBcUIsR0FBekIsRUFBOEI7QUFDN0IsdUJBQVNwQixFQUFULEdBQVcsQ0FBWCxFQUFjQSxFQUFDLEdBQUMsTUFBSSxDQUFDcEIsZ0JBQUwsQ0FBc0JxQixNQUF0QyxFQUE4Q0QsRUFBQyxFQUEvQyxFQUFtRDtBQUNsRCwwQkFBSSxDQUFDcEIsZ0JBQUwsQ0FBc0JvQixFQUF0QixFQUF5QkUsTUFBekIsR0FBa0MsS0FBbEM7QUFDQTtBQUNELGlCQUpELE1BSU8sSUFBSTNCLElBQUksSUFBSSxDQUFDLENBQWIsRUFBZ0I7QUFDdEIsK0JBQVksa0JBQVo7QUFDQSxpQkFGTSxNQUVBLElBQUlBLElBQUksSUFBSSxDQUFaLEVBQWU7QUFDckIsK0JBQVksNkJBQVo7QUFDQTtBQUNEO0FBekJ1Qiw2RUEwQnZCLENBNUVPLEVBakVLLEUiLCJmaWxlIjoiMTgyLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cbi8vXG4vL1xuLy9cblxuaW1wb3J0IHVuaUljb25zIGZyb20gJy4uLy4uL2NvbXBvbmVudHMvdW5pLWljb25zL3VuaS1pY29ucy52dWUnO1xuXHRleHBvcnQgZGVmYXVsdCB7XG4gIGNvbXBvbmVudHM6IHsgdW5pSWNvbnMgfSxcblx0XHRkYXRhKCkge1xuXHRcdFx0cmV0dXJuIHtcblx0XHRcdFx0c3RvcmU6IHRoaXMuJHN0b3JlLFxuXHRcdFx0XHR0YWJiYXI6IHRoaXMuJHN0b3JlLnN0YXRlLnRhYmJhcixcblx0XHRcdFx0Ly8gbm90aWZpY2F0aW9uRGF0YTogW10sXG5cdFx0XHRcdG5vdGlmaWNhdGlvbkRhdGE6IFtcblx0XHRcdFx0XHR7XG5cdFx0XHRcdFx0XHRcIm5hbWVcIjogXCIgYXBwbGUgXCIsXG5cdFx0XHRcdFx0XHRcIml0ZW1JZFwiOiAyLFxuXHRcdFx0XHRcdFx0XCJhZGREYXRlXCI6IFwiMjAyMi8wNC8wMVwiLFxuXHRcdFx0XHRcdFx0XCJleHBpcmVEYXlzXCI6IDIsXG5cdFx0XHRcdFx0XHRcInVucmVhZFwiOiB0cnVlLFxuXHRcdFx0XHRcdH0sXG5cdFx0XHRcdFx0e1xuXHRcdFx0XHRcdFx0XCJuYW1lXCI6IFwiYmFuYW5hXCIsXG5cdFx0XHRcdFx0XHRcIml0ZW1JZFwiOiAyLFxuXHRcdFx0XHRcdFx0XCJhZGREYXRlXCI6IFwiMjAyMi8wNC8wMlwiLFxuXHRcdFx0XHRcdFx0XCJleHBpcmVEYXlzXCI6IDIsXG5cdFx0XHRcdFx0XHRcInVucmVhZFwiOiB0cnVlLFxuXHRcdFx0XHRcdH0sXG5cdFx0XHRcdFx0e1xuXHRcdFx0XHRcdFx0XCJuYW1lXCI6IFwiYmVlZlwiLFxuXHRcdFx0XHRcdFx0XCJpdGVtSWRcIjogMixcblx0XHRcdFx0XHRcdFwiYWRkRGF0ZVwiOiBcIjIwMjIvMDQvMDNcIixcblx0XHRcdFx0XHRcdFwiZXhwaXJlRGF5c1wiOiAxLFxuXHRcdFx0XHRcdFx0XCJ1bnJlYWRcIjogdHJ1ZSxcblx0XHRcdFx0XHR9LFxuXHRcdFx0XHRcdHtcblx0XHRcdFx0XHRcdFwibmFtZVwiOiBcImxhbWJcIixcblx0XHRcdFx0XHRcdFwiaXRlbUlkXCI6IDIsXG5cdFx0XHRcdFx0XHRcImFkZERhdGVcIjogXCIyMDIyLzA0LzAzXCIsXG5cdFx0XHRcdFx0XHRcImV4cGlyZURheXNcIjogMSxcblx0XHRcdFx0XHRcdFwidW5yZWFkXCI6IGZhbHNlLFxuXHRcdFx0XHRcdH1cblx0XHRcdFx0XSxcblx0XHRcdFx0Y2FuZGlkYXRlczogW1widW5yZWFkXCIsIFwicmVhZGVkXCJdLFxuXHRcdFx0XHRpc1VucmVhZDogdHJ1ZSxcblx0XHRcdFx0Y2xpZW50SGVpZ2h0OiBcIlwiLFxuXG5cdFx0XHR9XG5cdFx0fSxcblx0XHQvLyBjcmVhdGVkKCkge1xuXHRcdC8vIFx0Y29uc29sZS5sb2coXCJ1c2VyIGlkIGlzIFwiLCB1bmkuZ2V0U3RvcmFnZVN5bmMoJ3VzZXJJZCcpKVxuXHRcdC8vIFx0dGhpcy5nZXRMaXN0KClcblx0XHQvLyB9LFxuXHRcdG9uTG9hZChvcHRpb24pIHtcblx0XHRcdC8vIGNvbnNvbGUubG9nKFwidXNlciBpZCBpcyBcIiwgdW5pLmdldFN0b3JhZ2VTeW5jKCd1c2VySWQnKSlcblx0XHRcdC8vIHRoaXMuZ2V0TGlzdCgpXG5cdFx0XHQvLyBjb25zb2xlLmxvZyhvcHRpb24pXG5cdFx0XHR0aGlzLm5vdGlmaWNhdGlvbkRhdGEgPSBKU09OLnBhcnNlKGRlY29kZVVSSUNvbXBvbmVudChvcHRpb24ubm90aWZpY2F0aW9uRGF0YVN0cmluZykpO1xuXHRcdFx0Y29uc29sZS5sb2coJ+S4iuS4gOS4qumhtemdouS8oOmAkui/h+adpeeahOWPguaVsOWvueixoScsIHRoaXMubm90aWZpY2F0aW9uRGF0YSApO1xuXHRcdH0sXG5cdFx0Y29tcHV0ZWQ6IHtcblx0XHRcdC8vIOa7muWKqOWMuumrmOW6piBcblx0XHRcdHNjcm9sbGVySGVpZ2h0OiBmdW5jdGlvbigpIHtcblx0XHRcdFx0Y29uc29sZS5sb2cod2luZG93LmlubmVySGVpZ2h0KVxuXHRcdFx0XHRyZXR1cm4gKHdpbmRvdy5pbm5lckhlaWdodCAtIDE2MCkgKyAncHgnOyAvL+iHquWumuS5iemrmOW6pumcgOaxglxuXHRcdFx0fSxcblx0XHRcdHNjcm9sbGVyWUhlaWdodDogZnVuY3Rpb24oKSB7XG5cdFx0XHRcdGNvbnNvbGUubG9nKHdpbmRvdy5pbm5lckhlaWdodClcblx0XHRcdFx0cmV0dXJuICh3aW5kb3cuaW5uZXJIZWlnaHQgLSAyMDApICsgJ3B4JzsgLy/oh6rlrprkuYnpq5jluqbpnIDmsYJcblx0XHRcdH0sXG5cdFx0fSxcblx0XHRtZXRob2RzOiB7XG5cdFx0XHRjaGFuZ2VVbnJlYWQoeGZsU2VsZWN0UmVzdWx0KSB7XG5cdFx0XHRcdGNvbnNvbGUubG9nKHhmbFNlbGVjdFJlc3VsdClcblx0XHRcdFx0aWYgKHhmbFNlbGVjdFJlc3VsdC5uZXdWYWwgPT0gdGhpcy5jYW5kaWRhdGVzWzBdKSB7XG5cdFx0XHRcdFx0dGhpcy5pc1VucmVhZCA9IHRydWVcblx0XHRcdFx0fSBlbHNlIGlmICh4ZmxTZWxlY3RSZXN1bHQubmV3VmFsID09IHRoaXMuY2FuZGlkYXRlc1sxXSkge1xuXHRcdFx0XHRcdHRoaXMuaXNVbnJlYWQgPSBmYWxzZVxuXHRcdFx0XHR9XG5cdFx0XHRcdFxuXHRcdFx0fSxcblx0XHRcdG1hcmtBbGxSZWFkZWQoKSB7XG5cdFx0XHRcdGZvciAobGV0IGk9MDsgaTx0aGlzLm5vdGlmaWNhdGlvbkRhdGEubGVuZ3RoOyBpKyspIHtcblx0XHRcdFx0XHR0aGlzLm5vdGlmaWNhdGlvbkRhdGFbaV0udW5yZWFkID0gZmFsc2Vcblx0XHRcdFx0fVxuXHRcdFx0fSxcblx0XHRcdGdldExpc3QoKSB7XG5cdFx0XHRcdHVuaS5yZXF1ZXN0KHtcblx0XHRcdFx0dXJsOiBcImh0dHA6Ly8xMDEuMzUuOTEuMTE3Ojc4ODQvbm90aWZpY2F0aW9uL2dldC9cIit1bmkuZ2V0U3RvcmFnZVN5bmMoJ3VzZXJJZCcpLFxuXHRcdFx0XHRtZXRob2Q6ICdnZXQnLFxuXHRcdFx0XHR9KS50aGVuKHJlcz0+e1xuXHRcdFx0XHRcdGNvbnNvbGUubG9nKHJlcylcblx0XHRcdFx0XHRjb25zb2xlLmxvZygnbG9hZCcscmVzWzFdLmRhdGEpXG5cdFx0XHRcdFx0Ly8gdGhpcy5zaG9wTGlzdCA9IHJlc1sxXS5kYXRhXG5cdFx0XHRcdFx0dGhpcy5ub3RpZmljYXRpb25EYXRhID0gcmVzWzFdLmRhdGEuaXRlbU5vdGlmaWNhdGlvbkxpc3Rcblx0XHRcdFx0fSlcblx0XHRcdH0sXG5cdFx0XHRhc3luYyBtYXJrQXNSZWFkZWQoaW5kZXgpIHtcblx0XHRcdFx0dmFyIHRvUmVhZGVkSXRlbUlkID0gdGhpcy5ub3RpZmljYXRpb25EYXRhW2luZGV4XS5pdGVtSWRcblx0XHRcdFx0Y29uc29sZS5sb2coaW5kZXgpXG5cdFx0XHRcdGNvbnNvbGUubG9nKFwiaXRlbSBpZCBpczogXCIsIHRvUmVhZGVkSXRlbUlkKVxuXHRcdFx0XHQvLyB0aGlzLm5vdGlmaWNhdGlvbkRhdGFbaW5kZXhdLnVucmVhZCA9IGZhbHNlXG5cdFx0XHRcdHZhciByZXMgPSBhd2FpdCB1bmkucmVxdWVzdCh7XG5cdFx0XHRcdFx0bWV0aG9kOidQT1NUJyxcblx0XHRcdFx0XHR1cmw6J2h0dHA6Ly8xMDEuMzUuOTEuMTE3Ojc4ODQvbm90aWZpY2F0aW9uL3Bvc3QvJyArIHRvUmVhZGVkSXRlbUlkLFxuXHRcdFx0XHRcdC8vIGRhdGE6IDJcblx0XHRcdFx0fSlcblx0XHRcdFx0Ly8g6I635Y+W5ZCO56uv6L+U5Zue55qE5pWw5o2uXG5cdFx0XHRcdC8vIC0xOmFscmVhZHkgcmVhZGVkLCAwOiBpdGVtSWQgbm90IGV4aXN0LCAxOiBzdWNjZXNzXG5cdFx0XHRcdHZhciBkYXRhID0gcmVzWzFdLmRhdGFcblx0XHRcdFx0Y29uc29sZS5sb2coXCJyZXNbMV0gaXMgOlwiLCByZXNbMV0pXG5cdFx0XHRcdGNvbnNvbGUubG9nKFwicmVzWzFdLmRhdGEgaXMgOlwiLCByZXNbMV0uZGF0YSlcblx0XHRcdFx0aWYgKGRhdGEgPT0gMSkge1xuXHRcdFx0XHRcdHRoaXMubm90aWZpY2F0aW9uRGF0YVtpbmRleF0udW5yZWFkID0gZmFsc2Vcblx0XHRcdFx0XHQvLyB0aGlzLiRzZXQodGhpcy5ub3RpZmljYXRpb25EYXRhW2luZGV4XSwgdW5yZWFkLCBmYWxzZSlcblx0XHRcdFx0fSBlbHNlIGlmIChkYXRhID09IC0xKSB7XG5cdFx0XHRcdFx0Y29uc29sZS5sb2coXCJhbHJlYWR5IGNoZWNrZWQhXCIpXG5cdFx0XHRcdH0gZWxzZSBpZiAoZGF0YSA9PSAwKSB7XG5cdFx0XHRcdFx0Y29uc29sZS5sb2coXCJpdGVtIG5vdCBleGlzdCBpbiBkYXRhYmFzZSFcIilcblx0XHRcdFx0fVxuXHRcdFx0fSxcblx0XHRcdGFzeW5jIG1hcmtBbGxBc1JlYWRlZCgpIHtcblx0XHRcdFx0bGV0IGl0ZW1JZExpc3QgPSBbXVxuXHRcdFx0XHRmb3IgKGxldCBpPTA7IGk8dGhpcy5ub3RpZmljYXRpb25EYXRhLmxlbmd0aDsgaSsrKSB7XG5cdFx0XHRcdFx0aWYgKHRoaXMubm90aWZpY2F0aW9uRGF0YVtpXS51bnJlYWQpIHtcblx0XHRcdFx0XHRcdGl0ZW1JZExpc3QucHVzaCh0aGlzLm5vdGlmaWNhdGlvbkRhdGFbaV0uaXRlbUlkKVxuXHRcdFx0XHRcdH1cblx0XHRcdFx0fVxuXHRcdFx0XHRjb25zb2xlLmxvZyhcIml0ZW1JZExpc3QgaXM6IFwiLCBpdGVtSWRMaXN0KVxuXHRcdFx0XHR2YXIgcmVzID0gYXdhaXQgdW5pLnJlcXVlc3Qoe1xuXHRcdFx0XHRcdG1ldGhvZDonUE9TVCcsXG5cdFx0XHRcdFx0dXJsOidodHRwOi8vMTAxLjM1LjkxLjExNzo3ODg0L25vdGlmaWNhdGlvbi9wb3N0TGlzdCcsXG5cdFx0XHRcdFx0ZGF0YTpKU09OLnN0cmluZ2lmeSh7XCJpdGVtSWRMaXN0XCI6IGl0ZW1JZExpc3R9KVxuXHRcdFx0XHR9KVxuXHRcdFx0XHR2YXIgZGF0YSA9IHJlc1sxXS5kYXRhXG5cdFx0XHRcdFxuXHRcdFx0XHRjb25zb2xlLmxvZyhcInJlcyBpcyA6XCIsIHJlcylcblx0XHRcdFx0aWYgKHJlc1sxXS5zdGF0dXNDb2RlID09IDIwMCkge1xuXHRcdFx0XHRcdGZvciAobGV0IGk9MDsgaTx0aGlzLm5vdGlmaWNhdGlvbkRhdGEubGVuZ3RoOyBpKyspIHtcblx0XHRcdFx0XHRcdHRoaXMubm90aWZpY2F0aW9uRGF0YVtpXS51bnJlYWQgPSBmYWxzZVxuXHRcdFx0XHRcdH1cblx0XHRcdFx0fSBlbHNlIGlmIChkYXRhID09IC0xKSB7XG5cdFx0XHRcdFx0Y29uc29sZS5sb2coXCJhbHJlYWR5IGNoZWNrZWQhXCIpXG5cdFx0XHRcdH0gZWxzZSBpZiAoZGF0YSA9PSAwKSB7XG5cdFx0XHRcdFx0Y29uc29sZS5sb2coXCJpdGVtIG5vdCBleGlzdCBpbiBkYXRhYmFzZSFcIilcblx0XHRcdFx0fVxuXHRcdFx0XHQvLyB0aGlzLmdldENvbCgpXG5cdFx0XHR9LFxuXHRcdH1cblx0fVxuIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///182\n");
 
 /***/ }),
 /* 183 */
@@ -15027,7 +9532,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _App
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("/* WEBPACK VAR INJECTION */(function(__f__) {Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0;var _default =\n{\n  onLaunch: function onLaunch() {\n    __f__(\"log\", 'App Launch', \" at App.vue:4\");\n    var info = plus.push.getClientInfo();\n    plus.push.addEventListener(\"click\", function (msg) {\n      __f__(\"log\", \"click:\" + JSON.stringify(msg), \" at App.vue:7\");\n      __f__(\"log\", msg.payload, \" at App.vue:8\");\n      __f__(\"log\", JSON.stringify(msg), \" at App.vue:9\");\n      setTimeout(function () {\n        if (typeof uni.getStorageSync('userId') != 'undefined' && uni.getStorageSync('userId') != '' && uni.getStorageSync('userId')) {\n          uni.navigateTo({\n            url: \"/pages/notification/notification\" });\n\n        }\n      }, 1000);\n    }, false);\n    plus.push.addEventListener(\"receive\", function (msg) {\n      __f__(\"log\", \"recevice:\" + JSON.stringify(msg), \" at App.vue:19\");\n    }, false);\n    __f__(\"log\", 'push', \" at App.vue:21\");\n    if (typeof uni.getStorageSync('userId') != 'undefined' && uni.getStorageSync('userId') != '' && uni.getStorageSync('userId')) {\n      uni.switchTab({\n        url: './pages/home/home' });\n\n    }\n    //\n    // const _self = this;  \n    // const _handlePush = function(message) {  \n    // \tconsole.log(message);\n    // \tuni.navigateTo({  \n    // \t\turl: './pages/notification/notification'\n    // \t});\n    // };\n    // plus.push.addEventListener('click', _handlePush);  \n    // plus.push.addEventListener('receive', _handlePush);  \n    //\n\n  },\n  onShow: function onShow() {\n    __f__(\"log\", 'App Show', \" at App.vue:41\");\n  },\n  onHide: function onHide() {\n    __f__(\"log\", 'App Hide', \" at App.vue:44\");\n  } };exports.default = _default;\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/lib/format-log.js */ 15)[\"default\"]))//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVuaS1hcHA6Ly8vQXBwLnZ1ZSJdLCJuYW1lcyI6WyJvbkxhdW5jaCIsImluZm8iLCJwbHVzIiwicHVzaCIsImdldENsaWVudEluZm8iLCJhZGRFdmVudExpc3RlbmVyIiwibXNnIiwiSlNPTiIsInN0cmluZ2lmeSIsInBheWxvYWQiLCJzZXRUaW1lb3V0IiwidW5pIiwiZ2V0U3RvcmFnZVN5bmMiLCJuYXZpZ2F0ZVRvIiwidXJsIiwic3dpdGNoVGFiIiwib25TaG93Iiwib25IaWRlIl0sIm1hcHBpbmdzIjoiO0FBQ2U7QUFDZEEsVUFBUSxFQUFFLG9CQUFXO0FBQ3BCLGlCQUFZLFlBQVo7QUFDQSxRQUFJQyxJQUFJLEdBQUdDLElBQUksQ0FBQ0MsSUFBTCxDQUFVQyxhQUFWLEVBQVg7QUFDQUYsUUFBSSxDQUFDQyxJQUFMLENBQVVFLGdCQUFWLENBQTJCLE9BQTNCLEVBQW9DLFVBQVNDLEdBQVQsRUFBYztBQUNqRCxtQkFBWSxXQUFXQyxJQUFJLENBQUNDLFNBQUwsQ0FBZUYsR0FBZixDQUF2QjtBQUNBLG1CQUFZQSxHQUFHLENBQUNHLE9BQWhCO0FBQ0EsbUJBQVlGLElBQUksQ0FBQ0MsU0FBTCxDQUFlRixHQUFmLENBQVo7QUFDQUksZ0JBQVUsQ0FBQyxZQUFNO0FBQ2hCLFlBQUksT0FBT0MsR0FBRyxDQUFDQyxjQUFKLENBQW1CLFFBQW5CLENBQVAsSUFBdUMsV0FBdkMsSUFBc0RELEdBQUcsQ0FBQ0MsY0FBSixDQUFtQixRQUFuQixLQUFnQyxFQUF0RixJQUE0RkQsR0FBRyxDQUFDQyxjQUFKLENBQW1CLFFBQW5CLENBQWhHLEVBQTZIO0FBQzVIRCxhQUFHLENBQUNFLFVBQUosQ0FBZTtBQUNkQyxlQUFHLG9DQURXLEVBQWY7O0FBR0E7QUFDRCxPQU5TLEVBTVAsSUFOTyxDQUFWO0FBT0EsS0FYRCxFQVdHLEtBWEg7QUFZQVosUUFBSSxDQUFDQyxJQUFMLENBQVVFLGdCQUFWLENBQTJCLFNBQTNCLEVBQXNDLFVBQVNDLEdBQVQsRUFBYztBQUNuRCxtQkFBWSxjQUFjQyxJQUFJLENBQUNDLFNBQUwsQ0FBZUYsR0FBZixDQUExQjtBQUNBLEtBRkQsRUFFRyxLQUZIO0FBR0EsaUJBQVksTUFBWjtBQUNBLFFBQUksT0FBT0ssR0FBRyxDQUFDQyxjQUFKLENBQW1CLFFBQW5CLENBQVAsSUFBdUMsV0FBdkMsSUFBc0RELEdBQUcsQ0FBQ0MsY0FBSixDQUFtQixRQUFuQixLQUFnQyxFQUF0RixJQUE0RkQsR0FBRyxDQUFDQyxjQUFKLENBQW1CLFFBQW5CLENBQWhHLEVBQTZIO0FBQzVIRCxTQUFHLENBQUNJLFNBQUosQ0FBYztBQUNiRCxXQUFHLEVBQUMsbUJBRFMsRUFBZDs7QUFHQTtBQUNEO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUEsR0FyQ2E7QUFzQ2RFLFFBQU0sRUFBRSxrQkFBVztBQUNsQixpQkFBWSxVQUFaO0FBQ0EsR0F4Q2E7QUF5Q2RDLFFBQU0sRUFBRSxrQkFBVztBQUNsQixpQkFBWSxVQUFaO0FBQ0EsR0EzQ2EsRSIsImZpbGUiOiIyMTAuanMiLCJzb3VyY2VzQ29udGVudCI6WyJcbmV4cG9ydCBkZWZhdWx0IHtcblx0b25MYXVuY2g6IGZ1bmN0aW9uKCkge1xuXHRcdGNvbnNvbGUubG9nKCdBcHAgTGF1bmNoJylcblx0XHR2YXIgaW5mbyA9IHBsdXMucHVzaC5nZXRDbGllbnRJbmZvKClcblx0XHRwbHVzLnB1c2guYWRkRXZlbnRMaXN0ZW5lcihcImNsaWNrXCIsIGZ1bmN0aW9uKG1zZykge1xuXHRcdFx0Y29uc29sZS5sb2coXCJjbGljazpcIiArIEpTT04uc3RyaW5naWZ5KG1zZykpO1xuXHRcdFx0Y29uc29sZS5sb2cobXNnLnBheWxvYWQpO1xuXHRcdFx0Y29uc29sZS5sb2coSlNPTi5zdHJpbmdpZnkobXNnKSk7XG5cdFx0XHRzZXRUaW1lb3V0KCgpID0+IHtcblx0XHRcdFx0aWYgKHR5cGVvZiB1bmkuZ2V0U3RvcmFnZVN5bmMoJ3VzZXJJZCcpICE9ICd1bmRlZmluZWQnICYmIHVuaS5nZXRTdG9yYWdlU3luYygndXNlcklkJykgIT0gJycgJiYgdW5pLmdldFN0b3JhZ2VTeW5jKCd1c2VySWQnKSl7XG5cdFx0XHRcdFx0dW5pLm5hdmlnYXRlVG8oe1xuXHRcdFx0XHRcdFx0dXJsOiBgL3BhZ2VzL25vdGlmaWNhdGlvbi9ub3RpZmljYXRpb25gXG5cdFx0XHRcdFx0fSlcblx0XHRcdFx0fVxuXHRcdFx0fSwgMTAwMClcblx0XHR9LCBmYWxzZSk7ICBcblx0XHRwbHVzLnB1c2guYWRkRXZlbnRMaXN0ZW5lcihcInJlY2VpdmVcIiwgZnVuY3Rpb24obXNnKSB7XG5cdFx0XHRjb25zb2xlLmxvZyhcInJlY2V2aWNlOlwiICsgSlNPTi5zdHJpbmdpZnkobXNnKSlcblx0XHR9LCBmYWxzZSk7XG5cdFx0Y29uc29sZS5sb2coJ3B1c2gnKVxuXHRcdGlmICh0eXBlb2YgdW5pLmdldFN0b3JhZ2VTeW5jKCd1c2VySWQnKSAhPSAndW5kZWZpbmVkJyAmJiB1bmkuZ2V0U3RvcmFnZVN5bmMoJ3VzZXJJZCcpICE9ICcnICYmIHVuaS5nZXRTdG9yYWdlU3luYygndXNlcklkJykpe1xuXHRcdFx0dW5pLnN3aXRjaFRhYih7XG5cdFx0XHRcdHVybDonLi9wYWdlcy9ob21lL2hvbWUnXG5cdFx0XHR9KVxuXHRcdH1cblx0XHQvL1xuXHRcdC8vIGNvbnN0IF9zZWxmID0gdGhpczsgIFxuXHRcdC8vIGNvbnN0IF9oYW5kbGVQdXNoID0gZnVuY3Rpb24obWVzc2FnZSkgeyAgXG5cdFx0Ly8gXHRjb25zb2xlLmxvZyhtZXNzYWdlKTtcblx0XHQvLyBcdHVuaS5uYXZpZ2F0ZVRvKHsgIFxuXHRcdC8vIFx0XHR1cmw6ICcuL3BhZ2VzL25vdGlmaWNhdGlvbi9ub3RpZmljYXRpb24nXG5cdFx0Ly8gXHR9KTtcblx0XHQvLyB9O1xuXHRcdC8vIHBsdXMucHVzaC5hZGRFdmVudExpc3RlbmVyKCdjbGljaycsIF9oYW5kbGVQdXNoKTsgIFxuXHRcdC8vIHBsdXMucHVzaC5hZGRFdmVudExpc3RlbmVyKCdyZWNlaXZlJywgX2hhbmRsZVB1c2gpOyAgXG5cdFx0Ly9cblx0XHRcblx0fSxcblx0b25TaG93OiBmdW5jdGlvbigpIHtcblx0XHRjb25zb2xlLmxvZygnQXBwIFNob3cnKVxuXHR9LFxuXHRvbkhpZGU6IGZ1bmN0aW9uKCkge1xuXHRcdGNvbnNvbGUubG9nKCdBcHAgSGlkZScpXG5cdH1cbn1cbiJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///210\n");
+eval("/* WEBPACK VAR INJECTION */(function(__f__) {Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0;var _default =\n{\n  onLaunch: function onLaunch() {\n    __f__(\"log\", 'App Launch', \" at App.vue:4\");\n    // 第一次加载时设置NotificationCount为1，在访问过home后，每次+1\n    var notificationCount = uni.getStorageSync(\"NotificationCount\");\n    __f__(\"log\", \"notificationCount is: \", notificationCount, \" at App.vue:7\");\n    uni.setStorageSync(\"NotificationCount\", 1);\n    var info = plus.push.getClientInfo();\n    plus.push.addEventListener(\"click\", function (msg) {\n      __f__(\"log\", \"click:\" + JSON.stringify(msg), \" at App.vue:11\");\n      __f__(\"log\", msg.payload, \" at App.vue:12\");\n      __f__(\"log\", JSON.stringify(msg), \" at App.vue:13\");\n      setTimeout(function () {\n        if (typeof uni.getStorageSync('userId') != 'undefined' && uni.getStorageSync('userId') != '' && uni.getStorageSync('userId')) {\n          uni.navigateTo({\n            url: \"/pages/notification/notification\" });\n\n        }\n      }, 1000);\n    }, false);\n    plus.push.addEventListener(\"receive\", function (msg) {\n      __f__(\"log\", \"recevice:\" + JSON.stringify(msg), \" at App.vue:23\");\n    }, false);\n    __f__(\"log\", 'push', \" at App.vue:25\");\n    if (typeof uni.getStorageSync('userId') != 'undefined' && uni.getStorageSync('userId') != '' && uni.getStorageSync('userId')) {\n      uni.switchTab({\n        url: './pages/home/home' });\n\n    }\n    //\n    // const _self = this;  \n    // const _handlePush = function(message) {  \n    // \tconsole.log(message);\n    // \tuni.navigateTo({  \n    // \t\turl: './pages/notification/notification'\n    // \t});\n    // };\n    // plus.push.addEventListener('click', _handlePush);  \n    // plus.push.addEventListener('receive', _handlePush);  \n    //\n\n  },\n  onShow: function onShow() {\n    __f__(\"log\", 'App Show', \" at App.vue:45\");\n  },\n  onHide: function onHide() {\n    __f__(\"log\", 'App Hide', \" at App.vue:48\");\n  } };exports.default = _default;\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/lib/format-log.js */ 15)[\"default\"]))//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVuaS1hcHA6Ly8vQXBwLnZ1ZSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsbURBREE7O0FBR0E7QUFDQSxPQU5BLEVBTUEsSUFOQTtBQU9BLEtBWEEsRUFXQSxLQVhBO0FBWUE7QUFDQTtBQUNBLEtBRkEsRUFFQSxLQUZBO0FBR0E7QUFDQTtBQUNBO0FBQ0EsZ0NBREE7O0FBR0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBLEdBekNBO0FBMENBO0FBQ0E7QUFDQSxHQTVDQTtBQTZDQTtBQUNBO0FBQ0EsR0EvQ0EsRSIsImZpbGUiOiIyMTAuanMiLCJzb3VyY2VzQ29udGVudCI6WyI8c2NyaXB0PlxuXHRleHBvcnQgZGVmYXVsdCB7XG5cdFx0b25MYXVuY2g6IGZ1bmN0aW9uKCkge1xuXHRcdFx0Y29uc29sZS5sb2coJ0FwcCBMYXVuY2gnKVxuXHRcdFx0Ly8g56ys5LiA5qyh5Yqg6L295pe26K6+572uTm90aWZpY2F0aW9uQ291bnTkuLox77yM5Zyo6K6/6Zeu6L+HaG9tZeWQju+8jOavj+asoSsxXG5cdFx0XHRjb25zdCBub3RpZmljYXRpb25Db3VudCA9IHVuaS5nZXRTdG9yYWdlU3luYyhcIk5vdGlmaWNhdGlvbkNvdW50XCIpXG5cdFx0XHRjb25zb2xlLmxvZyhcIm5vdGlmaWNhdGlvbkNvdW50IGlzOiBcIiwgbm90aWZpY2F0aW9uQ291bnQpXG5cdFx0XHR1bmkuc2V0U3RvcmFnZVN5bmMoXCJOb3RpZmljYXRpb25Db3VudFwiLCAxKVxuXHRcdFx0dmFyIGluZm8gPSBwbHVzLnB1c2guZ2V0Q2xpZW50SW5mbygpXG5cdFx0XHRwbHVzLnB1c2guYWRkRXZlbnRMaXN0ZW5lcihcImNsaWNrXCIsIGZ1bmN0aW9uKG1zZykge1xuXHRcdFx0XHRjb25zb2xlLmxvZyhcImNsaWNrOlwiICsgSlNPTi5zdHJpbmdpZnkobXNnKSk7XG5cdFx0XHRcdGNvbnNvbGUubG9nKG1zZy5wYXlsb2FkKTtcblx0XHRcdFx0Y29uc29sZS5sb2coSlNPTi5zdHJpbmdpZnkobXNnKSk7XG5cdFx0XHRcdHNldFRpbWVvdXQoKCkgPT4ge1xuXHRcdFx0XHRcdGlmICh0eXBlb2YgdW5pLmdldFN0b3JhZ2VTeW5jKCd1c2VySWQnKSAhPSAndW5kZWZpbmVkJyAmJiB1bmkuZ2V0U3RvcmFnZVN5bmMoJ3VzZXJJZCcpICE9ICcnICYmIHVuaS5nZXRTdG9yYWdlU3luYygndXNlcklkJykpe1xuXHRcdFx0XHRcdFx0dW5pLm5hdmlnYXRlVG8oe1xuXHRcdFx0XHRcdFx0XHR1cmw6IGAvcGFnZXMvbm90aWZpY2F0aW9uL25vdGlmaWNhdGlvbmBcblx0XHRcdFx0XHRcdH0pXG5cdFx0XHRcdFx0fVxuXHRcdFx0XHR9LCAxMDAwKVxuXHRcdFx0fSwgZmFsc2UpOyAgXG5cdFx0XHRwbHVzLnB1c2guYWRkRXZlbnRMaXN0ZW5lcihcInJlY2VpdmVcIiwgZnVuY3Rpb24obXNnKSB7XG5cdFx0XHRcdGNvbnNvbGUubG9nKFwicmVjZXZpY2U6XCIgKyBKU09OLnN0cmluZ2lmeShtc2cpKVxuXHRcdFx0fSwgZmFsc2UpO1xuXHRcdFx0Y29uc29sZS5sb2coJ3B1c2gnKVxuXHRcdFx0aWYgKHR5cGVvZiB1bmkuZ2V0U3RvcmFnZVN5bmMoJ3VzZXJJZCcpICE9ICd1bmRlZmluZWQnICYmIHVuaS5nZXRTdG9yYWdlU3luYygndXNlcklkJykgIT0gJycgJiYgdW5pLmdldFN0b3JhZ2VTeW5jKCd1c2VySWQnKSl7XG5cdFx0XHRcdHVuaS5zd2l0Y2hUYWIoe1xuXHRcdFx0XHRcdHVybDonLi9wYWdlcy9ob21lL2hvbWUnXG5cdFx0XHRcdH0pXG5cdFx0XHR9XG5cdFx0XHQvLyAvLyAjaWZkZWYgQVBQLVBMVVMgXG5cdFx0XHQvLyBjb25zdCBfc2VsZiA9IHRoaXM7ICBcblx0XHRcdC8vIGNvbnN0IF9oYW5kbGVQdXNoID0gZnVuY3Rpb24obWVzc2FnZSkgeyAgXG5cdFx0XHQvLyBcdGNvbnNvbGUubG9nKG1lc3NhZ2UpO1xuXHRcdFx0Ly8gXHR1bmkubmF2aWdhdGVUbyh7ICBcblx0XHRcdC8vIFx0XHR1cmw6ICcuL3BhZ2VzL25vdGlmaWNhdGlvbi9ub3RpZmljYXRpb24nXG5cdFx0XHQvLyBcdH0pO1xuXHRcdFx0Ly8gfTtcblx0XHRcdC8vIHBsdXMucHVzaC5hZGRFdmVudExpc3RlbmVyKCdjbGljaycsIF9oYW5kbGVQdXNoKTsgIFxuXHRcdFx0Ly8gcGx1cy5wdXNoLmFkZEV2ZW50TGlzdGVuZXIoJ3JlY2VpdmUnLCBfaGFuZGxlUHVzaCk7ICBcblx0XHRcdC8vIC8vICNlbmRpZiBcblx0XHRcdFxuXHRcdH0sXG5cdFx0b25TaG93OiBmdW5jdGlvbigpIHtcblx0XHRcdGNvbnNvbGUubG9nKCdBcHAgU2hvdycpXG5cdFx0fSxcblx0XHRvbkhpZGU6IGZ1bmN0aW9uKCkge1xuXHRcdFx0Y29uc29sZS5sb2coJ0FwcCBIaWRlJylcblx0XHR9XG5cdH1cbjwvc2NyaXB0PlxuXG48c3R5bGUgbGFuZz1cInNjc3NcIj5cblx0Lyrmr4/kuKrpobXpnaLlhazlhbFjc3MgKi9cblx0QGltcG9ydCBcInV2aWV3LXVpL2luZGV4LnNjc3NcIjtcblx0QGltcG9ydCBcIi4vZm9udC9pZm9udC5jc3NcIjsgIFxuXHRcbjwvc3R5bGU+XG48c3R5bGU+XG5cdC51bmktc2FtcGxlLXRvYXN0IHtcblx0XHR3aWR0aDo4MCU7XG5cdH1cbjwvc3R5bGU+Il0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///210\n");
 
 /***/ }),
 /* 211 */
@@ -15035,1655 +9540,36 @@ eval("/* WEBPACK VAR INJECTION */(function(__f__) {Object.defineProperty(exports
   !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/index.js ***!
   \****************************************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(__f__) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
-var _mixin = _interopRequireDefault(__webpack_require__(/*! ./libs/mixin/mixin.js */ 212));
-
-
-
-var _request = _interopRequireDefault(__webpack_require__(/*! ./libs/request */ 213));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var _queryParams = _interopRequireDefault(__webpack_require__(/*! ./libs/function/queryParams.js */ 217));
-
-var _route = _interopRequireDefault(__webpack_require__(/*! ./libs/function/route.js */ 218));
-
-var _timeFormat = _interopRequireDefault(__webpack_require__(/*! ./libs/function/timeFormat.js */ 219));
-
-var _timeFrom = _interopRequireDefault(__webpack_require__(/*! ./libs/function/timeFrom.js */ 220));
-
-var _colorGradient = _interopRequireDefault(__webpack_require__(/*! ./libs/function/colorGradient.js */ 221));
-
-var _guid = _interopRequireDefault(__webpack_require__(/*! ./libs/function/guid.js */ 222));
-
-var _color = _interopRequireDefault(__webpack_require__(/*! ./libs/function/color.js */ 223));
-
-var _type2icon = _interopRequireDefault(__webpack_require__(/*! ./libs/function/type2icon.js */ 224));
-
-var _randomArray = _interopRequireDefault(__webpack_require__(/*! ./libs/function/randomArray.js */ 225));
-
-var _deepClone = _interopRequireDefault(__webpack_require__(/*! ./libs/function/deepClone.js */ 215));
-
-var _deepMerge = _interopRequireDefault(__webpack_require__(/*! ./libs/function/deepMerge.js */ 214));
-
-var _addUnit = _interopRequireDefault(__webpack_require__(/*! ./libs/function/addUnit.js */ 226));
-
-
-var _test = _interopRequireDefault(__webpack_require__(/*! ./libs/function/test.js */ 216));
-
-var _random = _interopRequireDefault(__webpack_require__(/*! ./libs/function/random.js */ 227));
-
-var _trim = _interopRequireDefault(__webpack_require__(/*! ./libs/function/trim.js */ 228));
-
-var _toast = _interopRequireDefault(__webpack_require__(/*! ./libs/function/toast.js */ 229));
-
-var _getParent = _interopRequireDefault(__webpack_require__(/*! ./libs/function/getParent.js */ 230));
-
-var _$parent = _interopRequireDefault(__webpack_require__(/*! ./libs/function/$parent.js */ 231));
-
-
-
-var _sys = __webpack_require__(/*! ./libs/function/sys.js */ 232);
-
-var _debounce = _interopRequireDefault(__webpack_require__(/*! ./libs/function/debounce.js */ 233));
-
-var _throttle = _interopRequireDefault(__webpack_require__(/*! ./libs/function/throttle.js */ 234));
-
-
-
-var _config = _interopRequireDefault(__webpack_require__(/*! ./libs/config/config.js */ 235));
-
-var _zIndex = _interopRequireDefault(__webpack_require__(/*! ./libs/config/zIndex.js */ 236));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} // 引入全局mixin
-// 引入关于是否mixin集成小程序分享的配置
-// import wxshare from './libs/mixin/mpShare.js'
-// 全局挂载引入http相关请求拦截插件
-function wranning(str) {// 开发环境进行信息输出,主要是一些报错信息
-  // 这个环境的来由是在程序编写时候,点击hx编辑器运行调试代码的时候,详见:
-  // 	https://uniapp.dcloud.io/frame?id=%e5%bc%80%e5%8f%91%e7%8e%af%e5%a2%83%e5%92%8c%e7%94%9f%e4%ba%a7%e7%8e%af%e5%a2%83
-  if (true) {__f__("warn", str, " at node_modules/uview-ui/index.js:13");}} // 尝试判断在根目录的/store中是否有$u.mixin.js，此文件uView默认为需要挂在到全局的vuex的state变量
-// HX2.6.11版本,放到try中,控制台依然会警告,暂时不用此方式，
-// let vuexStore = {};
-// try {
-// 	vuexStore = require("@/store/$u.mixin.js");
-// } catch (e) {
-// 	//TODO handle the exception
-// }
-// post类型对象参数转为get类型url参数
-var $u = { queryParams: _queryParams.default, route: _route.default, timeFormat: _timeFormat.default, date: _timeFormat.default, // 另名date
-  timeFrom: _timeFrom.default, colorGradient: _colorGradient.default.colorGradient, colorToRgba: _colorGradient.default.colorToRgba, guid: _guid.default, color: _color.default, sys: _sys.sys, os: _sys.os, type2icon: _type2icon.default, randomArray: _randomArray.default, wranning: wranning, get: _request.default.get,
-  post: _request.default.post,
-  put: _request.default.put,
-  'delete': _request.default.delete,
-  hexToRgb: _colorGradient.default.hexToRgb,
-  rgbToHex: _colorGradient.default.rgbToHex,
-  test: _test.default,
-  random: _random.default,
-  deepClone: _deepClone.default,
-  deepMerge: _deepMerge.default,
-  getParent: _getParent.default,
-  $parent: _$parent.default,
-  addUnit: _addUnit.default,
-  trim: _trim.default,
-  type: ['primary', 'success', 'error', 'warning', 'info'],
-  http: _request.default,
-  toast: _toast.default,
-  config: _config.default, // uView配置信息相关，比如版本号
-  zIndex: _zIndex.default,
-  debounce: _debounce.default,
-  throttle: _throttle.default };
-
-
-// $u挂载到uni对象上
-uni.$u = $u;
-
-var install = function install(Vue) {
-  Vue.mixin(_mixin.default);
-  if (Vue.prototype.openShare) {
-    Vue.mixin(mpShare);
-  }
-  // Vue.mixin(vuexStore);
-  // 时间格式化，同时两个名称，date和timeFormat
-  Vue.filter('timeFormat', function (timestamp, format) {
-    return (0, _timeFormat.default)(timestamp, format);
-  });
-  Vue.filter('date', function (timestamp, format) {
-    return (0, _timeFormat.default)(timestamp, format);
-  });
-  // 将多久以前的方法，注入到全局过滤器
-  Vue.filter('timeFrom', function (timestamp, format) {
-    return (0, _timeFrom.default)(timestamp, format);
-  });
-  Vue.prototype.$u = $u;
-};var _default =
-
-{
-  install: install };exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/lib/format-log.js */ 15)["default"]))
-
-/***/ }),
-/* 212 */
-/*!***************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/libs/mixin/mixin.js ***!
-  \***************************************************************************************************************************/
-/*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = {
-  data: function data() {
-    return {};
-  },
-  onLoad: function onLoad() {
-    // getRect挂载到$u上，因为这方法需要使用in(this)，所以无法把它独立成一个单独的文件导出
-    this.$u.getRect = this.$uGetRect;
-  },
-  methods: {
-    // 查询节点信息
-    // 目前此方法在支付宝小程序中无法获取组件跟接点的尺寸，为支付宝的bug(2020-07-21)
-    // 解决办法为在组件根部再套一个没有任何作用的view元素
-    $uGetRect: function $uGetRect(selector, all) {var _this = this;
-      return new Promise(function (resolve) {
-        uni.createSelectorQuery().
-        in(_this)[all ? 'selectAll' : 'select'](selector).
-        boundingClientRect(function (rect) {
-          if (all && Array.isArray(rect) && rect.length) {
-            resolve(rect);
-          }
-          if (!all && rect) {
-            resolve(rect);
-          }
-        }).
-        exec();
-      });
-    },
-    getParentData: function getParentData() {var _this2 = this;var parentName = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-      // 避免在created中去定义parent变量
-      if (!this.parent) this.parent = false;
-      // 这里的本质原理是，通过获取父组件实例(也即u-radio-group的this)
-      // 将父组件this中对应的参数，赋值给本组件(u-radio的this)的parentData对象中对应的属性
-      // 之所以需要这么做，是因为所有端中，头条小程序不支持通过this.parent.xxx去监听父组件参数的变化
-      this.parent = this.$u.$parent.call(this, parentName);
-      if (this.parent) {
-        // 历遍parentData中的属性，将parent中的同名属性赋值给parentData
-        Object.keys(this.parentData).map(function (key) {
-          _this2.parentData[key] = _this2.parent[key];
-        });
-      }
-    },
-    // 阻止事件冒泡
-    preventEvent: function preventEvent(e) {
-      e && e.stopPropagation && e.stopPropagation();
-    } },
-
-  onReachBottom: function onReachBottom() {
-    uni.$emit('uOnReachBottom');
-  },
-  beforeDestroy: function beforeDestroy() {var _this3 = this;
-    // 判断当前页面是否存在parent和chldren，一般在checkbox和checkbox-group父子联动的场景会有此情况
-    // 组件销毁时，移除子组件在父组件children数组中的实例，释放资源，避免数据混乱
-    if (this.parent && uni.$u.test.array(this.parent.children)) {
-      // 组件销毁时，移除父组件中的children数组中对应的实例
-      var childrenList = this.parent.children;
-      childrenList.map(function (child, index) {
-        // 如果相等，则移除
-        if (child === _this3) {
-          childrenList.splice(index, 1);
-        }
-      });
-    }
-  } };
+throw new Error("Module build failed (from ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js):\nError: ENOENT: no such file or directory, open '/Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/index.js'");
 
 /***/ }),
-/* 213 */
-/*!*****************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/libs/request/index.js ***!
-  \*****************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _deepMerge = _interopRequireDefault(__webpack_require__(/*! ../function/deepMerge */ 214));
-var _test = _interopRequireDefault(__webpack_require__(/*! ../function/test */ 216));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}var
-Request = /*#__PURE__*/function () {_createClass(Request, [{ key: "setConfig",
-    // 设置全局默认配置
-    value: function setConfig(customConfig) {
-      // 深度合并对象，否则会造成对象深层属性丢失
-      this.config = (0, _deepMerge.default)(this.config, customConfig);
-    }
-
-    // 主要请求部分
-  }, { key: "request", value: function request() {var _this = this;var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-      // 检查请求拦截
-      if (this.interceptor.request && typeof this.interceptor.request === 'function') {
-        var tmpConfig = {};
-        var interceptorRequest = this.interceptor.request(options);
-        if (interceptorRequest === false) {
-          // 返回一个处于pending状态中的Promise，来取消原promise，避免进入then()回调
-          return new Promise(function () {});
-        }
-        this.options = interceptorRequest;
-      }
-      options.dataType = options.dataType || this.config.dataType;
-      options.responseType = options.responseType || this.config.responseType;
-      options.url = options.url || '';
-      options.params = options.params || {};
-      options.header = Object.assign({}, this.config.header, options.header);
-      options.method = options.method || this.config.method;
-
-      return new Promise(function (resolve, reject) {
-        options.complete = function (response) {
-          // 请求返回后，隐藏loading(如果请求返回快的话，可能会没有loading)
-          uni.hideLoading();
-          // 清除定时器，如果请求回来了，就无需loading
-          clearTimeout(_this.config.timer);
-          _this.config.timer = null;
-          // 判断用户对拦截返回数据的要求，如果originalData为true，返回所有的数据(response)到拦截器，否则只返回response.data
-          if (_this.config.originalData) {
-            // 判断是否存在拦截器
-            if (_this.interceptor.response && typeof _this.interceptor.response === 'function') {
-              var resInterceptors = _this.interceptor.response(response);
-              // 如果拦截器不返回false，就将拦截器返回的内容给this.$u.post的then回调
-              if (resInterceptors !== false) {
-                resolve(resInterceptors);
-              } else {
-                // 如果拦截器返回false，意味着拦截器定义者认为返回有问题，直接接入catch回调
-                reject(response);
-              }
-            } else {
-              // 如果要求返回原始数据，就算没有拦截器，也返回最原始的数据
-              resolve(response);
-            }
-          } else {
-            if (response.statusCode == 200) {
-              if (_this.interceptor.response && typeof _this.interceptor.response === 'function') {
-                var _resInterceptors = _this.interceptor.response(response.data);
-                if (_resInterceptors !== false) {
-                  resolve(_resInterceptors);
-                } else {
-                  reject(response.data);
-                }
-              } else {
-                // 如果不是返回原始数据(originalData=false)，且没有拦截器的情况下，返回纯数据给then回调
-                resolve(response.data);
-              }
-            } else {
-              // 不返回原始数据的情况下，服务器状态码不为200，modal弹框提示
-              // if(response.errMsg) {
-              // 	uni.showModal({
-              // 		title: response.errMsg
-              // 	});
-              // }
-              reject(response);
-            }
-          }
-        };
-
-        // 判断用户传递的URL是否/开头,如果不是,加上/，这里使用了uView的test.js验证库的url()方法
-        options.url = _test.default.url(options.url) ? options.url : _this.config.baseUrl + (options.url.indexOf('/') == 0 ?
-        options.url : '/' + options.url);
-
-        // 是否显示loading
-        // 加一个是否已有timer定时器的判断，否则有两个同时请求的时候，后者会清除前者的定时器id
-        // 而没有清除前者的定时器，导致前者超时，一直显示loading
-        if (_this.config.showLoading && !_this.config.timer) {
-          _this.config.timer = setTimeout(function () {
-            uni.showLoading({
-              title: _this.config.loadingText,
-              mask: _this.config.loadingMask });
-
-            _this.config.timer = null;
-          }, _this.config.loadingTime);
-        }
-        uni.request(options);
-      });
-      // .catch(res => {
-      // 	// 如果返回reject()，不让其进入this.$u.post().then().catch()后面的catct()
-      // 	// 因为很多人都会忘了写后面的catch()，导致报错捕获不到catch
-      // 	return new Promise(()=>{});
-      // })
-    } }]);
-
-  function Request() {var _this2 = this;_classCallCheck(this, Request);
-    this.config = {
-      baseUrl: '', // 请求的根域名
-      // 默认的请求头
-      header: {},
-      method: 'POST',
-      // 设置为json，返回后uni.request会对数据进行一次JSON.parse
-      dataType: 'json',
-      // 此参数无需处理，因为5+和支付宝小程序不支持，默认为text即可
-      responseType: 'text',
-      showLoading: true, // 是否显示请求中的loading
-      loadingText: '请求中...',
-      loadingTime: 800, // 在此时间内，请求还没回来的话，就显示加载中动画，单位ms
-      timer: null, // 定时器
-      originalData: false, // 是否在拦截器中返回服务端的原始数据，见文档说明
-      loadingMask: true // 展示loading的时候，是否给一个透明的蒙层，防止触摸穿透
-    };
-
-    // 拦截器
-    this.interceptor = {
-      // 请求前的拦截
-      request: null,
-      // 请求后的拦截
-      response: null };
-
-
-    // get请求
-    this.get = function (url) {var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};var header = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-      return _this2.request({
-        method: 'GET',
-        url: url,
-        header: header,
-        data: data });
-
-    };
-
-    // post请求
-    this.post = function (url) {var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};var header = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-      return _this2.request({
-        url: url,
-        method: 'POST',
-        header: header,
-        data: data });
-
-    };
-
-    // put请求，不支持支付宝小程序(HX2.6.15)
-    this.put = function (url) {var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};var header = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-      return _this2.request({
-        url: url,
-        method: 'PUT',
-        header: header,
-        data: data });
-
-    };
-
-    // delete请求，不支持支付宝和头条小程序(HX2.6.15)
-    this.delete = function (url) {var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};var header = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-      return _this2.request({
-        url: url,
-        method: 'DELETE',
-        header: header,
-        data: data });
-
-    };
-  }return Request;}();var _default =
-
-new Request();exports.default = _default;
-
-/***/ }),
-/* 214 */
-/*!**********************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/libs/function/deepMerge.js ***!
-  \**********************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _deepClone = _interopRequireDefault(__webpack_require__(/*! ./deepClone */ 215));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
-
-// JS对象深度合并
-function deepMerge() {var target = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};var source = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-  target = (0, _deepClone.default)(target);
-  if (typeof target !== 'object' || typeof source !== 'object') return false;
-  for (var prop in source) {
-    if (!source.hasOwnProperty(prop)) continue;
-    if (prop in target) {
-      if (typeof target[prop] !== 'object') {
-        target[prop] = source[prop];
-      } else {
-        if (typeof source[prop] !== 'object') {
-          target[prop] = source[prop];
-        } else {
-          if (target[prop].concat && source[prop].concat) {
-            target[prop] = target[prop].concat(source[prop]);
-          } else {
-            target[prop] = deepMerge(target[prop], source[prop]);
-          }
-        }
-      }
-    } else {
-      target[prop] = source[prop];
-    }
-  }
-  return target;
-}var _default =
-
-deepMerge;exports.default = _default;
-
-/***/ }),
-/* 215 */
-/*!**********************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/libs/function/deepClone.js ***!
-  \**********************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; // 判断arr是否为一个数组，返回一个bool值
-function isArray(arr) {
-  return Object.prototype.toString.call(arr) === '[object Array]';
-}
-
-// 深度克隆
-function deepClone(obj) {
-  // 对常见的“非”值，直接返回原来值
-  if ([null, undefined, NaN, false].includes(obj)) return obj;
-  if (typeof obj !== "object" && typeof obj !== 'function') {
-    //原始类型直接返回
-    return obj;
-  }
-  var o = isArray(obj) ? [] : {};
-  for (var i in obj) {
-    if (obj.hasOwnProperty(i)) {
-      o[i] = typeof obj[i] === "object" ? deepClone(obj[i]) : obj[i];
-    }
-  }
-  return o;
-}var _default =
-
-deepClone;exports.default = _default;
-
-/***/ }),
-/* 216 */
-/*!*****************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/libs/function/test.js ***!
-  \*****************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; /**
-                                                                                                      * 验证电子邮箱格式
-                                                                                                      */
-function email(value) {
-  return /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/.test(value);
-}
-
-/**
-   * 验证手机格式
-   */
-function mobile(value) {
-  return /^1[3-9]\d{9}$/.test(value);
-}
-
-/**
-   * 验证URL格式
-   */
-function url(value) {
-  return /http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w-.\/?%&=]*)?/.test(value);
-}
-
-/**
-   * 验证日期格式
-   */
-function date(value) {
-  return !/Invalid|NaN/.test(new Date(value).toString());
-}
-
-/**
-   * 验证ISO类型的日期格式
-   */
-function dateISO(value) {
-  return /^\d{4}[\/\-](0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])$/.test(value);
-}
-
-/**
-   * 验证十进制数字
-   */
-function number(value) {
-  return /^(?:-?\d+|-?\d{1,3}(?:,\d{3})+)?(?:\.\d+)?$/.test(value);
-}
-
-/**
-   * 验证整数
-   */
-function digits(value) {
-  return /^\d+$/.test(value);
-}
-
-/**
-   * 验证身份证号码
-   */
-function idCard(value) {
-  return /^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}([0-9]|X)$/.test(
-  value);
-}
-
-/**
-   * 是否车牌号
-   */
-function carNo(value) {
-  // 新能源车牌
-  var xreg = /^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]{1}[A-Z]{1}(([0-9]{5}[DF]$)|([DF][A-HJ-NP-Z0-9][0-9]{4}$))/;
-  // 旧车牌
-  var creg = /^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]{1}[A-Z]{1}[A-HJ-NP-Z0-9]{4}[A-HJ-NP-Z0-9挂学警港澳]{1}$/;
-  if (value.length === 7) {
-    return creg.test(value);
-  } else if (value.length === 8) {
-    return xreg.test(value);
-  } else {
-    return false;
-  }
-}
-
-/**
-   * 金额,只允许2位小数
-   */
-function amount(value) {
-  //金额，只允许保留两位小数
-  return /^[1-9]\d*(,\d{3})*(\.\d{1,2})?$|^0\.\d{1,2}$/.test(value);
-}
-
-/**
-   * 中文
-   */
-function chinese(value) {
-  var reg = /^[\u4e00-\u9fa5]+$/gi;
-  return reg.test(value);
-}
-
-/**
-   * 只能输入字母
-   */
-function letter(value) {
-  return /^[a-zA-Z]*$/.test(value);
-}
-
-/**
-   * 只能是字母或者数字
-   */
-function enOrNum(value) {
-  //英文或者数字
-  var reg = /^[0-9a-zA-Z]*$/g;
-  return reg.test(value);
-}
-
-/**
-   * 验证是否包含某个值
-   */
-function contains(value, param) {
-  return value.indexOf(param) >= 0;
-}
-
-/**
-   * 验证一个值范围[min, max]
-   */
-function range(value, param) {
-  return value >= param[0] && value <= param[1];
-}
-
-/**
-   * 验证一个长度范围[min, max]
-   */
-function rangeLength(value, param) {
-  return value.length >= param[0] && value.length <= param[1];
-}
-
-/**
-   * 是否固定电话
-   */
-function landline(value) {
-  var reg = /^\d{3,4}-\d{7,8}(-\d{3,4})?$/;
-  return reg.test(value);
-}
-
-/**
-   * 判断是否为空
-   */
-function empty(value) {
-  switch (typeof value) {
-    case 'undefined':
-      return true;
-    case 'string':
-      if (value.replace(/(^[ \t\n\r]*)|([ \t\n\r]*$)/g, '').length == 0) return true;
-      break;
-    case 'boolean':
-      if (!value) return true;
-      break;
-    case 'number':
-      if (0 === value || isNaN(value)) return true;
-      break;
-    case 'object':
-      if (null === value || value.length === 0) return true;
-      for (var i in value) {
-        return false;
-      }
-      return true;}
-
-  return false;
-}
-
-/**
-   * 是否json字符串
-   */
-function jsonString(value) {
-  if (typeof value == 'string') {
-    try {
-      var obj = JSON.parse(value);
-      if (typeof obj == 'object' && obj) {
-        return true;
-      } else {
-        return false;
-      }
-    } catch (e) {
-      return false;
-    }
-  }
-  return false;
-}
-
-
-/**
-   * 是否数组
-   */
-function array(value) {
-  if (typeof Array.isArray === "function") {
-    return Array.isArray(value);
-  } else {
-    return Object.prototype.toString.call(value) === "[object Array]";
-  }
-}
-
-/**
-   * 是否对象
-   */
-function object(value) {
-  return Object.prototype.toString.call(value) === '[object Object]';
-}
-
-/**
-   * 是否短信验证码
-   */
-function code(value) {var len = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 6;
-  return new RegExp("^\\d{".concat(len, "}$")).test(value);
-}var _default =
-
-
-{
-  email: email,
-  mobile: mobile,
-  url: url,
-  date: date,
-  dateISO: dateISO,
-  number: number,
-  digits: digits,
-  idCard: idCard,
-  carNo: carNo,
-  amount: amount,
-  chinese: chinese,
-  letter: letter,
-  enOrNum: enOrNum,
-  contains: contains,
-  range: range,
-  rangeLength: rangeLength,
-  empty: empty,
-  isEmpty: empty,
-  jsonString: jsonString,
-  landline: landline,
-  object: object,
-  array: array,
-  code: code };exports.default = _default;
-
-/***/ }),
-/* 217 */
-/*!************************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/libs/function/queryParams.js ***!
-  \************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; /**
-                                                                                                      * 对象转url参数
-                                                                                                      * @param {*} data,对象
-                                                                                                      * @param {*} isPrefix,是否自动加上"?"
-                                                                                                      */
-function queryParams() {var data = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};var isPrefix = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;var arrayFormat = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'brackets';
-  var prefix = isPrefix ? '?' : '';
-  var _result = [];
-  if (['indices', 'brackets', 'repeat', 'comma'].indexOf(arrayFormat) == -1) arrayFormat = 'brackets';var _loop = function _loop(
-  key) {
-    var value = data[key];
-    // 去掉为空的参数
-    if (['', undefined, null].indexOf(value) >= 0) {
-      return "continue";
-    }
-    // 如果值为数组，另行处理
-    if (value.constructor === Array) {
-      // e.g. {ids: [1, 2, 3]}
-      switch (arrayFormat) {
-        case 'indices':
-          // 结果: ids[0]=1&ids[1]=2&ids[2]=3
-          for (var i = 0; i < value.length; i++) {
-            _result.push(key + '[' + i + ']=' + value[i]);
-          }
-          break;
-        case 'brackets':
-          // 结果: ids[]=1&ids[]=2&ids[]=3
-          value.forEach(function (_value) {
-            _result.push(key + '[]=' + _value);
-          });
-          break;
-        case 'repeat':
-          // 结果: ids=1&ids=2&ids=3
-          value.forEach(function (_value) {
-            _result.push(key + '=' + _value);
-          });
-          break;
-        case 'comma':
-          // 结果: ids=1,2,3
-          var commaStr = "";
-          value.forEach(function (_value) {
-            commaStr += (commaStr ? "," : "") + _value;
-          });
-          _result.push(key + '=' + commaStr);
-          break;
-        default:
-          value.forEach(function (_value) {
-            _result.push(key + '[]=' + _value);
-          });}
-
-    } else {
-      _result.push(key + '=' + value);
-    }};for (var key in data) {var _ret = _loop(key);if (_ret === "continue") continue;
-  }
-  return _result.length ? prefix + _result.join('&') : '';
-}var _default =
-
-queryParams;exports.default = _default;
-
-/***/ }),
-/* 218 */
-/*!******************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/libs/function/route.js ***!
-  \******************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 92));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;} /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  * 路由跳转方法，该方法相对于直接使用uni.xxx的好处是使用更加简单快捷
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  * 并且带有路由拦截功能
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  */var
-
-Router = /*#__PURE__*/function () {
-  function Router() {_classCallCheck(this, Router);
-    // 原始属性定义
-    this.config = {
-      type: 'navigateTo',
-      url: '',
-      delta: 1, // navigateBack页面后退时,回退的层数
-      params: {}, // 传递的参数
-      animationType: 'pop-in', // 窗口动画,只在APP有效
-      animationDuration: 300, // 窗口动画持续时间,单位毫秒,只在APP有效
-      intercept: false // 是否需要拦截
-    };
-    // 因为route方法是需要对外赋值给另外的对象使用，同时route内部有使用this，会导致route失去上下文
-    // 这里在构造函数中进行this绑定
-    this.route = this.route.bind(this);
-  }
-
-  // 判断url前面是否有"/"，如果没有则加上，否则无法跳转
-  _createClass(Router, [{ key: "addRootPath", value: function addRootPath(url) {
-      return url[0] === '/' ? url : "/".concat(url);
-    }
-
-    // 整合路由参数
-  }, { key: "mixinParam", value: function mixinParam(url, params) {
-      url = url && this.addRootPath(url);
-
-      // 使用正则匹配，主要依据是判断是否有"/","?","="等，如“/page/index/index?name=mary"
-      // 如果有url中有get参数，转换后无需带上"?"
-      var query = '';
-      if (/.*\/.*\?.*=.*/.test(url)) {
-        // object对象转为get类型的参数
-        query = uni.$u.queryParams(params, false);
-        // 因为已有get参数,所以后面拼接的参数需要带上"&"隔开
-        return url += "&" + query;
-      } else {
-        // 直接拼接参数，因为此处url中没有后面的query参数，也就没有"?/&"之类的符号
-        query = uni.$u.queryParams(params);
-        return url += query;
-      }
-    }
-
-    // 对外的方法名称
-  }, { key: "route", value: function () {var _route = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var options,params,mergeConfig,isNext,_args = arguments;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:options = _args.length > 0 && _args[0] !== undefined ? _args[0] : {};params = _args.length > 1 && _args[1] !== undefined ? _args[1] : {};
-                // 合并用户的配置和内部的默认配置
-                mergeConfig = {};
-
-                if (typeof options === 'string') {
-                  // 如果options为字符串，则为route(url, params)的形式
-                  mergeConfig.url = this.mixinParam(options, params);
-                  mergeConfig.type = 'navigateTo';
-                } else {
-                  mergeConfig = uni.$u.deepClone(options, this.config);
-                  // 否则正常使用mergeConfig中的url和params进行拼接
-                  mergeConfig.url = this.mixinParam(options.url, options.params);
-                }
-
-                if (params.intercept) {
-                  this.config.intercept = params.intercept;
-                }
-                // params参数也带给拦截器
-                mergeConfig.params = params;
-                // 合并内外部参数
-                mergeConfig = uni.$u.deepMerge(this.config, mergeConfig);
-                // 判断用户是否定义了拦截器
-                if (!(typeof uni.$u.routeIntercept === 'function')) {_context.next = 14;break;}_context.next = 10;return (
-
-                  new Promise(function (resolve, reject) {
-                    uni.$u.routeIntercept(mergeConfig, resolve);
-                  }));case 10:isNext = _context.sent;
-                // 如果isNext为true，则执行路由跳转
-                isNext && this.openPage(mergeConfig);_context.next = 15;break;case 14:
-
-                this.openPage(mergeConfig);case 15:case "end":return _context.stop();}}}, _callee, this);}));function route() {return _route.apply(this, arguments);}return route;}()
-
-
-
-    // 执行路由跳转
-  }, { key: "openPage", value: function openPage(config) {
-      // 解构参数
-      var
-      url =
-
-
-
-
-      config.url,type = config.type,delta = config.delta,animationType = config.animationType,animationDuration = config.animationDuration;
-      if (config.type == 'navigateTo' || config.type == 'to') {
-        uni.navigateTo({
-          url: url,
-          animationType: animationType,
-          animationDuration: animationDuration });
-
-      }
-      if (config.type == 'redirectTo' || config.type == 'redirect') {
-        uni.redirectTo({
-          url: url });
-
-      }
-      if (config.type == 'switchTab' || config.type == 'tab') {
-        uni.switchTab({
-          url: url });
-
-      }
-      if (config.type == 'reLaunch' || config.type == 'launch') {
-        uni.reLaunch({
-          url: url });
-
-      }
-      if (config.type == 'navigateBack' || config.type == 'back') {
-        uni.navigateBack({
-          delta: delta });
-
-      }
-    } }]);return Router;}();var _default =
-
-
-new Router().route;exports.default = _default;
-
-/***/ }),
-/* 219 */
-/*!***********************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/libs/function/timeFormat.js ***!
-  \***********************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; // padStart 的 polyfill，因为某些机型或情况，还无法支持es7的padStart，比如电脑版的微信小程序
-// 所以这里做一个兼容polyfill的兼容处理
-if (!String.prototype.padStart) {
-  // 为了方便表示这里 fillString 用了ES6 的默认参数，不影响理解
-  String.prototype.padStart = function (maxLength) {var fillString = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : ' ';
-    if (Object.prototype.toString.call(fillString) !== "[object String]") throw new TypeError(
-    'fillString must be String');
-    var str = this;
-    // 返回 String(str) 这里是为了使返回的值是字符串字面量，在控制台中更符合直觉
-    if (str.length >= maxLength) return String(str);
-
-    var fillLength = maxLength - str.length,
-    times = Math.ceil(fillLength / fillString.length);
-    while (times >>= 1) {
-      fillString += fillString;
-      if (times === 1) {
-        fillString += fillString;
-      }
-    }
-    return fillString.slice(0, fillLength) + str;
-  };
-}
-
-// 其他更多是格式化有如下:
-// yyyy:mm:dd|yyyy:mm|yyyy年mm月dd日|yyyy年mm月dd日 hh时MM分等,可自定义组合
-function timeFormat() {var dateTime = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;var fmt = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'yyyy-mm-dd';
-  // 如果为null,则格式化当前时间
-  if (!dateTime) dateTime = Number(new Date());
-  // 如果dateTime长度为10或者13，则为秒和毫秒的时间戳，如果超过13位，则为其他的时间格式
-  if (dateTime.toString().length == 10) dateTime *= 1000;
-  var date = new Date(dateTime);
-  var ret;
-  var opt = {
-    "y+": date.getFullYear().toString(), // 年
-    "m+": (date.getMonth() + 1).toString(), // 月
-    "d+": date.getDate().toString(), // 日
-    "h+": date.getHours().toString(), // 时
-    "M+": date.getMinutes().toString(), // 分
-    "s+": date.getSeconds().toString() // 秒
-    // 有其他格式化字符需求可以继续添加，必须转化成字符串
-  };
-  for (var k in opt) {
-    ret = new RegExp("(" + k + ")").exec(fmt);
-    if (ret) {
-      fmt = fmt.replace(ret[1], ret[1].length == 1 ? opt[k] : opt[k].padStart(ret[1].length, "0"));
-    };
-  };
-  return fmt;
-}var _default =
-
-timeFormat;exports.default = _default;
-
-/***/ }),
-/* 220 */
-/*!*********************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/libs/function/timeFrom.js ***!
-  \*********************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _timeFormat = _interopRequireDefault(__webpack_require__(/*! ../../libs/function/timeFormat.js */ 219));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
-
-/**
-                                                                                                                                                                                                                                                                                          * 时间戳转为多久之前
-                                                                                                                                                                                                                                                                                          * @param String timestamp 时间戳
-                                                                                                                                                                                                                                                                                          * @param String | Boolean format 如果为时间格式字符串，超出一定时间范围，返回固定的时间格式；
-                                                                                                                                                                                                                                                                                          * 如果为布尔值false，无论什么时间，都返回多久以前的格式
-                                                                                                                                                                                                                                                                                          */
-function timeFrom() {var dateTime = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;var format = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'yyyy-mm-dd';
-  // 如果为null,则格式化当前时间
-  if (!dateTime) dateTime = Number(new Date());
-  // 如果dateTime长度为10或者13，则为秒和毫秒的时间戳，如果超过13位，则为其他的时间格式
-  if (dateTime.toString().length == 10) dateTime *= 1000;
-  var timestamp = +new Date(Number(dateTime));
-
-  var timer = (Number(new Date()) - timestamp) / 1000;
-  // 如果小于5分钟,则返回"刚刚",其他以此类推
-  var tips = '';
-  switch (true) {
-    case timer < 300:
-      tips = '刚刚';
-      break;
-    case timer >= 300 && timer < 3600:
-      tips = parseInt(timer / 60) + '分钟前';
-      break;
-    case timer >= 3600 && timer < 86400:
-      tips = parseInt(timer / 3600) + '小时前';
-      break;
-    case timer >= 86400 && timer < 2592000:
-      tips = parseInt(timer / 86400) + '天前';
-      break;
-    default:
-      // 如果format为false，则无论什么时间戳，都显示xx之前
-      if (format === false) {
-        if (timer >= 2592000 && timer < 365 * 86400) {
-          tips = parseInt(timer / (86400 * 30)) + '个月前';
-        } else {
-          tips = parseInt(timer / (86400 * 365)) + '年前';
-        }
-      } else {
-        tips = (0, _timeFormat.default)(timestamp, format);
-      }}
-
-  return tips;
-}var _default =
-
-timeFrom;exports.default = _default;
-
-/***/ }),
-/* 221 */
-/*!**************************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/libs/function/colorGradient.js ***!
-  \**************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; /**
-                                                                                                      * 求两个颜色之间的渐变值
-                                                                                                      * @param {string} startColor 开始的颜色
-                                                                                                      * @param {string} endColor 结束的颜色
-                                                                                                      * @param {number} step 颜色等分的份额
-                                                                                                      * */
-function colorGradient() {var startColor = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'rgb(0, 0, 0)';var endColor = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'rgb(255, 255, 255)';var step = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 10;
-  var startRGB = hexToRgb(startColor, false); //转换为rgb数组模式
-  var startR = startRGB[0];
-  var startG = startRGB[1];
-  var startB = startRGB[2];
-
-  var endRGB = hexToRgb(endColor, false);
-  var endR = endRGB[0];
-  var endG = endRGB[1];
-  var endB = endRGB[2];
-
-  var sR = (endR - startR) / step; //总差值
-  var sG = (endG - startG) / step;
-  var sB = (endB - startB) / step;
-  var colorArr = [];
-  for (var i = 0; i < step; i++) {
-    //计算每一步的hex值 
-    var hex = rgbToHex('rgb(' + Math.round(sR * i + startR) + ',' + Math.round(sG * i + startG) + ',' + Math.round(sB *
-    i + startB) + ')');
-    colorArr.push(hex);
-  }
-  return colorArr;
-}
-
-// 将hex表示方式转换为rgb表示方式(这里返回rgb数组模式)
-function hexToRgb(sColor) {var str = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
-  var reg = /^#([0-9a-fA-f]{3}|[0-9a-fA-f]{6})$/;
-  sColor = sColor.toLowerCase();
-  if (sColor && reg.test(sColor)) {
-    if (sColor.length === 4) {
-      var sColorNew = "#";
-      for (var i = 1; i < 4; i += 1) {
-        sColorNew += sColor.slice(i, i + 1).concat(sColor.slice(i, i + 1));
-      }
-      sColor = sColorNew;
-    }
-    //处理六位的颜色值
-    var sColorChange = [];
-    for (var _i = 1; _i < 7; _i += 2) {
-      sColorChange.push(parseInt("0x" + sColor.slice(_i, _i + 2)));
-    }
-    if (!str) {
-      return sColorChange;
-    } else {
-      return "rgb(".concat(sColorChange[0], ",").concat(sColorChange[1], ",").concat(sColorChange[2], ")");
-    }
-  } else if (/^(rgb|RGB)/.test(sColor)) {
-    var arr = sColor.replace(/(?:\(|\)|rgb|RGB)*/g, "").split(",");
-    return arr.map(function (val) {return Number(val);});
-  } else {
-    return sColor;
-  }
-};
-
-// 将rgb表示方式转换为hex表示方式
-function rgbToHex(rgb) {
-  var _this = rgb;
-  var reg = /^#([0-9a-fA-f]{3}|[0-9a-fA-f]{6})$/;
-  if (/^(rgb|RGB)/.test(_this)) {
-    var aColor = _this.replace(/(?:\(|\)|rgb|RGB)*/g, "").split(",");
-    var strHex = "#";
-    for (var i = 0; i < aColor.length; i++) {
-      var hex = Number(aColor[i]).toString(16);
-      hex = String(hex).length == 1 ? 0 + '' + hex : hex; // 保证每个rgb的值为2位
-      if (hex === "0") {
-        hex += hex;
-      }
-      strHex += hex;
-    }
-    if (strHex.length !== 7) {
-      strHex = _this;
-    }
-    return strHex;
-  } else if (reg.test(_this)) {
-    var aNum = _this.replace(/#/, "").split("");
-    if (aNum.length === 6) {
-      return _this;
-    } else if (aNum.length === 3) {
-      var numHex = "#";
-      for (var _i2 = 0; _i2 < aNum.length; _i2 += 1) {
-        numHex += aNum[_i2] + aNum[_i2];
-      }
-      return numHex;
-    }
-  } else {
-    return _this;
-  }
-}
-
-
-/**
-  * JS颜色十六进制转换为rgb或rgba,返回的格式为 rgba（255，255，255，0.5）字符串
-  * sHex为传入的十六进制的色值
-  * alpha为rgba的透明度
-  */
-function colorToRgba(color) {var alpha = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0.3;
-  color = rgbToHex(color);
-  // 十六进制颜色值的正则表达式
-  var reg = /^#([0-9a-fA-f]{3}|[0-9a-fA-f]{6})$/;
-  /* 16进制颜色转为RGB格式 */
-  var sColor = color.toLowerCase();
-  if (sColor && reg.test(sColor)) {
-    if (sColor.length === 4) {
-      var sColorNew = '#';
-      for (var i = 1; i < 4; i += 1) {
-        sColorNew += sColor.slice(i, i + 1).concat(sColor.slice(i, i + 1));
-      }
-      sColor = sColorNew;
-    }
-    // 处理六位的颜色值
-    var sColorChange = [];
-    for (var _i3 = 1; _i3 < 7; _i3 += 2) {
-      sColorChange.push(parseInt('0x' + sColor.slice(_i3, _i3 + 2)));
-    }
-    // return sColorChange.join(',')
-    return 'rgba(' + sColorChange.join(',') + ',' + alpha + ')';
-  } else
-  {
-    return sColor;
-  }
-}var _default =
-
-{
-  colorGradient: colorGradient,
-  hexToRgb: hexToRgb,
-  rgbToHex: rgbToHex,
-  colorToRgba: colorToRgba };exports.default = _default;
-
-/***/ }),
-/* 222 */
-/*!*****************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/libs/function/guid.js ***!
-  \*****************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; /**
-                                                                                                      * 本算法来源于简书开源代码，详见：https://www.jianshu.com/p/fdbf293d0a85
-                                                                                                      * 全局唯一标识符（uuid，Globally Unique Identifier）,也称作 uuid(Universally Unique IDentifier) 
-                                                                                                      * 一般用于多个组件之间,给它一个唯一的标识符,或者v-for循环的时候,如果使用数组的index可能会导致更新列表出现问题
-                                                                                                      * 最可能的情况是左滑删除item或者对某条信息流"不喜欢"并去掉它的时候,会导致组件内的数据可能出现错乱
-                                                                                                      * v-for的时候,推荐使用后端返回的id而不是循环的index
-                                                                                                      * @param {Number} len uuid的长度
-                                                                                                      * @param {Boolean} firstU 将返回的首字母置为"u"
-                                                                                                      * @param {Nubmer} radix 生成uuid的基数(意味着返回的字符串都是这个基数),2-二进制,8-八进制,10-十进制,16-十六进制
-                                                                                                      */
-function guid() {var len = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 32;var firstU = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;var radix = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
-  var chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'.split('');
-  var uuid = [];
-  radix = radix || chars.length;
-
-  if (len) {
-    // 如果指定uuid长度,只是取随机的字符,0|x为位运算,能去掉x的小数位,返回整数位
-    for (var i = 0; i < len; i++) {uuid[i] = chars[0 | Math.random() * radix];}
-  } else {
-    var r;
-    // rfc4122标准要求返回的uuid中,某些位为固定的字符
-    uuid[8] = uuid[13] = uuid[18] = uuid[23] = '-';
-    uuid[14] = '4';
-
-    for (var _i = 0; _i < 36; _i++) {
-      if (!uuid[_i]) {
-        r = 0 | Math.random() * 16;
-        uuid[_i] = chars[_i == 19 ? r & 0x3 | 0x8 : r];
-      }
-    }
-  }
-  // 移除第一个字符,并用u替代,因为第一个字符为数值时,该guuid不能用作id或者class
-  if (firstU) {
-    uuid.shift();
-    return 'u' + uuid.join('');
-  } else {
-    return uuid.join('');
-  }
-}var _default =
-
-guid;exports.default = _default;
-
-/***/ }),
-/* 223 */
-/*!******************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/libs/function/color.js ***!
-  \******************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; // 为了让用户能够自定义主题，会逐步弃用此文件，各颜色通过css提供
-// 为了给某些特殊场景使用和向后兼容，无需删除此文件(2020-06-20)
-var color = {
-  primary: "#2979ff",
-  primaryDark: "#2b85e4",
-  primaryDisabled: "#a0cfff",
-  primaryLight: "#ecf5ff",
-  bgColor: "#f3f4f6",
-
-  info: "#909399",
-  infoDark: "#82848a",
-  infoDisabled: "#c8c9cc",
-  infoLight: "#f4f4f5",
-
-  warning: "#ff9900",
-  warningDark: "#f29100",
-  warningDisabled: "#fcbd71",
-  warningLight: "#fdf6ec",
-
-  error: "#fa3534",
-  errorDark: "#dd6161",
-  errorDisabled: "#fab6b6",
-  errorLight: "#fef0f0",
-
-  success: "#19be6b",
-  successDark: "#18b566",
-  successDisabled: "#71d5a1",
-  successLight: "#dbf1e1",
-
-  mainColor: "#303133",
-  contentColor: "#606266",
-  tipsColor: "#909399",
-  lightColor: "#c0c4cc",
-  borderColor: "#e4e7ed" };var _default =
-
-
-color;exports.default = _default;
-
-/***/ }),
-/* 224 */
-/*!**********************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/libs/function/type2icon.js ***!
-  \**********************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; /**
-                                                                                                      * 根据主题type值,获取对应的图标
-                                                                                                      * @param String type 主题名称,primary|info|error|warning|success
-                                                                                                      * @param String fill 是否使用fill填充实体的图标  
-                                                                                                      */
-function type2icon() {var type = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'success';var fill = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
-  // 如果非预置值,默认为success
-  if (['primary', 'info', 'error', 'warning', 'success'].indexOf(type) == -1) type = 'success';
-  var iconName = '';
-  // 目前(2019-12-12),info和primary使用同一个图标
-  switch (type) {
-    case 'primary':
-      iconName = 'info-circle';
-      break;
-    case 'info':
-      iconName = 'info-circle';
-      break;
-    case 'error':
-      iconName = 'close-circle';
-      break;
-    case 'warning':
-      iconName = 'error-circle';
-      break;
-    case 'success':
-      iconName = 'checkmark-circle';
-      break;
-    default:
-      iconName = 'checkmark-circle';}
-
-  // 是否是实体类型,加上-fill,在icon组件库中,实体的类名是后面加-fill的
-  if (fill) iconName += '-fill';
-  return iconName;
-}var _default =
-
-type2icon;exports.default = _default;
-
-/***/ }),
-/* 225 */
-/*!************************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/libs/function/randomArray.js ***!
-  \************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; // 打乱数组
-function randomArray() {var array = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
-  // 原理是sort排序,Math.random()产生0<= x < 1之间的数,会导致x-0.05大于或者小于0
-  return array.sort(function () {return Math.random() - 0.5;});
-}var _default =
-
-randomArray;exports.default = _default;
-
-/***/ }),
-/* 226 */
-/*!********************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/libs/function/addUnit.js ***!
-  \********************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = addUnit;var _test = _interopRequireDefault(__webpack_require__(/*! ./test.js */ 216));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
-
-// 添加单位，如果有rpx，%，px等单位结尾或者值为auto，直接返回，否则加上rpx单位结尾
-function addUnit() {var value = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'auto';var unit = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'rpx';
-  value = String(value);
-  // 用uView内置验证规则中的number判断是否为数值
-  return _test.default.number(value) ? "".concat(value).concat(unit) : value;
-}
-
-/***/ }),
-/* 227 */
-/*!*******************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/libs/function/random.js ***!
-  \*******************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;function random(min, max) {
-  if (min >= 0 && max > 0 && max >= min) {
-    var gab = max - min + 1;
-    return Math.floor(Math.random() * gab + min);
-  } else {
-    return 0;
-  }
-}var _default =
-
-random;exports.default = _default;
-
-/***/ }),
-/* 228 */
-/*!*****************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/libs/function/trim.js ***!
-  \*****************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;function trim(str) {var pos = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'both';
-  if (pos == 'both') {
-    return str.replace(/^\s+|\s+$/g, "");
-  } else if (pos == "left") {
-    return str.replace(/^\s*/, '');
-  } else if (pos == 'right') {
-    return str.replace(/(\s*$)/g, "");
-  } else if (pos == 'all') {
-    return str.replace(/\s+/g, "");
-  } else {
-    return str;
-  }
-}var _default =
-
-trim;exports.default = _default;
-
-/***/ }),
-/* 229 */
-/*!******************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/libs/function/toast.js ***!
-  \******************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;function toast(title) {var duration = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1500;
-  uni.showToast({
-    title: title,
-    icon: 'none',
-    duration: duration });
-
-}var _default =
-
-toast;exports.default = _default;
-
-/***/ }),
-/* 230 */
-/*!**********************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/libs/function/getParent.js ***!
-  \**********************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = getParent; // 获取父组件的参数，因为支付宝小程序不支持provide/inject的写法
-// this.$parent在非H5中，可以准确获取到父组件，但是在H5中，需要多次this.$parent.$parent.xxx
-function getParent(name, keys) {
-  var parent = this.$parent;
-  // 通过while历遍，这里主要是为了H5需要多层解析的问题
-  while (parent) {
-    // 父组件
-    if (parent.$options.name !== name) {
-      // 如果组件的name不相等，继续上一级寻找
-      parent = parent.$parent;
-    } else {var _ret = function () {
-        var data = {};
-        // 判断keys是否数组，如果传过来的是一个数组，那么直接使用数组元素值当做键值去父组件寻找
-        if (Array.isArray(keys)) {
-          keys.map(function (val) {
-            data[val] = parent[val] ? parent[val] : '';
-          });
-        } else {
-          // 历遍传过来的对象参数
-          for (var i in keys) {
-            // 如果子组件有此值则用，无此值则用父组件的值
-            // 判断是否空数组，如果是，则用父组件的值，否则用子组件的值
-            if (Array.isArray(keys[i])) {
-              if (keys[i].length) {
-                data[i] = keys[i];
-              } else {
-                data[i] = parent[i];
-              }
-            } else if (keys[i].constructor === Object) {
-              // 判断是否对象，如果是对象，且有属性，那么使用子组件的值，否则使用父组件的值
-              if (Object.keys(keys[i]).length) {
-                data[i] = keys[i];
-              } else {
-                data[i] = parent[i];
-              }
-            } else {
-              // 只要子组件有传值，即使是false值，也是“传值”了，也需要覆盖父组件的同名参数
-              data[i] = keys[i] || keys[i] === false ? keys[i] : parent[i];
-            }
-          }
-        }
-        return { v: data };}();if (typeof _ret === "object") return _ret.v;
-    }
-  }
-
-  return {};
-}
-
-/***/ }),
-/* 231 */
-/*!********************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/libs/function/$parent.js ***!
-  \********************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = $parent; // 获取父组件的参数，因为支付宝小程序不支持provide/inject的写法
-// this.$parent在非H5中，可以准确获取到父组件，但是在H5中，需要多次this.$parent.$parent.xxx
-// 这里默认值等于undefined有它的含义，因为最顶层元素(组件)的$parent就是undefined，意味着不传name
-// 值(默认为undefined)，就是查找最顶层的$parent
-function $parent() {var name = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : undefined;
-  var parent = this.$parent;
-  // 通过while历遍，这里主要是为了H5需要多层解析的问题
-  while (parent) {
-    // 父组件
-    if (parent.$options && parent.$options.name !== name) {
-      // 如果组件的name不相等，继续上一级寻找
-      parent = parent.$parent;
-    } else {
-      return parent;
-    }
-  }
-  return false;
-}
-
-/***/ }),
-/* 232 */
-/*!****************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/libs/function/sys.js ***!
-  \****************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.os = os;exports.sys = sys;function os() {
-  return uni.getSystemInfoSync().platform;
-};
-
-function sys() {
-  return uni.getSystemInfoSync();
-}
-
-/***/ }),
-/* 233 */
-/*!*********************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/libs/function/debounce.js ***!
-  \*********************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var timeout = null;
-
-/**
-                                                                                                                         * 防抖原理：一定时间内，只有最后一次操作，再过wait毫秒后才执行函数
-                                                                                                                         * 
-                                                                                                                         * @param {Function} func 要执行的回调函数 
-                                                                                                                         * @param {Number} wait 延时的时间
-                                                                                                                         * @param {Boolean} immediate 是否立即执行 
-                                                                                                                         * @return null
-                                                                                                                         */
-function debounce(func) {var wait = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 500;var immediate = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
-  // 清除定时器
-  if (timeout !== null) clearTimeout(timeout);
-  // 立即执行，此类情况一般用不到
-  if (immediate) {
-    var callNow = !timeout;
-    timeout = setTimeout(function () {
-      timeout = null;
-    }, wait);
-    if (callNow) typeof func === 'function' && func();
-  } else {
-    // 设置定时器，当最后一次操作后，timeout不会再被清除，所以在延时wait毫秒后执行func回调方法
-    timeout = setTimeout(function () {
-      typeof func === 'function' && func();
-    }, wait);
-  }
-}var _default =
-
-debounce;exports.default = _default;
-
-/***/ }),
-/* 234 */
-/*!*********************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/libs/function/throttle.js ***!
-  \*********************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var timer, flag;
-/**
-                                                                                                                      * 节流原理：在一定时间内，只能触发一次
-                                                                                                                      * 
-                                                                                                                      * @param {Function} func 要执行的回调函数 
-                                                                                                                      * @param {Number} wait 延时的时间
-                                                                                                                      * @param {Boolean} immediate 是否立即执行
-                                                                                                                      * @return null
-                                                                                                                      */
-function throttle(func) {var wait = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 500;var immediate = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
-  if (immediate) {
-    if (!flag) {
-      flag = true;
-      // 如果是立即执行，则在wait毫秒内开始时执行
-      typeof func === 'function' && func();
-      timer = setTimeout(function () {
-        flag = false;
-      }, wait);
-    }
-  } else {
-    if (!flag) {
-      flag = true;
-      // 如果是非立即执行，则在wait毫秒内的结束处执行
-      timer = setTimeout(function () {
-        flag = false;
-        typeof func === 'function' && func();
-      }, wait);
-    }
-
-  }
-};var _default =
-throttle;exports.default = _default;
-
-/***/ }),
-/* 235 */
-/*!*****************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/libs/config/config.js ***!
-  \*****************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; // 此版本发布于2020-12-17
-var version = '1.8.3';var _default =
-
-{
-  v: version,
-  version: version,
-  // 主题名称
-  type: [
-  'primary',
-  'success',
-  'info',
-  'error',
-  'warning'] };exports.default = _default;
-
-/***/ }),
-/* 236 */
-/*!*****************************************************************************************************************************!*\
-  !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/node_modules/uview-ui/libs/config/zIndex.js ***!
-  \*****************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; // uniapp在H5中各API的z-index值如下：
-/**
- * actionsheet: 999
- * modal: 999
- * navigate: 998
- * tabbar: 998
- * toast: 999
- */var _default =
-
-{
-  toast: 10090,
-  noNetwork: 10080,
-  // popup包含popup，actionsheet，keyboard，picker的值
-  popup: 10075,
-  mask: 10070,
-  navbar: 980,
-  topTips: 975,
-  sticky: 970,
-  indexListSticky: 965 };exports.default = _default;
-
-/***/ }),
+/* 212 */,
+/* 213 */,
+/* 214 */,
+/* 215 */,
+/* 216 */,
+/* 217 */,
+/* 218 */,
+/* 219 */,
+/* 220 */,
+/* 221 */,
+/* 222 */,
+/* 223 */,
+/* 224 */,
+/* 225 */,
+/* 226 */,
+/* 227 */,
+/* 228 */,
+/* 229 */,
+/* 230 */,
+/* 231 */,
+/* 232 */,
+/* 233 */,
+/* 234 */,
+/* 235 */,
+/* 236 */,
 /* 237 */
 /*!************************************************************************************************!*\
   !*** /Users/stefan/Desktop/22T1/COMP5703/pro/COMP5703-CS77-1-Client/groceryApp/store/index.js ***!

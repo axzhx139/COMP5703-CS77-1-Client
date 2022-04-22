@@ -66,44 +66,19 @@
 				</view>
 			</view>
 		</view>
-		<view class="ncontent">
-			<view class="like-card">
-				<text style="text-align: left;margin-left: 15rpx; font-size: 30rpx;">Shopping List</text>
-				
-				<view  class="demo-layout bg-purple-light">
-					<image src="../../static/refresh.png" style="width: 46rpx;height: 40rpx;display: inline-block; margin-right:10%; float:right" @click="refresh">
-				</view>
-				<view v-if="shopList.length==0" style="margin-top: 8%;">
-					<text>No item added, please try add some item first.</text>
-					<u-button shape="circle" style="background-color: #F5C979;color: white;width: 180rpx;" @click="goGrocery" >Add Item</u-button>
-				</view>
-				<scroll-view :scroll-with-animation="true"  :scroll-x="true" style="white-space: nowrap;" >
-				  <template v-for="(item, index) in shopList">
-					  <view class="scroll_item" :style="{'background-image': 'url('+item.picture+')'}">
-						<view style="height: 20%;">								
-							<u-button shape="circle" style="background-color: #FF0909;color: white; height: 60rpx; width: 110rpx; float:left; margin-left: 4%; margin-top: 4%;" @click="deleteItem(item.pid)" >Delete</u-button>
-<!-- 							<image v-if="item.status=='potential'" src="../../static/heart-line.png" style="height: 80rpx; width: 80rpx; float:right;  margin-right: 6%; margin-top: 4%;" @click="save(item.pid)"></image>
-							<image v-if="item.status=='save'" src="../../static/heart-fill.png" style="height: 80rpx; width: 80rpx; float:right;  margin-right: 6%; margin-top: 4%;" @click="unsave(item.pid)"></image> -->
-							
-						</view>
-						<text style="color: #FFFFFF;margin-left: 4%;margin-right: 17%;font-size: 40rpx;font-weight: bold; text-stroke:2rpx #000000">{{ item.name }}</text>
-						
-						
-					  </view>
-				  </template>
-				</scroll-view>
-<!-- 				<text style="text-align: left;margin-left: 15rpx;">Weekly Potential Shopping List</text>
-				
-				<view>
-					<image src="../../static/rou.png" class="like-img">
-						
-				</view>
-				<view class="img-controller">
-					<!-- <text>button and text hover</text> -->
-					
-<!-- 				</view> -->
+		<view class="content">
+			<view class="rank-card"  @click='goRanking'>
+				<!-- <view style="margin-top: 20rpx;"> -->
+							<view class="rank-block" >
+								<view style="font-weight: 700;">Days</view>
+								<view style="margin-top: 10px;font-size: 25px;font-weight: 900;font-family: 'Lucida Calligraphy'">25</view>
+							</view>
+							<view class="rank-block" >
+								<view style="font-weight: 700;">Ranking</view>
+								<view style="margin-top: 10px;font-size: 25px;font-weight: 900;font-family: 'Lucida Calligraphy'">3</view>
+							</view>
+				<!-- </view> -->
 			</view>
-			
 		</view>
 		<view class="ncontent">
 			<view>
@@ -141,9 +116,9 @@
 			// Location.reload;
 			this.loadInfo();
 		},
-		// onShow(){
-		// 	this.loadInfo();
-		// },
+		onShow(){
+			this.loadInfo();
+		},
 		methods: {
 			getList(){
 				uni.request({
@@ -246,6 +221,11 @@
 					url: "../grocery/grocery"
 				});
 			},
+			goRanking(){
+				uni.navigateTo({
+					url:'../profile/ranking'
+				})
+			},
             
 		},			
 	}
@@ -266,12 +246,34 @@ page{
 	width: 90%;
 	height: 500rpx;
 	background-color: white;
-	margin-top: 250rpx;
+	margin-top: 200rpx;
 	border-radius: 10px;
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
 	text-align: center;
+	box-shadow:2px 2px 10px #909090
+}
+.rank-card{
+	width: 90%;
+	background-color: #B0C07A;
+	background:#B0C07A;
+	margin-top: 20rpx;
+	border-radius: 10px;
+	display: flex;
+}
+.rank-block{
+	float:left;
+	width: 100%;
+	height: 180rpx;
+	background-color: #f2f3d5;
+	margin-top: 20rpx;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	box-shadow:2px 2px 10px #909090
 }
 .us-name{
 	/* margin-top: -100rpx; */
@@ -282,7 +284,7 @@ page{
 	width: 250rpx;
 	height: 250rpx;
 	position: absolute;
-	top: 110rpx;
+	top: 60rpx;
 }
 .edit-btn{
 /* 	position: absolute;

@@ -2,6 +2,10 @@
 	export default {
 		onLaunch: function() {
 			console.log('App Launch')
+			// 第一次加载时设置NotificationCount为1，在访问过home后，每次+1
+			const notificationCount = uni.getStorageSync("NotificationCount")
+			console.log("notificationCount is: ", notificationCount)
+			uni.setStorageSync("NotificationCount", 1)
 			var info = plus.push.getClientInfo()
 			plus.push.addEventListener("click", function(msg) {
 				console.log("click:" + JSON.stringify(msg));

@@ -40,14 +40,14 @@
 			<scroll-view :scroll-with-animation="true"  :scroll-x="true" style="white-space: nowrap;" >
 			  <template v-for="(item, index) in expiringFoodList">
 				  
-				<view class="scroll_item" :style="{'background-image': 'url('+'http://101.35.91.117:7884/item/picture/'+item.itemId+'?'+Math.random()+')','filter': 'grayscale('+getFreshness(index)+'%)'}">
-					<image src="../../static/knife_fork.png" style="width: 20px;height: 20px;float:right" @click="consumeSelect(index)" />
+				  <view class="scroll_item" :style="{'background-image': 'url('+'http://101.35.91.117:7884/item/picture/'+item.itemId+')','filter': 'grayscale('+getFreshness(index)+'%)'}">
+					<img src="../../static/knife_fork.png" style="width: 20px;height: 20px;float:right" @click="consumeSelect(index)"></img>
 					<view style="height: 100%;"  @click="toDetail(item.itemId)">
 							
-				</view>
+					</view>
 					<text style="margin-left: 14px;font-size: 16px;font-weight: 500;">{{ item.name }}</text>
 					<view class="" style="margin-left: 14px;">
-						<image src="../../static/remind.png" style="width: 15px;height: 15px;" v-if="isReminded(index)" />
+						<img src="../../static/remind.png" style="width: 15px;height: 15px;" v-if="isReminded(index)"></img>
 						<text style="display: inline-block;margin-left: 5px;">{{item.expDate.split("T")[0].split('-')[2]+'/'+ item.expDate.split("T")[0].split('-')[1] }}</text>
 					</view>
 				  </view>
@@ -56,63 +56,52 @@
 			</scroll-view>
 		</view>
 
-		<view class="" style="padding: 0 15px 0 15px;margin-top: 30px;">
-			<u-row gutter="16" justify="space-between">
-				<u-col span="9">
-					<view class="demo-layout bg-purple">
-						<text style="font-size: 16px;font-weight: 500;">Recipe Recommendation</text>
-					</view>
-				</u-col>
-				<u-col span="3">
-					<view class="demo-layout bg-purple-light" @click="getRandomRecipes" style="text-align: right;">
-						<image src="../../static/refresh.png" style="width: 29px;height: 27px;display: inline-block;">
-					</view>
-				</u-col>
-			</u-row>	
-		</view>
 		
-		
-		<!-- <view class="" style="padding: 0 15px 0 15px;margin-top: 30px;" > -->
-		<view class="" style="padding: 0 15px 0 15px;margin-top: 30px;" v-for="recipe in randomRecipesList">
-			<u-row gutter="0" justify="space-between">
-
-				<u-col span="6">
-					<view class="demo-layout bg-purple-light card" @click="toDetail((recipe[0]).recipeId)">
-						<view class="card-box">
-							<u-image border-radius="6px" height="138px" width="100%" :src="(recipe[0]).img" :fade="true" duration="450"></u-image>
-							<text style="font-size: 12px;font-weight: 500;">{{ (recipe[0]).name }}</text>
-							
-							<view style="text-align: left;margin-top: 10px;">
-								<image src="../../static/b-medal.png" style="width: 15px;height: 15px;margin-left: 30rpx;">
-								<text style="display: inline-block;margin-left: 10px;font-size: 10px;">{{ Math.floor((Math.random() * 5000) + 100) }} Likes</text>
-								
+		<view class="ncontent">
+			<view class="like-card">
+				<view>
+					<u-row gutter="16" justify="space-between">
+						<u-col span="9">
+							<view class="demo-layout bg-purple">
+								<text style="font-size: 16px;font-weight: 500;">Shopping list</text>
 							</view>
-<!-- 							<view style="margin-top: 10px;text-align: left;margin-left: 30rpx;">
-								<text style="font-size: 12px;color: #4CD964;font-weight: 500;">Beef, Mushroom</text>
-							</view> -->
-						</view>
-					</view>
-				</u-col>
-				
-				<u-col span="6" v-if="recipe.length == 2">
-					<view class="demo-layout bg-purple-light card" @click="toDetail((recipe[1]).recipeId)">
-						<view class="card-box">
-							<u-image border-radius="6px" height="138px" width="100%" :src="(recipe[1]).img" :fade="true" duration="450"></u-image>
-							<text style="font-size: 12px;font-weight: 500;">{{ (recipe[1]).name }}</text>
-							
-							<view style="text-align: left;margin-top: 10px;">
-								<image src="../../static/b-medal.png" style="width: 15px;height: 15px;margin-left: 30rpx;">
-								<text style="display: inline-block;margin-left: 10px;font-size: 10px;">{{ Math.floor((Math.random() * 5000) + 100) }} Likes</text>
-								
+						</u-col>
+						<u-col span="3">
+							<view class="demo-layout bg-purple-light"  @click="refresh" style="text-align: right;">
+								<image src="../../static/refresh.png" style="width: 20px;height: 20px;display: inline-block;">
 							</view>
-<!-- 							<view style="margin-top: 10px;text-align: left;margin-left: 30rpx;">
-								<text style="font-size: 12px;color: #4CD964;font-weight: 500;">Beef, Mushroom</text>
-							</view> -->
-						</view>
+						</u-col>
+					</u-row>	
+				</view>
+				<block v-for="(item,index) in shopList">
+					<view style="margin-top: 10px;" >
+						
+						<u-row gutter="16">
+							<u-col span="2">
+									<image :src="'http://101.35.91.117:7884/item/picture/'+item.itemId+'?'+Math.random()" style="width: 35px;height: 35px;">
+							</u-col>
+							<u-col span="7">
+								<u-row style="margin: 0px 0px 10px 5px;">{{ item.name }}</u-row>
+							</u-col>
+							<u-col span="3">
+									<!-- <u-row gutter="18" justify="space-between"> -->
+									<u-row style="justify-content: flex-end; margin-bottom: 5px">
+									<!-- <text>{{ item.name }}</text> -->
+									<!-- <view style="text-align: right;"> -->
+										<!-- <uni-icons type="cart" size="30" v-if="!item.potential" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="saveList(item.itemId)"></uni-icons> -->
+										<!-- <uni-icons type="cart-filled" size="30" v-if="!item.potential" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="deleteList(item.itemId)"></uni-icons> -->
+										<image src="../../static/add2.png" style="height:40rpx; width: 40rpx; float:right;  margin-right: 10px" @click="addToStock(item)"></image>
+										<!-- <img src="../../static/knife_fork.png" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click="changeAmount(index)"></img> -->
+										<!-- <u-button shape="circle" size="mini" style="background-color: #F3F1F1; " @click="changeAmount(index)">consume</u-button> -->
+										<image src="../../static/delete.png" style="height: 45rpx; width: 45rpx; float:right;  " @click="changeAmount(index)"></image>
+									<!-- </view>	 -->
+									</u-row>
+							</u-col>
+						</u-row>
 					</view>
-				</u-col>
-
-			</u-row>	
+					<u-divider half-width="60%"></u-divider>
+				</block>
+			</view>
 		</view>
 		
 		
@@ -191,19 +180,24 @@
 				needChangeItem: '',
 				popFrom: 'bottom',
 				notificationData: '',
+				shopList:[],
 			}
 		},
 		onLoad(){
 			// let clientInfo = plus.push.getClientInfo();
 			// console.log('clientid ', clientInfo.clientid);
-			Location.reload;
-			this.$refs.popup.open('center')
-			console.log("pop！！")
-		},
-		onShow(){
 			this.loadinfo()
 			this.getCol()
+			this.getShoppingList()
 			this.getNotificationData()
+			Location.reload;
+			// this.$refs.popup.open('center')
+		},
+		onShow(){
+			// this.loadinfo()
+			// this.getCol()
+			
+			// this.getShoppingList()
 		},
 		methods: {
 			onClickBtn(e){
@@ -218,6 +212,15 @@
 				console.log(e)
 				uni.navigateTo({
 					url: '../grocery/detail?id=' + e + '&backType=2'
+				})
+			},
+			getShoppingList(){
+				uni.request({
+				url: "http://101.35.91.117:7884/potential/"+uni.getStorageSync('userId'),
+				method: 'get',
+				}).then(res=>{
+					console.log('load',res[1].data)
+					this.shopList = res[1].data
 				})
 			},
 			consumeSelect(e){
@@ -388,37 +391,6 @@
 				this.expiringFoodList = expiringFoodList
 				// console.log(this.expiringFoodList)
 			},
-			getRandomRecipes(){
-				uni.request({
-				url: "http://101.35.91.117:7884/recipe/random",
-				method: 'get',
-				}).then(res=>{
-					this.loadRecipe(res[1].data);
-					this.$store.commit("setRecipe",res[1].data);
-				})
-			},
-			loadRecipe(recipeList){
-				let tmp = []
-				let List = []
-				for (var i=0;i<recipeList.length;i++){
-				    var recipe = recipeList[i]
-					var recipeInfo = {
-					    "recipeId": recipe.id,
-						'img': recipe.image,
-						'name': recipe.title,
-					};
-					if (tmp.length == 2){
-						List.push(tmp);
-						tmp = [];
-					}
-					tmp.push(recipeInfo);
-				}
-				if (tmp.length !=0) {
-					List.push(tmp);
-				}
-				this.randomRecipesList=List;
-				console.log(this.randomRecipesList);
-			},
 			getNotificationData() {
 				uni.request({
 				url: "http://101.35.91.117:7884/notification/get/"+uni.getStorageSync('userId'),
@@ -473,6 +445,29 @@
 			popNotification() {
 				
 			},
+			addToStock(item){
+				uni.setStorage({
+					key: 'addToStock',
+					data: {'iName':item.name,'iId':item.itemId},
+					success: function () {
+						uni.switchTab({
+							url:'../grocery/grocery'
+						})
+					}
+				});
+			},
+			refresh(){
+				let that = this
+				// uni.showLoading({title: 'refreshing',mask:true});
+				uni.request({
+				url: "http://101.35.91.117:7884/potential/update/"+uni.getStorageSync('userId'),
+				method: 'get',
+				}).then(res=>{
+					console.log('load',res[1].data)
+					// setTimeout(function () {uni.hideLoading();}, 500);
+					that.getShoppingList();
+				})
+			},
 		}
 	}
 </script>
@@ -509,23 +504,26 @@
   color: white;
   font-weight: 800;
 }
-.card{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.card-box{
-	background-color: white;
-	width: 95%;
-	height: 218px;
-	border-radius: 10px;
-	border:solid  1px #C8C7CC;
-	text-align: center;
-}
 .t-bg{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+}
+.ncontent{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
+.like-card{
+	width: 90%;
+	height: 320px;
+	background-color: #f3f3f3;
+	margin-top: 20px;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	padding:10px 20px 0 20px;
 }
 </style>

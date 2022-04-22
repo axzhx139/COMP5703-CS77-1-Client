@@ -156,7 +156,7 @@
 						<view style="text-align: center;">
 							<xfl-select @change="getCategory"
 								:list="options"
-								:clearable="true"
+								:clearable="false"
 								:showItemNum="5" 
 								:listShow="false"
 								:isCanInput="false"  
@@ -203,7 +203,14 @@
 								<u-button shape="circle" :hair-line="false" style="width: 150px;background-color: #F5C979;border-color: #F5C979;" @click="editClient">Save</u-button>
 							</view>
 						</u-col>
-					</u-row>							
+					</u-row>				
+									
+									
+									
+									
+									
+									
+									
 				</view>
 			</hqs-popup>
 			
@@ -326,56 +333,26 @@
 			
 			<view style="text-align: left;width: 100%;margin-top: 25px;">
 				<text style=" line-height: 50px;float:left;margin-left: 25px;font-size: 20px;">Category</text>
-					<!-- <template>
-						<el-select v-model="value" placeholder="请选择">
-							<el-option
-							  v-for="item in options"
-							  :key="item"
-							  :value="item">
-							</el-option>
-						</el-select>
-					  </template> -->
-					
-					<!-- <u-select v-model="value" :list="options" @confirm="sexconfirm" :default-value="subjectAarr"></u-select> -->
-					<!-- iCategory: {{ iCategory }}<br> -->
-					<xfl-select
-						v-if="refreshiCategory"
-						@change="getCategory"
+					<xfl-select @change="getCategory"
 						:list="options"
-						:clearable="true"
-						:showItemNum="10" 
+						:clearable="false"
+						:showItemNum="5" 
 						:listShow="false"
-						:isCanInput="true"  
-						:initValue="iCategory"
+						:isCanInput="false"  
 						:style_Container="'height: 50px; font-size: 16px;'"
 						:placeholder = "'Choose'"
 						:selectHideType="'hideAll'"
 						style="width: 50%;background-color: #F3F1F1;float:left;margin-left: 25px;"
-						>
-					</xfl-select>
-					
+					>
 					</xfl-select>
 			</view>
 			
 			<view style="text-align: left;width: 100%;margin-top: 25px;">
 				<text style="float:left;margin-left: 25px;line-height: 45px;font-size: 20px;">Expire Date</text>
 				<view style="text-align: center;">
-					<u-input
-					type="text"
-					disabled
-					@click="openTime"
-					style="float:left;margin-left: 10px;width: 40%;font-weight: 900;display: inline-block;background-color: #F3F1F1;border-radius: 10px;"
-					:clearable="true"
-					placeholder="Time"
-					v-model="iTime"
-					class="fn-input"
-					height="90"
-					input-align="center"/>
-					<u-calendar
-					v-model="cshow"
-					@change="changeTime"
-					max-date="9999"></u-calendar>
-					<image src="../../static/scan.png" style="margin:10px 10px 0 10px;float:left;width: 25px;height: 25px;" @click="onClickBtn"/>
+					<u-input @click="openTime" style="float:left;margin-left: 10px;width: 40%;font-weight: 900;display: inline-block;background-color: #F3F1F1;border-radius: 10px;" :clearable="true" placeholder="Time" v-model="iTime" class="fn-input" height="90" input-align="center"/>
+					<u-calendar v-model="cshow" @change="changeTime" max-date="9999"></u-calendar>
+					<img src="../../static/scan.png" style="margin:10px 10px 0 10px;float:left;width: 25px;height: 25px;" @click="onClickBtn"></img>
 					
 				</view>
 			</view>
@@ -383,7 +360,7 @@
 			<view style="text-align: left;width: 100%;margin-top: 25px;">
 				<view  class="aline" style="text-align: center;padding:0 25px 0 25px;">
 					<text style="font-size: 20px;">Remind me</text>
-					<u-input type="number" :clearable="false" style="margin-left: 5px; margin-right: 5px; margin-top: 10px; width: 10px; font-weight: 900;display: inline-block;background-color: #F3F1F1;border-radius: 10px;" placeholder="" v-model="iCitime" class="fn-input" height="90" input-align="center"/>
+					<u-input :clearable="false" style="margin-left: 5px; margin-right: 5px; margin-top: 10px; width: 10px; font-weight: 900;display: inline-block;background-color: #F3F1F1;border-radius: 10px;" placeholder="" v-model="iCitime" class="fn-input" height="90" input-align="center"/>
 					<text style="font-size: 20px;">days before</text>
 				</view>
 			</view>
@@ -444,13 +421,11 @@
 				iItemid: '',
 				status:'instock',
                 iCategory: '',
-				refreshiCategory: true,
 				shopList:[],
 				oldstockList: [],
 				stockList:[],
 				add_src:'',
 				editItem:null,
-				icode:'',
 				config1:{
 					title: 'Grocery',
 					color: 'black',
@@ -480,16 +455,10 @@
 						icon: '&#xe679;',
 						position: 'left'
 					}],
-					rightButton:[{
-						key: 'scan',
-						icon: '&#xe62c;',
-						position: 'left'
-					}],
 				},
-				options: ['Eggs', 'Fruit','Vegetable','Dairy','Animal product','Frozen','Canned Goods','Frozen Foods','Deli','Others'],
+				options: ['Fruit','Vegetable','Dairy','Animal product','Frozen','Canned Goods','Frozen Foods','Deli','Others'],
 				sortingMethod: ['Recent Added', 'A-z', 'Expire Soon'],
 				chooseTags: ['Expired', 'Consumed', 'All'],
-				value: '',
 			}
 		},
 		onLoad(){
@@ -501,6 +470,25 @@
 			
 		},
 		onShow(){
+			let that =this
+			uni.getStorage({
+				key:'addToStock',
+				success: function(res){
+					if(res.data){
+						that.add_src='http://101.35.91.117:7884/item/picture/'+res.data.iId;
+						that.filepath=[that.add_src];
+						that.iName = res.data.iName;
+						that.addItemToList = false;
+						that.needAddItem = true;
+						that.iCategory = '';
+						that.iTime = '';
+						that.iCitime = '';
+						that.iDetails = '';
+						that.iItemid = '';
+						uni.setStorageSync('addToStock', null);
+					}
+				}
+			})
 			this.getCol()
 		},
 		methods: {
@@ -513,7 +501,6 @@
 			},
             getCategory(category){
                 this.iCategory = category.newVal;
-				this.$forceUpdate()
             },
             
 			save(){
@@ -538,19 +525,25 @@
                 // convert remind time to correct form
                 var expDate = new Date(this.iTime);
 				var remindTime = (expDate.getDate() - this.iCitime);
-				var lsRemindTime = new Date(expDate.setDate(remindTime)).toLocaleDateString().split("/");
-				// console.log(remindTime);
+				var lsRemindTime = new Date(expDate.setDate(remindTime)).toDateString().split("/");
+				// console.log("===================");
+				console.log(expDate.getDate());
+				// console.log("===================");
+				console.log(this.iCitime);
+				console.log("===================");
+				console.log(remindTime);
 				// console.log(lsRemindTime);
-
+				console.log(new Date(expDate.setDate(remindTime)).toGMTString().split(' '));
+				console.log("===================");
                 //China Timezone needed
                 // if(lsRemindTime[2].length === 1){
                 //     lsRemindTime[2] = "0" + lsRemindTime[2]
                 // }
                 //Australian Timezone needed
 				// console.log(new Date())
-                if(lsRemindTime[1].length === 1){
-                    lsRemindTime[1] = "0" + lsRemindTime[1]
-                }
+                // if(lsRemindTime[1].length === 1){
+                //     lsRemindTime[1] = "0" + lsRemindTime[1]
+                // }
                 var remindTime = lsRemindTime[0]+"-"+lsRemindTime[1]+"-"+lsRemindTime[2]
 				// console.log(remindTime);
 				// console.log(lsRemindTime);
@@ -597,7 +590,8 @@
 							}
 						});
 					}
-										
+					
+					
 				})
 				this.needAddItem = false
 				this.addItemToList = true
@@ -774,45 +768,8 @@
 				
 			},
             
-			
-			scanCode(){
-				// let that = this
-				uni.scanCode({
-				    success: (res) => {
-				        console.log('type：' + res.scanType);
-				        console.log('codeID：' + res.result);
-						this.icode = res.result;
-						uni.request({
-							url: "https://world.openfoodfacts.org/api/v2/product/" + this.icode,		
-						}).then(ires=>{
-							var name = ires[1].data.product.product_name
-							console.log(name)
-							var categories = ires[1].data.product.categories.split(',')
-							console.log(categories[1])
-							this.iName = name
-							this.iCategory = categories[1]
-							this.refreshiCategory = false
-							this.$nextTick(function(){
-								this.refreshiCategory = true
-							})
-							this.$forceUpdate()
-						});
-				    }
-				});		
-			},
-			// searchProduct(){
-			// 	if(this.iCategory === ''){
-			// 		this.list = this.options  
-			// 	}else{
-			// 		this.showList = []
-			// 		this.showList = this.options.filter((item)=>{
-			// 			return item.label.indexOf(this.iCategory)>=0
-			// 		})
-			// 	} 
-			// 	console.log(this.showList)
-			// 	this.showSelect = true
-			// },   
-            scanDate(){
+            scanPhoto(){
+				
 				let that = this
                 uni.chooseImage({
                     count: 1, 
@@ -830,69 +787,59 @@
 						console.log("上传了: " + String(res.tempFilePaths[0]) + "  --------")
 						console.log("ocr 的返回结果：");
 						
-						that.iTime = "2022-11-22";
-						// console.log(that.iTime);
-						// uni.uploadFile({
-							// url: 'http://localhost:8080/ocr', // ------------------- 每次测之前改一下 ------------------------
-							// method : 'POST',
-							// // filePath : res.tempFilePaths[0],
-							// filePath : String(res.tempFilePaths[0]),
-							// name : 'media',
-							// header: {
-							// 	'content-type': 'multipart/form-data' 
-							// },
+						that.iTime = "2022-08-20";
+						console.log(that.iTime);
+						/**uni.uploadFile({
+							url: 'http://101.35.91.117:7884/ocr', // ------------------- 每次测之前改一下 ------------------------
+							method : 'POST',
+							// filePath : res.tempFilePaths[0],
+							filePath : String(res.tempFilePaths[0]),
+							name : 'media',
+							header: {
+								'content-type': 'multipart/form-data' 
+							},
 							
-							// success: (res) => {
-							// 	console.log(res.statusCode)
-							// 	console.log("上传了: " + String(res.tempFilePaths[0]) + "  --------")
-							// 	console.log("ocr 的返回结果：");
-							// 	console.log(res.data);
+							success: (uploadFileRes) => {
+								console.log("上传了: " + String(res.tempFilePaths[0]) + "  --------")
+								console.log("ocr 的返回结果：");
+								console.log(uploadFileRes.data);
 
-							// 	that.iTime = uploadFileRes;
-							// 	console.log(that.iTime);
-							// },
-							// fail: (uploadFileRes) => {
-							// 	console.log(uploadFileRes.statusCode)
+								that.iTime = uploadFileRes.data;
+								console.log(that.iTime);
+							},
+							fail: (uploadFileRes) => {
+								console.log("爷失败了");
+								console.log(uploadFileRes+"\n==============");
 								
-							// 	console.log("爷失败了");
-							// 	console.log(uploadFileRes+"\n==============");
-								
-							// }
+							}
 							
-						// });
+						});*/
 						
                     }
                 });
             },
+            
 			onClickBtn(e){
 				console.log("e.key is: ", e.key)
 				if (e.key == 'add'){
 					// console.log('111')
 					this.addItemToList = false
 					this.needAddItem = true
-					// this.iName = '';
-					
-					// this.iCategory = ''; ////// ------
-					
+					this.iName = '';
+					this.iCategory = '';
 					this.iTime = '';
 					this.iCitime = '';
 					this.iDetails = '';
 					this.iItemid = '';
+					this.filepath='';
+					this.add_src='';
 					// console.log('change')
 				}else if(e.key == 'back'){
 					this.addItemToList = true
 					this.needAddItem = false
-				}else if(e.key == 'scan'){
-                    this.scanCode();
-					this.needAddItem = true
-					this.addItemToList = false
-					// this.iTime = '';
-					// this.iCitime = '';
-					// this.iDetails = '';
-					// this.iItemid = '';
-                }else{
-					this.scanDate();
-				}
+				}else{
+                    this.scanPhoto()
+                }
 			},
             
 			DateDiff(date1, date2) {
@@ -1125,23 +1072,23 @@
 			},
 			
 			saveList(id){
-				uni.showLoading({title: 'updating',mask:true});
+				// uni.showLoading({title: 'updating',mask:true});
 				uni.request({
 				url: "http://101.35.91.117:7884/potential/add/"+id+"/"+uni.getStorageSync('userId'),
 				method: 'get',
 				}).then(res=>{
 					this.getCol()
-					setTimeout(function () {uni.hideLoading();}, 1000);
+					// setTimeout(function () {uni.hideLoading();}, 1000);
 				})
 			},
 			deleteList(id){
-				uni.showLoading({title: 'updating',mask:true});
+				// uni.showLoading({title: 'updating',mask:true});
 				uni.request({
 				url: "http://101.35.91.117:7884/potential/remove/"+id+"/"+uni.getStorageSync('userId'),
 				method: 'get',
 				}).then(res=>{
 					this.getCol()
-					setTimeout(function () {uni.hideLoading();}, 1000);
+					// setTimeout(function () {uni.hideLoading();}, 1000);
 				})
 			},		
 			changePhoto(){

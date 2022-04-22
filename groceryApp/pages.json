@@ -32,6 +32,14 @@
 				"disableScroll": false
             }
             
+        },{
+            "path" : "pages/profile/ranking",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Ranking",
+				"enablePullDownRefresh": false
+            }
+            
         }
         ,{
             "path" : "pages/home/home",

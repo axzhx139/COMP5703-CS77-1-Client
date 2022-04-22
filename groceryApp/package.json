@@ -8,8 +8,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "description": "",
   "dependencies": {
     "uview-ui": "^1.8.4"
-  },
-  "description": ""
+  }
 }
