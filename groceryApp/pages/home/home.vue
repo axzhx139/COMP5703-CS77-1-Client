@@ -371,7 +371,7 @@
 			            "uid": uni.getStorageSync('userId'),
 						"img": item.picture
 					}
-					if (foodList[i].isConsumed == 0){
+					if (foodList[i].status === 'instock'){
 						expiringFoodList.push(itemInfo);
 						// console.log(item.remindTime);
 					}					
