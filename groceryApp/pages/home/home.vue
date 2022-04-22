@@ -41,13 +41,13 @@
 			  <template v-for="(item, index) in expiringFoodList">
 				  
 				  <view class="scroll_item" :style="{'background-image': 'url('+'http://101.35.91.117:7884/item/picture/'+item.itemId+')','filter': 'grayscale('+getFreshness(index)+'%)'}">
-					<img src="../../static/knife_fork.png" style="width: 20px;height: 20px;float:right" @click="consumeSelect(index)"></img>
+					<image src="../../static/knife_fork.png" style="width: 20px;height: 20px;float:right" @click="consumeSelect(index)"></image>
 					<view style="height: 100%;"  @click="toDetail(item.itemId)">
 							
 					</view>
 					<text style="margin-left: 14px;font-size: 16px;font-weight: 500;">{{ item.name }}</text>
 					<view class="" style="margin-left: 14px;">
-						<img src="../../static/remind.png" style="width: 15px;height: 15px;" v-if="isReminded(index)"></img>
+						<image src="../../static/remind.png" style="width: 15px;height: 15px;" v-if="isReminded(index)"></image>
 						<text style="display: inline-block;margin-left: 5px;">{{item.expDate.split("T")[0].split('-')[2]+'/'+ item.expDate.split("T")[0].split('-')[1] }}</text>
 					</view>
 				  </view>
