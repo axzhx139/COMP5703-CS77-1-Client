@@ -70,7 +70,7 @@
 			<view class="rank-card"  @click='goRanking'>
 				<!-- <view style="margin-top: 20rpx;"> -->
 							<view class="rank-block" >
-								<view style="font-weight: 700;">Days</view>
+								<view style="font-weight: 700;">Days<image @click.stop="hintDays()" src="../../static/help.png" style="width: 13px;height: 13px;margin-left: 10px;"></image></view>
 								<view style="margin-top: 10px;font-size: 25px;font-weight: 900;font-family: 'Lucida Calligraphy'">25</view>
 							</view>
 							<view class="rank-block" >
@@ -146,6 +146,19 @@
 						}
 					});
 				}
+			},
+			hintDays(){
+				uni.showModal({
+					title: "Hint",
+					content: "This is how many days you haven't wasted food. \
+					When you have added more than 10 foods in the past 30 days, it can start counting the days. The days will reset when you waste a food.",
+					showCancel: false,
+					success: function (res) {
+						if (res.confirm) {
+							
+						}
+					}
+				})
 			},
 			refresh(){
 				uni.showLoading({title: 'refreshing',mask:true});
