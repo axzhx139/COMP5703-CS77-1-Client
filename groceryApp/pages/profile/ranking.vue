@@ -35,11 +35,11 @@
 					</block>
 				</view>
 					<view class='my-content'>
-						<view  class='rank-self'  v-if="my_rank.userRankingDays==-1">
-							<view style="font-weight: 700;line-height:45px;">You have no ranking data.
+							<view v-if="my_rank.userRankingDays==-1" style="font-weight: 700;line-height:45px;">You have no ranking data.
 								<image src="../../static/help-white.png"  @click.stop="hintDays()" style="width: 20px;height: 20px;margin-left: 10px;"></image>
 							</view>
-							<view v-if="my_rank.userRankingDays>=0">
+							
+							<view class='rank-self'   v-if="my_rank.userRankingDays>=0">
 								<text style="line-height:45px;font-weight: 900;margin-left: 20px;float:left;">{{getIndex(my_rank.userRanking-1)}}</text>
 								<text style="line-height:45px;font-weight: 900;margin-left: 30px;float:left;">{{my_rank.userName}}</text>
 								
@@ -47,7 +47,6 @@
 								<text style="line-height:45px;font-weight: 900;margin-right: 5px;float:right;">{{my_rank.userRankingDays}}</text>
 							</view>
 							
-						</view>
 					</view>
 			</view>
 		</view>
@@ -88,9 +87,11 @@
 						this.useraddress='null'
 					}else{
 						var temp=res[1].data.address.split(',')
-						this.useraddress = temp[temp.length-1]
+						if (temp[temp.length-1]!='' && temp[temp.length-1]!=' ')
+							this.useraddress = temp[temp.length-1]
+						else
+							this.useraddress='null'
 					}
-					console.log(this.useraddress)
 					
 			});
 		},
@@ -124,6 +125,7 @@
 					this.citySelect = true
 					this.address=this.useraddress
 					this.getRankData()
+					console.log(this.address)
 				}
 			},
 			getRankData(){

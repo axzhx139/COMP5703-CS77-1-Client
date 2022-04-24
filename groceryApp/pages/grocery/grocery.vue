@@ -313,8 +313,8 @@
 										<u-col span="3">
 											<view class="demo-layout bg-purple-dark">
 												<!-- <view><text style="font-size: 14px;">{{ item.expDate }}</text></view> -->
-												 <view v-if="item.status=='consume'"><text style="font-size: 12px;">{{item.conDate.split("T")[0].split('-')[2]+'/'+ item.conDate.split("T")[0].split('-')[1] }}</text></view>
-												 <view v-if="item.status=='expire'"><text style="font-size: 12px;">{{item.expDate.split("T")[0].split('-')[2]+'/'+ item.expDate.split("T")[0].split('-')[1] }}</text></view>
+												 <view v-if="item.status=='consume'"><text style="font-size: 12px;">{{getDate(item.conDate,'day')}}</text></view>
+												 <view v-if="item.status=='expire'"><text style="font-size: 12px;">{{getDate(item.expDate,'day')}}</text></view>
 												 <view v-if="item.status=='consume'" style="color: #FFA451;">Consumed</view>
 												<view v-if="item.status=='expire'" style="color: #AA4A44;">Expired </view>
 											</view>
@@ -357,7 +357,7 @@
 				<text style="float:left;margin-left: 25px;line-height: 45px;font-size: 20px;">Expire Date</text>
 				<view style="text-align: center;">
 					<u-input @click="openTime" style="float:left;margin-left: 10px;width: 40%;font-weight: 900;display: inline-block;background-color: #F3F1F1;border-radius: 10px;" :clearable="true" placeholder="Time" v-model="iTime" class="fn-input" height="90" input-align="center"/>
-					<u-calendar v-model="cshow" @change="changeTime" max-date="9999"></u-calendar>
+					<u-calendar  v-model="cshow" @change="changeTime" max-date="9999"></u-calendar>
 					<image src="../../static/scan.png" style="margin:10px 10px 0 10px;float:left;width: 25px;height: 25px;" @click="onClickBtn"></image>
 					
 				</view>
@@ -479,6 +479,7 @@
 		},
 		onShow(){
 			let that =this
+			//判断是不是从shoppinglist添加
 			uni.getStorage({
 				key:'addToStock',
 				success: function(res){
@@ -502,6 +503,7 @@
 					}
 				}
 			})
+			//判断是不是从profile点数字点进来的，切tab
 			uni.getStorage({
 				key:'goToHistoty',
 				success: function(res){
@@ -539,7 +541,25 @@
             getCategory(category){
                 this.iCategory = category.newVal;
             },
-            
+            getDate(time,type){
+            	var dt = new Date(time)
+            	var year = dt.getFullYear();
+            	var month = dt.getMonth()+1;
+            	var day = dt.getDate();
+            	var hour = dt.getHours();
+            	var minut = dt.getMinutes();
+            	var second = dt.getSeconds();
+            	month =  month < 10 ? "0"+month : month;
+            	day =  day < 10 ? "0"+day : day;
+            	hour =  hour < 10 ? "0"+hour : hour;
+            	minut =  minut < 10 ? "0"+minut : minut;
+            	second =  second < 10 ? "0"+second : second;
+            	if(type=='min')
+            		var res = day+'-'+month+'-'+year+' '+hour+':'+minut
+            	else if(type='day')
+            		var res = day+'/'+month
+            	return res
+            },
 			save(){
 				
 				var date = new Date();
@@ -603,7 +623,6 @@
 					data:JSON.stringify(item)
 				}).then(res => {
 					console.log(that.filepath[0])
-					console.log(res[1].data)
 					if(that.filepath[0]){
 						uni.uploadFile({
 							url: 'http://101.35.91.117:7884/item/update/picture', 
@@ -727,7 +746,6 @@
 				  "name": item.name,
 				  "remindTime": item.remindTime,
 				  "status": "consume",
-				  "uid": uni.getStorageSync('userId')
 				}
 				
 				uni.request({
@@ -742,8 +760,9 @@
 
 			changeTime(e){
 				this.iTime = e.result
-				var array = this.iTime.split('-')
-				this.iTimeInAussieFormat = array[2]+"-"+array[1]+"-"+array[0]
+				// var array = this.iTime.split('-')
+				// this.iTimeInAussieFormat = array[2]+"-"+array[1]+"-"+array[0]
+				this.iTimeInAussieFormat =  e.result
 				console.log(this.iTimeInAussieFormat)
 				console.log(this.iTime)
                 
@@ -990,9 +1009,11 @@
 					// var nowDate = date.getFullYear() + seperator + nowMonth + seperator + strDate;
 				    
 				    // convert remind time to correct form
-				    var expDate = new Date(this.iTimeInAussieFormat);
-				    var remindTime = (expDate.getDate() - this.iCitime); 
-					var lsRemindTime = new Date(expDate.setDate(remindTime)).toLocaleDateString().split("/");
+				    var expDate = new Date(this.iTime);
+				    var remindTime = (expDate.getDate() - this.iCitime);
+				    var lsRemindTime = new Date(expDate.setDate(remindTime)).toISOString().split("T")[0];
+					
+					console.log(lsRemindTime)
 				    // console.log(remindTime);
 				    // console.log(lsRemindTime);
 					//China Timezone needed
@@ -1000,11 +1021,11 @@
 				    //     lsRemindTime[2] = "0" + lsRemindTime[2]
 				    // }
 				    //Australian Timezone needed
-					// console.log(new Date())
-				    if(lsRemindTime[1].length === 1){
-				        lsRemindTime[1] = "0" + lsRemindTime[1]
-				    }
-				    var remindTime = lsRemindTime[0]+"-"+lsRemindTime[1]+"-"+lsRemindTime[2]
+					// // console.log(new Date())
+				 //    if(lsRemindTime[1].length === 1){
+				 //        lsRemindTime[1] = "0" + lsRemindTime[1]
+				 //    }
+				 //    var remindTime = lsRemindTime[0]+"-"+lsRemindTime[1]+"-"+lsRemindTime[2]
 					// console.log(remindTime);
 					// console.log(lsRemindTime);
 					
@@ -1018,10 +1039,9 @@
 					  "expDate": this.iTimeInAussieFormat,
 					  "itemId": this.iItemid,
 					  "name": this.iName,
-					  "remindTime": remindTime,
+					  "remindTime": lsRemindTime,
 					  "status": this.editItem.status,
 					  "otherDetail": this.iDetails,
-					  "uId": uni.getStorageSync('userId')
 					}
 					console.log(JSON.stringify(item))
 					uni.request({

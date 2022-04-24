@@ -48,7 +48,7 @@
 					<text style="margin-left: 14px;font-size: 16px;font-weight: 500;">{{ item.name }}</text>
 					<view class="" style="margin-left: 14px;">
 						<image src="../../static/remind.png" style="width: 15px;height: 15px;" v-if="isReminded(index)"></image>
-						<text style="display: inline-block;margin-left: 5px;">{{item.expDate.split("T")[0].split('-')[2]+'/'+ item.expDate.split("T")[0].split('-')[1] }}</text>
+						<text style="display: inline-block;margin-left: 5px;">{{getDate(item.expDate,'day')}}</text>
 					</view>
 				  </view>
 				  
@@ -221,6 +221,25 @@
 				})
 				}
 			},
+			getDate(time,type){
+				var dt = new Date(time)
+				var year = dt.getFullYear();
+				var month = dt.getMonth()+1;
+				var day = dt.getDate();
+				var hour = dt.getHours();
+				var minut = dt.getMinutes();
+				var second = dt.getSeconds();
+				month =  month < 10 ? "0"+month : month;
+				day =  day < 10 ? "0"+day : day;
+				hour =  hour < 10 ? "0"+hour : hour;
+				minut =  minut < 10 ? "0"+minut : minut;
+				second =  second < 10 ? "0"+second : second;
+				if(type=='min')
+					var res = day+'-'+month+'-'+year+' '+hour+':'+minut
+				else if(type='day')
+					var res = day+'/'+month
+				return res
+			},
 			toDetail(e){
 				console.log(e)
 				uni.navigateTo({
@@ -300,7 +319,6 @@
 				  "name": item.name,
 				  "remindTime": item.remindTime,
 				  "status": "consume",
-				  "uid": uni.getStorageSync('userId')
 				}
 				console.log(JSON.stringify(itemUpdated))
 				uni.request({

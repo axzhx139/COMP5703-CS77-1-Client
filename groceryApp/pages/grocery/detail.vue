@@ -16,13 +16,13 @@
 					<text class = "subtitle">Category</text><text class = "content">{{product.category}}</text>
 				</view>
 				<view class = "section">
-					<text class = "subtitle">add-Date</text><text class = "content">{{product.addDate.split('T')[0]}}</text>
+					<text class = "subtitle">add-Date</text><text class = "content">{{getDate(product.addDate,'min')}}</text>
 				</view>
 				<view class = "section">
-					<text class = "subtitle">exp-Date</text><text class = "content">{{ product.expDate.split('T')[0]}}</text>
+					<text class = "subtitle">exp-Date</text><text class = "content">{{ getDate(product.expDate,'day')}}</text>
 				</view>
 				<view class = "section">
-					<text class = "subtitle">remindTime</text><text class = "content">{{ product.remindTime.split('T')[0]}}</text>
+					<text class = "subtitle">remindTime</text><text class = "content">{{ getDate(product.remindTime,'day')}}</text>
 				</view>
 			</view>
 		</view>
@@ -72,6 +72,25 @@
 				})
 				
 			},
+			getDate(time,type){
+				var dt = new Date(time)
+				var year = dt.getFullYear();
+				var month = dt.getMonth()+1;
+				var day = dt.getDate();
+				var hour = dt.getHours();
+				var minut = dt.getMinutes();
+				var second = dt.getSeconds();
+				month =  month < 10 ? "0"+month : month;
+				day =  day < 10 ? "0"+day : day;
+				hour =  hour < 10 ? "0"+hour : hour;
+				minut =  minut < 10 ? "0"+minut : minut;
+				second =  second < 10 ? "0"+second : second;
+				if(type=='min')
+					var res = day+'-'+month+'-'+year+' '+hour+':'+minut
+				else if(type='day')
+					var res = day+'-'+month+'-'+year
+				return res
+			}
 		}
 	}
 </script>
