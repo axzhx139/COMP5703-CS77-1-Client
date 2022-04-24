@@ -589,7 +589,7 @@
 				  "expDate": this.iTime,
 				  // "itemId": 0,
 				  "name": this.iName,
-				  "remindTime": remindTime,
+				  "remindTime": lsRemindTime,
 				  "status": this.status,
 				  "otherDetail": this.iDetails,
 				  "uid": uni.getStorageSync('userId'),
