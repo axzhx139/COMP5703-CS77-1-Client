@@ -8,6 +8,7 @@
 			<!-- <view class="main-body"> -->
 				<u-search placeholder="Search Ingredient" :show-action="true" actionText="search" margin="30rpx 50rpx" height="50"  v-model="searchIngre" @custom="searchRecipe()"></u-search>
 				<scroll-view :scroll-y="true"  :style="{'height': getDeviceHeight()-190 + 'px'}">
+					<div v-if="itemList.length==0" style="margin-top: 20px;">Nothing in stock</div>
 					<view class="" style="padding: 0 15px 0 15px;margin-top: 30px;" v-for="(recipe, index) in itemList">
 						
 								<u-row v-if="index%2==0" gutter="0" justify="space-between">
@@ -16,11 +17,11 @@
 										<view class="demo-layout bg-purple-light card" @click="toDetail(recipe.itemId)">
 											<view class="card-box">
 												<u-image border-radius="6px" height="138px" width="100%" :src="recipe.img" :fade="true" duration="450"></u-image>
-												<text style="margin-left: 20rpx;font-size: 12px;font-weight: 500;">{{ recipe.name }}</text>
+												<text style="margin-left: 20rpx;font-size: 12px;font-weight: 500;">{{ limitWords(recipe.name,40) }}</text>
 												
 												<view style="text-align: left;margin-top: 10px;">
 													<image src="../../static/b-medal.png" style="width: 15px;height: 15px;margin-left: 10rpx;">
-													<text style="display: inline-block;margin-left: 10px;font-size: 10px;">{{ limitWords(recipe.type)}}</text>
+													<text style="display: inline-block;margin-left: 10px;font-size: 10px;">{{ limitWords(recipe.type,20)}}</text>
 													
 												</view>
 					<!-- 							<view style="margin-top: 10px;text-align: left;margin-left: 30rpx;">
@@ -34,11 +35,11 @@
 										<view class="demo-layout bg-purple-light card" @click="toDetail(itemList[index+1].itemId)">
 											<view class="card-box">
 												<u-image border-radius="6px" height="138px" width="100%" :src="recipe2.img" :fade="true" duration="450"></u-image>
-												<text style="margin-left: 20rpx;font-size: 12px;font-weight: 500;">{{ recipe2.name }}</text>
+												<text style="margin-left: 20rpx;font-size: 12px;font-weight: 500;">{{ limitWords(recipe2.name,40) }}</text>
 												
 												<view style="text-align: left;margin-top: 10px;">
 													<image src="../../static/b-medal.png" style="width: 15px;height: 15px;margin-left: 10rpx;">
-													<text style="display: inline-block;margin-left: 10px;font-size: 10px;">{{ limitWords(recipe2.type)}}</text>
+													<text style="display: inline-block;margin-left: 10px;font-size: 10px;">{{ limitWords(recipe2.type,20)}}</text>
 													
 												</view>
 					<!-- 							<view style="margin-top: 10px;text-align: left;margin-left: 30rpx;">
@@ -248,11 +249,11 @@
 				}
 				console.log(this.itemList.length);
 			},
-			limitWords(txt){
+			limitWords(txt,len){
 			    var str = txt;
 				var reg = /<[^<>]+>/g;
-				if (str.length >= 20){
-					str = str.substr(0,15) + '...';
+				if (str.length >= len){
+					str = str.substr(0,len-3) + '...';
 					str = str.replace(reg, '');
 				}
 			    return str;

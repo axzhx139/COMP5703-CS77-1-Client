@@ -71,11 +71,13 @@
 				<!-- <view style="margin-top: 20rpx;"> -->
 							<view class="rank-block" >
 								<view style="font-weight: 700;">Days<image @click.stop="hintDays()" src="../../static/help.png" style="width: 13px;height: 13px;margin-left: 10px;"></image></view>
-								<view style="margin-top: 10px;font-size: 25px;font-weight: 900;font-family: 'Lucida Calligraphy'">25</view>
+								<view v-if="my_rank.userRankingDays!=-1" style="margin-top: 10px;font-size: 25px;font-weight: 900;font-family: 'Lucida Calligraphy'">{{my_rank.userRankingDays}}</view>
+								<view v-if="my_rank.userRankingDays==-1" style="margin-top: 10px;font-size: 25px;font-weight: 900;font-family: 'Lucida Calligraphy'"> 0 </view>
 							</view>
 							<view class="rank-block" >
 								<view style="font-weight: 700;">Ranking</view>
-								<view style="margin-top: 10px;font-size: 25px;font-weight: 900;font-family: 'Lucida Calligraphy'">3</view>
+								<view v-if="my_rank.userRankingDays!=-1" style="margin-top: 10px;font-size: 25px;font-weight: 900;font-family: 'Lucida Calligraphy'">{{my_rank.userRanking}}</view>
+								<view v-if="my_rank.userRankingDays==-1" style="margin-top: 10px;font-size: 25px;font-weight: 500;font-family: 'Lucida Calligraphy'"> - </view>
 							</view>
 				<!-- </view> -->
 			</view>
@@ -107,7 +109,7 @@
 				deviceHeight: '',
 				userInfo:{},
 				avatar:'',
-				shopList:[],
+				my_rank:{}
 			}
 		},
 		onLoad() {
@@ -120,15 +122,7 @@
 			this.loadInfo();
 		},
 		methods: {
-			getList(){
-				uni.request({
-				url: "http://101.35.91.117:7884/potential/"+uni.getStorageSync('userId'),
-				method: 'get',
-				}).then(res=>{
-					console.log('load',res[1].data)
-					this.shopList = res[1].data
-				})
-			},
+			
 			clickGrid(e){
 				console.log(e)
 				if(e=='instock'){
@@ -160,17 +154,6 @@
 					}
 				})
 			},
-			refresh(){
-				uni.showLoading({title: 'refreshing',mask:true});
-				uni.request({
-				url: "http://101.35.91.117:7884/potential/update/"+uni.getStorageSync('userId'),
-				method: 'get',
-				}).then(res=>{
-					console.log('load',res[1].data)
-					setTimeout(function () {uni.hideLoading();}, 500);
-					this.getList();
-				})
-			},
 			logoutAction(){
                 uni.setStorageSync('userId', '')
                 uni.navigateTo({
@@ -185,34 +168,6 @@
 			goEdit(){
 				uni.navigateTo({
 					url:'../edit/edit'
-				})
-			},
-			deleteItem(id){
-				uni.request({
-					
-				url: "http://101.35.91.117:7884/potential/delete/"+id,
-				method: 'get',
-				}).then(res=>{
-					console.log('load',res[1].data)
-					this.getList()
-				})
-			},
-			save(id){
-				uni.request({
-				url: "http://101.35.91.117:7884/potential/update/status/save/"+id,
-				method: 'get',
-				}).then(res=>{
-					console.log('load',res[1].data)
-					this.getList()
-				})
-			},
-			unsave(id){
-				uni.request({
-				url: "http://101.35.91.117:7884/potential/update/status/potential/"+id,
-				method: 'get',
-				}).then(res=>{
-					console.log('load',res[1].data)
-					this.getList()
 				})
 			},
 			loadInfo(){
@@ -245,7 +200,14 @@
 						this.userInfo.address="City, State, Country";
 					}
 				})
-				this.getList()
+				
+				uni.request({
+					url: "http://101.35.91.117:7884/ranking/previous/"+uni.getStorageSync('userId')+"/null",
+					method: 'get',
+				}).then(res=>{
+					this.my_rank = res[1].data
+					console.log(this.my_rank)
+				})
 			},
 			goGrocery(){
 				uni.switchTab({

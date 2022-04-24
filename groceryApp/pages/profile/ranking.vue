@@ -35,12 +35,18 @@
 					</block>
 				</view>
 					<view class='my-content'>
-						<view  class='rank-self'>
-							<text style="line-height:45px;font-weight: 900;margin-left: 20px;float:left;">{{getIndex(my_rank.userRanking-1)}}</text>
-							<text style="line-height:45px;font-weight: 900;margin-left: 30px;float:left;">{{my_rank.userName}}</text>
+						<view  class='rank-self'  v-if="my_rank.userRankingDays==-1">
+							<view style="font-weight: 700;line-height:45px;">You have no ranking data.
+								<image src="../../static/help-white.png"  @click.stop="hintDays()" style="width: 20px;height: 20px;margin-left: 10px;"></image>
+							</view>
+							<view v-if="my_rank.userRankingDays>=0">
+								<text style="line-height:45px;font-weight: 900;margin-left: 20px;float:left;">{{getIndex(my_rank.userRanking-1)}}</text>
+								<text style="line-height:45px;font-weight: 900;margin-left: 30px;float:left;">{{my_rank.userName}}</text>
+								
+								<text style="font-style:italic;line-height:45px;font-weight: 600;margin-right: 20px;float:right;">({{my_rank.daysGap}}↑)</text>
+								<text style="line-height:45px;font-weight: 900;margin-right: 5px;float:right;">{{my_rank.userRankingDays}}</text>
+							</view>
 							
-							<text style="font-style:italic;line-height:45px;font-weight: 600;margin-right: 20px;float:right;">({{my_rank.daysGap}}↑)</text>
-							<text style="line-height:45px;font-weight: 900;margin-right: 5px;float:right;">{{my_rank.userRankingDays}}</text>
 						</view>
 					</view>
 			</view>
@@ -94,6 +100,18 @@
 		methods: {
 			onClickBtn(){
 				
+			},
+			hintDays(){
+				uni.showModal({
+					title: "Hint",
+					content: "This is how many days you haven't wasted food. When you have added more than 10 foods in the past 30 days, it can start counting the days. The days will reset when you waste a food.",
+					showCancel: false,
+					success: function (res) {
+						if (res.confirm) {
+							
+						}
+					}
+				})
 			},
 			changeTab(e){
 				if (e === 'all'){

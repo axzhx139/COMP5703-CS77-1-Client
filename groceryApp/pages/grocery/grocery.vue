@@ -76,6 +76,7 @@
 							</uni-row>
 						</inline> -->
 						<scroll-view :scroll-y="true" :style="{'height':getDeviceHeight()-240+'px'}"  >
+							<div v-if="stockList.length==0" style="margin-top: 20px;">Please add some products</div>
 							<block v-for="(item,index) in stockList">
 								<view style="margin-top: 10px;" @click="edit(item, index)">
 									
@@ -86,8 +87,8 @@
 											<!-- </view> -->
 										</u-col>
 										<u-col span="3">
-											<u-row style="margin: 0px 0px 10px 5px;">{{ item.name }}</u-row>
-											<u-row style="margin: 10px 0px 0px 5px;">{{ item.category }}</u-row>
+											<u-row style=" margin: 0px 0px 10px 5px;">{{ item.name }}</u-row>
+											<u-row style=" font-size: 5px;margin: 10px 0px 0px 5px;">{{ item.category }}</u-row>
 										</u-col>
 										<u-col span="3">
 											<view class="demo-layout bg-purple-light">
@@ -175,7 +176,7 @@
 						<text style="margin-left: 25px;font-size: 20px;">Expire Date</text>
 						<view style="text-align: center;">
 							<u-input @click="openTime" style="width: 80%;font-weight: 900;display: inline-block;background-color: #F3F1F1;border-radius: 10px;" :clearable="false" placeholder="Time" v-model="iTimeInAussieFormat" class="fn-input" height="90" input-align="center"/>
-							<u-calendar :safe-area-inset-bottom="true" max-date="9999" v-model="cshow" @change="changeTime"></u-calendar>
+							<u-calendar  :safe-area-inset-bottom="true" max-date="9999" v-model="cshow" @change="changeTime"></u-calendar>
 						</view>
 					</view>
 					
@@ -278,6 +279,7 @@
 					</view> -->
 					<scroll-view :scroll-y="true" :style="{'height':getDeviceHeight()-210+'px'}"  >
 						<view style="margin-top: 5px;">
+							<div v-if="oldstockList.length==0" style="margin-top: 20px;">Nothing in history</div>
 							<block v-for="(item,index) in oldstockList">
 								<view style="margin-top: 10px;">
 									<u-row gutter="16">
@@ -289,7 +291,7 @@
 										
 										<u-col span="3">
 											<u-row style="margin: 0px 0px 10px 5px;">{{ item.name }}</u-row>
-											<u-row style="margin: 10px 0px 0px 5px;">{{ item.category }}</u-row>
+											<u-row style="font-size: 5px; margin: 10px 0px 0px 5px;">{{ item.category }}</u-row>
 										</u-col>
 										
 										<u-col span="3">

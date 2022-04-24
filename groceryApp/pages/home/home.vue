@@ -53,6 +53,13 @@
 				  </view>
 				  
 			  </template>
+			  <template v-if="expiringFoodList.length==0">
+			  				  <div style="height: 80px;width: 100%;text-align: center;margin-top: 20px;">(You have nothing in stock)</div>
+			  				  <text style="margin-left: 14px;font-size: 16px;font-weight: 500;"> </text>
+			  				  <view class="" style="margin-left: 14px;">
+			  				  	<text style="display: inline-block;margin-left: 5px;"> </text>
+			  				  </view>
+			  </template>
 			</scroll-view>
 		</view>
 
@@ -509,10 +516,6 @@
 }
 .scroll_item{
   background: #f7edc8;
-  
-  
-
-    
   filter:gray;
   width:100px; 
   height:100px; 
