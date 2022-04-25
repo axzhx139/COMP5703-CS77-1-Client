@@ -129,19 +129,29 @@
 				}
 			},
 			getRankData(){
+				let that=this
 				uni.request({
 					url: "http://101.35.91.117:7884/ranking/topTen/"+this.address,
 					method: 'get',
 				}).then(res=>{
-					this.ranking_list = res[1].data.filter(x=>x['rankingDays']!=-1)
-					console.log(this.ranking_list)
+					that.ranking_list=[]
+					// that.ranking_list = res[1].data
+					for (var i=0;i<10;i++){
+						var item = res[1].data[i]
+						if (item && item['rankingDays']!=-1 ){
+							that.ranking_list.push({"name":item.name,'rankingDays':item.rankingDays})
+						}else{
+							that.ranking_list.push({"name":'--','rankingDays':'-'})
+						}
+					}
+					// console.log(JSON.stringify(that.ranking_list))
 				})
 				uni.request({
 					url: "http://101.35.91.117:7884/ranking/previous/"+uni.getStorageSync('userId')+"/"+this.address,
 					method: 'get',
 				}).then(res=>{
-					this.my_rank = res[1].data
-					console.log(this.my_rank)
+					that.my_rank = res[1].data
+					console.log(that.my_rank)
 				})
 			},
 			
@@ -155,7 +165,7 @@
 					return '3rd'
 				}
 				else{
-					return index+1+'nd'
+					return index+1+'th'
 				}
 			},
 			getcolor(index){
@@ -234,7 +244,7 @@
 	.partingline {
 		width:80%;
 		border: 1px solid #D5D5D5;
-		margin:25px auto 10px auto
+		margin:20px auto 10px auto
     }
 	.titleline {
 		width:80%;
