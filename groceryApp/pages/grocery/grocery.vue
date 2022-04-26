@@ -31,7 +31,7 @@
 											:listShow="false"
 											:isCanInput="false"  
 											:style_Container="'height: 30px; font-size: 15px;'"
-											:placeholder = "'Recent Added'"
+											:placeholder = "'Default'"
 											:selectHideType="'hideAll'"
 											style="width: 100%; background-color: #FFFFFF;"
 										>
@@ -465,7 +465,8 @@
 					}],
 				},
 				options: ['Fruit','Vegetable','Dairy','Animal product','Frozen','Canned Goods','Frozen Foods','Deli','Others'],
-				sortingMethod: ['Recent Added', 'A-z', 'Expire Soon'],
+				// sortingMethod: ['Recent Added', 'A-z', 'Expire Soon'],
+				sortingMethod: ['Expired', 'Category', 'Name', 'Default'],
 				chooseTags: ['Expired', 'Consumed', 'All'],
 				deviceHeight:0,
 			}
@@ -1060,15 +1061,53 @@
 					this.itemEditor = false;
 					
 			},
-			selectSortingItemList(category){
-				
-				if (category.newVal === "A-z"){
-					this.sortStockListAlphabetical();
-				}else if (category.newVal === "Expire Soon"){
-					this.sortStockListByExpDate();
-				}else if (category.newVal === "Recent Added"){
-					this.sortStockListByAddDate();
+			calExpreDays(stockList) {
+				let todayDate = new Date(Date.now())
+				for (var i=0;i<stockList.length;i++){
+                    var item = stockList[i]
+					var exp = new Date(item.expDate.substr(0,10))
+					// console.log('exp is: ', exp)
+					// console.log('与今天差的天数：', this.dateMinus(todayDate, exp))
+					var expireDays = this.dateMinus(todayDate, exp)
+					stockList[i].expireDays = expireDays
 				}
+				return stockList
+			},
+			selectSortingItemList(xflSelectResult){
+				if (xflSelectResult.newVal == this.sortingMethod[0]) {
+					uni.request({
+					url: 'http://101.35.91.117:7884/item/user/'+uni.getStorageSync('userId') + '/1',
+					method: 'get',
+					}).then(res=>{
+						let stockList = res[1].data
+						this.stockList = this.calExpreDays(stockList)
+					})
+				} else if (xflSelectResult.newVal == this.sortingMethod[1]) {
+					uni.request({
+					url: 'http://101.35.91.117:7884/item/user/'+uni.getStorageSync('userId') + '/2',
+					method: 'get',
+					}).then(res=>{
+						let stockList = res[1].data
+						this.stockList = this.calExpreDays(stockList)
+					})
+				} else if (xflSelectResult.newVal == this.sortingMethod[2]) {
+					uni.request({
+					url: 'http://101.35.91.117:7884/item/user/'+uni.getStorageSync('userId') + '/3',
+					method: 'get',
+					}).then(res=>{
+						let stockList = res[1].data
+						this.stockList = this.calExpreDays(stockList)
+					})
+				} else if (xflSelectResult.newVal == this.sortingMethod[3]) {
+					uni.request({
+					url: 'http://101.35.91.117:7884/item/user/'+uni.getStorageSync('userId') + '/4',
+					method: 'get',
+					}).then(res=>{
+						let stockList = res[1].data
+						this.stockList = this.calExpreDays(stockList)
+					})
+				}
+
 
 			},
 			sortStockListAlphabetical(){
