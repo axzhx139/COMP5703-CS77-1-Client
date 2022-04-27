@@ -1073,6 +1073,7 @@
 				}
 				return stockList
 			},
+			// 1: 'Expired', 2: 'Category', 3: 'Name', 4: 'Default'
 			selectSortingItemList(xflSelectResult){
 				if (xflSelectResult.newVal == this.sortingMethod[0]) {
 					uni.request({
