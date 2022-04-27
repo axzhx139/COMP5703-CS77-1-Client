@@ -520,6 +520,7 @@
 				}
 			})
 			this.getCol()
+			this.showTooltip('inStockScanTip')
 		},
 		methods: {
 			get_src(){
@@ -923,6 +924,7 @@
 					this.filepath='';
 					this.add_src='';
 					// console.log('change')
+					this.showTooltip("addScanTip")
 				}else if(e.key == 'back'){
 					this.addItemToList = true
 					this.needAddItem = false
@@ -1255,6 +1257,44 @@
 				    }
 				});
 				this.itemEditor=false	
+			},
+			showTooltip(tipName) {
+				if (tipName == 'addScanTip') {
+					var content = "You can click the scan button to scan the expire date, app will add it automatically."
+				} else if (tipName == 'inStockScanTip') {
+					var content = "Click the scan button on top right to add a new item in you list!"
+				}
+				try {
+					var inStockScanTip = uni.getStorageSync(tipName)
+					console.log(tipName, ' is: ', inStockScanTip)
+				} catch (error) {
+					console.log("error is :", error)
+					var inStockScanTip = 1
+					uni.setStorageSync("inStockScanTip", inStockScanTip)
+					// uni.setStorage({key: "inStockScanTip",
+					// 				data: inStockScanTip})
+				}
+				console.log('show tool tip')
+				if (inStockScanTip == "") {
+					var inStockScanTip = 1
+					uni.setStorageSync(tipName, inStockScanTip)
+				} else {
+					uni.setStorageSync(tipName, inStockScanTip + 1)
+				}
+				if (inStockScanTip == 1) {
+					uni.showModal({
+						title: "Tool Tips",
+						content: content,
+						showCancel: false,
+						success: function (res) {
+							if (res.confirm) {
+								console.log('用户点击确定');
+							} else if (res.cancel) {
+								console.log('用户点击取消');
+							}
+						}
+					})
+				}
 			}
 		},
 	}
