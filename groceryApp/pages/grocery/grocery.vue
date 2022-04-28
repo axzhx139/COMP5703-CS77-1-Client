@@ -31,7 +31,7 @@
 											:listShow="false"
 											:isCanInput="false"  
 											:style_Container="'height: 30px; font-size: 15px;'"
-											:placeholder = "'Recent Added'"
+											:placeholder = "'Default'"
 											:selectHideType="'hideAll'"
 											style="width: 100%; background-color: #FFFFFF;"
 										>
@@ -465,7 +465,8 @@
 					}],
 				},
 				options: ['Fruit','Vegetable','Dairy','Animal product','Frozen','Canned Goods','Frozen Foods','Deli','Others'],
-				sortingMethod: ['Recent Added', 'A-z', 'Expire Soon'],
+				// sortingMethod: ['Recent Added', 'A-z', 'Expire Soon'],
+				sortingMethod: ['Expired', 'Category', 'Name', 'Default'],
 				chooseTags: ['Expired', 'Consumed', 'All'],
 				deviceHeight:0,
 			}
@@ -519,6 +520,7 @@
 				}
 			})
 			this.getCol()
+			this.showTooltip('inStockScanTip')
 		},
 		methods: {
 			get_src(){
@@ -922,6 +924,7 @@
 					this.filepath='';
 					this.add_src='';
 					// console.log('change')
+					this.showTooltip("addScanTip")
 				}else if(e.key == 'back'){
 					this.addItemToList = true
 					this.needAddItem = false
@@ -1060,15 +1063,54 @@
 					this.itemEditor = false;
 					
 			},
-			selectSortingItemList(category){
-				
-				if (category.newVal === "A-z"){
-					this.sortStockListAlphabetical();
-				}else if (category.newVal === "Expire Soon"){
-					this.sortStockListByExpDate();
-				}else if (category.newVal === "Recent Added"){
-					this.sortStockListByAddDate();
+			calExpreDays(stockList) {
+				let todayDate = new Date(Date.now())
+				for (var i=0;i<stockList.length;i++){
+                    var item = stockList[i]
+					var exp = new Date(item.expDate.substr(0,10))
+					// console.log('exp is: ', exp)
+					// console.log('与今天差的天数：', this.dateMinus(todayDate, exp))
+					var expireDays = this.dateMinus(todayDate, exp)
+					stockList[i].expireDays = expireDays
 				}
+				return stockList
+			},
+			// 1: 'Expired', 2: 'Category', 3: 'Name', 4: 'Default'
+			selectSortingItemList(xflSelectResult){
+				if (xflSelectResult.newVal == this.sortingMethod[0]) {
+					uni.request({
+					url: 'http://101.35.91.117:7884/item/user/'+uni.getStorageSync('userId') + '/1',
+					method: 'get',
+					}).then(res=>{
+						let stockList = res[1].data
+						this.stockList = this.calExpreDays(stockList)
+					})
+				} else if (xflSelectResult.newVal == this.sortingMethod[1]) {
+					uni.request({
+					url: 'http://101.35.91.117:7884/item/user/'+uni.getStorageSync('userId') + '/2',
+					method: 'get',
+					}).then(res=>{
+						let stockList = res[1].data
+						this.stockList = this.calExpreDays(stockList)
+					})
+				} else if (xflSelectResult.newVal == this.sortingMethod[2]) {
+					uni.request({
+					url: 'http://101.35.91.117:7884/item/user/'+uni.getStorageSync('userId') + '/3',
+					method: 'get',
+					}).then(res=>{
+						let stockList = res[1].data
+						this.stockList = this.calExpreDays(stockList)
+					})
+				} else if (xflSelectResult.newVal == this.sortingMethod[3]) {
+					uni.request({
+					url: 'http://101.35.91.117:7884/item/user/'+uni.getStorageSync('userId') + '/4',
+					method: 'get',
+					}).then(res=>{
+						let stockList = res[1].data
+						this.stockList = this.calExpreDays(stockList)
+					})
+				}
+
 
 			},
 			sortStockListAlphabetical(){
@@ -1215,6 +1257,44 @@
 				    }
 				});
 				this.itemEditor=false	
+			},
+			showTooltip(tipName) {
+				if (tipName == 'addScanTip') {
+					var content = "You can click the scan button to scan the expire date, app will add it automatically."
+				} else if (tipName == 'inStockScanTip') {
+					var content = "Click the scan button on top right to add a new item in you list!"
+				}
+				try {
+					var inStockScanTip = uni.getStorageSync(tipName)
+					console.log(tipName, ' is: ', inStockScanTip)
+				} catch (error) {
+					console.log("error is :", error)
+					var inStockScanTip = 1
+					uni.setStorageSync("inStockScanTip", inStockScanTip)
+					// uni.setStorage({key: "inStockScanTip",
+					// 				data: inStockScanTip})
+				}
+				console.log('show tool tip')
+				if (inStockScanTip == "") {
+					var inStockScanTip = 1
+					uni.setStorageSync(tipName, inStockScanTip)
+				} else {
+					uni.setStorageSync(tipName, inStockScanTip + 1)
+				}
+				if (inStockScanTip == 1) {
+					uni.showModal({
+						title: "Tool Tips",
+						content: content,
+						showCancel: false,
+						success: function (res) {
+							if (res.confirm) {
+								console.log('用户点击确定');
+							} else if (res.cancel) {
+								console.log('用户点击取消');
+							}
+						}
+					})
+				}
 			}
 		},
 	}

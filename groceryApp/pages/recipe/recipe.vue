@@ -230,7 +230,7 @@
 						'likes': item.likes,
 					}
 					
-					if (used.includes(ingre) || item.title.toLowerCase().includes(ingre.toLowerCase())) {
+					if (used.toLowerCase().includes(ingre.toLowerCase()) || item.title.toLowerCase().includes(ingre.toLowerCase())) {
 						console.log("111" + item.title)
 						List.push(recipeInfo);
 						
