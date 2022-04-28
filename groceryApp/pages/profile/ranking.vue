@@ -22,20 +22,21 @@
 							<div class="titleline"></div>
 						</view>
 					</block>
-					
-					<block v-for="(item,index) in ranking_list">
-						
-						<view :style="{'color': getcolor(index),'padding-top':'10px' }">
-							<text style="font-weight: 900;margin-left: 40px;float:left;width: 40px;">{{getIndex(index)}}</text>
-							<text style="font-weight: 900;margin-left: 40px;float:left;">{{item.name}}</text>
-							<text style="font-weight: 900;margin-right: 50px;float:right;">{{item.rankingDays}}</text>
-						</view>
-						<div class="partingline"></div>
-						<!-- <u-divider half-width="40%"></u-divider> -->
-					</block>
+					<scroll-view :scroll-y="true" :style="{'height':getScrollHeight()+'px'}"  >
+						<block v-for="(item,index) in ranking_list">
+							
+							<view :style="{'color': getcolor(index),'padding-top':'10px' }">
+								<text style="font-weight: 900;margin-left: 40px;float:left;width: 40px;">{{getIndex(index)}}</text>
+								<text style="font-weight: 900;margin-left: 40px;float:left;">{{item.name}}</text>
+								<text style="font-weight: 900;margin-right: 50px;float:right;">{{item.rankingDays}}</text>
+							</view>
+							<div class="partingline"></div>
+							<!-- <u-divider half-width="40%"></u-divider> -->
+						</block>
+					</scroll-view>
 				</view>
 					<view class='my-content'>
-							<view v-if="my_rank.userRankingDays==-1" style="font-weight: 700;line-height:45px;">You have no ranking data.
+							<view class='rank-self' v-if="my_rank.userRankingDays==-1" style="font-weight: 700;line-height:45px;">You have no ranking data.
 								<image src="../../static/help-white.png"  @click.stop="hintDays()" style="width: 20px;height: 20px;margin-left: 10px;"></image>
 							</view>
 							
@@ -101,6 +102,10 @@
 		methods: {
 			onClickBtn(){
 				
+			},
+			getScrollHeight(){
+				// return this.deviceHeight-3200
+				return this.deviceHeight-150
 			},
 			hintDays(){
 				uni.showModal({
