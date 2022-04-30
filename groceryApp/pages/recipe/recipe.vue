@@ -6,7 +6,7 @@
 		<view class="main-content">
 			<view class="main-body" :style="{'height': getDeviceHeight()-110 + 'px'}">
 			<!-- <view class="main-body"> -->
-				<u-search placeholder="Search Ingredient" :show-action="true" actionText="search" margin="30rpx 50rpx" height="50"  v-model="searchIngre" @custom="searchRecipe()"></u-search>
+				<u-search placeholder="Search Ingredient" :show-action="true" actionText="search" :actionStyle="{width:'60px'}"  margin="30rpx 30rpx" height="50"  v-model="searchIngre" @custom="searchRecipe()"></u-search>
 				<scroll-view :scroll-y="true"  :style="{'height': getDeviceHeight()-190 + 'px'}">
 					<div v-if="itemList.length==0" style="margin-top: 20px;">Nothing in stock</div>
 					<view class="" style="padding: 0 15px 0 15px;margin-top: 30px;" v-for="(recipe, index) in itemList">
@@ -17,11 +17,11 @@
 										<view class="demo-layout bg-purple-light card" @click="toDetail(recipe.itemId)">
 											<view class="card-box">
 												<u-image border-radius="6px" height="138px" width="100%" :src="recipe.img" :fade="true" duration="450"></u-image>
-												<text style="margin-left: 20rpx;font-size: 12px;font-weight: 500;">{{ limitWords(recipe.name,40) }}</text>
+												<text style="margin-left: 20rpx;font-size: 12px;font-weight: 300; text-align: left;display:inline-block;">{{ limitWords(recipe.name,40) }}</text>
 												
 												<view style="text-align: left;margin-top: 10px;">
-													<image src="../../static/b-medal.png" style="width: 15px;height: 15px;margin-left: 10rpx;">
-													<text style="display: inline-block;margin-left: 10px;font-size: 10px;">{{ limitWords(recipe.type,20)}}</text>
+													<image src="../../static/uview/example/recipe.png" style="width: 15px;height: 15px;margin-left: 10rpx;">
+													<text style="display: inline-block;margin-left: 10px;font-size: 10px; ">{{ limitWords(recipe.type,20)}}</text>
 													
 												</view>
 					<!-- 							<view style="margin-top: 10px;text-align: left;margin-left: 30rpx;">
@@ -35,10 +35,10 @@
 										<view class="demo-layout bg-purple-light card" @click="toDetail(itemList[index+1].itemId)">
 											<view class="card-box">
 												<u-image border-radius="6px" height="138px" width="100%" :src="recipe2.img" :fade="true" duration="450"></u-image>
-												<text style="margin-left: 20rpx;font-size: 12px;font-weight: 500;">{{ limitWords(recipe2.name,40) }}</text>
+												<text style="margin-left: 20rpx;font-size: 12px;font-weight: 500; text-align: left;display:inline-block;">{{ limitWords(recipe2.name,40) }}</text>
 												
 												<view style="text-align: left;margin-top: 10px;">
-													<image src="../../static/b-medal.png" style="width: 15px;height: 15px;margin-left: 10rpx;">
+													<image src="../../static/uview/example/recipe.png" style="width: 15px;height: 15px;margin-left: 10rpx;">
 													<text style="display: inline-block;margin-left: 10px;font-size: 10px;">{{ limitWords(recipe2.type,20)}}</text>
 													
 												</view>
@@ -241,8 +241,9 @@
 				this.itemList=List;
 				if (this.itemList.length === 0) {
 					uni.showToast({
-						title: 'There is no ' + ingre + ' in the stock',
+						title: 'There is no ' + ingre + ' in the stock.\n' + 'Please add ' + ingre + ' in the stock first.',
 						icon: 'none',
+						duration:4000,
 					})
 					this.getAllRecipe();
 					
@@ -285,12 +286,7 @@
 		width: 90%;
 		border-radius: 10px;
 		text-align: center;
-		
-/* 		padding-top: 4rpx;
-		column-count: 2;
-		column-gap: 18rpx;
-		margin-left: 40rpx;
-		margin-right: 40rpx; */
+	
 	}
 	.main-item{
 		position:relative;
@@ -303,7 +299,6 @@
 		display: flex;
 		justify-content: center;
 		text-align: center;
-		/* column-count: 2; */
 		margin-top: 10px;
 		position: absolute;
 		opacity:0.6;
@@ -328,10 +323,12 @@
 }
 .card-box{
 	background-color: white;
-	width: 95%;
+	width: 90%;
 	height: 218px;
 	border-radius: 10px;
 	border:solid  1px #C8C7CC;
 	text-align: left;
+	display:inline-block;
+
 }
 </style>

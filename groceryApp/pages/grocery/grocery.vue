@@ -1259,29 +1259,35 @@
 				this.itemEditor=false	
 			},
 			showTooltip(tipName) {
+				var userIdString = uni.getStorageSync('userId').toString()
+				// console.log('userIdString is: ', userIdString)
+				var userTooltip = uni.getStorageSync(userIdString)
+				
+				if (userTooltip == undefined || userTooltip == '') {
+					var userTooltip = {}
+					uni.setStorageSync(userIdString, userTooltip)
+				}
+				// console.log('userTooltip is: ', userTooltip)
+				try {
+					var inStockScanTip = userTooltip[tipName]
+					// console.log(tipName, ' is: ', inStockScanTip)
+				} catch (error) {
+					console.log("error is :", error)
+					userTooltip.tipName =  false
+				}
 				if (tipName == 'addScanTip') {
 					var content = "You can click the scan button to scan the expire date, app will add it automatically."
 				} else if (tipName == 'inStockScanTip') {
 					var content = "Click the scan button on top right to add a new item in you list!"
 				}
-				try {
-					var inStockScanTip = uni.getStorageSync(tipName)
-					console.log(tipName, ' is: ', inStockScanTip)
-				} catch (error) {
-					console.log("error is :", error)
-					var inStockScanTip = 1
-					uni.setStorageSync("inStockScanTip", inStockScanTip)
-					// uni.setStorage({key: "inStockScanTip",
-					// 				data: inStockScanTip})
-				}
 				console.log('show tool tip')
-				if (inStockScanTip == "") {
-					var inStockScanTip = 1
-					uni.setStorageSync(tipName, inStockScanTip)
-				} else {
-					uni.setStorageSync(tipName, inStockScanTip + 1)
-				}
-				if (inStockScanTip == 1) {
+				// if (inStockScanTip == "") {
+				// 	var inStockScanTip = 1
+				// 	uni.setStorageSync(tipName, inStockScanTip)
+				// } else {
+				// 	uni.setStorageSync(tipName, inStockScanTip + 1)
+				// }
+				if (inStockScanTip == undefined) {
 					uni.showModal({
 						title: "Tool Tips",
 						content: content,
@@ -1294,6 +1300,9 @@
 							}
 						}
 					})
+					userTooltip[tipName] =  false
+					// console.log("userTooltip is: ", userTooltip)
+					uni.setStorageSync(userIdString, userTooltip)
 				}
 			}
 		},
