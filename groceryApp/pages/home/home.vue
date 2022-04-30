@@ -75,7 +75,7 @@
 						</u-col>
 						<u-col span="3">
 							<view class="demo-layout bg-purple-light"  @click="refresh" style="text-align: right;">
-								<image src="../../static/refresh.png" style="width: 20px;height: 20px;display: inline-block;">
+								<image src="../../static/refresh.png" style="width: 25px;height: 20px;display: inline-block;">
 							</view>
 						</u-col>
 					</u-row>	
@@ -98,6 +98,7 @@
 								<u-col span="3">
 										<u-row style="justify-content: flex-end; margin-bottom: 5px">
 											<image src="../../static/add2.png" style="height:40rpx; width: 40rpx; float:right;  margin-right: 10px" @click="addToStock(item)"></image>
+											
 											<image src="../../static/delete.png" style="height: 45rpx; width: 45rpx; float:right;  " @click="deletePotential(item.pid)"></image>
 										<!-- </view>	 -->
 										</u-row>
@@ -512,14 +513,26 @@
 			},
 			deletePotential(pid){
 				let that = this
+				uni.showModal({
+				    title: 'Notice',
+				    content: 'Do you want to remove this from  shopping list?',
+				    success: function (res) {
+				        if (res.confirm) {
+				            uni.request({
+				            url: "http://101.35.91.117:7884/potential/delete/"+pid,
+				            method: 'get',
+				            }).then(res=>{
+				            	// setTimeout(function () {uni.hideLoading();}, 500);
+				            	that.getShoppingList();
+				            })
+				        } else if (res.cancel) {
+							
+				        }
+				    }
+				});
+				
 				// uni.showLoading({title: 'refreshing',mask:true});
-				uni.request({
-				url: "http://101.35.91.117:7884/potential/delete/"+pid,
-				method: 'get',
-				}).then(res=>{
-					// setTimeout(function () {uni.hideLoading();}, 500);
-					that.getShoppingList();
-				})
+				
 			}
 		}
 	}
