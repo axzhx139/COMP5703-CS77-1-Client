@@ -336,7 +336,7 @@
 			
 			<view style="text-align: left;width: 100%;margin-top: 25px;">
 				<text style=" line-height: 50px;float:left;margin-left: 25px;font-size: 20px;">Category</text>
-					<xfl-select
+					<xfl-select 
 						:placeholder = "'Choose'"
 						v-if="refreshiCategory"
 						@change="getCategory"
@@ -348,7 +348,7 @@
 						:initValue="iCategory"
 						:style_Container="'height: 50px; font-size: 16px;'"
 						:selectHideType="'hideAll'"
-						style="width: 50%;background-color: #F3F1F1;float:left;margin-left: 25px;"
+						style="width: 50%;background-color: #F3F1F1;float:left;margin-left: 25px;border-radius: 10px;"
 						>
 					</xfl-select>
 			</view>
@@ -495,7 +495,7 @@
 						that.iName = res.data.iName;
 						that.addItemToList = false;
 						that.needAddItem = true;
-						that.iCategory = '';
+						that.iCategory = res.data.iCategory;
 						that.iTime = '';
 						that.iCitime = '';
 						that.iDetails = '';
