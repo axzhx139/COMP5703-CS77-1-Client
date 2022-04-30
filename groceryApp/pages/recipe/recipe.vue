@@ -241,8 +241,9 @@
 				this.itemList=List;
 				if (this.itemList.length === 0) {
 					uni.showToast({
-						title: 'There is no ' + ingre + ' in the stock',
+						title: 'There is no ' + ingre + ' in the stock.\n' + 'Please add ' + ingre + ' in the stock first.',
 						icon: 'none',
+						duration:4000,
 					})
 					this.getAllRecipe();
 					
