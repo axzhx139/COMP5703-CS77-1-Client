@@ -356,7 +356,7 @@
 			<view style="text-align: left;width: 100%;margin-top: 25px;">
 				<text style="float:left;margin-left: 25px;line-height: 45px;font-size: 20px;">Expire Date</text>
 				<view style="text-align: center;">
-					<u-input @click="openTime" style="float:left;margin-left: 10px;width: 40%;font-weight: 900;display: inline-block;background-color: #F3F1F1;border-radius: 10px;" :clearable="true" placeholder="Time" v-model="iTime" class="fn-input" height="90" input-align="center"/>
+					<u-input @click="openTime" style="float:left;margin-left: 6px;width: 40%;font-weight: 900;display: inline-block;background-color: #F3F1F1;border-radius: 10px;" :clearable="true" placeholder="Time" v-model="iTime" class="fn-input" height="90" input-align="center"/>
 					<u-calendar  v-model="cshow" @change="changeTime" max-date="9999"></u-calendar>
 					<image src="../../static/scan.png" style="margin:10px 10px 0 10px;float:left;width: 25px;height: 25px;" @click="onClickBtn"></image>
 					
