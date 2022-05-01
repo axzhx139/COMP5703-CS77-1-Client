@@ -681,6 +681,7 @@
 			// 计算两个date相差多少天
 			dateMinus(dateStart, dateEnd) {
 				var sdate = new Date(dateStart); 
+				sdate.setHours(7)
 				var now = new Date(dateEnd); 
 				var days = now.getTime() - sdate.getTime(); 
 				var day = Math.floor(days / (1000 * 60 * 60 * 24)); 
