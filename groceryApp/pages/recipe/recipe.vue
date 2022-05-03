@@ -4,8 +4,54 @@
 		</hx-navbar>
 		
 		<view class="main-content">
-			<view class="main-body" :style="{'height': deviceHeight + 'px'}">
-				<u-search placeholder="Search Ingredient" :show-action="true" actionText="search" margin="30rpx 50rpx" height="50" :animation="true" v-model="searchIngre" @custom="searchRecipe()"></u-search>
+			<view class="main-body" :style="{'height': getDeviceHeight()-110 + 'px'}">
+			<!-- <view class="main-body"> -->
+				<u-search placeholder="Search Ingredient" :show-action="true" actionText="search" :actionStyle="{width:'60px'}"  margin="30rpx 30rpx" height="50"  v-model="searchIngre" @custom="searchRecipe()"></u-search>
+				<scroll-view :scroll-y="true"  :style="{'height': getDeviceHeight()-190 + 'px'}">
+					<div v-if="itemList.length==0" style="margin-top: 20px;">Nothing in stock</div>
+					<view class="" style="padding: 0 15px 0 15px;margin-top: 30px;" v-for="(recipe, index) in itemList">
+						
+								<u-row v-if="index%2==0" gutter="0" justify="space-between">
+					
+									<u-col span="6">
+										<view class="demo-layout bg-purple-light card" @click="toDetail(recipe.itemId)">
+											<view class="card-box">
+												<u-image border-radius="6px" height="138px" width="100%" :src="recipe.img" :fade="true" duration="450"></u-image>
+												<text style="margin-left: 20rpx;font-size: 12px;font-weight: 300; text-align: left;display:inline-block;">{{ limitWords(recipe.name,40) }}</text>
+												
+												<view style="text-align: left;margin-top: 10px;">
+													<image src="../../static/uview/example/recipe.png" style="width: 15px;height: 15px;margin-left: 10rpx;">
+													<text style="display: inline-block;margin-left: 10px;font-size: 10px; ">{{ limitWords(recipe.type,20)}}</text>
+													
+												</view>
+					<!-- 							<view style="margin-top: 10px;text-align: left;margin-left: 30rpx;">
+													<text style="font-size: 12px;color: #4CD964;font-weight: 500;">Beef, Mushroom</text>
+												</view> -->
+											</view>
+										</view>
+									</u-col>
+									
+									<u-col span="6" v-if="recipe2=itemList[index+1]">
+										<view class="demo-layout bg-purple-light card" @click="toDetail(itemList[index+1].itemId)">
+											<view class="card-box">
+												<u-image border-radius="6px" height="138px" width="100%" :src="recipe2.img" :fade="true" duration="450"></u-image>
+												<text style="margin-left: 20rpx;font-size: 12px;font-weight: 500; text-align: left;display:inline-block;">{{ limitWords(recipe2.name,40) }}</text>
+												
+												<view style="text-align: left;margin-top: 10px;">
+													<image src="../../static/uview/example/recipe.png" style="width: 15px;height: 15px;margin-left: 10rpx;">
+													<text style="display: inline-block;margin-left: 10px;font-size: 10px;">{{ limitWords(recipe2.type,20)}}</text>
+													
+												</view>
+					<!-- 							<view style="margin-top: 10px;text-align: left;margin-left: 30rpx;">
+													<text style="font-size: 12px;color: #4CD964;font-weight: 500;">Beef, Mushroom</text>
+												</view> -->
+											</view>
+										</view>
+									</u-col>
+								</u-row>	
+							</view>
+						</scroll-view>
+			<!-- 			
 				<block v-for="(item, index) in itemList">
 					<view class="" v-if="index == 0" @click="toDetail(item.itemId)">
 						<view style="text-align: left;margin-left: 25px;margin-top: -5px;font-weight: 600;font-size: 25px;">
@@ -17,7 +63,7 @@
 							</view>
 							<view class="main-item-hover">
 								<view style="height: 47%;"></view>
-								<text style="color: #000000;margin-left: 14px;font-size: 16px;font-weight: 500;">{{ limitWords(item.name) }}</text>
+								<text style="color: #000000;margin-left: 14px;font-size: 16px;font-weight: 500;">{{ item.name}}</text>
 								<view class="" style="margin-left: 14px;margin-top: 10px;color: #000000;">
 									<image src="../../static/bottle.png" style="width: 15px;height: 15px;">
 									<text style="display: inline-block;margin-left: 5px;">{{ limited(item.type) }}</text>
@@ -51,7 +97,7 @@
 							</view>
 						</view>
 					</view>			
-				</block>
+				</block> -->
 			</view>
 		</view>
 		
@@ -103,6 +149,11 @@
 		methods: {
 			onClickBtn(){
 				
+			},
+			getDeviceHeight(){
+				let deviceInfo = uni.getSystemInfoSync();
+				this.deviceHeight = deviceInfo.windowHeight;
+				return this.deviceHeight
 			},
 			searchRecipe(searchIngre){
 				// console.log(this.searchIngre);
@@ -164,6 +215,7 @@
 				for (var i=0;i<searchList.length;i++){
 				    var item = searchList[i]
 					var used = ""
+					
 					for( var j=0;j<item.usedIngredients.length;j++){
 						used+=item.usedIngredients[j].name
 						used+=" "
@@ -178,21 +230,31 @@
 						'likes': item.likes,
 					}
 					
-					if (used.includes(ingre)) {
-						console.log("111" + used)
+					if (used.toLowerCase().includes(ingre.toLowerCase()) || item.title.toLowerCase().includes(ingre.toLowerCase())) {
+						console.log("111" + item.title)
 						List.push(recipeInfo);
-					}
+						
+					} 
 					
 				}
 			
 				this.itemList=List;
+				if (this.itemList.length === 0) {
+					uni.showToast({
+						title: 'There is no ' + ingre + ' in the stock.\n' + 'Please add ' + ingre + ' in the stock first.',
+						icon: 'none',
+						duration:4000,
+					})
+					this.getAllRecipe();
+					
+				}
 				console.log(this.itemList.length);
 			},
-			limitWords(txt){
+			limitWords(txt,len){
 			    var str = txt;
 				var reg = /<[^<>]+>/g;
-				if (str.length >= 40){
-					str = str.substr(0,40) + '...';
+				if (str.length >= len){
+					str = str.substr(0,len-3) + '...';
 					str = str.replace(reg, '');
 				}
 			    return str;
@@ -218,14 +280,13 @@
 		display: flex;
 		justify-content: center;
 		text-align: center;
-		margin-bottom: 6;
 	}
 	.main-body{
 		background-color: #f7edc8;
 		width: 90%;
 		border-radius: 10px;
-		text-align: center;		
-		margin-bottom: 10;
+		text-align: center;
+	
 	}
 	.main-item{
 		position:relative;
@@ -238,7 +299,6 @@
 		display: flex;
 		justify-content: center;
 		text-align: center;
-		/* column-count: 2; */
 		margin-top: 10px;
 		position: absolute;
 		opacity:0.6;
@@ -250,11 +310,25 @@
 
 		position:absolute;
 		/* background-color: #4CD964; */
-		z-index: 1;
+		z-index: 999999;
 		width: 95%;
 		height: 116px;
 		margin-top: 10px;
 		text-align: left;
 	}
+.card{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.card-box{
+	background-color: white;
+	width: 90%;
+	height: 218px;
+	border-radius: 10px;
+	border:solid  1px #C8C7CC;
+	text-align: left;
+	display:inline-block;
 
+}
 </style>

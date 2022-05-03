@@ -22,26 +22,32 @@
 							<div class="titleline"></div>
 						</view>
 					</block>
-					
-					<block v-for="(item,index) in ranking_list">
-						
-						<view :style="{'color': getcolor(index),'padding-top':'10px' }">
-							<text style="font-weight: 900;margin-left: 40px;float:left;width: 40px;">{{getIndex(index)}}</text>
-							<text style="font-weight: 900;margin-left: 40px;float:left;">{{item.name}}</text>
-							<text style="font-weight: 900;margin-right: 50px;float:right;">{{item.rankingDays}}</text>
-						</view>
-						<div class="partingline"></div>
-						<!-- <u-divider half-width="40%"></u-divider> -->
-					</block>
+					<scroll-view :scroll-y="true" :style="{'height':getScrollHeight()+'px'}"  >
+						<block v-for="(item,index) in ranking_list">
+							
+							<view :style="{'color': getcolor(index),'padding-top':'10px' }">
+								<text style="font-weight: 900;margin-left: 40px;float:left;width: 40px;">{{getIndex(index)}}</text>
+								<text style="font-weight: 900;margin-left: 40px;float:left;">{{item.name}}</text>
+								<text style="font-weight: 900;margin-right: 50px;float:right;">{{item.rankingDays}}</text>
+							</view>
+							<div class="partingline"></div>
+							<!-- <u-divider half-width="40%"></u-divider> -->
+						</block>
+					</scroll-view>
 				</view>
 					<view class='my-content'>
-						<view  class='rank-self'>
-							<text style="line-height:45px;font-weight: 900;margin-left: 20px;float:left;">{{getIndex(my_rank.userRanking-1)}}</text>
-							<text style="line-height:45px;font-weight: 900;margin-left: 30px;float:left;">{{my_rank.userName}}</text>
+							<view class='rank-self' v-if="my_rank.userRankingDays==-1" style="font-weight: 700;line-height:45px;">You have no ranking data.
+								<image src="../../static/help-white.png"  @click.stop="hintDays()" style="width: 20px;height: 20px;margin-left: 10px;"></image>
+							</view>
 							
-							<text style="font-style:italic;line-height:45px;font-weight: 600;margin-right: 20px;float:right;">({{my_rank.daysGap}}↑)</text>
-							<text style="line-height:45px;font-weight: 900;margin-right: 5px;float:right;">{{my_rank.userRankingDays}}</text>
-						</view>
+							<view class='rank-self'   v-if="my_rank.userRankingDays>=0">
+								<text style="line-height:45px;font-weight: 900;margin-left: 20px;float:left;">{{getIndex(my_rank.userRanking-1)}}</text>
+								<text style="line-height:45px;font-weight: 900;margin-left: 30px;float:left;">{{my_rank.userName}}</text>
+								
+								<text style="font-style:italic;line-height:45px;font-weight: 600;margin-right: 20px;float:right;">({{my_rank.daysGap}}↑)</text>
+								<text style="line-height:45px;font-weight: 900;margin-right: 5px;float:right;">{{my_rank.userRankingDays}}</text>
+							</view>
+							
 					</view>
 			</view>
 		</view>
@@ -82,9 +88,11 @@
 						this.useraddress='null'
 					}else{
 						var temp=res[1].data.address.split(',')
-						this.useraddress = temp[temp.length-1]
+						if (temp[temp.length-1]!='' && temp[temp.length-1]!=' ')
+							this.useraddress = temp[temp.length-1]
+						else
+							this.useraddress='null'
 					}
-					console.log(this.useraddress)
 					
 			});
 		},
@@ -94,6 +102,22 @@
 		methods: {
 			onClickBtn(){
 				
+			},
+			getScrollHeight(){
+				// return this.deviceHeight-3200
+				return this.deviceHeight-150
+			},
+			hintDays(){
+				uni.showModal({
+					title: "Hint",
+					content: "This is how many days you haven't wasted food. When you have added more than 10 foods in the past 30 days, it can start counting the days. The days will reset when you waste a food.",
+					showCancel: false,
+					success: function (res) {
+						if (res.confirm) {
+							
+						}
+					}
+				})
 			},
 			changeTab(e){
 				if (e === 'all'){
@@ -106,22 +130,33 @@
 					this.citySelect = true
 					this.address=this.useraddress
 					this.getRankData()
+					console.log(this.address)
 				}
 			},
 			getRankData(){
+				let that=this
 				uni.request({
 					url: "http://101.35.91.117:7884/ranking/topTen/"+this.address,
 					method: 'get',
 				}).then(res=>{
-					this.ranking_list = res[1].data.filter(x=>x['rankingDays']!=-1)
-					console.log(this.ranking_list)
+					that.ranking_list=[]
+					// that.ranking_list = res[1].data
+					for (var i=0;i<10;i++){
+						var item = res[1].data[i]
+						if (item && item['rankingDays']!=-1 ){
+							that.ranking_list.push({"name":item.name,'rankingDays':item.rankingDays})
+						}else{
+							that.ranking_list.push({"name":'--','rankingDays':'-'})
+						}
+					}
+					// console.log(JSON.stringify(that.ranking_list))
 				})
 				uni.request({
 					url: "http://101.35.91.117:7884/ranking/previous/"+uni.getStorageSync('userId')+"/"+this.address,
 					method: 'get',
 				}).then(res=>{
-					this.my_rank = res[1].data
-					console.log(this.my_rank)
+					that.my_rank = res[1].data
+					console.log(that.my_rank)
 				})
 			},
 			
@@ -135,7 +170,7 @@
 					return '3rd'
 				}
 				else{
-					return index+1+'nd'
+					return index+1+'th'
 				}
 			},
 			getcolor(index){
@@ -214,7 +249,7 @@
 	.partingline {
 		width:80%;
 		border: 1px solid #D5D5D5;
-		margin:25px auto 10px auto
+		margin:20px auto 10px auto
     }
 	.titleline {
 		width:80%;

@@ -31,7 +31,7 @@
 											:listShow="false"
 											:isCanInput="false"  
 											:style_Container="'height: 30px; font-size: 15px;'"
-											:placeholder = "'Recent Added'"
+											:placeholder = "'Default'"
 											:selectHideType="'hideAll'"
 											style="width: 100%; background-color: #FFFFFF;"
 										>
@@ -75,65 +75,68 @@
 								</uni-col>
 							</uni-row>
 						</inline> -->
-						<block v-for="(item,index) in stockList">
-							<view style="margin-top: 10px;" @click="edit(item, index)">
-								
-								<u-row gutter="16">
-									<u-col span="3">
-										<!-- <view class="demo-layout bg-purple"> -->
-											<image :src="'http://101.35.91.117:7884/item/picture/'+item.itemId+'?'+Math.random()" style="width: 65px;height: 65px;">
-										<!-- </view> -->
-									</u-col>
-									<u-col span="3">
-										<u-row style="margin: 0px 0px 10px 5px;">{{ item.name }}</u-row>
-										<u-row style="margin: 10px 0px 0px 5px;">{{ item.category }}</u-row>
-									</u-col>
-									<u-col span="3">
-										<view class="demo-layout bg-purple-light">
-											<!-- <u-row gutter="18" justify="space-between"> -->
-											<u-row style="justify-content: flex-end; margin-bottom: 5px">
-											<!-- <text>{{ item.name }}</text> -->
-											<!-- <view style="text-align: right;"> -->
-												<!-- <uni-icons type="cart" size="30" v-if="!item.potential" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="saveList(item.itemId)"></uni-icons> -->
-												<!-- <uni-icons type="cart-filled" size="30" v-if="!item.potential" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="deleteList(item.itemId)"></uni-icons> -->
-												<image v-if="!item.potential" src="../../static/cart.png" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="saveList(item.itemId)"></image>
-												<image v-if="item.potential" src="../../static/cart_fill.png" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="deleteList(item.itemId)"></image>
-												<!-- <img src="../../static/knife_fork.png" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click="changeAmount(index)"></img> -->
-												<!-- <u-button shape="circle" size="mini" style="background-color: #F3F1F1; " @click="changeAmount(index)">consume</u-button> -->
-														
-											<!-- </view>	 -->
-											</u-row>
-											<u-row style="justify-content: flex-end; margin-bottom: 5px">
-												<image src="../../static/knife_fork.png" style="height: 45rpx; width: 45rpx; float:right;  margin-right: 6%;" @click="changeAmount(index)"></image>
-											</u-row>
-											<!-- <view>
-												<u-row gutter="18" justify="space-between">
-													<u-col span="4" style="text-align: left;">														
-													</u-col>
-													<u-col span="6" style="text-align: right;">	
-																	
-														<view class="demo-layout bg-purple-light" >														
-															<u-button shape="circle" size="mini" style="background-color: #F3F1F1; " @click="changeAmount(index)">consume</u-button>
-														</view>
-													</u-col>
+						<scroll-view :scroll-y="true" :style="{'height':getDeviceHeight()-240+'px'}"  >
+							<div v-if="stockList.length==0" style="margin-top: 20px;">Please add some products</div>
+							<block v-for="(item,index) in stockList">
+								<view style="margin-top: 10px;" @click="edit(item, index)">
+									
+									<u-row gutter="16">
+										<u-col span="3">
+											<!-- <view class="demo-layout bg-purple"> -->
+												<image :src="'http://101.35.91.117:7884/item/picture/'+item.itemId+'?'+Math.random()" style="width: 65px;height: 65px;">
+											<!-- </view> -->
+										</u-col>
+										<u-col span="3">
+											<u-row style=" margin: 0px 0px 10px 5px;">{{ item.name }}</u-row>
+											<u-row style=" font-size: 5px;margin: 10px 0px 0px 5px;">{{ item.category }}</u-row>
+										</u-col>
+										<u-col span="3">
+											<view class="demo-layout bg-purple-light">
+												<!-- <u-row gutter="18" justify="space-between"> -->
+												<u-row style="justify-content: flex-end; margin-bottom: 5px">
+												<!-- <text>{{ item.name }}</text> -->
+												<!-- <view style="text-align: right;"> -->
+													<!-- <uni-icons type="cart" size="30" v-if="!item.potential" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="saveList(item.itemId)"></uni-icons> -->
+													<!-- <uni-icons type="cart-filled" size="30" v-if="!item.potential" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="deleteList(item.itemId)"></uni-icons> -->
+													<image v-if="!item.potential" src="../../static/cart.png" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="saveList(item.itemId)"></image>
+													<image v-if="item.potential" src="../../static/cart_fill.png" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="deleteList(item.itemId)"></image>
+													<!-- <img src="../../static/knife_fork.png" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click="changeAmount(index)"></img> -->
+													<!-- <u-button shape="circle" size="mini" style="background-color: #F3F1F1; " @click="changeAmount(index)">consume</u-button> -->
+															
+												<!-- </view>	 -->
 												</u-row>
-											</view> -->
-										</view>
-									</u-col>
-									<u-col span="3">
-										<view class="demo-layout bg-purple-dark" style="text-align: right">
-											<!-- <view class="demo-layout bg-purple">
-												<text style="font-weight: 900;float:right;">{{item.expDate}}</text>
+												<u-row style="justify-content: flex-end; margin-bottom: 5px">
+													<image src="../../static/knife_fork.png" style="height: 45rpx; width: 45rpx; float:right;  margin-right: 6%;" @click.stop="changeAmount(index)"></image>
+												</u-row>
+												<!-- <view>
+													<u-row gutter="18" justify="space-between">
+														<u-col span="4" style="text-align: left;">														
+														</u-col>
+														<u-col span="6" style="text-align: right;">	
+																		
+															<view class="demo-layout bg-purple-light" >														
+																<u-button shape="circle" size="mini" style="background-color: #F3F1F1; " @click="changeAmount(index)">consume</u-button>
+															</view>
+														</u-col>
+													</u-row>
+												</view> -->
 											</view>
-											<text style="font-size:12px;">Remind before {{ item.time }} Days</text> -->
-											<text style="font-size:12px; text-align: right;">{{ item.expireDays }} Days</text>
-											<!-- <view>5 Days</view> -->
-										</view>
-									</u-col>
-								</u-row>
-							</view>
-							<u-divider half-width="60%"></u-divider>
-						</block>
+										</u-col>
+										<u-col span="3">
+											<view class="demo-layout bg-purple-dark" style="text-align: right">
+												<!-- <view class="demo-layout bg-purple">
+													<text style="font-weight: 900;float:right;">{{item.expDate}}</text>
+												</view>
+												<text style="font-size:12px;">Remind before {{ item.time }} Days</text> -->
+												<text style="font-size:12px; text-align: right;">{{ item.expireDays }} Days</text>
+												<!-- <view>5 Days</view> -->
+											</view>
+										</u-col>
+									</u-row>
+								</view>
+								<u-divider half-width="60%"></u-divider>
+							</block>
+						</scroll-view>
 					</view>
 				</view>
 			</view>
@@ -141,7 +144,7 @@
 <!--  -->
 <!--  -->
 <!--  -->
-			<hqs-popup title="" :from="popFrom" v-model="itemEditor" :round="round" :showClose="false" height="600px">
+			<hqs-popup style="z-index: 999;"title="" :from="popFrom" v-model="itemEditor" :round="round" :showClose="false" height="600px">
 				<view class="t-bg">
 
 					<view style="text-align: left;width: 100%;">
@@ -157,7 +160,7 @@
 							<xfl-select @change="getCategory"
 								:list="options"
 								:clearable="true"
-								:showItemNum="5" 
+								:showItemNum="10" 
 								:listShow="false"
 								:isCanInput="false"  
 								:style_Container="'height: 50px; font-size: 16px;'"
@@ -173,7 +176,7 @@
 						<text style="margin-left: 25px;font-size: 20px;">Expire Date</text>
 						<view style="text-align: center;">
 							<u-input @click="openTime" style="width: 80%;font-weight: 900;display: inline-block;background-color: #F3F1F1;border-radius: 10px;" :clearable="false" placeholder="Time" v-model="iTimeInAussieFormat" class="fn-input" height="90" input-align="center"/>
-							<u-calendar :safe-area-inset-bottom="true" max-date="9999" v-model="cshow" @change="changeTime"></u-calendar>
+							<u-calendar  :safe-area-inset-bottom="true" max-date="9999" v-model="cshow" @change="changeTime"></u-calendar>
 						</view>
 					</view>
 					
@@ -207,9 +210,6 @@
 				</view>
 			</hqs-popup>
 			
-<!-- 	
-<!--  -->	
-<!--  -->	
 			
 			<hqs-popup  title="" :from="popFrom" v-model="chNum" :round="round" :showClose="false" height="300px">
 				<view class="t-bg">
@@ -270,51 +270,54 @@
 							</u-col>
 						</u-row>
 					</view> -->
-					<view style="margin-top: 5px;">
-						<block v-for="(item,index) in oldstockList">
-							<view style="margin-top: 10px;">
-								<u-row gutter="16">
-									<u-col span="3">
-										<view class="demo-layout bg-purple">
-											<image :src="'http://101.35.91.117:7884/item/picture/'+item.itemId+'?'+Math.random()" style="width: 65px;height: 65px;">
-										</view>
-									</u-col>
-									
-									<u-col span="3">
-										<u-row style="margin: 0px 0px 10px 5px;">{{ item.name }}</u-row>
-										<u-row style="margin: 10px 0px 0px 5px;">{{ item.category }}</u-row>
-									</u-col>
-									
-									<u-col span="3">
-										<view class="demo-layout bg-purple-light">
-											<!-- <u-row gutter="18" justify="space-between"> -->
-											<u-row style="justify-content: flex-end; margin-bottom: 5px">
-											<!-- <text>{{ item.name }}</text> -->
-											<!-- <view style="text-align: right;"> -->
-												<!-- <uni-icons type="cart" size="30" v-if="!item.potential" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="saveList(item.itemId)"></uni-icons> -->
-												<!-- <uni-icons type="cart-filled" size="30" v-if="!item.potential" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="deleteList(item.itemId)"></uni-icons> -->
-												<image v-if="!item.potential" src="../../static/cart.png" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="saveList(item.itemId)"></image>
-												<image v-if="item.potential" src="../../static/cart_fill.png" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="deleteList(item.itemId)"></image>
-					
-											</u-row>
+					<scroll-view :scroll-y="true" :style="{'height':getDeviceHeight()-210+'px'}"  >
+						<view style="margin-top: 5px;">
+							<div v-if="oldstockList.length==0" style="margin-top: 20px;">Nothing in history</div>
+							<block v-for="(item,index) in oldstockList">
+								<view style="margin-top: 10px;">
+									<u-row gutter="16">
+										<u-col span="3">
+											<view class="demo-layout bg-purple">
+												<image :src="'http://101.35.91.117:7884/item/picture/'+item.itemId+'?'+Math.random()" style="width: 65px;height: 65px;">
+											</view>
+										</u-col>
+										
+										<u-col span="3">
+											<u-row style="margin: 0px 0px 10px 5px;">{{ item.name }}</u-row>
+											<u-row style="font-size: 5px; margin: 10px 0px 0px 5px;">{{ item.category }}</u-row>
+										</u-col>
+										
+										<u-col span="3">
+											<view class="demo-layout bg-purple-light">
+												<!-- <u-row gutter="18" justify="space-between"> -->
+												<u-row style="justify-content: flex-end; margin-bottom: 5px">
+												<!-- <text>{{ item.name }}</text> -->
+												<!-- <view style="text-align: right;"> -->
+													<!-- <uni-icons type="cart" size="30" v-if="!item.potential" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="saveList(item.itemId)"></uni-icons> -->
+													<!-- <uni-icons type="cart-filled" size="30" v-if="!item.potential" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="deleteList(item.itemId)"></uni-icons> -->
+													<image v-if="!item.potential" src="../../static/cart.png" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="saveList(item.itemId)"></image>
+													<image v-if="item.potential" src="../../static/cart_fill.png" style="height: 50rpx; width: 50rpx; float:right;  margin-right: 6%;" @click.stop="deleteList(item.itemId)"></image>
+						
+												</u-row>
 
-										</view>
-									</u-col>
-									
-									<u-col span="3">
-										<view class="demo-layout bg-purple-dark">
-											<!-- <view><text style="font-size: 14px;">{{ item.expDate }}</text></view> -->
-											 <view v-if="item.status=='consume'"><text style="font-size: 12px;">{{item.conDate.split("T")[0].split('-')[2]+'/'+ item.conDate.split("T")[0].split('-')[1] }}</text></view>
-											 <view v-if="item.status=='expire'"><text style="font-size: 12px;">{{item.expDate.split("T")[0].split('-')[2]+'/'+ item.expDate.split("T")[0].split('-')[1] }}</text></view>
-											 <view v-if="item.status=='consume'" style="color: #FFA451;">Consumed</view>
-											<view v-if="item.status=='expire'" style="color: #AA4A44;">Expired </view>
-										</view>
-									</u-col>
-								</u-row>
-							</view>
-							<u-divider half-width="60%"></u-divider>
-						</block>
-					</view>
+											</view>
+										</u-col>
+										
+										<u-col span="3">
+											<view class="demo-layout bg-purple-dark">
+												<!-- <view><text style="font-size: 14px;">{{ item.expDate }}</text></view> -->
+												 <view v-if="item.status=='consume'"><text style="font-size: 12px;">{{getDate(item.conDate,'day')}}</text></view>
+												 <view v-if="item.status=='expire'"><text style="font-size: 12px;">{{getDate(item.expDate,'day')}}</text></view>
+												 <view v-if="item.status=='consume'" style="color: #FFA451;">Consumed</view>
+												<view v-if="item.status=='expire'" style="color: #AA4A44;">Expired </view>
+											</view>
+										</u-col>
+									</u-row>
+								</view>
+								<u-divider half-width="60%"></u-divider>
+							</block>
+						</view>
+					</scroll-view>
 				</view>
 			</view>
 		</view>
@@ -326,34 +329,20 @@
 			
 			<view style="text-align: left;width: 100%;margin-top: 25px;">
 				<text style=" line-height: 50px;float:left;margin-left: 25px;font-size: 20px;">Category</text>
-					<!-- <template>
-						<el-select v-model="value" placeholder="请选择">
-							<el-option
-							  v-for="item in options"
-							  :key="item"
-							  :value="item">
-							</el-option>
-						</el-select>
-					  </template> -->
-					
-					<!-- <u-select v-model="value" :list="options" @confirm="sexconfirm" :default-value="subjectAarr"></u-select> -->
-					<!-- iCategory: {{ iCategory }}<br> -->
-					<xfl-select
+					<xfl-select 
+						:placeholder = "'Choose'"
 						v-if="refreshiCategory"
 						@change="getCategory"
 						:list="options"
 						:clearable="true"
 						:showItemNum="10" 
 						:listShow="false"
-						:isCanInput="true"  
+						:isCanInput="false"  
 						:initValue="iCategory"
 						:style_Container="'height: 50px; font-size: 16px;'"
-						:placeholder = "'Choose'"
 						:selectHideType="'hideAll'"
-						style="width: 50%;background-color: #F3F1F1;float:left;margin-left: 25px;"
+						style="width: 50%;background-color: #F3F1F1;float:left;margin-left: 25px;border-radius: 10px;"
 						>
-					</xfl-select>
-					
 					</xfl-select>
 			</view>
 			
@@ -361,22 +350,22 @@
 				<text style="float:left;margin-left: 25px;line-height: 45px;font-size: 20px;">Expire Date</text>
 				<view style="text-align: center;">
 					<u-input
-					type="text"
-					disabled
-					@click="openTime"
-					style="float:left;margin-left: 10px;width: 40%;font-weight: 900;display: inline-block;background-color: #F3F1F1;border-radius: 10px;"
-					:clearable="true"
-					placeholder="Time"
-					v-model="iTime"
-					class="fn-input"
-					height="90"
-					input-align="center"/>
+						type="text"
+						disabled
+						@click="openTime"
+						style="float:left;margin-left: 10px;width: 40%;font-weight: 900;display: inline-block;background-color: #F3F1F1;border-radius: 10px;"
+						:clearable="true"
+						placeholder="Time"
+						v-model="iTime"
+						class="fn-input"
+						height="90"
+						input-align="center"/>
 					<u-calendar
-					v-model="cshow"
-					@change="changeTime"
-					max-date="9999"></u-calendar>
-					<image src="../../static/scan.png" style="margin:10px 10px 0 10px;float:left;width: 25px;height: 25px;" @click="onClickBtn"/>
-					
+						v-model="cshow"
+						@change="changeTime"
+						max-date="9999">
+					</u-calendar>
+					<image src="../../static/scan.png" style="margin:10px 10px 0 10px;float:left;width: 25px;height: 25px;" @click="onClickBtn"/>	
 				</view>
 			</view>
 			
@@ -444,6 +433,7 @@
 				iItemid: '',
 				status:'instock',
                 iCategory: '',
+				value: '',
 				refreshiCategory: true,
 				shopList:[],
 				oldstockList: [],
@@ -486,10 +476,11 @@
 						position: 'left'
 					}],
 				},
-				options: ['Eggs', 'Fruit','Vegetable','Dairy','Animal product','Frozen','Canned Goods','Frozen Foods','Deli','Others'],
-				sortingMethod: ['Recent Added', 'A-z', 'Expire Soon'],
+				options: ['Fruit','Vegetable','Dairy','Animal product','Frozen','Canned Goods','Frozen Foods','Deli','Others'],
+				// sortingMethod: ['Recent Added', 'A-z', 'Expire Soon'],
+				sortingMethod: ['Expired', 'Category', 'Name', 'Default'],
 				chooseTags: ['Expired', 'Consumed', 'All'],
-				value: '',
+				deviceHeight:0,
 			}
 		},
 		onLoad(){
@@ -498,14 +489,64 @@
 			// setInterval(() => {
 			// 	this.getCol()
 			// },1000)
-			
 		},
 		onShow(){
+			let that =this
+			//判断是不是从shoppinglist添加
+			uni.getStorage({
+				key:'addToStock',
+				success: function(res){
+					if(res.data){
+						if(res.data.iPicture && res.data.iPicture !=''){
+							that.add_src='http://101.35.91.117:7884/item/picture/'+res.data.iId;
+							that.filepath=[that.add_src];
+						}else{
+							that.filepath='';
+							that.add_src='';
+						}
+						that.iName = res.data.iName;
+						that.addItemToList = false;
+						that.needAddItem = true;
+						that.iCategory = res.data.iCategory;
+						that.iTime = '';
+						that.iCitime = '';
+						that.iDetails = '';
+						that.iItemid = '';
+						uni.setStorageSync('addToStock', null);
+					}
+				}
+			})
+			//判断是不是从profile点数字点进来的，切tab
+			uni.getStorage({
+				key:'goToHistoty',
+				success: function(res){
+					console.log(res.data)
+					if(res.data=='consumed' || res.data=='expired'){
+						that.iisSelect = false
+						that.issSelect = true
+					}else{
+						that.iisSelect = true
+						that.issSelect = false
+					}
+					uni.setStorageSync('goToHistoty', '');
+				}
+			})
 			this.getCol()
+			this.showTooltip('inStockScanTip')
 		},
 		methods: {
 			get_src(){
-				return this.add_src
+				if(this.add_src && this.add_src!=''){
+					return this.add_src
+				}else{
+					return "../../static/noPhoto.png"
+				}
+				
+			},
+			getDeviceHeight(){
+				let deviceInfo = uni.getSystemInfoSync();
+				this.deviceHeight = deviceInfo.windowHeight;
+				return this.deviceHeight
 			},
 			change(data){
 				console.log(data.index);
@@ -515,7 +556,25 @@
                 this.iCategory = category.newVal;
 				this.$forceUpdate()
             },
-            
+            getDate(time,type){
+            	var dt = new Date(time)
+            	var year = dt.getFullYear();
+            	var month = dt.getMonth()+1;
+            	var day = dt.getDate();
+            	var hour = dt.getHours();
+            	var minut = dt.getMinutes();
+            	var second = dt.getSeconds();
+            	month =  month < 10 ? "0"+month : month;
+            	day =  day < 10 ? "0"+day : day;
+            	hour =  hour < 10 ? "0"+hour : hour;
+            	minut =  minut < 10 ? "0"+minut : minut;
+            	second =  second < 10 ? "0"+second : second;
+            	if(type=='min')
+            		var res = day+'-'+month+'-'+year+' '+hour+':'+minut
+            	else if(type='day')
+            		var res = day+'/'+month
+            	return res
+            },
 			save(){
 				
 				var date = new Date();
@@ -538,7 +597,7 @@
                 // convert remind time to correct form
                 var expDate = new Date(this.iTime);
 				var remindTime = (expDate.getDate() - this.iCitime);
-				var lsRemindTime = new Date(expDate.setDate(remindTime)).toLocaleDateString().split("/");
+				var lsRemindTime = new Date(expDate.setDate(remindTime)).toISOString().split("T")[0];
 				// console.log(remindTime);
 				// console.log(lsRemindTime);
 
@@ -548,10 +607,10 @@
                 // }
                 //Australian Timezone needed
 				// console.log(new Date())
-                if(lsRemindTime[1].length === 1){
-                    lsRemindTime[1] = "0" + lsRemindTime[1]
-                }
-                var remindTime = lsRemindTime[0]+"-"+lsRemindTime[1]+"-"+lsRemindTime[2]
+                // if(lsRemindTime[1].length === 1){
+                //     lsRemindTime[1] = "0" + lsRemindTime[1]
+                // }
+                // var remindTime = lsRemindTime[0]+"-"+lsRemindTime[1]+"-"+lsRemindTime[2]
 				// console.log(remindTime);
 				// console.log(lsRemindTime);
 				
@@ -565,7 +624,7 @@
 				  "expDate": this.iTime,
 				  // "itemId": 0,
 				  "name": this.iName,
-				  "remindTime": remindTime,
+				  "remindTime": lsRemindTime,
 				  "status": this.status,
 				  "otherDetail": this.iDetails,
 				  "uid": uni.getStorageSync('userId'),
@@ -579,7 +638,6 @@
 					data:JSON.stringify(item)
 				}).then(res => {
 					console.log(that.filepath[0])
-					console.log(res[1].data)
 					if(that.filepath[0]){
 						uni.uploadFile({
 							url: 'http://101.35.91.117:7884/item/update/picture', 
@@ -635,6 +693,7 @@
 			// 计算两个date相差多少天
 			dateMinus(dateStart, dateEnd) {
 				var sdate = new Date(dateStart); 
+				sdate.setHours(7)
 				var now = new Date(dateEnd); 
 				var days = now.getTime() - sdate.getTime(); 
 				var day = Math.floor(days / (1000 * 60 * 60 * 24)); 
@@ -702,7 +761,6 @@
 				  "name": item.name,
 				  "remindTime": item.remindTime,
 				  "status": "consume",
-				  "uid": uni.getStorageSync('userId')
 				}
 				
 				uni.request({
@@ -717,8 +775,9 @@
 
 			changeTime(e){
 				this.iTime = e.result
-				var array = this.iTime.split('-')
-				this.iTimeInAussieFormat = array[2]+"-"+array[1]+"-"+array[0]
+				// var array = this.iTime.split('-')
+				// this.iTimeInAussieFormat = array[2]+"-"+array[1]+"-"+array[0]
+				this.iTimeInAussieFormat =  e.result
 				console.log(this.iTimeInAussieFormat)
 				console.log(this.iTime)
                 
@@ -773,14 +832,13 @@
 				this.itemEditor=false
 				
 			},
-            
-			
-			scanCode(){
+
+            scanCode(){
 				// let that = this
 				uni.scanCode({
-				    success: (res) => {
-				        console.log('type：' + res.scanType);
-				        console.log('codeID：' + res.result);
+					success: (res) => {
+						console.log('type：' + res.scanType);
+						console.log('codeID：' + res.result);
 						this.icode = res.result;
 						uni.request({
 							url: "https://world.openfoodfacts.org/api/v2/product/" + this.icode,		
@@ -795,9 +853,9 @@
 							this.$nextTick(function(){
 								this.refreshiCategory = true
 							})
-							this.$forceUpdate()
+							// this.$forceUpdate()
 						});
-				    }
+					}
 				});		
 			},
 			// searchProduct(){
@@ -814,14 +872,14 @@
 			// },   
             scanDate(){
 				let that = this
-                uni.chooseImage({
-                    count: 1, 
-                    sizeType: ['original', 'compressed'], 
+				uni.chooseImage({
+					count: 1, 
+					sizeType: ['original', 'compressed'], 
 
-                    sourceType: ['camera', 'album'], 
+					sourceType: ['camera', 'album'], 
 
-                    success:  (res) => {
-                        console.log(String(res.tempFilePaths[0]));
+					success:  (res) => {
+						console.log(String(res.tempFilePaths[0]));
 						uni.previewImage({
 							urls: res.tempFilePaths,
 						});
@@ -861,9 +919,11 @@
 							
 						// });
 						
-                    }
-                });
-            },
+
+					}
+				});
+			},
+            
 			onClickBtn(e){
 				console.log("e.key is: ", e.key)
 				if (e.key == 'add'){
@@ -878,18 +938,20 @@
 					this.iCitime = '';
 					this.iDetails = '';
 					this.iItemid = '';
+					this.filepath='';
+					this.add_src='';
 					// console.log('change')
+					this.showTooltip("addScanTip")
 				}else if(e.key == 'back'){
 					this.addItemToList = true
 					this.needAddItem = false
+					this.filepath='';
+					this.add_src='';
+
 				}else if(e.key == 'scan'){
                     this.scanCode();
 					this.needAddItem = true
 					this.addItemToList = false
-					// this.iTime = '';
-					// this.iCitime = '';
-					// this.iDetails = '';
-					// this.iItemid = '';
                 }else{
 					this.scanDate();
 				}
@@ -967,9 +1029,11 @@
 					// var nowDate = date.getFullYear() + seperator + nowMonth + seperator + strDate;
 				    
 				    // convert remind time to correct form
-				    var expDate = new Date(this.iTimeInAussieFormat);
-				    var remindTime = (expDate.getDate() - this.iCitime); 
-					var lsRemindTime = new Date(expDate.setDate(remindTime)).toLocaleDateString().split("/");
+				    var expDate = new Date(this.iTime);
+				    var remindTime = (expDate.getDate() - this.iCitime);
+				    var lsRemindTime = new Date(expDate.setDate(remindTime)).toISOString().split("T")[0];
+					
+					console.log(lsRemindTime)
 				    // console.log(remindTime);
 				    // console.log(lsRemindTime);
 					//China Timezone needed
@@ -977,11 +1041,11 @@
 				    //     lsRemindTime[2] = "0" + lsRemindTime[2]
 				    // }
 				    //Australian Timezone needed
-					// console.log(new Date())
-				    if(lsRemindTime[1].length === 1){
-				        lsRemindTime[1] = "0" + lsRemindTime[1]
-				    }
-				    var remindTime = lsRemindTime[0]+"-"+lsRemindTime[1]+"-"+lsRemindTime[2]
+					// // console.log(new Date())
+				 //    if(lsRemindTime[1].length === 1){
+				 //        lsRemindTime[1] = "0" + lsRemindTime[1]
+				 //    }
+				 //    var remindTime = lsRemindTime[0]+"-"+lsRemindTime[1]+"-"+lsRemindTime[2]
 					// console.log(remindTime);
 					// console.log(lsRemindTime);
 					
@@ -995,10 +1059,9 @@
 					  "expDate": this.iTimeInAussieFormat,
 					  "itemId": this.iItemid,
 					  "name": this.iName,
-					  "remindTime": remindTime,
+					  "remindTime": lsRemindTime,
 					  "status": this.editItem.status,
 					  "otherDetail": this.iDetails,
-					  "uId": uni.getStorageSync('userId')
 					}
 					console.log(JSON.stringify(item))
 					uni.request({
@@ -1017,15 +1080,54 @@
 					this.itemEditor = false;
 					
 			},
-			selectSortingItemList(category){
-				
-				if (category.newVal === "A-z"){
-					this.sortStockListAlphabetical();
-				}else if (category.newVal === "Expire Soon"){
-					this.sortStockListByExpDate();
-				}else if (category.newVal === "Recent Added"){
-					this.sortStockListByAddDate();
+			calExpreDays(stockList) {
+				let todayDate = new Date(Date.now())
+				for (var i=0;i<stockList.length;i++){
+                    var item = stockList[i]
+					var exp = new Date(item.expDate.substr(0,10))
+					// console.log('exp is: ', exp)
+					// console.log('与今天差的天数：', this.dateMinus(todayDate, exp))
+					var expireDays = this.dateMinus(todayDate, exp)
+					stockList[i].expireDays = expireDays
 				}
+				return stockList
+			},
+			// 1: 'Expired', 2: 'Category', 3: 'Name', 4: 'Default'
+			selectSortingItemList(xflSelectResult){
+				if (xflSelectResult.newVal == this.sortingMethod[0]) {
+					uni.request({
+					url: 'http://101.35.91.117:7884/item/user/'+uni.getStorageSync('userId') + '/1',
+					method: 'get',
+					}).then(res=>{
+						let stockList = res[1].data
+						this.stockList = this.calExpreDays(stockList)
+					})
+				} else if (xflSelectResult.newVal == this.sortingMethod[1]) {
+					uni.request({
+					url: 'http://101.35.91.117:7884/item/user/'+uni.getStorageSync('userId') + '/2',
+					method: 'get',
+					}).then(res=>{
+						let stockList = res[1].data
+						this.stockList = this.calExpreDays(stockList)
+					})
+				} else if (xflSelectResult.newVal == this.sortingMethod[2]) {
+					uni.request({
+					url: 'http://101.35.91.117:7884/item/user/'+uni.getStorageSync('userId') + '/3',
+					method: 'get',
+					}).then(res=>{
+						let stockList = res[1].data
+						this.stockList = this.calExpreDays(stockList)
+					})
+				} else if (xflSelectResult.newVal == this.sortingMethod[3]) {
+					uni.request({
+					url: 'http://101.35.91.117:7884/item/user/'+uni.getStorageSync('userId') + '/4',
+					method: 'get',
+					}).then(res=>{
+						let stockList = res[1].data
+						this.stockList = this.calExpreDays(stockList)
+					})
+				}
+
 
 			},
 			sortStockListAlphabetical(){
@@ -1112,9 +1214,6 @@
 					})
 				}
 			},		
-			
-			
-			
 			getImgById(id){
 				uni.request({
 				url: "http://101.35.91.117:7884/item/picture/"+id,
@@ -1125,23 +1224,23 @@
 			},
 			
 			saveList(id){
-				uni.showLoading({title: 'updating',mask:true});
+				// uni.showLoading({title: 'updating',mask:true});
 				uni.request({
 				url: "http://101.35.91.117:7884/potential/add/"+id+"/"+uni.getStorageSync('userId'),
 				method: 'get',
 				}).then(res=>{
 					this.getCol()
-					setTimeout(function () {uni.hideLoading();}, 1000);
+					// setTimeout(function () {uni.hideLoading();}, 1000);
 				})
 			},
 			deleteList(id){
-				uni.showLoading({title: 'updating',mask:true});
+				// uni.showLoading({title: 'updating',mask:true});
 				uni.request({
 				url: "http://101.35.91.117:7884/potential/remove/"+id+"/"+uni.getStorageSync('userId'),
 				method: 'get',
 				}).then(res=>{
 					this.getCol()
-					setTimeout(function () {uni.hideLoading();}, 1000);
+					// setTimeout(function () {uni.hideLoading();}, 1000);
 				})
 			},		
 			changePhoto(){
@@ -1174,16 +1273,57 @@
 						});
 				    }
 				});
+				this.itemEditor=false	
+			},
+			showTooltip(tipName) {
+				var userIdString = uni.getStorageSync('userId').toString()
+				// console.log('userIdString is: ', userIdString)
+				var userTooltip = uni.getStorageSync(userIdString)
 				
-				this.itemEditor=false
-				
+				if (userTooltip == undefined || userTooltip == '') {
+					var userTooltip = {}
+					uni.setStorageSync(userIdString, userTooltip)
+				}
+				// console.log('userTooltip is: ', userTooltip)
+				try {
+					var inStockScanTip = userTooltip[tipName]
+					// console.log(tipName, ' is: ', inStockScanTip)
+				} catch (error) {
+					console.log("error is :", error)
+					userTooltip.tipName =  false
+				}
+				if (tipName == 'addScanTip') {
+					var content = "You can click the scan button to scan the expire date, app will add it automatically."
+				} else if (tipName == 'inStockScanTip') {
+					var content = "Click the scan button on top right to add a new item in you list!"
+				}
+				console.log('show tool tip')
+				// if (inStockScanTip == "") {
+				// 	var inStockScanTip = 1
+				// 	uni.setStorageSync(tipName, inStockScanTip)
+				// } else {
+				// 	uni.setStorageSync(tipName, inStockScanTip + 1)
+				// }
+				if (inStockScanTip == undefined) {
+					uni.showModal({
+						title: "Tool Tips",
+						content: content,
+						showCancel: false,
+						success: function (res) {
+							if (res.confirm) {
+								console.log('用户点击确定');
+							} else if (res.cancel) {
+								console.log('用户点击取消');
+							}
+						}
+					})
+					userTooltip[tipName] =  false
+					// console.log("userTooltip is: ", userTooltip)
+					uni.setStorageSync(userIdString, userTooltip)
+				}
 			}
-			
 		},
-		
-
 	}
-	
 </script>
 
 <style>
