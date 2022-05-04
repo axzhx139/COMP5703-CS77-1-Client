@@ -855,6 +855,18 @@
 							})
 							// this.$forceUpdate()
 						});
+					},
+					fail: function() {
+						setTimeout(2000);
+						uni.showToast({
+							title: 'Sorry, this code cannot get any information',
+							icon: 'none',
+							duration:4000,
+							
+						})
+						this.needAddItem = true
+						this.addItemToList = false
+						
 					}
 				});		
 			},
@@ -947,7 +959,6 @@
 					this.needAddItem = false
 					this.filepath='';
 					this.add_src='';
-
 				}else if(e.key == 'scan'){
                     this.scanCode();
 					this.needAddItem = true

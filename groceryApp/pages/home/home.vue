@@ -329,6 +329,7 @@
 				}).then(res => {
 					console.log(res)
 					// this.getCol()
+					
 				})
 			},
 			loadinfo(){
