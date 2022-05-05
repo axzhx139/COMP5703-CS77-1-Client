@@ -86,11 +86,14 @@
 												<image :src="'http://101.35.91.117:7884/item/picture/'+item.itemId+'?'+Math.random()" style="width: 65px;height: 65px;">
 											<!-- </view> -->
 										</u-col>
-										<u-col span="3">
+										<u-col span="4">
 											<u-row style=" margin: 0px 0px 10px 5px;">{{ item.name }}</u-row>
 											<u-row style=" font-size: 5px;margin: 10px 0px 0px 5px;">{{ item.category }}</u-row>
 										</u-col>
-										<u-col span="3">
+										<u-col span="1">
+											<u-row style=" margin: 0px 0px 10px 5px;">x{{item.quantity}}</u-row>
+										</u-col>
+										<u-col span="2">
 											<view class="demo-layout bg-purple-light">
 												<!-- <u-row gutter="18" justify="space-between"> -->
 												<u-row style="justify-content: flex-end; margin-bottom: 5px">
@@ -122,7 +125,7 @@
 												</view> -->
 											</view>
 										</u-col>
-										<u-col span="3">
+										<u-col span="2">
 											<view class="demo-layout bg-purple-dark" style="text-align: right">
 												<!-- <view class="demo-layout bg-purple">
 													<text style="font-weight: 900;float:right;">{{item.expDate}}</text>
@@ -148,15 +151,12 @@
 				<view class="t-bg">
 
 					<view style="text-align: left;width: 100%;">
-						<text style="margin-left: 25px;font-size: 20px;">Name</text>
-						<view style="text-align: center;">
-							<u-input style="width: 80%;font-weight: 900;display: inline-block;background-color: #F3F1F1;border-radius: 10px;" placeholder="" v-model="iName" class="fn-input" height="90" input-align="center" :clearable="false"/>
-						</view>
+						<text style=" line-height: 45px;margin-left: 25px;font-size: 20px;float:left">Name</text>
+						<u-input style="float:left;margin-left: 55px;width: 50%;font-weight: 900;background-color: #F3F1F1;border-radius: 10px;" placeholder="Name" v-model="iName" class="fn-input" height="90" input-align="center" :clearable="false"/>
 					</view>
 					
-					<view style="text-align: left;width: 100%;margin-top: 15px;">
-						<text style="margin-left: 25px;font-size: 20px;">Category</text>
-						<view style="text-align: center;">
+					<view style="text-align: left;width: 100%;margin-top: 25px;">
+						<text style=" line-height: 50px;float:left;margin-left: 25px;font-size: 20px;">Category</text>
 							<xfl-select @change="getCategory"
 								:list="options"
 								:clearable="true"
@@ -166,34 +166,34 @@
 								:style_Container="'height: 50px; font-size: 16px;'"
 								:placeholder = "iCategory"
 								:selectHideType="'hideAll'"
-								style="width: 80%;background-color: #F3F1F1;"
+								style="width: 50%;background-color: #F3F1F1;float:left;margin-left: 25px;border-radius: 10px;"
 							>
 							</xfl-select>
-						</view>
 					</view>
 					
-					<view style="text-align: left;width: 100%;margin-top: 15px;">
-						<text style="margin-left: 25px;font-size: 20px;">Expire Date</text>
+					<view style="text-align: left;width: 100%;margin-top: 25px;">
+						<text style=" line-height: 45px;margin-left: 25px;font-size: 20px;float:left">Quantity</text>
+						<u-input style="float:left;margin-left: 30px;width: 50%;font-weight: 900;background-color: #F3F1F1;border-radius: 10px;" placeholder="quantity" v-model="iQuantity" class="fn-input" height="90" input-align="center" :clearable="false" type='number'/>
+					</view>
+					
+					<view style="text-align: left;width: 100%;margin-top: 25px;">
+						<text style="float:left;margin-left: 25px;line-height: 45px;font-size: 20px;">Expire Date</text>
 						<view style="text-align: center;">
-							<u-input @click="openTime" style="width: 80%;font-weight: 900;display: inline-block;background-color: #F3F1F1;border-radius: 10px;" :clearable="false" placeholder="Time" v-model="iTimeInAussieFormat" class="fn-input" height="90" input-align="center"/>
+							<u-input @click="openTime" style="float:left;margin-left: 6px;width: 40%;font-weight: 900;display: inline-block;background-color: #F3F1F1;border-radius: 10px;" :clearable="false" placeholder="Time" v-model="iTimeInAussieFormat" class="fn-input" height="90" input-align="center"/>
 							<u-calendar  :safe-area-inset-bottom="true" max-date="9999" v-model="cshow" @change="changeTime"></u-calendar>
 						</view>
 					</view>
 					
-					<view style="text-align: left;width: 100%;">
-						<view  class="aline" style="text-align: center;">
+					
+					<view style="text-align: left;width: 100%;margin-top: 25px;margin-bottom:20px">
+						<view  class="aline" style="text-align: center;padding:0 25px 0 25px;">
 							<text style="font-size: 20px;">Remind me</text>
-							<u-input :clearable="false" style="margin-left: 5px; margin-right: 5px; width: 10px; font-weight: 900;display: inline-block;background-color: #F3F1F1;border-radius: 10px;" placeholder="" v-model="iCitime" class="fn-input" height="90" input-align="center"/>
+							<u-input :clearable="false" style="margin-left: 5px; margin-right: 5px; margin-top: 10px; width: 10px; font-weight: 900;display: inline-block;background-color: #F3F1F1;border-radius: 10px;" placeholder="" v-model="iCitime" class="fn-input" height="90" input-align="center"/>
 							<text style="font-size: 20px;">days before</text>
 						</view>
 					</view>
 					
-					<view style="text-align: left;width: 100%;">
-						<text style="margin-left: 25px;font-size: 20px;">Other details</text>
-						<view style="text-align: center;">
-							<u-input :clearable="false" style="width: 80%;font-weight: 900;display: inline-block;background-color: #F3F1F1;border-radius: 10px;" placeholder="details" v-model="iDetails" class="fn-input" height="90" input-align="center"/>
-						</view>
-					</view>
+					
 
 					<u-row gutter="16">
 						<u-col span="3" style="text-align: left;float:left">
@@ -347,6 +347,11 @@
 			</view>
 			
 			<view style="text-align: left;width: 100%;margin-top: 25px;">
+				<text style=" line-height: 45px;margin-left: 25px;font-size: 20px;float:left">Quantity</text>
+				<u-input style="float:left;margin-left: 30px;width: 50%;font-weight: 900;background-color: #F3F1F1;border-radius: 10px;" placeholder="quantity" v-model="iQuantity" class="fn-input" height="90" input-align="center" :clearable="false" type='number'/>
+			</view>
+			
+			<view style="text-align: left;width: 100%;margin-top: 25px;">
 				<text style="float:left;margin-left: 25px;line-height: 45px;font-size: 20px;">Expire Date</text>
 				<view style="text-align: center;">
 					<u-input
@@ -441,6 +446,7 @@
 				oldstockList: [],
 				stockList:[],
 				add_src:'',
+				iQuantity:1,
 				editItem:null,
 				icode:'',
 				config1:{
@@ -516,6 +522,7 @@
 						that.iCitime = '';
 						that.iDetails = '';
 						that.iItemid = '';
+						that.iQuantity=1;
 						uni.setStorageSync('addToStock', null);
 					}
 				}
@@ -632,7 +639,8 @@
 				  "status": this.status,
 				  "otherDetail": this.iDetails,
 				  "uid": uni.getStorageSync('userId'),
-				  "isConsumed":0
+				  "isConsumed":0,
+				  "quantity":this.iQuantity
 				}
 				console.log(JSON.stringify(item));
 				let that=this
@@ -736,7 +744,8 @@
 						"time":this.DateDiff(remind,exp),
 						"potential": item.potential,
                         "uid": uni.getStorageSync('userId'),
-						"expireDays": expireDays
+						"expireDays": expireDays,
+						"quantity":item.quantity
 					}
 					
 					if (itemList[i].status === 'instock'){
@@ -765,6 +774,7 @@
 				  "name": item.name,
 				  "remindTime": item.remindTime,
 				  "status": "consume",
+				  "quantity":item.quantity
 				}
 				
 				uni.request({
@@ -820,7 +830,7 @@
 				changedItem.conDate = consumeTime
                 
 				if (e === 'yes'){
-					this.consumeItem(changedItem)
+					//this.consumeItem(changedItem)
 					console.log(changedItem)
 					console.log(changedItem.itemId)
                     
@@ -1060,6 +1070,7 @@
 					this.iItemid = '';
 					this.filepath='';
 					this.add_src='';
+					this.iQuantity=1;
 					// console.log('change')
 					this.showTooltip("addScanTip")
 				}else if(e.key == 'back'){
@@ -1127,6 +1138,7 @@
 				this.iDetails = item.detail;
 				this.iItemid = item.itemId;
 				this.editItem = item
+				this.iQuantity = item.quantity
 			},
 			editClient(){
 
@@ -1148,7 +1160,7 @@
 					// var nowDate = date.getFullYear() + seperator + nowMonth + seperator + strDate;
 				    
 				    // convert remind time to correct form
-				    var expDate = new Date(this.iTime);
+				    var expDate = new Date(this.iTimeInAussieFormat);
 				    var remindTime = (expDate.getDate() - this.iCitime);
 				    var lsRemindTime = new Date(expDate.setDate(remindTime)).toISOString().split("T")[0];
 					
@@ -1168,7 +1180,7 @@
 					// console.log(remindTime);
 					// console.log(lsRemindTime);
 					
-					this.tab(this.iTime,date);
+					this.tab(this.iTimeInAussieFormat,date);
 					let item = {
 					  "addDate": this.editItem.addDate,
 					  "addMethod": this.editItem.addMethod,
@@ -1181,6 +1193,7 @@
 					  "remindTime": lsRemindTime,
 					  "status": this.editItem.status,
 					  "otherDetail": this.iDetails,
+					  "quantity": this.iQuantity,
 					}
 					console.log(JSON.stringify(item))
 					uni.request({

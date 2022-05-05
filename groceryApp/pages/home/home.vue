@@ -44,8 +44,8 @@
 
 					<view style="height: 100%;"  @click="toDetail(item.itemId)">
 							
-				</view>
-					<text style="margin-left: 14px;font-size: 16px;font-weight: 500;">{{ item.name }}</text>
+					</view>
+					<text style="margin-left: 14px;font-size: 16px;font-weight: 500;">{{ item.name }} *{{ item.quantity }}</text>
 					<view class="" style="margin-left: 14px;">
 						<image src="../../static/remind.png" style="width: 15px;height: 15px;" v-if="isReminded(index)"></image>
 						<text style="display: inline-block;margin-left: 5px;">{{getDate(item.expDate,'day')}}</text>
@@ -294,7 +294,7 @@
 					// 	lsConsumeTime[1] = "0" + lsConsumeTime[1]
 					// }
 					// var consumeTime = lsConsumeTime[2]+"-"+lsConsumeTime[0]+"-"+lsConsumeTime[1]
-					this.consumeItem(changedItem)
+					//this.consumeItem(changedItem)
 					console.log(changedItem)
 					console.log(changedItem.itemId)
 					uni.request({
@@ -396,7 +396,8 @@
 			            "status": item.status,
 						"time":this.iCitime,
 			            "uid": uni.getStorageSync('userId'),
-						"img": item.picture
+						"img": item.picture,
+						"quantity":item.quantity
 					}
 					if (foodList[i].status === 'instock'){
 						expiringFoodList.push(itemInfo);
@@ -404,14 +405,14 @@
 					}					
 				}
 				expiringFoodList.sort(function(a, b){
-				  let dateA = a.remindTime;
-				  let dateB = b.remindTime;
+				  let dateA = a.expDate;
+				  let dateB = b.expDate;
 				  if (dateA < dateB){
 				    return -1;
 				  } else if (dateA > dateB){
 				    return 1;
 				  }else{
-					  if( a.expDate<b.expDate){
+					  if( a.remindTime<b.remindTime){
 						  return -1
 					  }else{
 						  return 1
