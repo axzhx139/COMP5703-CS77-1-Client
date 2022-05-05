@@ -935,23 +935,27 @@
 			},
 			drawCanvas(path) {
 				this.getBDtoken().then(data => {
-			    const params = {
-			      access_token: data.data.access_token,
-			      data: {
-			        image: path
-			      }
-			    }
-			    this.getDate(params).then(res => {	
-					// consolelog(res)
-					if (res) {
-						const result = res.data.words_result
-						var result_str =''						for (var val in result) {							result_str= result_str+',,'+ result[val]['words']						}
-						console.log(result_str)
-						// console.log(res.words_result_num[0])
-						this.dialogVisible = true
-			      }
-			    })
-			  })
+					const params = {
+						access_token: data.data.access_token,
+						data: {
+							image: path
+						}
+					}
+				
+					this.getDate(params).then(res => {	
+						// consolelog(res)
+						if (res) {
+							const result = res.data.words_result
+							var result_str =''							for (var val in result) {								result_str= result_str+',,'+ result[val]['words']							}
+							console.log(result_str)
+							uni.request({								url: "http://101.35.91.117:7884/ocr/transferDate/"+result_str,								method: 'get'							}).then(res=>{
+								console.log(res[1].data);
+								this.iTime = res[1].data;
+							})
+						}
+					})
+				})
+				
 			},
 			getBDtoken() {
 			    return new Promise(resolve => {
