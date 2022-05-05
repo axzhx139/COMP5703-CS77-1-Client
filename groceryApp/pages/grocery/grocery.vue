@@ -945,7 +945,8 @@
 					// consolelog(res)
 					if (res) {
 						const result = res.data.words_result
-						console.log(result)
+						var result_str =''						for (var val in result) {							result_str= result_str+',,'+ result[val]['words']						}
+						console.log(result_str)
 						// console.log(res.words_result_num[0])
 						this.dialogVisible = true
 			      }
