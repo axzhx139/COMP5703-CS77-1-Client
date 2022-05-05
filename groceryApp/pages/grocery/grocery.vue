@@ -408,6 +408,8 @@
 <script>
 	import hxNavbar from "@/components/hx-navbar/hx-navbar";
 	import xflSelect from '../../components/xfl-select/xfl-select.vue'; 
+	import { pathToBase64 } from 'image-tools'
+
 	export default {
 		components: {hxNavbar},
 		data() {
@@ -476,7 +478,8 @@
 						position: 'left'
 					}],
 				},
-				options: ['Fruit','Vegetable','Dairy','Animal product','Frozen','Canned Goods','Frozen Foods','Deli','Others'],
+				options: ['Fruit & Veg', 'Meat, Seafood & Deli', 'Bakery', 'Dairy, Eggs & Fridge', 'Pantry',
+							,'Freezer', 'Drinks', 'Others'],
 				// sortingMethod: ['Recent Added', 'A-z', 'Expire Soon'],
 				sortingMethod: ['Expired', 'Category', 'Name', 'Default'],
 				chooseTags: ['Expired', 'Consumed', 'All'],
@@ -504,10 +507,11 @@
 							that.filepath='';
 							that.add_src='';
 						}
-						that.iName = res.data.iName;
+						// that.iName = res.data.iName;
 						that.addItemToList = false;
 						that.needAddItem = true;
-						that.iCategory = res.data.iCategory;
+						that.iCategory = '';
+						// that.iCategory = res.data.iCategory;
 						that.iTime = '';
 						that.iCitime = '';
 						that.iDetails = '';
@@ -870,6 +874,7 @@
 					}
 				});		
 			},
+			
 			// searchProduct(){
 			// 	if(this.iCategory === ''){
 			// 		this.list = this.options  
@@ -881,60 +886,163 @@
 			// 	} 
 			// 	console.log(this.showList)
 			// 	this.showSelect = true
-			// },   
-            scanDate(){
+			// }, 
+			scanDate(){
 				let that = this
 				uni.chooseImage({
 					count: 1, 
 					sizeType: ['original', 'compressed'], 
-
 					sourceType: ['camera', 'album'], 
-
-					success:  (res) => {
-						console.log(String(res.tempFilePaths[0]));
-						uni.previewImage({
-							urls: res.tempFilePaths,
-						});
+			
+					// success:  (res) => {
+					// 	console.log(String(res.tempFilePaths[0]));
+					// 	uni.previewImage({
+					// 		urls: res.tempFilePaths,
+					// 	});
+					
+					success: async res => {
+						pathToBase64(res.tempFilePaths[0])
+						    .then(base64 => {
+								// console.log(base64.split(',')[1])
+								this.drawCanvas(base64)
+						    })
+						    .catch(error => {
+						        console.error(error)
+						    })
+						console.log('============')
+						// pathToBase64(res.tempFilePaths)
 						
-						//跳过服务器
-						console.log("上传了: " + String(res.tempFilePaths[0]) + "  --------")
-						console.log("ocr 的返回结果：");
-						
-						that.iTime = "2022-11-22";
-						// console.log(that.iTime);
-						// uni.uploadFile({
-							// url: 'http://localhost:8080/ocr', // ------------------- 每次测之前改一下 ------------------------
-							// method : 'POST',
-							// // filePath : res.tempFilePaths[0],
-							// filePath : String(res.tempFilePaths[0]),
-							// name : 'media',
-							// header: {
-							// 	'content-type': 'multipart/form-data' 
-							// },
-							
-							// success: (res) => {
-							// 	console.log(res.statusCode)
-							// 	console.log("上传了: " + String(res.tempFilePaths[0]) + "  --------")
-							// 	console.log("ocr 的返回结果：");
-							// 	console.log(res.data);
-
-							// 	that.iTime = uploadFileRes;
-							// 	console.log(that.iTime);
-							// },
-							// fail: (uploadFileRes) => {
-							// 	console.log(uploadFileRes.statusCode)
-								
-							// 	console.log("爷失败了");
-							// 	console.log(uploadFileRes+"\n==============");
-								
-							// }
-							
-						// });
-						
-
+					},
+					fail: err => {
+						console.log('------------')
+					  uni.hideLoading()
+					  uni.showToast({
+					    title: 'Wrong photo formate, please try again!'
+					  })
 					}
-				});
+				})
+						
 			},
+			drawCanvas(path) {
+				this.getBDtoken().then(data => {
+			    const params = {
+			      access_token: data.data.access_token,
+			      data: {
+			        image: path
+			      }
+			    }
+			    this.getDate(params).then(res => {	
+					// consolelog(res)
+					if (res) {
+						const result = res.data.words_result
+						console.log(result)
+						// console.log(res.words_result_num[0])
+						this.dialogVisible = true
+			      }
+			    })
+			  })
+			},
+			getBDtoken() {
+			    return new Promise(resolve => {
+			        uni.request({
+						url: 'https://aip.baidubce.com/oauth/2.0/token', 
+						data: {
+							'grant_type': 'client_credentials',
+							'client_id': 'qhvBGBLuvZb6BerYugGj0tKL',
+							'client_secret': 'Xp5zGXerTeOc6QWVVSmee7KhguuawRhO'
+						},
+						method: 'GET',
+						success(res) {
+							resolve(res)
+						},
+						fail(e) {
+							uni.hideLoading()
+							Modal.toast('Connection Error!')
+						}
+			        })
+			    })
+			},
+			//access_token 24.9f9b3b6a9b680f7a4fe9473df2efc686.2592000.1654333735.282335-26159530
+			getDate(params) {
+				// console.log(params.data)
+			    return new Promise(resolve => {
+			        uni.request({
+						url: 'https://aip.baidubce.com/rest/2.0/ocr/v1/accurate_basic?access_token=' + params.access_token,
+						data: params.data,
+						method: 'POST',
+						header: {
+							"Content-Type": "application/x-www-form-urlencoded"
+						},
+						success(res) {
+							uni.hideLoading()
+							resolve(res)
+						},
+						fail(e) {
+							uni.hideLoading()
+							uni.showToast({
+								title: 'Parse error'
+							})
+						},
+						complete() {
+						}
+			        })
+			    })
+			},
+
+			
+   //          scanDate(){
+			// 	let that = this
+			// 	uni.chooseImage({
+			// 		count: 1, 
+			// 		sizeType: ['original', 'compressed'], 
+
+			// 		sourceType: ['camera', 'album'], 
+
+			// 		success:  (res) => {
+			// 			console.log(String(res.tempFilePaths[0]));
+			// 			uni.previewImage({
+			// 				urls: res.tempFilePaths,
+			// 			});
+						
+			// 			//跳过服务器
+			// 			console.log("上传了: " + String(res.tempFilePaths[0]) + "  --------")
+			// 			console.log("ocr 的返回结果：");
+						
+			// 			that.iTime = "2022-11-22";
+			// 			// console.log(that.iTime);
+			// 			// uni.uploadFile({
+			// 				// url: 'http://localhost:8080/ocr', // ------------------- 每次测之前改一下 ------------------------
+			// 				// method : 'POST',
+			// 				// // filePath : res.tempFilePaths[0],
+			// 				// filePath : String(res.tempFilePaths[0]),
+			// 				// name : 'media',
+			// 				// header: {
+			// 				// 	'content-type': 'multipart/form-data' 
+			// 				// },
+							
+			// 				// success: (res) => {
+			// 				// 	console.log(res.statusCode)
+			// 				// 	console.log("上传了: " + String(res.tempFilePaths[0]) + "  --------")
+			// 				// 	console.log("ocr 的返回结果：");
+			// 				// 	console.log(res.data);
+
+			// 				// 	that.iTime = uploadFileRes;
+			// 				// 	console.log(that.iTime);
+			// 				// },
+			// 				// fail: (uploadFileRes) => {
+			// 				// 	console.log(uploadFileRes.statusCode)
+								
+			// 				// 	console.log("爷失败了");
+			// 				// 	console.log(uploadFileRes+"\n==============");
+								
+			// 				// }
+							
+			// 			// });
+						
+
+			// 		}
+			// 	});
+			// },
             
 			onClickBtn(e){
 				console.log("e.key is: ", e.key)
@@ -942,9 +1050,9 @@
 					// console.log('111')
 					this.addItemToList = false
 					this.needAddItem = true
-					// this.iName = '';
+					this.iName = '';
 					
-					// this.iCategory = ''; ////// ------
+					this.iCategory = ''; ////// ------
 					
 					this.iTime = '';
 					this.iCitime = '';
