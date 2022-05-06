@@ -88,7 +88,7 @@
 										</u-col>
 										<u-col span="4">
 											<u-row style=" margin: 0px 0px 10px 5px;">{{ item.name }}</u-row>
-											<u-row style=" font-size: 5px;margin: 10px 0px 0px 5px;">{{ item.category }}</u-row>
+											<u-row style=" margin: 10px 0px 0px 5px;">{{ item.category }}</u-row>
 										</u-col>
 										<u-col span="1">
 											<u-row style=" margin: 0px 0px 10px 5px;">x{{item.quantity}}</u-row>
@@ -284,7 +284,7 @@
 										
 										<u-col span="3">
 											<u-row style="margin: 0px 0px 10px 5px;">{{ item.name }}</u-row>
-											<u-row style="font-size: 5px; margin: 10px 0px 0px 5px;">{{ item.category }}</u-row>
+											<u-row style="margin: 10px 0px 0px 5px;">{{ item.category }}</u-row>
 										</u-col>
 										
 										<u-col span="3">
