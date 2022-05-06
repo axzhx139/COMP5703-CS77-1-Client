@@ -306,8 +306,8 @@
 										<u-col span="3">
 											<view class="demo-layout bg-purple-dark">
 												<!-- <view><text style="font-size: 14px;">{{ item.expDate }}</text></view> -->
-												 <view v-if="item.status=='consume'"><text style="font-size: 12px;">{{getDate(item.conDate,'day')}}</text></view>
-												 <view v-if="item.status=='expire'"><text style="font-size: 12px;">{{getDate(item.expDate,'day')}}</text></view>
+												 <view v-if="item.status=='consume'"><text style="font-size: 12px;">{{getDate2(item.conDate,'day')}}</text></view>
+												 <view v-if="item.status=='expire'"><text style="font-size: 12px;">{{getDate2(item.expDate,'day')}}</text></view>
 												 <view v-if="item.status=='consume'" style="color: #FFA451;">Consumed</view>
 												<view v-if="item.status=='expire'" style="color: #AA4A44;">Expired </view>
 											</view>
@@ -567,7 +567,7 @@
                 this.iCategory = category.newVal;
 				this.$forceUpdate()
             },
-            getDate(time,type){
+            getDate2(time,type){
             	var dt = new Date(time)
             	var year = dt.getFullYear();
             	var month = dt.getMonth()+1;
@@ -584,6 +584,7 @@
             		var res = day+'-'+month+'-'+year+' '+hour+':'+minut
             	else if(type='day')
             		var res = day+'/'+month
+				console.log('res is: ', res)
             	return res
             },
 			save(){
@@ -946,9 +947,15 @@
 						// consolelog(res)
 						if (res) {
 							const result = res.data.words_result
-							var result_str =''							for (var val in result) {								result_str= result_str+',,'+ result[val]['words']							}
+							var result_str =''
+							for (var val in result) {
+								result_str= result_str+',,'+ result[val]['words']
+							}
 							console.log(result_str)
-							uni.request({								url: "http://101.35.91.117:7884/ocr/transferDate/"+result_str,								method: 'get'							}).then(res=>{
+							uni.request({
+								url: "http://101.35.91.117:7884/ocr/transferDate/"+result_str,
+								method: 'get'
+							}).then(res=>{
 								console.log(res[1].data);
 								this.iTime = res[1].data;
 							})
