@@ -3,7 +3,7 @@
 		<view id="title">
 			<text style="margin-left: 1%; font-size: 28px;color: #000000;font-weight: 900;">inbox</text>
 		</view>
-		<view id="main-body" :style="{height: scrollerHeight}">
+		<view id="main-body" :style="{height: clientHeight}">
 			<view id="inboxTop" v-if="isUnread" >
 				<view>
 					<text>Notification</text>
@@ -29,7 +29,7 @@
 					</xfl-select>
 				</view>
 			</view>
-			<scroll-view scroll-y="true" class="scroll-y" v-if="isUnread" :style="{height: scrollerYHeight}">
+			<scroll-view scroll-y="true" class="scroll-y" v-if="isUnread" :style="{height: clientHeight-40}">
 				<uni-row v-for="(item, index) in notificationData" :key=index>
 					<uni-col v-if="item.unread" class="notificationCol" @click="markAsReaded(index)">
 						<uni-icons type="chat" size="30"></uni-icons>
@@ -49,7 +49,7 @@
 					<u-divider half-width="60%"></u-divider>
 				</uni-row>
 			</scroll-view>
-			<scroll-view scroll-y="true" class="scroll-y" v-if="!isUnread" :style="{height: scrollerYHeight}">
+			<scroll-view scroll-y="true" class="scroll-y" v-if="!isUnread" :style="{height: clientHeight-40}">
 				<uni-row v-for="(item, index) in notificationData" :key=index>
 					<uni-col v-if="!item.unread" class="notificationCol">
 						<uni-icons type="chat" size="30"></uni-icons>
@@ -132,17 +132,35 @@ import uniIcons from '../../components/uni-icons/uni-icons.vue';
 			// console.log(option)
 			this.notificationData = JSON.parse(decodeURIComponent(option.notificationDataString));
 			console.log('上一个页面传递过来的参数对象', this.notificationData );
+			let self = this;
+			uni.getSystemInfo({
+				success: function (res) {
+					self.clientHeight = (res.windowHeight - 160) + 'px'
+				}
+			})
 		},
 		computed: {
-			// 滚动区高度 
-			scrollerHeight: function() {
-				console.log(window.innerHeight)
-				return (window.innerHeight - 160) + 'px'; //自定义高度需求
-			},
-			scrollerYHeight: function() {
-				console.log(window.innerHeight)
-				return (window.innerHeight - 200) + 'px'; //自定义高度需求
-			},
+			// // 滚动区高度 
+			// scrollerHeight: async function() {
+			// 	var res = await uni.getSystemInfo()
+			// 	var data = res[1]
+			// 	// return (data.windowHeight - 160) + 'px';
+			// 	return '500px';
+			// },
+			// scrollerYHeight: async function() {
+			// 	var res = await uni.getSystemInfo()
+			// 	var data = res[1]
+			// 	console.log('data is: ', data)
+			// 	return (data.windowHeight - 200) + 'px';
+			// },
+			// scrollerHeight: function() {
+			// 	console.log(window.innerHeight)
+			// 	return (window.innerHeight - 160) + 'px'; //自定义高度需求
+			// },
+			// scrollerYHeight: function() {
+			// 	console.log(window.innerHeight)
+			// 	return (window.innerHeight - 200) + 'px'; //自定义高度需求
+			// },
 		},
 		methods: {
 			changeUnread(xflSelectResult) {
