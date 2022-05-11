@@ -513,11 +513,11 @@
 							that.filepath='';
 							that.add_src='';
 						}
-						// that.iName = res.data.iName;
+						that.iName = res.data.iName;
 						that.addItemToList = false;
 						that.needAddItem = true;
-						that.iCategory = '';
-						// that.iCategory = res.data.iCategory;
+						// that.iCategory = '';
+						that.iCategory = res.data.iCategory;
 						that.iTime = '';
 						that.iCitime = '';
 						that.iDetails = '';
@@ -818,17 +818,18 @@
 			},
 			consume(e){
 				var changedItem = this.stockList[this.needChangeItem]
-				var lsConsumeTime = new Date().toLocaleDateString().split("/");
+				var lsConsumeTime = new Date().toISOString().split("T")[0];
                 //China Timezone needed
                 // if(lsConsumeTime[2].length === 1){
                 //     lsConsumeTime[2] = "0" + lsConsumeTime[2]
                 // }
 				//Australian Timezone needed
-                if(lsConsumeTime[1].length === 1){
-                    lsConsumeTime[1] = "0" + lsConsumeTime[1]
-                }
-				var consumeTime = lsConsumeTime[2]+"-"+lsConsumeTime[0]+"-"+lsConsumeTime[1]
-				changedItem.conDate = consumeTime
+                // if(lsConsumeTime[1].length === 1){
+                //     lsConsumeTime[1] = "0" + lsConsumeTime[1]
+                // }
+				console.log(lsConsumeTime)
+				// var consumeTime = lsConsumeTime[2]+"-"+lsConsumeTime[0]+"-"+lsConsumeTime[1]
+				changedItem.conDate = lsConsumeTime
                 
 				if (e === 'yes'){
 					//this.consumeItem(changedItem)
@@ -957,7 +958,15 @@
 								method: 'get'
 							}).then(res=>{
 								console.log(res[1].data);
-								this.iTime = res[1].data;
+								if(res[1].data == '--'){
+									uni.showToast({
+										title: 'Sorry, we did not get any info, please select the date manually.',
+										icon: 'none',
+										duration:4000,
+									})
+								}else{
+									this.iTime = res[1].data;
+								}
 							})
 						}
 					})
