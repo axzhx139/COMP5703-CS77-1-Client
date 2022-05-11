@@ -17,11 +17,11 @@
 										<view class="demo-layout bg-purple-light card" @click="toDetail(recipe.itemId)">
 											<view class="card-box">
 												<u-image border-radius="6px" height="138px" width="100%" :src="recipe.img" :fade="true" duration="450"></u-image>
-												<text style="margin-left: 20rpx;font-size: 12px;font-weight: 300; text-align: left;display:inline-block;">{{ limitWords(recipe.name,40) }}</text>
+												<text style="margin-left: 20rpx;font-size: 12px;font-weight: 300; text-align: left;display:inline-block;">{{ limitWords(recipe.name,20) }}</text>
 												
 												<view style="text-align: left;margin-top: 10px;">
 													<image src="../../static/uview/example/recipe.png" style="width: 15px;height: 15px;margin-left: 10rpx;">
-													<text style="display: inline-block;margin-left: 10px;font-size: 10px; ">{{ limitWords(recipe.type,20)}}</text>
+													<text style="display: inline-block;margin-left: 10px;font-size: 10px;">{{ limitWords(recipe.type,20)}}</text>
 													
 												</view>
 					<!-- 							<view style="margin-top: 10px;text-align: left;margin-left: 30rpx;">
@@ -35,7 +35,7 @@
 										<view class="demo-layout bg-purple-light card" @click="toDetail(itemList[index+1].itemId)">
 											<view class="card-box">
 												<u-image border-radius="6px" height="138px" width="100%" :src="recipe2.img" :fade="true" duration="450"></u-image>
-												<text style="margin-left: 20rpx;font-size: 12px;font-weight: 500; text-align: left;display:inline-block;">{{ limitWords(recipe2.name,40) }}</text>
+												<text style="margin-left: 20rpx;font-size: 12px;font-weight: 500; text-align: left;display:inline-block;">{{ limitWords(recipe2.name,20) }}</text>
 												
 												<view style="text-align: left;margin-top: 10px;">
 													<image src="../../static/uview/example/recipe.png" style="width: 15px;height: 15px;margin-left: 10rpx;">
@@ -309,7 +309,6 @@
 	.main-item-hover{
 
 		position:absolute;
-		/* background-color: #4CD964; */
 		z-index: 999999;
 		width: 95%;
 		height: 116px;
@@ -329,6 +328,7 @@
 	border:solid  1px #C8C7CC;
 	text-align: left;
 	display:inline-block;
+	padding: 5px;
 
 }
 </style>
