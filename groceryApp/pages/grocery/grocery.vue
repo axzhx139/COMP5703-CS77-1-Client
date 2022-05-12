@@ -945,11 +945,23 @@
 					}
 				
 					this.getDate(params).then(res => {	
+						// let reg = new RegExp('=', 'g')
+						// let newRes = JSON.stringify(res).replace(reg, '-');
 						// consolelog(res)
 						if (res) {
 							const result = res.data.words_result
+							
 							var result_str =''
 							for (var val in result) {
+								// console.log(val)
+								
+								if (result[val]['words'].search("/") != -1){
+									console.log(result[val]['words'])
+									var a = result[val]['words']
+									let reg = new RegExp('/', 'g')
+									result[val]['words']= a.replace(reg, '-');
+									// result[val]['words'].replace(new RegExp('=', 'g'), "-")
+								}
 								result_str= result_str+',,'+ result[val]['words']
 							}
 							console.log(result_str)
