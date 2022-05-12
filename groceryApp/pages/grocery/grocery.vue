@@ -860,11 +860,19 @@
 							url: "https://world.openfoodfacts.org/api/v2/product/" + this.icode,		
 						}).then(ires=>{
 							var name = ires[1].data.product.product_name
-							console.log(name)
-							var categories = ires[1].data.product.categories.split(',')
-							console.log(categories[1])
+							var categories = ires[1].data.product.categories
+							console.log(categories)
+							if (typeof categories !== 'undefined' && categories !== null){
+								this.iCategory = categories.split(',')[1]
+							} else{
+								this.iCategory = ''
+
+							}
+							
+							// console.log(categories[1])
 							this.iName = name
-							this.iCategory = categories[1]
+							console.log(this.iName)
+							console.log(this.iCategory)
 							this.refreshiCategory = false
 							this.$nextTick(function(){
 								this.refreshiCategory = true

@@ -141,11 +141,11 @@
 <script>
 	//add up for facebook login section 1 start
 
-	var facebook = uni.requireNativePlugin("sn-facebook");
+	// var facebook = uni.requireNativePlugin("sn-facebook");
 	// add up for facebook login section 1 end
 	
 	// google section 1 start
-	const JYGoogleSignin = uni.requireNativePlugin('JY-GoogleSignin');
+	// const JYGoogleSignin = uni.requireNativePlugin('JY-GoogleSignin');
 	// google section 1 end
 	export default {
 		data() {
@@ -199,7 +199,7 @@
 			
 
 			this.loginPopHeight = 450
-			console.log(this.loginPopHeight)
+			// console.log(this.loginPopHeight)
 			
 			// add up for facebook login section 3 start
 			// facebook.getKeyHash((e) => {
@@ -416,35 +416,53 @@
 			
 			// google section 3 start 
 			google_start_login(){
-			
-				JYGoogleSignin.jy_startLogin(res=> {
-				// 这里会返回登录的结果，如果errorCode = 1，代表错误，可检查msg返回的数据判断；
-				// 如果errorCode = 0，代表成功，也会在data里面返回登录数据
-					console.log(JSON.stringify(res));
-					uni.showToast({
-					icon:'none',
-					title:JSON.stringify(res)
-					})
-				})
+				console.log("kaishi")
+				uni.login({
+				    provider: 'google',
+				    success: function (loginRes) {
+						console.log("ddeng")
+				        // 登录成功
+				        uni.getUserInfo({
+				            provider: 'google',
+				            success: function(info) {
+								console.log(info.authResult)
+				                // 获取用户信息成功, info.authResult保存用户信息
+				            }
+				        })
+				    },
+				    fail: function (err) {
+				        // 登录授权失败  
+				        // err.code是错误码
+				    }
+				});
+				// JYGoogleSignin.jy_startLogin(res=> {
+				// // 这里会返回登录的结果，如果errorCode = 1，代表错误，可检查msg返回的数据判断；
+				// // 如果errorCode = 0，代表成功，也会在data里面返回登录数据
+				// 	console.log(JSON.stringify(res));
+				// 	uni.showToast({
+				// 	icon:'none',
+				// 	title:JSON.stringify(res)
+				// 	})
+				// })
 			},
 			
-			google_check_last_login(){
-				JYGoogleSignin.jy_getLastSigned(res=> {
-				// 这里会返回登录的结果，如果errorCode = 1，代表未登录；
-				// 如果errorCode = 0，代表已登录，也会在data里面返回登录数据
-				console.log(JSON.stringify(res));
-					uni.showToast({
-					icon:'none',
-					title:JSON.stringify(res)
-					})
-				})
-			},
+			// google_check_last_login(){
+			// 	JYGoogleSignin.jy_getLastSigned(res=> {
+			// 	// 这里会返回登录的结果，如果errorCode = 1，代表未登录；
+			// 	// 如果errorCode = 0，代表已登录，也会在data里面返回登录数据
+			// 	console.log(JSON.stringify(res));
+			// 		uni.showToast({
+			// 		icon:'none',
+			// 		title:JSON.stringify(res)
+			// 		})
+			// 	})
+			// },
 			
-			google_logout(){
-				JYGoogleSignin.jy_logout(res=> {
-				//  不会返回数据，调用就成功
-				})
-			},
+			// google_logout(){
+			// 	JYGoogleSignin.jy_logout(res=> {
+			// 	//  不会返回数据，调用就成功
+			// 	})
+			// },
 			// google section 3 end
 			next(){
 				

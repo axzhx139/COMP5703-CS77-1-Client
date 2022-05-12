@@ -465,9 +465,9 @@
 								showCancel: false,
 								success: function (res) {
 									if (res.confirm) {
-										console.log('用户点击确定');
+										console.log('Confirm');
 									} else if (res.cancel) {
-										console.log('用户点击取消');
+										console.log('Cancel');
 									}
 								}
 							})
