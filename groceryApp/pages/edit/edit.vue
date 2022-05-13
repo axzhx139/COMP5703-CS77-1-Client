@@ -33,6 +33,12 @@
 				<view class="divider"/>
 				<view style="margin-top: 3%; text-align: center; margin-left:4%; center; margin-right:4%;">
                     <view style="text-align: left;width: 100%;margin-top: 15px;">
+						<uni-data-picker v-model="location" :localdata="locationItems" popup-title="select your location" placeholder="please select you loction" @change="onchange" @nodeclick="onnodeclick"></uni-data-picker>
+					</view>
+					<!-- <view style="text-align: left;width: 100%;margin-top: 15px;">
+						<view>test</view>
+						<uni-data-picker v-model="location" :localdata="locationItems" popup-title="select your location" placeholder="please select you loction" @change="onchange" @nodeclick="onnodeclick"></uni-data-picker>
+  
                     	<view v-model="iSuburb" style="float: left;width: 30%;font-weight: 900;display: inline-block;background-color: #F3F1F1;border-radius: 10px;">
                     		<xfl-select @change="getSuburb"
                     			:list="suburbOptions"
@@ -81,7 +87,7 @@
                     		>
                     		</xfl-select>
                     	</view>
-                    </view>
+                    </view> -->
 					
 				</view>
 			</view>
@@ -149,12 +155,175 @@
                 suburbOptions: ['Sydney', 'Redfern', 'Darlinghurst', 'Haberfield', 'Alexandria', 'Haymarket', 'Chippendale', 'Barangaroo', 'Beaconsfield', 'Chinatown', 'East Sydney', 'Elizabeth Bay', 'Erskineville', 'Eveleigh', 'Forest Lodge', 'Kings Cross', 'Millers Point', 'Potts Point', 'Pyrmont', 'Rosebery', 'Rushcutters Bay', 'Saint Peters', 'Surry HillsThe Glebe', 'The Rocks', 'Ultimo', 'Woolloomooloo', 'Zetland'],
                 cityOptions: ['Sydney'],
                 stateOptions: ['NSW'],
+				locationData: [
+					{
+						country: "Australia",
+						states: [
+							{
+								name: "NSW",
+								cities: [
+									"Sydney",
+									"Albury",
+									"Armidale",
+									"Bathurst",
+									"Blue Mountains",
+									"Broken Hill",
+									"Campbelltown",
+									"Cessnock",
+									"Dubbo",
+									"Goulburn",
+									"Grafton",
+									"Lithgow",
+									"Liverpool",
+									"Newcastle",
+									"Orange",
+									"Parramatta",
+									"Penrith",
+									"Queanbeyan",
+									"Tamworth",
+									"Wagga Wagga",
+									"Wollongong",
+								]
+							},
+							{
+								name: "Northern Territory",
+								cities: [
+									"Darwin",
+									"Palmerston",
+								]
+							},
+							{
+								name: "Queensland",
+								cities: [
+									"Brisbane",
+									"Bundaberg",
+									"Cairns",
+									"Caloundra",
+									"Gladstone",
+									"Gold Coast",
+									"Gympie",
+									"Hervey Bay",
+									"Ipswich",
+									"Logan City",
+									"Mackay",
+									"Maryborough",
+									"Mount Isa",
+									"Rockhampton",
+									"Sunshine Coast",
+									"Toowoomba",
+									"Townsville",
+								]
+							},
+							{
+								name: "South Australia",
+								cities: [
+									"Adelaide",
+									"Mount Barker",
+									"Mount Gambier",
+									"Murray Bridge",
+									"Port Adelaide",
+									"Port Augusta",
+									"Port Pirie",
+									"Port Lincoln",
+									"Victor Harbor",
+									"Whyalla",
+								]
+							},
+							{
+								name: "Tasmania",
+								cities: [
+									"Hobart",
+									"Burnie",
+									"Devonport",
+									"Launceston",
+								]
+							},
+							{
+								name: "Victoria",
+								cities: [
+									"Melbourne",
+									"Ararat",
+									"Bairnsdale",
+									"Benalla",
+									"Ballarat",
+									"Bendigo",
+									"Dandenong",
+									"Frankston",
+									"Geelong",
+									"Hamilton",
+									"Horsham",
+									"Latrobe City",
+									"Melton",
+									"Mildura",
+									"Sale",
+									"Shepparton",
+									"Swan Hill",
+									"Wangaratta",
+									"Warrnambool",
+									"Wodonga",
+								]
+							},
+							{
+								name: "Western Australia",
+								cities: [
+									"Perth",
+									"Albany",
+									"Bunbury",
+									"Busselton",
+									"Fremantle",
+									"Geraldton",
+									"Joondalup",
+									"Kalgoorlie",
+									"Karratha",
+									"Mandurah",
+									"Rockingham",
+								]
+							},
+						]
+					}
+				],
+				location: "",
+				locationItems: "",
+				items: [{
+					text: "一年级",
+					value: "1-0",
+					children: [{
+						text: "1.1班",
+						value: "1-1",
+						children: [{
+							text: "1.1班",
+							value: "1-1-1"
+						}]
+					},
+					{
+						text: "1.2班",
+						value: "1-2"
+					}]
+				},
+				{
+					text: "二年级",
+					value: "2-0",
+					children: [{
+						text: "2.1班",
+						value: "2-1"
+					},
+					{
+						text: "2.2班",
+						value: "2-2"
+					}]
+				},
+				{
+					text: "三年级",
+					value: "3-0",
+					disable: true
+				}],
 			}
 		},
 		onLoad(){
 			this.getAvatar()
 			this.loadInfo()
 			Location.reload;
+			this.getLocationItems()
 		},
 		onShow(){
 			this.getAvatar()
@@ -258,7 +427,8 @@
 					url:'http://101.35.91.117:7884/users/profile/update',
 					method:'POST',
 					data:{
-						'address':address,
+						// 'address':address,
+						'address':this.location,
 						'birthday':0,
 						'gender':this.addressData.sex,
 						'name':this.iName,
@@ -279,7 +449,60 @@
                 this.addressData.sex = this.radio = e.detail.value
 				console.log(this.addressData.sex)
             },
-			
+			getLocationItems() {
+				console.log('locationItems cpmpute')
+				var locationData = []
+				for (let i=0; i<this.locationData.length; i++) {
+					let countryItem = this.locationData[i]
+					console.log('this.locationItems is: ', this.locationData)
+					console.log('countryItem is: ', countryItem)
+					let country = countryItem.country
+					let statesItemArray = countryItem.states
+					let firstObj = {
+						text: country,
+						value: country,
+						children: []
+					}
+					console.log('firstObj is: ', firstObj)
+					for (let j=0; j<statesItemArray.length; j++) {
+						let statesItem  = statesItemArray[j]
+						console.log('statesItem is: ', statesItem)
+						let state = statesItem.name
+						let citiesArray = statesItem.cities
+						let secondObj = {
+							text: state,
+							value: country + ", " + state,
+							children: []
+						}
+						for (let k=0; k<citiesArray.length; k++) {
+							let city = citiesArray[k]
+							let thirdObj = {
+								text: city,
+								value: country + ", " + state + ", " + city,
+							}
+							secondObj.children.push(thirdObj)
+						}
+						firstObj.children.push(secondObj)
+					}
+					locationData.push(firstObj)
+				}
+
+				// console.log('locationData is: ', locationData)
+				this.locationItems = locationData
+			},
+			onnodeclick(e) {
+				console.log(e);
+			},
+			onpopupopened(e) {
+				console.log('popupopened');
+			},
+			onpopupclosed(e) {
+				console.log('popupclosed');
+			},
+			onchange(e) {
+				console.log('onchange:', e);
+				console.log('location is: ', this.location)
+			},
 		}
 	}
 </script>
