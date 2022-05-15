@@ -323,12 +323,12 @@
 		</view>
 		<view class="add-card-item" v-if="needAddItem">
 			<view style="text-align: left;width: 100%;">
-				<text style=" line-height: 45px;margin-left: 25px;font-size: 20px;float:left">Name</text>
-				<u-input style="float:left;margin-left: 55px;width: 50%;font-weight: 900;background-color: #F3F1F1;border-radius: 10px;" placeholder="Name" v-model="iName" class="fn-input" height="90" input-align="center" :clearable="false"/>
+				<text style=" line-height: 45px;margin-left: 25px;font-size: 20px;float:left">Name*</text>
+				<u-input style="float:left;margin-left: 47px;width: 50%;font-weight: 900;background-color: #F3F1F1;border-radius: 10px;" placeholder="Name" v-model="iName" class="fn-input" height="90" input-align="center" :clearable="false"/>
 			</view>
 			
 			<view style="text-align: left;width: 100%;margin-top: 25px;">
-				<text style=" line-height: 50px;float:left;margin-left: 25px;font-size: 20px;">Category</text>
+				<text style=" line-height: 50px;float:left;margin-left: 25px;font-size: 20px;">Category*</text>
 					<xfl-select 
 						:placeholder = "'Choose'"
 						v-if="refreshiCategory"
@@ -341,24 +341,24 @@
 						:initValue="iCategory"
 						:style_Container="'height: 50px; font-size: 16px;'"
 						:selectHideType="'hideAll'"
-						style="width: 50%;background-color: #F3F1F1;float:left;margin-left: 25px;border-radius: 10px;"
+						style="width: 50%;background-color: #F3F1F1;float:left;margin-left: 17px;border-radius: 10px;"
 						>
 					</xfl-select>
 			</view>
 			
 			<view style="text-align: left;width: 100%;margin-top: 25px;">
-				<text style=" line-height: 45px;margin-left: 25px;font-size: 20px;float:left">Quantity</text>
-				<u-input style="float:left;margin-left: 30px;width: 50%;font-weight: 900;background-color: #F3F1F1;border-radius: 10px;" placeholder="quantity" v-model="iQuantity" class="fn-input" height="90" input-align="center" :clearable="false" type='number'/>
+				<text style=" line-height: 45px;margin-left: 25px;font-size: 20px;float:left">Quantity*</text>
+				<u-input style="float:left;margin-left: 22px;width: 50%;font-weight: 900;background-color: #F3F1F1;border-radius: 10px;" placeholder="quantity" v-model="iQuantity" class="fn-input" height="90" input-align="center" :clearable="false" type='number'/>
 			</view>
 			
 			<view style="text-align: left;width: 100%;margin-top: 25px;">
-				<text style="float:left;margin-left: 25px;line-height: 45px;font-size: 20px;">Expire Date</text>
+				<text style="float:left;margin-left: 25px;line-height: 45px;font-size: 20px;">Expire Date*</text>
 				<view style="text-align: center;">
 					<u-input
 						type="text"
 						disabled
 						@click="openTime"
-						style="float:left;margin-left: 10px;width: 40%;font-weight: 900;display: inline-block;background-color: #F3F1F1;border-radius: 10px;"
+						style="float:left;margin-left: 0px;width: 40%;font-weight: 900;display: inline-block;background-color: #F3F1F1;border-radius: 10px;"
 						:clearable="true"
 						placeholder="Time"
 						v-model="iTime"
@@ -588,7 +588,45 @@
             	return res
             },
 			save(){
-				
+				if(this.iName=='' || this.iCategory=='' || this.iQuantity==''||this.iTime==""){
+					uni.showModal({
+						title: "Notice",
+						content: "All fields marked with * \n must be filled in",
+						showCancel: false,
+						success: function (res) {
+							if (res.confirm) {
+								
+							}
+						}
+					})
+					return
+				}
+				if(this.iQuantity<1){
+					uni.showModal({
+						title: "Notice",
+						content: "The quantity should be \n greater than 0",
+						showCancel: false,
+						success: function (res) {
+							if (res.confirm) {
+								
+							}
+						}
+					})
+					return
+				}
+				if(new Date(this.iTime)<new Date()){
+					uni.showModal({
+						title: "Notice",
+						content: "The expire date can't be \n earlier than now",
+						showCancel: false,
+						success: function (res) {
+							if (res.confirm) {
+								
+							}
+						}
+					})
+					return
+				}
 				var date = new Date();
 				
 				var nowMonth = date.getMonth() + 1;
