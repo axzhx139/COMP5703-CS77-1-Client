@@ -488,6 +488,8 @@
 											}else{
 												//home navigation + store uid
 												console.log('that.$store is: ', this.$store)
+												var that = this;
+												console.log('that store is: ', that.$store)
 												if (!isNewUser) {
 													// that.$store.commit("setUserLogin", res.data)
 												}
@@ -575,7 +577,7 @@
 						data:{
 							'name':this.email.split('@')[0],
 							'email':this.email,
-							'verification_code':this.vcode,
+							'verificationCode':this.vcode,
 							'gender':2,
 							'pwd':this.password,
 							'uuid':0,
