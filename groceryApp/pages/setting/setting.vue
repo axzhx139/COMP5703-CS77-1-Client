@@ -1,63 +1,93 @@
 <template>
 	<view>
-		<view class = "container">
-			<view class = "section">
-				<text class = "title">Notification</text>
-				<view class="divider"/>
-				
-				<view>
-					<text class="name">Alert</text>
-					<switch class="s" :checked="alertinfo.alert==1 ? 1:0" @change="switchA"/>
+		<scroll-view :scroll-y="true" :style="{'height':getDeviceHeight()-70+'px'}" >
+		
+			<view class = "container">
+				<view class = "section">
+					<text class = "title">Notification</text>
+					<view class="divider"/>
+					
+					<view>
+						<text class="name">Alert</text>
+						<switch class="s"  @change="switchA"/>
+						<!-- :checked="alertinfo.alert==1 ? 1:0" -->
+					</view>
+					<view>
+						<text class="name">Remind Time</text>
+						<u-input style="width: 20%; margin-top: 5%; margin-left:15%; margin-right:4%;font-weight: 900;display: inline-block;background-color: #F3F1F1;border-radius: 10px;" placeholder="0" v-model="day" height="65" input-align="center" :clearable="false"/>
+						<text style="margin-right: 4%; font-size: 18px;">days</text>
+					</view>
+					<view>
+						<u-button style="background-color: #F5C979;color: white; height: 75rpx; %; margin-right:10%;width: 150rpx; margin-top: 10%;" @click="save">Save</u-button>
+					</view>		
 				</view>
-				<view>
-					<text class="name">Remind Time</text>
-					<u-input style="width: 20%; margin-top: 5%; margin-left:15%; margin-right:4%;font-weight: 900;display: inline-block;background-color: #F3F1F1;border-radius: 10px;" placeholder="0" v-model="day" height="65" input-align="center" :clearable="false"/>
-					<text style="margin-right: 4%; font-size: 18px;">days</text>
-				</view>
-				<view>
-					<u-button style="background-color: #F5C979;color: white; height: 75rpx; %; margin-right:10%;width: 150rpx; margin-top: 10%;" @click="save">Save</u-button>
-				</view>		
-			</view>
-			<view class = "section">
-				<text  class = "title">Security</text>
-				<view class="divider"/>
-				<view style="text-align: left;width: 100%;">
+				<view class = "section">
+					<text  class = "title">Security</text>
+					<view class="divider"/>
+					<!-- <view style="text-align: left;width: 100%;"> -->
 					<view>
 						<text class="n">Previous password</text>
 						<u-input placeholder="previous password" v-model="ippwd" type="password"  class="end-input" height="10" input-align="center" :clearable="false"/>
 					</view>
-					
 					<view>
 						<text class="n">New password</text>
 						<u-input placeholder="new password" v-model="inpwd" type="password"  class="end-input" height="10" input-align="center" :clearable="false"/>
 					</view>
-					
 					<view>
 						<text class="n">Verify password</text>
 						<u-input placeholder="verify password" v-model="ivpwd" type="password"  class="end-input" height="10" input-align="center" :clearable="false"/>
-					</view>
-					
-					<view >
+					</view>					
+					<view>
 						<u-button style="background-color: #F5C979; height: 75rpx; color: white; margin-right:10%;width: 240rpx; margin-top: 10%;" @click="change">Change password</u-button>
 					</view>	
-					<view class="feedbackButton">
-						<u-button style="width: 310rpx;background-color: #443C34;color: white;margin-top: 30rpx;" @click="feedback()" >
-							<image src="../../static/logout.png" style="width: 20px;height: 20px;"></image>
-							<view style="width: 16rpx;"></view>
-							Feedback
-						</u-button>
-					</view>
-					<view class="logOutButton">	
-						<u-button style="width: 310rpx;background-color: #443C34;color: white;margin-top: 30rpx; margin-right: 20rpx;" @click="logout">
-							<image src="../../static/logout.png" style="width: 20px;height: 20px;"></image>
-							<view style="width: 16rpx;"></view>
-							Log out
-						</u-button>
-					</view>
-
+				</view>
+				<view class = "section">
+					<view class="divider"/>
+					<u-row gutter = "3">
+						<!-- <view class="feedbackButton"> -->
+							<u-button style="width: 620rpx;background-color: #443C34;color: white;" @click="feedback()" >
+								<!-- <image src="../../static/logout.png" style="width: 20px;height: 20px;"></image> -->
+								<view style="width: 16rpx;"></view>
+								Feedback
+							</u-button>
+						<!-- </view> -->
+						<!-- <view class="DeleteAccountButton"> -->
+							<u-button style="width: 620rpx;background-color: #443C34;color: white;margin-top: 30rpx;" @click="deleteVerify()">
+								<!-- <image src="../../static/logout.png" 
+										style="width: 20px;height: 20px;"></image> -->
+								<view style="width: 16rpx;"></view>
+								Delete Account
+							</u-button>
+						<!-- </view> -->
+						<!-- <view class="logOutButton">	 -->
+							<u-button style="width: 620rpx;background-color: #443C34;color: white;margin-top: 30rpx;" @click="logout()">
+								<image src="../../static/logout.png" 
+									style="width: 20px;height: 20px;"></image>
+								<view style="width: 16rpx;"></view>
+								Log out
+							</u-button>
+						<!-- </view> -->
+					</u-row>
 				</view>
 			</view>
-		</view>
+		</scroll-view>
+		
+		
+		<hqs-popup style="z-index: 999;"title="" v-model="deleteVer" :showClose="false" height="400px">
+			<view class="t-bg">
+				<!-- <text style="font-size: 20px;font-weight: 900;">Are you sure you want to delete your account?</text> -->
+				<text style="font-size: 20px;font-weight: 900;">Please enter the verification code</text>
+				<view class="verify code">
+					<u-input style="margin-top: 10px" placeholder="Verify Vode" v-model="vcode" class="fn-input" height="90" input-align="left"/>
+				</view>
+				<view style="margin-top: 30px;">
+					<u-button shape="circle" style="width: 130px;background-color: #F5C979;border-color: #F5C979;" @click="deleteAcc()">Delete</u-button>
+				</view>
+			</view>
+		
+		
+		</hqs-popup>
+			
 		<!-- #ifdef APP-PLUS -->
 		<u-tabbar :list="tabbar" :mid-button="false" height="55px"></u-tabbar>
 		<!-- #endif -->
@@ -78,6 +108,9 @@
 				inpwd:"",
 				ivpwd:"",
 				alertinfo:{},
+				deleteVer: false, 
+				verifyCode: "",
+				vcode:"",
 			}
 		},
 		onLoad(){
@@ -91,10 +124,15 @@
 				url: "http://101.35.91.117:7884/users/alert/"+uni.getStorageSync('userId'),
 				method: 'get',
 				}).then(res=>{
-					console.log('load',res[1].data)
+					// console.log('load',res[1].data)
 					this.$set(that.alertinfo,'alert',res[1].data)
 				})
 				
+			},
+			getDeviceHeight(){
+				let deviceInfo = uni.getSystemInfoSync();
+				this.deviceHeight = deviceInfo.windowHeight;
+				return this.deviceHeight
 			},
 			switchA(e){
 				if(e.target.value){
@@ -133,6 +171,7 @@
 					
 				}
 			},
+			
 			change(){
 				console.log(this.ivpwd)
 				console.log(this.ippwd)
@@ -195,6 +234,71 @@
 				uni.navigateTo({
 					url:"/pages/feedback/feedback"
 				})
+			},
+			deleteVerify(){
+				// this.deleteVer = true;
+				let that = this
+				var email = uni.getStorageSync('email')
+				console.log(email)
+				uni.showModal({
+				    title: 'Delete prompt',
+				    content: 'Are you sure to delete the account?\n You will receive a verify code.',
+					confirmText: "Yes",
+					cancelText: "No",
+				    success(res) {
+						if (res.confirm) {
+							console.log("ok")
+							
+							console.log(uni.getStorageSync('email'))
+							uni.request({
+								url:'http://101.35.91.117:7884/users/register/sendVerifyCode',
+								method:'POST',
+								data:{
+									'email':uni.getStorageSync('email'),
+								},
+								success:function(res){
+									console.log(res)
+									if(res.data == 1){
+										that.deleteVer = true;
+									}
+								}
+							// }).then(res=>{
+							// 	console.log('res:', res)
+							})
+						}
+				    }
+				});
+				  // this.deleteVer = that
+			},
+			deleteAcc(){
+				uni.request({
+					url:'http://101.35.91.117:7884/users/deleteUserAccount',
+					method:'POST',
+					data:{
+						'email':uni.getStorageSync('userId'),
+						'verification_code': this.vcode,
+					},
+					success:function(res){
+						console.log(res)
+						// if (res.data==0){
+						// 	uni.showModal({
+						// 	    title: 'Account exist',
+						// 		showCancel: false,
+						// 	    content: 'The email address already exist, please try again or log in by this email. ',
+						// 	    success: function (res) {
+						// 	        if (res.confirm) {
+						// 	            console.log('confirm');
+						// 	        } 
+						// 	    }
+						// 	});
+						// }else{
+						// 	uni.showToast({
+						// 		icon: "none",
+						// 		title: "Send verification code success",
+						// 	});
+						// }
+					}
+				})
 			}
 		}
 	}
@@ -206,13 +310,16 @@ page{
 }
 .container{
 	width: 90%;
-	height: 1200rpx;
+	/* height: 95%; */
 	background-color: white;
 	margin-top: 7%;
 	margin-left: 5%;
 	border-radius: 10px;
 	display: flex;
-	flex-direction: column;
+	flex-direction: column; 
+	justify-content: center;
+	padding: 10px 10px 10px 10px;
+	text-align: center;
 }
 .section{
 	margin-top: 5%;
@@ -227,7 +334,7 @@ page{
 .divider{
 	 background: #E0E3DA;
 	 margin-top: 1%;
-	 margin-bottom: 5%;
+	 margin-bottom: 3%;
 	 width: 95%;
 	 height: 5rpx;
 	}
@@ -249,8 +356,6 @@ page{
 	font-size:15px;
 	margin-left:4%;
 }
-
-
 .end-input {
 		display: flex;
 		justify-content: center;
@@ -270,7 +375,10 @@ page{
 .feedbackButton{
 	float: left;
 }
+.DeleteAccountButtonP{
+	float: left;
+}
 .logOutButton{
-	float: right;
+	float: left;
 }
 </style>

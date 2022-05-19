@@ -471,9 +471,9 @@
 			
 			
 			SignupAction(){
-				
+				let that = this
 				console.log(this.email)
-
+				
 				console.log(this.vcode)
 				console.log(this.password)
 				if(this.password == null || this.password == ''){
@@ -544,6 +544,7 @@
 								// this.$store.commit("setUserLogin", res.data)
 								// console.log(res.data)
 								uni.setStorageSync('userId',res.data)
+								uni.setStorageSync('email', that.email)
 								console.log("success")
 								console.log("Start action")
 								//store uid
@@ -659,8 +660,7 @@
 							'pwd':this.pwd,
 						},
 						success:function(res){
-							console.log(res.data)
-							console.log(res.statusCode)
+							// console.log(res.data)
 							if(res.data == -1||res.statusCode==500){
 								//password not match alert or email not exist
 								uni.showModal({
@@ -678,7 +678,9 @@
 								// console.log(that.$store)
 								that.$store.commit("setUserLogin", res.data)
 								uni.setStorageSync('userId',res.data)
+								uni.setStorageSync('email',that.loginemail)
 								console.log(res.data)
+								console.log(that.loginemail)
 								console.log("success")
 								console.log("Start action")
 								uni.switchTab({
