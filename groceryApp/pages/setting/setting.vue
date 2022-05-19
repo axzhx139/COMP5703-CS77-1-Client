@@ -275,6 +275,7 @@
 					url:'http://101.35.91.117:7884/users/deleteUserAccount',
 					method:'POST',
 					data:{
+						'id':uni.getStorageSync('userId'),
 						'email':uni.getStorageSync('userId'),
 						'verification_code': this.vcode,
 					},

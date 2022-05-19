@@ -320,10 +320,10 @@
 			}
 		},
 		onLoad(){
+			this.getLocationItems()
 			this.getAvatar()
 			this.loadInfo()
 			Location.reload;
-			this.getLocationItems()
 		},
 		onShow(){
 			this.getAvatar()
