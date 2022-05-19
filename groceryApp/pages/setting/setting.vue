@@ -73,17 +73,17 @@
 		</scroll-view>
 		
 		
-		<hqs-popup style="z-index: 999;"title="" v-model="deleteVer" :showClose="false" height="400px">
-			<view class="t-bg">
-				<!-- <text style="font-size: 20px;font-weight: 900;">Are you sure you want to delete your account?</text> -->
-				<text style="font-size: 20px;font-weight: 900;">Please enter the verification code</text>
+		<hqs-popup v-model="deleteVer" :showClose="false" height="400px">
+			<view class="d_acc">
+				<text style="line-height: 45px;margin-left:25px;font-size: 20px;">Please enter the verification code</text>
 				<view class="verify code">
-					<u-input style="margin-top: 10px" placeholder="Verify Vode" v-model="vcode" class="fn-input" height="90" input-align="left"/>
+					<u-input style="margin-top: 10px; margin-left: 25px" placeholder="Verify Vode" v-model="vcode" class="fn-input" height="90" input-align="left"/>
 				</view>
 				<view style="margin-top: 30px;">
 					<u-button shape="circle" style="width: 130px;background-color: #F5C979;border-color: #F5C979;" @click="deleteAcc()">Delete</u-button>
 				</view>
 			</view>
+		
 		
 		
 		</hqs-popup>
@@ -242,14 +242,13 @@
 				console.log(email)
 				uni.showModal({
 				    title: 'Delete prompt',
-				    content: 'Are you sure to delete the account?\n You will receive a verify code.',
+				    content: 'Are you sure to delete the account?\n If yes, you will receive a verify code.',
 					confirmText: "Yes",
 					cancelText: "No",
 				    success(res) {
 						if (res.confirm) {
-							console.log("ok")
-							
-							console.log(uni.getStorageSync('email'))
+							// console.log("ok")
+							// console.log(uni.getStorageSync('email'))
 							uni.request({
 								url:'http://101.35.91.117:7884/users/register/sendVerifyCode',
 								method:'POST',
@@ -260,6 +259,12 @@
 									console.log(res)
 									if(res.data == 1){
 										that.deleteVer = true;
+									}else{
+										uni.showToast({
+											title: 'Sorry, fail to send verify coude to your email',
+											icon: 'none',
+											duration:4000,
+										})
 									}
 								}
 							// }).then(res=>{
@@ -271,33 +276,44 @@
 				  // this.deleteVer = that
 			},
 			deleteAcc(){
+				console.log(uni.getStorageSync('userId'))
 				uni.request({
 					url:'http://101.35.91.117:7884/users/deleteUserAccount',
 					method:'POST',
 					data:{
-						'id':uni.getStorageSync('userId'),
-						'email':uni.getStorageSync('userId'),
-						'verification_code': this.vcode,
+						'uId':uni.getStorageSync('userId'),
+						'email':uni.getStorageSync('email'),
+						'verificationCode': this.vcode,
 					},
 					success:function(res){
 						console.log(res)
-						// if (res.data==0){
-						// 	uni.showModal({
-						// 	    title: 'Account exist',
-						// 		showCancel: false,
-						// 	    content: 'The email address already exist, please try again or log in by this email. ',
-						// 	    success: function (res) {
-						// 	        if (res.confirm) {
-						// 	            console.log('confirm');
-						// 	        } 
-						// 	    }
-						// 	});
-						// }else{
-						// 	uni.showToast({
-						// 		icon: "none",
-						// 		title: "Send verification code success",
-						// 	});
-						// }
+						if(res.data == 1){
+							uni.showModal({
+								title: 'Your account has been deleted',
+								showCancel: false,
+								// content: 'The verify password and new password should be same',
+								success: function (res) {
+									if (res.confirm) {
+										uni.navigateTo({
+										    url: "/pages/welcome/welcome"
+										})
+									} 
+								}
+							})
+						}else if(res.data == -3){
+							uni.showToast({
+								title: 'Sorry, the verify code is wrong',
+								icon: 'none',
+								duration:4000,
+							})
+						}else{
+							uni.showToast({
+								title: 'Sorry, fail to delete account ',
+								icon: 'none',
+								duration:4000,
+							})
+						}
+
 					}
 				})
 			}
