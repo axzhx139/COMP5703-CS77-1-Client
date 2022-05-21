@@ -160,7 +160,7 @@
 						country: "Australia",
 						states: [
 							{
-								name: "NSW",
+								name: "New South Wales",
 								cities: [
 									"Sydney",
 									"Albury",
