@@ -375,24 +375,108 @@
 			},
 			facebook_login(){
 				// 登录
-				facebook.login((e) => {
-				  // e 对象如下
-				  var e = {
-				      result: true,
-				      data: {
-				          token: '',
-				          userId: '',
-				          name: '',
-				          email: '',
-				          gender: '',
-				          birthday: '',
-				          photo: ''
-				      }
-				  }
-				  uni.showToast({
-					icon: "none",
-					title: JSON.stringify(e),
-				  });
+				console.log('facebook login')
+				uni.login({
+					provider: 'facebook',
+					success: function (loginRes) {
+						// 登录成功
+						var logedEmailArray = uni.getStorageSync('logedEmailArray')
+						console.log('-------------------------------')
+						console.log('logedEmailArray is: ', logedEmailArray)
+						if (logedEmailArray == '' || logedEmailArray == undefined || logedEmailArray == null) {
+							logedEmailArray = []
+							uni.setStorageSync('logedEmailArray', logedEmailArray)
+						}
+
+						uni.getUserInfo({
+							provider: 'facebook',
+							success: function(info) {
+								// 获取用户信息成功, info.authResult保存用户信息
+								var googleEmail = info.userInfo.email
+								var googleNickname = info.userInfo.nickname
+								
+								// 判断是否为新用户，新用户，走注册
+								if (logedEmailArray.indexOf(googleEmail) < 0) {
+									var isNewUser = true
+								} else {
+									var isNewUser = false
+								}
+
+								//原始代码
+								if (googleEmail != null && googleEmail != '') {
+									var that = this
+									console.log("uni.getStorageSync('userId') is: " ,uni.getStorageSync('userId'))
+									uni.request({
+										url:'http://101.35.91.117:7884/users/login/thirdparty',
+										method:'POST',
+										data:{
+											'email': googleEmail,
+											'nickname': googleNickname,
+											'isNewUser': isNewUser
+										},
+										success:function(res){
+											console.log(res.data)
+											console.log(res.statusCode)
+											if(res.data == -1||res.statusCode==500){
+												//password not match alert or email not exist
+												uni.showModal({
+													title: 'Unmatch Account Detail',
+													showCancel: false,
+													content: 'Your email or password is incorrect, please try again. ',
+													success: function (res) {
+														if (res.confirm) {
+															console.log('confirm');
+														} 
+													}
+												});
+											}else{
+												//home navigation + store uid
+												console.log('that.$store is: ', this.$store)
+												var that = this;
+												console.log('that store is: ', that.$store)
+												if (!isNewUser) {
+													// that.$store.commit("setUserLogin", res.data)
+												}
+												uni.setStorageSync('userId',res.data)
+												// 登陆成功后将email加入到loged中
+												if (isNewUser) {
+													logedEmailArray.push(googleEmail)
+												}
+												uni.setStorageSync('logedEmailArray', logedEmailArray)
+												console.log(res.data)
+												console.log("success")
+												console.log("Start action")
+												uni.switchTab({
+													url:"../profile/profile"
+												})
+											}
+										}}
+									)
+								}
+								else{
+									uni.showToast({
+										icon: "none",
+										title: "information uncomplete",
+									});
+								}
+							}
+						})
+					},
+					fail: function (err) {
+						// 登录授权失败  
+						// err.code是错误码
+						console.log('error.code is: ', err.code, err)
+						uni.showModal({
+							title: 'Cannot featch facebook.',
+							showCancel: false,
+							content: 'Cannot featch facebook.',
+							success: function (res) {
+								if (res.confirm) {
+									console.log('confirm');
+								} 
+							}
+						});
+					}
 				});
 			},
 			facebook_logout(){
