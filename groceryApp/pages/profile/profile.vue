@@ -144,8 +144,7 @@
 			hintDays(){
 				uni.showModal({
 					title: "Hint",
-					content: "This is how many days you haven't wasted food. \
-					When you have added more than 10 foods in the past 30 days, it can start counting the days. The days will reset when you waste a food.",
+					content: "This is how many days you haven't\nwasted food. When you have\nadded more than 10 foods in the\npast 30 days, it can start counting\nthe days. The days will reset when\nyou waste a food.",
 					showCancel: false,
 					success: function (res) {
 						if (res.confirm) {

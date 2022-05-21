@@ -1,20 +1,35 @@
+
 <template>
-	<view>
-		<view class="info-card">
-					
-						<view>
-							<textarea v-model="feedback" placeholder="Add Feedback"></textarea>
-						</view>
-					</view>
-					
-					
-					<u-button style="width: 400rpx;background-color: #443C34;color: white;margin-top: 30rpx;" @click="goSend">
-						<!-- <image src="../../static/setting.png" style="width: 20px;height: 20px;"></image> -->
-						<view style="width: 16rpx;"></view>
-						Send
-					</u-button>
+	<view class="main-content">
+		<view class="main-body">
+			<view class="info-card">
+				<view style="text-align: left;margin-bottom: 10px;">Type of issue:
+					<xfl-select @change="selectTypeItemList"
+						:list="sortingMethod"
+						:clearable="false"
+						:showItemNum="5" 
+						:listShow="false"
+						:isCanInput="false"  
+						:style_Container="'height: 30px; font-size: 15px;'"
+						:placeholder = "'Default'"
+						:selectHideType="'hideAll'"
+						style="width: 100%; background-color: #FFFFFF;margin-top: 10px;"
+					>
+					</xfl-select>
+				</view>
+				<view style="margin-top: 15px;  height:600rpx;text-align: left;border: 1px solid #c2c2c2;border-radius: 15px;padding: 15px;">
+					<textarea v-model="feedback" placeholder="Say something..."></textarea>
+				</view>
+			</view>
+						
+						
+			<u-button style="display: flex;width: 400rpx;background-color: #443C34;color: white;margin-top: 30rpx;" @click="goSend">
+				<!-- <image src="../../static/setting.png" style="width: 20px;height: 20px;"></image> -->
+				<view style="width: 16rpx;"></view>
+				Send
+			</u-button>
 			
-			
+			</view>
 	</view>
 </template>
 
@@ -23,36 +38,53 @@
 		data() {
 			return {
 				feedback:'',
+				sortingMethod: ['Account issues', 'Data issues','Application bugs','General suggestions'],
+				type:'default'
 			}
 		},
 		methods: {
 			goSend(){
-							console.log("feedbacck", this.feedback)
-							uni.request({
-								url:'http://101.35.91.117:7884/feedback/storeFeedback',
-								method:'POST',
-								data:{
-									'id':uni.getStorageSync('userId'), 
-									'feedback':this.feedback
-								},
-								// header: {
-								//      "Content-Type": "feedback/json"
-								// }, 
-								success:function(res){
-									console.log(res)
+				var result = this.type+':'+this.feedback
+				console.log("feedbacck", result)
+				uni.request({
+					url:'http://101.35.91.117:7884/feedback/storeFeedback',
+					method:'POST',
+					data:{
+						'id':uni.getStorageSync('userId'), 
+						'feedback':result
+					},
+					// header: {
+					//      "Content-Type": "feedback/json"
+					// }, 
+					success:function(res){
+						console.log(res)
+						uni.showModal({
+							title: "Hint",
+							content: "Thank you for your feedback.",
+							showCancel: false,
+							success: function (res) {
+								if (res.confirm) {
 									uni.navigateTo({
 										url:'../setting/setting'
 									})
-									
-									
-								},	
-							});
-					
-							// uni.switchTab({
-							// 	url:"../setting/setting"
-							// })
+								}
+							}
+						})
 						
-					}
+						
+						
+					},	
+				});
+			
+					// uni.switchTab({
+					// 	url:"../setting/setting"
+					// })
+				
+			},
+			selectTypeItemList(xflSelectResult){
+				this.type=xflSelectResult.newVal
+			
+			},
 		}
 	}
 </script>
@@ -76,6 +108,17 @@ page{
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
+	text-align: center;
+	padding: 20px;
+}
+.main-content{
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+.main-body{
+	width: 100%;
+	border-radius: 10px;
 	text-align: center;
 }
 </style>
