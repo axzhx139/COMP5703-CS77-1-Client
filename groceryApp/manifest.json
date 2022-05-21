@@ -58,6 +58,9 @@
                 "oauth" : {
                     "google" : {
                         "clientid" : ""
+                    },
+                    "facebook" : {
+                        "appid" : "497010152123690"
                     }
                 }
             },
