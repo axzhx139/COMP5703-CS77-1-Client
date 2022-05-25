@@ -75,17 +75,17 @@
 		
 		<hqs-popup v-model="deleteVer" :showClose="false" height="400px">
 			<view class="d_acc">
-				<text style="line-height: 45px;margin-left:25px;font-size: 20px;">Please enter the verification code</text>
-				<view class="verify code">
-					<u-input style="margin-top: 10px; margin-left: 25px" placeholder="Verify Vode" v-model="vcode" class="fn-input" height="90" input-align="left"/>
-				</view>
+				<text>Password</text>
+				<u-input style="height:50px;"placeholder="Password" v-model="password"  type="password" class="fn-input" height="90" input-align="left" />
+				<text>Verify Code</text>
+				<div id="app" style="margin-top: 10px;height:50px;">
+					<u-input style="width:80%;float:left;" placeholder="Verify Vode" v-model="vcode" class="fn-input" height="90" input-align="left"/>
+					<u-button style="width:20%;float:left;margin-top: 0px;height:50px;background-color: #BDD7EF;border-color: #BDD7EF;" :hair-line="false" class="ctn-btn"  @click="sendcode2(10)" v-bind:disabled="disabledbtn">{{verifyBtnText}}</u-button>
+				</div>
 				<view style="margin-top: 30px;">
 					<u-button shape="circle" style="width: 130px;background-color: #F5C979;border-color: #F5C979;" @click="deleteAcc()">Delete</u-button>
 				</view>
 			</view>
-		
-		
-		
 		</hqs-popup>
 			
 		<!-- #ifdef APP-PLUS -->
@@ -111,6 +111,10 @@
 				deleteVer: false, 
 				verifyCode: "",
 				vcode:"",
+				password:"",
+				disabledbtn: false,
+				verifyBtnText:'verify',
+				
 			}
 		},
 		onLoad(){
@@ -249,27 +253,7 @@
 						if (res.confirm) {
 							// console.log("ok")
 							// console.log(uni.getStorageSync('email'))
-							uni.request({
-								url:'http://101.35.91.117:7884/users/register/sendVerifyCode',
-								method:'POST',
-								data:{
-									'email':uni.getStorageSync('email'),
-								},
-								success:function(res){
-									console.log(res)
-									if(res.data == 1){
-										that.deleteVer = true;
-									}else{
-										uni.showToast({
-											title: 'Sorry, fail to send verify coude to your email',
-											icon: 'none',
-											duration:4000,
-										})
-									}
-								}
-							// }).then(res=>{
-							// 	console.log('res:', res)
-							})
+							that.deleteVer = true;
 						}
 				    }
 				});
@@ -316,7 +300,69 @@
 
 					}
 				})
-			}
+			},
+			
+			sendcode2: function(seconds,e) {
+				if(this.password!=''){
+					uni.request({
+						url:'http://101.35.91.117:7884/users/login/normal',
+						method:'POST',
+						data:{
+							'email':uni.getStorageSync('email'),
+							'pwd':this.password,
+						},
+						success:function(res){
+							if(res.data == -1||res.statusCode==500){
+								//password not match alert or email not exist
+								uni.showModal({
+									title: 'Unmatch Account Detail',
+									showCancel: false,
+									content: 'Your password is incorrect, please try again. ',
+									success: function (res) {
+										if (res.confirm) {
+											console.log('confirm');
+										} 
+									}
+								});
+							}
+						}
+					})
+				}else{
+					this.disabledbtn=true
+					this.verifyBtnText=seconds+'...'
+					uni.request({
+						url:'http://101.35.91.117:7884/users/register/sendVerifyCode',
+						method:'POST',
+						data:{
+							'email':uni.getStorageSync('email'),
+						},
+						success:function(res){
+							console.log(res)
+							if(res.data!=1){
+								uni.showToast({
+									icon: "none",
+									title: "Email sending failed",
+								});
+							}else{
+								uni.showToast({
+									icon: "none",
+									title: "Send verification code success",
+								});
+							}
+						}
+					})
+					this.liveCountTimes=setInterval(()=>{
+						if (seconds > 1){
+							seconds--;
+							this.verifyBtnText=seconds+'...'
+						}else{
+							clearInterval(this.liveCountTimes)
+							this.verifyBtnText='verify'
+							this.disabledbtn=false
+						}
+						},1000)
+				}
+			},
 		}
 	}
 </script>
