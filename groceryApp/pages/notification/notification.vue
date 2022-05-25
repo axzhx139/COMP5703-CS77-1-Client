@@ -179,7 +179,7 @@ import uniIcons from '../../components/uni-icons/uni-icons.vue';
 			},
 			getList() {
 				uni.request({
-				url: "http://101.35.91.117:7884/notification/get/"+uni.getStorageSync('userId'),
+				url: "http://43.142.11.191:7884/notification/get/"+uni.getStorageSync('userId'),
 				method: 'get',
 				}).then(res=>{
 					console.log(res)
@@ -195,7 +195,7 @@ import uniIcons from '../../components/uni-icons/uni-icons.vue';
 				// this.notificationData[index].unread = false
 				var res = await uni.request({
 					method:'POST',
-					url:'http://101.35.91.117:7884/notification/post/' + toReadedItemId,
+					url:'http://43.142.11.191:7884/notification/post/' + toReadedItemId,
 					// data: 2
 				})
 				// 获取后端返回的数据
@@ -222,7 +222,7 @@ import uniIcons from '../../components/uni-icons/uni-icons.vue';
 				console.log("itemIdList is: ", itemIdList)
 				var res = await uni.request({
 					method:'POST',
-					url:'http://101.35.91.117:7884/notification/postList',
+					url:'http://43.142.11.191:7884/notification/postList',
 					data:JSON.stringify({"itemIdList": itemIdList})
 				})
 				var data = res[1].data

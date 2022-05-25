@@ -29,7 +29,7 @@
 			goSend(){
 							console.log("feedbacck", this.feedback)
 							uni.request({
-								url:'http://101.35.91.117:7884/feedback/storeFeedback',
+								url:'http://43.142.11.191:7884/feedback/storeFeedback',
 								method:'POST',
 								data:{
 									'id':uni.getStorageSync('userId'), 

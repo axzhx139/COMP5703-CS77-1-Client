@@ -4,7 +4,7 @@
 			<view class="main-body">
 				<view class = "section">
 					<view class="main-item-img" style="width: 100%;text-align: center;" >
-						<u-image border-radius="5px" height="116px" width="95%" :src="'http://101.35.91.117:7884/item/picture/'+product.itemId+'?'+Math.random()" :fade="true" duration="450"></u-image>
+						<u-image border-radius="5px" height="116px" width="95%" :src="'http://43.142.11.191:7884/item/picture/'+product.itemId+'?'+Math.random()" :fade="true" duration="450"></u-image>
 					</view>
 					<view class="divider"/>
 	
@@ -56,7 +56,7 @@
 			getProductById(id){
 				console.log(id)
 				uni.request({
-				url: "http://101.35.91.117:7884/item/"+id,
+				url: "http://43.142.11.191:7884/item/"+id,
 				method: 'get',
 				}).then(res=>{
 					this.product = res[1].data

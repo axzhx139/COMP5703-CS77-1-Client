@@ -225,7 +225,7 @@
 				this.verifyBtnText=seconds+'...'
 				console.log(this.email)
 				uni.request({
-					url:'http://101.35.91.117:7884/users/register/sendVerifyCode',
+					url:'http://43.142.11.191:7884/users/register/sendVerifyCode',
 					method:'POST',
 					data:{
 						'email':this.email,
@@ -275,7 +275,7 @@
 						this.disabledbtn=true
 						this.verifyBtnText=seconds+'...'
 						uni.request({
-							url:'http://101.35.91.117:7884/users/register/sendChangeCode',
+							url:'http://43.142.11.191:7884/users/register/sendChangeCode',
 							method:'POST',
 							data:{
 								'email':this.email,
@@ -330,7 +330,7 @@
 					this.disabledbtn=true
 					this.verifyBtnText=seconds+'...'
 					uni.request({
-						url:'http://101.35.91.117:7884/users/register/sendVerifyCode',
+						url:'http://43.142.11.191:7884/users/register/sendVerifyCode',
 						method:'POST',
 						data:{
 							'email':this.email,
@@ -407,7 +407,7 @@
 									var that = this
 									console.log("uni.getStorageSync('userId') is: " ,uni.getStorageSync('userId'))
 									uni.request({
-										url:'http://101.35.91.117:7884/users/login/thirdparty',
+										url:'http://43.142.11.191:7884/users/login/thirdparty',
 										method:'POST',
 										data:{
 											'email': googleEmail,
@@ -547,7 +547,7 @@
 									var that = this
 									console.log("uni.getStorageSync('userId') is: " ,uni.getStorageSync('userId'))
 									uni.request({
-										url:'http://101.35.91.117:7884/users/login/thirdparty',
+										url:'http://43.142.11.191:7884/users/login/thirdparty',
 										method:'POST',
 										data:{
 											'email': googleEmail,
@@ -657,7 +657,7 @@
 				}
 				else{
 					uni.request({
-						url:'http://101.35.91.117:7884/users/register/normal',
+						url:'http://43.142.11.191:7884/users/register/normal',
 						method:'POST',
 						data:{
 							'name':this.email.split('@')[0],
@@ -748,7 +748,7 @@
 				}
 				else{
 					uni.request({
-						url:'http://101.35.91.117:7884/users/register/changePasswordbyVcode',
+						url:'http://43.142.11.191:7884/users/register/changePasswordbyVcode',
 						method:'POST',
 						data:{
 							'email':this.email,
@@ -826,7 +826,7 @@
 				if(this.loginemail!=null && this.loginemail!=''&& this.pwd!=null && this.pwd!=''){
 					var that = this;
 					uni.request({
-						url:'http://101.35.91.117:7884/users/login/normal',
+						url:'http://43.142.11.191:7884/users/login/normal',
 						method:'POST',
 						data:{
 							'email':this.loginemail,
