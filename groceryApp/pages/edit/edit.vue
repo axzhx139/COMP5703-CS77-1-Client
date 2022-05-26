@@ -342,7 +342,7 @@
 			getAvatar(){
 				let that =this
 				// uni.request({
-				// url: "http://101.35.91.117:7884/users/avatar/"+uni.getStorageSync('userId'),
+				// url: "http://43.142.11.191:7884/users/avatar/"+uni.getStorageSync('userId'),
 				// method: 'get',
 				// }).then(res=>{
 				// 	console.log('res',res)
@@ -353,7 +353,7 @@
 				// 	}
 				// })
 				console.log('111')
-				that.avatar="http://101.35.91.117:7884/users/avatar/"+uni.getStorageSync('userId')+'?'+Math.random()
+				that.avatar="http://43.142.11.191:7884/users/avatar/"+uni.getStorageSync('userId')+'?'+Math.random()
 				if(that.avatar==''){
 					that.avatar = "../../static/girl.png"
 				}
@@ -373,7 +373,7 @@
 						// });
 						that.avatar = res.tempFilePaths[0]
 						uni.uploadFile({
-							url: 'http://101.35.91.117:7884/users/avatar/update/'+uni.getStorageSync('userId'), 
+							url: 'http://43.142.11.191:7884/users/avatar/update/'+uni.getStorageSync('userId'), 
 							filePath: that.filepath[0], 
 							name:'picture', 
 							// header: {
@@ -398,7 +398,7 @@
 			},
 			loadInfo(){
 				uni.request({
-				url: "http://101.35.91.117:7884/users/profile/"+uni.getStorageSync('userId'),
+				url: "http://43.142.11.191:7884/users/profile/"+uni.getStorageSync('userId'),
 				method: 'get',
 				}).then(res=>{
 					console.log('load',res[1].data)
@@ -424,7 +424,7 @@
 				console.log("gender", this.addressData.sex)
 				console.log(address)
 				uni.request({
-					url:'http://101.35.91.117:7884/users/profile/update',
+					url:'http://43.142.11.191:7884/users/profile/update',
 					method:'POST',
 					data:{
 						// 'address':address,

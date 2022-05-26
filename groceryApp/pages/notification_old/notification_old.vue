@@ -119,7 +119,7 @@
 		methods: {
 			getName(){
 				uni.request({
-				url: "http://101.35.91.117:7884/users/profile/"+uni.getStorageSync('userId'),
+				url: "http://43.142.11.191:7884/users/profile/"+uni.getStorageSync('userId'),
 				method: 'get',
 				}).then(res=>{
 					console.log('load',res[1].data)
@@ -132,7 +132,7 @@
 			},
 			checkAlert(){
 				uni.request({
-				url: "http://101.35.91.117:7884/users/alert/"+uni.getStorageSync('userId'),
+				url: "http://43.142.11.191:7884/users/alert/"+uni.getStorageSync('userId'),
 				method: 'get',
 				}).then(res=>{
 					console.log('load',res[1].data)
@@ -178,8 +178,8 @@
 				// }
 				
 				uni.request({
-					// url:'http://101.35.91.117:7884/item/user/'+uni.getStorageSync('userId')
-					url:'http://101.35.91.117:7884/item/remind',
+					// url:'http://43.142.11.191:7884/item/user/'+uni.getStorageSync('userId')
+					url:'http://43.142.11.191:7884/item/remind',
 					method:'POST',
 					data:{
 						'userId': uni.getStorageSync('userId'),

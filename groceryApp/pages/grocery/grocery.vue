@@ -83,7 +83,7 @@
 									<u-row gutter="16">
 										<u-col span="3">
 											<!-- <view class="demo-layout bg-purple"> -->
-												<image :src="'http://101.35.91.117:7884/item/picture/'+item.itemId+'?'+Math.random()" style="width: 65px;height: 65px;">
+												<image :src="'http://43.142.11.191:7884/item/picture/'+item.itemId+'?'+Math.random()" style="width: 65px;height: 65px;">
 											<!-- </view> -->
 										</u-col>
 										<u-col span="4">
@@ -278,7 +278,7 @@
 									<u-row gutter="16">
 										<u-col span="3">
 											<view class="demo-layout bg-purple">
-												<image :src="'http://101.35.91.117:7884/item/picture/'+item.itemId+'?'+Math.random()" style="width: 65px;height: 65px;">
+												<image :src="'http://43.142.11.191:7884/item/picture/'+item.itemId+'?'+Math.random()" style="width: 65px;height: 65px;">
 											</view>
 										</u-col>
 										
@@ -507,7 +507,7 @@
 				success: function(res){
 					if(res.data){
 						if(res.data.iPicture && res.data.iPicture !=''){
-							that.add_src='http://101.35.91.117:7884/item/picture/'+res.data.iId;
+							that.add_src='http://43.142.11.191:7884/item/picture/'+res.data.iId;
 							that.filepath=[that.add_src];
 						}else{
 							that.filepath='';
@@ -685,13 +685,13 @@
 				let that=this
 				uni.request({
 					method:'POST',
-					url:'http://101.35.91.117:7884/item/insert',
+					url:'http://43.142.11.191:7884/item/insert',
 					data:JSON.stringify(item)
 				}).then(res => {
 					console.log(that.filepath[0])
 					if(that.filepath[0]){
 						uni.uploadFile({
-							url: 'http://101.35.91.117:7884/item/update/picture', 
+							url: 'http://43.142.11.191:7884/item/update/picture', 
 							filePath: that.filepath[0], 
 							name: 'picture', 
 							formData: {
@@ -724,7 +724,7 @@
 				// }
 				
 				uni.request({
-					url:'http://101.35.91.117:7884/item/user/'+uni.getStorageSync('userId')
+					url:'http://43.142.11.191:7884/item/user/'+uni.getStorageSync('userId')
 				}).then(res => {
 					console.log('res[1].data is: ',res[1].data)
 					this.getList()
@@ -734,7 +734,7 @@
 			
 			getList(){
 				uni.request({
-				url: "http://101.35.91.117:7884/potential/"+uni.getStorageSync('userId'),
+				url: "http://43.142.11.191:7884/potential/"+uni.getStorageSync('userId'),
 				method: 'get',
 				}).then(res=>{
 					// console.log('load',res[1].data)
@@ -818,7 +818,7 @@
 				
 				uni.request({
 					method:'POST',
-					url:'http://101.35.91.117:7884/item/update',
+					url:'http://43.142.11.191:7884/item/update',
 					data:JSON.stringify(itemUpdated)
 				}).then(res => {
 					console.log(res)
@@ -876,7 +876,7 @@
                     
                     
 					uni.request({
-						url: 'http://101.35.91.117:7884/item/update/status/'+"consume"+"/id/"+changedItem.itemId,
+						url: 'http://43.142.11.191:7884/item/update/status/'+"consume"+"/id/"+changedItem.itemId,
 					}).then(res => {
 						this.getCol()
 						console.log(res[1])
@@ -1012,7 +1012,7 @@
 							}
 							console.log(result_str)
 							uni.request({
-								url: "http://101.35.91.117:7884/ocr/transferDate/"+result_str,
+								url: "http://43.142.11.191:7884/ocr/transferDate/"+result_str,
 								method: 'get'
 							}).then(res=>{
 								console.log(res[1].data);
@@ -1277,7 +1277,7 @@
 					console.log(JSON.stringify(item))
 					uni.request({
 						method:'POST',
-						url:'http://101.35.91.117:7884/item/update',
+						url:'http://43.142.11.191:7884/item/update',
 						data:JSON.stringify(item)
 					}).then(res => {
 						console.log(res)
@@ -1307,7 +1307,7 @@
 			selectSortingItemList(xflSelectResult){
 				if (xflSelectResult.newVal == this.sortingMethod[0]) {
 					uni.request({
-					url: 'http://101.35.91.117:7884/item/user/'+uni.getStorageSync('userId') + '/1',
+					url: 'http://43.142.11.191:7884/item/user/'+uni.getStorageSync('userId') + '/1',
 					method: 'get',
 					}).then(res=>{
 						let stockList = res[1].data
@@ -1315,7 +1315,7 @@
 					})
 				} else if (xflSelectResult.newVal == this.sortingMethod[1]) {
 					uni.request({
-					url: 'http://101.35.91.117:7884/item/user/'+uni.getStorageSync('userId') + '/2',
+					url: 'http://43.142.11.191:7884/item/user/'+uni.getStorageSync('userId') + '/2',
 					method: 'get',
 					}).then(res=>{
 						let stockList = res[1].data
@@ -1323,7 +1323,7 @@
 					})
 				} else if (xflSelectResult.newVal == this.sortingMethod[2]) {
 					uni.request({
-					url: 'http://101.35.91.117:7884/item/user/'+uni.getStorageSync('userId') + '/3',
+					url: 'http://43.142.11.191:7884/item/user/'+uni.getStorageSync('userId') + '/3',
 					method: 'get',
 					}).then(res=>{
 						let stockList = res[1].data
@@ -1331,7 +1331,7 @@
 					})
 				} else if (xflSelectResult.newVal == this.sortingMethod[3]) {
 					uni.request({
-					url: 'http://101.35.91.117:7884/item/user/'+uni.getStorageSync('userId') + '/4',
+					url: 'http://43.142.11.191:7884/item/user/'+uni.getStorageSync('userId') + '/4',
 					method: 'get',
 					}).then(res=>{
 						let stockList = res[1].data
@@ -1394,7 +1394,7 @@
 					console.log('测试过期')
 					
 					uni.request({
-					url: 'http://101.35.91.117:7884/item/user/'+uni.getStorageSync('userId') + '/-2',
+					url: 'http://43.142.11.191:7884/item/user/'+uni.getStorageSync('userId') + '/-2',
 					method: 'get',
 					}).then(res=>{
 						console.log('load',res[1].data)
@@ -1407,7 +1407,7 @@
 					
 					console.log('测试消耗')
 					uni.request({
-					url: 'http://101.35.91.117:7884/item/user/'+uni.getStorageSync('userId') + '/-3',
+					url: 'http://43.142.11.191:7884/item/user/'+uni.getStorageSync('userId') + '/-3',
 					method: 'get',
 					}).then(res=>{
 						console.log('load',res[1].data)
@@ -1417,7 +1417,7 @@
 					
 					console.log('没有过滤器')
 					uni.request({
-					url: 'http://101.35.91.117:7884/item/user/'+uni.getStorageSync('userId') + '/-1',
+					url: 'http://43.142.11.191:7884/item/user/'+uni.getStorageSync('userId') + '/-1',
 					method: 'get',
 					}).then(res=>{
 						console.log('load',res[1].data)
@@ -1427,7 +1427,7 @@
 			},		
 			getImgById(id){
 				uni.request({
-				url: "http://101.35.91.117:7884/item/picture/"+id,
+				url: "http://43.142.11.191:7884/item/picture/"+id,
 				method: 'get',
 				}).then(res=>{
 					console.log(res[1].data)
@@ -1437,7 +1437,7 @@
 			saveList(id){
 				// uni.showLoading({title: 'updating',mask:true});
 				uni.request({
-				url: "http://101.35.91.117:7884/potential/add/"+id+"/"+uni.getStorageSync('userId'),
+				url: "http://43.142.11.191:7884/potential/add/"+id+"/"+uni.getStorageSync('userId'),
 				method: 'get',
 				}).then(res=>{
 					this.getCol()
@@ -1447,7 +1447,7 @@
 			deleteList(id){
 				// uni.showLoading({title: 'updating',mask:true});
 				uni.request({
-				url: "http://101.35.91.117:7884/potential/remove/"+id+"/"+uni.getStorageSync('userId'),
+				url: "http://43.142.11.191:7884/potential/remove/"+id+"/"+uni.getStorageSync('userId'),
 				method: 'get',
 				}).then(res=>{
 					this.getCol()
@@ -1464,7 +1464,7 @@
 						// console.log(that.iItemid)
 						// console.log(res.tempFilePaths[0])
 						uni.uploadFile({
-							url: 'http://101.35.91.117:7884/item/update/picture', 
+							url: 'http://43.142.11.191:7884/item/update/picture', 
 							filePath: res.tempFilePaths[0], 
 							name: 'picture', 
 							formData: {

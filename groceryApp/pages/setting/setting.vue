@@ -125,7 +125,7 @@
 			update(){
 				let that=this
 				uni.request({
-				url: "http://101.35.91.117:7884/users/alert/"+uni.getStorageSync('userId'),
+				url: "http://43.142.11.191:7884/users/alert/"+uni.getStorageSync('userId'),
 				method: 'get',
 				}).then(res=>{
 					// console.log('load',res[1].data)
@@ -145,7 +145,7 @@
 					this.alertinfo.alert=0
 				}
 				uni.request({
-				url: "http://101.35.91.117:7884/users/alert/change/"+uni.getStorageSync('userId'),
+				url: "http://43.142.11.191:7884/users/alert/change/"+uni.getStorageSync('userId'),
 				method: 'get',
 				}).then(res=>{
 					console.log('res',res)
@@ -162,7 +162,7 @@
 					        if (res.confirm) {
 								console.log(that.day)
 					            uni.request({
-					            url: 'http://101.35.91.117:7884/item/update/all/'+uni.getStorageSync('userId')+'/'+that.day,
+					            url: 'http://43.142.11.191:7884/item/update/all/'+uni.getStorageSync('userId')+'/'+that.day,
 					            method: 'get',
 					            }).then(res=>{
 					            	console.log('res',res)
@@ -181,7 +181,7 @@
 				console.log(this.ippwd)
 				if(this.ivpwd==this.inpwd){
 					uni.request({
-						url:'http://101.35.91.117:7884/users/reset/pwd',
+						url:'http://43.142.11.191:7884/users/reset/pwd',
 						method:'POST',
 						data:{
 							'id':uni.getStorageSync('userId'),
@@ -262,7 +262,7 @@
 			deleteAcc(){
 				console.log(uni.getStorageSync('userId'))
 				uni.request({
-					url:'http://101.35.91.117:7884/users/deleteUserAccount',
+					url:'http://43.142.11.191:7884/users/deleteUserAccount',
 					method:'POST',
 					data:{
 						'uId':uni.getStorageSync('userId'),
@@ -303,31 +303,31 @@
 			},
 			
 			sendcode2: function(seconds,e) {
-				if(this.password!=''){
-					uni.request({
-						url:'http://101.35.91.117:7884/users/login/normal',
-						method:'POST',
-						data:{
-							'email':uni.getStorageSync('email'),
-							'pwd':this.password,
-						},
-						success:function(res){
-							if(res.data == -1||res.statusCode==500){
-								//password not match alert or email not exist
-								uni.showModal({
-									title: 'Unmatch Account Detail',
-									showCancel: false,
-									content: 'Your password is incorrect, please try again. ',
-									success: function (res) {
-										if (res.confirm) {
-											console.log('confirm');
-										} 
-									}
-								});
-							}
-						}
-					})
-				}else{
+				// if(this.password!=''){
+				// 	uni.request({
+				// 		url:'http://101.35.91.117:7884/users/login/normal',
+				// 		method:'POST',
+				// 		data:{
+				// 			'email':uni.getStorageSync('email'),
+				// 			'pwd':this.password,
+				// 		},
+				// 		success:function(res){
+				// 			if(res.data == -1||res.statusCode==500){
+				// 				//password not match alert or email not exist
+				// 				uni.showModal({
+				// 					title: 'Unmatch Account Detail',
+				// 					showCancel: false,
+				// 					content: 'Your password is incorrect, please try again. ',
+				// 					success: function (res) {
+				// 						if (res.confirm) {
+				// 							console.log('confirm');
+				// 						} 
+				// 					}
+				// 				});
+				// 			}
+				// 		}
+				// 	})
+				// }else{
 					this.disabledbtn=true
 					this.verifyBtnText=seconds+'...'
 					uni.request({
@@ -349,6 +349,9 @@
 									title: "Send verification code success",
 								});
 							}
+						},
+						fail:function(res){
+							console.log(res.data);
 						}
 					})
 					this.liveCountTimes=setInterval(()=>{
@@ -361,7 +364,7 @@
 							this.disabledbtn=false
 						}
 						},1000)
-				}
+				// }
 			},
 		}
 	}

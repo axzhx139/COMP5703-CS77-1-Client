@@ -39,7 +39,7 @@
 		<view class="">
 			<scroll-view  :scroll-x="true" style="white-space: nowrap;" >
 			  <template v-for="(item, index) in expiringFoodList">
-				  <view class="scroll_item" :style="{'background-image': 'url('+'http://101.35.91.117:7884/item/picture/'+item.itemId+')','filter': 'grayscale('+getFreshness(index)+'%)'}">
+				  <view class="scroll_item" :style="{'background-image': 'url('+'http://43.142.11.191:7884/item/picture/'+item.itemId+')','filter': 'grayscale('+getFreshness(index)+'%)'}">
 					<image src="../../static/knife_fork.png" style="width: 20px;height: 20px;float:right" @click="consumeSelect(index)"></image>
 
 					<view style="height: 100%;"  @click="toDetail(item.itemId)">
@@ -90,7 +90,7 @@
 							
 							<u-row gutter="16">
 								<u-col span="2">
-										<image :src="'http://101.35.91.117:7884/item/picture/'+item.itemId+'?'+Math.random()" style="width: 35px;height: 35px;">
+										<image :src="'http://43.142.11.191:7884/item/picture/'+item.itemId+'?'+Math.random()" style="width: 35px;height: 35px;">
 								</u-col>
 								<u-col span="7">
 									<u-row style="margin: 0px 0px 10px 5px;">{{ item.name }}</u-row>
@@ -249,7 +249,7 @@
 			},
 			getShoppingList(){
 				uni.request({
-				url: "http://101.35.91.117:7884/potential/"+uni.getStorageSync('userId'),
+				url: "http://43.142.11.191:7884/potential/"+uni.getStorageSync('userId'),
 				method: 'get',
 				}).then(res=>{
 					console.log('load',res[1].data)
@@ -298,7 +298,7 @@
 					console.log(changedItem)
 					console.log(changedItem.itemId)
 					uni.request({
-						url: 'http://101.35.91.117:7884/item/update/status/'+"consume"+"/id/"+changedItem.itemId,
+						url: 'http://43.142.11.191:7884/item/update/status/'+"consume"+"/id/"+changedItem.itemId,
 					}).then(res => {
 						this.getCol()
 						console.log(res[1])
@@ -324,7 +324,7 @@
 				console.log(JSON.stringify(itemUpdated))
 				uni.request({
 					method:'POST',
-					url:'http://101.35.91.117:7884/item/update',
+					url:'http://43.142.11.191:7884/item/update',
 					data:JSON.stringify(itemUpdated)
 				}).then(res => {
 					console.log(res)
@@ -334,7 +334,7 @@
 			},
 			loadinfo(){
 				// uni.request({
-				// url: "http://101.35.91.117:7884/users/avatar/"+uni.getStorageSync('userId'),
+				// url: "http://43.142.11.191:7884/users/avatar/"+uni.getStorageSync('userId'),
 				// method: 'get',
 				// }).then(res=>{
 				// 	console.log('res',res)
@@ -345,12 +345,12 @@
 				// 	}
 				// })
 				
-				this.avatar="http://101.35.91.117:7884/users/avatar/"+uni.getStorageSync('userId');
+				this.avatar="http://43.142.11.191:7884/users/avatar/"+uni.getStorageSync('userId');
 				if(this.avatar==''){
 					this.avatar = "../../static/girl.png"
 				};
 				uni.request({
-				url: "http://101.35.91.117:7884/users/profile/"+uni.getStorageSync('userId'),
+				url: "http://43.142.11.191:7884/users/profile/"+uni.getStorageSync('userId'),
 				method: 'get',
 				}).then(res=>{
 					// console.log('load',res[1].data)
@@ -372,7 +372,7 @@
 				// }
 				
 				uni.request({
-					url:'http://101.35.91.117:7884/item/user/'+uni.getStorageSync('userId')
+					url:'http://43.142.11.191:7884/item/user/'+uni.getStorageSync('userId')
 				}).then(res => {
 					console.log(res[1].data)
 					this.updateItemList(res[1].data)
@@ -427,7 +427,7 @@
 			},
 			getNotificationData() {
 				uni.request({
-				url: "http://101.35.91.117:7884/notification/get/"+uni.getStorageSync('userId'),
+				url: "http://43.142.11.191:7884/notification/get/"+uni.getStorageSync('userId'),
 				method: 'get',
 				}).then(res=>{
 					console.log(res)
@@ -499,7 +499,7 @@
 				    success: function (res) {
 				        if (res.confirm) {
 				            uni.request({
-				            url: "http://101.35.91.117:7884/potential/deleteAll/"+uni.getStorageSync('userId'),
+				            url: "http://43.142.11.191:7884/potential/deleteAll/"+uni.getStorageSync('userId'),
 				            method: 'get',
 				            }).then(res=>{
 				            	console.log('load',res[1].data)
@@ -521,7 +521,7 @@
 				    success: function (res) {
 				        if (res.confirm) {
 				            uni.request({
-				            url: "http://101.35.91.117:7884/potential/delete/"+pid,
+				            url: "http://43.142.11.191:7884/potential/delete/"+pid,
 				            method: 'get',
 				            }).then(res=>{
 				            	// setTimeout(function () {uni.hideLoading();}, 500);

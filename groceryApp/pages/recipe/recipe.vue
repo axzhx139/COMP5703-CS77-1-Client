@@ -158,7 +158,7 @@
 			searchRecipe(searchIngre){
 				// console.log(this.searchIngre);
 				uni.request({
-				url: "http://101.35.91.117:7884/recipe/"+uni.getStorageSync('userId'),
+				url: "http://43.142.11.191:7884/recipe/"+uni.getStorageSync('userId'),
 				method: 'get',
 				}).then(res=>{
 					this.loadRecipe2(res[1].data)
@@ -169,7 +169,7 @@
 			
 			getAllRecipe(){
 				uni.request({
-				url: "http://101.35.91.117:7884/recipe/"+uni.getStorageSync('userId'),
+				url: "http://43.142.11.191:7884/recipe/"+uni.getStorageSync('userId'),
 				method: 'get',
 				}).then(res=>{
 					this.loadRecipe(res[1].data)
