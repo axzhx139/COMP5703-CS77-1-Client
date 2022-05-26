@@ -165,7 +165,7 @@
 					            url: 'http://43.142.11.191:7884/item/update/all/'+uni.getStorageSync('userId')+'/'+that.day,
 					            method: 'get',
 					            }).then(res=>{
-					            	console.log('res',res)
+									console.log('res',res)
 					            })
 					        } if(res.cancel){
 								
@@ -246,7 +246,7 @@
 				console.log(email)
 				uni.showModal({
 				    title: 'Delete prompt',
-				    content: 'Are you sure to delete the account?\n If yes, you will receive a verify code.',
+				    content: 'Are you sure to delete the account?',
 					confirmText: "Yes",
 					cancelText: "No",
 				    success(res) {
@@ -260,81 +260,83 @@
 				  // this.deleteVer = that
 			},
 			deleteAcc(){
-				console.log(uni.getStorageSync('userId'))
-				uni.request({
-					url:'http://43.142.11.191:7884/users/deleteUserAccount',
-					method:'POST',
-					data:{
-						'uId':uni.getStorageSync('userId'),
-						'email':uni.getStorageSync('email'),
-						'verificationCode': this.vcode,
-					},
-					success:function(res){
-						console.log(res)
-						if(res.data == 1){
-							uni.showModal({
-								title: 'Your account has been deleted',
-								showCancel: false,
-								// content: 'The verify password and new password should be same',
-								success: function (res) {
-									if (res.confirm) {
-										uni.navigateTo({
-										    url: "/pages/welcome/welcome"
-										})
-									} 
-								}
-							})
-						}else if(res.data == -3){
-							uni.showToast({
-								title: 'Sorry, the verify code is wrong',
-								icon: 'none',
-								duration:4000,
-							})
-						}else{
-							uni.showToast({
-								title: 'Sorry, fail to delete account ',
-								icon: 'none',
-								duration:4000,
-							})
-						}
-
-					}
-				})
-			},
-			
-			sendcode2: function(seconds,e) {
-				// if(this.password!=''){
-				// 	uni.request({
-				// 		url:'http://101.35.91.117:7884/users/login/normal',
-				// 		method:'POST',
-				// 		data:{
-				// 			'email':uni.getStorageSync('email'),
-				// 			'pwd':this.password,
-				// 		},
-				// 		success:function(res){
-				// 			if(res.data == -1||res.statusCode==500){
-				// 				//password not match alert or email not exist
-				// 				uni.showModal({
-				// 					title: 'Unmatch Account Detail',
-				// 					showCancel: false,
-				// 					content: 'Your password is incorrect, please try again. ',
-				// 					success: function (res) {
-				// 						if (res.confirm) {
-				// 							console.log('confirm');
-				// 						} 
-				// 					}
-				// 				});
-				// 			}
-				// 		}
-				// 	})
-				// }else{
-					this.disabledbtn=true
-					this.verifyBtnText=seconds+'...'
+				var that = this;
+				if(this.password != null && this.password!= '' && this.vcode!=null && this.vcode !=''){
 					uni.request({
-						url:'http://101.35.91.117:7884/users/register/sendVerifyCode',
+						url:'http://43.142.11.191:7884/users/login/normal',
 						method:'POST',
 						data:{
 							'email':uni.getStorageSync('email'),
+							'pwd': this.password
+						},
+						success:function(res){
+							console.log(res)
+							if(res.data!=-1){
+								console.log(uni.getStorageSync('userId'))
+								uni.request({
+									url:'http://43.142.11.191:7884/users/deleteUserAccount',
+									method:'POST',
+									data:{
+										'uId':uni.getStorageSync('userId'),
+										'email':uni.getStorageSync('email'),
+										'verificationCode': that.vcode,
+									},
+									success:function(res){
+										console.log(uni.getStorageSync('userId'))
+										
+										console.log(res)
+										if(res.data == 1){
+											uni.showToast({
+												title: 'Sorry, the verify code is wrong',
+												icon: 'none',
+												duration:4000,
+											})
+											uni.navigateTo({
+											    url: "/pages/welcome/welcome"
+											})
+										}else if(res.data == -3){
+											uni.showToast({
+												title: 'Sorry, the verify code is wrong',
+												icon: 'none',
+												duration:4000,
+											})
+										}else{
+											uni.showToast({
+												title: 'Sorry, fail to delete account ',
+												icon: 'none',
+												duration:4000,
+											})
+										}
+								
+									}
+								})
+							}else{
+								uni.showToast({
+									title: 'Sorry, your password is incorrect, please try again. ',
+									icon: 'none',
+									duration:4000,
+								});
+							}
+						}
+					})
+				}else{
+					uni.showToast({
+						icon: "none",
+						title: "information uncomplete",
+					});
+				}	
+			},
+			
+			sendcode2: function(seconds,e) {
+					this.disabledbtn=true
+					this.verifyBtnText=seconds+'s'
+					console.log()
+					
+					uni.request({
+						url:'http://43.142.11.191:7884/users/register/sendVerifyCode',
+						method:'POST',
+						data:{
+							'email': uni.getStorageSync('email'),
 						},
 						success:function(res){
 							console.log(res)
