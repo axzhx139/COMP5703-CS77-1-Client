@@ -717,7 +717,7 @@
 								// this.$store.commit("setUserLogin", res.data)
 								// console.log(res.data)
 								uni.setStorageSync('userId',res.data)
-								uni.setStorageSync('email', that.email)
+								uni.setStorageSync('email', this.email)
 								console.log("success")
 								console.log("Start action")
 								//store uid
