@@ -26,11 +26,11 @@
 							<view style="width: 10px;"></view>
 							<text>Continue with Google</text>
 					</u-button>
-					<u-button style="margin-top: 10px;background-color: #4A66AC;border-color: #4A66AC;color: white;" :hair-line="false" class="ctn-btn" @click="facebook_login" >
+					<!-- <u-button style="margin-top: 10px;background-color: #4A66AC;border-color: #4A66AC;color: white;" :hair-line="false" class="ctn-btn" @click="facebook_login" >
 						<image src="../../static/facebook-icon.png" style="width: 10px;height: 20px;margin-left: 17px;"></image>
 						<view style="width: 16px;"></view>
 						Continue with Facebook
-					</u-button>
+					</u-button> -->
 					</view>
 			</view>
 			<hqs-popup title="" v-model="showPopup" :round="round" :showClose="false" :height="loginPopHeight + 'px'">
