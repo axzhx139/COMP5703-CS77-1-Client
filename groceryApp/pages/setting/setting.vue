@@ -287,7 +287,7 @@
 										console.log(res)
 										if(res.data == 1){
 											uni.showToast({
-												title: 'Sorry, the verify code is wrong',
+												title: 'Delete account success',
 												icon: 'none',
 												duration:4000,
 											})
