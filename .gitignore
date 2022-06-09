@@ -91,3 +91,12 @@ lint/generated/
 lint/outputs/
 lint/tmp/
 # lint/reports/
+.idea/..name 4.icloud
+.idea/..name 3.icloud
+.idea/intellij-javadocs-4.0.1.xml
+.gitignore
+..gitignore 3.icloud
+groceryApp/.DS_Store
+.gitignore
+.DS_Store
+groceryApp/.DS_Store
