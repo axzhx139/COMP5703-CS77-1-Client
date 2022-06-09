@@ -4,10 +4,9 @@
 *.ap_
 *.aab
 .DS_Store
-<<<<<<< HEAD
-=======
+
 groceryApp/.DS_Store
->>>>>>> main
+
 # Files for the ART/Dalvik VM
 *.dex
 
