@@ -169,7 +169,6 @@
 				showPopup: false,
 				showGoogleLoginPopup: false,
 				showFacebookLoginPopup: false,
-
 				popForgot:false,
 				disabledbtn: false,
 				verifyBtnText:'verify',
@@ -177,7 +176,6 @@
 				vcode:'',
 				password2:'',
 			// add up for facebook login section 2 start
-				
 				title: 'Hello',
 				w:0,
 				h:0,
@@ -225,7 +223,7 @@
 				this.verifyBtnText=seconds+'...'
 				console.log(this.email)
 				uni.request({
-					url:'http://43.142.11.191:7884/users/register/sendVerifyCode',
+					url:"http://"+uni.getStorageSync('ip')+"/users/register/sendVerifyCode",
 					method:'POST',
 					data:{
 						'email':this.email,
@@ -275,7 +273,7 @@
 						this.disabledbtn=true
 						this.verifyBtnText=seconds+'...'
 						uni.request({
-							url:'http://43.142.11.191:7884/users/register/sendChangeCode',
+							url:"http://"+uni.getStorageSync('ip')+"/users/register/sendChangeCode",
 							method:'POST',
 							data:{
 								'email':this.email,
@@ -330,7 +328,7 @@
 					this.disabledbtn=true
 					this.verifyBtnText=seconds+'...'
 					uni.request({
-						url:'http://43.142.11.191:7884/users/register/sendVerifyCode',
+						url:"http://"+uni.getStorageSync('ip')+"/users/register/sendVerifyCode",
 						method:'POST',
 						data:{
 							'email':this.email,
@@ -407,7 +405,7 @@
 									var that = this
 									console.log("uni.getStorageSync('userId') is: " ,uni.getStorageSync('userId'))
 									uni.request({
-										url:'http://43.142.11.191:7884/users/login/thirdparty',
+										url:"http://"+uni.getStorageSync('ip')+"/users/login/thirdparty",
 										method:'POST',
 										data:{
 											'email': googleEmail,
@@ -547,7 +545,7 @@
 									var that = this
 									console.log("uni.getStorageSync('userId') is: " ,uni.getStorageSync('userId'))
 									uni.request({
-										url:'http://43.142.11.191:7884/users/login/thirdparty',
+										url:"http://"+uni.getStorageSync('ip')+"/users/login/thirdparty",
 										method:'POST',
 										data:{
 											'email': googleEmail,
@@ -657,7 +655,7 @@
 				}
 				else{
 					uni.request({
-						url:'http://43.142.11.191:7884/users/register/normal',
+						url:"http://"+uni.getStorageSync('ip')+"/users/register/normal",
 						method:'POST',
 						data:{
 							'name':this.email.split('@')[0],
@@ -748,7 +746,7 @@
 				}
 				else{
 					uni.request({
-						url:'http://43.142.11.191:7884/users/register/changePasswordbyVcode',
+						url:"http://"+uni.getStorageSync('ip')+"/users/register/changePasswordbyVcode",
 						method:'POST',
 						data:{
 							'email':this.email,
@@ -826,7 +824,7 @@
 				if(this.loginemail!=null && this.loginemail!=''&& this.pwd!=null && this.pwd!=''){
 					var that = this;
 					uni.request({
-						url:'http://43.142.11.191:7884/users/login/normal',
+						url:"http://"+uni.getStorageSync('ip')+"/users/login/normal",
 						method:'POST',
 						data:{
 							'email':this.loginemail,
@@ -856,6 +854,7 @@
 								console.log(that.loginemail)
 								console.log("success")
 								console.log("Start action")
+								console.log(uni.getStorageSync('ip'))
 								uni.switchTab({
 									url:"../profile/profile"
 								})

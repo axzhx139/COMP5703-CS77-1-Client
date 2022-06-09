@@ -135,19 +135,19 @@
 				iGender:"",
 				sex: [{
 					label: "Female",
-					value: 0,
+					value: '0',
 					checked: true
 				}, {
 					label: "Male",
-					value: 1
+					value: '1'
 				},
 				{
 					label: "Neutral",
-					value: 2
+					value: '2'
 				},
 				{
 					label: "Unspecify",
-					value: 3
+					value: '3'
 				}],
 				addressData: {
 					sex: 3,
@@ -342,7 +342,7 @@
 			getAvatar(){
 				let that =this
 				// uni.request({
-				// url: "http://43.142.11.191:7884/users/avatar/"+uni.getStorageSync('userId'),
+				// url: "http://"+uni.getStorageSync('ip')+"/users/avatar/"+uni.getStorageSync('userId'),
 				// method: 'get',
 				// }).then(res=>{
 				// 	console.log('res',res)
@@ -353,7 +353,7 @@
 				// 	}
 				// })
 				console.log('111')
-				that.avatar="http://43.142.11.191:7884/users/avatar/"+uni.getStorageSync('userId')+'?'+Math.random()
+				that.avatar="http://"+uni.getStorageSync('ip')+"/users/avatar/"+uni.getStorageSync('userId')+'?'+Math.random()
 				if(that.avatar==''){
 					that.avatar = "../../static/girl.png"
 				}
@@ -373,7 +373,7 @@
 						// });
 						that.avatar = res.tempFilePaths[0]
 						uni.uploadFile({
-							url: 'http://43.142.11.191:7884/users/avatar/update/'+uni.getStorageSync('userId'), 
+							url: "http://"+uni.getStorageSync('ip')+"/users/avatar/update/"+uni.getStorageSync('userId'), 
 							filePath: that.filepath[0], 
 							name:'picture', 
 							// header: {
@@ -398,7 +398,7 @@
 			},
 			loadInfo(){
 				uni.request({
-				url: "http://43.142.11.191:7884/users/profile/"+uni.getStorageSync('userId'),
+				url: "http://"+uni.getStorageSync('ip')+"/users/profile/"+uni.getStorageSync('userId'),
 				method: 'get',
 				}).then(res=>{
 					console.log('load',res[1].data)
@@ -424,7 +424,7 @@
 				console.log("gender", this.addressData.sex)
 				console.log(address)
 				uni.request({
-					url:'http://43.142.11.191:7884/users/profile/update',
+					url: "http://"+uni.getStorageSync('ip')+"/users/profile/update",
 					method:'POST',
 					data:{
 						// 'address':address,
@@ -446,7 +446,7 @@
 				});
 			},
 			radioChange(e) {
-                this.addressData.sex = this.radio = e.detail.value
+                this.addressData.sex = this.radio = e.detail.value.toString()
 				console.log(this.addressData.sex)
             },
 			getLocationItems() {

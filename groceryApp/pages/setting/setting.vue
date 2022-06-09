@@ -88,9 +88,9 @@
 			</view>
 		</hqs-popup>
 			
-		<!-- #ifdef APP-PLUS -->
+		<!-- #ifdef APP-PLUS
 		<u-tabbar :list="tabbar" :mid-button="false" height="55px"></u-tabbar>
-		<!-- #endif -->
+		#endif -->
 		
 		<!-- #ifdef H5 -->
 		<u-tabbar :list="tabbar" :mid-button="false"></u-tabbar>
@@ -125,7 +125,7 @@
 			update(){
 				let that=this
 				uni.request({
-				url: "http://43.142.11.191:7884/users/alert/"+uni.getStorageSync('userId'),
+				url: "http://"+uni.getStorageSync('ip')+"/users/alert/"+uni.getStorageSync('userId'),
 				method: 'get',
 				}).then(res=>{
 					// console.log('load',res[1].data)
@@ -145,7 +145,7 @@
 					this.alertinfo.alert=0
 				}
 				uni.request({
-				url: "http://43.142.11.191:7884/users/alert/change/"+uni.getStorageSync('userId'),
+				url: "http://"+uni.getStorageSync('ip')+"/users/alert/change/"+uni.getStorageSync('userId'),
 				method: 'get',
 				}).then(res=>{
 					console.log('res',res)
@@ -162,7 +162,7 @@
 					        if (res.confirm) {
 								console.log(that.day)
 					            uni.request({
-					            url: 'http://43.142.11.191:7884/item/update/all/'+uni.getStorageSync('userId')+'/'+that.day,
+					            url: 'http://'+uni.getStorageSync('ip')+'/item/update/all/'+uni.getStorageSync('userId')+'/'+that.day,
 					            method: 'get',
 					            }).then(res=>{
 									console.log('res',res)
@@ -181,7 +181,7 @@
 				console.log(this.ippwd)
 				if(this.ivpwd==this.inpwd){
 					uni.request({
-						url:'http://43.142.11.191:7884/users/reset/pwd',
+						url:'http://'+uni.getStorageSync('ip')+'/users/reset/pwd',
 						method:'POST',
 						data:{
 							'id':uni.getStorageSync('userId'),
@@ -263,7 +263,7 @@
 				var that = this;
 				if(this.password != null && this.password!= '' && this.vcode!=null && this.vcode !=''){
 					uni.request({
-						url:'http://43.142.11.191:7884/users/login/normal',
+						url:'http://'+uni.getStorageSync('ip')+'/users/login/normal',
 						method:'POST',
 						data:{
 							'email':uni.getStorageSync('email'),
@@ -274,7 +274,7 @@
 							if(res.data!=-1){
 								console.log(uni.getStorageSync('userId'))
 								uni.request({
-									url:'http://43.142.11.191:7884/users/deleteUserAccount',
+									url:'http://'+uni.getStorageSync('ip')+'/users/deleteUserAccount',
 									method:'POST',
 									data:{
 										'uId':uni.getStorageSync('userId'),
@@ -333,7 +333,7 @@
 					console.log()
 					
 					uni.request({
-						url:'http://43.142.11.191:7884/users/register/sendVerifyCode',
+						url:'http://'+uni.getStorageSync('ip')+'/users/register/sendVerifyCode',
 						method:'POST',
 						data:{
 							'email': uni.getStorageSync('email'),

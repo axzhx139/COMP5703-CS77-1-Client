@@ -346,7 +346,7 @@
 				}
 				else if(this.password==this.confirm){
 					uni.request({
-						url:'http://43.142.11.191:7884/users/register/normal',
+						url:'http://"+uni.getStorageSync('ip')+"/users/register/normal',
 						method:'POST',
 						data:{
 							'name':this.value,
@@ -416,7 +416,7 @@
 				if(this.loginemail!=null && this.loginemail!=''&& this.pwd!=null && this.pwd!=''){
 					var that = this;
 					uni.request({
-						url:'http://43.142.11.191:7884/users/login/normal',
+						url:'http://"+uni.getStorageSync('ip')+"/users/login/normal',
 						method:'POST',
 						data:{
 							'email':this.loginemail,

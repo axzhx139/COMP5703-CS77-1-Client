@@ -20,7 +20,7 @@
 		data() {
 			return {
 				show:true,
-				src:'http://43.142.11.191:7884/item/picture/1',
+				src:'http://'+uni.getStorageSync('ip')+'/item/picture/1',
 				item_id:1,
 				filepath:"",
 			}
@@ -40,7 +40,7 @@
 						});
 						
 						uni.uploadFile({
-							url: 'http://43.142.11.191:7884/item/update/picture', 
+							url: 'http://'+uni.getStorageSync('ip')+'/item/update/picture', 
 							// url: 'http://localhost:7884/item/update/picture', 
 							filePath: that.filepath[0], 
 							name: 'picture', 
@@ -65,7 +65,7 @@
 			},
 			showPicture(){
 				// uni.request({
-				// 	url:'http://43.142.11.191:7884/picture/1',
+				// 	url:'http://"+uni.getStorageSync('ip')+"/picture/1',
 				// 	method:'GET',
 					
 				// }).then(res=>{
@@ -77,7 +77,7 @@
 				// 	this.show=true
 				// 	src=ResultBlueToothDevice
 				// }
-				// this.src='http://43.142.11.191:7884/picture/1'
+				// this.src='http://"+uni.getStorageSync('ip')+"/picture/1'
 			}
 		}
 	}

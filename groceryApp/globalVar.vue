@@ -1,10 +1,10 @@
 <script>
-	const srcFeedback="http://43.142.11.191:7884/feedback/"
-	const srcItem="http://43.142.11.191:7884/item/"
-	const srcNotification="http://43.142.11.191:7884/notification/"
-	const srcPotential="http://43.142.11.191:7884/potential"
-	const srcRecipe="http://43.142.11.191:7884/recipe/"
-	const srcUser="http://43.142.11.191:7884/users/"
+	const srcFeedback="http://"+uni.getStorageSync('ip')+"/feedback/"
+	const srcItem="http://"+uni.getStorageSync('ip')+"/item/"
+	const srcNotification="http://"+uni.getStorageSync('ip')+"/notification/"
+	const srcPotential="http://"+uni.getStorageSync('ip')+"/potential"
+	const srcRecipe="http://"+uni.getStorageSync('ip')+"/recipe/"
+	const srcUser="http://"+uni.getStorageSync('ip')+"/users/"
 	export default{
 		srcFeedback,
 		srcItem,

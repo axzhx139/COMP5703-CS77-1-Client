@@ -81,7 +81,7 @@
 			let deviceInfo = uni.getSystemInfoSync();
 			this.deviceHeight = deviceInfo.windowHeight-80;
 			uni.request({
-				url: "http://43.142.11.191:7884/users/profile/"+uni.getStorageSync('userId'),
+				url: "http://"+uni.getStorageSync('ip')+"/users/profile/"+uni.getStorageSync('userId'),
 					method: 'get',
 				}).then(res=>{
 					if (this.useraddress=='None'|this.useraddress==null){
@@ -136,7 +136,7 @@
 			getRankData(){
 				let that=this
 				uni.request({
-					url: "http://43.142.11.191:7884/ranking/topTen/"+this.address,
+					url: "http://"+uni.getStorageSync('ip')+"/ranking/topTen/"+this.address,
 					method: 'get',
 				}).then(res=>{
 					that.ranking_list=[]
@@ -152,7 +152,7 @@
 					// console.log(JSON.stringify(that.ranking_list))
 				})
 				uni.request({
-					url: "http://43.142.11.191:7884/ranking/previous/"+uni.getStorageSync('userId')+"/"+this.address,
+					url: "http://"+uni.getStorageSync('ip')+"/ranking/previous/"+uni.getStorageSync('userId')+"/"+this.address,
 					method: 'get',
 				}).then(res=>{
 					that.my_rank = res[1].data

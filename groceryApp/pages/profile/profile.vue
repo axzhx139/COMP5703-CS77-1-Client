@@ -171,7 +171,7 @@
 			},
 			loadInfo(){
 				// uni.request({
-				// url: "http://43.142.11.191:7884/users/avatar/"+uni.getStorageSync('userId'),
+				// url: "http://"+uni.getStorageSync('ip')+"/users/avatar/"+uni.getStorageSync('userId'),
 				// method: 'get',
 				// }).then(res=>{
 				// 	console.log('res',res)
@@ -181,12 +181,12 @@
 				// 		this.avatar = "../../static/girl.png"
 				// 	}
 				// })
-				this.avatar="http://43.142.11.191:7884/users/avatar/"+uni.getStorageSync('userId')+'?'+Math.random()
+				this.avatar="http://"+uni.getStorageSync('ip')+"/users/avatar/"+uni.getStorageSync('userId')+'?'+Math.random()
 				if(this.avatar==''){
 					this.avatar = "../../static/girl.png"
 				}
 				uni.request({
-				url: "http://43.142.11.191:7884/users/profile/"+uni.getStorageSync('userId'),
+				url: "http://"+uni.getStorageSync('ip')+"/users/profile/"+uni.getStorageSync('userId'),
 				method: 'get',
 				}).then(res=>{
 					console.log('load',res[1].data)
@@ -201,7 +201,7 @@
 				})
 				
 				uni.request({
-					url: "http://43.142.11.191:7884/ranking/previous/"+uni.getStorageSync('userId')+"/null",
+					url: "http://"+uni.getStorageSync('ip')+"/ranking/previous/"+uni.getStorageSync('userId')+"/null",
 					method: 'get',
 				}).then(res=>{
 					this.my_rank = res[1].data

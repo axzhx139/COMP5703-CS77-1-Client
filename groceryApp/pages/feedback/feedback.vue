@@ -47,7 +47,7 @@
 				var result = this.type+':'+this.feedback
 				console.log("feedbacck", result)
 				uni.request({
-					url:'http://43.142.11.191:7884/feedback/storeFeedback',
+					url:'http://'+uni.getStorageSync('ip')+'/feedback/storeFeedback',
 					method:'POST',
 					data:{
 						'id':uni.getStorageSync('userId'), 
